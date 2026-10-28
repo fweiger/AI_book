@@ -1,5 +1,7 @@
 # AI_book · Discussions 类别配置
 
+**执行需求文档：** [REQ-001：在 GitHub 网页端创建四个类别](docs/requirements/REQ-001-create-discussion-categories.md)。请让具有已授权浏览器会话的 AI 按该文档操作并提供逐项验证结果。
+
 > 仓库 Discussions 已启用。此文件记录推荐类别、用途和网页端一次性设置步骤。
 >
 > **注意：** GitHub 官方将类别创建/编辑放在 Discussions 的网页管理界面；仅提交 YAML 模板不会自动创建类别。仓库中的表单文件名必须匹配类别 slug。
