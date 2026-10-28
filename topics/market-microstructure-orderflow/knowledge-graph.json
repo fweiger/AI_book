@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.0",
+  "topic_id": "TOPIC-002",
+  "title": "市场微观结构：订单流、流动性与价格形成",
+  "source_level": "初始书目级/待原文核验",
+  "books": [
+    {
+      "id": "B007",
+      "title": "交易与交易所",
+      "card": "../../library/books/B007-trading-and-exchanges.md",
+      "source_type": "historical-user-request"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "M01",
+      "type": "concept",
+      "title": "订单类型与属性",
+      "book": "B007",
+      "chapter": "第4章",
+      "evidence_level": "书目级",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "M02",
+      "type": "concept",
+      "title": "市场结构与订单撮合",
+      "book": "B007",
+      "chapter": "第5–6章",
+      "evidence_level": "书目级",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "M03",
+      "type": "concept",
+      "title": "交易动机与信息差",
+      "book": "B007",
+      "chapter": "第8、10–12章",
+      "evidence_level": "书目级",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "M04",
+      "type": "concept",
+      "title": "流动性供给与买卖价差",
+      "book": "B007",
+      "chapter": "第13–14、19章",
+      "evidence_level": "书目级",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "M05",
+      "type": "concept",
+      "title": "交易成本、波动与韧性问题",
+      "book": "B007",
+      "chapter": "第19–21章",
+      "evidence_level": "书目级",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "M06",
+      "type": "concept",
+      "title": "A股 Wind L2 特征化与多日验证",
+      "book": "B007",
+      "chapter": "研究转换，不属于原书直接结论",
+      "evidence_level": "待实证",
+      "source_status": "目录级/待原文核验"
+    }
+  ],
+  "edges": [
+    {
+      "source": "M01",
+      "target": "M02",
+      "relation": "发展"
+    },
+    {
+      "source": "M02",
+      "target": "M04",
+      "relation": "机制联系"
+    },
+    {
+      "source": "M03",
+      "target": "M04",
+      "relation": "机制联系"
+    },
+    {
+      "source": "M04",
+      "target": "M05",
+      "relation": "发展"
+    },
+    {
+      "source": "M05",
+      "target": "M06",
+      "relation": "研究迁移"
+    },
+    {
+      "source": "M03",
+      "target": "M06",
+      "relation": "禁止直接推断"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "订单为什么产生，订单类型如何影响成交？",
+      "nodes": [
+        "M01",
+        "M02"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "流动性供给、价差和成交冲击的机制是什么？",
+      "nodes": [
+        "M03",
+        "M04"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "何种盘口行为是有意义的状态迁移？",
+      "nodes": [
+        "M04",
+        "M05"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "能否把理论映射为 Wind L2 全天行为特征并预测 T+1～T+5？",
+      "nodes": [
+        "M05",
+        "M06"
+      ]
+    }
+  ],
+  "constraints": [
+    "不将书籍/个人经验等同于已验证可交易Alpha",
+    "章节未获原文核验不得写作已精读",
+    "研究迁移与原作者主张必须分开"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}

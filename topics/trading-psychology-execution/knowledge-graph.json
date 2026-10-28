@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.0",
+  "topic_id": "TOPIC-003",
+  "title": "交易心理：亏损、纪律与可验证执行",
+  "source_level": "初始书目级/待原文核验",
+  "books": [
+    {
+      "id": "B008",
+      "title": "Best Loser Wins",
+      "card": "../../library/books/B008-best-loser-wins.md",
+      "source_type": "prior-assistant-suggestion"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "P01",
+      "type": "concept",
+      "title": "亏损体验与认知偏差",
+      "book": "B008",
+      "chapter": "主题待定位",
+      "evidence_level": "经验观点待验证",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "P02",
+      "type": "concept",
+      "title": "获利/亏损的不同处理方式",
+      "book": "B008",
+      "chapter": "主题待定位",
+      "evidence_level": "经验观点待验证",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "P03",
+      "type": "concept",
+      "title": "纪律和风险限制",
+      "book": "B008",
+      "chapter": "主题待定位",
+      "evidence_level": "经验观点待验证",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "P04",
+      "type": "concept",
+      "title": "可观测的决策执行行为",
+      "book": "B008",
+      "chapter": "研究转换，不是原书直接证明",
+      "evidence_level": "待实证",
+      "source_status": "目录级/待原文核验"
+    },
+    {
+      "id": "P05",
+      "type": "concept",
+      "title": "个人经验与统计证据的边界",
+      "book": "B008",
+      "chapter": "研究方法",
+      "evidence_level": "方法论",
+      "source_status": "目录级/待原文核验"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P01",
+      "target": "P02",
+      "relation": "讨论关联"
+    },
+    {
+      "source": "P02",
+      "target": "P03",
+      "relation": "发展"
+    },
+    {
+      "source": "P03",
+      "target": "P04",
+      "relation": "研究迁移"
+    },
+    {
+      "source": "P04",
+      "target": "P05",
+      "relation": "证据要求"
+    },
+    {
+      "source": "P01",
+      "target": "P05",
+      "relation": "对照"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "交易者为何容易对亏损做出不对称反应？",
+      "nodes": [
+        "P01"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "止盈与止损的执行偏差怎样在交易日志中体现？",
+      "nodes": [
+        "P02",
+        "P03"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "什么样的风险管理才可能形成可重复的执行纪律？",
+      "nodes": [
+        "P03",
+        "P04"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "哪些交易心理建议可以被证伪或统计评估？",
+      "nodes": [
+        "P04",
+        "P05"
+      ]
+    }
+  ],
+  "constraints": [
+    "不将书籍/个人经验等同于已验证可交易Alpha",
+    "章节未获原文核验不得写作已精读",
+    "研究迁移与原作者主张必须分开"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}

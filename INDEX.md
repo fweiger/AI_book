@@ -4,7 +4,12 @@
 
 | ID | 专题 | 核心问题 | 标签 | 书目 | 状态 |
 |---|---|---|---|---:|---|
-| TOPIC-001 | [现实、观察与意识：从玻姆到彭罗斯](topics/reality-observation-consciousness/README.md) | 分离、测量、理解与意识有何关系？ | `量子基础` `意识科学` `认识论` `计算理论` | 5 | FRAMEWORK_READY |
+| TOPIC-001 | [现实、观察与意识：从玻姆到彭罗斯](topics/reality-observation-consciousness/README.md) | 分离、测量、理解与意识有何关系？ | `量子基础` `意识科学` `认识论` `计算理论` | 5+1背景书 | FRAMEWORK_READY |
+
+| TOPIC-002 | [市场微观结构：订单流、流动性与价格形成](topics/market-microstructure-orderflow/README.md) | 交易规则怎样形成价格、价差与流动性？ | `交易机制` `订单流` `Wind L2` | 1 | CATALOG_SEEDED |
+| TOPIC-003 | [交易心理：亏损、纪律与可验证执行](topics/trading-psychology-execution/README.md) | 决策偏差如何影响风险与执行？ | `行为决策` `交易心理` `风险` | 1 | CATALOG_SEEDED |
+
+[查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 持续扩展方式
 

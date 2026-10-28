@@ -387,5 +387,15 @@
     "哲学类比≠实验证明"
   ],
   "claim_index": "claims.md",
-  "reading_path": "reading-path.md"
+  "reading_path": "reading-path.md",
+  "topic_version": "0.2.0",
+  "related_books": [
+    {
+      "id": "B006",
+      "title": "量子理论（补充）",
+      "card": "../../library/books/B006-quantum-theory.md",
+      "role": "background",
+      "source_status": "书目级"
+    }
+  ]
 }

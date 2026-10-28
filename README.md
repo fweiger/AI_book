@@ -10,6 +10,13 @@
 - [章节阅读路线](topics/reality-observation-consciousness/reading-path.md)
 - [AI 共读工作法](WORKFLOW.md)
 
+## 新增专题与书目入口
+
+- [TOPIC-002：市场微观结构与订单流](topics/market-microstructure-orderflow/README.md)
+- [TOPIC-003：交易心理、风险与执行](topics/trading-psychology-execution/README.md)
+- [其他候选书籍与后续主题](catalog/recovered-books-2026-10-29.md)
+- [版本及自动验证规则](VERSIONING.md)
+
 ## 组织原则
 
 1. **按问题建专题，不按单本书孤立归档**：同一书可为多个专题提供证据。
