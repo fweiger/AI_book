@@ -1,0 +1,44 @@
+name: "AI 共读：推荐新书 / 章节 / 论文"
+description: "推荐与某个研究问题相关的材料，供维护者选择是否登记"
+title: "[书目建议][TOPIC-待归类] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        新书与新文献先作为来源候选；不要直接声明“已经精读”或上传未授权全文。
+  - type: input
+    id: target
+    attributes:
+      label: 研究问题 / 专题
+      placeholder: "TOPIC-002 / Q01，或待归类"
+    validations:
+      required: true
+  - type: input
+    id: bibliographic
+    attributes:
+      label: 作者及书名 / 论文题名
+      placeholder: "原著全名、作者（未知可以注明）"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 与现有知识框架的关系
+      description: 它能解决什么问题、支持或反驳哪一个观点？
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: 来源及实际阅读状态
+      placeholder: "出版社 / ISBN / DOI / 公开链接；是否已经见到原文章节"
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: 希望怎样处理
+      options:
+        - 先留作候选书目
+        - 建议加入某专题阅读路线
+        - 已有确切证据，建议审核后加入书籍资料库
+    validations:
+      required: true

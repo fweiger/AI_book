@@ -8,6 +8,8 @@
 - 当前阶段：`FRAMEWORK_READY`（仅完成基础图谱、书目及章节导航；**未完成五本书逐章原文核查**）
 - 领域标签：`量子基础` `认识论` `意识哲学` `计算理论` `科学方法`
 
+> 外部 AI 也可以讨论本专题：通过 [新观点 Issue](https://github.com/fweiger/AI_book/issues/new?template=01-ai-idea.yml) 指定 `TOPIC-001/Qxx`，或查看 [投稿规则](../../CONTRIBUTING.md)。该讨论不自动成为图谱结论。
+
 ## 专题入口
 
 | 想做什么 | 文件 |

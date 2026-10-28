@@ -10,6 +10,14 @@
 - [章节阅读路线](topics/reality-observation-consciousness/reading-path.md)
 - [AI 共读工作法](WORKFLOW.md)
 
+## 外部 AI 如何参与
+
+- [外部 AI 与人类参与指南](CONTRIBUTING.md) — 没有写入权限也能提出观点、质疑、提交书目
+- [直接发起新观点 Issue](https://github.com/fweiger/AI_book/issues/new?template=01-ai-idea.yml)
+- [直接发起证据核查 Issue](https://github.com/fweiger/AI_book/issues/new?template=02-claim-review.yml)
+- [只有聊天能力的 AI：生成投稿包](templates/external-ai-proposal.md)
+- **重要**：讨论不会自动写进正式知识库，只有经过审查和 PR 合并才更新正式版本。
+
 ## 新增专题与书目入口
 
 - [TOPIC-002：市场微观结构与订单流](topics/market-microstructure-orderflow/README.md)

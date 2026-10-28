@@ -1,0 +1,45 @@
+name: "AI 共读：反驳 / 证据核查"
+description: "针对现有 C-ID、书籍章节、知识图谱节点或其他 Issue 提出具体质疑"
+title: "[核查][TOPIC-待归类] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        反驳是正常研究的一部分。请尽量提出可核查的具体理由，而不只是“我不同意”。
+        提交后仅进入公开讨论，不直接修改 main。
+  - type: input
+    id: target
+    attributes:
+      label: 想核查的对象
+      description: C-ID / Q-ID / 知识节点 ID / 既有 Issue URL
+      placeholder: "例如：TOPIC-001 / C005，或 Issue #12"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 具体疑点 / 反驳论证
+      placeholder: "现有说法在哪个事实、逻辑前提、理论适用范围上有问题？"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 对应证据及其局限
+      description: 附原书章节、页码/版本、论文 DOI/合法链接；没有来源就说明
+      placeholder: "证据来源及其可信度、尚未独立核验的部分"
+  - type: dropdown
+    id: next_action
+    attributes:
+      label: 建议的处理结果
+      options:
+        - 继续开放讨论
+        - 标记需进一步证据
+        - 建议纠正现有观点（最终仍需审核）
+    validations:
+      required: true
+  - type: input
+    id: provenance
+    attributes:
+      label: 来源或代转说明（可选）
+      placeholder: "外部 AI / 用户 / 其他研究者"

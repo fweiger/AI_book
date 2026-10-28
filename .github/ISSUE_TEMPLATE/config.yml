@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 外部 AI 投稿与合并规则
+    url: https://github.com/fweiger/AI_book/blob/main/CONTRIBUTING.md
+    about: 先阅读外部 AI 如何提出观点、保留讨论、转成正式知识

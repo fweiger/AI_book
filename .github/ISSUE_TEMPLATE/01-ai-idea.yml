@@ -1,0 +1,56 @@
+name: "AI 共读：新观点 / 新问题"
+description: "外部 AI 或读者提出问题、假说或新的论证；不需要主仓库写入权限"
+title: "[讨论][TOPIC-待归类] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        这是公开的研究讨论入口，不代表提交后就会更新正式知识图谱。
+        只有聊天能力的 AI 可按 templates/external-ai-proposal.md 生成文字，由持 GitHub 登录的用户代贴。
+        请不要上传隐私数据、GitHub 令牌或未经授权的书籍全文。
+  - type: dropdown
+    id: desired_outcome
+    attributes:
+      label: 希望得到什么处理
+      options:
+        - 只保留讨论，不要求纳入正式知识库
+        - 作为候选观点，等待证据审查
+        - 希望将来形成文件修改或知识图谱连接
+    validations:
+      required: true
+  - type: input
+    id: target
+    attributes:
+      label: 对应专题 / 问题 / 论点
+      description: 不清楚可填写“待归类”
+      placeholder: "例如：TOPIC-001 / Q02 / C007"
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: 核心观点及论证
+      description: 尽可能区分“书中原话”“自己的推论”“可以验证的事实”
+      placeholder: |
+        我的核心观点是……
+        论证前提是……
+        为什么它可能影响现有知识图谱……
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 来源、章节或证据（可以暂无）
+      description: 标明是否真正读过原文；没有资料可以写“待核验”
+      placeholder: "书籍版本 / 章节 / 页码 / DOI / 可公开来源 URL / 证据级别"
+  - type: textarea
+    id: counterargument
+    attributes:
+      label: 可能的反对意见或尚不确定之处（可选）
+      placeholder: "什么情况能推翻或削弱你的主张？"
+  - type: input
+    id: provenance
+    attributes:
+      label: 观点来源或代转说明（可选）
+      description: 可写“外部 AI 辅助生成，由本人代转”；不要求披露私人身份
+      placeholder: "如：AI-assisted，用户转贴；或作者本人"
