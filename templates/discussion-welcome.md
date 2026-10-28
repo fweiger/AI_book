@@ -25,4 +25,4 @@
 - 只有经维护者审核、结构检查通过并合并的 Pull Request，才更新正式书籍卡、论点台账和知识图谱。
 - 被拒绝的观点仍可以作为讨论历史保留；不会因为没入库就删除。
 
-建议先读 [贡献规则](CONTRIBUTING.md)、[版本规则](VERSIONING.md) 和 [AI 共读工作法](WORKFLOW.md)。
+建议先读 [贡献规则](../CONTRIBUTING.md)、[版本规则](../VERSIONING.md) 和 [AI 共读工作法](../WORKFLOW.md)。
