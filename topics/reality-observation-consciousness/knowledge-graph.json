@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-001",
+  "title": "现实、观察与意识：从玻姆到彭罗斯",
+  "version": "v1-initial",
+  "updated_at": "2026-10-29",
+  "source_level": "目录级/待逐章原文核验",
+  "books": [
+    {
+      "id": "B001",
+      "title": "整体性与隐缠序",
+      "card": "../../library/books/B001-wholeness-and-the-implicate-order.md"
+    },
+    {
+      "id": "B002",
+      "title": "不可分割的宇宙",
+      "card": "../../library/books/B002-the-undivided-universe.md"
+    },
+    {
+      "id": "B003",
+      "title": "最初和最终的自由",
+      "card": "../../library/books/B003-the-first-and-last-freedom.md"
+    },
+    {
+      "id": "B004",
+      "title": "皇帝新脑",
+      "card": "../../library/books/B004-the-emperors-new-mind.md"
+    },
+    {
+      "id": "B005",
+      "title": "心智的阴影",
+      "card": "../../library/books/B005-shadows-of-the-mind.md"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "W1",
+      "type": "concept",
+      "book": "B001",
+      "title": "碎片化与整体",
+      "chapter": "第1–3章",
+      "evidence_level": "哲学/认识论",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B001-wholeness-and-the-implicate-order.md"
+    },
+    {
+      "id": "W2",
+      "type": "concept",
+      "book": "B001",
+      "title": "隐秩序 ↔ 显秩序",
+      "chapter": "第6章 Part B",
+      "evidence_level": "理论解释",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B001-wholeness-and-the-implicate-order.md"
+    },
+    {
+      "id": "W3",
+      "type": "concept",
+      "book": "B001",
+      "title": "意识与物质的共同基础",
+      "chapter": "第7章",
+      "evidence_level": "哲学假说",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B001-wholeness-and-the-implicate-order.md"
+    },
+    {
+      "id": "U1",
+      "type": "concept",
+      "book": "B002",
+      "title": "实在论与主动信息",
+      "chapter": "第2–4章",
+      "evidence_level": "物理理论",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B002-the-undivided-universe.md"
+    },
+    {
+      "id": "U2",
+      "type": "concept",
+      "book": "B002",
+      "title": "测量与非定域性",
+      "chapter": "第5–7章",
+      "evidence_level": "物理理论",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B002-the-undivided-universe.md"
+    },
+    {
+      "id": "U3",
+      "type": "concept",
+      "book": "B002",
+      "title": "量子理论与隐秩序之桥",
+      "chapter": "第15章",
+      "evidence_level": "解释性连接",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B002-the-undivided-universe.md"
+    },
+    {
+      "id": "K1",
+      "type": "concept",
+      "book": "B003",
+      "title": "自我认识与觉察",
+      "chapter": "“自我认识”“觉察”",
+      "evidence_level": "体验/哲学",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B003-the-first-and-last-freedom.md"
+    },
+    {
+      "id": "K2",
+      "type": "concept",
+      "book": "B003",
+      "title": "思考者与思想",
+      "chapter": "“思考者与思想”",
+      "evidence_level": "体验/哲学",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B003-the-first-and-last-freedom.md"
+    },
+    {
+      "id": "K3",
+      "type": "concept",
+      "book": "B003",
+      "title": "命名、记忆与心理时间",
+      "chapter": "“论命名”“论记忆”“论时间”",
+      "evidence_level": "体验/哲学",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B003-the-first-and-last-freedom.md"
+    },
+    {
+      "id": "E1",
+      "type": "concept",
+      "book": "B004",
+      "title": "图灵、哥德尔与理解",
+      "chapter": "第2、4章",
+      "evidence_level": "数学定理+争议推论",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B004-the-emperors-new-mind.md"
+    },
+    {
+      "id": "E2",
+      "type": "concept",
+      "book": "B004",
+      "title": "量子谜题与量子引力",
+      "chapter": "第6、8章",
+      "evidence_level": "理论背景+猜想",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B004-the-emperors-new-mind.md"
+    },
+    {
+      "id": "E3",
+      "type": "concept",
+      "book": "B004",
+      "title": "大脑能否仅用算法解释",
+      "chapter": "第1、9、10章",
+      "evidence_level": "哲学+科学争议",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B004-the-emperors-new-mind.md"
+    },
+    {
+      "id": "S1",
+      "type": "concept",
+      "book": "B005",
+      "title": "非计算论证的升级",
+      "chapter": "第1–3章",
+      "evidence_level": "争议论证",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B005-shadows-of-the-mind.md"
+    },
+    {
+      "id": "S2",
+      "type": "concept",
+      "book": "B005",
+      "title": "量子现实与客观还原",
+      "chapter": "第5–6章",
+      "evidence_level": "物理猜想",
+      "reading_priority": 2,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B005-shadows-of-the-mind.md"
+    },
+    {
+      "id": "S3",
+      "type": "concept",
+      "book": "B005",
+      "title": "微管与意识假说",
+      "chapter": "第7–8章",
+      "evidence_level": "待验证假说",
+      "reading_priority": 3,
+      "source_status": "目录级",
+      "book_card": "../../library/books/B005-shadows-of-the-mind.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "W1",
+      "target": "W2",
+      "relation": "发展",
+      "note": "整体观→秩序观"
+    },
+    {
+      "source": "W2",
+      "target": "W3",
+      "relation": "发展",
+      "note": "将隐秩序延伸至意识"
+    },
+    {
+      "source": "U1",
+      "target": "U2",
+      "relation": "发展",
+      "note": "由本体论解释测量"
+    },
+    {
+      "source": "U2",
+      "target": "U3",
+      "relation": "发展",
+      "note": "讨论隐秩序"
+    },
+    {
+      "source": "K1",
+      "target": "K2",
+      "relation": "发展",
+      "note": "觉察→思考者与思想"
+    },
+    {
+      "source": "K2",
+      "target": "K3",
+      "relation": "发展",
+      "note": "观察与概念建构"
+    },
+    {
+      "source": "E1",
+      "target": "E3",
+      "relation": "发展",
+      "note": "算法限制→心智问题"
+    },
+    {
+      "source": "E2",
+      "target": "E3",
+      "relation": "发展",
+      "note": "物理难题→意识问题"
+    },
+    {
+      "source": "S1",
+      "target": "S2",
+      "relation": "推测",
+      "note": "非计算论证→新物理"
+    },
+    {
+      "source": "S2",
+      "target": "S3",
+      "relation": "待验证",
+      "note": "客观还原→微管"
+    },
+    {
+      "source": "W2",
+      "target": "U3",
+      "relation": "发展",
+      "note": "玻姆思想跨书延伸"
+    },
+    {
+      "source": "W1",
+      "target": "K2",
+      "relation": "类比",
+      "note": "碎片化与观察者"
+    },
+    {
+      "source": "W3",
+      "target": "K1",
+      "relation": "类比",
+      "note": "物质/意识与自我觉察"
+    },
+    {
+      "source": "U2",
+      "target": "S2",
+      "relation": "对照",
+      "note": "测量问题的不同理论方案"
+    },
+    {
+      "source": "U2",
+      "target": "E2",
+      "relation": "类比",
+      "note": "共同关注量子测量"
+    },
+    {
+      "source": "E1",
+      "target": "S1",
+      "relation": "发展",
+      "note": "彭罗斯论证延伸"
+    },
+    {
+      "source": "E2",
+      "target": "S2",
+      "relation": "发展",
+      "note": "量子疑难与客观还原"
+    },
+    {
+      "source": "E3",
+      "target": "S3",
+      "relation": "推测",
+      "note": "候选意识机制"
+    },
+    {
+      "source": "W3",
+      "target": "S3",
+      "relation": "类比",
+      "note": "物质/意识议题相似非证据链"
+    },
+    {
+      "source": "K2",
+      "target": "U2",
+      "relation": "禁止直接推断",
+      "note": "心理观察者 ≠ 测量仪器"
+    },
+    {
+      "source": "W2",
+      "target": "U1",
+      "relation": "对照",
+      "note": "哲学隐秩序 ≠ 量子导引机制"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "整体与碎片",
+      "nodes": [
+        "W1",
+        "W2",
+        "U3",
+        "W3"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "量子测量是否需要意识",
+      "nodes": [
+        "U1",
+        "U2",
+        "E2",
+        "S2"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "观察者究竟是谁",
+      "nodes": [
+        "K1",
+        "K2",
+        "K3",
+        "W1",
+        "U2"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "理解能否被算法实现",
+      "nodes": [
+        "E1",
+        "E3",
+        "S1"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "微管假说如何检验",
+      "nodes": [
+        "E2",
+        "S1",
+        "S2",
+        "S3"
+      ]
+    }
+  ],
+  "constraints": [
+    "纠缠≠超光速传信",
+    "心理观察者≠物理测量仪器",
+    "哥德尔定理≠必然非计算心智",
+    "存在微管≠微管产生意识",
+    "哲学类比≠实验证明"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}
