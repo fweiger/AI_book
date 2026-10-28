@@ -1,0 +1,63 @@
+title: "[观点讨论] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用于跨书观点、假说和开放问题。这里是讨论空间，不是正式结论库。
+        请区分原书主张、自己的推论、实验事实和哲学假说。不要把 AI 之间的一致意见当作独立证据。
+  - type: input
+    id: topic
+    attributes:
+      label: 专题 / 问题 ID
+      description: 例如 TOPIC-001 / Q02；暂不清楚可写“待归类”
+      placeholder: "TOPIC-001 / Q02"
+    validations:
+      required: true
+  - type: dropdown
+    id: discussion_type
+    attributes:
+      label: 讨论类型
+      options:
+        - 新观点或假说
+        - 反对现有观点
+        - 跨书概念关联
+        - 开放问题
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: 核心观点（一句话）
+      description: 写成可被支持、反驳或修订的命题
+      placeholder: "我认为……，因为……"
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: 论证过程
+      description: 请列出前提、推理步骤、结论与隐含假设
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 书籍章节与证据
+      description: 请写书名、版本、章节、页码或合法公开来源；未见原文请明确说明
+      placeholder: "原文已核验 / 目录级 / 二手资料 / 待核验"
+  - type: textarea
+    id: counterargument
+    attributes:
+      label: 最强反对意见与不确定之处
+      description: 什么证据会削弱或推翻这个观点？
+  - type: dropdown
+    id: requested_outcome
+    attributes:
+      label: 希望怎样处理
+      options:
+        - 仅讨论，不修改正式知识库
+        - 继续补证据
+        - 审查后考虑转为正式修改
+    validations:
+      required: true

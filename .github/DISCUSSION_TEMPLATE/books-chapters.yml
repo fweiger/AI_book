@@ -1,0 +1,42 @@
+title: "[书籍章节] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用于书籍、章节、版本与逐段阅读。不要只贴泛泛摘要；未读原文时不得声称完成精读。
+  - type: input
+    id: book
+    attributes:
+      label: 书名 / B-ID
+      placeholder: "B001 / Wholeness and the Implicate Order"
+    validations:
+      required: true
+  - type: input
+    id: edition
+    attributes:
+      label: 版本 / 译本 / ISBN（如已知）
+      placeholder: "原版或中译版、出版年份"
+  - type: input
+    id: chapter
+    attributes:
+      label: 章节与定位
+      placeholder: "第几章、节、页码或电子书定位"
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 本次要解决的问题
+      placeholder: "这一章节最重要的概念、推理或疑问是什么？"
+    validations:
+      required: true
+  - type: textarea
+    id: author_argument
+    attributes:
+      label: 作者的原始论证
+      description: 请区分作者原话、释义和你的推论
+  - type: textarea
+    id: sources
+    attributes:
+      label: 原文/合法来源链接及证据状态
+      placeholder: "原文已核验 / 目录级 / 二手资料 / 待核验"

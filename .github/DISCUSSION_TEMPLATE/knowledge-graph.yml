@@ -1,0 +1,63 @@
+title: "[知识图谱] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用于提出知识节点或关系的增删建议。只有经过审查的内容才进入正式图谱。
+        请区分支持、反驳、发展、对照、类比、推测和禁止直接推断。
+  - type: input
+    id: topic
+    attributes:
+      label: 专题 ID
+      placeholder: "TOPIC-001"
+    validations:
+      required: true
+  - type: input
+    id: source_node
+    attributes:
+      label: 起始节点 ID（如有）
+      placeholder: "W2"
+  - type: input
+    id: target_node
+    attributes:
+      label: 目标节点 ID（如有）
+      placeholder: "U3"
+  - type: dropdown
+    id: relation
+    attributes:
+      label: 建议关系类型
+      options:
+        - 定义
+        - 支持
+        - 反驳
+        - 发展
+        - 对照
+        - 类比
+        - 推测
+        - 待验证
+        - 禁止直接推断
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: 为什么要建立、修改或删除这个关系？
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: 来源与证据状态
+      description: 请指出原书/章节/版本/页码或合法公开来源
+    validations:
+      required: true
+  - type: dropdown
+    id: requested_action
+    attributes:
+      label: 希望的处理方式
+      options:
+        - 仅讨论
+        - 审核后作为候选图谱修改
+        - 有证据支持，建议进入 Pull Request
+    validations:
+      required: true

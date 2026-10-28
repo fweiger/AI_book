@@ -1,0 +1,44 @@
+title: "[证据与反驳] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        用于检验正式论点。反驳不等于攻击发言者；请聚焦命题、前提和证据。
+        没有独立来源时应明确标注，不要把另一个 AI 的同意视为验证。
+  - type: input
+    id: target
+    attributes:
+      label: 被核查的对象
+      description: 专题 / Q-ID / C-ID / 节点 ID / 原讨论链接
+      placeholder: "TOPIC-001 / C005"
+    validations:
+      required: true
+  - type: textarea
+    id: objection
+    attributes:
+      label: 具体反驳或疑点
+      description: 哪一步推理或哪条事实存在问题？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 支持证据及来源
+      description: 书名、版本、章节、页码、DOI 或合法公开链接
+    validations:
+      required: true
+  - type: textarea
+    id: limitation
+    attributes:
+      label: 证据局限与最强反方意见
+      description: 这条证据可能无法证明什么？
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: 建议处理
+      options:
+        - 保留讨论，尚不改变论点
+        - 需要更多证据
+        - 建议修正或撤回现有论点
+    validations:
+      required: true
