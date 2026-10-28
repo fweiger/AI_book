@@ -1,62 +1,28 @@
-# AI 共读工作法 · v1
+name: Knowledge-base integrity
 
-## 核心原则
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
-这里不是“每本书做一份流水账式摘要”，而是围绕一个**研究问题**反复阅读书籍、展开对话、修订认识，最终形成可追溯的知识图谱。
+permissions:
+  contents: read
 
-## 最短闭环
+jobs:
+  validate-knowledge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate book index, topic graph and links
+        run: python3 scripts/validate_library.py
 
-1. **选问题**：从专题 `questions.md` 选择 Q-ID，写清自己真正不理解的部分。
-2. **定位材料**：查看 `reading-path.md`，先读高优先级章节；必须记录原书的版本、章节、页码/定位（若未有原书，则标 `目录级`）。
-3. **与 AI 对话**：先请 AI 重建作者论证，再提出反例、比较其他书作者立场；避免仅做泛泛摘要。
-4. **写章节分析**：把概念、命题、前提、推理、证据、反对意见写入 `library/chapters/<book-id>/<chapter-id>.md`（使用模板）。
-5. **更新专题**：新的可靠内容进入 `claims.md` 和 `knowledge-map.md` / `knowledge-graph.json`；没有核查的继续标记。
-6. **保留对话变更**：将精炼后的讨论摘要存 `sessions/YYYY-MM-DD-<主题>.md`，说明哪些节点/论点改变了。
+## Discussions 类别与投稿表单
 
-## 向 AI 提问的推荐方式
-
-> 我正在研究 TOPIC-001 / Q02。请按原书【书名 + 版本 + 章节】解释作者想解决的问题、关键术语、正式论证链、依赖的假设、可能的反例和相邻理论。请严格区分数学定理、物理证据、理论诠释与哲学推测。如果你没有看到原文章节，就明确说“尚未原文核查”；最后提出 3 个下一步追问，以及需要更新的知识节点。
-
-## 记录规则
-
-- 每个论点一个稳定 ID（C001...）；新证据优先**修改现有论点**，不反复复制相同观点。
-- 连接类型必须明确：`定义/支持/反驳/发展/对照/类比/推测/禁止直接推断`。
-- 每条节点指向**书籍卡片、章节、证据**。暂缺章节页码，标明资料级别。
-- 修改既有结论必须写出“原状态 → 新状态”与变更原因。
-- AI 与 AI 的不同观点不自动提升可信度；独立原文/实验核查优先于共识。
-- 逐步深入，不强制全书读完，也不预设必须让多个 AI 轮流辩论。
-
-## 来源与著作权
-
-GitHub 仓库是公开的。**不得上传个人私有服务器地址、账号信息、整本受版权保护的书、未获授权的扫描件/长段落转录**。仅存合法的书目元数据、必要的短引文、定位信息、原创分析以及可公开的引用链接。
-
-## 状态字段
-
-- `目录级`：只依据出版社目录/公开介绍定位章节
-- `待原文核验`：知道观点大意，尚未逐段和原文对照
-- `原文已核验`：有确切章节及版本位置，理解仍可继续争论
-- `实验支持`：存在可审查的物理/经验性证据
-- `争议推论`：由事实或定理推出但有重大争议
-- `哲学假说`：解释性主张，不能当作实验证明
-- `待验证`：当前缺少充分证据
-
-> 全局进度：专题导航已建立；五本书原文逐章核验尚未开始。
-## 版本与多 AI 协作
-
-- 具体规则见 [VERSIONING.md](VERSIONING.md)。这里的 `AGENTS.md` 是 Codex 等 AI 的工作指引，真正文件版本来自 Git 历史。
-- 新论点/精读章节进入仓库必须保留出处、状态和可回溯的修订记录。
-- `main` 作为当前可引用版本；未来多个 AI 可以在独立分支工作、通过 PR 对照观点与合并，不要各自覆盖相同节点。
-- 更新图谱后运行 `python3 scripts/validate_library.py`，并在专题 `CHANGELOG.md` 登记结构或认知变化。
-- 若希望强制所有变更通过审核与 CI，必须设置 GitHub Ruleset/branch protection；提示词不能替代权限管控。
-
-## 外部 AI 共读与争议入库
-
-详见 [CONTRIBUTING.md](CONTRIBUTING.md)。外部 AI 与用户可以直接参加研究讨论，但其观点首先是**候选内容**：
-
-1. 通过外部 AI Markdown 投稿包或 GitHub Issue 表单提交。
-2. 在原 Issue 评论进行论证、反驳与资料补充；有分歧就保留，不强制结束。
-3. 审查者选择“仅讨论 / 需证据 / 同意转为候选 PR / 不采纳”。
-4. 只有确有必要修订正式书籍卡、章节笔记、claims 或图谱时才创建 PR。
-5. PR 审查、结构检验通过且实际合并，才发生正式知识库版本更新。
-
-有自己 GitHub 账户的外部 AI/读者不需项目写入权限；纯聊天 AI 的输出须由持账号的人或可信中继代发。绝不向外部 AI 提供仓库拥有者令牌。
+- 当前类别设计与手动设置步骤见 [DISCUSSIONS_SETUP.md](DISCUSSIONS_SETUP.md)。
+- 自定义类别在 GitHub 网页端管理；对应的表单文件放在 `.github/DISCUSSION_TEMPLATE/<category-slug>.yml`。
+- 不要将类别表单文件已提交误报为 GitHub 类别已创建。类别 slug 与表单文件名必须对应。
+- 第一条欢迎讨论的正文可从 [templates/discussion-welcome.md](templates/discussion-welcome.md) 复制。

@@ -13,7 +13,7 @@
 
 **重要区别**：读公开仓库不需要使用仓库所有者账号；但要在 GitHub 上新建 Issue/评论，一般需要贡献者自己登录 GitHub。只有聊天能力、没有可用外部接口的 AI 无法自行“发到网上”，必须由用户/可信中继转交。不要把本仓库拥有者的 Access Token、密码或登录态给外部 AI。
 
-目前 Issues 已启用，可直接使用下面的表单。Discussions 尚未启用；如以后启用，可把开放型观点讨论优先放在 Discussions，把需要行动的修订放在 Issues；下方规则对两者均适用。
+目前 Issues 与 Discussions 均已启用。四个推荐类别、类别表单与网页端设置步骤见 [DISCUSSIONS_SETUP.md](DISCUSSIONS_SETUP.md)。自定义类别需要先在 GitHub 网页端创建；仓库已提供对应 YAML 表单。开放型观点优先进入 Discussions，需要行动的修订进入 Issues；下方规则对两者均适用。
 
 ## 只有聊天能力的 AI：怎样写一个可转交的投稿包？
 
@@ -96,3 +96,11 @@ NEXT: 下一轮要补的材料/问题
 当前 `AI_book` 只有 Issues。要启用 Discussions，仓库管理员在 GitHub 仓库 `Settings → General → Features → Discussions` 中开启。建议分类：`观点讨论`、`书籍与章节`、`证据与反驳`、`研究问题`；正式文件修改继续使用 Issue/PR。
 
 > 初版：2026-10-29。外部 AI 的默认权限应为**提出建议和阅读讨论**，而非自动合并或修改 `main`。
+
+
+## Discussion 类别与结构化表单
+
+- 当前状态与建议类别： [DISCUSSIONS_SETUP.md](DISCUSSIONS_SETUP.md)。
+- 预备的四个类别：Knowledge Ideas、Books Chapters、Evidence Challenges、Knowledge Graph。
+- 对应表单位于 `.github/DISCUSSION_TEMPLATE/`；文件名必须与 GitHub 类别 slug 相同。类别本身需要在 GitHub 网页端创建，提交文件不会自动创建类别。
+- 欢迎帖可用 [templates/discussion-welcome.md](templates/discussion-welcome.md) 创建并置顶。

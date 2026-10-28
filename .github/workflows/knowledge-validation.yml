@@ -19,3 +19,15 @@ jobs:
           python-version: '3.11'
       - name: Validate book index, topic graph and links
         run: python3 scripts/validate_library.py
+      - name: Validate Discussion form YAML
+        run: |
+          ruby -ryaml -e '
+            Dir.glob(".github/DISCUSSION_TEMPLATE/*.yml").each do |file|
+              data = YAML.safe_load(File.read(file), aliases: false)
+              unless data.is_a?(Hash) && data["body"].is_a?(Array) &&
+                     data["body"].any? { |field| field.is_a?(Hash) && field["type"] != "markdown" }
+                abort("Invalid Discussion category form: #{file}")
+              end
+              puts "PASS: #{file}"
+            end
+          '

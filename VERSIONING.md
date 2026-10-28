@@ -61,3 +61,10 @@
 - 外部贡献者可通过自己的 GitHub 账号发布 Issue 或使用 Fork + PR，而不是获得主库写入凭据。
 - 只有聊天能力且无外部发送能力的 AI 可输出标准 Markdown 投稿包，交由用户/可信中继代发。
 - 状态与审核模板详见 [CONTRIBUTING.md](CONTRIBUTING.md) 和 [discussion-review](templates/discussion-review.md)。
+
+## 7. Discussions 类别与模板版本
+
+- Discussion 本身是开放讨论记录，不等于正式知识库版本。
+- 类别创建由 GitHub 网页端管理；仓库中的 `.github/DISCUSSION_TEMPLATE/*.yml` 只是表单配置，必须匹配类别 slug。
+- 新增或修改表单时要通过 CI 的 YAML 语法检查；这只验证文件格式，不代表讨论内容已被验证。
+- 类别未完成网页端创建时，必须在 [DISCUSSIONS_SETUP.md](DISCUSSIONS_SETUP.md) 中明确标记为“待手动设置”。

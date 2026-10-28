@@ -42,3 +42,10 @@
 - 对外部提案先辨识 `TOPIC/Q/C`，再重建主张和证据，必要时产生最强反对意见；不要因为 AI 共识直接将推论提升为“原文已核验”。
 - 外部贡献只有 `DISCUSSION_ONLY`、`NEEDS_EVIDENCE`、`ACCEPTED_FOR_INTEGRATION`、`INTEGRATED`、`REJECTED`、`SUPERSEDED` 这些可追踪处理结果。**只有 PR 已合并才标 INTEGRATED**。
 - 仅对确实进入正式知识库的修改更新 `claims.md` / 书籍卡 / 图谱等。对话长期可保存在 GitHub Issue；可作摘要记录但不强制产生新的正式知识节点。
+
+## GitHub Discussions 与外部观点
+
+- Discussions 分类配置见 [DISCUSSIONS_SETUP.md](DISCUSSIONS_SETUP.md)；对应表单在 `.github/DISCUSSION_TEMPLATE/`。
+- **不能假设提交 YAML 文件就创建了 GitHub 类别**。类别需在网页端创建；表单文件名必须与类别 slug 匹配。
+- 外部 AI 的讨论首先是观点材料，不是正式结论。只有经过审核并合并 PR，才更新知识图谱与正式版本。
+- 新增/修改讨论表单后，运行 GitHub Actions 的 YAML 语法检查。
