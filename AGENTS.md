@@ -1,5 +1,7 @@
 # AGENTS.md — AI_book 的共读规则
 
+版本与验收：见 [VERSIONING.md](VERSIONING.md)。Git 保存实际版本，AGENTS.md 不是强制权限开关；自动结构检查见 `scripts/validate_library.py`。
+
 本仓库用于长期积累**问题驱动**、**来源可追溯**的跨书知识图谱。修改前优先阅读 `README.md`、`INDEX.md`、`WORKFLOW.md`，再阅读当前专题的 `README.md`、`questions.md` 和 `claims.md`。
 
 ## 工作原则
@@ -21,3 +23,13 @@
 - 对话模板：[ai-session.md](templates/ai-session.md)
 
 结束一次阅读任务时，请明确报告：**读了哪些原文 / 没读哪些原文；改了什么文件；改变哪些 C-ID/节点；下次从哪里继续**。
+
+## 版本管理（必须遵循）
+
+- 修改图谱/章节/论点前先看 [版本规则](VERSIONING.md) 和当前专题 `CHANGELOG.md`。不把 AI 口头报告当作真正的 Git 更新。
+- 加入新核心节点/新的跨书关系/书籍索引后，增加专题 `topic_version` 的 MINOR；仅修正文案/来源定位使用 PATCH；破坏性契约变更使用 MAJOR 并给迁移说明。
+- 图谱 `schema_version` 是文件接口版本，不是专题成熟度。B-ID 全局唯一，Q-ID/C-ID 属于专题；重要 ID 应稳定。
+- 每个实质研究变更应写 `sessions/`、变更日志并记录证据级别；未有章节原文则不许标 `原文已核验`。
+- 执行 `python3 scripts/validate_library.py`。GitHub Actions 同样会执行结构检查，但不保证物理或金融结论真实。
+- 以后尽量在专题分支提交 PR，再根据审核结果合并；主分支的强制保护需要在 GitHub Settings 另行配置，AGENTS.md 自身无法启用。
+- 对从 `some-investment-books` 发现的书籍，只能先存候选书目；不要复制整本电子书到本公开仓库，也不要假装这些书已经读过。

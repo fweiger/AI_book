@@ -41,3 +41,10 @@ GitHub 仓库是公开的。**不得上传个人私有服务器地址、账号�
 - `待验证`：当前缺少充分证据
 
 > 全局进度：专题导航已建立；五本书原文逐章核验尚未开始。
+## 版本与多 AI 协作
+
+- 具体规则见 [VERSIONING.md](VERSIONING.md)。这里的 `AGENTS.md` 是 Codex 等 AI 的工作指引，真正文件版本来自 Git 历史。
+- 新论点/精读章节进入仓库必须保留出处、状态和可回溯的修订记录。
+- `main` 作为当前可引用版本；未来多个 AI 可以在独立分支工作、通过 PR 对照观点与合并，不要各自覆盖相同节点。
+- 更新图谱后运行 `python3 scripts/validate_library.py`，并在专题 `CHANGELOG.md` 登记结构或认知变化。
+- 若希望强制所有变更通过审核与 CI，必须设置 GitHub Ruleset/branch protection；提示词不能替代权限管控。
