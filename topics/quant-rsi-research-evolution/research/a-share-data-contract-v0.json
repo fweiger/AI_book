@@ -1,0 +1,451 @@
+{
+  "schema_version": "0.1.2",
+  "topic_id": "TOPIC-004",
+  "contract_id": "ASHARE-QUANT-001",
+  "status": "BLOCKED_ON_DATA_CONTRACT",
+  "created_at": "2026-10-29",
+  "required_frequencies": [
+    "minute"
+  ],
+  "data_sources": [
+    {
+      "frequency": "daily",
+      "source_id": null,
+      "source_version": null,
+      "calendar_version": null,
+      "universe_version": null,
+      "raw_snapshot_hash": null,
+      "field_mappings": [
+        {
+          "role": "symbol",
+          "required": true,
+          "semantic_definition": "证券标识",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "event_time",
+          "required": true,
+          "semantic_definition": "日线交易日期及其时区语义",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "available_at",
+          "required": true,
+          "semantic_definition": "该行及其字段最早实际可用时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "open",
+          "required": true,
+          "semantic_definition": "开盘价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "high",
+          "required": true,
+          "semantic_definition": "最高价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "low",
+          "required": true,
+          "semantic_definition": "最低价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "close",
+          "required": true,
+          "semantic_definition": "收盘价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "volume",
+          "required": true,
+          "semantic_definition": "成交量单位与口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "turnover",
+          "required": true,
+          "semantic_definition": "成交额单位与口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "price_adjustment_basis",
+          "required": true,
+          "semantic_definition": "前复权/后复权/不复权及点时点策略",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "suspension_status",
+          "required": true,
+          "semantic_definition": "停牌与不可成交状态",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "limit_status",
+          "required": true,
+          "semantic_definition": "证券在该日适用的涨跌幅限制状态",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "universe_membership",
+          "required": true,
+          "semantic_definition": "该时点历史股票池成员关系",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "revision_time",
+          "required": false,
+          "semantic_definition": "数据修订或回补的时间",
+          "source_field": null,
+          "unit": null
+        }
+      ]
+    },
+    {
+      "frequency": "minute",
+      "source_id": "raw_stock_minute",
+      "source_version": null,
+      "calendar_version": null,
+      "universe_version": null,
+      "raw_snapshot_hash": null,
+      "field_mappings": [
+        {
+          "role": "symbol",
+          "required": true,
+          "semantic_definition": "证券标识",
+          "source_field": "member path + market identifier + six-digit code",
+          "unit": "security identifier; preserve market/code namespace"
+        },
+        {
+          "role": "bar_start_time",
+          "required": true,
+          "semantic_definition": "Minute interval start derived from archive date and row index. Mapping is sample-validated only; full-history validation remains pending.",
+          "source_field": "derived from archive date + row index; no raw timestamp column",
+          "unit": "Asia/Shanghai local market wall-clock; start of one-minute interval"
+        },
+        {
+          "role": "bar_end_time",
+          "required": true,
+          "semantic_definition": "Minute interval end derived from archive date and row index. Existing cross-check supports row 1-240 mapping to 09:31-11:30 and 13:01-15:00 for tested dates only.",
+          "source_field": "derived from archive date + row index; no raw timestamp column",
+          "unit": "Asia/Shanghai local market wall-clock; end of one-minute interval"
+        },
+        {
+          "role": "available_at",
+          "required": true,
+          "semantic_definition": "Raw historical archives contain no receive-time or available-at field. A replay availability rule and latency assumption must be explicitly specified; do not equate event time with availability.",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "open",
+          "required": true,
+          "semantic_definition": "分钟开盘价",
+          "source_field": "open",
+          "unit": "CNY/share; raw unadjusted intraday"
+        },
+        {
+          "role": "high",
+          "required": true,
+          "semantic_definition": "分钟最高价",
+          "source_field": "high",
+          "unit": "CNY/share; raw unadjusted intraday"
+        },
+        {
+          "role": "low",
+          "required": true,
+          "semantic_definition": "分钟最低价",
+          "source_field": "low",
+          "unit": "CNY/share; raw unadjusted intraday"
+        },
+        {
+          "role": "close",
+          "required": true,
+          "semantic_definition": "分钟收盘价",
+          "source_field": "close",
+          "unit": "CNY/share; raw unadjusted intraday"
+        },
+        {
+          "role": "volume",
+          "required": true,
+          "semantic_definition": "成交量单位与累积/区间语义",
+          "source_field": "volume",
+          "unit": "shares; bars with zero volume and positive amount require a quality flag"
+        },
+        {
+          "role": "turnover",
+          "required": true,
+          "semantic_definition": "成交额单位与累积/区间语义",
+          "source_field": "amount",
+          "unit": "CNY"
+        },
+        {
+          "role": "bar_finality",
+          "required": false,
+          "semantic_definition": "Daily archive records are available as packaged historical bars; intraday finality/receive time is not recorded.",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "revision_time",
+          "required": false,
+          "semantic_definition": "Source does not expose correction/revision timestamps; any later repairs must be recorded in a separate ingestion manifest.",
+          "source_field": null,
+          "unit": null
+        }
+      ],
+      "source_path": "/data/data3t/data/A股分钟线/",
+      "observed_start": "2003-07-01 (archive date)",
+      "observed_end": "2026-09-01 (latest inventoried archive)",
+      "admission_status": "PASS_WITH_SCOPE_LIMITS: M02/M03 accepted canonical data; selected data pages audited, not every historical row decoded; not a full-market or financial-validity claim",
+      "source_evidence": [
+        "Existing project: A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/reports/M02分钟序列标准化验收报告.md, lines 3-50.",
+        "Existing project: reports/M03行为切片验收报告.md, lines 3-69; M03 accepted 5,630 date outputs with scope limits.",
+        "Existing project DATA_PROFILE.csv identifies raw_stock_minute at this path, frequency 1min, fields open,high,low,close,amount,volume.",
+        "M02 scanned 5,630 existing archive dates and produced 3,602,865,840 canonical rows / 15,011,941 security-days; 1,458,212 active security-days had no archive member.",
+        "M02 isolated source member problems including 475,299 schema-mismatch members across 177 dates, 11,052 duplicate normalized BJ members, 3,145 OHLC-invalid members, 46 wrong-row-count members, 4 parse errors and 1 non-CSV member.",
+        "M02 independent data-page QA sampled 31 dates (21,583,200 rows); it did not independently re-read every historical data page. M03 validated all 5,630 date manifests/footers but fully decoded event data pages for 12 selected dates; 178 canonical date partitions are empty.",
+        "Archive inventory: 5,630 of 5,632 calendar dates; missing 2005-06-15 and 2013-11-13.",
+        "2026-09-01 inventory: 5,988 members, 1,437,120 rows, 240 rows/member; 5,553 active Qlib stock-master codes present and 435 extra members excluded.",
+        "Time labels are derived from archive date and row index; row-end mapping is sample-supported. Raw files have no timestamp column and no true receive/available-at timestamp.",
+        "2026-09-01 includes 219 bars with volume=0 and amount>0; preserve but mark volume untrusted."
+      ],
+      "notes": [
+        "Raw member CSV header: open,high,low,close,amount,volume.",
+        "Price data are raw/unadjusted intraday; do not compute cross-day returns without an explicitly validated adjustment/return protocol.",
+        "M02/M03 are PASS_WITH_SCOPE_LIMITS. M02 scanned all archive dates/members and built canonical output, but independent data-page QA was sampled; M03 output closure passed while 178 canonical date partitions remain empty and data-page decoding covered 12 selected dates.",
+        "Some schema, duplicate, OHLC, row-count and parse-error members were isolated; do not interpret missing or isolated security-days as observed data.",
+        "Historical raw archives do not contain receive-time/available-at. Replay must explicitly specify availability and latency; never substitute event time silently.",
+        "Daily moneyflow is not admitted and L2 archives are deferred in the source project; neither is included by this mapping."
+      ],
+      "processing_provenance": {
+        "m02_final_qa_summary_path": "03_sequence_normalization/output/final_qa_summary.json",
+        "m02_final_qa_summary_sha256": "c391bbd8447fd133c65d0a3a6550fd972e9db2e1832d3df441af9eefb97c6f25",
+        "m02_archive_manifest_path": "03_sequence_normalization/output/archive_manifest.jsonl",
+        "m02_archive_manifest_sha256": "67f929b7cae706f4b6007ed5a0a09a15ad6b0cb191df0b59857d8106e0c3ed6b",
+        "m03_final_qa_summary_path": "04_behavior_slicing/output/final_qa_summary.json",
+        "m03_final_qa_summary_sha256": "69838a9ee48dbb2e2930f09b0c0b2419f7b8f4a9fce27445010c481cac42b9f9",
+        "m03_runner_sha256": "2202f5606a2860ae6ee944209f99276865e65d1f6725e0cd8644ec45cc022cae",
+        "m03_config_sha256": "57aa2d53d2a3504f21da502e18773f5ac487ec5d5275c18f94faafb3cbc6c404",
+        "interpretation": "These hashes identify existing processing QA artifacts and runner/config versions; they are not a cryptographic hash of the raw source archives."
+      }
+    },
+    {
+      "frequency": "tick",
+      "source_id": null,
+      "source_version": null,
+      "calendar_version": null,
+      "universe_version": null,
+      "raw_snapshot_hash": null,
+      "field_mappings": [
+        {
+          "role": "symbol",
+          "required": true,
+          "semantic_definition": "证券标识",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "event_time",
+          "required": true,
+          "semantic_definition": "交易所事件时点及精度",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "receive_time",
+          "required": true,
+          "semantic_definition": "采集端接收时点及精度",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "available_at",
+          "required": true,
+          "semantic_definition": "策略实际可读取该事件的时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "event_type",
+          "required": true,
+          "semantic_definition": "逐笔成交/委托/撤单/盘口更新等事件类型",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "sequence_no",
+          "required": false,
+          "semantic_definition": "源端序列号及排序规则",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "trade_price",
+          "required": false,
+          "semantic_definition": "逐笔成交价格",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "trade_size",
+          "required": false,
+          "semantic_definition": "逐笔成交数量与单位",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "aggressor_side",
+          "required": false,
+          "semantic_definition": "主动买卖方向及其来源定义",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "order_id",
+          "required": false,
+          "semantic_definition": "委托标识及其跨消息一致性",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bid_price_levels",
+          "required": false,
+          "semantic_definition": "买方盘口档位价格及深度口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "ask_price_levels",
+          "required": false,
+          "semantic_definition": "卖方盘口档位价格及深度口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bid_size_levels",
+          "required": false,
+          "semantic_definition": "买方盘口档位数量及单位",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "ask_size_levels",
+          "required": false,
+          "semantic_definition": "卖方盘口档位数量及单位",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "correction_flag",
+          "required": false,
+          "semantic_definition": "修订/回补/撤销记录语义",
+          "source_field": null,
+          "unit": null
+        }
+      ]
+    }
+  ],
+  "task_contract": {
+    "task_family": "minute_OHLCVA_behavior_feature_discovery_two_track",
+    "approved_horizons": [
+      "T+1",
+      "T+3",
+      "T+5"
+    ],
+    "candidate_daily_horizons": [
+      "T+1",
+      "T+3",
+      "T+5"
+    ],
+    "target_expression": null,
+    "signal_time_rule": null,
+    "entry_time_rule": null,
+    "exit_time_rule": null,
+    "label_available_at_rule": null,
+    "split": {
+      "train_start": null,
+      "train_end": null,
+      "valid_start": null,
+      "valid_end": null,
+      "outer_test_start": null,
+      "outer_test_end": null,
+      "purge_sessions": null,
+      "embargo_sessions": null
+    },
+    "input_frequency_decision": "minute selected for design by user; formal data admission remains blocked",
+    "experiment_tracks": [
+      {
+        "id": "A_INTRADAY_ROLLING",
+        "status": "DESIGN_DRAFT_BLOCKED",
+        "sample_unit": "symbol × trading_date × signal_time",
+        "signal_time_rule": null,
+        "target_expression": null,
+        "entry_time_rule": null,
+        "exit_time_rule": null
+      },
+      {
+        "id": "B_FULL_DAY_AGGREGATION",
+        "status": "DESIGN_DRAFT_BLOCKED",
+        "sample_unit": "symbol × trading_date",
+        "signal_time_rule": "after full T-session OHLCVA is available; exact delay not frozen",
+        "target_expression": null,
+        "entry_time_rule": null,
+        "exit_time_rule": null
+      }
+    ]
+  },
+  "execution_contract": {
+    "fill_price_rule": null,
+    "earliest_order_time_rule": null,
+    "buy_cost_schedule": null,
+    "sell_cost_schedule": null,
+    "minimum_fee_rule": null,
+    "stamp_duty_rule": null,
+    "slippage_model": null,
+    "market_impact_model": null,
+    "volume_participation_cap": null,
+    "historical_price_limit_rule": null,
+    "suspension_and_untradable_rule": null,
+    "t_plus_one_sell_rule": null
+  },
+  "evaluation_gates": {
+    "source_field_semantics_verified": false,
+    "point_in_time_available_at_verified": false,
+    "raw_snapshot_hash_recorded": false,
+    "historical_universe_verified": false,
+    "label_boundary_purge_verified": false,
+    "final_test_isolated_from_research_feedback": false,
+    "execution_price_semantics_verified": false,
+    "costs_slippage_and_capacity_verified": false,
+    "replay_matches_live_data_availability": false,
+    "evaluation_config_hash_frozen": false
+  },
+  "formal_run_allowed": false,
+  "unresolved_blockers": [
+    "任务族、输入频率和预测期限已对齐，但两轨各自的信号时点、标签表达式、起算价/退出价、收益基准与不可交易样本处理尚未冻结。",
+    "分钟候选源的原始快照 hash、source_version、calendar_version、universe_version 尚未绑定到本任务。",
+    "原始分钟归档没有真实 receive_time/available_at 字段；必须冻结并验证回放可用时点和延迟假设，不能把事件时间等同于可用时点。",
+    "历史研究暴露登记仍不完整：P0/P1/P2 的精确日期/标签/结果访问历史及独立分钟路径 Notebook 的全量标签血缘需对账。",
+    "训练/验证/外层测试日期、点时点股票池、purge/embargo 尚未冻结；已暴露日期不能作为本轮独立盲测。",
+    "独立 sealed evaluator、隔离身份/ACL、旁路泄漏与一次性评分控制尚未实现或验收。",
+    "历史涨跌停规则、停牌/不可交易处理、交易费用、滑点、冲击、容量及 T+1 卖出约束尚未冻结。",
+    "日频资金流和 L2 逐笔数据不属于本轮已准入输入。"
+  ],
+  "policy": "本文件是无样例数据的契约模板，不代表任何数据源已接入或字段已验证。正式实验前必须通过 python3 scripts/validate_quant_contract.py --strict。 用户已确认分钟 OHLCVA 双轨研究任务和 T+1/T+3/T+5 期限；本契约只记录设计决定，因标签、数据版本、执行与盲测门禁未完成，仍禁止正式回测。"
+}
