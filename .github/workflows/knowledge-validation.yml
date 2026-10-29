@@ -19,6 +19,8 @@ jobs:
           python-version: '3.11'
       - name: Validate book index, topic graph and links
         run: python3 scripts/validate_library.py
+      - name: Validate A-share data contract structure and blocked state
+        run: python3 scripts/validate_quant_contract.py
       - name: Validate Discussion form YAML
         run: |
           ruby -ryaml -e '

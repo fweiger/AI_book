@@ -1,0 +1,389 @@
+{
+  "schema_version": "0.1.0",
+  "topic_id": "TOPIC-004",
+  "contract_id": "ASHARE-QUANT-001",
+  "status": "BLOCKED_ON_DATA_CONTRACT",
+  "created_at": "2026-10-29",
+  "required_frequencies": [],
+  "data_sources": [
+    {
+      "frequency": "daily",
+      "source_id": null,
+      "source_version": null,
+      "calendar_version": null,
+      "universe_version": null,
+      "raw_snapshot_hash": null,
+      "field_mappings": [
+        {
+          "role": "symbol",
+          "required": true,
+          "semantic_definition": "证券标识",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "event_time",
+          "required": true,
+          "semantic_definition": "日线交易日期及其时区语义",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "available_at",
+          "required": true,
+          "semantic_definition": "该行及其字段最早实际可用时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "open",
+          "required": true,
+          "semantic_definition": "开盘价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "high",
+          "required": true,
+          "semantic_definition": "最高价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "low",
+          "required": true,
+          "semantic_definition": "最低价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "close",
+          "required": true,
+          "semantic_definition": "收盘价及复权口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "volume",
+          "required": true,
+          "semantic_definition": "成交量单位与口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "turnover",
+          "required": true,
+          "semantic_definition": "成交额单位与口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "price_adjustment_basis",
+          "required": true,
+          "semantic_definition": "前复权/后复权/不复权及点时点策略",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "suspension_status",
+          "required": true,
+          "semantic_definition": "停牌与不可成交状态",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "limit_status",
+          "required": true,
+          "semantic_definition": "证券在该日适用的涨跌幅限制状态",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "universe_membership",
+          "required": true,
+          "semantic_definition": "该时点历史股票池成员关系",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "revision_time",
+          "required": false,
+          "semantic_definition": "数据修订或回补的时间",
+          "source_field": null,
+          "unit": null
+        }
+      ]
+    },
+    {
+      "frequency": "minute",
+      "source_id": null,
+      "source_version": null,
+      "calendar_version": null,
+      "universe_version": null,
+      "raw_snapshot_hash": null,
+      "field_mappings": [
+        {
+          "role": "symbol",
+          "required": true,
+          "semantic_definition": "证券标识",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bar_start_time",
+          "required": true,
+          "semantic_definition": "分钟区间起始时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bar_end_time",
+          "required": true,
+          "semantic_definition": "分钟区间结束时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "available_at",
+          "required": true,
+          "semantic_definition": "该分钟数据实际到达并可用于决策的时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "open",
+          "required": true,
+          "semantic_definition": "分钟开盘价",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "high",
+          "required": true,
+          "semantic_definition": "分钟最高价",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "low",
+          "required": true,
+          "semantic_definition": "分钟最低价",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "close",
+          "required": true,
+          "semantic_definition": "分钟收盘价",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "volume",
+          "required": true,
+          "semantic_definition": "成交量单位与累积/区间语义",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "turnover",
+          "required": true,
+          "semantic_definition": "成交额单位与累积/区间语义",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bar_finality",
+          "required": false,
+          "semantic_definition": "该分钟是否已封口及是否会被修订",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "revision_time",
+          "required": false,
+          "semantic_definition": "补数/修订发生时间",
+          "source_field": null,
+          "unit": null
+        }
+      ]
+    },
+    {
+      "frequency": "tick",
+      "source_id": null,
+      "source_version": null,
+      "calendar_version": null,
+      "universe_version": null,
+      "raw_snapshot_hash": null,
+      "field_mappings": [
+        {
+          "role": "symbol",
+          "required": true,
+          "semantic_definition": "证券标识",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "event_time",
+          "required": true,
+          "semantic_definition": "交易所事件时点及精度",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "receive_time",
+          "required": true,
+          "semantic_definition": "采集端接收时点及精度",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "available_at",
+          "required": true,
+          "semantic_definition": "策略实际可读取该事件的时点",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "event_type",
+          "required": true,
+          "semantic_definition": "逐笔成交/委托/撤单/盘口更新等事件类型",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "sequence_no",
+          "required": false,
+          "semantic_definition": "源端序列号及排序规则",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "trade_price",
+          "required": false,
+          "semantic_definition": "逐笔成交价格",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "trade_size",
+          "required": false,
+          "semantic_definition": "逐笔成交数量与单位",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "aggressor_side",
+          "required": false,
+          "semantic_definition": "主动买卖方向及其来源定义",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "order_id",
+          "required": false,
+          "semantic_definition": "委托标识及其跨消息一致性",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bid_price_levels",
+          "required": false,
+          "semantic_definition": "买方盘口档位价格及深度口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "ask_price_levels",
+          "required": false,
+          "semantic_definition": "卖方盘口档位价格及深度口径",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "bid_size_levels",
+          "required": false,
+          "semantic_definition": "买方盘口档位数量及单位",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "ask_size_levels",
+          "required": false,
+          "semantic_definition": "卖方盘口档位数量及单位",
+          "source_field": null,
+          "unit": null
+        },
+        {
+          "role": "correction_flag",
+          "required": false,
+          "semantic_definition": "修订/回补/撤销记录语义",
+          "source_field": null,
+          "unit": null
+        }
+      ]
+    }
+  ],
+  "task_contract": {
+    "task_family": null,
+    "approved_horizons": [],
+    "candidate_daily_horizons": [
+      "T+1",
+      "T+2",
+      "T+3",
+      "T+4",
+      "T+5"
+    ],
+    "target_expression": null,
+    "signal_time_rule": null,
+    "entry_time_rule": null,
+    "exit_time_rule": null,
+    "label_available_at_rule": null,
+    "split": {
+      "train_start": null,
+      "train_end": null,
+      "valid_start": null,
+      "valid_end": null,
+      "outer_test_start": null,
+      "outer_test_end": null,
+      "purge_sessions": null,
+      "embargo_sessions": null
+    }
+  },
+  "execution_contract": {
+    "fill_price_rule": null,
+    "earliest_order_time_rule": null,
+    "buy_cost_schedule": null,
+    "sell_cost_schedule": null,
+    "minimum_fee_rule": null,
+    "stamp_duty_rule": null,
+    "slippage_model": null,
+    "market_impact_model": null,
+    "volume_participation_cap": null,
+    "historical_price_limit_rule": null,
+    "suspension_and_untradable_rule": null,
+    "t_plus_one_sell_rule": null
+  },
+  "evaluation_gates": {
+    "source_field_semantics_verified": false,
+    "point_in_time_available_at_verified": false,
+    "raw_snapshot_hash_recorded": false,
+    "historical_universe_verified": false,
+    "label_boundary_purge_verified": false,
+    "final_test_isolated_from_research_feedback": false,
+    "execution_price_semantics_verified": false,
+    "costs_slippage_and_capacity_verified": false,
+    "replay_matches_live_data_availability": false,
+    "evaluation_config_hash_frozen": false
+  },
+  "formal_run_allowed": false,
+  "unresolved_blockers": [
+    "尚未将真实数据源及版本映射到 daily/minute/tick 字段角色。",
+    "尚未核实 event_time、receive_time、available_at 和历史修订/补数的真实语义。",
+    "尚未选择本轮实验所需频率与任务类型；required_frequencies 为空。",
+    "尚未冻结标签、入场/退出时点、时间切分、purge/embargo 和外层盲测权限。",
+    "尚未核实 A 股历史涨跌幅规则、交易费用、滑点、冲击、容量及 T+1 卖出限制。",
+    "尚未验证研究反馈是否彻底隔离最终测试集。"
+  ],
+  "policy": "本文件是无样例数据的契约模板，不代表任何数据源已接入或字段已验证。正式实验前必须通过 python3 scripts/validate_quant_contract.py --strict。"
+}
