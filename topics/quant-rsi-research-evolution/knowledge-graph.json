@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.1.2",
+  "topic_version": "0.1.4",
   "topic_id": "TOPIC-004",
   "title": "AI 量化研究的递归自我改进：从 Alpha 发现到研究系统自进化",
-  "source_level": "关键论文方法及公开源码调用链已部分核查；作者实际实验配置、完整源码复现和本地 Alpha 仍待核验",
+  "source_level": "关键论文方法及公开源码调用链已部分核查；A股分钟源候选已映射；实验任务、可用时点、盲测隔离与本地Alpha仍待验证",
   "books": [],
   "related_books": [],
   "nodes": [

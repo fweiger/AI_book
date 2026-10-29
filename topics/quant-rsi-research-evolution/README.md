@@ -1,7 +1,7 @@
 # TOPIC-004 · AI 量化研究的递归自我改进：从 Alpha 发现到研究系统自进化
 
 - 创建于：2026-10-29
-- topic_version：0.1.2；状态：SOURCE_AUDIT_PARTIAL（论文与公开源码调用链已部分核查，未全面运行/复现，没有本地回测）
+- topic_version：0.1.4；状态：SOURCE_AUDIT_PARTIAL（论文与公开源码调用链已部分核查，未全面运行/复现，没有本地回测）
 - 形态：原创专题书工作区 + 研究任务；不是已经出版的书，不登记 B-ID。
 - 历史线索：2026-09-14、2026-10-20、2026-10-26 的 Quant-RSI、AQuA、研究记忆、Harness 和元研究策略讨论。
 
@@ -17,7 +17,7 @@
 - [阅读路线](reading-path.md) · [公开来源与历史对话线索](sources.md)
 - [论点 C001–C008](claims.md) · [知识图谱](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
 - [T01 原文方法审计](research/T01-paper-audit-2026-10-29.md) · [RSI 判定表](research/RSI-classification-criteria-v0.md)
-- [RD-Agent/Qlib 源码审计](research/RD-Agent-source-audit-2026-10-29.md)
+- [RD-Agent/Qlib 源码审计](research/RD-Agent-source-audit-2026-10-29.md) · [A 股数据源就绪度](research/ashare-data-readiness-2026-10-29.md)
 - [T02 冻结评估草案](research/T02-sealed-evaluator-protocol-v0.md) · [A 股数据契约](research/a-share-data-contract-v0.json)
 - [第一轮任务 NEXT](NEXT.md) · [对话记录](sessions/README.md) · [版本日志](CHANGELOG.md)
 
