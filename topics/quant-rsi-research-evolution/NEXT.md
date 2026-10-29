@@ -37,3 +37,16 @@
 - [T02：冻结评估与消融草案](research/T02-sealed-evaluator-protocol-v0.md)：完成协议设计，真实数据范围/预算/隔离尚未核实，不能执行回测。
 
 **下一动作（P0）**：核验 RD-Agent(Q) 附录的交易时点与源码，再审计 AQuA 版本/未公开配置；随后取得当前可用数据字段定义和时间戳，以批准 T02 冻结参数。
+
+
+## 2026-10-29 第二轮：源码审计与可执行数据契约
+
+- [RD-Agent/Qlib 源码审计](research/RD-Agent-source-audit-2026-10-29.md)：公开默认链路存在反复使用 test 指标反馈的高风险；同时发现标签边界 purge、Bandit 奖励时序和日线数据路径限制。
+- [A 股数据契约模板](research/a-share-data-contract-v0.json)：daily/minute/tick 三类字段角色、时间可得性、标签切分、执行成本与门禁均已结构化，但真实字段尚未映射。
+- [验证脚本](../../scripts/validate_quant_contract.py)：CI 运行结构检查；正式实验预检应运行 --strict。脚本不代表数据源本身已验证。
+
+**P0 下一步：**
+1. 明确第一轮实验的 required_frequencies（daily / minute / tick），然后从真实数据源文档与现有采集代码逐字段映射 source_field。
+2. 确定标签定义与最远未来依赖，生成 purge/embargo 和测试集不可读权限。
+3. 冻结执行时点、历史涨跌幅、费用、滑点/冲击和容量合同。
+4. 之后再运行 A/B/C/D 消融。当前 contract status 为 BLOCKED_ON_DATA_CONTRACT，禁止把该阶段称为回测已启动。

@@ -29,3 +29,14 @@
 - [T02 冻结评估协议 v0](research/T02-sealed-evaluator-protocol-v0.md)
 
 原文定位的内容不意味着全部章节已阅读，论文作者报告的指标不提升为本地「实验支持」。
+
+
+## S04 · RD-Agent(Q) 源码与 Qlib 执行链路（2026-10-29 静态审计）
+
+- [RD-Agent 2025-05-29 源码锚点](https://github.com/microsoft/RD-Agent/commit/6e42d523a85df67aa13927abbf0894564c71880)：论文对应的历史代码提交。
+- [历史回测配置](https://github.com/microsoft/RD-Agent/blob/6e42d523a85df67aa13927abbf0894564c71880/rdagent/scenarios/qlib/experiment/factor_template/conf.yaml)：CSI300、未来两期收盘价标签、close 成交、固定费用与 2017–2020 回测区间。
+- [Bandit 实现](https://github.com/microsoft/RD-Agent/blob/6e42d523a85df67aa13927abbf0894564c71880/rdagent/scenarios/qlib/proposal/bandit.py) 与 [QuantHypothesisGen](https://github.com/microsoft/RD-Agent/blob/6e42d523a85df67aa13927abbf0894564c71880/rdagent/scenarios/qlib/proposal/quant_proposal.py)：状态、奖励和下一动作的静态代码路径。
+- [Qlib SignalRecord / SigAnaRecord / PortAnaRecord](https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/workflow/record_temp.py)、[DatasetH](https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/data/dataset/__init__.py)、[TopkDropoutStrategy](https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/contrib/strategy/signal_strategy.py) 与 [Exchange](https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/qlib/backtest/exchange.py)：信号、分段、成交价与交易限制执行路径。
+- [论文 HTML](https://arxiv.org/html/2505.15155)：Appendix C.4.2 与 D.2。
+
+审计报告：[RD-Agent-source-audit-2026-10-29.md](research/RD-Agent-source-audit-2026-10-29.md)。以上是公开代码静态审计，尚未运行源码，也未取得作者原始实验日志。
