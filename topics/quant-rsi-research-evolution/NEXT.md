@@ -56,6 +56,6 @@
 
 - 从现有项目 `A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/01_data_contract/DATA_CONTRACT.md` 与 `DATA_PROFILE.csv` 读取到真实分钟源：`raw_stock_minute`，路径 `/data/data3t/data/A股分钟线/`，字段 `open,high,low,close,amount,volume`。
 - 已把分钟候选源字段、量纲、原始未复权口径、归档日覆盖、已知缺档与样本级时间映射证据写入数据契约。
-- `available_at` 在原始历史归档中不存在；不能把事件时间冒充真实可用时间。分钟全历史 M02 逐包校验未完成，故 `required_frequencies` 仍为空，状态仍为 `BLOCKED_ON_DATA_CONTRACT`。
+- `available_at` 在原始历史归档中不存在；不能把事件时间冒充真实可用时间。现有项目的 M02/M03 验收报告均为 `PASS_WITH_SCOPE_LIMITS`，但 M02 仅抽查部分原始数据页、M03 仅完整解码 12 个选定日期；本轮仍需保留这些范围限制。由于 `available_at`、源快照哈希和任务/执行协议未冻结，`required_frequencies` 仍为空，状态仍为 `BLOCKED_ON_DATA_CONTRACT`。
 - 日频资金流在来源血缘/BJ 覆盖未核实前未准入；L2 归档在源项目中仍属后续阶段，不得混入当前契约。
 - 预检器补充了必需字段角色、门禁完整性、日期顺序和错误类型保护，并新增回归测试；CI 成功只证明结构与回归检查通过。

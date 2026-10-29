@@ -210,19 +210,23 @@
       "source_path": "/data/data3t/data/A股分钟线/",
       "observed_start": "2003-07-01 (archive date)",
       "observed_end": "2026-09-01 (latest inventoried archive)",
-      "admission_status": "PASS_WITH_SCOPE_LIMITS: minute OHLCVA core only; full-history M02 manifest pending",
+      "admission_status": "PASS_WITH_SCOPE_LIMITS: M02/M03 accepted canonical data; selected data pages audited, not every historical row decoded; not a full-market or financial-validity claim",
       "source_evidence": [
-        "Existing project: A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/01_data_contract/DATA_CONTRACT.md, lines 5-23.",
-        "Existing project DATA_PROFILE.csv identifies raw_stock_minute at this path, frequency 1min, fields open,high,low,close,amount,volume.",
+        "Existing project: A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/reports/M02分钟序列标准化验收报告.md, lines 3-50.",
+        "Existing project: reports/M03行为切片验收报告.md, lines 3-69; M03 accepted 5,630 date outputs with scope limits.",
+        "Existing project: 01_data_contract/DATA_PROFILE.csv identifies raw_stock_minute at this path, frequency 1min, fields open,high,low,close,amount,volume.",
+        "M02 reports 5,630 existing archive dates, 3,602,865,840 canonical rows and 15,011,941 security-days; known missing archive dates are 2005-06-15 and 2013-11-13.",
+        "M02 isolates schema mismatch, duplicate normalized codes, OHLC-invalid members, wrong row counts and parse errors; M03 reports 178 empty canonical partitions.",
+        "M02 data-page checks sampled 31 trading days; M03 data-page checks fully decoded 12 selected dates (8 non-empty and 4 empty boundary dates), not every historical data page.",
         "2026-09-01 inventory: 5,988 members, 1,437,120 rows, 240 rows/member; 5,553 active Qlib stock-master codes present and 435 extra members excluded.",
-        "Archive inventory: 5,630 of 5,632 calendar dates; missing 2005-06-15 and 2013-11-13.",
-        "Time labels are derived from archive date and row index; sample cross-check supports row-end mapping, but raw files have no timestamp column and complete historical content is not fully audited.",
+        "Time labels are derived from archive date and row index; sample cross-check supports row-end mapping, but raw files have no timestamp column and no true receive/available-at timestamp.",
         "2026-09-01 includes 219 bars with volume=0 and amount>0; preserve but mark volume untrusted."
       ],
       "notes": [
         "Raw member CSV header: open,high,low,close,amount,volume.",
         "Price data are raw/unadjusted intraday; do not compute cross-day returns without an explicitly validated adjustment/return protocol.",
-        "Only minute OHLCVA core input is admitted with scope limits; the full historical archive has not passed per-file M02 validation.",
+        "M02/M03 reports are PASS_WITH_SCOPE_LIMITS: use only admitted canonical rows and honor isolated members/empty partitions; this is not a claim that every raw historical row was fully decoded.",
+        "Historical raw archives do not contain receive-time/available-at. Replay must explicitly specify availability and latency; never substitute event time silently.",
         "Daily moneyflow is not admitted and L2 archives are deferred in the source project; neither is included by this mapping."
       ]
     },
@@ -396,12 +400,12 @@
   },
   "formal_run_allowed": false,
   "unresolved_blockers": [
-    "尚未将真实数据源及版本映射到 daily/minute/tick 字段角色。",
-    "尚未核实 event_time、receive_time、available_at 和历史修订/补数的真实语义。",
-    "尚未选择本轮实验所需频率与任务类型；required_frequencies 为空。",
+    "分钟候选源已映射，但本轮 required_frequencies 仍为空；尚未确定具体任务类型和频率，也未核定 source_version、calendar_version、universe_version 与 raw_snapshot_hash。",
+    "原始分钟归档没有真实 receive_time/available_at 字段，修订时间也未记录；需冻结回放可用时点规则和延迟假设，不能把事件时点等同于可用时点。",
     "尚未冻结标签、入场/退出时点、时间切分、purge/embargo 和外层盲测权限。",
-    "尚未核实 A 股历史涨跌幅规则、交易费用、滑点、冲击、容量及 T+1 卖出限制。",
-    "尚未验证研究反馈是否彻底隔离最终测试集。"
+    "尚未核实本轮交易验证所需的 A 股历史涨跌幅规则、交易费用、滑点、冲击、容量及 T+1 卖出限制。",
+    "尚未验证研究反馈是否彻底隔离最终测试集。",
+    "日频资金流的本地来源血缘及 .BJ 覆盖仍未核实；L2 逐笔数据不属于当前已映射的准入输入。"
   ],
   "policy": "本文件是无样例数据的契约模板，不代表任何数据源已接入或字段已验证。正式实验前必须通过 python3 scripts/validate_quant_contract.py --strict。"
 }
