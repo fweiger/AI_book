@@ -22,14 +22,18 @@
 | **TOPIC-003** 交易心理与执行 | *Trading in the Zone* | 概率观、风险与纪律 |
 | TOPIC-003 | *The Disciplined Trader* | 决策偏差与行为执行 |
 | TOPIC-003 | *Fooled by Randomness* | 过度归因、随机性与幸存者偏差 |
-| **候选 TOPIC-004** 策略证据与统计检验 | *Evidence-Based Technical Analysis* | 用科学方法评价技术指标 |
-| TOPIC-004 | *Algorithmic Trading: Winning Strategies and Their Rationale* | 策略假设、模型和实证检验 |
-| TOPIC-004 | *The Art and Science of Technical Analysis* | 市场结构、价格行为与可验证规则 |
-| TOPIC-004 | *The Encyclopedia of Trading Strategies* | 系统性交易规则与实验 |
-| **候选 TOPIC-005** 市场效率与投资方法 | *A Random Walk Down Wall Street* | 市场有效性、被动投资 |
-| TOPIC-005 | *The Intelligent Investor* | 安全边际、价值投资 |
-| TOPIC-005 | *Common Stocks and Uncommon Profits* | 基本面研究方法 |
-| TOPIC-005 | *Irrational Exuberance* | 泡沫、叙事与群体心理 |
+| **未分配编号候选** 策略证据与统计检验 | *Evidence-Based Technical Analysis* | 用科学方法评价技术指标 |
+| 待编号候选 | *Algorithmic Trading: Winning Strategies and Their Rationale* | 策略假设、模型和实证检验 |
+| 待编号候选 | *The Art and Science of Technical Analysis* | 市场结构、价格行为与可验证规则 |
+| 待编号候选 | *The Encyclopedia of Trading Strategies* | 系统性交易规则与实验 |
+| **未分配编号候选** 市场效率与投资方法 | *A Random Walk Down Wall Street* | 市场有效性、被动投资 |
+| 待编号候选 | *The Intelligent Investor* | 安全边际、价值投资 |
+| 待编号候选 | *Common Stocks and Uncommon Profits* | 基本面研究方法 |
+| 待编号候选 | *Irrational Exuberance* | 泡沫、叙事与群体心理 |
+
+## 2026-10-29 新登记专题
+
+TOPIC-004 已分配给 [AI 量化研究的递归自我改进](../topics/quant-rsi-research-evolution/README.md)，属于历史对话衍生的原创专题书写作计划，不是已出版著作。AQuA、RD-Agent(Q) 是论文和研究线索，不占 B-ID。上表的策略证据与市场效率主题仍为候选，尚未分配正式 TOPIC-ID。
 
 ## 3. 不应被误登记为“书籍”的既有研究系列
 

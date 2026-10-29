@@ -1,0 +1,195 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.0",
+  "topic_id": "TOPIC-004",
+  "title": "AI 量化研究的递归自我改进：从 Alpha 发现到研究系统自进化",
+  "source_level": "公开摘要级/研究设计/待原文核验",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "R01",
+      "title": "研究型 RSI 定义",
+      "type": "concept",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R02",
+      "title": "假设生成",
+      "type": "process",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R03",
+      "title": "冻结验证器",
+      "type": "control",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R04",
+      "title": "失败诊断",
+      "type": "process",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R05",
+      "title": "研究记忆",
+      "type": "memory",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R06",
+      "title": "元研究策略",
+      "type": "policy",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R07",
+      "title": "A 股数据与交易约束",
+      "type": "constraint",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R08",
+      "title": "独立消融评估",
+      "type": "evaluation",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    },
+    {
+      "id": "R09",
+      "title": "真实可交易 Alpha",
+      "type": "outcome",
+      "evidence_level": "研究设计/待实证",
+      "source_status": "待原文核验"
+    }
+  ],
+  "edges": [
+    {
+      "source": "R01",
+      "target": "R02",
+      "relation": "约束"
+    },
+    {
+      "source": "R02",
+      "target": "R03",
+      "relation": "提交实验"
+    },
+    {
+      "source": "R03",
+      "target": "R04",
+      "relation": "失败反馈"
+    },
+    {
+      "source": "R04",
+      "target": "R05",
+      "relation": "记录"
+    },
+    {
+      "source": "R05",
+      "target": "R06",
+      "relation": "反馈给"
+    },
+    {
+      "source": "R06",
+      "target": "R02",
+      "relation": "选择方向"
+    },
+    {
+      "source": "R07",
+      "target": "R03",
+      "relation": "限制"
+    },
+    {
+      "source": "R03",
+      "target": "R08",
+      "relation": "提供盲测协议"
+    },
+    {
+      "source": "R06",
+      "target": "R08",
+      "relation": "待验证增益"
+    },
+    {
+      "source": "R08",
+      "target": "R09",
+      "relation": "禁止直接推断"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "见 questions.md",
+      "nodes": [
+        "R01",
+        "R06",
+        "R08"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "见 questions.md",
+      "nodes": [
+        "R03",
+        "R08"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "见 questions.md",
+      "nodes": [
+        "R04",
+        "R05"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "见 questions.md",
+      "nodes": [
+        "R02",
+        "R06"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "见 questions.md",
+      "nodes": [
+        "R02",
+        "R03",
+        "R07"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "见 questions.md",
+      "nodes": [
+        "R07",
+        "R09"
+      ]
+    },
+    {
+      "id": "Q07",
+      "name": "见 questions.md",
+      "nodes": [
+        "R05",
+        "R06",
+        "R08"
+      ]
+    }
+  ],
+  "constraints": [
+    "元研究策略需在独立任务/等预算条件下验证",
+    "不把论文摘要当全文精读",
+    "盘中因子符合 point-in-time",
+    "不将其他任务域结果直接外推 A 股"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}

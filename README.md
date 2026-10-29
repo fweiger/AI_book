@@ -14,6 +14,7 @@
 
 - [TOPIC-002：市场微观结构与订单流](topics/market-microstructure-orderflow/README.md)
 - [TOPIC-003：交易心理、风险与执行](topics/trading-psychology-execution/README.md)
+- [TOPIC-004：AI 量化研究的递归自我改进（原创专题书）](topics/quant-rsi-research-evolution/README.md)
 - [其他候选书籍与后续主题](catalog/recovered-books-2026-10-29.md)
 - [版本及自动验证规则](VERSIONING.md)
 
