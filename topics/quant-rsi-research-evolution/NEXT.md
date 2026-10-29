@@ -50,3 +50,12 @@
 2. 确定标签定义与最远未来依赖，生成 purge/embargo 和测试集不可读权限。
 3. 冻结执行时点、历史涨跌幅、费用、滑点/冲击和容量合同。
 4. 之后再运行 A/B/C/D 消融。当前 contract status 为 BLOCKED_ON_DATA_CONTRACT，禁止把该阶段称为回测已启动。
+
+
+## 2026-10-29 第三轮：基于现有数据合同补齐候选字段映射
+
+- 从现有项目 `A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/01_data_contract/DATA_CONTRACT.md` 与 `DATA_PROFILE.csv` 读取到真实分钟源：`raw_stock_minute`，路径 `/data/data3t/data/A股分钟线/`，字段 `open,high,low,close,amount,volume`。
+- 已把分钟候选源字段、量纲、原始未复权口径、归档日覆盖、已知缺档与样本级时间映射证据写入数据契约。
+- `available_at` 在原始历史归档中不存在；不能把事件时间冒充真实可用时间。分钟全历史 M02 逐包校验未完成，故 `required_frequencies` 仍为空，状态仍为 `BLOCKED_ON_DATA_CONTRACT`。
+- 日频资金流在来源血缘/BJ 覆盖未核实前未准入；L2 归档在源项目中仍属后续阶段，不得混入当前契约。
+- 预检器补充了必需字段角色、门禁完整性、日期顺序和错误类型保护，并新增回归测试；CI 成功只证明结构与回归检查通过。

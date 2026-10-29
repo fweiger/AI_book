@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "topic_id": "TOPIC-004",
   "contract_id": "ASHARE-QUANT-001",
   "status": "BLOCKED_ON_DATA_CONTRACT",
@@ -116,7 +116,7 @@
     },
     {
       "frequency": "minute",
-      "source_id": null,
+      "source_id": "raw_stock_minute",
       "source_version": null,
       "calendar_version": null,
       "universe_version": null,
@@ -126,27 +126,27 @@
           "role": "symbol",
           "required": true,
           "semantic_definition": "证券标识",
-          "source_field": null,
-          "unit": null
+          "source_field": "member path + market identifier + six-digit code",
+          "unit": "security identifier; preserve market/code namespace"
         },
         {
           "role": "bar_start_time",
           "required": true,
-          "semantic_definition": "分钟区间起始时点",
-          "source_field": null,
-          "unit": null
+          "semantic_definition": "Minute interval start derived from archive date and row index. Mapping is sample-validated only; full-history validation remains pending.",
+          "source_field": "derived from archive date + row index; no raw timestamp column",
+          "unit": "Asia/Shanghai local market wall-clock; start of one-minute interval"
         },
         {
           "role": "bar_end_time",
           "required": true,
-          "semantic_definition": "分钟区间结束时点",
-          "source_field": null,
-          "unit": null
+          "semantic_definition": "Minute interval end derived from archive date and row index. Existing cross-check supports row 1-240 mapping to 09:31-11:30 and 13:01-15:00 for tested dates only.",
+          "source_field": "derived from archive date + row index; no raw timestamp column",
+          "unit": "Asia/Shanghai local market wall-clock; end of one-minute interval"
         },
         {
           "role": "available_at",
           "required": true,
-          "semantic_definition": "该分钟数据实际到达并可用于决策的时点",
+          "semantic_definition": "Raw historical archives contain no receive-time or available-at field. A replay availability rule and latency assumption must be explicitly specified; do not equate event time with availability.",
           "source_field": null,
           "unit": null
         },
@@ -154,58 +154,76 @@
           "role": "open",
           "required": true,
           "semantic_definition": "分钟开盘价",
-          "source_field": null,
-          "unit": null
+          "source_field": "open",
+          "unit": "CNY/share; raw unadjusted intraday"
         },
         {
           "role": "high",
           "required": true,
           "semantic_definition": "分钟最高价",
-          "source_field": null,
-          "unit": null
+          "source_field": "high",
+          "unit": "CNY/share; raw unadjusted intraday"
         },
         {
           "role": "low",
           "required": true,
           "semantic_definition": "分钟最低价",
-          "source_field": null,
-          "unit": null
+          "source_field": "low",
+          "unit": "CNY/share; raw unadjusted intraday"
         },
         {
           "role": "close",
           "required": true,
           "semantic_definition": "分钟收盘价",
-          "source_field": null,
-          "unit": null
+          "source_field": "close",
+          "unit": "CNY/share; raw unadjusted intraday"
         },
         {
           "role": "volume",
           "required": true,
           "semantic_definition": "成交量单位与累积/区间语义",
-          "source_field": null,
-          "unit": null
+          "source_field": "volume",
+          "unit": "shares; bars with zero volume and positive amount require a quality flag"
         },
         {
           "role": "turnover",
           "required": true,
           "semantic_definition": "成交额单位与累积/区间语义",
-          "source_field": null,
-          "unit": null
+          "source_field": "amount",
+          "unit": "CNY"
         },
         {
           "role": "bar_finality",
           "required": false,
-          "semantic_definition": "该分钟是否已封口及是否会被修订",
+          "semantic_definition": "Daily archive records are available as packaged historical bars; intraday finality/receive time is not recorded.",
           "source_field": null,
           "unit": null
         },
         {
           "role": "revision_time",
           "required": false,
-          "semantic_definition": "补数/修订发生时间",
+          "semantic_definition": "Source does not expose correction/revision timestamps; any later repairs must be recorded in a separate ingestion manifest.",
           "source_field": null,
           "unit": null
         }
+      ],
+      "source_path": "/data/data3t/data/A股分钟线/",
+      "observed_start": "2003-07-01 (archive date)",
+      "observed_end": "2026-09-01 (latest inventoried archive)",
+      "admission_status": "PASS_WITH_SCOPE_LIMITS: minute OHLCVA core only; full-history M02 manifest pending",
+      "source_evidence": [
+        "Existing project: A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/01_data_contract/DATA_CONTRACT.md, lines 5-23.",
+        "Existing project DATA_PROFILE.csv identifies raw_stock_minute at this path, frequency 1min, fields open,high,low,close,amount,volume.",
+        "2026-09-01 inventory: 5,988 members, 1,437,120 rows, 240 rows/member; 5,553 active Qlib stock-master codes present and 435 extra members excluded.",
+        "Archive inventory: 5,630 of 5,632 calendar dates; missing 2005-06-15 and 2013-11-13.",
+        "Time labels are derived from archive date and row index; sample cross-check supports row-end mapping, but raw files have no timestamp column and complete historical content is not fully audited.",
+        "2026-09-01 includes 219 bars with volume=0 and amount>0; preserve but mark volume untrusted."
+      ],
+      "notes": [
+        "Raw member CSV header: open,high,low,close,amount,volume.",
+        "Price data are raw/unadjusted intraday; do not compute cross-day returns without an explicitly validated adjustment/return protocol.",
+        "Only minute OHLCVA core input is admitted with scope limits; the full historical archive has not passed per-file M02 validation.",
+        "Daily moneyflow is not admitted and L2 archives are deferred in the source project; neither is included by this mapping."
       ]
     },
     {
