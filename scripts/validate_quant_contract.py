@@ -79,7 +79,7 @@ def main() -> int:
             errors.append("each data_sources item must be an object")
             continue
         frequency = source.get("frequency")
-        if frequency not in EXPECTED_FREQUENCIES:
+        if not isinstance(frequency, str) or frequency not in EXPECTED_FREQUENCIES:
             errors.append(f"unsupported frequency: {frequency!r}")
             continue
         if frequency in by_frequency:
@@ -128,11 +128,9 @@ def main() -> int:
         if contract.get("formal_run_allowed") is not True:
             errors.append("frozen contract must set formal_run_allowed=true")
         required_frequencies = contract.get("required_frequencies", [])
-        if not required_frequencies:
-            errors.append("frozen contract must name required_frequencies")
         if not isinstance(required_frequencies, list) or not required_frequencies:
             errors.append("frozen contract must name required_frequencies")
-        elif any(x not in EXPECTED_FREQUENCIES for x in required_frequencies):
+        elif any(not isinstance(x, str) or x not in EXPECTED_FREQUENCIES for x in required_frequencies):
             errors.append("required_frequencies contains an unsupported frequency")
         elif len(required_frequencies) != len(set(required_frequencies)):
             errors.append("required_frequencies must not contain duplicates")
@@ -144,7 +142,11 @@ def main() -> int:
             if not isinstance(gates, dict) or gates.get(key) is not True:
                 errors.append(f"evaluation gate not passed: {key}")
 
-        for frequency in required_frequencies if isinstance(required_frequencies, list) else []:
+        valid_required_frequencies = (
+            [x for x in required_frequencies if isinstance(x, str) and x in EXPECTED_FREQUENCIES]
+            if isinstance(required_frequencies, list) else []
+        )
+        for frequency in valid_required_frequencies:
             source = by_frequency.get(frequency)
             if source is None:
                 errors.append(f"missing required source: {frequency}")

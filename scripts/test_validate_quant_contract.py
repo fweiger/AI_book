@@ -60,6 +60,23 @@ class ContractValidatorTests(unittest.TestCase):
         self.assertIn("source_id is required before freeze", result.stderr)
         self.assertIn("required source_field is unresolved", result.stderr)
 
+    def test_invalid_frequency_types_do_not_crash(self):
+        contract = copy.deepcopy(self.template)
+        contract["data_sources"][0]["frequency"] = {}
+        result = self.run_contract(contract)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("unsupported frequency", result.stderr)
+
+    def test_unhashable_required_frequency_does_not_crash(self):
+        contract = copy.deepcopy(self.template)
+        contract["status"] = "FROZEN"
+        contract["required_frequencies"] = [{}]
+        contract["unresolved_blockers"] = []
+        contract["formal_run_allowed"] = True
+        result = self.run_contract(contract)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("required_frequencies contains an unsupported frequency", result.stderr)
+
     def test_non_object_json_root_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "contract.json"
