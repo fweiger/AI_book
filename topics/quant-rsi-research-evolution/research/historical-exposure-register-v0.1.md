@@ -23,7 +23,8 @@
   - `05_behavior_discovery/M04_P3A_100x40_prereg_20261024.md`
   - `05_behavior_discovery/M04_P3B1_500x120_prereg_20261024.md`
   - `05_behavior_discovery/M04_P3C1_500x120_ohlcva_prereg_20261024.md`
-  - `05_behavior_discovery/M04_P3D_2022_ohlcva_500x120_20261024.md`（若该路径/文件名在当前分支不同，以对应 P3D 报告与独立审计为准）
+  - `05_behavior_discovery/p3d_2022_ohlcva_500x120_20261024/P3D_report.md`
+  - `05_behavior_discovery/p3d_2022_ohlcva_500x120_20261024/independent_final_audit_20261024.json`
   - `05_behavior_discovery/M04_P2_forward_2026_prereg_20261024.md`
   - `05_behavior_discovery/M04_P3E_execution_endpoints_and_value_GATE_20261024.md`
 - 独立分钟路径研究文件：`minute-path-phase2-combinations-20261018.ipynb` 与 `minute-path-crossday-20260708-20260930.ipynb`；其文件位置、所有输出单元与完整标签血缘仍需继续审计。

@@ -4,10 +4,10 @@
 
 当前能从现有项目证据中确认的最低成本候选输入是 **原始 1 分钟 OHLCVA**。这只是候选路径，不是已冻结的实验选择。该输入的 M02/M03 处理链已通过 `PASS_WITH_SCOPE_LIMITS`，但它不能自动满足 RSI 研究的点时点、标签、盲测和可交易收益要求。
 
-当前 TOPIC-004 数据契约仍保持：
+本报告初始审计时，TOPIC-004 尚未确认首轮任务，因此 `required_frequencies=[]`。2026-10-30 用户确认分钟 OHLCVA 双轨任务后，机器可读契约将 `required_frequencies` 更新为 `["minute"]`，仅表示设计选择；正式准入仍阻塞：
 
 - `status = BLOCKED_ON_DATA_CONTRACT`
-- `required_frequencies = []`
+- `required_frequencies = ["minute"]`（设计选择，不代表正式准入）
 - `formal_run_allowed = false`
 
 ## 1. 已有输入与真实边界
