@@ -214,21 +214,34 @@
       "source_evidence": [
         "Existing project: A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925/reports/M02分钟序列标准化验收报告.md, lines 3-50.",
         "Existing project: reports/M03行为切片验收报告.md, lines 3-69; M03 accepted 5,630 date outputs with scope limits.",
-        "Existing project: 01_data_contract/DATA_PROFILE.csv identifies raw_stock_minute at this path, frequency 1min, fields open,high,low,close,amount,volume.",
-        "M02 reports 5,630 existing archive dates, 3,602,865,840 canonical rows and 15,011,941 security-days; known missing archive dates are 2005-06-15 and 2013-11-13.",
-        "M02 isolates schema mismatch, duplicate normalized codes, OHLC-invalid members, wrong row counts and parse errors; M03 reports 178 empty canonical partitions.",
-        "M02 data-page checks sampled 31 trading days; M03 data-page checks fully decoded 12 selected dates (8 non-empty and 4 empty boundary dates), not every historical data page.",
+        "Existing project DATA_PROFILE.csv identifies raw_stock_minute at this path, frequency 1min, fields open,high,low,close,amount,volume.",
+        "M02 scanned 5,630 existing archive dates and produced 3,602,865,840 canonical rows / 15,011,941 security-days; 1,458,212 active security-days had no archive member.",
+        "M02 isolated source member problems including 475,299 schema-mismatch members across 177 dates, 11,052 duplicate normalized BJ members, 3,145 OHLC-invalid members, 46 wrong-row-count members, 4 parse errors and 1 non-CSV member.",
+        "M02 independent data-page QA sampled 31 dates (21,583,200 rows); it did not independently re-read every historical data page. M03 validated all 5,630 date manifests/footers but fully decoded event data pages for 12 selected dates; 178 canonical date partitions are empty.",
+        "Archive inventory: 5,630 of 5,632 calendar dates; missing 2005-06-15 and 2013-11-13.",
         "2026-09-01 inventory: 5,988 members, 1,437,120 rows, 240 rows/member; 5,553 active Qlib stock-master codes present and 435 extra members excluded.",
-        "Time labels are derived from archive date and row index; sample cross-check supports row-end mapping, but raw files have no timestamp column and no true receive/available-at timestamp.",
+        "Time labels are derived from archive date and row index; row-end mapping is sample-supported. Raw files have no timestamp column and no true receive/available-at timestamp.",
         "2026-09-01 includes 219 bars with volume=0 and amount>0; preserve but mark volume untrusted."
       ],
       "notes": [
         "Raw member CSV header: open,high,low,close,amount,volume.",
         "Price data are raw/unadjusted intraday; do not compute cross-day returns without an explicitly validated adjustment/return protocol.",
-        "M02/M03 reports are PASS_WITH_SCOPE_LIMITS: use only admitted canonical rows and honor isolated members/empty partitions; this is not a claim that every raw historical row was fully decoded.",
+        "M02/M03 are PASS_WITH_SCOPE_LIMITS. M02 scanned all archive dates/members and built canonical output, but independent data-page QA was sampled; M03 output closure passed while 178 canonical date partitions remain empty and data-page decoding covered 12 selected dates.",
+        "Some schema, duplicate, OHLC, row-count and parse-error members were isolated; do not interpret missing or isolated security-days as observed data.",
         "Historical raw archives do not contain receive-time/available-at. Replay must explicitly specify availability and latency; never substitute event time silently.",
         "Daily moneyflow is not admitted and L2 archives are deferred in the source project; neither is included by this mapping."
-      ]
+      ],
+      "processing_provenance": {
+        "m02_final_qa_summary_path": "03_sequence_normalization/output/final_qa_summary.json",
+        "m02_final_qa_summary_sha256": "c391bbd8447fd133c65d0a3a6550fd972e9db2e1832d3df441af9eefb97c6f25",
+        "m02_archive_manifest_path": "03_sequence_normalization/output/archive_manifest.jsonl",
+        "m02_archive_manifest_sha256": "67f929b7cae706f4b6007ed5a0a09a15ad6b0cb191df0b59857d8106e0c3ed6b",
+        "m03_final_qa_summary_path": "04_behavior_slicing/output/final_qa_summary.json",
+        "m03_final_qa_summary_sha256": "69838a9ee48dbb2e2930f09b0c0b2419f7b8f4a9fce27445010c481cac42b9f9",
+        "m03_runner_sha256": "2202f5606a2860ae6ee944209f99276865e65d1f6725e0cd8644ec45cc022cae",
+        "m03_config_sha256": "57aa2d53d2a3504f21da502e18773f5ac487ec5d5275c18f94faafb3cbc6c404",
+        "interpretation": "These hashes identify existing processing QA artifacts and runner/config versions; they are not a cryptographic hash of the raw source archives."
+      }
     },
     {
       "frequency": "tick",
