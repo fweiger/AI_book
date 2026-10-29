@@ -1,9 +1,9 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.1.0",
+  "topic_version": "0.1.1",
   "topic_id": "TOPIC-004",
   "title": "AI 量化研究的递归自我改进：从 Alpha 发现到研究系统自进化",
-  "source_level": "公开摘要级/研究设计/待原文核验",
+  "source_level": "关键方法原文已核查/全部附录和源码待核/本地 Alpha 待实证",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -12,7 +12,7 @@
       "title": "研究型 RSI 定义",
       "type": "concept",
       "evidence_level": "研究设计/待实证",
-      "source_status": "待原文核验"
+      "source_status": "部分方法原文已核验；具体效果待实证"
     },
     {
       "id": "R02",
@@ -26,7 +26,7 @@
       "title": "冻结验证器",
       "type": "control",
       "evidence_level": "研究设计/待实证",
-      "source_status": "待原文核验"
+      "source_status": "部分方法原文已核验；具体效果待实证"
     },
     {
       "id": "R04",
@@ -54,7 +54,7 @@
       "title": "A 股数据与交易约束",
       "type": "constraint",
       "evidence_level": "研究设计/待实证",
-      "source_status": "待原文核验"
+      "source_status": "部分方法原文已核验；具体效果待实证"
     },
     {
       "id": "R08",

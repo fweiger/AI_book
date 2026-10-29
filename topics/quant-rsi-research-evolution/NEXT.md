@@ -1,6 +1,6 @@
 # TOPIC-004 · 研究任务看板
 
-## T01 / P0 — 研究层 RSI 的文献审计与判定表（尚未执行）
+## T01 / P0 — 研究层 RSI 的文献审计与判定表（首轮方法已核；全文/代码未验收）
 
 输入：S01 AQuA 和 S02 R&D-Agent(Q) 版本明确的原始论文、附录、源码文档。
 
@@ -29,3 +29,11 @@
 ## 交付与质量门禁
 
 每一轮先读相关原文，保留独立反证、修订 C-ID/图谱、写 session/CHANGELOG，并执行 python3 scripts/validate_library.py。结构检查不证明金融研究结果有效。任务尚无执行结果。
+
+## 2026-10-29 新增已完成文档
+
+- [T01：主要原文方法审计](research/T01-paper-audit-2026-10-29.md)：阅读了 AQuA、RD-Agent(Q) 关键原文与表格，尚缺源码/全部附录审计，不能将任务标记为整体完成。
+- [Q01：RSI 最低标准和非 RSI 反例](research/RSI-classification-criteria-v0.md)：已形成判定表；效果级 RSI 仍需真实盲测。
+- [T02：冻结评估与消融草案](research/T02-sealed-evaluator-protocol-v0.md)：完成协议设计，真实数据范围/预算/隔离尚未核实，不能执行回测。
+
+**下一动作（P0）**：核验 RD-Agent(Q) 附录的交易时点与源码，再审计 AQuA 版本/未公开配置；随后取得当前可用数据字段定义和时间戳，以批准 T02 冻结参数。

@@ -1,7 +1,7 @@
 # TOPIC-004 · AI 量化研究的递归自我改进：从 Alpha 发现到研究系统自进化
 
 - 创建于：2026-10-29
-- topic_version：0.1.0；状态：FRAMEWORK_READY（设计级，尚未原文逐段精读、没有回测结果）
+- topic_version：0.1.1；状态：METHOD_AUDIT_PARTIAL（关键方法原文已读，未全面源码/实验复现，没有本地回测）
 - 形态：原创专题书工作区 + 研究任务；不是已经出版的书，不登记 B-ID。
 - 历史线索：2026-09-14、2026-10-20、2026-10-26 的 Quant-RSI、AQuA、研究记忆、Harness 和元研究策略讨论。
 
@@ -16,6 +16,8 @@
 - [研究问题 Q01–Q07](questions.md) · [原创专题书十二章提纲](book-outline.md)
 - [阅读路线](reading-path.md) · [公开来源与历史对话线索](sources.md)
 - [论点 C001–C007](claims.md) · [知识图谱](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
+- [T01 原文方法审计](research/T01-paper-audit-2026-10-29.md) · [RSI 判定表](research/RSI-classification-criteria-v0.md)
+- [T02 冻结评估草案](research/T02-sealed-evaluator-protocol-v0.md)
 - [第一轮任务 NEXT](NEXT.md) · [对话记录](sessions/README.md) · [版本日志](CHANGELOG.md)
 
 ## 双闭环研究设计（尚未实现）
