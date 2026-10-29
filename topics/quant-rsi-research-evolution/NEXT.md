@@ -68,3 +68,12 @@
 - 已记录 M02 manifest/QA 与 M03 QA、runner/config 哈希，明确它们不是原始 ZIP/7z 全量数据的 hash。
 - 现有 M04 已查看过多个历史时期的特征/收益结果，不能把这些时期直接当成 RSI 试验的未见盲测。
 - 建议分钟 OHLCVA 作为首轮候选输入，但不替用户冻结任务族或期限；`required_frequencies` 仍为空，正式回测继续禁止。
+
+
+## 2026-10-30 首轮双轨实验设计与盲测治理
+
+- 已确认任务族为分钟 OHLCVA 行为特征发现，期限 T+1/T+3/T+5；A 盘中滚动与 B T 日全天聚合分别预注册，定义见 [双轨实验设计](research/experiment-plan-v0.1.md)。
+- 新增 [历史研究暴露登记表](research/historical-exposure-register-v0.1.md)，明确 2022—2025 相关收益结果已暴露、2026 部分日期仅为描述性形状复核，以及独立分钟路径研究尚有标签血缘待核。
+- 新增 [独立评估器访问控制计划](research/sealed-evaluator-access-plan-v0.1.md)。目前它仍是设计文档，不代表真实 ACL 或 evaluator 已实现。
+- 已更新机器可读实验计划和数据契约的任务族/期限；数据源、标签、切分、成本与 evaluator 门禁仍未冻结。
+- **不启动正式回测**。下一步先补齐 P0/P1/P2 和独立分钟路径历史暴露清单，再实现 evaluator 访问控制原型并运行负向权限测试。

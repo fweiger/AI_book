@@ -70,3 +70,10 @@ QA 工件、manifest、M03 runner/config 的 SHA256 已写入 `a-share-data-cont
 先把 **分钟 OHLCVA** 作为首轮候选输入，复用已有 canonical/M03 输出，不重建数据接入层；先做一个**新的、未被现有 M04 结果直接选优过的任务族**，并把最终测试输出封装给独立 evaluator。日频资金流和 L2 保持排除，直到各自准入门槛完成。
 
 这只是推荐路径；在任务族和目标期限确定之前，不把它写成已批准的 `required_frequencies`，不运行正式回测。
+
+
+## 5. 2026-10-30 双轨任务对齐后的状态更新
+
+用户已确认首轮任务族为分钟 OHLCVA 行为特征发现，预测期限 T+1/T+3/T+5，并选择两项独立实验：A 盘中滚动特征、B T 日全天聚合特征。机器可读数据契约现将 `required_frequencies=["minute"]` 作为**设计选择**，不代表该数据源已完成本专题的正式准入；状态仍为 `BLOCKED_ON_DATA_CONTRACT`，`formal_run_allowed=false`。
+
+详细定义见 [双轨实验设计](experiment-plan-v0.1.md)；历史暴露见 [历史研究暴露登记](historical-exposure-register-v0.1.md)；盲测访问边界见 [独立评估器访问控制计划](sealed-evaluator-access-plan-v0.1.md)。

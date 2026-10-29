@@ -8,3 +8,4 @@
 已有主要方法章节的部分原文审计；尚无已完成的全面源码复现或实证结果。
 
 - [2026-10-29 RD-Agent 源码审计与数据契约](2026-10-29-RD-Agent-source-audit.md)
+- [2026-10-30 双轨实验对齐与准入审计](2026-10-30-two-track-experiment-alignment.md)

@@ -1,7 +1,7 @@
 # TOPIC-004 · AI 量化研究的递归自我改进：从 Alpha 发现到研究系统自进化
 
 - 创建于：2026-10-29
-- topic_version：0.1.4；状态：SOURCE_AUDIT_PARTIAL（论文与公开源码调用链已部分核查，未全面运行/复现，没有本地回测）
+- topic_version：0.1.5；状态：SOURCE_AUDIT_PARTIAL（论文与公开源码调用链已部分核查，未全面运行/复现，没有本地回测）
 - 形态：原创专题书工作区 + 研究任务；不是已经出版的书，不登记 B-ID。
 - 历史线索：2026-09-14、2026-10-20、2026-10-26 的 Quant-RSI、AQuA、研究记忆、Harness 和元研究策略讨论。
 
@@ -19,6 +19,7 @@
 - [T01 原文方法审计](research/T01-paper-audit-2026-10-29.md) · [RSI 判定表](research/RSI-classification-criteria-v0.md)
 - [RD-Agent/Qlib 源码审计](research/RD-Agent-source-audit-2026-10-29.md) · [A 股数据源就绪度](research/ashare-data-readiness-2026-10-29.md)
 - [T02 冻结评估草案](research/T02-sealed-evaluator-protocol-v0.md) · [A 股数据契约](research/a-share-data-contract-v0.json)
+- [首轮双轨实验设计](research/experiment-plan-v0.1.md) · [历史研究暴露登记](research/historical-exposure-register-v0.1.md) · [独立评估器访问控制计划](research/sealed-evaluator-access-plan-v0.1.md)
 - [第一轮任务 NEXT](NEXT.md) · [对话记录](sessions/README.md) · [版本日志](CHANGELOG.md)
 
 ## 双闭环研究设计（尚未实现）
@@ -36,4 +37,4 @@
 - RD-Agent 默认因子流水线为日线；分钟/Tick-L2 必须经过数据契约和独立 adapter，不直接复用默认回测。
 - 未核实来源不得写为已精读，未运行实验不得宣称 RSI 有效；不得公开凭据、私有路径和受版权保护的完整材料。
 
-**当前正式实验状态：BLOCKED_ON_DATA_CONTRACT。先完成真实字段、PIT 时间语义、标签切分与执行成本核验，再进入 A/B/C/D 消融。**
+**当前正式实验状态：BLOCKED_ON_DATA_CONTRACT。首轮已对齐分钟 OHLCVA、T+1/T+3/T+5 和双轨（盘中滚动/全天聚合）设计；尚未冻结标签、日期/股票池、成本或盲测权限。先完成数据与评估器门禁，再进入 A/B/C/D 消融。**

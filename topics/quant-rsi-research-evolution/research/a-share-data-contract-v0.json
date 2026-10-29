@@ -1,10 +1,12 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.1.2",
   "topic_id": "TOPIC-004",
   "contract_id": "ASHARE-QUANT-001",
   "status": "BLOCKED_ON_DATA_CONTRACT",
   "created_at": "2026-10-29",
-  "required_frequencies": [],
+  "required_frequencies": [
+    "minute"
+  ],
   "data_sources": [
     {
       "frequency": "daily",
@@ -360,8 +362,12 @@
     }
   ],
   "task_contract": {
-    "task_family": null,
-    "approved_horizons": [],
+    "task_family": "minute_OHLCVA_behavior_feature_discovery_two_track",
+    "approved_horizons": [
+      "T+1",
+      "T+3",
+      "T+5"
+    ],
     "candidate_daily_horizons": [
       "T+1",
       "T+2",
@@ -383,7 +389,28 @@
       "outer_test_end": null,
       "purge_sessions": null,
       "embargo_sessions": null
-    }
+    },
+    "input_frequency_decision": "minute selected for design by user; formal data admission remains blocked",
+    "experiment_tracks": [
+      {
+        "id": "A_INTRADAY_ROLLING",
+        "status": "DESIGN_DRAFT_BLOCKED",
+        "sample_unit": "symbol × trading_date × signal_time",
+        "signal_time_rule": null,
+        "target_expression": null,
+        "entry_time_rule": null,
+        "exit_time_rule": null
+      },
+      {
+        "id": "B_FULL_DAY_AGGREGATION",
+        "status": "DESIGN_DRAFT_BLOCKED",
+        "sample_unit": "symbol × trading_date",
+        "signal_time_rule": "after full T-session OHLCVA is available; exact delay not frozen",
+        "target_expression": null,
+        "entry_time_rule": null,
+        "exit_time_rule": null
+      }
+    ]
   },
   "execution_contract": {
     "fill_price_rule": null,
@@ -413,12 +440,14 @@
   },
   "formal_run_allowed": false,
   "unresolved_blockers": [
-    "分钟候选源已映射，但本轮 required_frequencies 仍为空；尚未确定具体任务类型和频率，也未核定 source_version、calendar_version、universe_version 与 raw_snapshot_hash。",
-    "原始分钟归档没有真实 receive_time/available_at 字段，修订时间也未记录；需冻结回放可用时点规则和延迟假设，不能把事件时点等同于可用时点。",
-    "尚未冻结标签、入场/退出时点、时间切分、purge/embargo 和外层盲测权限。",
-    "尚未核实本轮交易验证所需的 A 股历史涨跌幅规则、交易费用、滑点、冲击、容量及 T+1 卖出限制。",
-    "尚未验证研究反馈是否彻底隔离最终测试集。",
-    "日频资金流的本地来源血缘及 .BJ 覆盖仍未核实；L2 逐笔数据不属于当前已映射的准入输入。"
+    "任务族、输入频率和预测期限已对齐，但两轨各自的信号时点、标签表达式、起算价/退出价、收益基准与不可交易样本处理尚未冻结。",
+    "分钟候选源的原始快照 hash、source_version、calendar_version、universe_version 尚未绑定到本任务。",
+    "原始分钟归档没有真实 receive_time/available_at 字段；必须冻结并验证回放可用时点和延迟假设，不能把事件时间等同于可用时点。",
+    "历史研究暴露登记仍不完整：P0/P1/P2 的精确日期/标签/结果访问历史及独立分钟路径 Notebook 的全量标签血缘需对账。",
+    "训练/验证/外层测试日期、点时点股票池、purge/embargo 尚未冻结；已暴露日期不能作为本轮独立盲测。",
+    "独立 sealed evaluator、隔离身份/ACL、旁路泄漏与一次性评分控制尚未实现或验收。",
+    "历史涨跌停规则、停牌/不可交易处理、交易费用、滑点、冲击、容量及 T+1 卖出约束尚未冻结。",
+    "日频资金流和 L2 逐笔数据不属于本轮已准入输入。"
   ],
-  "policy": "本文件是无样例数据的契约模板，不代表任何数据源已接入或字段已验证。正式实验前必须通过 python3 scripts/validate_quant_contract.py --strict。"
+  "policy": "本文件是无样例数据的契约模板，不代表任何数据源已接入或字段已验证。正式实验前必须通过 python3 scripts/validate_quant_contract.py --strict。 用户已确认分钟 OHLCVA 双轨研究任务和 T+1/T+3/T+5 期限；本契约只记录设计决定，因标签、数据版本、执行与盲测门禁未完成，仍禁止正式回测。"
 }
