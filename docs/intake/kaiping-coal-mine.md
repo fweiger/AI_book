@@ -8,6 +8,7 @@
 - **已经能够还原的真实用户问题序列**：暂无，原分享对话尚不可读取。
 - **已经能够还原的实际研究方法链**：暂无，不能从“开平煤矿”题名推断。
 - **已经能够确认的案例具体经验和最终史学结论**：暂无。
+- **当前真正的提炼任务**：[Issue #13](https://github.com/fweiger/AI_book/issues/13)
 - **旧工程尝试**：[Issue #11](https://github.com/fweiger/AI_book/issues/11) / [Draft PR #12](https://github.com/fweiger/AI_book/pull/12) 仅为资料准入尝试，不是本研究的提炼成果。
 
 ## 真正需要重建的研究过程
