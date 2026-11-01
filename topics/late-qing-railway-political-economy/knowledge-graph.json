@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-004",
+  "topic_version": "0.1.0",
+  "title": "唐胥铁路：技术改革、旧运输利益与政治联盟",
+  "updated_at": "2026-11-01",
+  "source_level": "研究论文相关段落/机构文章及视频转写；原始奏折待核验",
+  "books": [],
+  "nodes": [
+    {
+      "id": "N1",
+      "type": "concept",
+      "title": "煤炭成本与货运网络",
+      "source_status": "研究论文+待量化"
+    },
+    {
+      "id": "N2",
+      "type": "actor",
+      "title": "旧车马、船运、码头及劳动者",
+      "source_status": "利益分配假说"
+    },
+    {
+      "id": "N3",
+      "type": "constraint",
+      "title": "旗地与征地权利",
+      "source_status": "S01研究文献支持"
+    },
+    {
+      "id": "N4",
+      "type": "constraint",
+      "title": "地形、融资与工程技术",
+      "source_status": "S01地形支持，其他待核"
+    },
+    {
+      "id": "N5",
+      "type": "institution",
+      "title": "清廷审批、政治否决与文化顾虑",
+      "source_status": "研究文献+动机待证"
+    },
+    {
+      "id": "N6",
+      "type": "infrastructure",
+      "title": "煤河与唐胥短铁路接驳",
+      "source_status": "S01研究文献支持"
+    },
+    {
+      "id": "N7",
+      "type": "actor",
+      "title": "开平矿务局与轮船招商局",
+      "source_status": "S02研究文章支持"
+    },
+    {
+      "id": "N8",
+      "type": "policy",
+      "title": "驴马牵引表述与机车演变",
+      "source_status": "S01研究文献支持细节待核"
+    },
+    {
+      "id": "N9",
+      "type": "mechanism",
+      "title": "分段扩建与渐进式制度变迁",
+      "source_status": "史实演化+理论解释"
+    }
+  ],
+  "edges": [
+    {
+      "source": "N4",
+      "target": "N6",
+      "relation": "支持",
+      "note": "地形约束煤河到矿区：S01"
+    },
+    {
+      "source": "N3",
+      "target": "N5",
+      "relation": "支持",
+      "note": "征地审批障碍：S01"
+    },
+    {
+      "source": "N7",
+      "target": "N1",
+      "relation": "发展",
+      "note": "供煤与运输关系：S02；获利幅度待证"
+    },
+    {
+      "source": "N1",
+      "target": "N6",
+      "relation": "理论解释",
+      "note": "降低物流成本的经济激励；缺反事实数据"
+    },
+    {
+      "source": "N2",
+      "target": "N5",
+      "relation": "待验证",
+      "note": "旧运输利益是否实际影响审批？"
+    },
+    {
+      "source": "N5",
+      "target": "N8",
+      "relation": "支持",
+      "note": "驴马表述与官方许可：S01"
+    },
+    {
+      "source": "N6",
+      "target": "N8",
+      "relation": "发展",
+      "note": "从接驳路段到牵引安排"
+    },
+    {
+      "source": "N8",
+      "target": "N9",
+      "relation": "理论解释",
+      "note": "技术示范是否推动后续扩建？"
+    },
+    {
+      "source": "N6",
+      "target": "N2",
+      "relation": "待验证",
+      "note": "是否照顾传统运输主体及其收益"
+    },
+    {
+      "source": "N5",
+      "target": "N6",
+      "relation": "待验证",
+      "note": "是否存在主动政治联盟与补偿策略"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "事件与来源核对",
+      "nodes": [
+        "N3",
+        "N4",
+        "N6",
+        "N8"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "利益主体与市场结构",
+      "nodes": [
+        "N1",
+        "N2",
+        "N7"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "政治联盟与否决权",
+      "nodes": [
+        "N2",
+        "N3",
+        "N5",
+        "N6"
+      ]
+    },
+    {
+      "id": "Q09",
+      "name": "渐进制度变迁",
+      "nodes": [
+        "N6",
+        "N8",
+        "N9"
+      ]
+    }
+  ],
+  "constraints": [
+    "漕运制度≠开平煤河的一般商品水运",
+    "技术更有效率≠在任何时点财务净现值最大",
+    "总剩余增加≠所有主体得到补偿",
+    "经济利益受到影响≠反对者出于私利",
+    "制度最终改变≠改革者原本有完整战略"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md",
+  "methodology": "../../docs/methodology/infrastructure-reform-coalition-process-tracing.md"
+}
