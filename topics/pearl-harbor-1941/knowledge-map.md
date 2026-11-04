@@ -17,6 +17,9 @@ flowchart LR
   P11["海军省和平/武力分支"]
   P12["四国军务合作≠法定参战"]
   P13["占领后净可用油量"]
+  P14["开战/避战国力比较"]
+  P15["民需运力/征用/战损"]
+  P16["国家与山本战争目标错位"]
   P01 -->|战略压力| P02
   P01 -->|备选| P09
   P03 -->|增加预期风险| P02
@@ -32,6 +35,12 @@ flowchart LR
   P12 -.->|并非自动参战| P06
   P12 -->|协调真实存在| P03
   P13 -->|油田恢复/炼制/运输| P10
+  P14 -->|需要并行评估| P08
+  P15 -->|运输硬约束| P10
+  P15 -->|长期消耗| P08
+  P05 -->|机构分歧| P16
+  P16 -->|战术/战略不一致| P04
+  P16 -.->|胜利条件缺口| P08
 ```
 
 ## 三种不同层面的“箭头”
@@ -43,3 +52,6 @@ flowchart LR
 [JSON图谱](knowledge-graph.json) · [论点台账](claims.md) · [史料](sources.md) · [Issue讨论](https://github.com/fweiger/AI_book/issues/16)
 
 2026-11-04新增档案的详细来源：[日本海军省原文](primary-source-close-reading.md) · [油运数据](oil-logistics-evidence.md) · [四国协调](allied-response-matrix.md)。
+
+
+第三轮新增：[1940—1941年政策与作战计划错位](strategy-policy-divergence-1940-1941.md) · [1941商船吨位与运输能力](shipping-capacity-model.md)。
