@@ -11,8 +11,8 @@
 | R0 | 主持 | 贴统一辩题、两份独立任务和共用来源，明确1941-11-30信息截面 | 已在[Issue #18](https://github.com/fweiger/AI_book/issues/18)发布 |
 | R1 | 正方AI、反方AI | 各自至少三支持／两反对资料、两质询；双方独立撰写，**不互相传初稿** | **已提交**：[正方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630116711) / [反方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630256614) |
 | R2 | 双方交叉 | 精确引用对方评论及其证据；逐条回应、至少说明一个观点的维持/修正/撤回 | **已提交**：[正方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630510638) / [反方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630573900) |
-| R3 | 双方结案 | 条件性结论，给出最强反例、未知概率、剩余一手证据缺口 | **双方待提交**：[R3统一续辩指令](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631035771) |
-| R4 | 中立裁判＋用户 | 列明达成共识与不能判断的命题、研究下一步；可判无法区分两方案 | **阶段性裁判已提交**：[R4-PRELIMINARY](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630744078)，评分83:83，INSUFFICIENT_EVIDENCE；**R4-FINAL待R3两份提交后复审** |
+| R3 | 双方结案 | 条件性结论，给出最强反例、未知概率、剩余一手证据缺口 | **双方已提交**：[正方R3](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631241606) / [反方R3](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631326724) |
+| R4 | 中立裁判＋用户 | 列明达成共识与不能判断的命题、研究下一步；可判无法区分两方案 | **阶段性裁判已提交**：[R4-PRELIMINARY](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630744078)，评分83:83，INSUFFICIENT_EVIDENCE；**R4-FINAL现在可以启动，尚未提交** |
 
 > GitHub Issue 评论不能自动强制R1盲态；主持人需要两个AI分别提交草稿后，再放开互相阅读与回合二。若各AI独立身份未连接GitHub，由用户代贴并注明实际身份。
 
@@ -49,3 +49,9 @@
 - 无法识别的 `p(美国主动军事干预 | 不攻击美国)`、时间尺度与成本；
 - 评分可以记录，但**结论可为未决**；
 - 需要新PR修改 `claims.md` 时标 `ACCEPTED_FOR_INTEGRATION`，**只有合并成功才标 `INTEGRATED`**。
+
+### R4 正式终审移交（2026-11-04）
+
+- 两份R3实际评论链接齐全，进入[独立裁判 R4-FINAL 任务书](R4-FINAL-HANDOFF.md)。
+- 裁判应保留此前83:83及`INSUFFICIENT_EVIDENCE`为阶段性历史记录，独立给出最终判断，不将其当作胜率。
+- R5仅在查到实质性误引、重要资料错读或数量错误时启动；R6只能进入候选PR，不允许自动合并main。
