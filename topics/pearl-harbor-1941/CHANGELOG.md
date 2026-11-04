@@ -41,3 +41,10 @@
 - 中立阶段审核对双方研究质量分别评83/100，整体历史方案优劣结论`INSUFFICIENT_EVIDENCE`。**评分不是战略胜率**。
 - [GitHub主帖已发布统一R3续辩指令](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631035771)，要求补齐两份结案书再由裁判更新终审；不擅自标INTEGRATED。
 - 修正先前`debates/README.md`及`REFEREE.md`静态状态表的滞后信息，明确R5/R6候选入库条件；本次为**协作进度与档案链接同步**，未升级任何历史命题。
+
+## 0.3.3 — 2026-11-04（正反R3齐备，移交R4-FINAL审查）
+
+- 核验[正方R3 #6631241606](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631241606)和[反方R3 #6631326724](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631326724)均真实提交。
+- 反方R3补充1941-11-05美国军政建议的国会后出影印转录、1941-11-27联合备忘录影印与KC000234两张日文原件的部分释读；总统批准链、日方油运B方案原表及KC000234全部释读仍未完成。**本条记录反方提交内容及其阅读等级声明，不替代独立审核。**
+- 新增[正式独立裁判移交文档](debates/R4-FINAL-HANDOFF.md)，要求审查两方R3、来源独立性、三方案三期限、石油单位及五项原档缺口，禁止将阶段性评分当作战略胜率。
+- 更新debates目录与REFEREE状态表：R3已完成，R4-PRELIMINARY已有，R4-FINAL尚未提交；此次只是工作流PATCH同步，**未升级任何C-ID历史事实或结案裁定**。
