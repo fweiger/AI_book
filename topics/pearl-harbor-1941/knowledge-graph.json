@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.3.3",
+  "topic_id": "TOPIC-004",
+  "title": "1941年日本对美开战：南进石油、菲律宾威胁与珍珠港突袭的战略决策",
+  "source_level": "第三轮：2026-11-04已核日本防卫研究所相泽淳官方研究及九州大学2025学生研究选定页；引用的1941原始会议及战后证言未直接核查",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "P01",
+      "type": "constraint",
+      "title": "日本对美石油依赖与禁运压力",
+      "evidence_level": "历史事实，数量待交叉核实"
+    },
+    {
+      "id": "P02",
+      "type": "option",
+      "title": "对荷印等英荷殖民地有限战争",
+      "evidence_level": "同期政策分歧/研究支持"
+    },
+    {
+      "id": "P03",
+      "type": "threat",
+      "title": "菲律宾美军对南方海上交通线的潜在威胁",
+      "evidence_level": "日海军主观威胁评价有研究支持，实际封锁效果待定"
+    },
+    {
+      "id": "P04",
+      "type": "option",
+      "title": "攻击菲律宾与珍珠港的先发制人作战",
+      "evidence_level": "同期决策与NIDS战史支持"
+    },
+    {
+      "id": "P05",
+      "type": "institution",
+      "title": "陆军海军军令部联合舰队的战略分歧",
+      "evidence_level": "日文研究支持"
+    },
+    {
+      "id": "P06",
+      "type": "counterfactual",
+      "title": "只攻荷印情况下美国会否军事介入",
+      "evidence_level": "反事实，证据不足"
+    },
+    {
+      "id": "P07",
+      "type": "analogy",
+      "title": "美国大西洋准战争作为太平洋先例",
+      "evidence_level": "前件已证，跨战区适用未证"
+    },
+    {
+      "id": "P08",
+      "type": "outcome",
+      "title": "珍珠港是否为相对低风险最优选项",
+      "evidence_level": "待识别决策者主观概率与损失函数"
+    },
+    {
+      "id": "P09",
+      "type": "option",
+      "title": "停止南进并以外交谈判调节石油禁运",
+      "evidence_level": "同期外交路径可查，实际成功概率未知"
+    },
+    {
+      "id": "P10",
+      "type": "constraint",
+      "title": "荷印油田产能与油轮实际运力缺口",
+      "evidence_level": "待实证"
+    },
+    {
+      "id": "P11",
+      "type": "archive",
+      "title": "日本海军省1941年和平/武力政策条件性分岔",
+      "evidence_level": "原始KC000054具体扫描页已核",
+      "source_status": "部分原文已核"
+    },
+    {
+      "id": "P12",
+      "type": "diplomacy",
+      "title": "四国军事参谋合作与美方国会参战授权间的区别",
+      "evidence_level": "FRUS同期文件+澳战争纪念馆专业研究",
+      "source_status": "FRUS原文已核，参谋会议原件待读"
+    },
+    {
+      "id": "P13",
+      "type": "logistics",
+      "title": "荷印产油恢复/出口/运输三阶段实际净供应",
+      "evidence_level": "历史数据是USSBS战后统计，经日本机构转引",
+      "source_status": "专业二次资料已核，原始统计表待读"
+    },
+    {
+      "id": "P14",
+      "type": "decision-process",
+      "title": "1941陆军开战与避战国力比较",
+      "evidence_level": "B防卫研究所二手分析，1941机密战争日誌待直接核"
+    },
+    {
+      "id": "P15",
+      "type": "capacity",
+      "title": "1941年10月民用商船GRT预算与损失/造船阈值",
+      "evidence_level": "B NIDS研究转引1941政府会议预计船舶数字"
+    },
+    {
+      "id": "P16",
+      "type": "strategy-mismatch",
+      "title": "国家战争终结目标与山本夏威夷短期决战的错位",
+      "evidence_level": "B NIDS研究中战史转述"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P01",
+      "target": "P02",
+      "relation": "施加压力"
+    },
+    {
+      "source": "P01",
+      "target": "P09",
+      "relation": "允许替代策略"
+    },
+    {
+      "source": "P03",
+      "target": "P02",
+      "relation": "增加预期风险"
+    },
+    {
+      "source": "P05",
+      "target": "P04",
+      "relation": "组织博弈与方案影响"
+    },
+    {
+      "source": "P03",
+      "target": "P06",
+      "relation": "引发担忧不等于事实"
+    },
+    {
+      "source": "P07",
+      "target": "P06",
+      "relation": "类比不可直接证明"
+    },
+    {
+      "source": "P06",
+      "target": "P08",
+      "relation": "待验证主观概率"
+    },
+    {
+      "source": "P04",
+      "target": "P08",
+      "relation": "策略选项不能自动判定最优"
+    },
+    {
+      "source": "P09",
+      "target": "P08",
+      "relation": "提供对照方案"
+    },
+    {
+      "source": "P10",
+      "target": "P02",
+      "relation": "限制收益实现"
+    },
+    {
+      "source": "P10",
+      "target": "P08",
+      "relation": "实际后勤能力约束"
+    },
+    {
+      "source": "P11",
+      "target": "P02",
+      "relation": "存在条件性和平与军事分支"
+    },
+    {
+      "source": "P11",
+      "target": "P09",
+      "relation": "保留和平政策作为研究方案"
+    },
+    {
+      "source": "P12",
+      "target": "P06",
+      "relation": "军事筹划≠自动参战"
+    },
+    {
+      "source": "P12",
+      "target": "P03",
+      "relation": "显示协调风险确实存在"
+    },
+    {
+      "source": "P13",
+      "target": "P10",
+      "relation": "强化占领和运输约束"
+    },
+    {
+      "source": "P14",
+      "target": "P08",
+      "relation": "开战与避战需同时比较"
+    },
+    {
+      "source": "P15",
+      "target": "P10",
+      "relation": "军需民需征用与战损约束"
+    },
+    {
+      "source": "P15",
+      "target": "P08",
+      "relation": "长期经济可行性限制"
+    },
+    {
+      "source": "P16",
+      "target": "P04",
+      "relation": "同一作战不同战略目标"
+    },
+    {
+      "source": "P16",
+      "target": "P08",
+      "relation": "战术先手不等于战争终结"
+    },
+    {
+      "source": "P05",
+      "target": "P16",
+      "relation": "战略分歧与军事资源配置"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "1941年日方有哪些机构和决策备选",
+      "nodes": [
+        "P05",
+        "P02",
+        "P04",
+        "P09",
+        "P11",
+        "P14",
+        "P16"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "荷印原油与运输能力是否足以缓解危机",
+      "nodes": [
+        "P01",
+        "P10",
+        "P02",
+        "P13",
+        "P15"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "菲律宾美军能否实际切断海运",
+      "nodes": [
+        "P03",
+        "P10"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "美国对只攻荷印的反应如何",
+      "nodes": [
+        "P06",
+        "P07",
+        "P12"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "山本五十六辞职施压究竟针对何方案",
+      "nodes": [
+        "P05",
+        "P04",
+        "P16"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "三至四方案主观损失比较",
+      "nodes": [
+        "P02",
+        "P04",
+        "P09",
+        "P08",
+        "P11",
+        "P13",
+        "P14",
+        "P15",
+        "P16"
+      ]
+    },
+    {
+      "id": "Q07",
+      "name": "大西洋准战争与太平洋局势能否类比",
+      "nodes": [
+        "P07",
+        "P06"
+      ]
+    }
+  ],
+  "constraints": [
+    "不能从日本高层的主观担忧推断美国必定军事介入",
+    "不得把风险排序的历史解释视为侵略正当性",
+    "转写、战后口述与同期文件严格分级",
+    "不虚构美方反应概率或油运数据",
+    "军事参谋协调不等于美国国会正式参战授权",
+    "战后产量与船舶损失不能直接替代1941年当事者预期",
+    "Gross Register Tonnage与DWT、油轮实际载油量不可混用",
+    "1941当时船舶损失与造船数为估计值，不能冒充实际损失",
+    "NIDS/大学论文的解释不等于已取得引用的同期原件"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}
