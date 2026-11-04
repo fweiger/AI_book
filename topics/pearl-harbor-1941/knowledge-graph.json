@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.0",
+  "topic_id": "TOPIC-004",
+  "title": "1941年日本对美开战：南进石油、菲律宾威胁与珍珠港突袭的战略决策",
+  "source_level": "源审计进行中：日本原始档案部分定位/部分核验；学术摘要与战史补充；未全面精读",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "P01",
+      "type": "constraint",
+      "title": "日本对美石油依赖与禁运压力",
+      "evidence_level": "历史事实，数量待交叉核实"
+    },
+    {
+      "id": "P02",
+      "type": "option",
+      "title": "对荷印等英荷殖民地有限战争",
+      "evidence_level": "同期政策分歧/研究支持"
+    },
+    {
+      "id": "P03",
+      "type": "threat",
+      "title": "菲律宾美军对南方海上交通线的潜在威胁",
+      "evidence_level": "日海军主观威胁评价有研究支持，实际封锁效果待定"
+    },
+    {
+      "id": "P04",
+      "type": "option",
+      "title": "攻击菲律宾与珍珠港的先发制人作战",
+      "evidence_level": "同期决策与NIDS战史支持"
+    },
+    {
+      "id": "P05",
+      "type": "institution",
+      "title": "陆军海军军令部联合舰队的战略分歧",
+      "evidence_level": "日文研究支持"
+    },
+    {
+      "id": "P06",
+      "type": "counterfactual",
+      "title": "只攻荷印情况下美国会否军事介入",
+      "evidence_level": "反事实，证据不足"
+    },
+    {
+      "id": "P07",
+      "type": "analogy",
+      "title": "美国大西洋准战争作为太平洋先例",
+      "evidence_level": "前件已证，跨战区适用未证"
+    },
+    {
+      "id": "P08",
+      "type": "outcome",
+      "title": "珍珠港是否为相对低风险最优选项",
+      "evidence_level": "待识别决策者主观概率与损失函数"
+    },
+    {
+      "id": "P09",
+      "type": "option",
+      "title": "停止南进并以外交谈判调节石油禁运",
+      "evidence_level": "同期外交路径可查，实际成功概率未知"
+    },
+    {
+      "id": "P10",
+      "type": "constraint",
+      "title": "荷印油田产能与油轮实际运力缺口",
+      "evidence_level": "待实证"
+    }
+  ],
+  "edges": [
+    {
+      "source": "P01",
+      "target": "P02",
+      "relation": "施加压力"
+    },
+    {
+      "source": "P01",
+      "target": "P09",
+      "relation": "允许替代策略"
+    },
+    {
+      "source": "P03",
+      "target": "P02",
+      "relation": "增加预期风险"
+    },
+    {
+      "source": "P05",
+      "target": "P04",
+      "relation": "组织博弈与方案影响"
+    },
+    {
+      "source": "P03",
+      "target": "P06",
+      "relation": "引发担忧不等于事实"
+    },
+    {
+      "source": "P07",
+      "target": "P06",
+      "relation": "类比不可直接证明"
+    },
+    {
+      "source": "P06",
+      "target": "P08",
+      "relation": "待验证主观概率"
+    },
+    {
+      "source": "P04",
+      "target": "P08",
+      "relation": "策略选项不能自动判定最优"
+    },
+    {
+      "source": "P09",
+      "target": "P08",
+      "relation": "提供对照方案"
+    },
+    {
+      "source": "P10",
+      "target": "P02",
+      "relation": "限制收益实现"
+    },
+    {
+      "source": "P10",
+      "target": "P08",
+      "relation": "实际后勤能力约束"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "1941年日方有哪些机构和决策备选",
+      "nodes": [
+        "P05",
+        "P02",
+        "P04",
+        "P09"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "荷印原油与运输能力是否足以缓解危机",
+      "nodes": [
+        "P01",
+        "P10",
+        "P02"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "菲律宾美军能否实际切断海运",
+      "nodes": [
+        "P03",
+        "P10"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "美国对只攻荷印的反应如何",
+      "nodes": [
+        "P06",
+        "P07"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "山本五十六辞职施压究竟针对何方案",
+      "nodes": [
+        "P05",
+        "P04"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "三至四方案主观损失比较",
+      "nodes": [
+        "P02",
+        "P04",
+        "P09",
+        "P08"
+      ]
+    },
+    {
+      "id": "Q07",
+      "name": "大西洋准战争与太平洋局势能否类比",
+      "nodes": [
+        "P07",
+        "P06"
+      ]
+    }
+  ],
+  "constraints": [
+    "不能从日本高层的主观担忧推断美国必定军事介入",
+    "不得把风险排序的历史解释视为侵略正当性",
+    "转写、战后口述与同期文件严格分级",
+    "不虚构美方反应概率或油运数据"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}
