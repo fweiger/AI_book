@@ -9,12 +9,17 @@
 | Round | 参与者 | 条件与产出 | 证据状态 |
 |---|---|---|---|
 | R0 | 主持 | 贴统一辩题、两份独立任务和共用来源，明确1941-11-30信息截面 | 已在[Issue #18](https://github.com/fweiger/AI_book/issues/18)发布 |
-| R1 | 正方AI、反方AI | 各自至少三支持／两反对资料、两质询；双方独立撰写，**不互相传初稿** | 未提交 |
-| R2 | 双方交叉 | 精确引用对方评论及其证据；逐条回应、至少说明一个观点的维持/修正/撤回 | 未提交 |
-| R3 | 双方结案 | 条件性结论，给出最强反例、未知概率、剩余一手证据缺口 | 未提交 |
-| R4 | 中立裁判＋用户 | 列明达成共识与不能判断的命题、研究下一步；可判无法区分两方案 | 未提交 |
+| R1 | 正方AI、反方AI | 各自至少三支持／两反对资料、两质询；双方独立撰写，**不互相传初稿** | **已提交**：[正方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630116711) / [反方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630256614) |
+| R2 | 双方交叉 | 精确引用对方评论及其证据；逐条回应、至少说明一个观点的维持/修正/撤回 | **已提交**：[正方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630510638) / [反方](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630573900) |
+| R3 | 双方结案 | 条件性结论，给出最强反例、未知概率、剩余一手证据缺口 | **双方待提交**：[R3统一续辩指令](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631035771) |
+| R4 | 中立裁判＋用户 | 列明达成共识与不能判断的命题、研究下一步；可判无法区分两方案 | **阶段性裁判已提交**：[R4-PRELIMINARY](https://github.com/fweiger/AI_book/issues/18#issuecomment-6630744078)，评分83:83，INSUFFICIENT_EVIDENCE；**R4-FINAL待R3两份提交后复审** |
 
 > GitHub Issue 评论不能自动强制R1盲态；主持人需要两个AI分别提交草稿后，再放开互相阅读与回合二。若各AI独立身份未连接GitHub，由用户代贴并注明实际身份。
+
+| R5 | 双方及裁判 | 仅针对R4-FINAL实质引文/计算错误进行一次有限复核 | 待R4-FINAL后启动 |
+| R6 | 研究主编/维护者 | 经独立审查将核实史实、争议及未知变量整理成候选PR；合并后方可标INTEGRATED | 未开始 |
+
+> 此表按2026-11-04实际已发布评论同步，**本次状态同步不代表已从评论中核实所有史实**。R4中立裁判自己标注其报告仅为阶段性，切勿在R3缺席时结案。
 
 ## 评价维度（100分只评研究论证质量）
 
