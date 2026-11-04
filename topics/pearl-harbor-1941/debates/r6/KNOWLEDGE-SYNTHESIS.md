@@ -5,9 +5,9 @@
 
 ## 人类阅读入口：目前最稳固的五项认识
 
-1. **1941年日方最高会议确提出“限定作战对象”这个问题**：1941-10-23第59回联络会议第八题直接讨论只攻荷兰或英荷的可行性，10-27又讨论“美英荷可分否”。这能纠正“从未考虑替代方案”，**不证明有批准的B后勤战案**。[JACAR 10-23 p.363](https://www.jacar.go.jp/exhibition/nichibei/popup/19411023a.html)、[10-27](https://www.jacar.go.jp/exhibition/nichibei/popup/19411027a.html)。
+1. **B被讨论过，但11月5日没有获批准为国策**：1941-10-23第59回联络会议第八题直接讨论只攻荷兰或英荷的可行性，10-27又讨论“美英荷可分否”；**11-05御前会议最终决意准备对美英荷战争**，同时规定12-01零时前对美谈判成功则取消武力发动。这纠正“没有替代讨论”，却不证明已批准的B后勤战案；也不等于11-05已单独批准珍珠港战术细节。[JACAR 10-23 p.363](https://www.jacar.go.jp/exhibition/nichibei/popup/19411023a.html)、[10-27](https://www.jacar.go.jp/exhibition/nichibei/popup/19411027a.html)、[JACAR 11-05官方档案说明](https://www.jacar.go.jp/english/exhibition/showa100/01_02.html)。
 2. **菲律宾是可被军事决策者认真看待的南方侧翼威胁**：美国1941-11-27 Marshall–Stark备忘录也认为吕宋军事部署制约日军南攻；同时强调美国尚需要时间增援。不能从兵力名义数推导“1941未参战的潜艇可持续打沉油轮”。[Exhibit17 p.1083](https://ibiblio.org/pha/congress/Joint%20Committee%20Exhibits/Exhibit%20017.pdf)。
-3. **美国政策并非“必不干涉”也非“已有自动开火令”**：1941-11-05联合参谋建议将日本袭击英荷领土纳入军事反制的可考虑条件；同期也倾向避免过早战争。**建议不等于总统批准/战区ROE/实施**。[Exhibit16 pp.1061—1062](https://ibiblio.org/pha/congress/Joint%20Committee%20Exhibits/Exhibit%20016.pdf)；[FRUS 11-21 Doc463](https://history.state.gov/historicaldocuments/frus1941v04/d463)。
+3. **美国确有介入意愿与战备执行，但未证自动参战义务**：1941-11-05联合参谋建议将日本袭击英荷领土纳入军事反制条件；11-07罗斯福内阁一致认为公众会支持这种情景下的美军军事行动；**11-27向Hart/Kimmel下达真实War Warning和防御部署命令**。另一方面，1946美国国会调查结合Marshall证词确认参谋合作**没有构成美方在英荷遭袭时必须参战的有约束协定**。政治意愿/战备令≠B条件下已授权美国抢先攻击，但**也不等于美国不会迅速参战**。[Exhibit16 pp.1061—1062](https://ibiblio.org/pha/congress/Joint%20Committee%20Exhibits/Exhibit%20016.pdf)、[国会联合调查pp.170—172](https://www.ibiblio.org/pha/pha/congress/part_4.html)、[NARA 11-27原电](https://text-message.blogs.archives.gov/2018/12/06/prologue-to-pearl-harbor-the-spy-flight-that-wasnt-part-ii/)。
 4. **战争规划的船油约束是真实政策约束**：1941-11-05铃木资源说明的1967年英译给出GRT征用、民用缺口、年度预期损造船、荷印石油预计取得量；这都属于**A2历史计划下的预测**，不是B的反事实净到港油量。**总体燃料第2年预测结余约15万kL，与航空汽油第2年按两种需求假设分别短缺约44万/24万kL同时存在**：油品不能互相替代计算。[Ike pp.215—220](https://www.ibiblio.org/pha/Ike-215-224.pdf)；[NIDS pp.136—137](https://www.nids.mod.go.jp/publication/militaryhistory_research/mh_tokushu/eastasia_military_history/pdf/emh01_10.pdf)（本轮NIDS链接访问超时，需另行核页）。
 5. **珍珠港计划的战术目的和风险应分开保存**：NIDS研究提示联合舰队山本与军令部对六航母远袭、逐次削弱/快速决战方案存在争论；“有作战目标”并非“额外袭击珍珠港在24个月净油运及长期强制议和上有优势”。[NIDS pp.138—139](https://www.nids.mod.go.jp/publication/militaryhistory_research/mh_tokushu/eastasia_military_history/pdf/emh01_10.pdf)。
 
@@ -33,7 +33,7 @@
 
 | 优先级 | 研究缺口 | 最小可检验成果 | 不能假装做到 |
 |---|---|---|---|
-| P0 | 美国**建议→批准→ROE→执行** | 1941-11-30前针对仅袭英荷的每一层文书及生效条件、确有或未找到的区别 | “参谋长建议=已下舰队开火令” |
+| P0 | 美国**政治意愿→授权类型→ROE→执行类型** | **11-27确有战备和防御执行令**；仍需1941-11-30前针对仅袭英荷场景的先发交战批准、适用条件和战区ROE | “参谋长建议=无条件开火授权”，或“未找到开火令=美军无任何命令” |
 | P0 | 日本1941-10-06/07与1941-10-23/27议事 | 取得KC000234可重复日文逐字校勘，10-06原稿，明确官署权限和方案是否获批 | “正式提出B审议题=有可执行B计划” |
 | P0 | 1941日方石油与商船原底表 | 分月港口/油品/修复/油轮DWT/航次/护航和供需预算，同一单位区分三方案，缺数据写UNKNOWN | 用总GRT替代油轮DWT，或用荷印年产替代日本净进口 |
 | P1 | 美菲律宾真实战力与日方航线 | Wilkes原报告、逐艇/飞机有效出动与各油港航次空间交集；同时区分未参战/有限冲突/已参战 | 29艇或35架B-17乘虚构命中率 |
