@@ -50,3 +50,12 @@
 - 美国海军Turner [1941-07-19备忘录](https://history.state.gov/historicaldocuments/frus1941v04/d661)建议暂不禁运，其措辞是禁运可能促使日本攻击荷印与马来亚、也可能让美国更早卷入战争，**不是说美国无论如何都会发起封锁**。
 - 罗斯福[1941-07-24同日本大使会谈](https://history.state.gov/historicaldocuments/frus1931-41v02/d292)直陈禁油可能刺激日本进取荷印；进一步说明政策并非事先确定“一旦日本南进就军事制裁”。
 - 美陆军Combat Studies Institute官方[战史手册第59—60页](https://www.armyupress.army.mil/Portals/7/educational-services/staff-rides/StaffRideHB_PearlHarbor.pdf)提供**1941-10-17山本派黑岛龟人向军令部为Operation HAWAII争取批准，称若不采纳可能辞职**这一具体叙述。与1940-11图上演习预测“美英会介入荷印”事件区别。
+
+## 继续推进：同期海军省原始扫描、英荷美承诺与石油量纲（本轮）
+
+- 已获取日本亚经研数字馆藏[KC000054](https://d-arch.ide.go.jp/asia_archive/collections/Kishi/data/item/KC000054.html)具体扫描多页，目录与政策段直接证实该海军政策研究在1941年8月同时讨论武力/和平政策的分界和条件；此是内部政策研究，不能冒称日本政府结论。
+- 已获取[KC000079](https://d-arch.ide.go.jp/asia_archive/collections/Kishi/data/item/KC000079.html) 1941-07-02综合研究会前两页，直接讨论和平/武力分歧，其余页未读。全文细读进展与图片定位见[记录](../primary-source-close-reading.md)。
+- [FRUS 1941-08-26](https://history.state.gov/historicaldocuments/frus1941v05/d296)：荷印出口许可证及对2艘日本油轮拒装，说明石油供应在战争前已经发生实际行政封堵。
+- [FRUS 1941-08-09](https://history.state.gov/historicaldocuments/frus1941v01/d368)：英国没有拿到美国无条件作战承诺，担忧美国国会授权问题；但[澳洲战争纪念馆学术研究](https://www.awm.gov.au/articles/journal/j29/herman)记录美国已在4月参加四国参谋会议，**没有正式战争承诺与没有军事准备是不同命题**。
+- [日本机构二次转引USSBS](https://www.jaif.or.jp/journal/study/shiseitsuten/vol001.html)记荷印1940/1942/1943产量65.10/25.94/49.62百万桶；警惕战后结果泄漏到1941主观预测。
+- 形成三个新研究文档：[日文原始页细读](../primary-source-close-reading.md)、[物流数据台账](../oil-logistics-evidence.md)、[美英荷澳政策矩阵](../allied-response-matrix.md)。
