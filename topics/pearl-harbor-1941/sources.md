@@ -60,3 +60,15 @@
 - **美国海军战时计划司主任Turner致海军作战部长Stark，1941年7月19日**：[美国FRUS正式文件](https://history.state.gov/historicaldocuments/frus1941v04/d661)。其建议不立即全面禁运，理由是禁运可能促使日本较早攻击马来亚和荷印，并“可能”使美国较早卷入太平洋战争；**“可能”不是无条件保证参战**。
 - **美总统罗斯福会见日本大使，1941年7月24日**：[FRUS会谈备忘录](https://history.state.gov/historicaldocuments/frus1931-41v02/d292)。记录罗斯福担忧石油断供将给日本南攻荷印提供刺激或借口。
 - **美国陆军Combat Studies Institute《Pearl Harbor Staff Ride Handbook》纸本第59—60页**：[官方PDF](https://www.armyupress.army.mil/Portals/7/educational-services/staff-rides/StaffRideHB_PearlHarbor.pdf)。页面明确称1941年10月17日山本派黑岛龟人向军令部争取的是**Operation HAWAII的批准**，以辞职相逼；不是仅因为拒绝“只打荷印”便要求辞职。这属于美国官方军事史二手研究，仍需日本同期记录核实细节。
+
+## 第二轮：实际读取的日本同期扫描与新增日美澳证据
+
+- **A11 — [海军省调查课《蘭印対策ノ研究》，1941-08-15，KC000054](https://d-arch.ide.go.jp/asia_archive/collections/Kishi/data/item/KC000054.html)**：已实际查看0002—0006、0008—0010等扫描页，尤其0003目录“武力政策与和平政策分岐点”和0009—0010条件性政策分岔。仅**部分扫描页细读**，非全卷33张完成。[逐页解读](primary-source-close-reading.md)
+- **A12 — [1941-07-02《総合研究会 蘭印問題》，KC000079](https://d-arch.ide.go.jp/asia_archive/collections/Kishi/data/item/KC000079.html)**：已读前2张原图，会议讨论国防与经济问题以及和平/武力政策分界；其余18张待读。[逐页解读](primary-source-close-reading.md)
+- **A13 — [FRUS 1941-08-26 美驻日大使Grew电报](https://history.state.gov/historicaldocuments/frus1941v05/d296)**：正文已核对，反映7月28日荷印油出口须特别许可、8月19日3艘日油轮中2艘遭拒装、以及荷方提出的政治条件。
+- **A14 — [FRUS 1941-08-09 Welles-Cadogan会谈](https://history.state.gov/historicaldocuments/frus1941v01/d368)**：正文已核，英国对荷承诺只限现有远东资源，明确讨论美国法律上的国会授权障碍。
+- **B-H07 — [澳大利亚战争纪念馆 Herman Bussemaker研究](https://www.awm.gov.au/articles/journal/j29/herman)**：已核网页正文，援引荷兰档案和各方会议记录，记1941-04-21～27美英荷澳四方军事参谋会议中美国作为正式参加方。系专业研究**不是会议原件**。
+- **B-H08 — [日本产业机构专文引用美国USSBS荷印产油数据](https://www.jaif.or.jp/journal/study/shiseitsuten/vol001.html)**：网页正文已读，1940 65.10百万桶、1942 25.94百万桶、1943 49.62百万桶；须回到原USSBS表逐个核对年份和生产口径，不能将全部未运达油量归因为沉船。
+- **B-U05 — [NIDS战史丛书第70卷](https://www.nids.mod.go.jp/military_history_search/SoshoView?kanno=070)**：已核目录，包含1941年日荷交涉及9月6日会议；**正文未通读**。
+
+重点：原始日本档案的网页和图片不是“只发现书目”；本轮确已打开多张扫描并区分其图像编号。不得推广为已精读整个33张文件。
