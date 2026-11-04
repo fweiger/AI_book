@@ -36,13 +36,13 @@
 | **11-05** | [Exhibit16印刷pp.1061—1062](https://ibiblio.org/pha/congress/Joint%20Committee%20Exhibits/Exhibit%20016.pdf)，**国会复制的1941同日原文影印两页均已查看** | Marshall与Stark建议避免过早战争；日本直接攻击美国/英联邦/荷印领地或指定地区扩张时，军事回应**可以被认为有必要** | 总统/国会已采纳为自动参战命令、亚洲舰队已获对B先发开火权 |
 | **11-07** | [Stimson 1941-11-07日记经1946年公开摘录](https://content.time.com/time/subscriber/article/0,33009,792673,00.html)；[国会联合调查印刷p.171](https://www.ibiblio.org/pha/pha/congress/part_4.html)；[美陆军战史 ChapterVI](https://webdoc.sub.gwdg.de/ebook/p/2005/CMH_2/www.army.mil/cmh-pg/books/wwii/framework/ch06.htm) | 罗斯福对**公众是否支持在日本攻击英马来亚/荷印后反击**非正式征询内阁；内阁一致认为公众会支持。**这是重要的政治介入意愿证据** | 不等于内阁批准开战、公众真实民调结果、总统直接命令舰队攻击 |
 | **11-27（备忘录）** | [Exhibit17印刷p.1083](https://ibiblio.org/pha/congress/Joint%20Committee%20Exhibits/Exhibit%20017.pdf)，**1941原文的国会影印直接查看** | 参谋长要求避免抢先军事行动、争取增援菲律宾；写出日本攻击/直接威胁美英荷领土等条件，建议先警告再采取跨越泰国界线的行动；**同一文书建议尽快完成英荷合作协议** | 11-27时已将所有合作安排完整签核，或已宣布只要英荷遭袭立即打日本 |
-| **11-27（发给舰队的电报）** | [美国国家档案馆Greg Bradsher档案说明，引用Stark原电及Marshall发给MacArthur原电](https://text-message.blogs.archives.gov/2018/12/06/prologue-to-pearl-harbor-the-spy-flight-that-wasnt-part-ii/)；来源为**官方档案研究逐字引用**，原电纸质母件另行核验 | **真实执行层已启动：**Stark给亚洲舰队Hart和太平洋舰队Kimmel下达\`war warning\`并要求防御部署；Marshall指示驻菲律宾部队适当侦察和准备，若不得不开战应使日本首先作公开敌对行动 | “完全没有任何执行命令”属错误；同样“战备电令=针对仅打英荷的日军开始全面攻击命令”也错误 |
+| **11-27（发给舰队的电报）** | [美国国家档案馆Greg Bradsher档案说明，引用Stark原电及Marshall发给MacArthur原电](https://text-message.blogs.archives.gov/2018/12/06/prologue-to-pearl-harbor-the-spy-flight-that-wasnt-part-ii/)；来源为**官方档案研究逐字引用**，原电纸质母件另行核验 | **真实执行层已启动：**Stark给亚洲舰队Hart和太平洋舰队Kimmel下达`war warning`并要求防御部署；Marshall指示驻菲律宾部队适当侦察和准备，若不得不开战应使日本首先作公开敌对行动 | “完全没有任何执行命令”属错误；同样“战备电令=针对仅打英荷的日军开始全面攻击命令”也错误 |
 | **11-30** | [1946国会联合调查p.172—173引1941-11-30东京给柏林的被截电报](https://www.ibiblio.org/pha/pha/congress/part_4.html)，**1941外交原文的调查摘录** | 一份日本官方对外电报把美国判断为正与英国/荷兰等配合对付日本，**提供至少一个1941年11月30日存在的日本方面主观威胁认知样本** | 单份电报不能证明日本高层一致相信美必立刻参战，不能证明美国客观上已有自动开火承诺 |
 | **1946战后核证（不可回填1941信息集）** | [国会联合调查pp.170—172](https://www.ibiblio.org/pha/pha/congress/part_4.html)，报告和证词 | 国会联合调查明确认为**不存在**使美方在英荷遭袭即自动参战的有约束协定；Marshall的原证词明示参谋会谈无政府授权。该结论可用于**今天的史实审计** | “战后调查的知识”不属于日方1941已知；“没有自动盟约”也不等于美国不会作出新的参战决策 |
 
 ### 重要：11月27日确有战备执行命令——需要纠正一个潜在表述错误
 
-此前R6将美国链路写为\`建议→政治批准→ROE→执行\`，容易被误读成**所有执行环节都完全空白**。现已找到与这一说法相冲突的1941年11月27日\`war warning\`及\`defensive deployment\`命令。因此应拆分：
+此前R6将美国链路写为`建议→政治批准→ROE→执行`，容易被误读成**所有执行环节都完全空白**。现已找到与这一说法相冲突的1941年11月27日`war warning`及`defensive deployment`命令。因此应拆分：
 
 - **已知执行**：防御部署、侦察、战争预警命令（确已下达）；
 - **未证执行**：当日本**仅攻击英荷**、并未攻击美国或直接威胁美国部队时，授权美军立即对日实施进攻或封锁的特定命令；
@@ -50,10 +50,10 @@
 
 ## C. 因果图（候选，不修改正式knowledge-graph.json）
 
-\`\`\`mermaid
+```mermaid
 flowchart LR
   JP10["10-23/27: B被列为讨论题"]
-  JP11["11-05: 对米英荷备战决议（外交成功则停战）"]
+  JP11["11-05: 对米英荷备战决议（外交成功则取消发动）"]
   JPC["B的独立批准、油运、护航计划：未证"]
   U1["04: 多国参谋合作预案"]
   U2["11-05: 参谋长对战时触发条件的建议"]
@@ -69,7 +69,7 @@ flowchart LR
   U3 -.->|未证明已授权先发攻击| U5
   U4 -.->|战备不等于开战命令| U5
   U5 -.-> OUT
-\`\`\`
+```
 
 ## D. 对C-ID的建议改动（正式claims.md不在本PR修改）
 
