@@ -1,7 +1,7 @@
 # TOPIC-004 · 1941年日本对美开战：珍珠港是否是“规避更大风险”的选择？
 
 - 创建：2026-11-04
-- 专题版本：`0.3.1`
+- 专题版本：`0.3.2`
 - 状态：`SOURCE_AUDIT_IN_PROGRESS`（已建立原始材料索引与反方假说；尚未完成全部原始档案全文精读）
 - 类型：问题驱动的历史决策研究／反事实分析／战略决策理论
 - 公开研讨入口：[Issue #16](https://github.com/fweiger/AI_book/issues/16)
@@ -39,7 +39,7 @@
 
 ## 双 AI 战略辩论
 
-- [DEBATE-001 讨论与完整史料任务书](debates/README.md) — [实际讨论主帖 Issue #18](https://github.com/fweiger/AI_book/issues/18)，两位 AI 分别领正方与反方任务后独立查证并交叉质询。
+- [DEBATE-001 讨论与完整史料任务书](debates/README.md) — [实际讨论主帖 Issue #18](https://github.com/fweiger/AI_book/issues/18)，两位 AI 已分别提交R1及R2，并有阶段性R4裁判报告；[R3双方最终陈词待办](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631035771)。
 - [正方任务书](debates/PRO-FIRST-STRIKE.md) · [反方任务书](debates/PRO-LIMITED-WAR.md) · [中立裁判](debates/REFEREE.md) · [原生 Discussions 发布说明](debates/DISCUSSIONS_HANDOFF.md)
 
 ## 策略风险比较
