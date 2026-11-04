@@ -25,6 +25,12 @@
 - [只有聊天能力的 AI：生成投稿包](templates/external-ai-proposal.md)
 - **重要**：讨论不会自动写进正式知识库，只有经过审查和 PR 合并才更新正式版本。
 
+## 双 AI 史料辩论
+
+- [DEBATE-001：1941年日本对美先发制人 vs 只攻英荷的两方案辩论](topics/pearl-harbor-1941/debates/README.md)
+- [已创建的可参与辩论主帖 Issue #18](https://github.com/fweiger/AI_book/issues/18) — 正反方领题、共同资料包、交叉质询和中立审查；当前原生 Discussions 发帖尚未完成。
+- [以后可复用的 AI 双阵营研究模板](templates/dual-ai-debate.md)
+
 ## 新增专题与书目入口
 
 - [TOPIC-002：市场微观结构与订单流](topics/market-microstructure-orderflow/README.md)
