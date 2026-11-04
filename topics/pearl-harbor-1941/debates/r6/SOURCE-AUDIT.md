@@ -11,9 +11,10 @@
 | **日本1941-10-07永野—杉山会谈要旨**，KC000234/B1-202/K9-5-37，[JETRO目录](https://d-arch.ide.go.jp/asia_archive/collections/Kishi/data/item/KC000234.html)，[图1](https://d-arch.ide.go.jp/library/Kishi/img/KC0234_0001.jpg)、[图2](https://d-arch.ide.go.jp/library/Kishi/img/KC0234_0002.jpg) | R3反方**自报原图已打开/partial_read**；裁判仅catalog_verified，原图未独立解读；不应上调为original_full | 可精确定位两页同期手稿 | 日文手稿校勘、10-06海军省军务局独立原稿；不能将这两页作为B获得批准的确证 |
 | **日本1941-11-05铃木贞一御前会议资源说明**，[Ike 1967英译pp.215—220](https://www.ibiblio.org/pha/Ike-215-224.pdf) | translated_contemporaneous_content_read；英译扫描相关页已核，**非原始日语底表** | 当时针对对美英荷战争规划的船舶、石油**预测值**与约束 | 日文原表、库存分类、分月油轮DWT、独立B方案、实际净抵日油 |
 | **日本夏威夷计划及内部争议**，[NIDS相澤pp.136—139](https://www.nids.mod.go.jp/publication/militaryhistory_research/mh_tokushu/eastasia_military_history/pdf/emh01_10.pdf) | institutional_research_read；后出史学，不是1941军令原件 | 日本船舶征用计划；山本/联合舰队与军令部对夏威夷计划存在分歧 | 1941作战批准原文、夏威夷相对A1的净收益与终战机制 |
+| **日本海军护航部门Ōi Atsushi 1952年回忆**，[USNI Proceedings 1952-06](https://www.usni.org/magazines/proceedings/1952/june/why-japans-anti-submarine-warfare-failed) | postwar_participant_account_read，**非1941同期文件**；作者所述1941年部分含二手福留回忆及1952回看 | 提供1941-10-30 300万GRT民需要求、对美潜艇商船袭击任务低估的战后叙述，以及1941-12-08陆/海/民船量（216.05/174.02/243.63万GRT） | 须将1941计划、1941-12-08实际观察、1942年后护航失败及作者追忆明确拆分；不得用战后知识证明日方1941全部人员已知的船油风险 |
 | **美国Gerow 1941-11-21**，[FRUS IV Doc463 pp.630—631](https://history.state.gov/historicaldocuments/frus1941v04/d463) | official_edited_contemporaneous_text_read | 希望临时协议避免战事并强化菲律宾 | 不代表英荷受侵后永远不参战 |
 | **美国罗斯福1941-08-17对野村外交警告**，[FRUS Japan II Doc306 pp.556—557](https://history.state.gov/historicaldocuments/frus1931-41v02/d306) | official_edited_contemporaneous_text；R1—R4记录已核 | 日方可接收的公开/外交警示 | 警告的具体政治或军事执行概率未知 |
-| **日本油轮遭拒装 1941-08-26外交电报**，[FRUS V Doc296](https://history.state.gov/historicaldocuments/frus1941v05/d296) | official_edited_contemporaneous_text；属外交转述 | 记录两艘日本油轮拒装与出口限制 | 不等于占领后的油田破坏率、修复期、日方到港油量 |
+| **日本油轮被拒装 1941-08-19事件（1941-08-26外交电报转述）**，[FRUS V Doc296](https://history.state.gov/historicaldocuments/frus1941v05/d296) | official_edited_contemporaneous_text；属外交转述 | 1941-08-19向日本领事报告：三艘在港油轮两艘拒装、第三艘待议；1941-08-26美驻日使馆经荷方转述 | 不等于占领后的油田破坏率、修复期、日方到港油量 |
 | **菲律宾潜艇规划与Wilkes报告**，[Ransom研究指向RG38 pp.3—4](https://ijnh.seahistory.org/u-s-asiatic-fleet-submarines-1941-42-an-evaluation-of-senior-leadership/) | secondary_research_read；Wilkes_original_not_obtained | 战前有潜艇不同分工与部署构想 | 逐艇妥善率、航道交集、ROE、油轮打击率及1941日方情报 |
 | **美国政治意愿的多面材料**，[FRUS 1941-11-30 Doc512](https://history.state.gov/historicaldocuments/frus1941v04/d512)；[Stimson草案 Doc495](https://history.state.gov/historicaldocuments/frus1941v04/d495) | edited_primary_text；Doc495是草案，日期依编者约定 | 美国考虑政治回应，同时英方仍询问克拉情景下的政策 | 不能把草案当已送国会的正式请求；Doc512事后12月1日补记不得算11月30日已知 |
 
@@ -29,7 +30,7 @@
 
 - **GRT**：船舶总登记吨（容量/容积性计量口径），不是油轮**DWT**载重吨。
 - **千升(kL)**：液体燃料体积；原油、炼成品、航空燃料须明确类别。
-- **库存**是存量；第1/2/3年度预期新增供给是流量，不可直接相加为同年供给或把原油年产当净到港。
+- **库存**是存量；第1/2/3年度预期新增供给是流量，不可直接相加为同年供给或把原油年产当净到港。Ike p.219中1.11m kL库存处于航空汽油段落、同页另有8.4m kL总液体燃料库存，应先确认燃料分类与计量截面，**不能把1.11m与8.4m直接相减或宣称矛盾**。
 - Ike **p.216的27万GRT**仅是**海军征用油轮子项**，不能当日本油轮总DWT。
 - Ike **pp.218—219**荷印第1/2/3年预计取得**30/200/450万kL**；全来源第1/2/3年新增预计**85/260/530万kL**；不是实际产量、装船或运抵日本。**840万kL与111万kL库存分类**未校日文底表，禁止不经核品类而加减。
 - 约**600万GRT总船、390万征用、210万民用**是特定计划截面；民用动态低谷**160万GRT**属于另一时间段预测，不能当静态矛盾。
