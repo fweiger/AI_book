@@ -34,3 +34,10 @@
 - 在公开[GitHub Issue #18](https://github.com/fweiger/AI_book/issues/18)创建实际可评论辩论主帖及三条角色领题/裁判评论。未伪装成已发布原生Discussion，亦未伪装成双方AI已作出真实论证。
 - 新建研究会话 [2026-11-04辩论启动](sessions/2026-11-04-debate-001-kickoff.md)，登记R0与未发生的R1—R4。
 - 新增全仓通用 [双AI研究辩论模板](../../templates/dual-ai-debate.md)。本版没有新增已核实历史命题或图谱节点，故按PATCH从0.3.0升至0.3.1。
+
+## 0.3.2 — 2026-11-04（DEBATE-001 真实评论与程序状态对齐，PATCH）
+
+- 直接核查Issue #18：正方及反方R1、R2实际均已提交；中立R4-PRELIMINARY已发布；正式R3双方均未提交，R4-FINAL尚未发生。
+- 中立阶段审核对双方研究质量分别评83/100，整体历史方案优劣结论`INSUFFICIENT_EVIDENCE`。**评分不是战略胜率**。
+- [GitHub主帖已发布统一R3续辩指令](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631035771)，要求补齐两份结案书再由裁判更新终审；不擅自标INTEGRATED。
+- 修正先前`debates/README.md`及`REFEREE.md`静态状态表的滞后信息，明确R5/R6候选入库条件；本次为**协作进度与档案链接同步**，未升级任何历史命题。
