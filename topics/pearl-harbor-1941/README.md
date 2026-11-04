@@ -1,7 +1,7 @@
 # TOPIC-004 · 1941年日本对美开战：珍珠港是否是“规避更大风险”的选择？
 
 - 创建：2026-11-04
-- 专题版本：`0.1.0`
+- 专题版本：`0.2.0`
 - 状态：`SOURCE_AUDIT_IN_PROGRESS`（已建立原始材料索引与反方假说；尚未完成全部原始档案全文精读）
 - 类型：问题驱动的历史决策研究／反事实分析／战略决策理论
 - 公开研讨入口：[Issue #16](https://github.com/fweiger/AI_book/issues/16)
@@ -21,8 +21,11 @@
 ## 开始研究
 
 - [研究问题 Q01–Q07](questions.md)
-- [主张审计 C001–C008](claims.md)
+- [主张审计 C001–C014](claims.md)
 - [原始档案与学术来源](sources.md)
+- [1941年日本海军省原始扫描与逐页解读](primary-source-close-reading.md)
+- [荷印石油产量与油轮物流证据](oil-logistics-evidence.md)
+- [美英荷澳1941年介入预案与外交承诺矩阵](allied-response-matrix.md)
 - [分阶段阅读路线](reading-path.md)
 - [历史决策知识图谱](knowledge-map.md) · [JSON](knowledge-graph.json)
 - [下一轮任务](NEXT.md)
