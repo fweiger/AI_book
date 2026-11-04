@@ -9,6 +9,7 @@
 
 - [主讨论 Issue #20](https://github.com/fweiger/AI_book/issues/20)
 - **[2026-11-04学术论文和一手资料审计](RESEARCH_EVIDENCE_20261104.md)**：13种资料线索、财政—资本—战略因果链、1947年美英接替事件、当代美国指标与可证伪实验
+- **[六个专业研究/红队/裁判的可复制提示词与R0–R4执行顺序](AGENT_PROMPTS.md)**
 - [问题树](questions.md) · [来源](sources.md) · [候选论点](claims.md)
 - [研究协议](RESEARCH_PROTOCOL.md) · [债务数据合同](data-contract.md) · [NEXT](NEXT.md) · [会话](sessions/README.md)
 - [待审核PR #21](https://github.com/fweiger/AI_book/pull/21)
