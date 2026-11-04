@@ -9,6 +9,8 @@
 | TOPIC-002 | [市场微观结构：订单流、流动性与价格形成](topics/market-microstructure-orderflow/README.md) | 交易规则怎样形成价格、价差与流动性？ | `交易机制` `订单流` `Wind L2` | 1 | CATALOG_SEEDED |
 | TOPIC-003 | [交易心理：亏损、纪律与可验证执行](topics/trading-psychology-execution/README.md) | 决策偏差如何影响风险与执行？ | `行为决策` `交易心理` `风险` | 1 | CATALOG_SEEDED |
 
+| TOPIC-005 | [英美公共债务率：历史演化、债务化解及可比性](topics/uk-us-public-debt-history/README.md) | 英国二战后约250%债务如何演变，美国当代债务是否可比？ | `财政史` `公共债务` `债务动态` `货币史` | 官方统计资料待深化 | DRAFT / NEEDS_EVIDENCE |
+
 [查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 持续扩展方式
