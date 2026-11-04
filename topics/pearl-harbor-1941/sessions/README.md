@@ -4,3 +4,5 @@
 
 - [2026-11-04 初次史料审核](2026-11-04-initial-archive-audit.md)
 - [2026-11-04 第三轮：日本战略与后勤的相互矛盾](2026-11-04-third-round-strategy-and-shipping.md)
+
+- [2026-11-04 DEBATE-001 双阵营辩论启动](2026-11-04-debate-001-kickoff.md) — 仅主持人R0任务发布，无两位AI的正式立论。
