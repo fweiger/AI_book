@@ -43,3 +43,10 @@
 - 已读美国国务院[1941-07-31备忘录](https://history.state.gov/historicaldocuments/frus1941v04/d671)正文：美国军方反对在两洋同时作战，担忧制裁诱发侵略殖民地，此事显示美方是否立即军事介入并非无条件既定。
 - 已读美亚洲舰队司令[1940-11-13致Stark评估](https://history.state.gov/historicaldocuments/frus1940v04/d255)正文：其清楚区分先攻荷印与先攻英国殖民地路线，尤其注意油田可被破坏多年；不能以年产量直接等同占领后可用量。
 - 核对Russett (1967)同行评审论文**摘要**：确实提出三选项并将其效用按行动者主观后果概率加权，但论文全文仍受限。由此建立[纯符号阈值模型](../decision-model.md)，不伪造参数。
+
+
+## 同日第三轮：美方7月禁运文件与山本辞职事件的具体对象
+
+- 美国海军Turner [1941-07-19备忘录](https://history.state.gov/historicaldocuments/frus1941v04/d661)建议暂不禁运，其措辞是禁运可能促使日本攻击荷印与马来亚、也可能让美国更早卷入战争，**不是说美国无论如何都会发起封锁**。
+- 罗斯福[1941-07-24同日本大使会谈](https://history.state.gov/historicaldocuments/frus1931-41v02/d292)直陈禁油可能刺激日本进取荷印；进一步说明政策并非事先确定“一旦日本南进就军事制裁”。
+- 美陆军Combat Studies Institute官方[战史手册第59—60页](https://www.armyupress.army.mil/Portals/7/educational-services/staff-rides/StaffRideHB_PearlHarbor.pdf)提供**1941-10-17山本派黑岛龟人向军令部为Operation HAWAII争取批准，称若不采纳可能辞职**这一具体叙述。与1940-11图上演习预测“美英会介入荷印”事件区别。
