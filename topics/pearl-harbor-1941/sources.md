@@ -53,3 +53,10 @@
 - [美国亚洲舰队司令Hart给海军作战部长Stark的1940-11-13评估（FRUS）](https://history.state.gov/historicaldocuments/frus1940v04/d255)：**已阅读官方正文**，直接考虑日本单独攻荷印与先攻英国殖民地两路径，并指出油田可能被破坏多年、英荷及美国介入政策仍有变数。研究 Q02/Q04/Q06。
 - [美国国务院远东部门1941-07-31备忘录（FRUS）](https://history.state.gov/historicaldocuments/frus1941v04/d671)：**已阅读官方正文**，记载陆海军不愿同时打大西洋和太平洋战争，部分此前不全禁石油的原因是担忧促使日本攻击英荷殖民地。研究 Q04/Q06。
 - [防卫研究所公开完整PDF：小谷贤《日本陸海軍と南進》](https://www.nids.mod.go.jp/event/proceedings/forum/pdf/2008/forum_j2008_09.pdf)：**已直接核查第119—122页**，其第121页指出山本于1940年11月下旬的图上演习担忧攻荷印导致美英参战；该研究引用《大本营海军部大东亚战争开战经过(2)》140—142页，**尚未直接读到后者**。此内容不得与1941年关于夏威夷突袭计划的辞职威胁混为一谈。
+
+
+## 本轮直接核查的补充关键材料（对视频的“必然”论证尤其重要）
+
+- **美国海军战时计划司主任Turner致海军作战部长Stark，1941年7月19日**：[美国FRUS正式文件](https://history.state.gov/historicaldocuments/frus1941v04/d661)。其建议不立即全面禁运，理由是禁运可能促使日本较早攻击马来亚和荷印，并“可能”使美国较早卷入太平洋战争；**“可能”不是无条件保证参战**。
+- **美总统罗斯福会见日本大使，1941年7月24日**：[FRUS会谈备忘录](https://history.state.gov/historicaldocuments/frus1931-41v02/d292)。记录罗斯福担忧石油断供将给日本南攻荷印提供刺激或借口。
+- **美国陆军Combat Studies Institute《Pearl Harbor Staff Ride Handbook》纸本第59—60页**：[官方PDF](https://www.armyupress.army.mil/Portals/7/educational-services/staff-rides/StaffRideHB_PearlHarbor.pdf)。页面明确称1941年10月17日山本派黑岛龟人向军令部争取的是**Operation HAWAII的批准**，以辞职相逼；不是仅因为拒绝“只打荷印”便要求辞职。这属于美国官方军事史二手研究，仍需日本同期记录核实细节。
