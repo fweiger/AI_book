@@ -8,7 +8,7 @@
 第一阶段**只研究债务率的历史路径和会计/制度驱动**：战争、赤字、名义GDP增长、有效利率、初级财政余额、债务管理与统计口径。国家兴衰、英镑与美元国际地位属于**后续研究问题**；不得将相关性当作因果性，也不得预设美国必然重演英国路径。
 
 - 主讨论：[Issue #20：英美公共债务率](https://github.com/fweiger/AI_book/issues/20)
-- [问题分解](questions.md) · [来源与核查范围](sources.md) · [候选命题](claims.md)
+- [问题分解](questions.md) · **[多假说竞争与对抗式研究协议](RESEARCH_PROTOCOL.md)** · [来源与核查范围](sources.md) · [候选命题](claims.md)
 - [数据合同与可复现规则](data-contract.md) · [下一阶段任务](NEXT.md) · [研究会话索引](sessions/README.md)
 
 ## 起始历史事实与数据口径
