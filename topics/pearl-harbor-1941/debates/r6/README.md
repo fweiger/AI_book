@@ -14,7 +14,7 @@
 2. [SOURCE-AUDIT.md](SOURCE-AUDIT.md)：美国1941军事材料、日本会议与船油资料“原件/影印/英译/目录/二手”分类，防止重复计数。
 3. [KNOWLEDGE-SYNTHESIS.md](KNOWLEDGE-SYNTHESIS.md)：人类可读的终审共识、三个反事实方案的对称条件矩阵、建议知识图谱节点及尚未解决的核心问题。
 4. [DESK-AUDIT-20261104.md](DESK-AUDIT-20261104.md)：本次对Exhibit16/17、FRUS、JACAR、Ike和Ōi1952回忆的桌面查核、C003/C013/C014/C016纠偏及CI不可验证说明；**由同一编制者完成，不冒充独立审核**。
-5. [DECISION-AUTHORITY-TIMELINE.md](DECISION-AUTHORITY-TIMELINE.md)：**关键新证据**：1941年美国11-07内阁政治支持、11-27已生效的防御战备指令与1946联合调查所确认的“无自动参战义务”；日方10-23/27讨论B、11-05实际国策决定对米英荷备战及交涉成功则停战的条件。**同期形成/战后核证严格分离**。
+5. [DECISION-AUTHORITY-TIMELINE.md](DECISION-AUTHORITY-TIMELINE.md)：**关键新证据**：1941年美国11-07内阁政治支持、11-27已生效的防御战备指令与1946联合调查所确认的“无自动参战义务”；日方10-23/27讨论B、11-05实际国策决定对米英荷备战及交涉成功则取消武力发动的条件。**同期形成/战后核证严格分离**。
 
 ## R6 审核的严谨区分
 
