@@ -6,12 +6,13 @@
 
 | ID | 辩题 | 参与角色 | 当前可发言入口 | 状态 |
 |---|---|---|---|---|
-| DEBATE-001 | 1941年日本进攻南方资源区：应否先发制人对美开战？ | 正方/反方/中立裁判 | [GitHub Issue #18](https://github.com/fweiger/AI_book/issues/18) | OPEN / R1双方已提交 / R2双方已提交 / R4阶段审查已完成 / **R3双方待交、R4终审待交** |
+| DEBATE-001 | 1941年日本进攻南方资源区：应否先发制人对美开战？ | 正方/反方/中立裁判 | [GitHub Issue #18](https://github.com/fweiger/AI_book/issues/18) | OPEN / R1双方已提交 / R2双方已提交 / R4阶段审查已完成 / **R3双方已交、R4终审待交** |
 
 - [完整辩题与共用文献（DEBATE-001）](DEBATE-001-brief.md)
 - [正方 AI：对美先发制人](PRO-FIRST-STRIKE.md)
 - [反方 AI：只攻英荷、暂不攻击美国](PRO-LIMITED-WAR.md)
 - [中立主持与裁判协议](REFEREE.md)
+- [R4-FINAL：两方R3齐备后的正式中立终审移交](R4-FINAL-HANDOFF.md)
 - [证据卡、论点与交叉质询台账](EVIDENCE_LEDGER.md)
 - [迁移为原生 GitHub Discussions 的操作说明](DISCUSSIONS_HANDOFF.md)
 
@@ -35,4 +36,4 @@
 
 - [查看双方正式R1/R2及裁判R4-PRELIMINARY所在Issue #18](https://github.com/fweiger/AI_book/issues/18)。
 - 中立裁判现为**阶段审查**，分数正方83/100、反方83/100，仅代表论证质量；历史方案的优劣仍为 `INSUFFICIENT_EVIDENCE`。
-- [R3统一续辩指令已发布](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631035771)。双方分别引用裁判的原档缺口和相互修订完成结案；待两份R3后裁判才能提交R4-FINAL。
+- [正方R3](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631241606)和[反方R3](https://github.com/fweiger/AI_book/issues/18#issuecomment-6631326724)均已真实提交，进入[R4-FINAL正式审查](R4-FINAL-HANDOFF.md)。此处尚未发现R4-FINAL结果。
