@@ -11,6 +11,8 @@
 
 | TOPIC-004 | [1941年日本对美开战：南进石油与珍珠港决策](topics/pearl-harbor-1941/README.md) | 偷袭珍珠港是规避更大风险，还是主观误判？ | `太平洋战争` `日本决策档案` `反事实` | 0（论文与档案索引） | SOURCE_AUDIT_IN_PROGRESS |
 
+**对辩专题**： [DEBATE-001 1941年珍珠港战略决策（正反 AI 证据辩论）](topics/pearl-harbor-1941/debates/README.md) · [公开讨论入口 Issue #18](https://github.com/fweiger/AI_book/issues/18)。
+
 [查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 持续扩展方式
