@@ -15,3 +15,24 @@
 - [ ] PR审核合并以前维持DRAFT、不能标INTEGRATED。
 
 [讨论Issue #20](https://github.com/fweiger/AI_book/issues/20) · [文献证据台账](RESEARCH_EVIDENCE_20261104.md)
+
+
+## 2026-11-05 实际讨论进度审计与R3派发
+
+> 进度严格按[Issue #20](https://github.com/fweiger/AI_book/issues/20)可查评论判断，不把任务书或单个研究员补充当成下一轮完成。
+
+- [x] R1 A 财政：[原报告](https://github.com/fweiger/AI_book/issues/20#issuecomment-6635638862)；[发表后补充](https://github.com/fweiger/AI_book/issues/20#issuecomment-6635954777)（不能回填到原独立立论）。
+- [x] R1 B 国际金融：[B-R1](https://github.com/fweiger/AI_book/issues/20#issuecomment-6635688540)。
+- [x] R1 C 战略交接：[C-R1](https://github.com/fweiger/AI_book/issues/20#issuecomment-6635701837)。
+- [x] R1 D 竞争解释：[D-R1](https://github.com/fweiger/AI_book/issues/20#issuecomment-6651793999)。
+- [x] R2 E 红队：[22条质询](https://github.com/fweiger/AI_book/issues/20#issuecomment-6651966354)，A01–A05、B01–B05、C01–C05、D01–D07。
+- [ ] R0 正式HOST/R0归档：Issue内暂无该格式单独提交；已有共同资料，补“共享资料清单、版本、候选变量定义及R1证据截止时间”，不改写历史R1，不阻止R3启动。
+- [ ] R3 A逐条回复A01–A05：ONS净利息/收入、初级余额跨口径、OBR/BoE/议会债务桥接、海外与总体军费分账、1947/1968英方财政档案和国债利息独立作用（缺失时NOT_IDENTIFIED）。
+- [ ] R3 B逐条回复B01–B05：BoE 1938–48海外证券表逐格校验、英镑持有人可兑换分类、1947前后时间线、1956月度外汇账户、11月6日与12月10日IMF批准/提款/备用之分。
+- [ ] R3 C逐条回复C01–C05：希土分项目真实交接和援款兑现、1956年11月5–7日分时区档案时间线、外储事前信息与事后值、各地区实质接替者、1967撤离决定与1968提速以及£12m/£100m/£300m概念桥。
+- [ ] R3 D逐条回复D01–D07：工业份额与绝对产出和相对霸权维度、跨国专利/船运比较、战争共同冲击vs债务中介、印度国内政治与殖民治理成本、1815反例、1960联合国时间线、美国2026与英国制度映射（联合A/B）。
+- [ ] 所有R3使用统一格式：`E-R2问题ID | 原断言和评论URL | 新证据/原始页码 | 口径与时点 | 接受/修正/撤回 | 已解决/部分解决/未解决 | 未识别原因`。
+- [ ] 仅当4份R3齐备才触发F-R4；缺一可做`READINESS_INCOMPLETE`检查，不能出正式终审。
+- [ ] R4完成并经过人工审阅后再考虑更新claims和PR内容；Draft PR #21未经授权不合并。
+
+**目前优先级**：P0 = A05（债息是否造成海外财政挤出）、B01/B05（证券统计及1956 IMF融资时序）、C02/C04（苏伊士因果时序及美方接替范围）、D03/D04（战争共同原因与殖民政治）。这些任务完成后能显著改变中心假说的可识别程度。
