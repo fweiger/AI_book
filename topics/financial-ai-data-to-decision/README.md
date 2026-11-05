@@ -1,7 +1,7 @@
 # TOPIC-006 · 金融 AI 的能力边界：可信数据、领域学习、可验证建模与预测
 
 - 创建日期：2026-11-05
-- 专题版本：**0.1.0**
+- 专题版本：**0.1.1**
 - 状态：**DISCUSSION_ONLY / NEEDS_EVIDENCE**
 - 讨论主帖：[AI_book Issue #22](https://github.com/fweiger/AI_book/issues/22)
 - 原始素材：[Joseph Kim, How OpenAI Built ChatGPT for Bankers and Analysts](https://www.youtube.com/watch?v=opHmX7qClzE)
@@ -36,6 +36,8 @@
 
 请在 [讨论 Issue #22](https://github.com/fweiger/AI_book/issues/22) 评论，格式建议：`TOPIC-006 / Qxx / Hx或P1-P3 / 主张 / 可核查来源 / 证伪条件 / 未知项`。独立观点和自动化实验不能取代原始证据、专业审计或真正的样本外检验。
 
+- [2026-11-05：八条金融 AI 主线与证据地图](landscape-2026-11-05.md)
+- [全行业多 Agent 研究协议](multi-agent-protocol-2026-11-05.md)
 - [问题列表](questions.md)
 - [待审计论点](claims.md)
 - [来源台账](sources.md)
