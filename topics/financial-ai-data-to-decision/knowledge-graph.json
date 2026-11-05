@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.1",
+  "topic_id": "TOPIC-006",
+  "title": "金融 AI：从数据可信到专业建模、持续 Agent 和预测",
+  "source_level": "演讲一手来源+官方产品公开资料；学术论文摘要/网页级；竞争假说待检验",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "N01",
+      "type": "research-domain",
+      "title": "金融数据质量和 point-in-time",
+      "evidence_level": "监管方法与研究假说",
+      "source_status": "SEC 文档已定位"
+    },
+    {
+      "id": "N02",
+      "type": "research-domain",
+      "title": "MCP 检索与金融数据语义",
+      "evidence_level": "演讲产品架构",
+      "source_status": "OpenAI 演讲/官方介绍"
+    },
+    {
+      "id": "N03",
+      "type": "research-domain",
+      "title": "金融领域后训练与 Skills",
+      "evidence_level": "研发路线和研究假说",
+      "source_status": "演讲/增益待独立实验"
+    },
+    {
+      "id": "N04",
+      "type": "research-domain",
+      "title": "专业 Excel 估值及工作簿",
+      "evidence_level": "演讲+独立评测",
+      "source_status": "MBABench 网页/论文可读"
+    },
+    {
+      "id": "N05",
+      "type": "method",
+      "title": "独立验证、财务勾稽与溯源",
+      "evidence_level": "方法论",
+      "source_status": "待形成对照实验"
+    },
+    {
+      "id": "N06",
+      "type": "research-domain",
+      "title": "持久 Agent 的任务、权限和恢复",
+      "evidence_level": "预测/架构假说",
+      "source_status": "演讲、待长程验证"
+    },
+    {
+      "id": "N07",
+      "type": "research-domain",
+      "title": "无前视偏差的样本外预测",
+      "evidence_level": "方法论",
+      "source_status": "金融 LLM 偏差研究已定位"
+    },
+    {
+      "id": "N08",
+      "type": "forecast",
+      "title": "P1 减少人工 Excel PPT 操作",
+      "evidence_level": "2027 年前瞻预测",
+      "source_status": "仅为演讲预测"
+    },
+    {
+      "id": "N09",
+      "type": "forecast",
+      "title": "P2 像同事一样工作的 Agent",
+      "evidence_level": "2027 年前瞻预测",
+      "source_status": "仅为演讲预测"
+    },
+    {
+      "id": "N10",
+      "type": "forecast",
+      "title": "P3 超越专家的金融前瞻判断",
+      "evidence_level": "2027 年前瞻预测",
+      "source_status": "仅为演讲预测"
+    }
+  ],
+  "edges": [
+    {
+      "source": "N01",
+      "target": "N02",
+      "relation": "输入依赖，不保证正确"
+    },
+    {
+      "source": "N02",
+      "target": "N03",
+      "relation": "候选支撑"
+    },
+    {
+      "source": "N03",
+      "target": "N04",
+      "relation": "待消融验证"
+    },
+    {
+      "source": "N04",
+      "target": "N05",
+      "relation": "必须独立检验"
+    },
+    {
+      "source": "N05",
+      "target": "N06",
+      "relation": "需要长期可靠性验证"
+    },
+    {
+      "source": "N05",
+      "target": "N07",
+      "relation": "支持验证规范"
+    },
+    {
+      "source": "N04",
+      "target": "N08",
+      "relation": "预测 P1 的技术前提"
+    },
+    {
+      "source": "N06",
+      "target": "N09",
+      "relation": "预测 P2 的技术前提"
+    },
+    {
+      "source": "N07",
+      "target": "N10",
+      "relation": "预测 P3 需要样本外验证"
+    },
+    {
+      "source": "N01",
+      "target": "N10",
+      "relation": "禁止直接推断"
+    },
+    {
+      "source": "N03",
+      "target": "N10",
+      "relation": "禁止直接推断"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "数据瓶颈",
+      "nodes": [
+        "N01",
+        "N02"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "领域后训练与工具增强",
+      "nodes": [
+        "N02",
+        "N03"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "专业财务模型",
+      "nodes": [
+        "N03",
+        "N04",
+        "N05",
+        "N08"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "预测有效性",
+      "nodes": [
+        "N01",
+        "N07",
+        "N10"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "持续 Agent",
+      "nodes": [
+        "N05",
+        "N06",
+        "N09"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "独立验证",
+      "nodes": [
+        "N01",
+        "N05"
+      ]
+    },
+    {
+      "id": "Q07",
+      "name": "金融数据许可与权限",
+      "nodes": [
+        "N01",
+        "N06"
+      ]
+    },
+    {
+      "id": "Q08",
+      "name": "行业能力迁移",
+      "nodes": [
+        "N03",
+        "N05",
+        "N07"
+      ]
+    }
+  ]
+}
