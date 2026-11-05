@@ -18,6 +18,32 @@
 
 **S09｜真实电子表格工作流**：[SpreadsheetBench V2](https://spreadsheetbench.github.io/)。覆盖建模、修复、可视化与多表任务；不与 MBABench 直接合并排名。
 
+## 2026-11-05 全行业扩展来源（新增公开网页与研究摘要级）
+
+**S10｜BoE/FCA**：[Artificial intelligence in UK financial services - 2026, 2026-10-26](https://www.bankofengland.co.uk/report/2026/artificial-intelligence-in-uk-financial-services-2026)，86%报告使用 AI、80%报告部署 AI Agent、2%报告使用广泛自主权 Agent；仅在受访机构定义下成立。
+
+**S11｜Cambridge CCAF**：[2026 Global AI in Financial Services Report](https://www.jbs.cam.ac.uk/faculty-research/centres/alternative-finance/publications/2026-global-ai-in-financial-services-report/)，企业与监管机构采用情况及重点用例。自报调查不代表全行业随机抽样统计或独立收益。
+
+**S12｜FSB 监管治理**：[2026-10-15 Final Sound Practices](https://www.fsb.org/2026/10/fsb-finalises-sound-practices-for-the-responsible-adoption-of-artificial-intelligence-ai/)，正式版本的12项治理实践；不再以2026年6月咨询稿替代。
+
+**S13｜Anthropic 产品**：[Agents for financial services, 2026-05-05](https://www.anthropic.com/news/finance-agents)，模板、金融数据连接与跨Office使用；产品方说明，非独立效果评测。
+
+**S14｜Bloomberg 产品**：[ASKB by Bloomberg AI](https://professional.bloomberg.com/products/bloomberg-terminal/ai/askb/)，以数据/新闻/研究/分析工具驱动的代理式自然语言工作流；产品方说明。
+
+**S15｜金融研究代理基准**：[Vals Finance Agent v2.1，更新 2026-11-04](https://www.vals.ai/benchmarks/fabv2-1)，最佳被测模型67.85%；属于指定任务、环境与评价标准下的分数，不可与 MBABench 横向排名。
+
+**S16｜检索失败机制研究**：[Kobeissi & Langlais，PMLR 2026](https://proceedings.mlr.press/v318/kobeissi26a.html)，150道 FinanceBench 问题分文档/页/块定位与检索瓶颈；可读论文网页与摘要级信息。
+
+**S17｜交易长期反证**：[Li et al.，FINSABER，arXiv:2505.07078](https://arxiv.org/abs/2505.07078)，研究摘要报告部分LLM策略长期扩展后的优势衰减，不是对所有模型或策略的否定。
+
+**S18｜财务工作簿端到端**：[WorkstreamBench，arXiv:2605.22664](https://arxiv.org/abs/2605.22664)，评估准确性、公式、格式等专业标准；摘要级。
+
+**S19｜公开用例追踪**：[Evident Banking Q2 2026](https://evidentinsights.com/insights/banking-use-case-trends-q2-2026)、[Insurance Q2 2026](https://evidentinsights.com/insights/insurance-use-case-trends-q2-2026)，企业已披露的产品/用例统计，存在披露偏差。
+
+**S20｜公共金融预测研究**：[US Office of Financial Research 2026-08-25](https://www.financialresearch.gov/the-ofr-blog/2026/08/25/deep-learning-methods-improve-financial-forecasts/)，用于传统深度学习与金融预测同基准比较的研究入口。
+
+详细对照见 [全行业研究地图](landscape-2026-11-05.md)。
+
 ## 后续证据准入
 - 主张需标：来源是现场主张/公司宣传/监管规范/同行评议论文/基准实验/独立复现/本专题推测；
 - 所有数值标明测试版本、任务集合、日期和评价定义；
