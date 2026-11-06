@@ -1,5 +1,23 @@
 # TOPIC-005｜按2026-11-04用户目标修订的工作优先级
 
+## 2026-11-07 最新状态（覆盖此前“R3待办”的历史记录）
+
+> 截至本次实际读取[Issue #20](https://github.com/fweiger/AI_book/issues/20)的16条评论：**R1 A/B/C/D = 4/4 完成；R2 E=完成（22项）；R3 A/B/C/D = 4/4 全部答辩；R4 F = 尚未提交。** 2026-11-05节内未勾的R3事项属于**当时快照**，不是现在未完成。
+
+- [x] C-R3 [已提交](https://github.com/fweiger/AI_book/issues/20#issuecomment-6680029546)：C01–C05，C03实时外储日报仍UNRESOLVED。
+- [x] A-R3 [已提交](https://github.com/fweiger/AI_book/issues/20#issuecomment-6680099603)：A01–A05；[2026-11-07补证](https://github.com/fweiger/AI_book/issues/20#issuecomment-6690647672)增加1946–64连续19年海外军事外汇支出系列，债息独立边际挤出仍NOT_IDENTIFIED。
+- [x] D-R3 [已提交](https://github.com/fweiger/AI_book/issues/20#issuecomment-6680103397)：D01–D07；[2026-11-07补证](https://github.com/fweiger/AI_book/issues/20#issuecomment-6690592857)补充1966–68东苏伊士英澳原档线索。
+- [x] B-R3 [已提交](https://github.com/fweiger/AI_book/issues/20#issuecomment-6680174622)：B01–B05，1956年11月6日IMF“禁贷致停火”的必要性未证实。
+- [x] [F-R4的独立接手材料与提示词](R4_HANDOFF_20261107.md)已汇总并存入研究分支，**不是F已执行**。
+- [ ] 补一份当前日期`RETROSPECTIVE_EVIDENCE_SNAPSHOT`并注明R1前没有可核实的独立`HOST/R0`评论，**不能事后冒称预注册**；F可先在准备度章节写明此限制。
+- [ ] 启动**Agent F 独立中立R4**：必须阅读全文A–D的R1及R3、红队E-R2及A/D最新补证；核原档；输出六环因果裁决和22项剩余争议核查情况。
+- [ ] 待F-R4实际完成：人审结论后R5整理已证事实/部分因果证据/NOT_IDENTIFIED及反证，审PR #21；英国机制经审定后再正式开展美国数据外推检验。
+
+**当前最难、最重要的未决问题**：本币国债**净利息**对指定海外军费/援助的**独立边际挤出**仍NOT_IDENTIFIED；1956-11-06即时IMF禁贷电话/因果没有同期可核文书；1947希土除部分援助外并非英国所有职责一对一转交美国；海外证券名义资产与公共预算资金不能混用。
+
+---
+
+
 - [x] 建立[一手/学术证据初稿](RESEARCH_EVIDENCE_20261104.md)：官方债务率与名义债务存量差异、海外证券投资下滑、1947希腊土耳其、1956苏伊士、反方与美国最新对照。
 - [x] 已发布[六角色研究提示词与主持人R0、红队、裁判执行顺序](AGENT_PROMPTS.md)；仅准备模板，尚未触发Agent实际研究。
 - [ ] **P0** 用BoE 1938–48证券统计复算海外资产类型/国家分布和减少原因，确认英国境外资产究竟是偿债、征用、外国主动偿还还是新的投资缺失。
