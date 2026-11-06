@@ -1,5 +1,19 @@
 # TOPIC-005｜按2026-11-04用户目标修订的工作优先级
 
+## 2026-11-07 R4后最新执行状态（此段覆盖后文旧轮次快照）
+
+- [x] **R4独立中立裁判**已在[Issue #20提交正式评论 #6691211843](https://github.com/fweiger/AI_book/issues/20#issuecomment-6691211843)，状态 `FINAL_REVIEW_WITH_OPEN_GAPS`。六环逐项审查、22题裁决：**21 PARTIAL / 1 UNRESOLVED（C03）**。
+- [x] R5草稿已新增：[R5_REVIEW_20261107.md](R5_REVIEW_20261107.md) · [OPEN_GAPS.md](OPEN_GAPS.md) · [METHODS_LEARNED_R5.md](METHODS_LEARNED_R5.md)。**这是知识结构写入，不是历史事实全量二次复核**。
+- [x] R5候选映射已加入[claims.md](claims.md)、[sources.md](sources.md)、[README.md](README.md)和专题[INDEX](../../INDEX.md)。
+- [ ] **人工审查PR #21并核验关键原始引用**：优先F03 BoE1950印刷表格、F05 IMF融资类别与时间、P03苏伊士当日文件；未核的继续明确`TABLE_IMAGE_PENDING`/`NOT_IDENTIFIED`。
+- [ ] 按 [OPEN_GAPS](OPEN_GAPS.md) 的P0优先调英国1947财政决策、1956-11-01～07跨部门即时通信、1967/68撤退成本备选档案。不要因R5归档而把这些缺口关闭。
+- [ ] 维护者决定是否合并Draft PR #21；若未授权则继续保持Draft/UNMERGED，X01–X05不升级。
+- [ ] 独立开启美国当代同机制映射（P2），严格分观测/预测及英美制度差异。
+
+> **历史快照提示**：以下“R4尚未提交、R3待办”等段落均记录2026-11-05或R4之前的真实阶段进度，不是当前任务状态。R1前无可查单独HOST/R0预注册评论，R5只能作事后审计快照，不能倒称事前冻结。
+
+---
+
 ## 2026-11-07 最新状态（覆盖此前“R3待办”的历史记录）
 
 > 截至本次实际读取[Issue #20](https://github.com/fweiger/AI_book/issues/20)的16条评论：**R1 A/B/C/D = 4/4 完成；R2 E=完成（22项）；R3 A/B/C/D = 4/4 全部答辩；R4 F = 尚未提交。** 2026-11-05节内未勾的R3事项属于**当时快照**，不是现在未完成。
