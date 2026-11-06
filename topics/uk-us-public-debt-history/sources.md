@@ -1,5 +1,28 @@
 # TOPIC-005 来源登记与核查边界
 
+## 2026-11-07 R5 原始来源补充及阅读级别（裁判记录，待人工复核）
+
+> 来自[Agent F-R4](https://github.com/fweiger/AI_book/issues/20#issuecomment-6691211843)的材料审计；此处是来源**索引**，不表示本次R5逐页重新下载核影。关键来源的正文、原表图像、目录和摘要必须分级；`CATALOGUE_ONLY`不能证明档案内容。
+
+| R5来源ID | 原始档案/官方表 | F报告使用范围 | 阅读状态与限制 |
+|---|---|---|---|
+| R5SRC01 | [ONS NMFX](https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/nmfx/pusf) · [ANBV](https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anbv/pusf) | CG净息/全部当期收入 | PRIMARY_DATA；日历年/回溯版、非税收分母 |
+| R5SRC02 | [FRUS1947 d24](https://history.state.gov/historicaldocuments/frus1947v05/d24) · [d25](https://history.state.gov/historicaldocuments/frus1947v05/d25) · [d36](https://history.state.gov/historicaldocuments/frus1947v05/d36) | 希土外币援助与英美协议时序 | PRIMARY_TEXT；不等于同额拨款已结算 |
+| R5SRC03 | [Hansard1947-03-14](https://api.parliament.uk/historic-hansard/commons/1947/mar/14/assistance-to-greece) | 英方政策备选与议会表述 | PRIMARY_TEXT；决策边际债息未识别 |
+| R5SRC04 | [FRUS1956 d516](https://history.state.gov/historicaldocuments/frus1955-57v16/d516) · [d519](https://history.state.gov/historicaldocuments/frus1955-57v16/d519) · [d525](https://history.state.gov/historicaldocuments/frus1955-57v16/d525) | 苏伊士11月停火、金融通话争议 | PRIMARY_TEXT / 时间戳冲突；即时IMF通牒NOT_IDENTIFIED |
+| R5SRC05 | [英国CAB195/15官方转录](https://cdn.nationalarchives.gov.uk/documents/cab-195-15-transcript.pdf) | 内阁笔记1956-11-06/07印刷p.174–175 | TRANSCRIPT_VERIFIED；非原手稿影像 |
+| R5SRC06 | [IMF基金官方历史](https://www.elibrary.imf.org/display/book/9781451955255/ch016.xml) · [Boughton研究](https://www.elibrary.imf.org/abstract/journals/001/2000/192/article-A001-en.xml) | 12月IMF已提款/未提款备用融资 | OFFICIAL_LATER / RESEARCH_FULL；不是11/6当日IMF收发件 |
+| R5SRC07 | [Hansard1968-01-16](https://api.parliament.uk/historic-hansard/commons/1968/jan/16/public-expenditure) · [FRUS1967 d269](https://history.state.gov/historicaldocuments/frus1964-68v12/d269) | 东苏伊士撤退加速与国际收支制约 | PRIMARY_TEXT；预算方案/实支需桥接 |
+| R5SRC08 | [澳DFAT1966内阁记录](https://www.dfat.gov.au/about-us/publications/historical-documents/volume-27/Pages/059-minute-of-cabinet-defence-and-oversea-policy-committee) · [FRUS1968 d150](https://history.state.gov/historicaldocuments/frus1964-68v21/d150) · [FPDA](https://www.fivepowerdefencearrangements.org/history) | 地区利益、美国非普遍接手、1971联防制度 | 公开原文/官方后期历史混合；按具体条约校核 |
+| R5SRC09 | [BoE1950原始PDF](https://www.bankofengland.co.uk/-/media/boe/files/archive/uk-overseas-investments/1938-1948.pdf) · [BoE1970统计摘要](https://www.bankofengland.co.uk/-/media/boe/files/archive/statistical-abstract/number-1-1970.pdf) | 海外证券/英镑负债分项 | TABLE_TEXT_READ / TABLE_IMAGE_PENDING，原表未逐格核影 |
+| R5SRC10 | [OBR2013战后债务](https://obr.uk/box/post-world-war-ii-debt-reduction/) · [OBR300年财政史](https://obr.uk/docs/dlm_uploads/300-Years-of-public-finances-Accessible-PDF.pdf) | 战后名义债务端点、1815反例 | OFFICIAL_LATER；历史口径不等于各年PSND |
+| R5SRC11 | [NBER/FRED历史工业指数](https://fred.stlouisfed.org/data/A01181GBA324NNBR) · [FRUS1947印度](https://history.state.gov/historicaldocuments/frus1947v03/d91) | 1914前相对/绝对与殖民政治反例 | 史学估计/PRIMARY_TEXT |
+| R5SRC12 | UK CAB128/9、CAB129/128/2、T236/4188–4189、BoE G1/124、US Treasury RG56、IMF当日通讯 | 尚需取得的英国/美国/IMF同日档案 | **CATALOGUE_ONLY / SOURCE_UNAVAILABLE**；档号不是内容证据 |
+
+后续补档任务与验收条件：[OPEN_GAPS.md](OPEN_GAPS.md)。用户若希望比较美国，只能迁移研究变量、不能凭英国历史固定阈值预测美国结局。
+
+---
+
 | 编号 | 来源 | 目前已核实的范围 | 待补问题 |
 |---|---|---|---|
 | UK01 | [英国上议院经济事务委员会，*National debt: it's time for tough decisions*（历史PSND）](https://publications.parliament.uk/pa/ld5901/ldselect/ldeconaf/5/504.htm) | 表述1947年附近PSND峰值，历史图数据：FY1945/46约246.8%，FY1946/47约251.8% | 下载机器可读官方数据、核对最新修订 |
