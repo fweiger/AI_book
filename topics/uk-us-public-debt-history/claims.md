@@ -1,5 +1,28 @@
 # TOPIC-005 候选论点与证据审计
 
+## 2026-11-07 R5 最新裁判映射（优先于下面2026-11-04候选状态）
+
+> **R5_DRAFT_FOR_HUMAN_REVIEW / NOT_INTEGRATED**；来源为[Agent F-R4终审](https://github.com/fweiger/AI_book/issues/20#issuecomment-6691211843)，本段**记录裁判意见**，不表示R5对全部原档独立二次核影。详见 [R5候选知识清单](R5_REVIEW_20261107.md)、[开放缺口](OPEN_GAPS.md)。缺少R1之前单独正式提交的HOST/R0预注册冻结评论，不能追认为事前证据冻结。
+
+| R5 ID | 分级 | 候选限定义主张及必须保留的约束 | F审查依据/下一步 |
+|---|---|---|---|
+| F01 | A / FACT_VERIFIED | OBR同系列历史national debt 1946约£27bn→1976约£64bn，债务率下降≠持续大量还本；不等于PSND | [OBR](https://obr.uk/box/post-world-war-ii-debt-reduction/)；核序列版本 |
+| F02 | A / FACT_VERIFIED | ONS CG NMFX/ANBV 1947 15.06%、1956 12.40%、1968 8.51%，全部当期收入作分母而非纯税收 | [NMFX](https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/nmfx/pusf) · [ANBV](https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/anbv/pusf) |
+| F03 | A / TABLE_IMAGE_PENDING | BoE所覆盖1938–48海外证券**名义资本**£3,545m→£1,960m约-44.71%；不是FDI整体或政府偿债 | [BoE1950](https://www.bankofengland.co.uk/-/media/boe/files/archive/uk-overseas-investments/1938-1948.pdf)，原表图像未逐格核验 |
+| F04 | A / FACT_VERIFIED | 1947英方希土指定援助外币/产能制约及后续美方项目交接；申请/授权/拨款/实付分离 | [FRUS d24](https://history.state.gov/historicaldocuments/frus1947v05/d24)，逐月实付尚缺 |
+| F05 | A / FACT_VERIFIED | 1956-11-06条件停火、11-07 00:00 GMT生效；12-10 IMF实际提款与未提备用分账 | [FRUS d519](https://history.state.gov/historicaldocuments/frus1955-57v16/d519)；不能推导11/6即时禁贷 |
+| F06 | A / FACT_VERIFIED+PROCESS_SUPPORTED | 1967有撤离方向，1968因预算和国际收支约束加速；1971 FPDA非美国接替 | [Hansard1968](https://api.parliament.uk/historic-hansard/commons/1968/jan/16/public-expenditure) |
+| F07 | A / FACT_VERIFIED（限定指标） | NBER英国1880–1913工业物量指数54.2→100；与相对制造业份额下降可并存 | [NBER/FRED](https://fred.stlouisfed.org/data/A01181GBA324NNBR)；Bairoch原表待核 |
+| F08 | A / FACT_VERIFIED（限定事件） | 1947印度政治治理、1956埃及/联合国、1971地区制度均不能简化为美国普遍接手 | [FRUS印度](https://history.state.gov/historicaldocuments/frus1947v03/d91) |
+| P01–P05 | B / PROCESS_SUPPORTED或CAUSAL_PARTIAL | 1947特定援希、1968撤军加速、1956英镑外储压力、战争/产业/政治共同因、分地区责任接续 | 具体限制见[R5详细表](R5_REVIEW_20261107.md)；**不得**宣称总体净因果贡献已识别 |
+| X01–X03 | C / NOT_IDENTIFIED或CONTESTED | 债息为首要独立主因；每£1债息挤出多少海外投入；1956-11-06 IMF禁贷为停火必要触发 | 保持待证，特别见[OPEN_GAPS](OPEN_GAPS.md) |
+| X04 | C / REFUTED（无条件形式） | “全部海外撤出由美国等额接手”不成立 | 地区职能拆分 |
+| X05 | C / REFUTED或NOT_IDENTIFIED | 固定债务率阈值必然导致失霸的无条件命题受反例反驳；美国2026未来路径不可识别 | 不据比率预测霸权 |
+
+**历史候选表纠偏**：下方C015中“国际金融约束是独立主因”属于早期研究命题，**F未识别其对整体霸权的独立净效应/首要性**；仅1947、1968等事件级外币/总体财务限制有较直接过程证据。C005–C007债务率动态归因仍不能冒充本专题已完成的统一定量归因。所有原条目继续保留，以便追溯其形成与纠错。
+
+---
+
 > 这里列研究命题及审核状态；仅经复核且PR合并才转正式结论。先不赋予不可证实主张“已验证”状态。
 
 | 编号 | 主张 | 状态 | 当前证据/局限 |
