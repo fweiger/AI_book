@@ -3,6 +3,7 @@
 ## 2026-11-07 R4后最新执行状态（此段覆盖后文旧轮次快照）
 
 - [x] **R4独立中立裁判**已在[Issue #20提交正式评论 #6691211843](https://github.com/fweiger/AI_book/issues/20#issuecomment-6691211843)，状态 `FINAL_REVIEW_WITH_OPEN_GAPS`。六环逐项审查、22题裁决：**21 PARTIAL / 1 UNRESOLVED（C03）**。
+- [R5追加因果证据审计：债息、英镑与东苏伊士预算选项](R5_CAUSAL_EXTENSION_20261107.md)：OBR历史分解、英国议会支出与经常账户、FRUS1967美方备忘录、英国CAB1966原始会议记录；为研究附录，**不自动升级F-R4裁决**。
 - [x] R5草稿已新增：[R5_REVIEW_20261107.md](R5_REVIEW_20261107.md) · [OPEN_GAPS.md](OPEN_GAPS.md) · [METHODS_LEARNED_R5.md](METHODS_LEARNED_R5.md)。**这是知识结构写入，不是历史事实全量二次复核**。
 - [x] R5候选映射已加入[claims.md](claims.md)、[sources.md](sources.md)、[README.md](README.md)和专题[INDEX](../../INDEX.md)。
 - [ ] **人工审查PR #21并核验关键原始引用**：优先F03 BoE1950印刷表格、F05 IMF融资类别与时间、P03苏伊士当日文件；未核的继续明确`TABLE_IMAGE_PENDING`/`NOT_IDENTIFIED`。
