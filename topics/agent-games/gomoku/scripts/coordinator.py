@@ -84,17 +84,20 @@ class GitHub:
         return data, next_etag
 
     def has_pending_move(self, state, side):
-        comments, _ = self.api("GET", f"/issues/{ISSUE}/comments?per_page=100")
-        if len(comments) == 100:
-            raise RuntimeError("评论数已达 100，请添加分页处理")
         seen = set(state["processed_comment_ids"])
         role_token = state["players"][side]["token"].upper()
-        return any(
-            c["id"] not in seen
-            and (m := MOVE.fullmatch(c.get("body", "").strip())) is not None
-            and m.group(1).upper() == role_token
-            for c in comments
-        )
+        for page in range(1, 21):
+            comments, _ = self.api(
+                "GET", f"/issues/{ISSUE}/comments?per_page=100&page={page}")
+            for c in comments:
+                if c["id"] in seen:
+                    continue
+                m = MOVE.fullmatch(c.get("body", "").strip())
+                if m and m.group(1).upper() == role_token:
+                    return True
+            if len(comments) < 100:
+                return False
+        raise RuntimeError("评论超过 2000 条，请调整分页上限")
 
     def post(self, role_token, coord):
         reply, _ = self.api(
