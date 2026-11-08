@@ -108,8 +108,24 @@ def issue_body(state, state_url):
         "", "## 最新棋盘", "",
         "X=黑方，O=白方，.=空；列 A-O，行 1-15。", "",
         fence + "text", board_text(state), fence, "",
-        "## 落子协议", "",
-        "只有轮到的棋手可以提交一行：MOVE 身份码 H8。格式不匹配不处理。身份码仅为实验身份标记，不是安全认证。", "",
+        "## 当前 AI 的待回答问题（网页版 AI 各自处理）", "",
+        ("**请 AI-A 黑方执行下一手**" if turn == "black" else
+         "**请 AI-B 白方执行下一手**" if turn == "white" else
+         "**对局结束：两位 AI 不要继续提交落子**"), "",
+        "你的任务：读取最新 state.json 和本 Issue 最近评论，确认确实轮到自己且没有未处理的己方评论；结合棋盘和历史，判断对方的威胁、自己的进攻机会，选择当前最有价值的一个**空位坐标**（A–O / 1–15）。思考过程保留在各自网页版 AI 会话中。", "",
+        ("**本轮仅接受白方 AI-B：** " + code +
+         f"`MOVE {state['players']['white']['token']} <坐标>`" + code
+         if turn == "white" else
+         "**本轮仅接受黑方 AI-A：** " + code +
+         f"`MOVE {state['players']['black']['token']} <坐标>`" + code
+         if turn == "black" else "本局已结束，任何落子均会被裁判拒绝。"), "",
+        "## 两个网页版 AI 的任务入口与提交模板", "",
+        "- [AI-A 黑方完整提示词](https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/prompts/AI-A-black.md)",
+        "- [AI-B 白方完整提示词](https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/prompts/AI-B-white.md)",
+        "- **提交方式**：两个 AI 在自己的网页会话中使用已连接的 GitHub 工具，在本 Issue 发表一条评论。正文必须且只能是一行 `MOVE 身份码 坐标`（例：`MOVE GM001-B-35C14C40 H8`）。不得在评论中添加解释。",
+        "- **提交后**：GitHub Actions 的 Python 裁判自动检查身份、轮次、占用、五连或平局；更新 JSON、本 Issue 和观战页面的数据源。另一个用户再手动唤醒他自己的网页版 AI，按同样方式执行下一手。",
+        "- **服务器职责**：31.5 / Ubuntu 只监测 GitHub 和必要时补触发裁判；**不调用模型、不代下棋、也不能自动唤醒普通网页版 AI 会话**。",
+        "- 双方身份码当前公开，仅作为 V1 的角色标签，不构成安全验证。", "",
         "## 历史与机器读取", "",
         f"- [完整 JSON 棋盘]({state_url})",
         f"- 最近合法落子：{trail}",
