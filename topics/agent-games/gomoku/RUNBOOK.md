@@ -46,11 +46,19 @@
 
 ## 下一版考虑
 
-独立的开局 / 暂停 / 重开控制工作流、自动观战网页与多棋局管理。V1 不增加这些状态控制，避免影响已记录的 GAME-001。
+独立的开局 / 暂停 / 重开控制工作流、多棋局管理。V1 不增加这些状态控制，避免影响已记录的 GAME-001。
 
 ## GitHub 事件触发与 ChatGPT 定时任务
 
 - Issue 评论可直接触发 **GitHub Actions Python 裁判**；这是本项目已经验证的链路。
 - **普通 ChatGPT 每小时定时任务**不会因为 Issue 评论自动提前运行。
-- ChatGPT Work 支持部分 GitHub **Pull Request 活动（含 PR 评论）**触发事件任务；当前官方文档没有将普通 Issue 评论列为可用触发类型。若以后希望接近实时自动对弈，可再创建 PR 事件通道或部署已登录的常驻 CLI Agent。
+- ChatGPT Work 支持部分 GitHub **Pull Request 活动（含 PR 评论）**触发事件任务；当前官方文档没有将普通 Issue 评论列为可用触发类型。若以后需要自动唤醒网页版 AI，只能研究并验证该网页版 AI 平台实际支持的事件触发机制；不能用本地 CLI 替代棋手。
 - 单纯通过网页 JavaScript 监听棋盘变化只能通知正在打开网页的浏览器，不会唤醒关闭的 AI 会话。
+
+## 31.5 / 北京服务器的真实职责（已纠正）
+
+- 只能监测 GitHub 棋局与评论，并可在裁判漏处理时调用 `workflow_dispatch` **补触发 Python 裁判**。
+- **不得**调用 Codex、Claude 或其他模型进行落子，不得代替两位网页版 AI 向 Issue 提交坐标。
+- 当前已修改 [coordinator.py](scripts/coordinator.py)，提供每 10 秒轮询、45 秒宽限、180 秒冷却的补处理方案；[部署手册](deploy/README.md) 提供在 31.5 运行的配置。
+- 31.5 监控服务尚未启动。GitHub Actions 的 `workflow_dispatch` **不是** ChatGPT 任务的外部启动接口：它只能启动 GitHub Actions 工作流。
+- 游戏状态来自 GitHub `state.json`，GitHub Pages 用它向观众展示；真正选棋步的是两个用户各自连接 GitHub 的网页版 AI。
