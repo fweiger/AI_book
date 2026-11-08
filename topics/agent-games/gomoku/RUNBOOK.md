@@ -3,11 +3,13 @@
 ## 当前实情（2026-11-08 验证）
 
 - **GAME-001 已结束**：`status=finished`、`winner=white`、30 手，详情见 [验收记录](results/GAME-001-ACCEPTANCE.md)。棋局不能继续提交 MOVE。
-- 目前 [active.json](games/active.json) 中 `active_game=null`，表示无已启动的新对局。
-- 新版固定提示词文档已落地，但**GAME-002、裁判多棋局路由、活动棋局自动切换仍未开发**。本页不能当作已开新棋局的证明。
+- **GAME-002 已从空棋盘激活**：[Issue #25](https://github.com/fweiger/AI_book/issues/25) · [权威棋盘](games/GAME-002/state.json) · [活动注册表](games/active.json)。初始化时 `version=0`、无落子、`turn=black`，由黑方 AI-A 首先行动。
+- 固定提示词、活动对局路由和终局清空注册表已实现并通过 **16 项回归/模拟测试**；**还需通过真实 GAME-002 网页版 AI 从零盘对弈验证**。当前一次只支持一局活动对局，不能同时比赛。
 - GAME-001 的 [Issue #24](https://github.com/fweiger/AI_book/issues/24) 和 [权威状态](games/GAME-001/state.json) 永久作为本次实验历史。不要重置。
 
 ## 双方网页版 AI 的统一操作
+
+**当前 GAME-002 第一手：**让黑方网页版 AI-A 读取 [固定黑方模板](prompts/AI-A-black.md)，执行一轮；裁判接受后才唤醒白方网页版 AI-B。后续不需要填写第几手或最新坐标。
 
 在两个**用户分别操作的独立网页版 AI 会话**中，一次粘贴各自的固定提示词，之后每次要走棋只需说“按固定提示词执行一轮”：
 
@@ -26,7 +28,7 @@
 
 **固定提示词不需要随每一手编辑**。需要改变的仅是下一局启动时的对局注册表和裁判配置；对局中的步数、位置、轮次和身份码均为 GitHub 动态数据。
 
-## 下一局创建步骤（当前属于 V2 未完成）
+## 新对局创建步骤（GAME-002 已完成，后续 GAME-003 沿用）
 
 在实际使用固定提示词玩下一局之前，必须先实现并通过测试：
 
@@ -36,18 +38,19 @@
 - 用户验证 Issue 与棋盘无误后，才分别启动两位网页版 AI。
 - 结束后裁判写入 `finished` 并由生命周期控制完成结果归档、注册表清空，确保不再对已结束棋局提交。
 
-上述是需求和交付检查清单，**不是声称已经实现新对局自动创建**。详见 [V2-REQUIREMENTS.md](V2-REQUIREMENTS.md)。
+GAME-002 已完成独立 Issue、空棋盘、不同身份码与活动注册表绑定；裁判多局路由模拟测试通过。但尚无通用**自动开局器**，未来仍须按上述顺序安全创建新局。详见 [V2-REQUIREMENTS.md](V2-REQUIREMENTS.md)。
 
 ## 观战
 
 - [GAME-001 历史 Issue](https://github.com/fweiger/AI_book/issues/24)：文字棋盘、棋谱、评论和裁判记录。
 - [网页观战源码](../../../docs/gomoku/index.html) 与 [Pages 工作流](../../../.github/workflows/ai-book-gomoku-pages.yml)：网站是否已发布必须从 Pages 部署状态核实；静态页面不是 AI 唤醒器。
-- [GAME-001 当时使用的原始黑白提示词](prompts/archive/) 单独归档，可以核实历史操作，不应当作为下一局模板。
+- [GAME-001 当时使用的原始黑白提示词](prompts/archive/) 单独归档；[30 手逐手复盘及提交统计](results/GAME-001-MOVE-QUALITY-REVIEW.md) 已完成。
+- GAME-002 在其独立 Issue 中显示当前棋盘、最新落子编号、下一手角色；不会覆盖 GAME-001 历史。
 
 ## 裁判与监测的区别
 
 - GitHub Issue 的 `issue_comment.created` 事件直接启动 **GitHub Actions Python 裁判**，扫描评论、校验落子、更新状态；已有每 15 分钟兜底扫描。
-- 手动 [Run workflow](https://github.com/fweiger/AI_book/actions/workflows/ai-book-gomoku-referee.yml) 只能运行裁判，不能启动 AI 或创造棋步。现有裁判仍绑定 GAME-001。
+- 手动 [Run workflow](https://github.com/fweiger/AI_book/actions/workflows/ai-book-gomoku-referee.yml) 只能运行裁判，不能启动 AI 或创造棋步。现有裁判按活动注册表分发，目前指向 GAME-002。
 - Ubuntu 临时监测可只读检查 GitHub、必要时在授权范围内补触发裁判；不得调用模型或代替网页 AI 落子。**不启用 systemd 常驻服务**；既有临时 Job 已结束。
 - GitHub / Actions / Pages 无法凭空唤醒普通网页版 ChatGPT 会话；若将来要求事件自动交接，必须研究实际受支持的产品触发方式并单独验收。
 - 黑方此前存在每小时定时棋手任务的历史配置；如果将来从空棋盘重开，应核实该任务当前是否启用，避免与两个网页 AI 手动测试产生重复动作。本文不擅自修改任何定时任务。
