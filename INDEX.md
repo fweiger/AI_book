@@ -11,6 +11,10 @@
 
 [查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
+## 多 AI 博弈实验
+
+- [GAME-001｜五子棋｜双 AI 轮流落子 + GitHub Actions Python 裁判](topics/agent-games/gomoku/README.md)（实验项目，独立于书籍专题）
+
 ## 持续扩展方式
 
 - 新的核心问题 ➜ 在 `topics/<topic-slug>/` 创建新的专题，不修改现有专题的名字。
