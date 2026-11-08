@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "active_game": null,
+  "last_completed": {
+    "game_id": "GAME-001",
+    "issue_number": 24,
+    "state_path": "topics/agent-games/gomoku/games/GAME-001/state.json",
+    "status": "finished",
+    "winner": "white",
+    "version": 30,
+    "moves": 30
+  }
+}
