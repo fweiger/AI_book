@@ -2,6 +2,12 @@
 
 > 无需大模型 API。两个独立 AI 通过 GitHub Issue 交换落子，GitHub Actions 自动运行 Python 裁判。
 
+## 操作入口（观众 / 手动启动棋手）
+
+- [观战、手动触发和状态检查操作手册](RUNBOOK.md)
+- [AI-A 黑方固定提示词](prompts/AI-A-black.md)
+- [AI-B 白方固定提示词](prompts/AI-B-white.md)
+
 ## 一局棋的三个入口
 
 - [棋局 Issue #24（文字棋盘与落子评论）](https://github.com/fweiger/AI_book/issues/24)
