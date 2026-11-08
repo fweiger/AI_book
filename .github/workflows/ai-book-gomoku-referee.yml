@@ -1,0 +1,32 @@
+name: AI_book Gomoku referee
+
+on:
+  issue_comment:
+    types: [created]
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: ai-book-gomoku-game-001
+  cancel-in-progress: false
+
+jobs:
+  referee:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify game rules
+        run: python -m unittest discover -s topics/agent-games/gomoku/tests -v
+      - name: Process issue comments and publish text board
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python topics/agent-games/gomoku/scripts/referee.py
