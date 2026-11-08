@@ -29,7 +29,7 @@ class FakeAPI:
                 },
                 "last_completed": {"game_id": "GAME-001"},
             },
-            self.state_path: game or new_game("GAME-002", 99, "B2", "W2"),
+            self.state_path: game or new_game("GAME-002", 99, "BLACK-2", "WHITE-2"),
         }
         self.comment_entries = comment_entries or []
         self.writes = []
@@ -82,14 +82,14 @@ class RefereeV2Tests(unittest.TestCase):
 
     def test_issue_24_cannot_trigger_game_002(self):
         a = FakeAPI(comment_entries=[
-            {"id": 2001, "body": "MOVE B2 H8", "user": {"login": "tester"}}])
+            {"id": 2001, "body": "MOVE BLACK-2 H8", "user": {"login": "tester"}}])
         a.run(event_number=24)
         self.assertEqual(a.writes, [])
         self.assertEqual(a.issue_updates, [])
 
     def test_active_game_002_accepts_its_own_move(self):
         a = FakeAPI(comment_entries=[
-            {"id": 2002, "body": "MOVE B2 H8", "user": {"login": "tester"}}])
+            {"id": 2002, "body": "MOVE BLACK-2 H8", "user": {"login": "tester"}}])
         a.run(event_number=99)
         s = a.files[a.state_path]
         self.assertEqual(s["version"], 1)
@@ -100,7 +100,7 @@ class RefereeV2Tests(unittest.TestCase):
         self.assertIn("GAME-002", a.issue_updates[0])
 
     def test_wrong_id_binding_fails_before_any_writes(self):
-        a = FakeAPI(game=new_game("GAME-002", 24, "B2", "W2"))
+        a = FakeAPI(game=new_game("GAME-002", 24, "BLACK-2", "WHITE-2"))
         with self.assertRaisesRegex(RuntimeError, "不一致"):
             a.run(event_number=99)
         self.assertEqual(a.writes, [])
@@ -116,12 +116,12 @@ class RefereeV2Tests(unittest.TestCase):
             })
 
     def test_finished_game_clears_registry_after_final_issue(self):
-        state = new_game("GAME-002", 99, "B2", "W2")
+        state = new_game("GAME-002", 99, "BLACK-2", "WHITE-2")
         for i in range(4):
-            state = submit(state, 400 + 2*i, f"MOVE B2 {chr(65+i)}1")
-            state = submit(state, 401 + 2*i, f"MOVE W2 {chr(65+i)}2")
+            state = submit(state, 400 + 2*i, f"MOVE BLACK-2 {chr(65+i)}1")
+            state = submit(state, 401 + 2*i, f"MOVE WHITE-2 {chr(65+i)}2")
         a = FakeAPI(game=state, comment_entries=[
-            {"id": 420, "body": "MOVE B2 E1", "user": {"login": "tester"}}])
+            {"id": 420, "body": "MOVE BLACK-2 E1", "user": {"login": "tester"}}])
         a.run(event_number=99)
         self.assertEqual(a.files[a.state_path]["winner"], "black")
         self.assertIsNone(a.files[a.active_path]["active_game"])
