@@ -6,8 +6,8 @@
 
 - **GAME-001 V1：已完成，白方 AI-B 获胜。** 30 手有效落子，最后一手 `J13`，五连 `F9 → G10 → H11 → I12 → J13`。第 1–3 手是系统联调测试落子，不能计入纯网页版 AI 从零对局的统计。
 - [对局 Issue #24](https://github.com/fweiger/AI_book/issues/24) · [最终 state.json](games/GAME-001/state.json) · [结果与验收记录](results/GAME-001-ACCEPTANCE.md)。
-- **没有正在进行的正式新对局**：`games/active.json.active_game = null`；不应再向 GAME-001 发送落子。
-- **V2 进行中**：固定角色提示词和注册表已经建立；新的多棋局裁判路由、开局器及终局自动归档**尚未实现**，不能仅修改活动游戏 ID 就直接玩 GAME-002。
+- **GAME-002 已正式从空棋盘启动**：独立 [Issue #25](https://github.com/fweiger/AI_book/issues/25)，`version=0`、`moves=[]`、`turn=black`；由黑方网页版 AI 自行走第一手。GAME-001 仍为历史封存。
+- **V2 基础路径已实现**：固定角色提示词、活动注册表、裁判按当前活动对局的 Issue/状态文件路由、终局自动清空注册表，已通过隔离测试。单次活动对局的 GAME-002 已创建；从零盘开始的真实网页版 AI 端到端对弈尚待验证。
 
 ## 两个网页版 AI 的长期固定提示词
 
@@ -21,7 +21,7 @@
 
 **运行流程**：当前用户唤醒自己对应的网页版 AI → 读取 `active.json` → 读取对应 `state.json` 和 Issue 评论 → 检查回合、版本、历史及未处理评论 → 自主选空位 → 在指定 Issue 只提交一行 `MOVE <身份码> <坐标>` → Python 裁判接受或拒绝 → 用户唤醒下一位网页版 AI。
 
-目前尚无新的活动棋局，两个角色提示词会按其规范安全退出，而不是在已经结束的 GAME-001 上落子。
+当前注册表指向 GAME-002，轮到黑方 AI-A；两个角色提示词自动从 GitHub 获取最新状态，无须再次修改。若对局结束或注册表为空，双方按提示词安全退出。
 
 ## 棋谱与裁判：V1 已实现
 
@@ -30,7 +30,7 @@
 - 最新一步为 `moves[-1]`；下一手是 `len(moves)+1`，不应硬编码到提示词。
 - AI 不编辑棋盘；只通过 GitHub Issue 评论提交 `MOVE 身份码 坐标`，目前裁判只接受此格式。
 - `issue_comment.created` 触发 GitHub Actions/Python 裁判；按评论 ID 顺序幂等处理，检查轮次、身份码、空位和终局，更新 JSON 和 Issue。
-- 裁判现阶段仍按 GAME-001 的 Issue 绑定运行，下一盘需要独立实现多棋局路由及生命周期管理。
+- 裁判现在按 `games/active.json` 路由到活动游戏的独立 Issue/JSON；GAME-001 不再自动执行；目前设计是**一次仅一局活动对局**。
 
 [裁判工作流](../../../.github/workflows/ai-book-gomoku-referee.yml) · [裁判程序](scripts/referee.py) · [棋盘规则](scripts/game.py)
 
@@ -43,12 +43,12 @@
 ## 历史资料与测试
 
 - [GAME-001 黑方原始提示词](prompts/archive/GAME-001-A-black.md) · [GAME-001 白方原始提示词](prompts/archive/GAME-001-B-white.md)
-- [完整 V1 对局结果](results/GAME-001-ACCEPTANCE.md)
+- [完整 V1 对局结果](results/GAME-001-ACCEPTANCE.md) · [GAME-001 逐手棋力复盘与 31 条提交审计](results/GAME-001-MOVE-QUALITY-REVIEW.md)
 - 本地验证：`python3 -m unittest discover -s topics/agent-games/gomoku/tests -v`
 
 ## 下一步（V2）
 
-1. 新建 GAME-002 独立 Issue、独立棋盘与玩家身份码。
-2. 先扩展并测试裁判按 `game_id + issue_number` 正确分发，确保不能串局，再将 `active.json` 指向下一盘。
-3. 用两份不变的固定提示词，分别启动两个网页版 AI，从空棋盘独立对弈并进行端到端验收。
-4. 对局结束后锁定历史，并清空 `active_game`。网页版 AI 由用户手动唤醒，外部事件自动唤醒仍属待验证方向。
+1. ~~创建 GAME-002 独立 Issue/空棋盘/身份码、配置裁判路由及注册表~~：已完成并经模拟测试（16 项）。
+2. 使用两份**不变的网页版 AI 提示词**：先由黑方 AI-A 从空棋盘执行第一手，再轮流由白方 AI-B 执行。
+3. 每一手由 GitHub Actions 自动裁判，确认棋局版本及轮次；直至终局验证自动将 `active_game` 置空。
+4. 下一盘应先核验历史不可变、双方来源与新局配置信息。事件自动唤醒网页版 AI 仍未验证，不应以 CLI 替代。
