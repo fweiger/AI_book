@@ -13,16 +13,18 @@
 - [GitHub Pages 观战源码](../../../docs/gomoku/index.html)（自动读取最新 `state.json`、30 秒刷新、支持逐手回放）
 - [Pages 发布工作流](../../../.github/workflows/ai-book-gomoku-pages.yml)
 - 预计访问路径：`https://fweiger.github.io/AI_book/gomoku/`；**需先在仓库 Settings → Pages 中将 Source 设为 GitHub Actions，发布成功后才可访问。**
-- 此网页不是 AI 任务触发器。AI 直接读取 GitHub JSON，GitHub Issue 评论触发 Python 裁判；若要立即唤醒 ChatGPT，则需使用支持的事件触发方式（目前 GitHub 主要支持 PR 活动）或外部常驻 Agent。
+- 此网页不是 AI 任务触发器。AI 直接读取 GitHub JSON，GitHub Issue 评论触发 Python 裁判；若要自动唤醒网页版 AI，必须先确认该 AI 平台支持的事件任务入口；31.5 监测服务不能替代它。
 
-## 31.5 外部协调器（部署/只读联调已完成，未自动启动）
+## 31.5 或北京服务器：纯 GitHub 监测与裁判补触发
 
-- [外部协调器 Python：10 秒轮询 GitHub + Codex CLI 决策](scripts/coordinator.py)
-- [31.5 部署手册与 GitHub 凭证配置](deploy/README.md)
-- [systemd 用户服务模板](deploy/ai-book-gomoku-coordinator.service)
-- 已在 31.5 验证 Python 3.12、GitHub API 连通、Codex CLI 已登录；真实 GAME-001 v3 白方候选 H7 返回成功，但**未提交棋步**。
-- systemd 单元已安装但状态为 `disabled / inactive`。未配置 GitHub 写入凭证，且原 ChatGPT 黑方定时任务尚有效；**不能宣称全自动闭环已经运行**。
-- GitHub Actions 原有 `issue_comment.created` 已自动执行裁判，协调器的 `workflow_dispatch` 仅作为超时补偿，不能启动普通 ChatGPT 定时任务。
+**两个棋手是两个不同用户分别操作的网页版 AI**，自行连接 GitHub、读取棋盘、思考并提交 Issue 坐标。服务器不运行任何模型、不生成坐标、不替棋手评论。
+
+- [只读 GitHub 监测与可选补触发程序](scripts/coordinator.py)
+- [部署手册](deploy/README.md) · [systemd 服务模板](deploy/ai-book-gomoku-coordinator.service)
+- 监测逻辑：每 10 秒检查 GitHub；若发现格式正确但尚未被裁判处理的落子评论，经过 45 秒容错期后使用 `workflow_dispatch` 补触发裁判，同一批评论至少间隔 180 秒重试。
+- 本身已有 GitHub `issue_comment.created` 自动裁判，10 秒监测只是可选的恢复机制；**手动/外部触发裁判不等于唤醒网页版 AI**。
+- GitHub Pages 展示棋局；现阶段两个网页版 AI 可以各自手动执行一轮。网页版 AI 的外部事件唤醒能力需要单独验证。
+- 31.5 已安装但**未启用**服务文件；没有 GitHub 监测专用的写入凭证，未启动常驻进程。
 
 ## 一局棋的三个入口
 
@@ -55,7 +57,7 @@
 ## 两类定时任务的区别
 
 - **GitHub Actions 裁判**：评论立即触发 + 每 15 分钟补偿扫描，**不调用大模型**。
-- **两个棋手 Agent**：各自由 ChatGPT 定时任务或持续运行的 CLI 定时唤醒，读取 JSON 后只决定一手。ChatGPT 定时任务最多每小时一次，因此全局推进速度不保证是分钟级。
+- **两个网页版 AI**：两个用户各自控制自己的网页版 AI，通过已连接的 GitHub 工具读取和提交棋步；可以手动执行一轮，或使用各自平台支持的任务唤醒机制。普通 ChatGPT 定时任务不会被 GitHub Actions 的 `workflow_dispatch` 直接唤醒。
 
 ## 测试
 
