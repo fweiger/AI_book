@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101a25">
 <meta name="description" content="AI_book · 双 AI 五子棋对弈观战室：跟随 GitHub 棋局状态实时更新。">
-<title>GAME-001 · AI_book 五子棋观战室</title>
+<title>AI_book 五子棋观战室</title>
 <style>
 :root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#ebedf3;background:#0d1520;font-synthesis:none}
 *{box-sizing:border-box}
@@ -60,7 +60,7 @@ canvas{display:block;width:100%;aspect-ratio:1/1;height:auto}
 </head>
 <body>
 <header class="header">
-  <div><div class="eyebrow">AI_BOOK / AGENT GAMES</div><h1>五子棋 · AI 对弈观战室</h1><p class="subtitle">GAME-001 · 双独立 AI · GitHub Actions 裁判 · 15 × 15 自由规则</p></div>
+  <div><div class="eyebrow">AI_BOOK / AGENT GAMES</div><h1>五子棋 · AI 对弈观战室</h1><p class="subtitle" id="game-subtitle">同步当前活动棋局 · 双独立网页版 AI · 15 × 15</p></div>
   <span class="live"><span class="dot"></span><span id="connection">连接棋局中</span></span>
 </header>
 <main class="container">
@@ -92,8 +92,8 @@ canvas{display:block;width:100%;aspect-ratio:1/1;height:auto}
     <section class="panel hint">
       <strong style="color:#e4efef">人类看网页，AI 读取 JSON</strong><br>
       棋盘由 GitHub 仓库的权威状态绘制，约每 30 秒检查变化。网页只负责观战；两个棋手由各自的 Agent 任务接管落子。
-      <div style="margin-top:9px"><a href="https://github.com/fweiger/AI_book/issues/24" target="_blank" rel="noopener">查看棋局 Issue 与原始评论 ↗</a></div>
-      <div><a href="https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/games/GAME-001/state.json" target="_blank" rel="noopener">查看机器可读棋盘 JSON ↗</a></div>
+      <div style="margin-top:9px"><a id="issue-link" href="https://github.com/fweiger/AI_book/issues/25" target="_blank" rel="noopener">查看棋局 Issue 与原始评论 ↗</a></div>
+      <div><a id="json-link" href="https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/games/GAME-002/state.json" target="_blank" rel="noopener">查看机器可读棋盘 JSON ↗</a></div>
     </section>
   </aside>
  </div>
@@ -101,10 +101,14 @@ canvas{display:block;width:100%;aspect-ratio:1/1;height:auto}
 <footer class="footer"><span>AI_book · 无需模型 API · X 黑棋 / O 白棋 / 无禁手 · 五连及以上获胜</span><span>观战界面自动轮询，不代替 GitHub 自动裁判。</span></footer>
 <script>
 "use strict";
-const RAW="https://raw.githubusercontent.com/fweiger/AI_book/main/topics/agent-games/gomoku/games/GAME-001/state.json";
+const BASE="https://raw.githubusercontent.com/fweiger/AI_book/main/";
+const GAME_ROOT="topics/agent-games/gomoku/games/";
+const requestGame=new URLSearchParams(window.location.search).get("game");
+const selectedHistory=requestGame&&/^GAME-[0-9]{3,}$/.test(requestGame)?requestGame:null;
+if(requestGame&&!selectedHistory)throw new Error("无效的 game 查询参数");
 const SIZE=15,COLS="ABCDEFGHIJKLMNO";
 const el=id=>document.getElementById(id);
-let state=null,showAt=null,fetching=false,lastVersion=null;
+let state=null,showAt=null,fetching=false,lastVersion=null,lastGameId=null;
 const board=el("board"),ctx=board.getContext("2d");
 function replayCount(){return state?(showAt===null?state.moves.length:Math.max(0,Math.min(showAt,state.moves.length))):0;}
 function boardAt(n){const grid=Array.from({length:SIZE},()=>Array(SIZE).fill(0));if(!state)return grid;for(const m of state.moves.slice(0,n)){const c=COLS.indexOf(m.coord[0]),r=Number(m.coord.slice(1))-1;if(c>=0&&r>=0&&r<SIZE)grid[r][c]=m.side==="black"?1:2;}return grid;}
@@ -160,18 +164,41 @@ function renderState(){
  paint();renderHistory();
 }
 function setReplay(n){showAt=n;paint();renderHistory();}
-function isValid(d){return d&&d.game_id==="GAME-001"&&Array.isArray(d.moves)&&Array.isArray(d.board)&&d.board.length===SIZE&&typeof d.version==="number";}
+function isValid(d,expected){
+  return d&&d.game_id===expected&&Number.isInteger(d.issue_number)&&d.issue_number>0
+    &&Array.isArray(d.moves)&&Array.isArray(d.board)&&d.board.length===SIZE
+    &&d.board.every(row=>Array.isArray(row)&&row.length===SIZE)
+    &&typeof d.version==="number";
+}
+async function readJson(url){
+  const response=await fetch(url+"?at="+Date.now(),{cache:"no-store",headers:{"Accept":"application/json"}});
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  return response.json();
+}
+async function targetGame(){
+  if(selectedHistory)return {game_id:selectedHistory,state_path:GAME_ROOT+selectedHistory+"/state.json"};
+  const active=await readJson(BASE+GAME_ROOT+"active.json");
+  if(active.schema_version!==1)throw new Error("活动对局注册表格式错误");
+  const target=active.active_game||active.last_completed;
+  if(!target||!/^GAME-[0-9]{3,}$/.test(target.game_id)
+    ||target.state_path!==GAME_ROOT+target.game_id+"/state.json")throw new Error("找不到可显示的棋局");
+  return target;
+}
 async function sync(){
  if(fetching)return;
  fetching=true;
  try{
-  const url=RAW+"?at="+Date.now();
-  const response=await fetch(url,{cache:"no-store",headers:{"Accept":"application/json"}});
-  if(!response.ok)throw new Error("HTTP "+response.status);
-  const data=await response.json();
-  if(!isValid(data))throw new Error("棋局格式无效");
-  const changed=lastVersion!==data.version;
-  state=data;lastVersion=data.version;
+  const target=await targetGame();
+  const data=await readJson(BASE+target.state_path);
+  if(!isValid(data,target.game_id))throw new Error("棋局格式无效或对局 ID 不匹配");
+  const switched=lastGameId!==data.game_id;
+  const changed=switched||lastVersion!==data.version;
+  state=data;lastVersion=data.version;lastGameId=data.game_id;
+  if(switched)showAt=null;
+  document.title=data.game_id+" · AI_book 五子棋观战室";
+  el("game-subtitle").textContent=data.game_id+" · "+(selectedHistory?"历史回放":"当前活动对局")+" · 双独立网页版 AI · 15 × 15";
+  el("issue-link").href="https://github.com/fweiger/AI_book/issues/"+data.issue_number;
+  el("json-link").href="https://github.com/fweiger/AI_book/blob/main/"+target.state_path;
   if(changed)renderState();
   else if(state&&showAt!==null)paint();
   el("connection").textContent=state.status==="finished"?"对局已结束":"数据已同步";
@@ -181,7 +208,7 @@ async function sync(){
   el("connection").textContent="读取失败";
   el("connection").classList.add("error");
   el("sync-time").textContent="同步错误："+e.message+"。可使用“立即读取”重试。";
-  console.error("GAME-001 sync failed",e);
+  console.error("Gomoku viewer sync failed",e);
  }finally{fetching=false;}
 }
 el("first").addEventListener("click",()=>setReplay(0));
