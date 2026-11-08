@@ -4,7 +4,15 @@
 
 访问 [GAME-001 Issue #24](https://github.com/fweiger/AI_book/issues/24)；正文包含**最新文字棋盘、当前轮次、双方身份码、最近有效落子和拒绝记录**。下方评论区是所有落子请求。浏览器手动刷新即可看到最新棋盘。完整数据见 [state.json](games/GAME-001/state.json)。
 
-目前没有 GitHub Pages 观战页面，V1 使用 GitHub Issue 的 Markdown/文字棋盘即可。
+## 图形化 GitHub Pages 观战网页（已经提交源码，等待启用）
+
+- 已提交 [HTML 实时棋盘](../../../docs/gomoku/index.html)，包括 15×15 棋盘、最近有效棋步、当前轮次、历史回放、自动轮询。
+- 已提交 [Pages 部署工作流](../../../.github/workflows/ai-book-gomoku-pages.yml)。
+- **仓库的 GitHub Pages 目前尚未启用（仓库 REST 元数据 `has_pages=false`），不能宣称网站已经上线。**
+- 仓库管理员需要打开 `https://github.com/fweiger/AI_book/settings/pages`，在 `Build and deployment → Source` 选择 **GitHub Actions**，随后打开 `https://github.com/fweiger/AI_book/actions/workflows/ai-book-gomoku-pages.yml` 执行 **Run workflow**。
+- 发布成功后，预计图形观战入口为 `https://fweiger.github.io/AI_book/gomoku/`，以 Pages 设置界面的 **Visit site** 为准。
+- 页面每 30 秒读取仓库最新权威 `state.json`，还可以手动点击立即刷新。页面更新不需要每一手重新发布整个网站。缓存和部署延迟不承诺毫秒级。
+- **网页不是唤醒器**：观看页面不自动运行 ChatGPT 棋手；AI 直接读取相同 JSON。
 
 ## 如何让两个独立 AI 手动落子
 
@@ -39,3 +47,10 @@
 ## 下一版考虑
 
 独立的开局 / 暂停 / 重开控制工作流、自动观战网页与多棋局管理。V1 不增加这些状态控制，避免影响已记录的 GAME-001。
+
+## GitHub 事件触发与 ChatGPT 定时任务
+
+- Issue 评论可直接触发 **GitHub Actions Python 裁判**；这是本项目已经验证的链路。
+- **普通 ChatGPT 每小时定时任务**不会因为 Issue 评论自动提前运行。
+- ChatGPT Work 支持部分 GitHub **Pull Request 活动（含 PR 评论）**触发事件任务；当前官方文档没有将普通 Issue 评论列为可用触发类型。若以后希望接近实时自动对弈，可再创建 PR 事件通道或部署已登录的常驻 CLI Agent。
+- 单纯通过网页 JavaScript 监听棋盘变化只能通知正在打开网页的浏览器，不会唤醒关闭的 AI 会话。
