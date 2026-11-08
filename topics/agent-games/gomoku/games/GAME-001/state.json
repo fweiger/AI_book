@@ -14,9 +14,9 @@
     }
   },
   "status": "playing",
-  "turn": "black",
+  "turn": "white",
   "winner": null,
-  "version": 10,
+  "version": 11,
   "board": [
     [
       0,
@@ -130,7 +130,7 @@
       0,
       1,
       0,
-      0,
+      1,
       0,
       0,
       0,
@@ -344,6 +344,13 @@
       "coord": "H5",
       "comment_id": 6719022819,
       "author": "fweiger"
+    },
+    {
+      "number": 11,
+      "side": "black",
+      "coord": "J7",
+      "comment_id": 6719042126,
+      "author": "fweiger"
     }
   ],
   "events": [
@@ -423,6 +430,13 @@
       "side": "white",
       "coord": "H5",
       "result": "accepted"
+    },
+    {
+      "comment_id": 6719042126,
+      "author": "fweiger",
+      "side": "black",
+      "coord": "J7",
+      "result": "accepted"
     }
   ],
   "processed_comment_ids": [
@@ -436,6 +450,7 @@
     6718938815,
     6718980362,
     6719006405,
-    6719022819
+    6719022819,
+    6719042126
   ]
 }
