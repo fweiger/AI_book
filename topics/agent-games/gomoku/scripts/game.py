@@ -94,14 +94,28 @@ def issue_body(state, state_url):
     status = ("进行中，轮到黑方 AI-A" if turn == "black" else
               "进行中，轮到白方 AI-B" if turn == "white" else
               "已结束，胜方：" + str(state["winner"]))
+    move_count = len(state["moves"])
+    latest = state["moves"][-1] if state["moves"] else None
+    latest_text = (
+        f"第 {latest['number']} 手，"
+        f"{'黑方 AI-A' if latest['side'] == 'black' else '白方 AI-B'} "
+        f"{latest['coord']}" if latest else "尚未落子（空棋盘）"
+    )
+    next_text = (
+        f"第 {move_count + 1} 手，"
+        f"{'黑方 AI-A' if turn == 'black' else '白方 AI-B'}"
+        if turn else "对局已结束，无下一手"
+    )
     trail = ", ".join(f"{m['number']}.{m['side'][0].upper()}:{m['coord']}"
                       for m in state["moves"][-40:]) or "尚无落子"
     rejects = [e for e in state["events"] if e["result"] != "accepted"]
     recent = ", ".join(f"#{e['comment_id']} {e['result']}" for e in rejects[-5:]) or "无"
     return "\n".join([
-        f"# {state['game_id']}｜AI A vs AI B｜文字五子棋 V1",
+        f"# {state['game_id']}｜AI A vs AI B｜文字五子棋",
         "", f"**状态**：{status}",
         f"**版本**：{state['version']}，合法落子：{len(state['moves'])} 手",
+        f"**最新落子**：{latest_text}",
+        f"**下一手**：{next_text}",
         "**规则**：15×15、黑先、无禁手、五连及以上获胜",
         f"**黑方 AI-A 身份码**：{code}{state['players']['black']['token']}{code}",
         f"**白方 AI-B 身份码**：{code}{state['players']['white']['token']}{code}",
@@ -122,7 +136,7 @@ def issue_body(state, state_url):
         "## 两个网页版 AI 的任务入口与提交模板", "",
         "- [AI-A 黑方完整提示词](https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/prompts/AI-A-black.md)",
         "- [AI-B 白方完整提示词](https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/prompts/AI-B-white.md)",
-        "- **提交方式**：两个 AI 在自己的网页会话中使用已连接的 GitHub 工具，在本 Issue 发表一条评论。正文必须且只能是一行 `MOVE 身份码 坐标`（例：`MOVE GM001-B-35C14C40 H8`）。不得在评论中添加解释。",
+        "- **提交方式**：两个 AI 在自己的网页会话中使用已连接的 GitHub 工具，在本 Issue 发表一条评论。正文必须且只能是一行 `MOVE 身份码 坐标`（示例：`MOVE 身份码 H8`，其中身份码必须取自当前棋盘）。不得在评论中添加解释。",
         "- **提交后**：GitHub Actions 的 Python 裁判自动检查身份、轮次、占用、五连或平局；更新 JSON、本 Issue 和观战页面的数据源。另一个用户再手动唤醒他自己的网页版 AI，按同样方式执行下一手。",
         "- **服务器职责**：31.5 / Ubuntu 只监测 GitHub 和必要时补触发裁判；**不调用模型、不代下棋、也不能自动唤醒普通网页版 AI 会话**。",
         "- 双方身份码当前公开，仅作为 V1 的角色标签，不构成安全验证。", "",
