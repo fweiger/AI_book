@@ -13,10 +13,10 @@
       "token": "GM001-W-87E01A58"
     }
   },
-  "status": "playing",
-  "turn": "white",
-  "winner": null,
-  "version": 29,
+  "status": "finished",
+  "turn": null,
+  "winner": "white",
+  "version": 30,
   "board": [
     [
       0,
@@ -232,7 +232,7 @@
       0,
       0,
       0,
-      0,
+      2,
       0,
       0,
       0,
@@ -477,6 +477,13 @@
       "coord": "E8",
       "comment_id": 6719349600,
       "author": "fweiger"
+    },
+    {
+      "number": 30,
+      "side": "white",
+      "coord": "J13",
+      "comment_id": 6719362498,
+      "author": "fweiger"
     }
   ],
   "events": [
@@ -689,6 +696,13 @@
       "side": "black",
       "coord": "E8",
       "result": "accepted"
+    },
+    {
+      "comment_id": 6719362498,
+      "author": "fweiger",
+      "side": "white",
+      "coord": "J13",
+      "result": "accepted"
     }
   ],
   "processed_comment_ids": [
@@ -721,6 +735,7 @@
     6719290261,
     6719309064,
     6719324694,
-    6719349600
+    6719349600,
+    6719362498
   ]
 }
