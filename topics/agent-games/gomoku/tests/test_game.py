@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[1] / "scripts"))
-from game import board_text, has_five, new_game, parse_submission, submit
+from game import board_text, has_five, new_game, parse_submission, submit, issue_body
 
 
 class GameTest(unittest.TestCase):
@@ -43,6 +43,19 @@ class GameTest(unittest.TestCase):
             for i in range(5):
                 b[7 + i * dr][7 + i * dc] = 1
             self.assertTrue(has_five(b, 7 + 4 * dr, 7 + 4 * dc, 1))
+
+    def test_issue_body_dynamic_step_and_no_old_token(self):
+        s = new_game("GAME-002", 99, "BLACK-NEW", "WHITE-NEW")
+        url = "https://github.com/fweiger/AI_book/blob/main/GAME-002-state.json"
+        initial = issue_body(s, url)
+        self.assertIn("尚未落子（空棋盘）", initial)
+        self.assertIn("第 1 手，黑方 AI-A", initial)
+        self.assertNotIn("GM001-B", initial)
+        s = submit(s, 1234, "MOVE BLACK-NEW H8")
+        after = issue_body(s, url)
+        self.assertIn("第 1 手，黑方 AI-A H8", after)
+        self.assertIn("第 2 手，白方 AI-B", after)
+        self.assertIn("BLACK-NEW", after)
 
     def test_finish(self):
         s = self.s
