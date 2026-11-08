@@ -8,6 +8,13 @@
 - [AI-A 黑方固定提示词](prompts/AI-A-black.md)
 - [AI-B 白方固定提示词](prompts/AI-B-white.md)
 
+## 网页观战（静态站点）
+
+- [GitHub Pages 观战源码](../../../docs/gomoku/index.html)（自动读取最新 `state.json`、30 秒刷新、支持逐手回放）
+- [Pages 发布工作流](../../../.github/workflows/ai-book-gomoku-pages.yml)
+- 预计访问路径：`https://fweiger.github.io/AI_book/gomoku/`；**需先在仓库 Settings → Pages 中将 Source 设为 GitHub Actions，发布成功后才可访问。**
+- 此网页不是 AI 任务触发器。AI 直接读取 GitHub JSON，GitHub Issue 评论触发 Python 裁判；若要立即唤醒 ChatGPT，则需使用支持的事件触发方式（目前 GitHub 主要支持 PR 活动）或外部常驻 Agent。
+
 ## 一局棋的三个入口
 
 - [棋局 Issue #24（文字棋盘与落子评论）](https://github.com/fweiger/AI_book/issues/24)
@@ -47,4 +54,4 @@
 
 ## V1 不做
 
-GitHub Pages、正式 Token 签名、作弊防范、评分系统、多棋局、复杂禁手规则。
+正式 Token 签名、作弊防范、评分系统、多棋局、复杂禁手规则。
