@@ -1,59 +1,68 @@
-# 31.5 Ubuntu · GAME-001 协调器部署手册
+# GAME-001｜31.5 GitHub 状态监测与裁判补触发（不替 AI 下棋）
 
-## 已完成的只读验收（2026-11-08）
+## 正式需求与边界
 
-- 31.5 Ubuntu 上 Python 3.12.3、systemd、GitHub HTTPS 联通可用。
-- Codex CLI 0.159.0 已通过 ChatGPT 登录；Python 协调器已从 GitHub 克隆到 `/home/fweiger/ai_book_gomoku_coordinator`。
-- 现有五子棋规则 5 项单元测试全部通过；协调器在真实 GAME-001 v3 棋盘上调用 Codex CLI，白方实际返回候选落点 `H7`，**未发表评论**。
-- 尚未配置 GitHub 写入凭证，因此**没有开启自动落子常驻服务**。
+**两个棋手是两个用户各自操作的网页版 AI**。它们分别连接 GitHub，读取 `state.json`，独立判断棋步，并在 Issue #24 中留言 `MOVE 身份码 坐标`。
 
-## 角色分工
+31.5（或北京服务器）只承担 GitHub 协调辅助功能：检测 GitHub 提交和裁判状态，必要时调用 GitHub `workflow_dispatch` 补触发**现有 Python 裁判**。它**不调用、不启动、不代替任何 AI**；不负责生成坐标、不发布落子评论。
 
-- 两个棋手：由 31.5 使用 Codex CLI 启动两次独立的 `--ephemeral` 调用，分别扮演黑白方；无自建模型 API，但两个角色目前使用同一个已登录 CLI 模型。
-- Python 协调器：每 10 秒检查最新 `state.json` 的版本、轮次与待裁判评论；若轮到某方，启动一次 CLI 判断。
-- GitHub Issue：存放双方的 `MOVE 身份码 坐标`；创建评论即触发 GitHub Actions 裁判。
-- GitHub Actions：维持唯一权威状态；仅当评论超过 45 秒未处理时，协调器才选配一次 `workflow_dispatch` 补救。
-- 人类观众：GitHub Pages 使用同一份 `state.json` 自动更新，无需北京或 31.5 再开 HTTP 服务。
+完整流程：网页版 AI A / B → GitHub Issue 评论 → GitHub Actions Python 裁判 → JSON 棋谱 → GitHub Pages 观众页面。31.5 旁路监测 Issue 评论与 JSON；只有裁判没有及时处理时补触发 Actions。
 
-## 只读测试
+## 已部署与测试背景
 
-```sh
-cd ~/ai_book_gomoku_coordinator
-python3 -m unittest discover -s topics/agent-games/gomoku/tests -v
-python3 topics/agent-games/gomoku/scripts/coordinator.py --model-timeout 90
-```
+- 31.5 为 Ubuntu，Python 3.12.3、systemd 可用，可正常访问 GitHub API。
+- 项目路径：`/home/fweiger/ai_book_gomoku_coordinator`。
+- 之前错误加入的 Codex CLI 生成棋步功能已经**从 `scripts/coordinator.py` 删除**，原 systemd 文件也已修改为只监控 GitHub。
+- `ai-book-gomoku-coordinator.service` 安装但保持 `disabled / inactive`，**没有启动常驻监测，也没有修改 GAME-001 棋谱**。
 
-第二条命令没有 `--play`，只输出候选棋步，不会修改 GitHub。
+## 每 10 秒轮询如何工作
 
-## 写入授权：须由用户在 31.5 本地设置
+1. 请求 GitHub REST API 读取现有 GAME-001 的 `state.json` 和 Issue #24 的评论。
+2. 读取 JSON 中的 `processed_comment_ids`，找出没有被裁判处理、且格式符合 `MOVE 身份码 坐标` 的评论。
+3. 正常情况下评论创建就会触发 GitHub Actions；监控程序等待默认 **45 秒**，避免重复执行。
+4. 超时后才在明确启用 `--dispatch` 的情况下调用 GitHub `workflow_dispatch`，并对相同待处理评论设置至少 **180 秒冷却期**。
+5. 监控进程不会发布任何评论、不会更改 `state.json`、不会写入棋局，也不会触发网页版 AI 的会话。
 
-为 `fweiger/AI_book` 创建一个 Fine-grained GitHub PAT，至少授予 Issues: Read and write；如果需要补触发裁判 Actions，则再授予 Actions: Read and write。建议 Contents: Read-only。不要把 Token 发送到聊天或 GitHub 仓库。
+## 启动前的 GitHub 权限
 
-```sh
+10 秒轮询和 `workflow_dispatch` 需要 31.5 上配置 GitHub Fine-grained PAT，仅选择 `fweiger/AI_book`，建议 Contents（Read-only）、Issues（Read-only）、Actions（Read and write）。**不需要 Issues 写入权限，也不需要任何模型 API Key。**
+
+请在 31.5 本机安全配置，不要在聊天、Issue、仓库或日志中粘贴 Token：
+
+```bash
 install -d -m 700 ~/.config/ai-book-gomoku
 ${EDITOR:-nano} ~/.config/ai-book-gomoku/github-token
 chmod 600 ~/.config/ai-book-gomoku/github-token
 ```
 
-只有私有文件存在、用户明确准备切换全自动模式后，才启用以下服务：
+## 先做只读运行
 
-```sh
+```bash
+cd ~/ai_book_gomoku_coordinator
+python3 -m unittest discover -s topics/agent-games/gomoku/tests -v
+python3 topics/agent-games/gomoku/scripts/coordinator.py
+```
+
+不加 `--dispatch` 或 `--loop` 时，只做一次 GitHub 检查，不修改远程任何数据。
+
+## 10 秒常驻监测
+
+需要在本机凭证准备完成后才使用以下步骤：
+
+```bash
 mkdir -p ~/.config/systemd/user
 cp ~/ai_book_gomoku_coordinator/topics/agent-games/gomoku/deploy/ai-book-gomoku-coordinator.service ~/.config/systemd/user/
 systemctl --user daemon-reload
 systemctl --user enable --now ai-book-gomoku-coordinator.service
-systemctl --user status ai-book-gomoku-coordinator.service
-journalctl --user -u ai-book-gomoku-coordinator.service -n 50 --no-pager
+journalctl --user -u ai-book-gomoku-coordinator.service -f
 ```
 
 停止：`systemctl --user disable --now ai-book-gomoku-coordinator.service`。
 
-**重要**：启用前暂停原有 ChatGPT 黑方每小时任务，以免与新协调器同时为黑方落子。目前黑方任务仍有效，白方 ChatGPT 任务未创建。
+服务没有 GitHub Token 时会拒绝 10 秒轮询，避免匿名 GitHub API 限流。GitHub Actions 自身已经可以自动响应 Issue 评论，因此监控器是**可选的可靠性补偿**，不是必需的棋局执行器。
 
-## 行为与局限
+## 网页版 AI 如何开始下棋？
 
-- Python 仅读取 GitHub 状态；在 `--play` 模式下，会主动用已授权 Token 发送 Issue 评论。CLI 决策使用当前机器的 ChatGPT 登录态。
-- GitHub 官方建议优先使用 Webhook，10 秒轮询需通过认证、条件请求与限流；调用间隔不等于实际 10 秒落一手。
-- 只有正常新评论时裁判已经自动触发；不需要每 10 秒再 `workflow_dispatch` 一次。
-- `workflow_dispatch` 只启动 GitHub Actions，不会唤醒普通 ChatGPT Scheduled Task。
-- 服务目前未启用；Python 是已部署、可只读验收状态。
+两个独立网页版 AI 的固定提示词仍分别位于 `../prompts/AI-A-black.md` 和 `../prompts/AI-B-white.md`。目前可以分别手动让它们运行一轮；若以后要由 GitHub 事件主动唤醒网页版 AI，需要其平台提供被支持的任务/连接器事件入口。
+
+**31.5 调用 `workflow_dispatch` 只能启动 GitHub Actions Python 裁判，不能直接唤醒普通网页版 ChatGPT 会话或其现有每小时任务。** 这是尚未打通的产品能力，不得把监控程序说成完成了双 AI 自动唤醒。
