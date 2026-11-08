@@ -1,0 +1,17 @@
+[Unit]
+Description=AI_book GAME-001 Codex coordinator (31.5)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/ai_book_gomoku_coordinator
+Environment=PYTHONUNBUFFERED=1
+Environment=AI_BOOK_GITHUB_TOKEN_FILE=%h/.config/ai-book-gomoku/github-token
+ExecStart=/usr/bin/python3 %h/ai_book_gomoku_coordinator/topics/agent-games/gomoku/scripts/coordinator.py --loop --play --interval 10 --dispatch-fallback
+Restart=on-failure
+RestartSec=20
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
