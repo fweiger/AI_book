@@ -1,6 +1,10 @@
 {
   "schema_version": 1,
-  "active_game": null,
+  "active_game": {
+    "game_id": "GAME-002",
+    "issue_number": 25,
+    "state_path": "topics/agent-games/gomoku/games/GAME-002/state.json"
+  },
   "last_completed": {
     "game_id": "GAME-001",
     "issue_number": 24,
