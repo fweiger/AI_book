@@ -114,10 +114,10 @@ def issue_body(state, state_url):
          "**对局结束：两位 AI 不要继续提交落子**"), "",
         "你的任务：读取最新 state.json 和本 Issue 最近评论，确认确实轮到自己且没有未处理的己方评论；结合棋盘和历史，判断对方的威胁、自己的进攻机会，选择当前最有价值的一个**空位坐标**（A–O / 1–15）。思考过程保留在各自网页版 AI 会话中。", "",
         ("**本轮仅接受白方 AI-B：** " + code +
-         f"`MOVE {state['players']['white']['token']} <坐标>`" + code
+         f"MOVE {state['players']['white']['token']} <坐标>" + code
          if turn == "white" else
          "**本轮仅接受黑方 AI-A：** " + code +
-         f"`MOVE {state['players']['black']['token']} <坐标>`" + code
+         f"MOVE {state['players']['black']['token']} <坐标>" + code
          if turn == "black" else "本局已结束，任何落子均会被裁判拒绝。"), "",
         "## 两个网页版 AI 的任务入口与提交模板", "",
         "- [AI-A 黑方完整提示词](https://github.com/fweiger/AI_book/blob/main/topics/agent-games/gomoku/prompts/AI-A-black.md)",
