@@ -1,64 +1,60 @@
-# GAME-001｜观众与两位棋手操作手册
+# AI_book 五子棋｜网页版 AI 对弈操作手册（V1 完成 / V2 规划）
 
-## 观众：如何看棋
+## 当前实情（2026-11-08 验证）
 
-访问 [GAME-001 Issue #24](https://github.com/fweiger/AI_book/issues/24)；正文包含**最新文字棋盘、当前轮次、双方身份码、最近有效落子和拒绝记录**。下方评论区是所有落子请求。浏览器手动刷新即可看到最新棋盘。完整数据见 [state.json](games/GAME-001/state.json)。
+- **GAME-001 已结束**：`status=finished`、`winner=white`、30 手，详情见 [验收记录](results/GAME-001-ACCEPTANCE.md)。棋局不能继续提交 MOVE。
+- 目前 [active.json](games/active.json) 中 `active_game=null`，表示无已启动的新对局。
+- 新版固定提示词文档已落地，但**GAME-002、裁判多棋局路由、活动棋局自动切换仍未开发**。本页不能当作已开新棋局的证明。
+- GAME-001 的 [Issue #24](https://github.com/fweiger/AI_book/issues/24) 和 [权威状态](games/GAME-001/state.json) 永久作为本次实验历史。不要重置。
 
-## 图形化 GitHub Pages 观战网页（已经提交源码，等待启用）
+## 双方网页版 AI 的统一操作
 
-- 已提交 [HTML 实时棋盘](../../../docs/gomoku/index.html)，包括 15×15 棋盘、最近有效棋步、当前轮次、历史回放、自动轮询。
-- 已提交 [Pages 部署工作流](../../../.github/workflows/ai-book-gomoku-pages.yml)。
-- **仓库的 GitHub Pages 目前尚未启用（仓库 REST 元数据 `has_pages=false`），不能宣称网站已经上线。**
-- 仓库管理员需要打开 `https://github.com/fweiger/AI_book/settings/pages`，在 `Build and deployment → Source` 选择 **GitHub Actions**，随后打开 `https://github.com/fweiger/AI_book/actions/workflows/ai-book-gomoku-pages.yml` 执行 **Run workflow**。
-- 发布成功后，预计图形观战入口为 `https://fweiger.github.io/AI_book/gomoku/`，以 Pages 设置界面的 **Visit site** 为准。
-- 页面每 30 秒读取仓库最新权威 `state.json`，还可以手动点击立即刷新。页面更新不需要每一手重新发布整个网站。缓存和部署延迟不承诺毫秒级。
-- **网页不是唤醒器**：观看页面不自动运行 ChatGPT 棋手；AI 直接读取相同 JSON。
+在两个**用户分别操作的独立网页版 AI 会话**中，一次粘贴各自的固定提示词，之后每次要走棋只需说“按固定提示词执行一轮”：
 
-## 如何让两个独立 AI 手动落子
+- [黑方 AI-A 的正式固定提示词](prompts/AI-A-black.md)
+- [白方 AI-B 的正式固定提示词](prompts/AI-B-white.md)
 
-分别打开两个独立会话，粘贴固定角色提示词：
+两份文档的角色不同，但读取、验证、提交过程一致：
 
-- [AI-A 黑方提示词](prompts/AI-A-black.md)
-- [AI-B 白方提示词](prompts/AI-B-white.md)
+1. 重新读取 `games/active.json`，确认存在已创建并登记的 `active_game`。
+2. 从注册表读取 `game_id`、`issue_number`、`state_path`，获取权威 JSON 和该 Issue 的评论；**不能使用旧会话的步数或落子位置**。
+3. 检查棋局 `status=playing`，`turn` 等于己方颜色，且己方没有尚未处理的 MOVE 评论。
+4. 从 `moves[-1]` 得到最新一步（`number / side / coord`），从 `len(moves)+1` 得到下一手序号；再分析空位、进攻、防守，**由该网页版 AI 自己决定落点**。
+5. 发评论前重新检查活动游戏、版本、轮次和空位；仅在当前游戏 Issue 发表一条 `MOVE <身份码> <实际坐标>` 评论。身份码来自 JSON 的 `players.black.token` 或 `players.white.token`，不在提示词中写死。
+6. Python 裁判接受评论后，JSON 版本递增、轮次切换；由用户手动唤醒另一方网页版 AI，直至终局。
+7. `active_game=null`、游戏已结束、没轮到自己、评论未处理、GitHub 数据异常等情况必须停止，不下棋。
 
-每次在**当前应该行动的一方**的独立会话中说“按照棋手提示词执行一轮”。该 AI 应自行读取 GitHub 最新棋局、判断位置，并提交一条 Issue 评论。裁判收到评论后自动运行，并同步更新棋盘。再次运行另一位 AI，如此循环。切记，手动运行只是唤醒一个棋手，不是通过 GitHub Action 调用模型。
+**固定提示词不需要随每一手编辑**。需要改变的仅是下一局启动时的对局注册表和裁判配置；对局中的步数、位置、轮次和身份码均为 GitHub 动态数据。
 
-## 手动运行裁判
+## 下一局创建步骤（当前属于 V2 未完成）
 
-访问 [GitHub Actions：AI_book Gomoku referee](https://github.com/fweiger/AI_book/actions/workflows/ai-book-gomoku-referee.yml)，选择 **Run workflow → main → Run workflow**。此操作只扫描评论、更新 JSON 和 Issue 正文，**不会调用 AI，也不会产生新棋步**。平时不需要点，因为 Issue 新增评论已经能自动触发裁判。
+在实际使用固定提示词玩下一局之前，必须先实现并通过测试：
 
-## 建议的 V1 启动顺序
+- 新建独立 GAME-ID、Issue、空棋盘 state、双方身份码；不可复用 GAME-001 的棋谱/Issue #24。
+- 完成 Python 裁判 / GitHub Actions 对新游戏 Issue 与 state 路径的绑定与正确路由，具备严格的防串局校验。
+- 再更新 `games/active.json.active_game` 指向新游戏。一次仅允许一个活动棋局时，必须保护注册表变更的一致性。
+- 用户验证 Issue 与棋盘无误后，才分别启动两位网页版 AI。
+- 结束后裁判写入 `finished` 并由生命周期控制完成结果归档、注册表清空，确保不再对已结束棋局提交。
 
-1. 打开 Issue #24，确认 `status` 与 `turn`；GAME-001 已经开局，不要重置现有落子。
-2. 手动唤醒当前轮次的棋手（目前轮到白方 AI-B）；第一次执行时将对应提示词粘贴到独立会话。
-3. 等 GitHub Actions 处理完后刷新 Issue；确认版本递增、轮次切换、棋子出现。
-4. 手动唤醒另一位棋手，反复执行直到 `status = finished`。
-5. 待验证多个来回都正常后，再将手动唤醒换成棋手定时任务。
+上述是需求和交付检查清单，**不是声称已经实现新对局自动创建**。详见 [V2-REQUIREMENTS.md](V2-REQUIREMENTS.md)。
 
-## 自动化状态及边界
+## 观战
 
-- Python 裁判工作流已配置 `issue_comment.created` 事件、每 15 分钟补扫和 `workflow_dispatch` 手动运行。
-- AI-A 黑方已经配置 ChatGPT 每小时任务，**目前仍处于启用状态**；在纯手动测试前应先暂停它，避免与手动黑方同时提交。
-- AI-B 白方定时任务没有创建成功，原因是当前 ChatGPT 账户已达到 5 个定时任务额度；不擅自停用其他任务。
-- ChatGPT 定时任务频率最高每小时一次。定时任务是“尝试执行一手”，不是每小时必定有效落子。
-- 此项目无大模型 API；Actions 不能直接唤醒普通 ChatGPT 会话。
-- 若两个会话实际使用同一个模型，也只是独立会话，并不代表不同模型或经过验证的独立推理系统。
+- [GAME-001 历史 Issue](https://github.com/fweiger/AI_book/issues/24)：文字棋盘、棋谱、评论和裁判记录。
+- [网页观战源码](../../../docs/gomoku/index.html) 与 [Pages 工作流](../../../.github/workflows/ai-book-gomoku-pages.yml)：网站是否已发布必须从 Pages 部署状态核实；静态页面不是 AI 唤醒器。
+- [GAME-001 当时使用的原始黑白提示词](prompts/archive/) 单独归档，可以核实历史操作，不应当作为下一局模板。
 
-## 下一版考虑
+## 裁判与监测的区别
 
-独立的开局 / 暂停 / 重开控制工作流、多棋局管理。V1 不增加这些状态控制，避免影响已记录的 GAME-001。
+- GitHub Issue 的 `issue_comment.created` 事件直接启动 **GitHub Actions Python 裁判**，扫描评论、校验落子、更新状态；已有每 15 分钟兜底扫描。
+- 手动 [Run workflow](https://github.com/fweiger/AI_book/actions/workflows/ai-book-gomoku-referee.yml) 只能运行裁判，不能启动 AI 或创造棋步。现有裁判仍绑定 GAME-001。
+- Ubuntu 临时监测可只读检查 GitHub、必要时在授权范围内补触发裁判；不得调用模型或代替网页 AI 落子。**不启用 systemd 常驻服务**；既有临时 Job 已结束。
+- GitHub / Actions / Pages 无法凭空唤醒普通网页版 ChatGPT 会话；若将来要求事件自动交接，必须研究实际受支持的产品触发方式并单独验收。
+- 黑方此前存在每小时定时棋手任务的历史配置；如果将来从空棋盘重开，应核实该任务当前是否启用，避免与两个网页 AI 手动测试产生重复动作。本文不擅自修改任何定时任务。
 
-## GitHub 事件触发与 ChatGPT 定时任务
+## 快速复现本次历史对局
 
-- Issue 评论可直接触发 **GitHub Actions Python 裁判**；这是本项目已经验证的链路。
-- **普通 ChatGPT 每小时定时任务**不会因为 Issue 评论自动提前运行。
-- ChatGPT Work 支持部分 GitHub **Pull Request 活动（含 PR 评论）**触发事件任务；当前官方文档没有将普通 Issue 评论列为可用触发类型。若以后需要自动唤醒网页版 AI，只能研究并验证该网页版 AI 平台实际支持的事件触发机制；不能用本地 CLI 替代棋手。
-- 单纯通过网页 JavaScript 监听棋盘变化只能通知正在打开网页的浏览器，不会唤醒关闭的 AI 会话。
-
-## 31.5 / 北京服务器的真实职责（已纠正）
-
-- 只能监测 GitHub 棋局与评论，并可在裁判漏处理时调用 `workflow_dispatch` **补触发 Python 裁判**。
-- **不得**调用 Codex、Claude 或其他模型进行落子，不得代替两位网页版 AI 向 Issue 提交坐标。
-- 当前已修改 [coordinator.py](scripts/coordinator.py)，提供每 10 秒轮询、45 秒宽限、180 秒冷却的补处理方案；[部署手册](deploy/README.md) 提供在 31.5 运行的配置。
-- 31.5 监控服务尚未启动。GitHub Actions 的 `workflow_dispatch` **不是** ChatGPT 任务的外部启动接口：它只能启动 GitHub Actions 工作流。
-- 游戏状态来自 GitHub `state.json`，GitHub Pages 用它向观众展示；真正选棋步的是两个用户各自连接 GitHub 的网页版 AI。
+1. 读取 [GAME-001 最终 state.json](games/GAME-001/state.json) 及 Issue #24，确认 `finished`、30 手、白方五连。
+2. 核对胜方实际五连 `F9-G10-H11-I12-J13`，以及前 3 手是系统测试而不是双方网页版 AI 从零开始的决策。
+3. 阅读 [验收记录](results/GAME-001-ACCEPTANCE.md)；不要用历史棋盘重新落子。
+4. 如需重新对弈，请按 V2 新开 GAME-ID，先通过裁判与注册表的联调再激活。
