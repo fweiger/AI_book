@@ -9,6 +9,8 @@
 | TOPIC-002 | [市场微观结构：订单流、流动性与价格形成](topics/market-microstructure-orderflow/README.md) | 交易规则怎样形成价格、价差与流动性？ | `交易机制` `订单流` `Wind L2` | 1 | CATALOG_SEEDED |
 | TOPIC-003 | [交易心理：亏损、纪律与可验证执行](topics/trading-psychology-execution/README.md) | 决策偏差如何影响风险与执行？ | `行为决策` `交易心理` `风险` | 1 | CATALOG_SEEDED |
 
+| TOPIC-004 | [唐胥铁路：利益分配与政治联盟](topics/late-qing-railway-political-economy/README.md) | 新式铁路怎样在旧运输利益、地权和审批约束中渐进推行？ | `历史政治经济学` `博弈论` `制度变迁` | 论文/档案待核 | HYPOTHESES_REGISTERED |
+
 [查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 多 AI 博弈实验
