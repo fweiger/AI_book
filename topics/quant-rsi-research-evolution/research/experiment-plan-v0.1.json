@@ -1,0 +1,101 @@
+{
+  "schema_version": "0.1.0",
+  "topic_id": "TOPIC-004",
+  "plan_id": "ASHARE-MINUTE-OHLCVA-2TRACK-001",
+  "status": "DESIGN_DRAFT_BLOCKED",
+  "formal_run_allowed": false,
+  "confirmed_decisions": {
+    "task_family": "minute_OHLCVA_behavior_feature_discovery",
+    "candidate_frequency": "minute",
+    "independent_tracks": [
+      "A_INTRADAY_ROLLING",
+      "B_FULL_DAY_AGGREGATION"
+    ],
+    "horizons": [
+      "T+1",
+      "T+3",
+      "T+5"
+    ]
+  },
+  "horizon_convention": {
+    "status": "CANDIDATE_NOT_FROZEN",
+    "proposed_definition": "T+h denotes the close of the h-th subsequent exchange trading session after signal date T.",
+    "unresolved": [
+      "return start price",
+      "exact entry/exit timestamp",
+      "market benchmark",
+      "raw versus adjusted price",
+      "missing/suspended/limit-locked label handling",
+      "execution costs"
+    ]
+  },
+  "experiments": [
+    {
+      "id": "A_INTRADAY_ROLLING",
+      "status": "DESIGN_DRAFT_BLOCKED",
+      "sample_unit": "symbol × trading_date × signal_time",
+      "input_fields": [
+        "open",
+        "high",
+        "low",
+        "close",
+        "amount",
+        "volume"
+      ],
+      "feature_cutoff_rule": "Only completed bars whose bar_end_time is not later than the feature cutoff and whose availability is allowed by a frozen replay rule.",
+      "available_at_status": "NOT_OBSERVED_IN_RAW_ARCHIVE",
+      "research_target_expression": null,
+      "execution_target_expression": null,
+      "signal_time_grid": null,
+      "entry_rule": null,
+      "exit_rule": null,
+      "feature_registry_hash": null,
+      "data_snapshot_hash": null,
+      "split": null,
+      "cost_model": null
+    },
+    {
+      "id": "B_FULL_DAY_AGGREGATION",
+      "status": "DESIGN_DRAFT_BLOCKED",
+      "sample_unit": "symbol × trading_date",
+      "input_fields": [
+        "open",
+        "high",
+        "low",
+        "close",
+        "amount",
+        "volume"
+      ],
+      "feature_cutoff_rule": "Features require the complete T-session OHLCVA and are available only after the last required bar plus a declared calculation/availability delay.",
+      "research_target_expression": null,
+      "execution_target_expression": null,
+      "signal_time_rule": "After full T-session data are available; exact cutoff and delay not frozen.",
+      "entry_rule": null,
+      "exit_rule": null,
+      "feature_registry_hash": null,
+      "data_snapshot_hash": null,
+      "split": null,
+      "cost_model": null
+    }
+  ],
+  "common_gates": {
+    "source_snapshot_hash_verified": false,
+    "calendar_and_point_in_time_universe_verified": false,
+    "replay_availability_rule_frozen": false,
+    "label_definition_and_unit_tests_passed": false,
+    "purge_embargo_verified": false,
+    "historical_exposure_review_complete": false,
+    "sealed_evaluator_acl_verified": false,
+    "costs_and_execution_rules_verified": false,
+    "experiment_manifest_frozen": false
+  },
+  "unresolved_blockers": [
+    "Raw minute archive has no source receive_time or available_at; replay timing and latency remain assumptions until validated.",
+    "Raw source snapshot hash and exact source version are not bound to this task.",
+    "Historical exposure inventory is partial; prior P0/P1/P2 and independent minute-path outputs need full manifest reconciliation.",
+    "Research labels and executable PnL labels are not yet fully specified.",
+    "Train/validation/outer-test date ranges, point-in-time universe and purge/embargo are not frozen.",
+    "No independent sealed evaluator service or verified ACL exists.",
+    "Costs, market impact, capacity, price limits, suspensions and T+1 sell constraints are not frozen."
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": "0.1.0",
+  "topic_id": "TOPIC-004",
+  "status": "PARTIAL_REGISTER",
+  "updated_at": "2026-10-30",
+  "entries": [
+    {
+      "id": "EXP-001",
+      "period": "2018-2021",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "30/60-minute price-shape reference windows",
+        "price discreteness groups",
+        "nearest-neighbor window matching"
+      ],
+      "label_families": [],
+      "results_visible": "descriptive reference results visible",
+      "evidence_level": "CONFIRMED_FOR_FEATURE_EXPOSURE",
+      "blind_test_eligible": false,
+      "notes": "The forward descriptive P2 study explicitly used this as a frozen discovery reference; this entry does not imply all future labels were read."
+    },
+    {
+      "id": "EXP-002",
+      "period": "2022-07-04/2022-12-26",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "full-day OHLCVA",
+        "amount/VWAP",
+        "price shape",
+        "VWAP_RECOVERY",
+        "LATE_CASH_CONCENTRATION",
+        "B0/B1/B2"
+      ],
+      "label_families": [
+        "T+1",
+        "T+2",
+        "T+3",
+        "T+5 close-to-close and equal-weight A-share excess"
+      ],
+      "results_visible": "model metrics and event effects visible",
+      "evidence_level": "CONFIRMED_FOR_FEATURE_AND_LABEL_EXPOSURE",
+      "blind_test_eligible": false,
+      "notes": "P3D cross-year recheck; prediction metrics do not establish executable PnL."
+    },
+    {
+      "id": "EXP-003",
+      "period": "2023-07-04/2023-12-26",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "full-day OHLCVA",
+        "amount concentration",
+        "VWAP",
+        "signed price-amount proxy",
+        "intraday volatility/amount interaction",
+        "VWAP_RECOVERY",
+        "LATE_CASH_CONCENTRATION"
+      ],
+      "label_families": [
+        "T+1",
+        "T+2",
+        "T+3",
+        "T+5 close-to-close and excess returns"
+      ],
+      "results_visible": "validation/evaluation metrics and event effects visible",
+      "evidence_level": "CONFIRMED_FOR_FEATURE_AND_LABEL_EXPOSURE",
+      "blind_test_eligible": false,
+      "notes": "P3C1 fixed 500×120 experiment."
+    },
+    {
+      "id": "EXP-004",
+      "period": "2024-07-02/2024-12-25",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "30/60-minute price shape",
+        "nearest-neighbor distance",
+        "price discreteness",
+        "conditional controls"
+      ],
+      "label_families": [
+        "T+1",
+        "T+2",
+        "T+3",
+        "T+5 close-to-close/excess"
+      ],
+      "results_visible": "validation/evaluation metrics and event effects visible",
+      "evidence_level": "CONFIRMED_FOR_FEATURE_AND_LABEL_EXPOSURE",
+      "blind_test_eligible": false,
+      "notes": "P3B1 preregistration states earlier P0/P1/P2 OOS had already been observed."
+    },
+    {
+      "id": "EXP-005",
+      "period": "2025-09-01/2025-11-03",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "daily price shape plus baseline price/volume/market breadth"
+      ],
+      "label_families": [
+        "T+1",
+        "T+2",
+        "T+3",
+        "T+5"
+      ],
+      "results_visible": "results visible",
+      "evidence_level": "CONFIRMED_FOR_FEATURE_AND_LABEL_EXPOSURE",
+      "blind_test_eligible": false,
+      "notes": "P3A 100×40; reported no stable incremental value in tested scope."
+    },
+    {
+      "id": "EXP-006",
+      "period": "2026-01/2026-08 selected dates",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "30/60-minute shape matching and price-discreteness groups"
+      ],
+      "label_families": [],
+      "results_visible": "descriptive matching statistics visible; preregistration says no future-return labels in that round",
+      "evidence_level": "CONFIRMED_FOR_FEATURE_EXPOSURE_LABEL_EXPOSURE_NOT_CONFIRMED",
+      "blind_test_eligible": false,
+      "notes": "Date exposure and feature-space exposure remain; do not infer all financial labels were read."
+    },
+    {
+      "id": "EXP-007",
+      "period": "2025-07-09/2025-09-30",
+      "source_project": "independent minute-path research notebooks",
+      "feature_families": [
+        "intraday price path",
+        "amount change",
+        "path-combination features"
+      ],
+      "label_families": [
+        "future path return / adverse excursion outputs seen; exact mapping pending"
+      ],
+      "results_visible": "partially confirmed by retrieved notebook files and outputs",
+      "evidence_level": "PARTIAL",
+      "blind_test_eligible": false,
+      "notes": "Need reconcile complete notebook cells, date joins and labels before asserting exact coverage."
+    },
+    {
+      "id": "EXP-008",
+      "period": "2026-07-08/2026-09-30",
+      "source_project": "independent minute-path research notebooks",
+      "feature_families": [
+        "intraday price path",
+        "cross-day path combinations",
+        "amount/path interactions"
+      ],
+      "label_families": [
+        "forward return / MAE / MDD outputs seen; exact mapping pending"
+      ],
+      "results_visible": "development outputs visible",
+      "evidence_level": "PARTIAL",
+      "blind_test_eligible": false,
+      "notes": "Treat as development exposure; data provenance differs from raw_stock_minute contract and requires snapshot reconciliation."
+    },
+    {
+      "id": "EXP-009",
+      "period": "P0/P1/P2 historical OOS; exact ranges not fully reconciled",
+      "source_project": "A股市场行为自动发现与概率统计研究系统_PRD_v1.0_20260925",
+      "feature_families": [
+        "prior price-shape/nearest-neighbor methods and thresholds"
+      ],
+      "label_families": [
+        "some prior OOS financial outcomes observed; exact inventory pending"
+      ],
+      "results_visible": "the P3B1 preregistration explicitly says prior P0/P1/P2 OOS had already been observed",
+      "evidence_level": "KNOWN_INCOMPLETE_INVENTORY",
+      "blind_test_eligible": false,
+      "notes": "Must retrieve exact manifests and feedback history before any historical period can be considered."
+    }
+  ],
+  "policy": [
+    "A date range outside this list is not automatically blind.",
+    "Feature-family exposure and outcome-label exposure are separate fields.",
+    "If exposure cannot be proven absent, mark UNVERIFIED_EXPOSURE and do not call it independent OOS.",
+    "Prefer future prospective holdout under a separate evaluator identity."
+  ]
+}
