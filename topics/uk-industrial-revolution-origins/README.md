@@ -27,6 +27,16 @@
 - [帝国边际收益递减与战略过度延伸假说 IMR-01](data/imperial_marginal_returns_overstretch_hypothesis_v1.md)——Kennedy/Tainter/O'Brien、西班牙/荷兰对照、3类阈值和5个可证伪预测；不预设帝国整体现金流已转负。
 - [2026-11-14 初始研究会话](sessions/2026-11-14-M0-P0.md)——已读/未读、反例与阶段进展。
 
+## 四帝国独立案例研究（M0首轮）
+
+以下是TOPIC-010的独立国家工作流，与英国本体研究共用[五轨史料与可比性协议](data/FOUR_EMPIRE_COMPARISON_PROTOCOL_V1.md)，各自保留单独Issue与Draft PR，并非主议题复制的第二份进度：
+- [CASE-ESP-001 西班牙 #32](https://github.com/fweiger/AI_book/issues/32) · [Draft PR #36](https://github.com/fweiger/AI_book/pull/36) — 美洲白银/原住民mita、王室战争税与借款。
+- [CASE-NLD-001 荷兰 #33](https://github.com/fweiger/AI_book/issues/33) · [Draft PR #37](https://github.com/fweiger/AI_book/pull/37) — VOC贸易扩张、亚洲军政成本、第四次英荷战争与信用崩溃。
+- [CASE-PRT-001 葡萄牙 #34](https://github.com/fweiger/AI_book/issues/34) · [Draft PR #38](https://github.com/fweiger/AI_book/pull/38) — 巴西糖/黄金、奴役劳动与英国进口竞争、贸易正收益与资源诅咒。
+- [CASE-FRA-001 法国 #35](https://github.com/fweiger/AI_book/issues/35) · [Draft PR #39](https://github.com/fweiger/AI_book/pull/39) — 科学院/海军、种植园经济、七年战争、财政冲突与海地独立。
+
+首轮各国合计50条历史事件、39项来源登记、20条数值与待获取指标记录；这是**来源准入与结构化第一轮**，并非已完成跨国因果回归。各案工作文件分别在独立PR中，不直接修改本Draft PR的已提交主研究数字。
+
 ## 核心比较问题
 
 - A 航海／导航／船舶／火炮、冶金的技术积累，是否实际外溢到工业制造？
