@@ -1,0 +1,38 @@
+# CASE-FRA-001｜法国殖民帝国第一轮证据审查（M0）
+
+**权威Issue**：[AI_book #35](https://github.com/fweiger/AI_book/issues/35) · **上位研究**：[TOPIC-010 #30](https://github.com/fweiger/AI_book/issues/30) · **状态**：事件与代表性定量资料准入，原始法国年度军费/财政预算未取得。
+
+## 第一轮判断：法国不是简单“技术落后，被英国打败”
+
+**法国有发达科学机构与强大海军，却在多次海外战争和财政危机中失去部分帝国权益；加勒比殖民地受奴役人口的大规模革命还形成了另一条独立的退出机制。**
+
+## A 科学、造船及军事组织
+- 1666年科尔贝尔创建法国科学院；[法国科学院官方史](https://academie-sciences.fr/en/history-academy)明确创立初期包括数学、天文学、自然研究及服务政府的知识职能。
+- [Darnell (2024)](https://www.cambridge.org/core/books/abs/maritime-power-and-the-power-of-money-in-louis-xivs-france/general-introduction/CA72E17E1842682B9E426EB66190118C)揭示1660—1690年代法国海军扩张，需要船厂、炮舰、港口、舰队补给和军需承包与财政安排，征兵体系动员**超过约4万海员**。这证明法国也有高度集成的技术—军事财政体系。
+- [法国国防历史档案](https://www.servicehistorique.sga.defense.gouv.fr/navires-et-guerre-sur-mer-sous-le-regne-de-louis-xiv)估计该时期舰队近**200艘**（不同战舰等级未细分），不能从船数直接计算有效吨位。
+
+## B 奴役劳动力、种植园和殖民贸易
+- 法属圣多明各（今海地）以蔗糖、咖啡为主要出口；[Moya Pons Cambridge章节](https://www.cambridge.org/core/books/cambridge-history-of-latin-america/haiti-and-santo-domingo-1790c-1870/2DA88EA288904F6477B4126AC8A85B63)记载法国革命前几年每年输入约**30,000名被奴役非洲人**，属于人口流量而非殖民地人口存量。
+- [芝加哥大学研究项目](https://neubauercollegium.uchicago.edu/research/the-french-republic-and-the-plantation-economy-saint-domingue-1794-1803)写明1794法兰西共和国废奴时当地有**略高于50万**受奴役人口。出口利益与强制劳动造成的暴力和反抗同步存在。
+
+## C 军事与外交
+- 七年战争（1756—1763）法国与英国在欧洲、北美和印度多战区竞争，英国取得显著海外优势，但**法国保留/恢复了盈利的加勒比糖岛**。因此法国并非1763失去所有殖民收益。
+- 1763法国印度影响力减弱，法国东印度公司在1769失去特许权；这属于公司、财政和外交共同作用，不可直接等同法国军事/技术能力整体消失。〔[Margerison](https://academic.oup.com/ehr/article-abstract/130/544/583/413472)〕
+
+## D 财政债务
+- [Eugene White, Journal of Economic History](https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/french-revolution-and-the-politics-of-government-finance-17701815/1CA4A56EC227DB6D5B84A14D04DE2504)认为王室遗留的持续预算赤字、各利益集团的财政分配冲突对革命进程重要。**尚未取得年度国库收入、海军军费、债息原始表，所以不能做“军费/税收比例”的数字结论。**
+- 要区分法国王国、革命共和国、拿破仑政权不同会计主体和财政年份。
+
+## E 殖民地独立和19世纪再扩张（最强反例）
+- 1791圣多明各被奴役人口起义、1794废奴、1804海地独立。地方主体的政治解放与军事胜利不应被缩减为“法国维稳成本超过财政收入”。法国尝试再征服失败后失去其核心高价值殖民地。
+- 法国19世纪在北非及其他地区发展新的殖民帝国，因此其帝国经历**崩解—重建—再扩张**，不属于机械的单调衰落曲线。
+
+## 候选假说和竞争性机制
+- **H1 军费—财政挤压**：`fiscal_revenue_debt_service`与`navy_arsenal_spend`分别影响对海外据点维持能力；七年战争失败前后做事件窗口，避免内生性。
+- **H2 殖民人口反抗与合法性崩溃**：圣多明各1791—1804独立事件，不需要首先证明法国国库净成本已超过收入就可能产生。
+- **H3 科技不是充分条件**：法国拥有科学院、大舰队而不率先完成英国式蒸汽产业革命，能源工资相对价格与产业制度要另行比较。
+- **可能反例**：法国1763殖民战略损失后仍拥有高盈利糖岛；19世纪又获得新殖民地。
+
+**首批交付**：[12条历史事件](events_m0.csv)、[11项来源](source_registry_m0.csv)、[5条计量条目含1个空值](metrics_m0.csv)。国库年度原始表`NOT_ACQUIRED`，量化因果回归`NOT_RUN`。
+
+**下一项唯一工作：** 取得法国1710—1815年度国库收入/国债/海军军费，并从圣多明各18世纪出口额、殖民关税及独立前后财政偿债口径核对这两种竞争机制。
