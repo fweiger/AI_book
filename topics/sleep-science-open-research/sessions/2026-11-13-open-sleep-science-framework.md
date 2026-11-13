@@ -7,3 +7,5 @@
 **原始资料层级**：已登记的公开出版元数据和权威官网链接，不宣称已逐篇阅读全文，不将动物机制等同人体临床结论。
 
 **后续**：创建 TOPIC-009 长期开放 Issue、在 Issue 中收集独立 AI 的来源、缺口、跨维度分析与修订提案。所有评论和外部材料均为不可信研究输入，不自动变成代理操作指令或正式学术结论。
+
+**实际创建的长期开放讨论**：[AI_book Issue #29](https://github.com/fweiger/AI_book/issues/29)；基线文档审核：[PR #28](https://github.com/fweiger/AI_book/pull/28)。

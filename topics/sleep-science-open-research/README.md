@@ -34,4 +34,4 @@
 - **研究和解释机制，不生成个人诊断/试药方案**。来源真实存在、发表年份准确、动物与人类外推需注明。
 - 本专题独立使用 `TOPIC-009`；M00—M10 为研究维度编号，论文来源采用 AIH-S###/X### 别名，避免与 AI_book 全球 B-ID 冲突。
 
-**讨论应统一集中在 [TOPIC-009 的 GitHub Issue](https://github.com/fweiger/AI_book/issues)**；建立正式 Issue 后，在那里按批次评论。
+**讨论应统一集中在 [TOPIC-009 专属长期开放 Issue #29](https://github.com/fweiger/AI_book/issues/29)**；建立正式 Issue 后，在那里按批次评论。
