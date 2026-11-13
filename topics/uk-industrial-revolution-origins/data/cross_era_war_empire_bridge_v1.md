@@ -41,6 +41,12 @@
 
 这条链可支持**英国财政约束促成其部分区域承诺减少，美国提供替代援助并扩大影响力**。不能推出美国自动承担英国全球帝国所有殖民地或驻军的等额债务/责任。
 
+## C2. “战略惯性”必须按各次参战决定的当时文件，而非仅战争日期识别
+
+- **1914-08-04：** [英国议会档案的内阁笔记](https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/yourcountry/collections/the-outbreak-of-the-first-world-war/cabinet-notes/)和[当时外交危机往来文件](https://www.parliament.uk/about/living-heritage/transformingsociety/private-lives/yourcountry/collections/the-outbreak-of-the-first-world-war/command-paper/)说明，德军进入中立比利时、英国1839年保证比利时中立的条约义务，是正式宣战的重要直接因素。**不能简单重写为“英国为抢殖民地所以决定参战”。**
+- **1939-03-31至09-03：** [英国政府史学部门关于对波兰保证的研究](https://history.blog.gov.uk/2019/03/28/whats-the-context-31-march-1939-the-british-guarantee-to-poland/)与[1939-10-03英国下院首相演说](https://hansard.parliament.uk/commons/1939-10-03/debates/bbbe0986-8151-4967-ad1e-cab1c76408b7/WarSituation)表明，1939英国对波兰独立作安全承诺；德国入侵波兰是英国宣战的直接触发事件，而当时英国政府亦将阻止连续侵略与欧洲安全作为更广泛背景。
+- **跨时代可检验的共有动机**是防止单一大陆强权危及英国安全、联盟和海权；但17—18世纪王朝/贸易帝国竞争、1914年的条约/联盟/安全、1939年的国家独立与反侵略处于不同政治法律环境。必须使用逐次决策会纪、议会讲话、联盟义务及实际军事威胁测量，才有资格判断是否存在稳定政策函数。
+
 ## D. 非债务共同原因：民族独立和海外政治合法性
 
 - [英国国家档案馆—1947年印度分治](https://www.nationalarchives.gov.uk/education/teaching-resources/partition-of-british-india/) 指出印度民众数十年寻求独立，1942年已宣布战后退出的方案，1947年执行与民族政治及分治密切相关。
