@@ -7,7 +7,7 @@
 - **一级机构原始工作簿**：[Bank of England — A Millennium of Macroeconomic Data (Excel v3.1)](https://www.bankofengland.co.uk/-/media/boe/files/statistics/research-datasets/a-millennium-of-macroeconomic-data-for-the-uk.xlsx)
 - 实际Ubuntu联网下载27,533,690字节，SHA256：`4c23dd392a498691eac92659aec283fb43f28118bd80511dc87fc595974195eb`；用Python标准库zipfile/XML解析109张工作表。此Excel保留在远端临时目录，不上传27MB版权/格式未审的原始资料到公开仓库；公开仓库存放本专题选取的数字及出处。
 - 工作表 **A27. Central govt borrowing**（xlsx sheet35）源标题明确为`Central Government Revenue and Expenditure: Great Britain 1688–1801, United Kingdom 1801–2016`。史料标注Mitchell(1988) 1688–1945，ONS1946后；历史1690–1945部分反映 Exchequer/Consolidated Fund的金融盈亏，**不是1946后国民账户的现代中央政府净借款恒定定义**。
-- **源工作表年份编码警告：** A27的A列原始数字不是四位年份。例如`A33=839`需要根据A27源年代标签和独立序列对齐核实；本次对齐已选择`year = numeric_A27 + 867`，并在CSV保留`a27_raw_year_code`作审计，而不是在原始来源中造出四位年份。转换须再受独立数据源核查。
+- **源工作表年份编码警告：** A27的A列原始数字不是四位年份。例如`A33=839`需要根据A27源年代标签和独立序列对齐核实；本次对齐已选择`year = numeric_A27 + 867`，并在CSV保留`a27_raw_year_code`作审计，而不是在原始来源中造出四位年份。该编码在官方原Excel抽查了1688（raw A=821）、1700（A=833）、1760（A=893）、2015（A=1148）和2016（A=1149）五个两端锚点，全部满足+867；与A27表头1688—2016的声明相符。该表内部对齐核验已通过，但仍需跨独立来源验证财政年和日历年的归属，不应仅凭年度码把不同口径财务直接合并。
 - 工作表 **A9. Nominal GDP (A)**（xlsx sheet14）：D列为现代边界一致`GB+Northern Ireland`的名义GDP；P列为**按当时政治边界**：1801年前Great Britain，1801–1920 Great Britain+all Ireland，1921年后Great Britain+Northern Ireland。此差异导致1815年使用现代边界分母的债务/GDP约184.30%，而历史政治边界分母约164.64%。不要混同两个数字的领土范围。
 
 ## 交付数据
