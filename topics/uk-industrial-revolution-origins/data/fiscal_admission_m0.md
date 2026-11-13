@@ -11,7 +11,7 @@
 5. [荷兰国家档案 VOC](https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/overzicht-van-voc-archieven-1594-1814)：可用于公司/船队贸易经济研究，但**不是荷兰政府收入数据**，不能直接与OBR国库财政比较。
 6. [2026年 Govrev 全球历史税收数据](https://www.cambridge.org/core/journals/european-journal-of-political-research/article/financing-the-state-government-tax-revenue-from-1800-to-2012/3ECB24E0026C258AC660B88673A9E63C)：1800—2012年的31国中央财政收入；只能与本题后期历史部分衔接。
 
-[候选数据源矩阵 CSV](fiscal_source_admission_m0.csv) 共11条，区分国家、时期、候选变量、来源口径、获取状态与下一步校验。
+[候选数据源矩阵 CSV](fiscal_source_admission_m0.csv) 共12条，区分国家、时期、候选变量、来源口径、获取状态与下一步校验。
 
 ## 识别上的实质约束
 
@@ -26,3 +26,9 @@
 ## 额外发现：因果结构不应只看战争或政体单变量
 
 Karaman & Pamuk 2013的同行评审论文摘要报告，战争压力、经济结构与政治制度之间存在**交互作用**：政治制度对财政能力的影响取决于都市化商业经济或农业经济背景。这可以挑战“英国仅因制度不同而获得财政优势”的简化解释；此处仅报告作者结论，未经本专题独立复算。
+
+## V2数据准入更新（2026-11-14）
+
+- 新增BoE千年宏观数据库A1年度表公开DataHub镜像条目，Ubuntu联网实取并解析22,487条记录、65个变量；用于[1689—1850年度数据研究](boe_annual_fiscal_audit_v2.md)。源CSV校验SHA256见研究报告。
+- 此来源属于**第三方整理的官方数据镜像**而非原Excel逐格审计；原Bank of England .xlsx URL HTTP200，但只核验了文件头及长度，未完成工作簿列头说明交叉核对。
+- OBR历史财政Excel、葡萄牙ICPSR完整包依然未取得；不要将年度公共债务/净借款误当作税收或海军军费。
