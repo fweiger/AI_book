@@ -21,6 +21,7 @@
 - [BoE年度财政基础序列162年](data/boe_millennium_annual_fiscal_1689_1850_v1.csv) · [债务/GDP 1700—1749](data/boe_debt_gdp_1700_1749_v1.csv) · [1750—1799](data/boe_debt_gdp_1750_1799_v1.csv) · [1800—1850](data/boe_debt_gdp_1800_1850_v1.csv) · [10段战争/相对和平统计](data/boe_war_peace_windows_descriptive_v1.csv)
 - [英国BoE官方Excel原始收入、GDP和国防支出审计V3](data/boe_primary_annual_fiscal_audit_v3.md) · [1700—1799财政年度表（98年）](data/boe_official_1700_1799_tax_receipts_v3.csv) · [1900—1950国防支出占比表（51年）](data/boe_official_1900_1950_defence_share_v1.csv)
 - [TOPIC-010 × TOPIC-005：1688—1956英国战争融资与霸权变迁机制桥](data/cross_era_war_empire_bridge_v1.md) · [2026-11-14本轮研究会话](sessions/2026-11-14-war-strategy-cross-era.md)
+- [1569—1815皇家海军军费学术数据准入和原始档案线索](data/naval_expenditure_source_audit_v1.md)——LSE实证论文及图形核实，作者原始军费年度序列尚未取得。
 - [2026-11-14 初始研究会话](sessions/2026-11-14-M0-P0.md)——已读/未读、反例与阶段进展。
 
 ## 核心比较问题
