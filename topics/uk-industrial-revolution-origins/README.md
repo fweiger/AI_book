@@ -24,6 +24,7 @@
 - [1569—1815皇家海军军费学术数据准入和原始档案线索](data/naval_expenditure_source_audit_v1.md)——LSE实证论文及图形核实，作者原始军费年度序列尚未取得。
 - [战争与殖民收益机制转换：1688—1967比较报告](data/empire_war_payoff_regime_shift_v1.md)——早期战争—贸易税基反馈、二战海外英镑负债与殖民地财政援助及反例。
 - [跨时代帝国收益／成本证据台账：23条CSV](data/empire_war_payoff_evidence_v1.csv)——国家／时间／数值口径／来源等级与不可推断事项。
+- [帝国边际收益递减与战略过度延伸假说 IMR-01](data/imperial_marginal_returns_overstretch_hypothesis_v1.md)——Kennedy/Tainter/O'Brien、西班牙/荷兰对照、3类阈值和5个可证伪预测；不预设帝国整体现金流已转负。
 - [2026-11-14 初始研究会话](sessions/2026-11-14-M0-P0.md)——已读/未读、反例与阶段进展。
 
 ## 核心比较问题
