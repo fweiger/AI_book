@@ -13,6 +13,10 @@
 - [财政来源准入矩阵：11条（CSV）](data/fiscal_source_admission_m0.csv)——五国财政数据的已知范围、口径与未下载状态。
 - [财政来源核查说明](data/fiscal_admission_m0.md)——OBR、Karaman–Pamuk、葡萄牙论文与数据仓库。
 - [M0/P0 字段定义、准入与因果边界](data/SCHEMA.md)——风险、口径、缺失、下一步。
+- [五国历史财政实数V1及方法审计](data/fiscal_cross_country_v1.md)——三张公开发表统计表及一份OBR历史基准，明确差异口径。
+- [财政GDP占比表（Costa 2024 Table 3）](data/fiscal_costa2024_table3_gdp.csv) · [标准生活篮子表（Costa 2024 Table 2）](data/fiscal_costa2024_table2_baskets.csv) · [白银人均财政表（Broadberry 2026 Table 5）](data/fiscal_broadberry2026_table5_silver.csv) · [OBR英国债务基准](data/fiscal_obr_2023_uk_benchmarks.csv)
+- [跨国财政比率计算与来源记录](data/fiscal_comparison_derived_v1.csv)
+- [英国及欧洲跨国军费融资机制](data/fiscal_military_mechanism_v1.md) · [论文兵员占比估计](data/fiscal_military_literature_ranges_v1.csv)
 - [2026-11-14 初始研究会话](sessions/2026-11-14-M0-P0.md)——已读/未读、反例与阶段进展。
 
 ## 核心比较问题
