@@ -9,6 +9,8 @@
 | TOPIC-002 | [市场微观结构：订单流、流动性与价格形成](topics/market-microstructure-orderflow/README.md) | 交易规则怎样形成价格、价差与流动性？ | `交易机制` `订单流` `Wind L2` | 1 | CATALOG_SEEDED |
 | TOPIC-003 | [交易心理：亏损、纪律与可验证执行](topics/trading-psychology-execution/README.md) | 决策偏差如何影响风险与执行？ | `行为决策` `交易心理` `风险` | 1 | CATALOG_SEEDED |
 
+| TOPIC-009 | [睡眠科学与生理机制：开放式多 AI 研究](topics/sleep-science-open-research/README.md) | M00—M10 的机制体系、权威医学/神经科学文献与跨维度研究问题 | `睡眠科学` `神经生理` `昼夜节律` `多AI协作` | 公开来源 | FRAMEWORK_READY |
+
 [查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 多 AI 博弈实验
@@ -24,4 +26,3 @@
 
 详见 [共读工作法](WORKFLOW.md)。
 
-| TOPIC-009 | [睡眠科学与生理机制：开放式多 AI 研究](topics/sleep-science-open-research/README.md) | M00—M10 的机制体系、权威医学/神经科学文献与跨维度研究问题 | `睡眠科学` `神经生理` `昼夜节律` `多AI协作` | 公开来源 | FRAMEWORK_READY |
