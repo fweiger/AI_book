@@ -1,0 +1,13 @@
+event_id,year_start,year_end,domain,observation,geography,source_id,inference_boundary
+FRA-E001,1664,1664,B,French East India Company founded for Asian trade,France;Indian Ocean,FRA-S11,charter success not equal profits
+FRA-E002,1666,1666,A,Colbert creates Academie des Sciences,Paris,FRA-S01,science institution not proof exclusively colonial motive
+FRA-E003,1665,1690,A,"Colbert and Seignelay accelerate naval supply chain, shipbuilding and military contracting",Brest;Rochefort;Toulon,FRA-S03,"years broad, shipbuilding not measured trade profit"
+FRA-E004,1680,1690,C,French navy reaches major fleet scale rivaling Anglo-Dutch fleets,French coast,FRA-S02,rough fleet size includes different warship grades
+FRA-E005,1756,1763,C,Seven Years War fought worldwide and on European continent,France;North America;India,FRA-S06,war in colonies and Europe intertwined
+FRA-E006,1763,1763,B,Paris Treaty weakens French North American and Indian position,New France;India,FRA-S04,Caribbean sugar islands retained or restored; not total colonial loss
+FRA-E007,1769,1769,D,French East India Company monopoly authority revoked,French Indian trade,FRA-S07,company failure different from French entire fiscal bankruptcy
+FRA-E008,1770,1789,D,Persistent central fiscal deficits and political stalemate before French Revolution,France,FRA-S08,"abstract evidence, raw yearly deficits not downloaded"
+FRA-E009,1791,1791,B,Enslaved people begin uprising in Saint Domingue,Haiti (then French colony),FRA-S10,"agency, violence, and political motives not reducible to financial cost"
+FRA-E010,1794,1794,B,French Republic declares universal abolition of slavery,France;Saint Domingue,FRA-S09,actual implementation varied by territory and chronology
+FRA-E011,1804,1804,E,Haiti becomes independent following revolution,Haiti,FRA-S04,European political revolution and liberation independent mechanisms
+FRA-E012,1830,1830,C,"French conquest of Algeria begins, second empire expands in 19th century",Algeria,FRA-S04,specific 1830 Algeria date needs second independent French source
