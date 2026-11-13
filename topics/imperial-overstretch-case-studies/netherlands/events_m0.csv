@@ -1,0 +1,12 @@
+event_id,year_start,year_end,domain,observation,geography,source_id,inference_boundary
+NLD-E001,1602,1602,B,VOC chartered as joint-stock trading and coercive enterprise,Netherlands;Indian Ocean,NLD-S06,corporate governance distinct from national treasury
+NLD-E002,1619,1619,B,Batavia established as VOC Asian administrative hub,Java;Indonesia,NLD-S06,coercion and local populations not reduced to trading volume
+NLD-E003,1641,1641,C,Dutch contest and seize Portuguese Malacca,Straits of Malacca,NLD-S08,precise siege dates require independent primary military record
+NLD-E004,1652,1674,C,Three Anglo-Dutch naval wars over maritime competition,North Sea;Atlantic;Europe,NLD-S03,"multiple wars, not uninterrupted fighting across whole interval"
+NLD-E005,1688,1688,C,Dynastic change and Dutch-English political coordination under William III,England;Dutch Republic,NLD-S03,UK-Dutch relations not always hostile
+NLD-E006,1700,1795,D,VOC equipage costs and operating scale rise in 18th century,Netherlands;Asia,NLD-S02,unequal time windows; expenditure not profit or military alone
+NLD-E007,1750,1795,D,VOC has declining returns amid Asian territorial responsibilities,Java;Ceylon;Batavia,NLD-S04,profit time series not independently downloaded
+NLD-E008,1780,1784,C,Fourth Anglo-Dutch War disrupts homebound shipping and auctions,North Sea;Atlantic;Indian Ocean,NLD-S01,war trade disruption partly endogenous to company finance
+NLD-E009,1780,1795,D,VOC loses liquidity and needs government support after conflict,Amsterdam;Batavia,NLD-S01,company liquidity not Dutch state bankruptcy
+NLD-E010,1795,1796,C,French intervention and Batavian regime takeover of VOC governance,Netherlands,NLD-S01,regime rupture not simply caused by company losses
+NLD-E011,1800,1800,D,VOC charter ceases legal effect on January 1,Netherlands;Asia,NLD-S01,Dutch colonial government in Asia did not end simultaneously
