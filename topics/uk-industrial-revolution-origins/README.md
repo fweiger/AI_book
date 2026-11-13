@@ -17,6 +17,8 @@
 - [财政GDP占比表（Costa 2024 Table 3）](data/fiscal_costa2024_table3_gdp.csv) · [标准生活篮子表（Costa 2024 Table 2）](data/fiscal_costa2024_table2_baskets.csv) · [白银人均财政表（Broadberry 2026 Table 5）](data/fiscal_broadberry2026_table5_silver.csv) · [OBR英国债务基准](data/fiscal_obr_2023_uk_benchmarks.csv)
 - [跨国财政比率计算与来源记录](data/fiscal_comparison_derived_v1.csv)
 - [英国及欧洲跨国军费融资机制](data/fiscal_military_mechanism_v1.md) · [论文兵员占比估计](data/fiscal_military_literature_ranges_v1.csv)
+- [英国财政与战争年度数据核验V2（1689—1850）](data/boe_annual_fiscal_audit_v2.md)——实际解析年度公开CSV、债务/GDP双分母敏感性及10个战争/相对和平窗口。
+- [BoE年度财政基础序列162年](data/boe_millennium_annual_fiscal_1689_1850_v1.csv) · [债务/GDP 1700—1749](data/boe_debt_gdp_1700_1749_v1.csv) · [1750—1799](data/boe_debt_gdp_1750_1799_v1.csv) · [1800—1850](data/boe_debt_gdp_1800_1850_v1.csv) · [10段战争/相对和平统计](data/boe_war_peace_windows_descriptive_v1.csv)
 - [2026-11-14 初始研究会话](sessions/2026-11-14-M0-P0.md)——已读/未读、反例与阶段进展。
 
 ## 核心比较问题
