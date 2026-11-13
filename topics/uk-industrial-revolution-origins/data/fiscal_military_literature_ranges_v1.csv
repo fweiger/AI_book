@@ -1,0 +1,5 @@
+claim_id,period_start,period_end,comparison_group,metric,estimate_low,estimate_high,unit,source,evidence_status,caveat
+FM-001,1689,1815,British regular wartime military manpower,foreign_manpower_share,15,55,percent_regular_manpower,https://doi.org/10.1093/ehr/ceaf198,published_author_estimate,Multiple wars, range of averages; based on annual Army Estimates, planned not actual troop counts; excludes some establishments
+FM-002,1689,1697,Dutch army wartime,foreign_regiments_and_auxiliaries_share,35,35,percent_army,https://doi.org/10.1093/ehr/ceaf198,quoted_literature_estimate,Article's comparison from separate Dutch historical study, not same dataset as Britain
+FM-003,1660,1714,French army wartime,foreign_regiments_and_auxiliaries_share,20,30,percent_army,https://doi.org/10.1093/ehr/ceaf198,quoted_literature_estimate,Article's secondary comparison from Rowlands/Lynn, war-years not identical
+FM-004,1660,1714,French army peacetime,foreign_regiments_and_auxiliaries_share,15,20,percent_army,https://doi.org/10.1093/ehr/ceaf198,quoted_literature_estimate,Different war vs peacetime definition and period
