@@ -23,3 +23,5 @@
 - 新 AI 讨论 ➜ 在对应专题 `sessions/` 追加讨论及结论变更，保留时间与争议状态。
 
 详见 [共读工作法](WORKFLOW.md)。
+
+| TOPIC-009 | [睡眠科学与生理机制：开放式多 AI 研究](topics/sleep-science-open-research/README.md) | M00—M10 的机制体系、权威医学/神经科学文献与跨维度研究问题 | `睡眠科学` `神经生理` `昼夜节律` `多AI协作` | 公开来源 | FRAMEWORK_READY |

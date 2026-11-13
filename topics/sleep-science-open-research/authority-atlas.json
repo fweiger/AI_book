@@ -1,0 +1,759 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-009",
+  "version": "0.1.0",
+  "date": "2026-11-13",
+  "purpose": "权威睡眠机制与结果框架、非临床治疗疗效比较",
+  "evidence_principle": "分类权威不等于具体因果确定性；动物机制不等于人类治疗证据",
+  "result_dimensions": [
+    "SL01",
+    "SL02",
+    "SL03",
+    "SL04",
+    "SL05",
+    "SL06",
+    "SL07",
+    "SL08"
+  ],
+  "modules": [
+    {
+      "id": "M00",
+      "name": "睡眠定义、结构与测量",
+      "key_question": "睡眠健康包含哪些独立结局？如何正确分期与计量？",
+      "topics": [
+        "多维睡眠健康（数量/连续性/时间/规律/结构/满意度/日间功能/疾病）",
+        "PSG 的 N1/N2/N3/REM、觉醒及呼吸评分标准",
+        "睡眠日记、医疗级活动记录仪、消费级手环的测量边界"
+      ],
+      "signals": [
+        "SL01-SL08",
+        "PSG EEG/EMG",
+        "sleep diary"
+      ],
+      "refs": [
+        "S021",
+        "S002",
+        "X001",
+        "X002",
+        "S027"
+      ],
+      "boundary": "权威测量标准不等于每一种消费设备均具有临床诊断精度。",
+      "source_refs": [
+        "S021",
+        "S002",
+        "X001",
+        "X002",
+        "S027"
+      ]
+    },
+    {
+      "id": "M01",
+      "name": "睡眠稳态与睡眠负债",
+      "key_question": "清醒历史、睡眠压力和 NREM 慢波活动如何共同决定睡眠需求？",
+      "topics": [
+        "双过程模型 Process S 与 Process C",
+        "睡眠剥夺/恢复与 NREM 慢波活动",
+        "午睡、补觉、慢性睡眠不足及局部睡眠"
+      ],
+      "signals": [
+        "SL01",
+        "SL02",
+        "SL05"
+      ],
+      "refs": [
+        "S003",
+        "S001",
+        "S021"
+      ],
+      "boundary": "Process S 是总体生理模型，不能仅凭晚睡或短睡断言个人某种病因。",
+      "source_refs": [
+        "S003",
+        "S001",
+        "S021"
+      ]
+    },
+    {
+      "id": "M02",
+      "name": "昼夜节律与光照",
+      "key_question": "中央生物钟、光照与外周钟如何安排睡眠相位？",
+      "topics": [
+        "SCN 与光暗同步、melatonin 时相标记",
+        "睡眠相位与规律性、chronotype、社会时差",
+        "内源性节律睡眠—觉醒障碍的类型差异"
+      ],
+      "signals": [
+        "SL03",
+        "SL04",
+        "光照和作息时序"
+      ],
+      "refs": [
+        "S003",
+        "S004",
+        "S027"
+      ],
+      "boundary": "夜醒与睡眠时相延迟是两种不同结局，指南按疾病类型而非统一光照处方提供建议。",
+      "source_refs": [
+        "S003",
+        "S004",
+        "S027"
+      ]
+    },
+    {
+      "id": "M03",
+      "name": "自主神经、HPA 与高唤醒",
+      "key_question": "皮层、认知情绪、内分泌和自主神经如何参与睡眠—觉醒转换？",
+      "topics": [
+        "皮层高频 EEG/微觉醒",
+        "压力认知、担忧及条件化唤醒",
+        "HPA 轴、HR/HRV 与呼吸的测量及局限"
+      ],
+      "signals": [
+        "SL02",
+        "SL05",
+        "SL08",
+        "HR/HRV（辅助）"
+      ],
+      "refs": [
+        "X003",
+        "X004",
+        "S016",
+        "S017"
+      ],
+      "boundary": "权威综述未证明 HRV/HR 是失眠高唤醒的独立诊断指标；呼吸干预研究不是这套机制的全部。",
+      "source_refs": [
+        "X003",
+        "X004",
+        "S016",
+        "S017"
+      ]
+    },
+    {
+      "id": "M04",
+      "name": "夜间血糖、代谢和反调节",
+      "key_question": "葡萄糖稳态和反调节反应如何与夜间觉醒交互？",
+      "topics": [
+        "葡萄糖稳态与夜间反调节",
+        "糖尿病低血糖 vs 非糖尿病疑似低血糖",
+        "CGM 组织间液时滞、睡姿压迫伪低、晨起血糖机制"
+      ],
+      "signals": [
+        "SL02",
+        "CGM质量标记",
+        "临床实验室血糖"
+      ],
+      "refs": [
+        "S008",
+        "S009",
+        "S022",
+        "S023"
+      ],
+      "boundary": "真实低血糖、CGM 低值、夜醒是三个不同对象，不能预设凌晨三点是普遍低血糖时点。",
+      "source_refs": [
+        "S008",
+        "S009",
+        "S022",
+        "S023"
+      ]
+    },
+    {
+      "id": "M05",
+      "name": "肠脑轴、迷走神经与菌群",
+      "key_question": "营养感知、肠道神经与微生物代谢是否参与睡眠—觉醒调节？",
+      "topics": [
+        "neuropod 神经内分泌细胞与迷走神经的快速传递",
+        "胃/十二指肠—NTS—PVH 的小鼠餐后 NREM 通路",
+        "菌群代谢物/orexin 与动物睡眠样行为",
+        "必须明确胃/十二指肠、小肠、结肠不同的解剖定位"
+      ],
+      "signals": [
+        "SL05",
+        "餐时/胃肠症状（探索性）"
+      ],
+      "refs": [
+        "S011",
+        "S012",
+        "S013"
+      ],
+      "boundary": "小鼠上消化道实验不证明人类结肠细胞持续发送睡眠请求，也不能推出任何人体临床疗效。",
+      "source_refs": [
+        "S011",
+        "S012",
+        "S013"
+      ]
+    },
+    {
+      "id": "M06",
+      "name": "呼吸调节、OSA 与睡眠碎片化",
+      "key_question": "呼吸暂停、低氧和微觉醒如何干扰睡眠？哪些测量具有诊断效度？",
+      "topics": [
+        "上气道力学、呼吸事件、觉醒和氧饱和度",
+        "PSG vs HSAT 的事件分母和人群适应性",
+        "睡眠呼吸障碍与日间嗜睡、心血管风险"
+      ],
+      "signals": [
+        "SL02",
+        "SL05",
+        "SL06",
+        "临床 PSG/HSAT"
+      ],
+      "refs": [
+        "S007",
+        "S032",
+        "X001"
+      ],
+      "boundary": "普通手环血氧、鼾声或 HSAT 单次阴性不等于临床确诊/排除。",
+      "source_refs": [
+        "S007",
+        "S032",
+        "X001"
+      ]
+    },
+    {
+      "id": "M07",
+      "name": "睡眠环境：空气、热、光、噪声",
+      "key_question": "通风、温湿度、光照和噪声分别如何影响睡眠？",
+      "topics": [
+        "CO₂ 作为通风代理，不等于独立致病因子",
+        "温湿度、核心体温和寝具微环境",
+        "环境噪声、光照与微觉醒",
+        "通风可同时改变噪声、颗粒物、湿度和温度"
+      ],
+      "signals": [
+        "SL02",
+        "SL05",
+        "卧室 CO₂/温湿度/光/噪声"
+      ],
+      "refs": [
+        "S014",
+        "S015",
+        "X005",
+        "X006",
+        "X007"
+      ],
+      "boundary": "不设未经证实的全人群 CO₂/温度阈值，不将通风干预的总效应归结于 CO₂ 单一机制。",
+      "source_refs": [
+        "S014",
+        "S015",
+        "X005",
+        "X006",
+        "X007"
+      ]
+    },
+    {
+      "id": "M08",
+      "name": "REM、梦境和异态睡眠",
+      "key_question": "梦境体验、REM 抑制、醒后睡眠瘫痪及行为执行属于哪些不同过程？",
+      "topics": [
+        "REM/NREM 与梦境报告的关系",
+        "噩梦困扰与普通梦境体验",
+        "醒时睡眠瘫痪 vs REM 行为障碍 RBD",
+        "梦境回忆受到夜醒频率影响"
+      ],
+      "signals": [
+        "SL05",
+        "SL08",
+        "梦境困扰（研究标签）"
+      ],
+      "refs": [
+        "X001",
+        "S028",
+        "S019",
+        "S033"
+      ],
+      "boundary": "梦中跑不动不能直接诊断睡眠瘫痪/RBD，更不能据此断言神经系统病变。",
+      "source_refs": [
+        "X001",
+        "S028",
+        "S019",
+        "S033"
+      ]
+    },
+    {
+      "id": "M09",
+      "name": "行为和外源时序因素",
+      "key_question": "咖啡因、运动、进食和日常作息分别通过哪些机制影响睡眠？",
+      "topics": [
+        "咖啡因腺苷受体拮抗与剂量/时间",
+        "运动、体温、活动量和恢复",
+        "进餐时间、光暴露与周末作息"
+      ],
+      "signals": [
+        "SL01",
+        "SL02",
+        "SL03",
+        "日常行为时间戳"
+      ],
+      "refs": [
+        "S018",
+        "S030",
+        "S031",
+        "S003"
+      ],
+      "boundary": "研究的是机制/暴露，不是寻找单一适用于所有人的禁咖啡或禁夜练规则。",
+      "source_refs": [
+        "S018",
+        "S030",
+        "S031",
+        "S003"
+      ]
+    },
+    {
+      "id": "M10",
+      "name": "睡眠障碍分类与鉴别框架",
+      "key_question": "哪些睡眠问题属于失眠、呼吸、节律、嗜睡、异态睡眠或运动障碍？",
+      "topics": [
+        "ICSD-3-TR 六大临床分类",
+        "慢性失眠与其他睡眠障碍鉴别",
+        "主观睡眠差/日间损害/客观 PSG 的边界",
+        "临床转诊和数据质量门禁，不展开试药效果排名"
+      ],
+      "signals": [
+        "SL02",
+        "SL06",
+        "SL07",
+        "SL08"
+      ],
+      "refs": [
+        "X001",
+        "S006",
+        "S007",
+        "S020",
+        "S005"
+      ],
+      "boundary": "本模块只整理诊断分类与重要共病路径，药物/组合治疗证据保留在历史附录，不作为研究主线。",
+      "source_refs": [
+        "X001",
+        "S006",
+        "S007",
+        "S020",
+        "S005"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "S021",
+      "source_id": "S021",
+      "title": "Multidimensional Sleep Health: Definitions and Implications for Cardiometabolic Health",
+      "year": 2025,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "scientific_statement",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12147655/",
+      "doi": null,
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "科学声明不直接提供特定干预的因果治疗效应"
+    },
+    {
+      "id": "S002",
+      "source_id": "S002",
+      "title": "Sleep Health: Can We Define It? Does It Matter?",
+      "year": 2014,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "conceptual_review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3902880/",
+      "doi": null,
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "概念构建并非单项干预疗效证据"
+    },
+    {
+      "id": "X001",
+      "title": "ICSD-3-TR: International Classification of Sleep Disorders, 3rd edition text revision",
+      "year": 2023,
+      "organization": "AASM",
+      "kind": "CLASSIFICATION_STANDARD",
+      "url": "https://shop.aasm.org/products/icsd-3-text-revision-ebook",
+      "note": "临床疾病分类权威标准；受版权及订阅限制，仅链接，不复制正文",
+      "source_id": null,
+      "doi": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "X002",
+      "title": "AASM Manual for the Scoring of Sleep and Associated Events, Version 3",
+      "year": 2023,
+      "organization": "AASM",
+      "kind": "MEASUREMENT_STANDARD",
+      "url": "https://learn.aasm.org/AssetListing/The-AASM-Manual-for-the-Scoring-of-Sleep-and-Associated-Events-Series-2-1455/Scoring-of-Sleep-and-Associated-Events-FAQs-6696",
+      "note": "PSG 睡眠分期、觉醒和呼吸事件等评分标准的官方说明；完整手册不是免费全文",
+      "source_id": null,
+      "doi": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "S027",
+      "source_id": "S027",
+      "title": "Use of Actigraphy for the Evaluation of Sleep Disorders and Circadian Rhythm Sleep-Wake Disorders: An American Academy of Sleep Medicine Clinical Practice Guideline",
+      "year": 2018,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6040807/",
+      "doi": "10.5664/jcsm.7230",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "不可直接延伸为普通消费级手环的诊断有效性"
+    },
+    {
+      "id": "S003",
+      "source_id": "S003",
+      "title": "The two-process model of sleep regulation: Beginnings and outlook",
+      "year": 2022,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "theoretical_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35502706/",
+      "doi": "10.1111/jsr.13598",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "理论框架不是个体夜醒病因诊断工具"
+    },
+    {
+      "id": "S001",
+      "source_id": "S001",
+      "title": "Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement",
+      "year": 2015,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "professional_consensus",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25979105/",
+      "doi": "10.5664/jcsm.4758",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "专家共识；存在个体差异，不能用单一阈值诊断"
+    },
+    {
+      "id": "S004",
+      "source_id": "S004",
+      "title": "Clinical Practice Guideline for the Treatment of Intrinsic Circadian Rhythm Sleep-Wake Disorders",
+      "year": 2015,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26414986/",
+      "doi": "10.5664/jcsm.5100",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "不应将治疗建议外推到未诊断的普通失眠"
+    },
+    {
+      "id": "X003",
+      "title": "Hyperarousal in insomnia disorder: Current evidence and potential mechanisms",
+      "year": 2023,
+      "organization": "Dressle & Riemann, Journal of Sleep Research",
+      "kind": "MECHANISM_REVIEW",
+      "doi": "10.1111/jsr.13928",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37183177/",
+      "note": "综述支持皮层/认知情绪唤醒研究价值；对 HR/HRV 等自主指标尚无定论",
+      "source_id": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "X004",
+      "title": "The hyperarousal model of insomnia: a review of the concept and its evidence",
+      "year": 2010,
+      "organization": "Riemann et al., Sleep Medicine Reviews",
+      "kind": "CLASSIC_MECHANISM_REVIEW",
+      "doi": "10.1016/j.smrv.2009.04.002",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19481481/",
+      "note": "历史基础理论；不可把单一 HRV 读数视为交感性夜醒诊断",
+      "source_id": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "S016",
+      "source_id": "S016",
+      "title": "The Effect of Diaphragmatic Breathing on Attention, Negative Affect and Stress in Healthy Adults",
+      "year": 2017,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "intervention_study",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00874/full",
+      "doi": "10.3389/fpsyg.2017.00874",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "缺乏等时长主动对照、分配方法存疑；未实际测试睡眠改善"
+    },
+    {
+      "id": "S017",
+      "source_id": "S017",
+      "title": "Slow breathing techniques before bedtime and the effects on sleep: A systematic review",
+      "year": 2026,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "systematic_review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41886931/",
+      "doi": "10.1016/j.smrv.2026.102284",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "纳入研究规模及异质性限制推断，未确认对每类失眠有效"
+    },
+    {
+      "id": "S008",
+      "source_id": "S008",
+      "title": "Glycemic Goals, Hypoglycemia, and Hyperglycemic Crises: Standards of Care in Diabetes—2026",
+      "year": 2026,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://doi.org/10.2337/dc26-s006",
+      "doi": "10.2337/dc26-s006",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "糖尿病指南阈值不能直接代替非糖尿病患者低血糖病因诊断"
+    },
+    {
+      "id": "S009",
+      "source_id": "S009",
+      "title": "Evaluation and management of adult hypoglycemic disorders: an Endocrine Society Clinical Practice Guideline",
+      "year": 2009,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19088155/",
+      "doi": "10.1210/jc.2008-1410",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "CGM 单点低值尤其夜间压迫伪低，不能代替临床确认"
+    },
+    {
+      "id": "S022",
+      "source_id": "S022",
+      "title": "Defective Awakening Response to Nocturnal Hypoglycemia in Patients with Type 1 Diabetes Mellitus",
+      "year": 2007,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "controlled_overnight_physiology",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1808097/",
+      "doi": "10.1371/journal.pmed.0040069",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "医学研究人为诱导极低血糖；不能推广到普通人自然凌晨睡眠"
+    },
+    {
+      "id": "S023",
+      "source_id": "S023",
+      "title": "Susceptibility of Interstitial Continuous Glucose Monitor Performance to Sleeping Position",
+      "year": 2013,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "human_measurement_validation",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3879750/",
+      "doi": "10.1177/193229681300700408",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "小样本、旧设备、设备迭代；不代表现代 CGM 全体误差率"
+    },
+    {
+      "id": "S011",
+      "source_id": "S011",
+      "title": "A gut-brain neural circuit for nutrient sensory transduction",
+      "year": 2018,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "animal_mechanism",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30237325/",
+      "doi": "10.1126/science.aat5236",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "研究并未直接证明人类失眠的肠道病因或治疗效果"
+    },
+    {
+      "id": "S012",
+      "source_id": "S012",
+      "title": "The gut vagal sensory pathway drives postprandial sleep via activation of PVH-projecting GABAergic neurons in the NTS",
+      "year": 2025,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "animal_mechanism",
+      "url": "https://www.nature.com/articles/s41467-025-66112-0",
+      "doi": "10.1038/s41467-025-66112-0",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "上消化道并非笼统的结肠细胞；不能推出人类干预有效"
+    },
+    {
+      "id": "S013",
+      "source_id": "S013",
+      "title": "Gut microbiota regulate insomnia-like behaviors via gut-brain metabolic axis",
+      "year": 2025,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "translational_mechanism",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39658705/",
+      "doi": "10.1038/s41380-024-02867-0",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "尚不能据此推荐菌群移植、益生菌或丁酸盐治疗失眠"
+    },
+    {
+      "id": "S007",
+      "source_id": "S007",
+      "title": "Clinical Practice Guideline for Diagnostic Testing for Adult Obstructive Sleep Apnea",
+      "year": 2017,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28162150/",
+      "doi": "10.5664/jcsm.6506",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "严重共病、严重失眠等需优先考虑 PSG；消费者手表不等于诊断设备"
+    },
+    {
+      "id": "S032",
+      "source_id": "S032",
+      "title": "Clinical Use of a Home Sleep Apnea Test: An American Academy of Sleep Medicine Position Statement",
+      "year": 2017,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "professional_position",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5612637/",
+      "doi": "10.5664/jcsm.6774",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "HSAT 阴性后需 PSG 的路径参照 S007；不是一项新随机试验"
+    },
+    {
+      "id": "S014",
+      "source_id": "S014",
+      "title": "The effects of bedroom air quality on sleep and next-day performance",
+      "year": 2016,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "field_intervention",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26452168/",
+      "doi": "10.1111/ina.12254",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "14/16人、小样本、CO₂仅为通风代理；原文将独立不显著认知结果组合做方向性检验，须核验多重性及预注册，不能声称两个实验均独立显著"
+    },
+    {
+      "id": "S015",
+      "source_id": "S015",
+      "title": "A single-blind field intervention study of whether increased bedroom ventilation improves sleep quality",
+      "year": 2023,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "field_intervention",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37142023/",
+      "doi": "10.1016/j.scitotenv.2023.163805",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "小样本、消费级穿戴设备偏差及室内条件混杂"
+    },
+    {
+      "id": "X005",
+      "title": "WHO Environmental noise guidelines for the European Region",
+      "year": 2018,
+      "organization": "WHO Europe",
+      "kind": "PUBLIC_HEALTH_GUIDELINE",
+      "url": "https://www.who.int/europe/publications/i/item/WHO-EURO-2018-3287-43046-60243",
+      "note": "环境噪声公共健康证据，不是某个卧室夜醒的唯一病因",
+      "source_id": null,
+      "doi": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "X006",
+      "title": "A systematic review of ambient heat and sleep in a warming climate",
+      "year": 2024,
+      "organization": "Sleep Medicine Reviews",
+      "kind": "SYSTEMATIC_REVIEW",
+      "doi": "10.1016/j.smrv.2024.101915",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1087079224000194",
+      "note": "现实环境温度/热暴露与睡眠关联；具体因果和个人最佳温度需分场景",
+      "source_id": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "X007",
+      "title": "How do we create a healthier thermal environment for sleep? A review of sleep thermal comfort and sleep quality",
+      "year": 2025,
+      "organization": "Building and Environment",
+      "kind": "RESEARCH_REVIEW",
+      "doi": "10.1016/j.buildenv.2024.112214",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360132324010564",
+      "note": "室内热环境的个体化差异及寝具微环境；不推出单一普适温度",
+      "source_id": null,
+      "verification": "OFFICIAL_OR_PUBLISHER_METADATA_VERIFIED_NOT_REGISTERED_S_ID"
+    },
+    {
+      "id": "S028",
+      "source_id": "S028",
+      "title": "Management of REM sleep behavior disorder: an American Academy of Sleep Medicine clinical practice guideline",
+      "year": 2023,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10071384/",
+      "doi": "10.5664/jcsm.10424",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "RBD 不等于普通噩梦或梦中跑不动；不能自行调药"
+    },
+    {
+      "id": "S019",
+      "source_id": "S019",
+      "title": "Position Paper for the Treatment of Nightmare Disorder in Adults",
+      "year": 2018,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "professional_position",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29852917/",
+      "doi": "10.5664/jcsm.7178",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "做梦、梦中跑不动与噩梦障碍不同；不能以梦解释诊断"
+    },
+    {
+      "id": "S033",
+      "source_id": "S033",
+      "title": "Sleep Paralysis",
+      "year": 2023,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_reference_review",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK562322/",
+      "doi": null,
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "二级参考文献，并非诊断试验；梦里跑不动不能直接诊断醒后睡眠瘫痪"
+    },
+    {
+      "id": "S018",
+      "source_id": "S018",
+      "title": "Dose and timing effects of caffeine on subsequent sleep: a randomized clinical crossover trial",
+      "year": 2025,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "randomized_crossover",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39377163/",
+      "doi": "10.1093/sleep/zsae230",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "样本小且仅男性；不支持自行故意增加咖啡因剂量"
+    },
+    {
+      "id": "S030",
+      "source_id": "S030",
+      "title": "Effects of morning versus evening exercise on sleep: a systematic review of comparative studies with a meta-analysis of randomized controlled trials",
+      "year": 2026,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "systematic_review_meta",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42632303/",
+      "doi": "10.1016/j.smrv.2026.102358",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "人群、强度及距入睡时间异质；不能推断晚练均不利"
+    },
+    {
+      "id": "S031",
+      "source_id": "S031",
+      "title": "Effects of Evening Exercise on Sleep in Healthy Participants: A Systematic Review and Meta-Analysis",
+      "year": 2019,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "systematic_review_meta",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30374942/",
+      "doi": "10.1007/s40279-018-1015-0",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "调节效果对排除单项研究敏感；与后续综述可能重复纳入原试验"
+    },
+    {
+      "id": "S006",
+      "source_id": "S006",
+      "title": "The European Insomnia Guideline: An update on the diagnosis and treatment of insomnia 2023",
+      "year": 2023,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38016484/",
+      "doi": "10.1111/jsr.14035",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "诊断和转诊依据需要临床解释；不能用穿戴设备替代"
+    },
+    {
+      "id": "S020",
+      "source_id": "S020",
+      "title": "基层医疗机构失眠症诊断和治疗中国专家共识（2024）",
+      "year": 2024,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "professional_consensus",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38951102/",
+      "doi": "10.3760/cma.j.cn112137-20240318-00608",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "共识不等于所有建议均有同等级 RCT 证据"
+    },
+    {
+      "id": "S005",
+      "source_id": "S005",
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM clinical practice guideline",
+      "year": 2021,
+      "organization": "原作者/研究机构（详见 S-ID 来源卡）",
+      "kind": "clinical_guideline",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "doi": "10.5664/jcsm.8986",
+      "verification": "EXISTING_S_ID_SOURCE_CARD",
+      "note": "睡眠限制等疗法需考虑禁忌证及专业评估；不等于普遍自助睡眠剥夺"
+    }
+  ],
+  "external_reference_note": "X-prefixed references are authoritative metadata links checked at publisher/official entry points, not yet registered global S-ID source cards.",
+  "import_type": "PUBLIC_FRAMEWORK_BASELINE",
+  "source_id_namespace": "AIH-S### identifies prior external bibliography; X### means public external authority link; neither is a new AI_book book-card B-ID",
+  "review_policy": "Public bibliographic pointer only; do not claim full-text review, independently verified medicine, or clinical recommendation."
+}
