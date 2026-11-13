@@ -10,6 +10,8 @@
 - [事件表：33条，1492—1765（CSV）](data/events_m0.csv)——四线主类别与次类别、年份/区间精度、来源、限制条件。
 - [来源登记：25条（CSV）](data/sources_m0.csv)——官方档案/博物馆/机构资料，以及资料类型、数据范围说明。
 - [大西洋奴隶贸易承运数据：1601—1775（CSV）](data/slave_carriers_m0.csv)——来自SlaveVoyages，不能代表殖民控制人口。
+- [财政来源准入矩阵：11条（CSV）](data/fiscal_source_admission_m0.csv)——五国财政数据的已知范围、口径与未下载状态。
+- [财政来源核查说明](data/fiscal_admission_m0.md)——OBR、Karaman–Pamuk、葡萄牙论文与数据仓库。
 - [M0/P0 字段定义、准入与因果边界](data/SCHEMA.md)——风险、口径、缺失、下一步。
 - [2026-11-14 初始研究会话](sessions/2026-11-14-M0-P0.md)——已读/未读、反例与阶段进展。
 
