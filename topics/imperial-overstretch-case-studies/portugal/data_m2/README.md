@@ -120,3 +120,18 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [reproduce_fiscal_capacity_gold_debt_bridge_m2.py](reproduce_fiscal_capacity_gold_debt_bridge_m2.py) | **实际运行通过的**版本锁定程序，需分别从DEBT.PT和Palma–Reis作者官网下载源XLSX，读取本仓库历史短表并再生两份CSV |
 
 报告：[帝国净财政贡献与公共黄金/债务偿付审计](../FISCAL_CAPACITY_GOLD_REMITTANCES_DEBT_SERVICE_BRIDGE_M2_20261114.md)。2024 fiscal Table3 DOI https://doi.org/10.1093/ereh/heae003；作者Footnote9说明帝国贡献扣除帝国相关费用，但该口径并非全部殖民长期经济净回报。运行输出CSV SHA-256：`8766845fc79226c7a84d79d0c215fe94283d4e786ddd57122126a0a52aeb6a8a`、`5c22f41dc7106590c36061f939af2f6363063193d6dfe8aea4fe972de1abb57e`。严格标注：财政研究完整年度原始收入/支出 **NOT_ACQUIRED**；1694黄金ASCM模型 **NOT_RUN**；1748债务率发表冲突 **OPEN**。
+
+
+## M2后续｜财政附录A1真实日期基准、黄金税率制度和1748局部版本敏感性
+
+数据源：Costa–Henriques–Palma (2024)官方在线Appendix（[OUP主文与Appendix入口](https://academic.oup.com/ereh/article/28/4/453/7667247)），不是ICPSR198143完整运行数据；DEBT.PT年度偿付来源的原始A XLSX已SHA锁定。
+
+| 新文件 | 内容／口径及实际检查 |
+|---|---|
+| [fiscal_nominal_revenue_benchmarks_appendix_a1_2024_m2.csv](fiscal_nominal_revenue_benchmarks_appendix_a1_2024_m2.csv) | 官方附录Table A1 **36行**1367—1844年名义中央收入（contos）和原参考文献；其中1762–1777、1834–1844均属时期年均值，不是某个“年度实收” |
+| [brazilian_gold_tax_institutions_appendix_a2_2024_m2.csv](brazilian_gold_tax_institutions_appendix_a2_2024_m2.csv) | 附录A2 **五阶段**黄金税制（`quinto`、`capitação`交替），显式保留1735–1751与1750-12-03改革日期文字重叠疑点 |
+| [fiscal_a1_explicit_years_vs_debt_service_m2.csv](fiscal_a1_explicit_years_vs_debt_service_m2.csv) | 可按确切日期匹配的**7行**1645、1656、1660、1681、1716、1730和1762–1777均值；所得比率不等于所有国库年度收入／全部债息口径 |
+| [debt_1748_published_vs_current_source_window_m2.csv](debt_1748_published_vs_current_source_window_m2.csv) | **15行**1743—1757年版本锁定的债务/GDP；2024 Table1 1748=9与复算1748=8.152251无法用通常整数取整解释，未验证的原因仍OPEN |
+| [reproduce_fiscal_a1_debt_service_m2.py](reproduce_fiscal_a1_debt_service_m2.py) | 实际在研究Runner下载源DEBT.PT A及GitHub文件重新执行，`PASS appendix_a1_rows=36 matched_revenue_entries=7 debt_local_window=15 year1748_table_conflict=OPEN` |
+
+详情：[官方财政附录日期级审计](../FISCAL_A1_DATED_BUDGETS_1748_DEBT_VERSION_AUDIT_M2_20261114.md)。源原始DEBT.PT未镜像；两个生成CSV的SHA-256：`c9f97912cf00d876868450d956ca41634f653f721f119fade21f588dae507881`，`616dff3b7361257124c35aab6e2e0c38a16718675498f1625929edcb8e5067af`。**严格财政因果识别／ASCM均NOT_RUN**。
