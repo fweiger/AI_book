@@ -102,3 +102,10 @@
 - [全年159条发行/存量对账CSV](data_m2/debtpt_issuance_vs_stock_delta_1642_1800_m3.csv) · [4组十年净发行核对](data_m2/debtpt_1740s_net_issuance_comparison_m3.csv) · [已实际运行的源哈希锁定复算脚本](data_m2/reproduce_debtpt_issuance_stockflow_m3.py)。
 - 红队发现**20/159年**存在超过0.01百万réis的债务存量变化与净发行表列的残差，全部出现在1643–1660或1668–1669；**1740年之后没有这种阈值以上残差**。必须区分“长期+短债=总债存量”和“年度存量变化=两种净发行”两个完全不同的恒等关系。1748发表9% vs原始版本8.1523%仍`OPEN`，不能强行判作纯粹四舍五入。
 - 这些文件名的`m3`指**候选下一步的方法增量**，不代表权威Issue #34 M2全部验收已关闭。新债发行与净入库现金、投资产出、帝国黄金因果链之间的连接仍`NOT_VERIFIED`。
+
+
+## M3新证据｜1743王室债权转换与巴西黄金1%税作为国债抵押
+
+- [1743_JUROS_CONVERSION_GOLD_EARMARKED_COFFERS_PROVENANCE_M3_20261114.md](1743_JUROS_CONVERSION_GOLD_EARMARKED_COFFERS_PROVENANCE_M3_20261114.md)：串联Azevedo (1947) 印刷页375明确定位的**1743年2月4日降息法令、1743—1745年宗主教座堂转款及1752年档案、1749年再次转换**，与Costa/Miranda/Nogues-Marco (2021工作稿及2024正式出版)所述约**5,000百万réis旧债转移**；强调它**不是1743年新借现金**，不能和DEBT.PT当年净新增长期`juros`≈**507.943百万réis**简单合并。
+- [DEBT.PT B殖民相关偿债金库8行核验CSV](data_m2/debtpt_selected_fiscal_coffers_debt_service_changes_m3.csv)、[可复算脚本](data_m2/reproduce_debtpt_colonial_coffers_m3.py)、[1743—1749年历史/法律/档案定位表](data_m2/juro_1743_1749_debt_conversion_evidence_m3.csv)。官方原始B XLSX经SHA锁定和真实运行，确认**1722—1761年巴西黄金运输1%税相关金库债务偿付净变化+50.984百万réis**、海外事务委员会+41.093百万réis。这些是**跨40年债务偿付安排的净变化，不是黄金税收入、当期新借款或1743年现金流**。
+- 2021工作论文在1706—1750年1,519份债券登记中报告殖民税源关联约17%；2024剑桥出版章在1760年观察基准下报告约24%，**样本分母不同，严禁当作7个百分点的同比增长**。法令和档案底稿尚未直接获得；完整核验和2025黄金ASCM仍`NOT_RUN`。
