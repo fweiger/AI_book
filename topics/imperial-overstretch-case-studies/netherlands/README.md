@@ -131,3 +131,12 @@
 - [11条季节性销售报告和估算表精确来源](voc_1791_1794_sale_report_registry_m3d.csv)：**7次普通VOC季拍**（1791秋—1794秋）、**3份中国回航货物拍卖报告**及**1份1792年阿姆斯特丹春季拍卖预测表**；该11条是档案位置，不是已录入销售金额，也不能把可能相互重叠的中国货物报告与普通拍卖额直接相加。官方目录将1793春季报告呈报年误写成`1973`，数据原样保留；1793秋的呈报日期未给出。
 - [12组可申请原始档案的精确卷号](voc_m3d_original_auction_archive_targets.csv)：重点`25/3`秘密协议、`25/79...139`付款收据、`15/81`商品报价和销售票据、`16/95`、`17/111`、`19/155`、`20/217`及1793政府实际资金发放原卷；[7层可证伪现金转换路径](voc_auction_to_cash_identification_m3d.csv)区分回航吨位、未售库存、价格保底、拍卖公告收入、真实银行收款、Cohen服务费用、政府专项援助与债务到期。
 - [来源台账](source_registry_m3d.csv)和[研究会话](sessions/2026-11-14-voc-m3d-auction-floor-liquidity.md)。档案目录的`appendices`和`context`虽为不同页面，均属**同一3.02.33来源家族**；原件与认证抄件不能计成两份独立证据。官方EAD→METS→JPEG下载流程已核对，但本轮无法取得该馆OAI对应目录/影像UUID，容器直连DNS失败，任何原始金额、价格底线和采购结算均`NOT_ACQUIRED`，历史效应`NOT_RUN`。持续Draft PR不合并main。
+
+## M3E（2026-11-14）— 亚洲业务收入、支出、盈亏与跨洋资金渠道（直接重建发表数据）
+
+- [M3E完整统计口径、机制与二次转录查错](M3E_ASIAN_REGIONAL_DEFICITS_FUNDING_20261114.md)：Huygens《Nieuwe Maritieme Geschiedenis van Nederland》2025年版表1完整收录1621—1790年**17期VOC亚洲收支和盈利/亏损**（对应`NLD-S23`）；全部17期`income−expenses`与出版结果吻合，非原始BGB账簿。**1689—1700之后所有时期均为亚洲业务负收益**，故1780战争不是亚洲亏损首次出现的时间点。1769—1780亏损3,010万盾（12个标签年）、1781—1790亏损5,040万盾（10个标签年），平均每标签年亏损由约250.83万升至504万盾，约2.01倍，但**不属于逐年真实利润或战争因果估计**，币制与具体年度定义仍未由原始账簿裁决。
+- [17期亚洲分账财务CSV](voc_asian_regional_financial_results_m3e.csv)：与此前Gaastra(1997)欧洲`sales-equipage`截然不同的**VOC亚洲业务会计主体**，不仅包含贸易往来，还可能包含亚洲税、通行费与治理费用；不可当作VOC本土公司利润、国家收入或狭义殖民驻军预算。
+- [Gaastra（1976）《Geld tegen goederen》董事会贵金属运输安排20期](voc_specie_director_resolution_allocations_m3e.csv)及[董事会分配的亚洲私人汇票兑付义务16期](voc_assignation_resolutions_m3e.csv)：直接读原始出版论文DBNL Table II、IV及脚注。金额是Heren XVII**批准按季节船队带出的贵金属配置/分配到各商会的汇票预计兑付额**，**不是**本轮重核的实际到港银货、真实银行兑付或共和国财政支出；汇票包含好望角科目；本文贵金属采用荷兰本土购入价并处理了1623年前reales的汇率。
+- [二次转载表3处差异审计](voc_asian_finance_secondary_transcription_errors_m3e.csv)：2009年Degroot课程报告Appendix11把1661—1670亚洲盈利1,640万抄成1,630万、1741—1750亚洲亏损1,180万抄成1,100万，并将末期写`1780–1790`而Huygens表写`1781–1790`。课程报告本身转引Gaastra/de Korte，**不是独立原始账簿证据**；其PDF仅获取文字提取，截图接口`cache miss`。
+- [四条跨洋资金工具政策事件](voc_asian_cash_policy_events_m3e.csv)：其中**1760年董事会将部分亚洲汇票兑付安排为秋季拍卖之后三分之二、春季拍卖之后三分之一**，反映拍卖回款与到期清算协调在1780战争前已存在；1785—1786延期兑付提议不视为实际偿清。
+- [来源台账](source_registry_m3e.csv)及[研究会话](sessions/2026-11-14-voc-m3e-asian-accounting-cash.md)。新增H8‘亚洲业务赤字→董事会贵金属配额/私人汇票兑付责任→欧洲拍卖实际收款→短债再融资’分环节可证伪设计。各来源分期、会计主体、按章程决议与真正现金不同；de Korte原附录、VOC原始本土与亚洲账册、Cohen拍卖实收票据`NOT_ACQUIRED`，战争因果估计与历史学独立评审`NOT_RUN`。继续原Draft PR未合并main。
