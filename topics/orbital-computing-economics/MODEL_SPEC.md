@@ -75,6 +75,10 @@ break_even = solve(C_orbit_per_usable_GPU_h − C_ground_per_usable_GPU_h = 0)
 
 已在本轮研究工作容器执行[模型原型](model_v1/orbital_cost_model.py)的同口径参数情景计算，并运行6项质量/电能/热学量纲/非法输入等测试。结果见[R1报告](R1_MASS_LAUNCH_COST_RESULTS_20261114.md)。**这只完成初次量纲与情景计算；原文AC-03/04/05针对100kW/1MW/10MW完整工程与商业TCO的验收尚为`not_run`/部分未核验**。GitHub提交的文件仍需独立Runner复核。
 
+## R2生命周期账本进展
+
+详见[R2报告](R2_BUILD_OPERATIONS_LIFECYCLE_20261114.md)与[model_v1/lifecycle_cost_model.py](model_v1/lifecycle_cost_model.py)。在R1质量模型基础上，已实施A初始及补发成本、B制造/4年IT更新/年度运维/失效率情景、独立地面对照、20年逐期现金流、8%实质贴现以及每有效GPU小时平价阈值。原型10项单测本轮工作容器全部通过；GitHub独立Runner及实际采购/故障实测仍未进行，AC-05完整工程商用验收为**partial/not_verified**，不能标pass。
+
 ## 7. 验收矩阵与防错项
 - 单元测试：单位换算、面积的 Stefan–Boltzmann 反推、全功率余额、异常输入拒绝；`NOT_RUN`。
 - 集成测试：100kW/1MW/10MW三档全闭环、质量与TCO敏感性；`NOT_RUN`。
