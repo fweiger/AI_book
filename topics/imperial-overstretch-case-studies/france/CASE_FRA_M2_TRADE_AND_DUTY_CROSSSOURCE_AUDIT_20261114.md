@@ -70,3 +70,7 @@ Manuel Covo, *Entrepôt of Revolutions*, ch.2 (2022), https://academic.oup.com/b
 下一步首先取得 Marbois N.III verso 出口税「Récapitulation」及**《Statistique générale》1804外商进口表**的清晰印刷页，消除国别表内部列错位与地域不同定义；随后对照TOFLIT18原始地理伙伴项和 SHD MS338（1785外国商船记录）建同税种/同来源的贸易图谱。法国王室1788 `G¹46*` 和 `G¹44*` 真实收付仍未取得；结论不可升级为净财税收益或因果估计。
 
 **状态：** M2 evidence extension；regional/row integer sums PASS；source table original visual `BLOCKED`；royal cash `NOT_ACQUIRED`；historical cause `NOT_RUN`。
+
+## 六、进一步双向核账：两格稀疏候选与商品重量表的额外缺口
+
+参见[1788年矩阵双向审计](CASE_FRA_M2_MATRIX_CROSSFOOT_FORENSICS_20261114.md)：在1804外商进口表的索引文字中，瓜德罗普×丹麦的56,000、Tabago×荷兰的53,000为**待原页核验的数学候选修正交点**（分别为36,000、58,000即可使所有行、列、总额同时闭合），不得宣布这两个数值在历史原书中确实如此。此前Guadeloupe/Tabago及Danois/Hollandais差异与此完全对应。此外，Manuel2005 Table2-4商品重量数据有南部与全殖民地同为1,035千磅的横向加总缺口、Jérémie行单独差1,074千磅（PDF截图失败），与此前仅记录地区出口税差异不同；须查原表列标题及是否遗漏商品列。全部原始值保持原样。
