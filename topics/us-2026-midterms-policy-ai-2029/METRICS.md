@@ -96,4 +96,4 @@
 - `H03_EMBEDDED_RELATED_RESIDUAL_REVISION`：同区同年`[v26(B9b−B9)]−[v25(B9b−B9)]`，2027全区**+1018MW**；只是两个统计层次的差额，不是实际已上电MW。
 - `H03_B9B_TOTAL_ASSOCIATED_VINTAGE_REVISION`：同年B9b v2026当前−B9b v2025原版，2027全区**−1865MW**；三项恒等`−2883+1018=−1865`。严禁把所有Large Load都写成纯DC/AI。
 - `H03_POSTCORRECTION_RETROSPECTIVE_OFFSET`：2026May Accuracy回顾`2026 Forecast July Peak` RTO−当前2026原版B9b，对2026—2031为+10MW、2032—2035为+9MW；**未知具体原因**。2026原版B9在2/6订正，不能回填为1/14首发同版。
-- [完整机器数据及验算](../reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，指标已追加统一catalog I58–I61；父子区域不能重复求和，当前没有项目级投产证据。
+- [完整机器数据及验算](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，指标已追加统一catalog I58–I61；父子区域不能重复求和，当前没有项目级投产证据。
