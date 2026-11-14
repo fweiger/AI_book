@@ -90,3 +90,10 @@
 - `I56` 上述同源差额占Total Associated百分比，2025首年RTO为4138/7729=53.539%，DOM占RTO差额79.410%。2023/24跨文件按同标签得出的1726/3018MW只是带`UNCONFIRMED`标志的proxy。
 - `I57` 历史预测准确率的出版版本敏感性：以相同2026五月后验实际8167.174MW，2025六月Total表v2024/v2025预测7642/7729MW对应APE6.430%/5.365%（新版更准）；2026五月回顾v2024/v2025预测7939.180/7735MW对应APE2.792%/5.292%（新版更差）。**不是预测真实能力反转，而是源定义不一致时排名不稳定**。指标必须记录`publication,forecast_vintage,target_year,metric_basis,actual_vintage`。
 - 原版2024PDF明确2024-02-01 Revised但LAS网址2023-12-27，做点时刻预测误差时**以确实可证明的版本发布日期为准**。见[完整计算](reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)。
+
+## H03v10：2025原版与2026订正版B9/B9b未来负荷模型修订
+- `H03_B9_ADDITIONAL_VINTAGE_REVISION`：固定目标年度及PJM区域，2026当前原版B9 Above Embedded－2025原版B9，2027全区**−2883MW**；额外模型负荷修订而非已实现DC项目。
+- `H03_EMBEDDED_RELATED_RESIDUAL_REVISION`：同区同年`[v26(B9b−B9)]−[v25(B9b−B9)]`，2027全区**+1018MW**；只是两个统计层次的差额，不是实际已上电MW。
+- `H03_B9B_TOTAL_ASSOCIATED_VINTAGE_REVISION`：同年B9b v2026当前−B9b v2025原版，2027全区**−1865MW**；三项恒等`−2883+1018=−1865`。严禁把所有Large Load都写成纯DC/AI。
+- `H03_POSTCORRECTION_RETROSPECTIVE_OFFSET`：2026May Accuracy回顾`2026 Forecast July Peak` RTO−当前2026原版B9b，对2026—2031为+10MW、2032—2035为+9MW；**未知具体原因**。2026原版B9在2/6订正，不能回填为1/14首发同版。
+- [完整机器数据及验算](../reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，指标已追加统一catalog I58–I61；父子区域不能重复求和，当前没有项目级投产证据。

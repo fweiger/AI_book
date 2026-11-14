@@ -99,3 +99,9 @@
 ## H09/H10本轮真正取得的实物数据（2026-11-14）
 - **H09**：[Travis County/SpaceX法律实体优惠合同登记3行](../cases/musk-2026/incentive_contracts.csv)及[事件六行](../cases/musk-2026/policy_event_ledger.csv)。包含2020原始Travis County合同、2025县级审查、2026-04据地方KUT报道的9%预期返利扣减、2025Tesla年报的合并财务不重大披露、2026-11 Starbase未来税惠申请；**KUT扣减的正式书记官会议记录和绝对美元尚未拿到，不能标经官方直接核查**。[原始协议核查报告](../reports/2026-11-14_h09_travis_texas_incentive_preelection_control.md)。主事件账增加E073—E077，其中新政府影响还未被识别。
 - **H10**：[BLS CPI/月度22行](h10_bls_cpi_sa_monthly_2025_2026.csv)、[Treasury 2Y/10Y 467交易日](h10_us_treasury_2y_10y_daily_2025_2026.csv)、[BEA PCE发布版本4条](h10_bea_pce_release_vintages_2026.csv)、[FOMC真正政策两条](h10_fomc_official_decisions_2026.csv)；[离线脚本](../analysis/recompute_h10_open_data.py)在Ubuntu真实运行PASS，报告见[H10第一轮](../reports/2026-11-14_h10_cpi_pce_fomc_treasury_pit_baseline.md)。**2025-10 CPI缺值NA，2026-08 BEA PCE数值存在后续修订**，不能视为首次公示时已可知；未抓全量核心PCE指数/期货预期/企业债务面板。
+
+## H03同口径原版预测年度分解（2025原版 vs 2026订正版）
+- [h03_pjm_2025_2026_original_b9_b9b_revisions.csv](h03_pjm_2025_2026_original_b9_b9b_revisions.csv)：6个互不应重复加总的RTO/主要区域×2026—2035年共60行，保存2025与2026各自B9、B9b、差额和总修订三部分及源SHA。
+- [h03_pjm_2027_original_zone_revision_contributions.csv](h03_pjm_2027_original_zone_revision_contributions.csv)：2027 DOM/AEP/COMED/PS/PL/其他六个不重叠分区与RTO总计，额外部分/已嵌入相关部分/总量皆能对账。
+- [h03_pjm_2026_original_vs_accuracy_rto.csv](h03_pjm_2026_original_vs_accuracy_rto.csv)：10目标年原版B9b vs2026 May Accuracy回顾RTO+9/10MW差，状态`UNEXPLAINED_SOURCE_DIFFERENCE`。
+- [标准库复算](../analysis/recompute_h03_b9b_vintage_decomposition.py)：可附三档原始官方XLSX与SHA实现单元格对账；2026 B9含2026-02-06更正，2025/26`B9b−B9`为统计构造非实际运行MW。

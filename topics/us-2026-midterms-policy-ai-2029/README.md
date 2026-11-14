@@ -80,3 +80,6 @@
 
 ## H03后续实证｜原版Table B9与B9b不同计量范围的精确审计（2026-11-14）
 - [完整数据分析报告](reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)：2025官方原版**同一Excel**中2025 RTO B9“Above Embedded”3591MW、B9b“Total Associated”7729MW，差4138MW；其中DOM3286MW(79.41%)、AEP349MW(8.43%)、其余503MW。2023/24原版B9与2025六月Total跨文档对照约分别差1726/3018MW，但**非同一份发行文件，不可直接当精确嵌入MW**。不同出版物还会反转2025预测版本的误差排名（原始口径未严格对齐），见[数据明细](data/h03_pjm_original_above_embedded_vs_total_bridge_2023_2030.csv)、[同源zone桥接](data/h03_pjm_2025_within_workbook_zone_bridge.csv)、[标准库复算](analysis/recompute_h03_original_bridge.py)。
+
+## H03第十轮｜2025原版与2026勘误原版的B9/B9b修订分解（2026-11-14）
+- [完整原始来源实证报告](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)：PJM同目标2027 RTO额外调整B9 **13668→10785MW**(−2883)，总量B9b **17721→15856MW**(−1865)，差额部分B9b−B9 **4053→5071MW**(+1018)。Dominion总上修+740，AEP−902，PPL−1134；同源数据覆盖2026—2035共60条区域/年份，并独立核对2026 Accuracy RTO存在9—10MW未解版本差。2026 **B9明确有2026-02-06修正**，不能宣称初版2026-01-14数值；**预测不是实际AI数据中心投资或政治因果**。附[60行机器面板](data/h03_pjm_2025_2026_original_b9_b9b_revisions.csv)、[7区域分解](data/h03_pjm_2027_original_zone_revision_contributions.csv)、[回顾差异](data/h03_pjm_2026_original_vs_accuracy_rto.csv)、[标准库复算与三原始源校验](analysis/recompute_h03_b9b_vintage_decomposition.py)。

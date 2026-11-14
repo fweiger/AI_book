@@ -28,3 +28,5 @@
 
 - [2026-11-14 H03 B9 above-embedded与B9b total原始发布版本实证](2026-11-14-h03-original-embedded-bridge.md)
 - [2026-11-14 H09德州县合同/选前审查与H10 BLS/Treasury/BEA/FOMC首轮真实复算](2026-11-14-h09-h10-first-official-data.md)
+
+- [2026-11-14 H03 2025原版与2026订正版B9/B9b负荷预测修订分解](2026-11-14-h03-b9b-vintage-decomposition.md)
