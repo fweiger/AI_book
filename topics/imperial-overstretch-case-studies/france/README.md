@@ -145,3 +145,12 @@
 - [2005论文五行出口重量加总复核CSV](manuel_1788_weight_crossfoot_m2.csv)：保留PDF原提取值及每行剩余差额，不静默填补缺失商品重量。
 
 **验证状态**：矩阵整数加总及最小两格假设PASS，**历史原页视觉核验仍BLOCKED**；全部数据仅用于来源审计，不能从小额残差反推漏税、走私或法国王室现金损失。
+
+## M2来源依赖与正式转入M3战略收缩（2026-11-14）
+
+- [M2来源依赖及Manuel商品栏核验](CASE_FRA_M2_SOURCE_LINEAGE_AND_COLUMN_LABELS_20261114.md)：区分Marbois1790原行政账、Laborie1798疑似同源转述、Manuel2005明确引自Marbois、Ardouin1853回顾与同1804图册的Rumsey不同数字扫描；**不同刊本≠统计独立性**。Manuel原论文p25五个出口商品列标签已从PDF检索文字识别，仍待原页图像。
+- [8条来源关系CSV](source_lineage_dependency_m2.csv)；[Manuel出口商品5行有列名复算CSV](manuel_1788_commodity_labeled_m2.csv)：保留1,035千磅和1,074千磅冲突，未静默修复。
+- [M3初步：1791—1804法属大西洋战略收缩与1803路易斯安那公约金融结构](CASE_FRA_M3_ATLANTIC_STRATEGY_AND_LOUISIANA_FINANCE_1791_1804.md)：美国国家档案馆原始条约明确**60m法郎的美债股票面值+20m法郎美国债权人清偿上限**。此交易不是法国1803年当期取得80m法郎现金，签约人Barbé-Marbois正是此前圣多明多财政官员；注意1803卖地早于1804海地独立，不能倒置因果。
+- [1803两份财务公约金融条款CSV](louisiana_1803_terms_m3.csv)（8条）、[1791—1804关键事件及证据级别CSV](atlantic_1791_1804_events_m3.csv)（9条）。
+
+M3**只完成条约级金融工具及事件先后核验**：实际贴现净收入、法国战争与海军现金开支、债权人实际批准支付、1788法国本土国库税款全部`NOT_ACQUIRED`；因果`NOT_RUN`，保留Draft PR，不合并。
