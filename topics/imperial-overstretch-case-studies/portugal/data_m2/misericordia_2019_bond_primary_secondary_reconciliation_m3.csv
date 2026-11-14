@@ -1,0 +1,8 @@
+metric,records_in_2019_table5,known_principal_nominal_reis,known_principal_contos,percent_of_table5_observed_known_sum,percent_of_2019_table4_published_total,evidence_status,interpretation_warning,source_doi
+published_table4_all_acquisitions,,195509941,195.509941,108.704841,100.000000,PUBLISHED_TOTAL_FROM_TABLE4,Fiscal-year investment accounts; not reconciled to every Table5 line,https://doi.org/10.4000/lerhistoria.4730
+table5_all_20_records_with_19_known_principals,20,179853941,179.853941,100.000000,91.992223,SUM_OF_19_RECORDED_AMOUNTS,One additional Table5 bond has principal displayed as dash—not zero,https://doi.org/10.4000/lerhistoria.4730
+table5_treasury_direct_creditor_replacement,5,106773748,106.773748,59.366922,54.612951,EXPLICIT_TREASURY_DELIVERY,Money delivered to sovereign Treasury to satisfy existing creditors; not net borrowing,https://doi.org/10.4000/lerhistoria.4730
+table5_secondary_bonds_14_known,15,73080193,73.080193,40.633078,37.379272,14_KNOWN_OF_15_SECONDARY,15 secondary contracts in total; one principal unreported,https://doi.org/10.4000/lerhistoria.4730
+table5_secondary_unobserved_principal,1,,,,,NOT_ACQUIRED,Do not impute 15656000 reis as this missing row without original ledger,https://doi.org/10.4000/lerhistoria.4730
+table4_minus_19_known_table5_principals,,15656000,15.656000,8.704841,8.007777,SOURCE_TABLE_RECONCILIATION_OPEN,Difference could be missing/unlisted or different measurement conventions,https://doi.org/10.4000/lerhistoria.4730
+treasury_direct_year_1790,2,84814724,84.814724,47.157557,43.381285,TWO_PUBLISHED_1790_DIRECT_OBSERVATIONS,Both earmarked for redemption of earlier creditors,https://doi.org/10.4000/lerhistoria.4730
