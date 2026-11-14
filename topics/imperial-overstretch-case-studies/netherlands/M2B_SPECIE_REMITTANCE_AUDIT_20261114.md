@@ -4,7 +4,7 @@
 
 ## 一、为什么本轮需要单独验证现金的“指令”与“执行”
 
-Arent Pol (1985), `Tot gerief van India: Geldexport door de VOC en de muntproduktie in Nederland, 1720-1740`, *Jaarboek voor Munt- en Penningkunde* 72, printed pp. 65 onward; key appendix III printed pp. 140–146. 在线全文PDF：https://jaarboekvoormuntenpenningkunde.nl/jaarboek/1985/1985d.pdf
+Arent Pol (1985), `Tot gerieff van India: Geldexport door de VOC en de muntproduktie in Nederland, 1720-1740`, *Jaarboek voor Munt- en Penningkunde* 72, printed pp. 65 onward; key appendix III printed pp. 140–146. 在线全文PDF：https://jaarboekvoormuntenpenningkunde.nl/jaarboek/1985/1985d.pdf
 
 实际从原文PDF直接读取并核对了导论（p65–67）、附录III方法说明（pp139–143）、阿姆斯特丹商会的分年金额表（pp144–146）及总结（p121）。使用的是作者根据原始荷兰商会及亚洲账簿重建的**学术原始研究表**，并非本轮独立阅读了VOC原始手写账页。
 
