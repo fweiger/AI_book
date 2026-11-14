@@ -62,3 +62,8 @@
 ## CPI公告日美债收益率绝对变动（v0.2.3探索性）
 - `H10_CPI_RELEASE_2Y_ABS_BP`与`H10_CPI_RELEASE_10Y_ABS_BP`已纳入[统一指标目录](catalog.csv)，定义BLS实际CPI发布日同日Treasury收益率相对**上一有观测交易日**的绝对基点变动。**不是**直接CPI Surprise或美联储加息预测概率。
 - [2025—26共22次真实公布日CSV](../data/h10_cpi_release_treasury_2y10y_2025_2026.csv) · [随机化稳健性报告](../reports/2026-11-14_h10_cpi_release_ust_22_event_robustness.md) · [标准库重算](../analysis/recompute_h10_cpi_release_ust_events.py)：2Y完整样本未调整p=0.0483，剔2026-11-10之后p=0.1389；说明结果对单个异常日敏感，整条政策传导仍UNTESTED。
+
+## H03第十三轮：源表身份交叉审核的治理层指标
+- I65：诉讼EN1标Large Load的2023预测版6格与官方B8a Solar 6/6相同、与B9 0/6相同，是**来源错表疑点**，防止把太阳能对负荷的调整当数据中心新负荷。
+- I66：纠正2023版Y0+5的负荷调整占RTO峰值`9866/155703=6.336%`，而EN1`4185/155703=2.688%`；2026版Y0+5比例21.714%，相对倍数由8.079纠正为3.427。不代表实际需求已建成。
+- I67：2017—22 FERC投诉附件的其他版本尚未独立核PJM原件，标`LITIGANT_EXHIBIT_ONLY`；这一处错误不能推广为所有法律证据均错。见[源报告](../reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)。

@@ -37,3 +37,5 @@
 
 - [2026-11-14 H03勘误前B9来源缺失及RTO修订幅度比审计](2026-11-14-h03-uncorrected-b9-source-gate.md)
 - [2026-11-14 H09州官方金额缺失和H10 CPI发布日美债22事件反证](./2026-11-14-h09-state-record-h10-cpi-release-ust-falsification.md)
+
+- [2026-11-14 H03 FERC诉讼附件2023大负荷数据疑似误引太阳能B8a](2026-11-14-h03-ferc-en1-source-audit.md)

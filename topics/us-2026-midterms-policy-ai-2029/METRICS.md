@@ -111,3 +111,9 @@
 - `I63`：是否确实取得2026-02-06之前未订正B9的**同一定义、原始文件SHA和发布时点**。当前**false**，由此`Feb6_B9_correction_delta_MW=NA`，不能拿1月B9b推算更正前B9，也不能因Wayback暂不可达得出未发布结论。
 - `I64`：`100*abs(2026JanStandaloneB9b−2025OriginalB9b)/abs(2026RTO夏季峰值−2025RTO夏季峰值)`，目标2027、2028、2029、2030分别**49.665%、48.210%、46.275%、201.714%**（2030方向相反）。**仅描述两组未来负荷预测修订幅度，不是一个可加的AI经济贡献率**；B9b已包含模型嵌入项，统计对象非DC专属。
 - [十条来源原始SHA及门槛](data/h03_pre_correction_b9_source_availability.csv)、[四年修订量数据](data/h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)、[标准库复算](analysis/recompute_h03_pre_correction_source_gate.py)。
+
+## H03第十三轮：专家/诉讼证据源表标识与更正占比
+- `I65`：`EXPERT_EXHIBIT_PJM_TABLE_MATCH`——对同`vintage×target_year×zone`，FERC诉讼EN1引用的2023 Load Adjustments**与PJM原B8a分布式太阳能六格全匹配（6/6）**，但与原B9大型负荷六格**0/6匹配**。这是源表/指标身份审计，不是统计显著性或法律裁判。
+- `I66`：`CORRECTED_PJM_B9_Y0_PLUS_5_SHARE`——用真实PJM原B9除同版PJM RTO Summer Peak：2023版第5年2028为9866/155703=**6.336%**，EN1错误4185/155703=2.688%，低估3.649pp。以2026版第5年2031的41477/191017=21.714%对比，增长占比倍数从**8.079x修正为3.427x**；这是跨版预测指标比较，不是实际投产增长率。
+- `I67`：`LITIGANT_HISTORICAL_VINTAGE_SOURCE_QUALITY`——2017—22历史行暂标`LITIGANT_EXHIBIT_ONLY_NOT_PRIMARY_VERIFIED`，2023行`SOURCE_TABLE_MISMATCH_B8A`，2024—26仅在单独原官方源确认后才能纳入正式PIT/统计检验。支持H03、H08，但不升级国会政治因果。
+- [PDF原始SHA与六格复算证据](reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)。

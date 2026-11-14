@@ -131,3 +131,9 @@
 ## H09州官方380/381记录+H10 CPI事件日稳健性（2026-11-14）
 - [Texas Comptroller公开380/381 CSV单条登记及SHA](../cases/musk-2026/texas_comptroller_0005328_registry_snapshot.csv)：Travis County×Colorado River Project LLC编号0005328，州备案2022-05最近更新、总货币值空白非零、截止日期与县签署合同差一天。[来源/不能算9%实际美元的报告](../reports/2026-11-14_h09_texas_381_registry_missing_cash_audit.md)，[2020/21/22独立年度金额空值记录](../cases/musk-2026/travis_2020_2022_grant_cash_reconciliation.csv)。2020签约新闻十年估算不能乘9%冒充官方实际现金扣留。
 - [22个真实CPI公布日×Treasury日度2Y/10Y CSV](h10_cpi_release_treasury_2y10y_2025_2026.csv)，2025-01—2026-11与非公布交易日444个对照；[同月20,000次随机化+去异常稳健性](../reports/2026-11-14_h10_cpi_release_ust_22_event_robustness.md)，[标准库计算脚本](../analysis/recompute_h10_cpi_release_ust_events.py)。该统计结果是日度关联，未取得当天预发布CPI一致预期/期货分解，不能认定利率变动由CPI造成。
+
+## H03第十三轮：FERC专家附件EN1引用错表的源级实证（2026-11-14）
+- [h03_ferc_en1_2023_solar_vs_b9_six_years.csv](h03_ferc_en1_2023_solar_vs_b9_six_years.csv)：2023版2023—28六个目标年，EN1与原PJM B8a Distributed Solar完全相同，但与B9 Large Load完全不同；逐年误差MW和占RTO夏季峰值%。
+- [h03_ferc_en1_y5_adjustment_share_audit_2017_2026.csv](h03_ferc_en1_y5_adjustment_share_audit_2017_2026.csv)：10版每版第5年比较；**2017—22只有诉讼附件二手尚未逐年核PJM原件**，2023做B9纠正，2024—26有先前原版来源支持；不当作十年完备PIT回测。
+- [h03_ferc_en1_pdf_source_mapping.csv](h03_ferc_en1_pdf_source_mapping.csv)：诉讼原件与PJM2023官方B8a/B9、2024方法课件的源PDF SHA和零基页码；不因诉讼提出便当FERC批准监管规则。
+- [标准库六格自动验证和可选双PDF SHA校验](../analysis/recompute_h03_ferc_en1_table_source_audit.py)及[研究报告](../reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)。

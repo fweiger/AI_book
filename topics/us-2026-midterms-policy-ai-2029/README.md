@@ -100,3 +100,6 @@
 
 ## H03第十二轮：2/6前原B9来源门槛与RTO预测修订对照（2026-11-14）
 - [原B9尚未取得的证据资格审计](reports/2026-11-14_h03_uncorrected_b9_source_gate.md)：PJM 2026-01-14主报告PDF共36页、SHA固定，正文没有完整B9数据附件；独立Jan B9b只能确认Total，2/6以后独立B9与合并Excel都已更正。**不能计算Feb6嵌入负荷修正量（NA）**，并不等于历史版本确实不存在。[来源登记](data/h03_pre_correction_b9_source_availability.csv)、[2027—30整体RTO峰值 vs B9b总量修订规模](data/h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)与[复算脚本](analysis/recompute_h03_pre_correction_source_gate.py)。两组修订规模比2027—29约46—50%，只是绝对值对照，**不是可加的因果份额**。
+
+## H03第十三轮｜FERC诉讼专家EN1的2023“负荷调整”行高度疑似引用了PJM太阳能B8a（2026-11-14）
+- [官方双PDF六格对照及完整审计报告](reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)：Exelon 2026-11-03向FERC EL27-11-000提交EN1的2023版`Load Adjustments`六目标年**全等于PJM2023原B-8a Distributed Solar（2888/3269/3566/3841/4035/4185MW）**，却**全不等于官方B-9 Above Embedded（2231/3393/4654/6594/8300/9866MW）**；两份官方源SHA已实测。2023版第五年目标2028大型负荷占PJM峰值应为**6.336%**，而诉讼附件误列仅**2.688%**；2026版第五年相对2023第五年的占比倍数从表面**8.079倍**修正为**3.427倍**。这是**诉讼附件来源误引疑点**，不评价当事人动机/诉讼胜负，也不否认真实大型负荷增长。2017—22旧版仅留附件二手数据，未全部核原表。数据见[六格CSV](data/h03_ferc_en1_2023_solar_vs_b9_six_years.csv)与[标准库复算](analysis/recompute_h03_ferc_en1_table_source_audit.py)。
