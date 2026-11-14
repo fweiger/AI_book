@@ -27,6 +27,9 @@
 - [Travis County县书记官2026-04-07官方Minutes/Transcript](reports/2026-11-14_h09_official_minutes_primary_confirmation.md)：**议案26 4票赞成0反对1弃权，扣留2020—22合格grant的9%**；同日**议案6**亦以4-0、1弃权批准2025—26社区投入方案。县政府原始文书PDF、SHA与逐议案台账均已核到[H09县级原始表](cases/musk-2026/travis_official_votes_20260407.csv)；这一行为早于选举、尚未取得扣留绝对USD与实际追回款，不能称2027政治效应。
 - [BEA NIPA官方连续33个月整体/核心PCE季调指数](data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)：2024-01至2026-09，2026-09核心PCE环比0.3165%、同比3.1212%；[BEA来源版本说明](reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)及[离线复算脚本](analysis/recompute_h10_bea_snapshot.py)已在Ubuntu实际运行**PASS**。2026-11-14取回版不是每个月原始首发PIT。
 
+## H10 18个月CPI/PCE环比实证对照（2026-11-14）
+- [CPI和PCE同月变化的描述性统计](reports/2026-11-14_h10_cpi_pce_alignment_18_month_sample.md)：2025-01—2026-09共21个月，因CPI起始和2025年10月缺值，只有**18个月有效配对**。整体月环比Pearson `r=0.946129`，核心月环比`r=0.553099`；这意味着核心两种通胀指标并非简单替代品，**并不证实美联储因果或加息预测**。[21行含缺失CSV](data/h10_cpi_pce_aligned_monthly_2025_2026.csv)和[离线复算PASS](analysis/recompute_h10_cpi_pce_alignment.py)。
+
 ## 11个可直接接手的AI任务
 | 工作ID | 核心研究 | Issue |
 |---|---|---|
