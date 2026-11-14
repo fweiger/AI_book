@@ -1,0 +1,39 @@
+{
+  "author_citation": "https://doi.org/10.1017/S0022050719000056",
+  "author_workbook_sha256": "ee80439059ebfa3f67f870430671098fe6c853000be64d2605111285ee63045c",
+  "author_workbook_source_url": "https://drive.google.com/file/d/17M1nrjx-6B7fIMJGNTJ6tle6TtWNkLA7/view",
+  "case_id": "CASE-PRT-001",
+  "consistency": {
+    "max_abs_cpi_index_identity_error": 0,
+    "max_abs_real_gdp_identity_error": 0
+  },
+  "expected_source_sha256": "ee80439059ebfa3f67f870430671098fe6c853000be64d2605111285ee63045c",
+  "historical_gdp_units": "1990 Geary-Khamis international dollars",
+  "license_notice": "Author source workbook linked, not redistributed. Public redistribution license not verified; derivatives here are selected benchmarks and aggregated statistics.",
+  "outputs": {
+    "gdp_benchmarks_m2.csv": "ebcef258987d8ad705ce3e518603ff6cc150f40441eded11554b64136a176ae3",
+    "gdp_decadal_aggregates_m2.csv": "e482f2473b05606c05e4ea451bccb47dd4c98442d6268bcb80502584dc4bedeb",
+    "gdp_rolling_sensitivity_m2.csv": "449832059c7af178332dff65e6ae599f56122f1148cc5025bab7357e7e0b8535",
+    "gdp_source_variable_dictionary_m2.csv": "ae74f004c73e4cd6e0c75606c604f4607ebedcbfa26c0c2e27668eee69341f54",
+    "gdp_window_changes_m2.csv": "a274566bd97981f8b95ab5b6bd14e4575bb9172b42bb1488d6e929defa77a56f"
+  },
+  "phase": "M2",
+  "publication_conflict": {
+    "author_workbook_pc_gdp": 987.2047714,
+    "published_2025_table1_pc_gdp": 830,
+    "status": "SOURCE_CONFLICT_UNRESOLVED_NOT_A_PROVEN_MODEL_INPUT_ERROR",
+    "year": 1700
+  },
+  "source_hash_verified": true,
+  "status": {
+    "annual_fiscal": "NOT_ACQUIRED",
+    "model_replication": "NOT_RUN",
+    "workbook_audit": "PASS"
+  },
+  "workbook_name": "palmareis_JEH_2019.xlsx",
+  "years": {
+    "count": 324,
+    "first": 1527,
+    "last": 1850
+  }
+}

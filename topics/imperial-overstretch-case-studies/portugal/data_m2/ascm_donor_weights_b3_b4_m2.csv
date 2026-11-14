@@ -1,0 +1,11 @@
+scenario,country,weight_cpi,weight_real_gdp,weight_real_gdp_per_capita,source_table,published_pdf_page,source_pdf_url
+baseline_B3,England,0.3447858544,0.6480259287,0.558349731,B.3,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+baseline_B3,Italy,-0.001936785,0.0003098356,-0.00361312,B.3,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+baseline_B3,Holland,0.00042796,0.0628412055,0.179271034,B.3,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+baseline_B3,Germany,0.6576323497,0.3103989365,-0.002034762,B.3,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+baseline_B3,France,0.0006382585,-0.030849063,0.078166484,B.3,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+baseline_B3,Spain,-0.0015476376,0.0092731585,0.189860633,B.3,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+exclude_Spain_Holland_B4,England,0.349591138,0.645009901,0.629040708,B.4,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+exclude_Spain_Holland_B4,Italy,-0.017179219,0.008203033,0.164677046,B.4,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+exclude_Spain_Holland_B4,Germany,0.664109054,0.373086137,0.201623413,B.4,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+exclude_Spain_Holland_B4,France,0.003479029,-0.026299069,0.004658833,B.4,33,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf

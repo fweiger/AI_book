@@ -1,0 +1,8 @@
+year_start,year_end,n_years,fiscal_appendix_nominal_central_receipt_annual_mean_contos,debtpt_mean_annual_recorded_debt_service_contos,descriptive_ratio_debt_service_to_nominal_receipts_pct,fiscal_observation_type,original_appendix_cited_source,caveat
+1645,1645,1,1266.100000,204.072969,16.118235,single_benchmark_year,Dias (1985) and archival manuscript supplements,DESCRIPTIVE_SAME_YEAR_SOURCE_MIX_NOT_MODERN_EXHAUSTIVE_CASH_BUDGET
+1656,1656,1,1466.700000,198.352343,13.523716,single_benchmark_year,Prestage (1920) and archival manuscript supplements,DESCRIPTIVE_SAME_YEAR_SOURCE_MIX_NOT_MODERN_EXHAUSTIVE_CASH_BUDGET
+1660,1660,1,1788.900000,322.172977,18.009558,single_benchmark_year,Hespanha (1994) and archival manuscript supplements,DESCRIPTIVE_SAME_YEAR_SOURCE_MIX_NOT_MODERN_EXHAUSTIVE_CASH_BUDGET
+1681,1681,1,1702.200000,196.863695,11.565251,single_benchmark_year,Dias (1985),DESCRIPTIVE_SAME_YEAR_SOURCE_MIX_NOT_MODERN_EXHAUSTIVE_CASH_BUDGET
+1716,1716,1,4342.000000,337.018027,7.761815,single_benchmark_year,Santarém (1850); décima imputed from 1681 and 1730,DESCRIPTIVE_SAME_YEAR_SOURCE_MIX_NOT_MODERN_EXHAUSTIVE_CASH_BUDGET
+1730,1730,1,6356.000000,402.578674,6.333837,single_benchmark_year,Humbert (1730); Carrara (2011),DESCRIPTIVE_SAME_YEAR_SOURCE_MIX_NOT_MODERN_EXHAUSTIVE_CASH_BUDGET
+1762,1777,16,5222.900000,526.502028,10.080645,published_nominal_annual_mean_multiyear_period,Thomaz (1988); period average,DESCRIPTIVE_RATIO_TO_BENCHMARK_NOT_FULL_ANNUAL_SPENDING;REPORTS_PERIOD_AVERAGE

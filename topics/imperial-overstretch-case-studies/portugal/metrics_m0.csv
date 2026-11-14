@@ -1,0 +1,9 @@
+metric_id,period,metric,value_low,value_high,unit,owner_scope,source_id,evidence_status,limitations
+PRT-M001,1500-1549,central_revenue_to_gdp_with_empire,2,2,percent_gdp,Portuguese central state incl empire-related revenue,PRT-S05,PUBLISHED_HISTORICAL_RECONSTRUCTION,50-year estimate not full national GDP
+PRT-M002,1500-1549,central_revenue_to_gdp_without_empire,0.8,0.8,percent_gdp,Portuguese central state excl empire-related revenue,PRT-S05,PUBLISHED_HISTORICAL_RECONSTRUCTION,complementary estimate; difference not company profit
+PRT-M003,1700-1749,central_revenue_to_gdp_with_empire,5.2,5.2,percent_gdp,Portugal central fiscal revenue,PRT-S05,PUBLISHED_HISTORICAL_RECONSTRUCTION,same period with empire
+PRT-M004,1700-1749,central_revenue_to_gdp_without_empire,4.1,4.1,percent_gdp,Portugal central fiscal revenue excl imperial receipts,PRT-S05,PUBLISHED_HISTORICAL_RECONSTRUCTION,source table difference not total colonial economy net benefit
+PRT-M005,~1800,gdp_per_capita_resource_curse_effect,-40,-40,percent_relative_synthetic_control_counterfactual,Portuguese economy (GDP/person),PRT-S01,PUBLISHED_MODEL_ESTIMATE,"model counterfactual lower by 40% than without gold, not measured actual annual decline"
+PRT-M006,1500-1800,gdp_per_capita_effect_of_removing_imperial_links,-20,-20,percent_at_least_relative_counterfactual,Portugal economy at imperial peak,PRT-S02,PUBLISHED_MODEL_ESTIMATE,at least one fifth lower in paper's counterfactual; model/question differ from gold-only treatment
+PRT-M007,1699-1702,imports_from_England,355000,355000,GBP_period_annual_average_reported,Portugal trade imports,PRT-S01,PUBLISHED_HISTORICAL_ESTIMATE,"annual averages across period, precise year not given"
+PRT-M008,1756-1760,imports_from_England,1300000,1300000,GBP_period_annual_average_reported,Portugal trade imports,PRT-S01,PUBLISHED_HISTORICAL_ESTIMATE,includes many English wool textiles; nominal historical prices not adjusted
