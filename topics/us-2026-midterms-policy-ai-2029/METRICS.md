@@ -100,3 +100,9 @@
 
 ### PJM B9算法原文确认（2026-01-23）
 官方[LAS建模演示第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)明确B9来自`Final Forecast`与`No DC History Removal Model Sensitivity`的差。因此`I59` B9b−B9及其跨版本差额是**模型统计残差**而非历史直接计量或项目可兑现资本；尤其当数据中心历史剥离、PJM EIA商业部门数据与接纳项目口径改变时，不能将+1018MW当作“实际嵌入需求新增”。本轮所有2026B9均来自2/6校正后的现存原表，原1/14字节文件尚未核实。
+
+## H03第十一轮：EKPC peak-shaving是否入表引起的8—10MW RTO来源差（I62）
+- `I61`先前状态“9—10MW无法解释”**已由本轮更正**：`Accuracy_RTO−Combined_original_B9b_RTO = -Combined_EKPC`，21年所有年份均成立；独立1月B9b与五月Accuracy RTO完全一致。两个独立附件EKPC=0，合并文件B9/B9b的EKPC=-10/-9/-8。其PJM官方类别为Peak Shaving Program，不是DC项目。
+- `I62` `PJM_RTO_EKPC_PSA_SOURCE_SCOPE_DELTA`：`Jan_Standalone_B9b_RTO - Combined_B9b_RTO = -Combined_EKPC`，同时`FebStandalone_B9_RTO-Combined_B9_RTO=-Combined_EKPC`，年度2026—31=10MW，2032—37=9MW，2038—46=8MW。**只测来源是否纳入削峰调整，不测实际负荷增长**。
+- `B9b`初见2025原版公司报告，2023/24同名表缺失是source schema演进（不是用户未检索到）。项目级Firm/Accepted/Realized与政治因果仍NA/UNTESTED。
+- PJM 1/14月度附件第2行明示PSA不纳入，但初版1/14 B9额外表未取得，仍不能把1月B9b−2/6B9认定为同日期首发真实差额。详见[来源报告](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)。

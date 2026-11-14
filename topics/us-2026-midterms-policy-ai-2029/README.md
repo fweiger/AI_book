@@ -83,3 +83,6 @@
 
 ## H03第十轮｜2025原版与2026勘误原版的B9/B9b修订分解（2026-11-14）
 - [完整原始来源实证报告](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)：PJM同目标2027 RTO额外调整B9 **13668→10785MW**(−2883)，总量B9b **17721→15856MW**(−1865)，差额部分B9b−B9 **4053→5071MW**(+1018)。Dominion总上修+740，AEP−902，PPL−1134；同源数据覆盖2026—2035共60条区域/年份，并独立核对2026 Accuracy RTO存在9—10MW未解版本差。2026 **B9明确有2026-02-06修正**，不能宣称初版2026-01-14数值；**预测不是实际AI数据中心投资或政治因果**。附[60行机器面板](data/h03_pjm_2025_2026_original_b9_b9b_revisions.csv)、[7区域分解](data/h03_pjm_2027_original_zone_revision_contributions.csv)、[回顾差异](data/h03_pjm_2026_original_vs_accuracy_rto.csv)、[标准库复算与三原始源校验](analysis/recompute_h03_b9b_vintage_decomposition.py)。
+
+## H03第十一轮：2026 B9b初始附件、PSA削峰项及EKPC 21年来源差闭合（2026-11-14）
+- [官方四XLSX逐格来源审计](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)：1/14独立B9b（Excel元信息1/13）、2/6订正后的独立B9、当前合并B9/B9b和五月Accuracy交叉核验。2026—2046 **23一级zone×21目标年两组对照**中，只有EKPC与RTO出现差异；独立表EKPC=0、合并表EKPC=-10/-9/-8，数值严格解释RTO偏移，5月Accuracy RTO与独立1月B9b全21年一致。PJM月度附件明确**不含PSA削峰调整**；该负值不是纯DC需求取消。2025原版报告确认**B9b首次引入2025**，所以2023/24原版无同源B9b并非文件漏找。2026**2/6订正前B9**仍未找到，不计算修正量。

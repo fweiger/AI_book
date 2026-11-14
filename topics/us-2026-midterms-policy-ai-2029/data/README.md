@@ -105,3 +105,10 @@
 - [h03_pjm_2027_original_zone_revision_contributions.csv](h03_pjm_2027_original_zone_revision_contributions.csv)：2027 DOM/AEP/COMED/PS/PL/其他六个不重叠分区与RTO总计，额外部分/已嵌入相关部分/总量皆能对账。
 - [h03_pjm_2026_original_vs_accuracy_rto.csv](h03_pjm_2026_original_vs_accuracy_rto.csv)：10目标年原版B9b vs2026 May Accuracy回顾RTO+9/10MW差，状态`UNEXPLAINED_SOURCE_DIFFERENCE`。
 - [标准库复算](../analysis/recompute_h03_b9b_vintage_decomposition.py)：可附三档原始官方XLSX与SHA实现单元格对账；2026 B9含2026-02-06更正，2025/26`B9b−B9`为统计构造非实际运行MW。
+
+## H03第十一轮｜Jan/Feb附件、EKPC/PSA来源差异（2026-11-14）
+- [h03_pjm_2026_ekpc_source_reconciliation_2026_2046.csv](h03_pjm_2026_ekpc_source_reconciliation_2026_2046.csv)：21年RTO、EKPC的1/14独立B9b、2/6更正独立B9、合并B9/B9b、5月回顾比较，四原XLSX SHA逐行登记；1/14 B9b与2/6 B9属于混合日期，差不能冒充同版初稿勘误。
+- [h03_pjm_2026_ekpc_zone_source_match_summary.csv](h03_pjm_2026_ekpc_zone_source_match_summary.csv)：23顶层zone×21年两组比较的不同值数量，仅EKPC/RTO不同，其他21个zone全年份一致。
+- [h03_pjm_2026_jan_feb_publication_manifest.csv](h03_pjm_2026_jan_feb_publication_manifest.csv)：独立B9b、订正B9、当前合并、五月Accuracy、2025引入B9b说明的原始URL/大小/SHA和PIT边界；另[1月月度PSA排除附件](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/total-monthly-load-adjustments.xlsx)见来源表。
+- [h03_pjm_2027_rto_baseline_publication_sensitivity.csv](h03_pjm_2027_rto_baseline_publication_sensitivity.csv)：2027在三个不同RTO forecast来源比较的-1855/-1860/-1865MW，**不能混日期当实体损失**。
+- [标准库4原始文件核验脚本](../analysis/recompute_h03_ekpc_source_reconciliation.py)、[完整报告](../reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)。

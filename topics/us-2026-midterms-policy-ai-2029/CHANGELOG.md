@@ -1,5 +1,13 @@
 # TOPIC-011｜版本记录
 
+## 2026-11-14｜H03第十一轮：RTO 8—10MW来源差已精确定位EKPC削峰；B9b于2025才首次发布
+- PJM独立2026 Jan B9b、Feb6 corrected B9、当前combined B9/B9b、May Accuracy四档SHA固定，2026—2046共21年、23顶层区域两组对照验证；除EKPC和RTO外其余441个zone-year两组**全完全相同**。
+- EKPC在独立附件=0，在combined=-10MW(2026—31)/-9(2032—37)/-8(2038—46)，RTO差刚好相反，May Accuracy RTO全21年等于Jan B9b；PJM官方独立1月月度附件明确不含Peak Shaving Adjustments，而EKPC被PJM标记为2023起削峰计划，因而旧“RTO来源差原因未知”指标I61状态升级为已解释；新增I62来源范围校验。
+- 2025年PJM原始报告第4页明确`B9b是当年新增`，2023/24并无同名原版B9b，旧跨出版物的“嵌入”数值继续标proxy。
+- 三版对2027总量预测修订：2025原版对Jan独立B9b -1855MW、对当前combined -1865MW、2026May回顾v2025/26 -1860MW；数值不能作为实际AI投产差。
+- **仍缺2026-01-14更正前B9原始字节**；现有独立B9是2/6 corrected，故不可计算勘误对B9本身的MW影响，更不构成2027政治因果。
+
+
 ## 2026-11-14 | H03第十轮：原版B9/B9b同目标年度双层预测分解（现有Topic版本增量）
 - PJM 2025原始与2026当前可下载原始Excel B9/B9b对齐，60条zone×2026—2035目标年；2026 B9原表注明2026-02-06嵌入量计算勘误，不能当成1/14初版。
 - 2027 RTO Total revision −1865MW = Above Embedded −2883MW + (B9b−B9) +1018MW；Dominion +740、AEP −902、ComEd +49、PS −197、PL −1134、其余 −421，按区域各分量对账闭合。

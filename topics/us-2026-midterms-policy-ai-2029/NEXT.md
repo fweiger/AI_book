@@ -96,3 +96,9 @@
 
 ## B9计算勘误下一条可核操作
 已确认[PJM 2026-01-23 LAS第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)对B9使用`final forecast vs no-removal sensitivity`的官方算法；下一阶段应优先寻找同一2026原始workbook在2026-01-14和2026-02-06之间**两份实际字节**，或PJM明确公布的错误影响差表。若只有1/23定性流程而无旧版源，不填“修正了X MW”。2027政策影响仍UNTESTED。
+
+## H03第十一轮：闭合两个缺口，仅保留真正不可测的勘误差
+- [21年23区来源核验报告](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)已证实`RTO独立附件 vs 当前合并B9/B9b`的8—10MW来源差**只由EKPC负向PSA行解释**，更早的“来源差未知”标记应改为已定位。PJM独立月度附件明示**不含PSA**，EKPC被PJM标记为削峰项目；**绝不能当取消AI项目8—10MW**。
+- PJM 2025原版报告直接证明B9b **于2025年首次出现**，所以追求2023/24原版同名B9b不现实。旧版B9只作为Above Embedded，跨2025六月total的proxy只能标跨出版来源。
+- **仍须追查**2026-01-14更正前B9真实原文件（或PJM正式2/6数据修订差表）。已有1/13修改的独立B9b，但2/6B9是更正后的文件；**不可推算勘误效应=8/9/10MW**。另外不能从两表的数学残差反推实际已供电DC客户容量。
+- 2027目标RTO v2025原版17721MW→2026早期独立B9b15866MW为-1855MW，当前合并版15856为-1865MW，2026五月回顾2025/26序列17726→15866为-1860MW；三组数据用于**来源敏感性和PIT校验**，不是实际项目状态。

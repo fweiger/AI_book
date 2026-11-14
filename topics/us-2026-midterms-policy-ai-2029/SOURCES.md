@@ -120,3 +120,12 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 
 ## H03 B9双模型敏感性方法一手来源（补充2026-11-14核实）
 - [PJM LAS 2026-01-23 2026 Long-Term Load Forecast预测程序第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)：有历史DC的区域先从EIA月度商业数据和PJM小时负荷历史剔除DC，再加入final total accepted large load；对无历史DC的区域直接加入accepted load；B9通过“**不剔除历史DC的模型敏感性**”与最终模型比较产生Above Embedded。该程序证实B9是模型差异，**B9b−B9不能解释为客户真实计量DC MW或个体项目数量**。这是一手方法来源，不能证明2026-02-06勘误的具体数值。
+
+## H03第十一轮：2026-01/02两独立XLSX、月度PSA注释和真实来源版本闭合
+- [PJM独立年度B9b Total附件](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/total-load-adjustments-breakdown.xlsx)（官网2026-01-14目录，ZIP核心元信息Modified`2026-01-13T16:17:25Z`），18,904B，SHA`ee3b682929db0b59a043c8ab6d1c9776f697ab10fc86fe603a6d0d724893c4ba`。2027 RTO=15,866MW，EKPC=0。**元信息不是不可伪造的首次上线时间戳**。
+- [PJM 2/6独立B9容量义务附件](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-adjustment-breakdown-for-capacity-obligations.xlsx)，19,177B，SHA`990e2cb82d02a6c689a9e21b5c7ccb13944613f960dcc2f6eb3109e51a49d6a1`，ZIP Modified`2026-02-06T13:00:15Z`，表第3行明示修正Embedded计算错误；2027 RTO=10,795MW、EKPC=0，**不是1/14更正前B9**。
+- [PJM当前合并原工作簿](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-report-tables.xlsx)，371,564B SHA`59a62facf819962e430101c96dd1335229d8173fb6886dd8045ced325443f607`：EKPC在B9及B9b都为-10(2026—31)、-9(2032—37)、-8(2038—46)MW，RTO相应比两独立附件低同值。**23×21全区域值比对只有EKPC和汇总RTO不相同**。
+- [PJM 2026May Accuracy XLSX](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx)，50,175B SHA`e0f24fe03a79af016826089c653b2c2e15e55edcb04a7bd4be5fa643136425fc`，2026版回顾RTO整个2026—46 **21年都与1/14独立B9b一致**；其与当前合并版差8—10MW对应EKPC被计入与否，不是模型新MW。
+- [PJM 1/14独立月度总调整表](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/total-monthly-load-adjustments.xlsx)，59,187B，SHA`d9e547c71e4176776028b1c323759830f9fcd5ed908af142be783464aae9a2ff`，原工作表第2行**明确排除Peak Shaving Adjustments**；[PJM 1/14官方说明](https://insidelines.pjm.com/pjms-updated-20-year-forecast-continues-to-see-significant-long-term-load-growth/)把EKPC列为始于2023 Delivery Year的**peak-shaving program**，而非数据中心项目。两者支持PSA统计口径差解释，**但文件无单独声明差值是否为有意发布范围差异**。
+- [PJM官方2025-01-24预测报告第4页](https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2025-load-report.pdf)写明**New to the report this year: Table B-9b**，因此2023/24原始预测文档没有同版Total B9b；历史跨源proxy不等同于原版同一测量。
+- 21年EKPC来源差及PIT优先级参见[H03第十一轮专项来源报告](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)。
