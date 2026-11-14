@@ -1,5 +1,10 @@
 # TOPIC-011｜M0机器注册表
 
+## 第十五轮 H01国会历史参考类
+- [h01_congress_104_119_historical_laws_20261014.csv](h01_congress_104_119_historical_laws_20261014.csv)：16届（1995—2026）Pew选举日前实质/纪念法律手工转录、NARA104—118完整成法及4届正式参院否决/推翻。**Pew实质分类非官方、119截止2026-10-14且尚未完届、NARA整届和Pew选前口径不可混比、107参院中途变权。**其他届没有逐项收集的否决留空而非零。
+- [离线校验程序](../analysis/recompute_h01_congress_historical_comparison.py) · [来源、结果与因果限制报告](../reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md)。跨届简单均值仅为描述性历史底座，不是2027财政/AI投资的处理效果。
+
+
 - [hypothesis_registry.csv](hypothesis_registry.csv)：H01—H10，初始状态UNTESTED。
 - [causal_edges.csv](causal_edges.csv)：候选有向机制边，绝非已确认因果。
 - [evidence_events.csv](evidence_events.csv)：**少量**确实有公开来源的事件样例，事件日与发布日期分开；不是完整数据库。
