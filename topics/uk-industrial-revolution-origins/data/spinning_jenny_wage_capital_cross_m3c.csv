@@ -1,0 +1,5 @@
+wage_source,machine_price_source,wage_daily_pence_equivalent_rounded,machine_price_pence_equivalent_rounded,fixed_output_irr_pct,max_machine_price_at_15pct_pence_equivalent,above_15pct_hurdle,source_url,data_status
+English_wage,English_machine,6.25,840,38.0250,1392.3602,true,https://wrap.warwick.ac.uk/44710/,MODEL_CROSSOVER_NOT_REALIZED_HISTORICAL_RETURN
+English_wage,French_machine,6.25,1450,13.4150,1392.3602,false,https://wrap.warwick.ac.uk/44710/,MODEL_CROSSOVER_NOT_REALIZED_HISTORICAL_RETURN
+French_wage,English_machine,4.66,840,23.7910,1038.1438,true,https://wrap.warwick.ac.uk/44710/,MODEL_CROSSOVER_NOT_REALIZED_HISTORICAL_RETURN
+French_wage,French_machine,4.66,1450,2.4990,1038.1438,false,https://wrap.warwick.ac.uk/44710/,MODEL_CROSSOVER_NOT_REALIZED_HISTORICAL_RETURN
