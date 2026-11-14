@@ -1,0 +1,4 @@
+year,interest_paid_florins,heritable_annuity_pct,life_annuity_pct,urban_or_other_annuity_pct,obligations_pct,source_id,source_print_page,accounting_owner,scope_uncertainty,evidence_level
+1701,6655745,22,11,,67,NLD-S15,77,Holland_provincial_tax_receivers,"Check Table 4 South-Holland subheading and archive aggregation before merging with all-province panel",PEER_REVIEWED_RECONSTRUCTED_TABLE
+1750,12539684,12,9,15,64,NLD-S15,77,Holland_provincial_tax_receivers,"Check Table 4 South-Holland subheading and archive aggregation before merging with all-province panel",PEER_REVIEWED_RECONSTRUCTED_TABLE
+1794,15163552,10,2,19,69,NLD-S15,77,Holland_provincial_tax_receivers,"Check Table 4 South-Holland subheading and archive aggregation before merging with all-province panel",PEER_REVIEWED_RECONSTRUCTED_TABLE
