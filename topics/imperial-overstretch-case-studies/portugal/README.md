@@ -118,3 +118,11 @@
 - [九条档案馆藏号/证据等级CSV](data_m2/archival_locator_juro_cash_financing_1743_1753_m3.csv) + [档案来源状态验证程序](data_m2/validate_archival_locator_and_cash_claims_m3.py)（实际执行PASS，9条档案手稿均标`NOT_ACQUIRED`）。
 - [Lisbeth Rodrigues 2019原文](https://doi.org/10.4000/lerhistoria.4730)提供**独立于此前Costa团队稿件版本**的信用分层反证：里斯本慈善会1775年后购买20份债券，其中19份公布本金可加总**179.854 contos**、五笔直接向国库资金**106.774 contos**（已知本金的**59.37%**），另外15笔是私人二级市场买卖（14笔本金已知）。另一张财政年投资Table4公布**195.510 contos**，与Table5已知数值差**15.656 contos**；缺失本金及年度/账户覆盖差异尚未分解，记`SOURCE_RECONCILIATION_OPEN`。这些差异不能自动归因1743年，也不识别1775禁私人放贷的因果挤出。
 - [2019购买市场分层摘要CSV](data_m2/misericordia_2019_bond_primary_secondary_reconciliation_m3.csv) + [实际运行的数量核查脚本](data_m2/reproduce_juro_primary_secondary_2019_m3.py)。
+
+
+## M3最新｜黄金繁荣前税收抵押国债、1743–1744铸币/旧债口径、1760年代王室金储备与公共存款借贷
+
+- [完整审计报告：PRE_GOLD_CREDIT_COLLATERAL_1743_COINAGE_1760S_TREASURY_LIQUIDITY_AUDIT_M3_20261114.md](PRE_GOLD_CREDIT_COLLATERAL_1743_COINAGE_1760S_TREASURY_LIQUIDITY_AUDIT_M3_20261114.md)，核对**1841年《O Panorama》转载1839年债务史研究**中的**1647年20万cruzados舰队借款/糖税偿付抵押**、**1704–1706年480 contos里斯本海关抵押借款**，说明殖民税源信用制度先于巴西黄金，且**1704–1706这笔借款本身的利率并未被独立确认**。
+- Rita Martins de Sousa (2003) 报告**1743–1744年国家黄金铸币4,196 contos**，同期旧债处理约5,000 contos来自Azevedo的后继引用，**铸币流量≠国库净收益、旧债换手≠全额现金偿还，不可相减当国库缺口**。同一研究引用ANTT原始档案，给出**1763年12月31日国库金储备835 contos、1765年76.8、1767年67.2**及**1766年借款至1777年仍欠371.4 contos**，需要分开黄金余额/年度铸币/债务存量的性质。
+- 新的[九条1647—1750事件及债券法律日期冲突CSV](data_m2/pre_gold_tax_collateral_1743_1749_1750_edict_coinage_source_audit_m3.csv) + [QA脚本](data_m2/validate_pre_gold_credit_collateral_and_edict_dispute_m3.py)；[八条1763—1798国库黄金和国内借款发表数据CSV](data_m2/sousa2003_1763_1798_treasury_gold_mint_deposit_loans_m3.csv) + [QA脚本](data_m2/validate_sousa2003_treasury_royal_mint_deposit_loans_m3.py)。全部已实际读取源出版论文并运行脚本通过。
+- **法令日期冲突继续开放**：Azevedo1947/Sousa2003记1749-03-16降息至4.5%，1841年的《O Panorama》却记1750-03-16；目前尚未得到1883年官方Gomes汇编原文p318。源等级以`ORIGINAL_LAW_NOT_ACQUIRED`保留，不择一伪称已证实。
