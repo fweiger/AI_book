@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.6；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.7；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 第十五轮 H01 历史国会实证（2026-11-14）
 - [104—119届实质立法、选举日前/届末、正式总统否决和跨时期分组的实算报告](reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md) · [16届历史CSV](data/h01_congress_104_119_historical_laws_20261014.csv) · [标准库复算](analysis/recompute_h01_congress_historical_comparison.py) · [会话记录](sessions/2026-11-14-round15-h01-historical-congress-veto.md)。104和110选举前实质法律均286，110届4次推翻总统否决；“分立=全面立法停滞”受到直接反例，但H01较弱机制及2027经济因果仍UNTESTED。Pew分类非官方、119届不完整，未合并main。
@@ -122,3 +122,9 @@
 ## v0.2.6 官方2022县级零返利与10次有来源时点CPI意外值
 - **H09**：[Travis County 2022-01-31官方县项目汇总](reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)明确当时Tesla项目`Zero rebates paid`且首履约年校验待完成；另一项目也尚未付款。与2025-11 KUT报道、2026-04县官方9%扣留分开按时点理解，**不推断2026年仍无付款、不推断政治动机**。
 - **H10**：[2023—26十次真实事前CPI预测＋官方首次公布＋Treasury有符号方向研究](reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)：10个有日期预测中8次核心CPI surprise非零、7次2Y当日方向可比较、6次同向1次反向（**2025-03-12 CPI低于预期但2Y+7bp**），双侧精确二项检验p=0.125，尚不构成稳定策略。[46份事后网页日历](data/h10_cpi_release_ust_46event_vendor_archive_not_pit.csv)均未获真实forecast首发时点；[10次真正有事前出处的CSV](data/h10_cpi_pre_release_dated_forecasts_10events_2023_2026.csv)、[源码复算PASS](analysis/recompute_h10_pre_release_cpi_surprise_10_events.py)，严禁混合两个数据层或将全日价格变化视为CPI纯因果。
+
+
+## v0.2.7｜学区Ch313实际报告量纲与2025同源CPI反例（2026-11-14）
+- **H09增量税惠真实文件**：[Texas Comptroller Del Valle ISD Chapter313 #1496原始两年度School District Cost Report](reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)已用XLSX原件SHA复核：2025报告版2024税年**毛税负差$43,496,033**，2025税年**$42,608,055**，2024税年对较早2023版的**预测$20,642,965**出现**+$22,853,068报告版本差**；另列Revenue Protection和Supplemental Payments，**绝非Travis县Chapter381已付现金或公司净受益**。[两版14行CSV](cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv) · [官方XLSX直接验证PASS](analysis/recompute_h09_delvalle_1496_ch313_vintages.py)。
+- **H10来源控制下的反例**：[2025全年11个真实CPI公布日、Calculated Risk同一发布者有日期专业共识仅7次](reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)；按BLS首发与Treasury整日2Y有符号波动对照，**headline惊讶方向同向2/5、core同向2/4，两个精确双侧二项p均1.0**，明显弱于此前跨机构便利10日期的core6/7；其它4次同源前瞻未找到就保持NA，不能挪用事后日历/机构不同资料去填。[11行完整发行日期覆盖CSV](data/h10_cpi_consistent_publisher_2025_pre_release_cohort.csv) · [标准库复算PASS](analysis/recompute_h10_2025_consistent_publisher_cpi_direction.py)。
+- 两条研究均不据此升级H09/H10政策因果或预测/交易能力；2026县实际grant USD仍缺、学区净受益现金和CPI公告分钟期货也尚未确认。
