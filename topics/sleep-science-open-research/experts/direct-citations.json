@@ -1,0 +1,368 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-009",
+  "date": "2026-11-14",
+  "sample_design": "Hand-curated 33 experts and 37 DOI-verified seed papers; not an exhaustive systematic review nor an authority ranking",
+  "bibliographic_source": "OpenAlex API",
+  "limits": [
+    "Author disambiguation requires ORCID/affiliation validation for ambiguous aliases",
+    "Metadata and direct references alone do not prove methodology, reproduction or causal results",
+    "M00–M10 are research-category links, not claims of medical causation",
+    "Status L1 refers only to bibliographic verification, not full paper reading"
+  ],
+  "observed_edges": 50,
+  "linked_paper_subset": 37,
+  "source": "37 curated papers; OpenAlex referenced_works direct matches",
+  "citations": [
+    {
+      "source_paper_id": "SP-037",
+      "target_paper_id": "SP-015",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-037",
+      "target_paper_id": "SP-034",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-037",
+      "target_paper_id": "SP-028",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-029",
+      "target_paper_id": "SP-025",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-029",
+      "target_paper_id": "SP-011",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-029",
+      "target_paper_id": "SP-020",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-029",
+      "target_paper_id": "SP-022",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-029",
+      "target_paper_id": "SP-026",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-023",
+      "target_paper_id": "SP-017",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-023",
+      "target_paper_id": "SP-022",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-025",
+      "target_paper_id": "SP-020",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-031",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-023",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-025",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-009",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-016",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-032",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-018",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-033",
+      "target_paper_id": "SP-022",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-006",
+      "target_paper_id": "SP-004",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-009",
+      "target_paper_id": "SP-006",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-009",
+      "target_paper_id": "SP-007",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-009",
+      "target_paper_id": "SP-008",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-009",
+      "target_paper_id": "SP-003",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-015",
+      "target_paper_id": "SP-007",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-015",
+      "target_paper_id": "SP-009",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-015",
+      "target_paper_id": "SP-008",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-015",
+      "target_paper_id": "SP-013",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-015",
+      "target_paper_id": "SP-005",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-016",
+      "target_paper_id": "SP-007",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-016",
+      "target_paper_id": "SP-009",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-016",
+      "target_paper_id": "SP-008",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-034",
+      "target_paper_id": "SP-004",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-034",
+      "target_paper_id": "SP-003",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-034",
+      "target_paper_id": "SP-028",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-032",
+      "target_paper_id": "SP-022",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-035",
+      "target_paper_id": "SP-011",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-035",
+      "target_paper_id": "SP-020",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-036",
+      "target_paper_id": "SP-025",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-036",
+      "target_paper_id": "SP-020",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-036",
+      "target_paper_id": "SP-026",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-013",
+      "target_paper_id": "SP-010",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-018",
+      "target_paper_id": "SP-015",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-018",
+      "target_paper_id": "SP-003",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-020",
+      "target_paper_id": "SP-013",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-020",
+      "target_paper_id": "SP-011",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-004",
+      "target_paper_id": "SP-003",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-026",
+      "target_paper_id": "SP-013",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-026",
+      "target_paper_id": "SP-020",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    },
+    {
+      "source_paper_id": "SP-028",
+      "target_paper_id": "SP-011",
+      "relation": "references",
+      "evidence": "OpenAlex referenced_works metadata",
+      "interpretation": "UNCLASSIFIED_CITATION_NOT_REPLICATION"
+    }
+  ]
+}

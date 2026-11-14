@@ -20,3 +20,11 @@
 - Issue 评论先于正式结论；经维护者审核 PR 合并才升级 C-ID/图谱。
 
 [投稿规则](COLLABORATION.md) · [权威文献表](AUTHORITY_MATRIX.md) · [研究问题](questions.md)。
+
+## 专家库的下一批研究（TOPIC-009 v0.2.0 候选工作）
+1. 优先将张二荃、傅嫈惠、Borbély、Yanagisawa、Mignot 的原始论文从 L1 提升到 L2/L3；补研究对象、对照、效应量与独立复现。
+2. 从直接引用网络中筛选真正的跨实验室验证，而不是用高引用代替方法审查。
+3. 先补 M05 肠脑轴、M07 噪声/热环境、M08 REM/异态睡眠的专门实验室；为每个模块找到代表性原始实验和方法源头。
+4. 把新的 EXP/SP 证据与原有 S/X 参考文献按 DOI 去重；冲突先写 Issue #29，不自动改变正式 C-ID。
+
+[专家—论文—方法库](experts/README.md) · [M00–M10 横向映射](experts/MODULE_CROSSWALK.md)。

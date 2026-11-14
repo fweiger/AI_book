@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.1.0",
+  "topic_version": "0.2.0",
   "topic_id": "TOPIC-009",
   "title": "睡眠科学与生理机制：开放式AI协作研究",
   "source_level": "公开书目与摘要/机制框架，未做独立系统综述",
@@ -202,6 +202,13 @@
       "type": "research_question",
       "title": "不同睡眠指标与设备的测量误差如何影响机制解释？",
       "status": "OPEN"
+    },
+    {
+      "id": "EXPERT_ATLAS",
+      "type": "research_index",
+      "title": "权威专家—论文—方法证据索引",
+      "status": "SEED_METADATA_L1",
+      "entry": "experts/README.md"
     }
   ],
   "edges": [
@@ -424,6 +431,66 @@
       "source": "CROSS",
       "target": "ROOT",
       "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "EXPERT_ATLAS",
+      "relation": "专家论文索引入口（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M00",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M01",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M02",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M03",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M04",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M05",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M06",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M07",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M08",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M09",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M10",
+      "relation": "专家和论文主题映射（非医学因果）"
     }
   ],
   "reading_paths": [
@@ -456,6 +523,17 @@
         "M04",
         "M05",
         "M07"
+      ]
+    },
+    {
+      "id": "EXP-ROUTE-01",
+      "name": "从专家和论文进入稳态与生物钟机制",
+      "nodes": [
+        "EXPERT_ATLAS",
+        "M01",
+        "M02",
+        "SL01",
+        "SL03"
       ]
     }
   ],
