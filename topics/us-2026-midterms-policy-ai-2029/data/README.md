@@ -117,3 +117,7 @@
 ## 2026-04-07正式县书记官Minutes + H10 BEA连续33个月（补充）
 - [Travis County 2026-04-07 Item26与Item6官方决议台账](../cases/musk-2026/travis_official_votes_20260407.csv)记录4-0+1弃权的**9%合格grant扣留**、同时2025—26后续社区项目批准、原始PDF/Transcript SHA及发布日期，主证据E083—E085；**实际扣留USD未确认**。[原始会议专项研究](../reports/2026-11-14_h09_official_minutes_primary_confirmation.md)。
 - [BEA官方NIPA 2024-01—2026-09共33个月headline/core PCE指数](h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)，来源原始Excel SHA，完整环比/同比；[复算PASS脚本](../analysis/recompute_h10_bea_snapshot.py)；[数据版本报告](../reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)。2026-11-14后见修订不能伪装作历史每月首发版本。
+
+
+## H10：18个有效月份的CPI/PCE同月相关性（截至2026-11-14）
+- [CPI与PCE按月对齐CSV](h10_cpi_pce_aligned_monthly_2025_2026.csv)含21个日历月份，明确保留2025-01、2025-10、2025-11的CPI缺失，**只有18个有效同比源中同月环比配对**；并非两组全时段都有有效数据。 [Python标准库复算](../analysis/recompute_h10_cpi_pce_alignment.py)在Ubuntu实际运行PASS：headline r=0.946129、core r=0.553099。 [完整分析](../reports/2026-11-14_h10_cpi_pce_alignment_18_month_sample.md)。该关联仅为同月数据描述，不代表Fed因果/市场预测。
