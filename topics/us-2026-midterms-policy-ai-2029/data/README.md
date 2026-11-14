@@ -137,3 +137,9 @@
 - [h03_ferc_en1_y5_adjustment_share_audit_2017_2026.csv](h03_ferc_en1_y5_adjustment_share_audit_2017_2026.csv)：10版每版第5年比较；**2017—22只有诉讼附件二手尚未逐年核PJM原件**，2023做B9纠正，2024—26有先前原版来源支持；不当作十年完备PIT回测。
 - [h03_ferc_en1_pdf_source_mapping.csv](h03_ferc_en1_pdf_source_mapping.csv)：诉讼原件与PJM2023官方B8a/B9、2024方法课件的源PDF SHA和零基页码；不因诉讼提出便当FERC批准监管规则。
 - [标准库六格自动验证和可选双PDF SHA校验](../analysis/recompute_h03_ferc_en1_table_source_audit.py)及[研究报告](../reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)。
+
+
+## 2020—22县Grant绩效年→付款年与2023—26 CPI扩样（v0.2.4）
+- [Travis County原合同2020—22履约年与正常付款年2年错位映射](../cases/musk-2026/travis_grant_payment_cohorts_2020_2022.csv)及[合同分段审计](../reports/2026-11-14_h09_grant_payment_year_lag_contract_audit.md)，正常2022—24的10月31日目标日期均为**有条件应付款日，未核实际支付/9%扣留USD**。
+- [正式2026-04-07县Agenda Packet 255页两项议案CSV](../cases/musk-2026/travis_20260407_agenda_packet_documents.csv)与[文件SHA及页面核验](../reports/2026-11-14_h09_agenda_packet_255pages_no_grant_figures.md)，公开Agenda Item6/26皆Attachments None，Fiscal Impact栏空白。不能把“公开文件没有附表”当县本身没有付款记录。
+- [2023/24美国Treasury官方2Y/10Y 500交易日](h10_us_treasury_2y10y_daily_2023_2024.csv)合并[2025/26 467日](h10_us_treasury_2y_10y_daily_2025_2026.csv)，以BLS实际日历形成[46事件日表](h10_cpi_release_ust_46events_2023_26.csv)。[完整分期结果及非因果限制](../reports/2026-11-14_h10_cpi_release_ust_46event_historical_robustness.md)，[完整标准库复算](../analysis/recompute_h10_cpi_release_treasury_2023_26.py)已运行PASS；未获得发布前市场共识/分钟收益率时不评价Fed决策因果。
