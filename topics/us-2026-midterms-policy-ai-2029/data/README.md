@@ -1,5 +1,12 @@
 # TOPIC-011｜M0机器注册表
 
+## 第十六轮 H01官方逐案全量计算
+- [h01_round16_billstatus_funnel_110_116_118_119.csv](h01_round16_billstatus_funnel_110_116_118_119.csv)：四届×9类36行GovInfo官方普通H.R./S.议案逐案累计，按第二年11/14截止。56,777项涵盖2008/2020/2024/2026同观察时点；立法动作可能在两个议院之间重复，不许将House和Senate通过数相加。
+- [h01_round16_govinfo_source_manifest.csv](h01_round16_govinfo_source_manifest.csv)：8份govinfo BILLSTATUS ZIP的URL/SHA/字节数、全部XML数与截断数，历史重刊是后来取得的版本，并非当时PIT原字节；[纯stdlib复算](../analysis/recompute_h01_billstatus_funnel_round16.py)。
+- [h01_round16_bill_status_audit_examples.csv](h01_round16_bill_status_audit_examples.csv)：77条可复核特征例；[h01_round16_bill_vehicle_policy_drift_examples.csv](h01_round16_bill_vehicle_policy_drift_examples.csv)：H.R.1424/748原案对最终法律的财政政策标签漂移。报告：[H01 56,777条明细背景及结论](../reports/2026-11-14_h01_round16_govinfo_56777_bill_stage_funnel.md)。
+- 数据QA：原委员会活动字段比GPO真实报告动作码少186条，已按GPO报告动作码5000/14000加并；全部四届成法的议案都具备House与Senate动作码；119届为未完结旧国会，104届不在相同GovInfo数据源。因果状态仍UNTESTED。
+
+
 ## 第十五轮 H01国会历史参考类
 - [h01_congress_104_119_historical_laws_20261014.csv](h01_congress_104_119_historical_laws_20261014.csv)：16届（1995—2026）Pew选举日前实质/纪念法律手工转录、NARA104—118完整成法及4届正式参院否决/推翻。**Pew实质分类非官方、119截止2026-10-14且尚未完届、NARA整届和Pew选前口径不可混比、107参院中途变权。**其他届没有逐项收集的否决留空而非零。
 - [离线校验程序](../analysis/recompute_h01_congress_historical_comparison.py) · [来源、结果与因果限制报告](../reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md)。跨届简单均值仅为描述性历史底座，不是2027财政/AI投资的处理效果。
