@@ -1,5 +1,11 @@
 # TOPIC-011｜M0机器注册表
 
+## 第十七轮：政策条款、CBO预算估算和实际执行分层
+- [h02_round17_policy_section_budget_actual_2008_2026.csv](h02_round17_policy_section_budget_actual_2008_2026.csv)：16条源记录，覆盖法定授权、后续修改、真实支付/净成本、CBO相对不同预算基线的未来赤字估算、Medicaid覆盖预测及2027旧法规的执行日期。空值绝不填0，2700亿EIP是严格下界，CBO -3660亿与+3.4万亿来自**同一法律但不同基线**。
+- [h02_round17_gpo_bill_to_law_6files_sha.csv](h02_round17_gpo_bill_to_law_6files_sha.csv)：GovInfo的三份初始提案与三份最终成法原HTML文件的SHA/字节、法案ID及日期，已逐字节联网验证。
+- [复算校验](../analysis/recompute_h02_round17_policy_section_budget_actual.py) · [方法、强反例及2027旧法负对照报告](../reports/2026-11-14_h02_round17_policy_section_budget_baselines_and_legacy_2027.md)。该样例提供H01→H02/H03的来源链，但不证明2027新国会因果，所有H仍UNTESTED。
+
+
 ## 第十六轮 H01官方逐案全量计算
 - [h01_round16_billstatus_funnel_110_116_118_119.csv](h01_round16_billstatus_funnel_110_116_118_119.csv)：四届×9类36行GovInfo官方普通H.R./S.议案逐案累计，按第二年11/14截止。56,777项涵盖2008/2020/2024/2026同观察时点；立法动作可能在两个议院之间重复，不许将House和Senate通过数相加。
 - [h01_round16_govinfo_source_manifest.csv](h01_round16_govinfo_source_manifest.csv)：8份govinfo BILLSTATUS ZIP的URL/SHA/字节数、全部XML数与截断数，历史重刊是后来取得的版本，并非当时PIT原字节；[纯stdlib复算](../analysis/recompute_h01_billstatus_funnel_round16.py)。
