@@ -35,10 +35,16 @@
 - **禁止过度识别**：2027新国会并不自动改变2026年已有效的Texas法律；2026年经济数据并非2027国会政策结果。
 
 ## 六、具体可填写的审核台账
-- [Texas政策优惠/合同检查清单](incentive_contracts.csv)——**目前只有表头，未取得可确认完整合同**；
+- [Texas政策优惠/合同台账](incentive_contracts.csv)——**已录入3条法人/方案（其中1份Travis County 2020签署合同直接核验；DVISD为SEC披露未取得原合同；Starbase只是未来税惠提案）**；
 - [国会与赦免程序台账](oversight_pardon_ledger.csv)——目前只有表头，未伪造传票和赦免；
 - 已有观点与新闻线索请以 [Issue #54](https://github.com/fweiger/AI_book/issues/54) 和 [VIEW-S001](../../views/2026-11-14-dayawanqu-laoyao.md) 为主。
 - [逐边检验](../../chains/chain_edges.csv)、[统一指标](../../metrics/catalog.csv)、[新H09/H10正式假说](../../HYPOTHESES.md)。
 
 ## 下一轮最小可验收项
-优先找到**至少一条可核验的Texas法律/协议条目及一份真实委员会公开监督文件**，明确它们实际是否改变某个法人项目的权利/义务；其次按SEC明确截面财务数据构建行业对照；若找不到需要标`NO_EVIDENCE_FOUND`并保存搜索时点，不作结果暗示。
+**Texas已取得2020正式合同及2026年4月地方新闻的选前扣减记录**；下一步优先取得2026-04-07县书记官正式会议记录、2020—25补助应发及实付美元，以及2026-12-09 Starbase未来听证完成后的真实结果；国会正式监督仍待一手程序文件，明确它们实际是否改变某个法人项目的权利/义务；其次按SEC明确截面财务数据构建行业对照；若找不到需要标`NO_EVIDENCE_FOUND`并保存搜索时点，不作结果暗示。
+
+
+## H09首轮真实政策与报表核验（2026-11-14）
+- [Travis County正式签署合同与选举前审查反证报告](../../reports/2026-11-14_h09_travis_texas_incentive_preelection_control.md)：Colorado River Project LLC公司法人、2020–2041合同、70/75/80%按合格县级M&O财产税grant计算；2026-04-07 **据地方KUT现场报道**对2020—22有关返利扣减9%，并非已查明追回多少现金。
+- [政策事件六行时间账](policy_event_ledger.csv)：2025年地方合规审查已存在是2026-11选举后因果判断的**负对照**；Tesla 2025 SEC年报称相关2023—25 county grant在合并报表中不重大；Starbase SpaceX约240亿美元为计划投资、12/9为未来税惠听证，不是已经获得补贴。
+- [真实合同台账3行](incentive_contracts.csv)：缺少原始实际兑现金额及具体县级4月表决最终会议纪要时标`NA/REPORTED`；国会/赦免程序表仍仅表头，不推断已强制作证或签赦免。
