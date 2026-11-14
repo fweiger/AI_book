@@ -94,3 +94,11 @@
 - [完整日期级财政审计报告](FISCAL_A1_DATED_BUDGETS_1748_DEBT_VERSION_AUDIT_M2_20261114.md)：核读2024 *Anatomy of a Premodern State* 官方在线Appendix A1 **36条**历史中央财政名义收入观察和Appendix A2的巴西黄金税制变迁；用DEBT.PT同年债务偿付数据检验**7个**可对齐财政观察，标注真实日期、期间均值、估算和来源差异。
 - [A1财政原值与作者原始参考文献CSV](data_m2/fiscal_nominal_revenue_benchmarks_appendix_a1_2024_m2.csv) · [A2黄金税制沿革CSV](data_m2/brazilian_gold_tax_institutions_appendix_a2_2024_m2.csv) · [7组财政/偿债对照](data_m2/fiscal_a1_explicit_years_vs_debt_service_m2.csv) · [1748年债务率附近15年版差审计](data_m2/debt_1748_published_vs_current_source_window_m2.csv) · [独立复算程序](data_m2/reproduce_fiscal_a1_debt_service_m2.py)。
 - 结果：1716年已记录债务偿付相当于该年发表名义中央财政收入的**7.76%**，1730年**6.33%**；1762—1777年**10.08%**是分期名义**年均对年均**的描述性比值。这并非独立核验的完整王室现金预算或军费挤出效应。2024债务Table1的**1748年9%**与当前版本锁定原始债务/GDP计算**8.1523%**，按正常四舍五入应为8%，故`ROUNDING_NOT_SUFFICIENT`，真实版本差异继续`OPEN`。
+
+
+## 新增方法审计｜1743年长期国债净发行扩张与1643—1669年存量/发行错期风险
+
+- [DEBT_1743_ISSUANCE_STOCKFLOW_ACCOUNTING_AND_1748_SOURCE_CONFLICT_M3_20261114.md](DEBT_1743_ISSUANCE_STOCKFLOW_ACCOUNTING_AND_1748_SOURCE_CONFLICT_M3_20261114.md)：基于DEBT.PT官方债务原始工作簿的**159年**存量变动/长期及短期净发行对账，发现**1743年净新增长期juros约507.943百万réis**、同期短债净减少约15.100百万réis，对应总债存量增加492.843百万réis；1741–50长期净发行累计950.659百万réis。
+- [全年159条发行/存量对账CSV](data_m2/debtpt_issuance_vs_stock_delta_1642_1800_m3.csv) · [4组十年净发行核对](data_m2/debtpt_1740s_net_issuance_comparison_m3.csv) · [已实际运行的源哈希锁定复算脚本](data_m2/reproduce_debtpt_issuance_stockflow_m3.py)。
+- 红队发现**20/159年**存在超过0.01百万réis的债务存量变化与净发行表列的残差，全部出现在1643–1660或1668–1669；**1740年之后没有这种阈值以上残差**。必须区分“长期+短债=总债存量”和“年度存量变化=两种净发行”两个完全不同的恒等关系。1748发表9% vs原始版本8.1523%仍`OPEN`，不能强行判作纯粹四舍五入。
+- 这些文件名的`m3`指**候选下一步的方法增量**，不代表权威Issue #34 M2全部验收已关闭。新债发行与净入库现金、投资产出、帝国黄金因果链之间的连接仍`NOT_VERIFIED`。
