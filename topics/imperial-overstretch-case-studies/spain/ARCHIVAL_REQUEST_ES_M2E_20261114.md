@@ -307,3 +307,39 @@ Atentamente,
 **Identificación y estado:** OFFICIAL_CUSTODIAN_CONTACT_VERIFIED / SCHOLAR_CITED_ORIGINAL_CALL_NUMBER / CURRENT_ITEM_PRESENCE_NOT_CONFIRMED / PUBLISHED_ARTICLE_P236_TEXT_READ_IMAGE_NOT_OBTAINED / ORIGINAL_LABOR_RECORD_NOT_ACQUIRED / EMAIL_NOT_SENT / NO_PERSONAL_ID_SHARED.
 
 Para consulta presencial, el Ayuntamiento indica **citapreviaarchivohco@valencia.es** como correo separado de reservas, Archivo Histórico Municipal, Palacio de Cervelló, Plaça Tetuán 3, València.
+
+
+---
+
+## J — M2p: consulta archivística lista para uso con inventario MUNICIPAL VERIFICADO (BORRADOR NO ENVIADO)
+
+**Para:** archivo@valencia.es  
+**Asunto:** Confirmación y reproducción limitada: Doc. Lonja caja56 nº19 (30 folios, 1797) y cuadernos de jornales del puerto del Grao, cajas77/78
+
+Estimado personal del Archivo Histórico Municipal de València:
+
+He podido consultar directamente el inventario municipal *Documentación Lonja* (PDF 375 páginas) publicado por el Ayuntamiento. En la **página 321, asiento nº742**, constan el siguiente documento y su signatura:
+
+**1797, enero. Relación de los empleados que existen en la obra del Puerto del Grao de Valencia. A.M.V., Documentación Lonja, caja 56, nº19, 30 folios manuscritos, signatura antigua olim 28–1.**
+
+También he comprobado en el mismo inventario varios documentos de interés para distinguir jornales devengados y satisfechos:
+
+- **Asientos 736 y 737, PDF p320**: caja77 nº20 (11 cuadernos) y caja78 nº4 (25 cuadernos), titulados listas o jornales devengados de los operarios del desembarcadero; el inventario atribuye con interrogantes el intervalo aproximado 1795–1810, por lo que desconozco si contienen febrero de1797. Ambos asientos aparecen repetidos en la impresión del inventario.
+- **Asiento 735, PDF p319, caja141 nº8**: jornales devengados y pagados en diciembre de1795.
+- **Asientos 738, 740, 741, PDF pp320–321**: jornales devengados y pagados en enero de1796 (caja118 nº14), febrero-junio de1796 (caja165 nº4) y julio-octubre de1796 (caja160 nº5).
+- **Asiento 142, PDF p29, caja56 nº17**: comunicaciones sobre vales reales del préstamo del Banco Nacional de San Carlos que entraron en la tesorería de la Junta entre mayo de1796 y diciembre de1797.
+- **Asiento 152, PDF p31, caja159 nº10**: cuentas generales de cargo y data de1798, derechos del consulado, préstamos del Banco, recibos y libramientos.
+
+Para orientar una investigación académica y evitar solicitudes de digitalización masiva, agradecería saber:
+
+1. Si se conservan actualmente **caja56 nº19 / olim28–1** y sus30 folios, y cuáles son las condiciones y el coste de consultar o pedir copia de unas pocas hojas con nombres, oficios y jornales de enero de1797.
+2. Si **caja77 nº20** o **caja78 nº4** contienen las relaciones de jornales de **enero, febrero y marzo de1797**, y si en sus originales consta por separado el salario devengado, su pago efectivo y los importes pendientes. No presupongo que el periodo aproximado dado en el inventario confirme que existen esas mensualidades.
+3. Si se conoce la signatura de alguna acta o escrito relativo a los presuntos jornales atrasados y la incidencia de **11 de febrero de1797**; el inventario nº135 (caja57 nº10) acaba ese día, pero su descripción solo habla de correspondencia de tesorería, y no afirmo que documente la incidencia.
+4. Si es posible identificar para una segunda solicitud, de manera separada, las hojas del Banco Nacional de San Carlos relativas a vales reales de1796–1797 (caja56 nº17 y cajas afines) y un estado de pagos/tesorería de la Junta, respetando la diferencia entre valor nominal de vales y dinero realmente recibido.
+
+Ruego únicamente indicación de signaturas conservadas, disponibilidad, índices de hojas y reproducción limitada conforme a las normas del Archivo. No autorizo ni presupongo la reproducción pública del material obtenido.
+
+Atentamente,
+[Nombre y contacto a completar personalmente por el investigador]
+
+**ESTADO: OFFICIAL_CITY_375P_CATALOG_DIRECT_READ / CURRENT_PRIMARY_ARCHIVE_ITEM_NOT_REQUESTED / NOT_SENT / NO_RESEARCHER_IDENTITY_SUBMITTED / NO_MANUSCRIPT_REPRODUCTIONS_ACQUIRED.**
