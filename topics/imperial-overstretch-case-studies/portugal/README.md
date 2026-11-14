@@ -80,3 +80,10 @@
 - [DEBTPT_PRIMARY_DEBT_COFFERS_CREDITORS_AUDIT_M2_20261114.md](DEBTPT_PRIMARY_DEBT_COFFERS_CREDITORS_AUDIT_M2_20261114.md)：**实际取得DEBT.PT官方A/B/C三份Excel并版本锁定**；A年度债务/偿付+Palma–Reis名义GDP复算**1641–1800连续160年**，C的1641–1682债权人类别汇总，B的财政金库数据结构与使用边界。
 - [年度债务与偿付占GDP比率CSV](data_m2/debtpt_annual_debt_gdp_ratios_1641_1800_m2.csv)；[十年分组](data_m2/debtpt_decadal_annual_ratio_means_m2.csv)；[债权人类别汇总](data_m2/debtpt_creditor_categories_1641_1682_m2.csv)；[可复算的Python脚本](data_m2/reproduce_debtpt_annual_ratios_m2.py)；[完整M2数据目录](data_m2/README.md)。
 - 关键边界：已记录债务存量/GDP在1694年≈**5.59%**、1763年≈**9.01%**、1800年≈**6.40%**，不能称为全口径主权负债。**1748年2024发表9%与原始版本重算8.15%仍待解释**；债务偿付/GDP与债务偿付/国家支出不能混淆。完整财政军费年度序列、帝国净ROI、2025黄金ASCM因果复现仍未完成。
+
+
+## M2增量｜净帝国财政收入与黄金公共汇款/债务偿付跨来源资金规模桥接
+
+- [FISCAL_CAPACITY_GOLD_REMITTANCES_DEBT_SERVICE_BRIDGE_M2_20261114.md](FISCAL_CAPACITY_GOLD_REMITTANCES_DEBT_SERVICE_BRIDGE_M2_20261114.md)：使用Costa–Henriques–Palma（2024）公开Table3“含/不含帝国的中央财政收入/GDP”与DEBT.PT的160年债务偿付，再将1720—1799的公共黄金和实际同段债务偿付量对接；突出原文**帝国贡献已扣除部分帝国相关开支**，不等于全帝国ROI。
+- [2024财政基准表](data_m2/fiscal_revenue_with_without_empire_2024_table3_m2.csv) · [分期收入/债务偿付口径对照](data_m2/fiscal_revenue_vs_debt_service_periods_m2.csv) · [按年匹配黄金与债务偿付量](data_m2/public_gold_vs_debt_service_matched_periods_m2.csv) · [复算程序](data_m2/reproduce_fiscal_capacity_gold_debt_bridge_m2.py)。
+- 新描述性发现：1720–49公共黄金汇款／同期偿债额≈**218%**，1750–79≈**173%**，1780–99≈**46%**（采用2008黄金版本则约**62%**）；该对比是独立账户的**规模比例**，不是实际偿债拨款流向、债息挤出金额或殖民收益率。2024财政论文只给基准重建分期收入指标，尚无连续年度财政全账。
