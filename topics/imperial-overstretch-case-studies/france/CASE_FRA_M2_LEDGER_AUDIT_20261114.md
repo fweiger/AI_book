@@ -90,3 +90,7 @@ Marie-Laure Legay (2023), *Dictionnaire numérique de la Ferme générale*, « D
 | 因果检验/回归 | NOT_RUN |
 
 **唯一下一行动：** 对1790年Barbé de Marbois扫描PDF第XI表进行视觉逐格核查，校正期末余额7苏索引差异，分别合并各地金库年度新增现金收支与结转/保管资金，并寻找AN H¹ 1686及1780年代王室 Domaine d'Occident 真实入库表。
+
+## 7. 同源回顾史料的存量/流量调节说明
+
+[1788财政来源冲突与存量—流量审计](CASE_FRA_M2_STOCK_FLOW_RECONCILIATION_20261114.md) 根据Ardouin(1853)对Marbois的后期摘述，记录了收入约15m、支出约13m、应收款约9m存量及年底储备超1m。它并非1788年原始扫描的独立复核，且全殖民地方账与海军单一金库、新旧款及汇总平衡表口径未统一；另有180m与193m出口价值估计未调节。**7苏视觉核验继续 BLOCKED，不擅自修正。**
