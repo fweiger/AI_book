@@ -23,3 +23,4 @@
 - [2026-11-14 H03官方预测及历史回顾双出版版本漂移审计](2026-11-14-h03-publication-vintage.md)
 
 - [2026-11-14 大湾区老姚：马斯克／CPI／政治—融资双重暴露观点来源核查](2026-11-14-commentator-laoyao-musk-cpi.md)
+- [2026-11-14 专家/观点→H09-H10→共享指标层→因果链架构重构 v0.2.0](2026-11-14-expert-hypothesis-metric-chain-v020.md)
