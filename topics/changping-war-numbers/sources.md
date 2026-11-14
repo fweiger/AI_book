@@ -98,3 +98,10 @@
 - **S54** [AWS公开Mapzen DEM](https://registry.opendata.aws/terrain-tiles/)：第八轮六瓦片Ubuntu成功访问及算法初筛，属现代数据。
 - **S55** [姜湾2025古道ArcGIS复原](https://m.fx361.com/news/2025/0330/26465334.html)：DEM与实地古道结合才可定历史路网。
 - **S56** [《地理研究》南方丝路古道网络](https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/51576)：古道路基/渡点GPS，非长平直接史实。
+
+## 第九轮来源 S57—S59（阅读级别要准确）
+
+- **S57** [Mapzen官方Terrain Tiles数据与GeoTIFF格式说明](https://www.mapzen.com/blog/terrain-tile-service/)：原始DEM格式、公开S3与数据来源说明；已核。
+- **S58** [GRASS GIS r.walk](https://grass.osgeo.org/grass-stable/manuals/r.walk.html)：真实成本行走还需坡向和地表摩擦，官方软件说明；已核，但未声称已运行此软件求长平古道。
+- **S59** 靳生禾/谢鸿喜《长平之战与长平古战场考察报告》[《黄河文化论坛》首篇公开预览](https://max.book118.com/html/2019/0322/8115064127002013.shtm)：仅可查看开头编按与作者书目，网页提示全文已下架；**原报告正文与附图未读，不得写已精读**。
+- **S19再次原刊核查**：用户提供李冀/侯甬坚2023《中国史研究》第64页图3及正文，羊头山**局部**秦垒约9米宽；图3照片/示意仅属于用户会话，不转载到公开仓库。

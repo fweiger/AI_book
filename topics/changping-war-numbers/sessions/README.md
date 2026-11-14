@@ -17,3 +17,5 @@
 - [2026-11-15 第七轮：职业军官及考古GIS和现代DEM实测](2026-11-15-seventh-defense-simulation.md)
 
 - [2026-11-15 第八轮：原刊地图扩窗及DEM定向测试](2026-11-15-eighth-map-extent.md)
+
+- [2026-11-15 第九轮：DEM多尺度阈值与9m秦垒外推](2026-11-15-ninth-terrain-scale.md)
