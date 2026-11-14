@@ -71,6 +71,10 @@ break_even = solve(C_orbit_per_usable_GPU_h − C_ground_per_usable_GPU_h = 0)
 | energy_price_ground, PUE_ground, discount_rate | USD/kWh, ratio, fraction/year | 地面对照 | 同币值/年 |
 | source_url, observed_at, evidence_class, status | URL, date, enum, enum | 每个输入 | 禁止缺失时伪默认 |
 
+## R1原型新增进度（2026-11-14）
+
+已在本轮研究工作容器执行[模型原型](model_v1/orbital_cost_model.py)的同口径参数情景计算，并运行6项质量/电能/热学量纲/非法输入等测试。结果见[R1报告](R1_MASS_LAUNCH_COST_RESULTS_20261114.md)。**这只完成初次量纲与情景计算；原文AC-03/04/05针对100kW/1MW/10MW完整工程与商业TCO的验收尚为`not_run`/部分未核验**。GitHub提交的文件仍需独立Runner复核。
+
 ## 7. 验收矩阵与防错项
 - 单元测试：单位换算、面积的 Stefan–Boltzmann 反推、全功率余额、异常输入拒绝；`NOT_RUN`。
 - 集成测试：100kW/1MW/10MW三档全闭环、质量与TCO敏感性；`NOT_RUN`。
