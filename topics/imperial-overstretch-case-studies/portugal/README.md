@@ -133,3 +133,12 @@
 - [AHTC_1763_1777_ORIGINAL_TREASURY_VOLUME_MAP_1765_CASH_VS_GOLD_SCOPE_M3_20261114.md](AHTC_1763_1777_ORIGINAL_TREASURY_VOLUME_MAP_1765_CASH_VS_GOLD_SCOPE_M3_20261114.md)：实际取得 **1977年审计法院官方原始档案目录**（216页），注册**21条**相关卷号：1763/1765/1766/1767/1777年各半年`Tesouraria-mor receita e despesa`账簿第**2—10、29—30**卷、现金账簿第**155—159、169**卷，以及税收欠款簿399、财政命令405/406/410和军人旧欠饷5351。当前档案根据2024年协议存放ANTT，需通过审计法院档案服务确认当前藏号、预约及数字化副本；**官方目录已读，原账原件仍NOT_ACQUIRED**。
 - **独立取得2019年Rodrigues博士论文原文**，其对1765年四个财政分账机构合并后的两类`Caixa`账户余额报告约**2,765 contos**；与Sousa（2003）引用ANTT报告的1765年**76.8 contos国库黄金货币存量**属于不同现金/硬币口径且未能确认同日，**不能把两者视为矛盾或直接求黄金占比**。1765年作者报会计收益约2,690 contos，不能当王国财政盈余；公开近似数值的1 conto算术差异仍需原账核对。
 - [21条原始账簿调阅清单](data_m2/ahtc_1763_1777_treasury_original_ledger_requisition_inventory_m3.csv)、[7项会计与黄金不同口径摘要](data_m2/treasury_1765_cash_accounts_vs_gold_coin_stock_provenance_m3.csv)、[来源等级与定义QA脚本](data_m2/validate_ahtc_ledger_requisition_and_1765_cash_specie_scope_m3.py)。**实际在研究Runner从GitHub当前分支重新下载并运行通过**，记录`original_manuscripts=NOT_ACQUIRED`及`transaction_causal_effect=NOT_RUN`；无未经授权的档案原件上传。
+
+
+## M3关键新发现｜1765年国库精确收支/战争结转与2011、2019同作者现金账口径差异
+
+- [RODRIGUES_1765_ACCOUNTING_WAR_ARREARS_TAX_ORIGIN_2011_2019_CASH_AUDIT_M3_20261114.md](RODRIGUES_1765_ACCOUNTING_WAR_ARREARS_TAX_ORIGIN_2011_2019_CASH_AUDIT_M3_20261114.md)：独立下载并核查ISCTE同作者**2011硕士+2019博士**公开原版PDF，复现1765年王室国库账面收入 **4,427.192621 contos**、支出 **1,736.357637 contos**，两者相减与会计收益 **2,690.834984 contos** **逐réis精确一致**，上轮用近似值计算出的1 conto差异已解决。
+- 军事类账列支出 **1,035.933367 contos（59.6613%）**，其中作者选择的战争支出子类 **949.740843 contos（54.6973%全部支出）**；2019原文明确描述**1762战争费用经1763-07-09撤销军需官机构后结转至1765损益账**，故不能表述为1765当年新支付的军费现金。
+- 1765年按**税金征收地**，海外相关财政部门入账份额约**15.69%**；按研究者对**应税商品原产地**重新分组后约**55.86%**，属于统计口径改变而非殖民税收同比增长，亦不等于帝国税收净ROI。作者重分类地区四行加总比印刷总计少**70,000 réis（0.07 contos）**，已保留`SOURCE_REGIONAL_RECLASS_70K_REIS_OPEN`。
+- 同作者2011版与2019版的4项精确资产、负债和利润金额完全相同，但两类`Caixa`账户余额分别为**2011年359.525124 contos**和**2019年约2,765 contos**：`CAIXA_VERSION_DEFINITION_CONFLICT_OPEN`，不能任选其一当实际1765国家全部现金；底层四本AHTC FGER Livros Mestre**537、2699、3976、4154**的原账及`2699 fólio 10`军费结转单仍未取得。
+- 本轮新增[22类收入/支出/战争源分类](data_m2/rodrigues2019_1765_royal_treasury_revenue_expense_war_m3.csv)、[四个地区税金收缴地和商品原产地双视图](data_m2/rodrigues2019_1765_revenue_collection_vs_origin_region_m3.csv)、[2011/2019两版核对表](data_m2/rodrigues_1765_master2011_vs_phd2019_account_edition_audit_m3.csv)、[16项独立计算结果](data_m2/rodrigues1765_royal_treasury_derived_fiscal_identity_m3.csv)及[已实际运行的整数réis复算脚本](data_m2/reproduce_1765_royal_treasury_fiscal_functional_bridge_m3.py)。仍属于发表账表的内部可复算性，非已调阅原始王室手稿或历史因果效应。
