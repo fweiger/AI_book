@@ -34,3 +34,5 @@
 - [2026-11-14 H03独立1月总量与2月B9 EKPC/PSA来源差21年校验](2026-11-14-h03-ekpc-source-reconciliation.md)
 - [2026-11-14 H09县级两项正式会议决议+H10 BEA核心PCE连续33月及复算](./2026-11-14-h09-official-minutes-h10-bea-pce.md)
 - [2026-11-14 18个月CPI/PCE同月环比相关与缺失样本检验](2026-11-14-h10-cpi-pce-matched-18m.md)
+
+- [2026-11-14 H03勘误前B9来源缺失及RTO修订幅度比审计](2026-11-14-h03-uncorrected-b9-source-gate.md)
