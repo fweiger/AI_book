@@ -228,3 +228,17 @@
 - **Financial conclusions unchanged**: 1884 contract total and components off300 reales, 1887 printed total suspicious, 1797–1836 bank receipts13,703,208 nominal reales cannot equal verified profits, actual original 1795 contract and Banco1807 subledger NOT_ACQUIRED, interest/credit/Navy crowdout causality NOT_RUN.
 
 **Single next action:** obtain authorized local librarian retrieval of **1887 Banco-Hacienda litigation case signatura and the archival annex inventory**, via the officially verified Consejo archival address; upon failure/transfer, fall back to Valencia Gobierno Civil holdings. Issue #32 OPEN, PR #36 DRAFT; no merge or external inquiry performed by assistant.
+
+
+---
+
+## M2m · 1797年格劳港口工人工资拖欠、银行融资与工程施工现金流（2026-11-14）
+
+- [M2m劳动—财政—银行融资研究审计](M2M_1797_PORT_WAGE_ARREARS_AND_CREDIT_STRESS_20261114.md)、[1797年202名普通工人工资档次及条件性日工资复算](port_1797_wage_labor_snapshot_m2m.csv)、[1792—1798信用/工资机制与替代解释表](port_1792_1798_credit_wage_mechanism_m2m.csv)、[5项出版物/史料来源等级与共同底本登记](source_registry_m2m.csv)、[研究session](sessions/2026-11-14-spain-m2m-1797-wages-credit.md)、[仍未发送的1797工资档案咨询稿](ARCHIVAL_REQUEST_ES_M2E_20261114.md)。
+- 瓦伦西亚大学史学者 Ricardo Franch Benavent (2009大学库论文pp306—307；2012《Revista de Historiografía》)：格劳港1792-03-26开工，1795年工程计划预算约**1,500万名义雷亚尔**，Bank San Carlos贷款史料约**836万雷亚尔**；**1797-02-11港口工人因欠薪发生骚动**，1798-02-16王室成立新工程Junta，地方税不足、机构移交争议、战争及自然泥沙风险共同扰乱施工。若以M2j/M2k官方历史贷款名义本金**8,363,895雷亚尔**对约15m预算算术比为**55.7593%**，但**不是银行已支付工程费比例或实际现金支持比**。
+- 2016同行评审论文 Franch, *Obradoiro de Historia Moderna* 25，DOI **10.15304/ohm.25.3202**，p217 明列其本人2007年港口专题史pp192—194中的**1797年202名peones**：18人×5、163人×4.5、21人×4名义雷亚尔/工作日，精确复算**907.5名义雷亚尔**，即**假如202人同日全部工作才有的理论当日普通工人工资账单**，不能认定实际欠薪金额、全体工作人员工资成本或已实际支付。202人占全工程人员约45%为作者近似比重，**不能据此推算准确全工程人数**；另外23名熟练泥瓦工平均约7.7雷亚尔是近似数据，独立标注不精确。
+- **来源深度限制**：2009及2012瓦伦西亚大学机构PDF有可检索正文，但本轮web PDF截图两份返回**403**；2016期刊原版PDF链接503，正文数字由期刊搜索引擎索引给出，官方文章 DOI/书目可核查；2007核心章节目录表明原文不可公开下载。**三篇均为同一位学者基于自己2007港口史反复使用的历史材料，非3次独立原始账簿复验**。目前没有1797工资名册原稿、骚动记录或工地逐日收付账。
+- **新可证伪层级**：1793专项港务税→1795银行政府票据贷款面值→地方港务Junta工地实际现金→工人工资拖欠→1798机构重组/施工风险。主要竞争解释包括银行 *vales reales* 折价、指定税源未到账、工程技术超支、承包管理争议、1796英西战争/海路阻塞；**从时间顺序不能推导哪个是已证实因果**。
+- **所有原始银行与财政阻断仍保持**：1795贷款公证誊本、1862逐笔还款证明、2007原研究的1797劳动名册出处、1807银行王室债权总账、UKDS g104spd3未取得，未运行海军债息或私人信贷挤出因果估计。
+
+**唯一下一步**：先获取 Franch(2007) *La fase inicial del puerto de Valencia a finales del Antiguo Régimen* **pp192—194及引述注脚**，查明1797港口劳动名册与1797-02-11工人薪资骚动的一手档案号；再与M2l已定位的Consejo de Estado 1887案件原件查询连接银行逐笔放款与工地工资现金流。保持Issue #32 OPEN、Draft PR #36 未合并。
