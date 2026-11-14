@@ -60,3 +60,10 @@ BLS当前公开**季调指数快照**：
 ## 6. 下一轮具体计算优先级
 
 从BEA原始NIPA数据/可合法获取的历史归档新增2025—26核心PCE完整指数及可核首发版本，联动每次FOMC决议和Fed Watch/期货**公告前**价格。将CPI发布窗口内 `1h/1d` 的2Y收益率变化分成预期利率、期限溢价和信用利差（仅在市场高频数据真正取得时）；加上PIT和同日其他新闻做对照。公司的债务期限结构与浮动利率暴露必须来自SEC或债务附注原件，未披露的私人公司保持NA。
+
+
+## 33个月BEA连续月度PCE（后续2026-11-14同日补齐）
+- 已从[BEA Section2All官方NIPA Excel](https://apps.bea.gov/national/Release/XLS/Survey/Section2All_xls.xlsx)直接下载并读取`T20804-M`，对`DPCERG`整体PCE与`DPCCRG`核心PCE做了**2024-01—2026-09共33个月季调指数**，含月环比、12月同比及原始SHA： [完整33行CSV](../data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)。
+- 2026-09按2026-11-14版本指数复算headline月环比0.4908%、core月环比0.3165%、headline同比3.6489%、core同比3.1212%；与BEA官方10-29公告分别+0.5%/+0.3%/+3.6%/+3.1%吻合。
+- 2026-08核心PCE后见指数复算0.2620%，**不是9月30日首次公开的0.2%版本**；保留历史首发记录表不覆盖。新[离线验证程序](../analysis/recompute_h10_bea_snapshot.py)已用GitHub CSV实际在Ubuntu执行PASS。研究仍缺宏观预期冲击、高频利率和公司债务数据，不允许宣称H10因果验证。
+- [独立BEA系列与数据版本详细报告](2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)。
