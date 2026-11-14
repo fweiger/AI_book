@@ -1,0 +1,83 @@
+{
+  "schema_version": "0.2.0",
+  "purpose": "Illustrative research scenarios, NOT vendor quotes, flight-certified equipment or independent BCG replication",
+  "base_physics_inputs_file": "inputs.json",
+  "horizon_years": 20,
+  "real_discount_rate_per_year": 0.08,
+  "it_kw_scales": [
+    100,
+    1000
+  ],
+  "transport_usd_per_operational_kg_scenarios": [
+    1500,
+    500,
+    100,
+    40,
+    0
+  ],
+  "scenario_prices": {
+    "gpu_unit_price_usd": 25000,
+    "gpu_tdp_w": 700,
+    "fraction_it_power_at_gpu_tdp": 0.7,
+    "other_it_equipment_usd_per_kw": 5000,
+    "solar_array_manufacture_usd_per_kg": 1000,
+    "battery_pack_manufacture_usd_per_kg": 600,
+    "radiator_system_manufacture_usd_per_kg": 800,
+    "bus_shield_comms_manufacture_usd_per_kg": 2500,
+    "orbit_integration_usd_per_kw": 5000,
+    "orbital_operations_usd_per_kw_year": 2000,
+    "orbital_deorbit_usd_per_kw_end": 5000,
+    "orbit_refresh_period_years": 4,
+    "orbit_annual_partial_compute_replacement_fraction": 0.02,
+    "orbit_annual_whole_module_loss_probability": 0.0,
+    "ground_build_usd_per_kw": 30000,
+    "ground_annual_opex_excl_power_usd_per_kw": 2500,
+    "ground_power_usage_effectiveness": 1.3,
+    "ground_electricity_usd_per_kwh": 0.1,
+    "ground_refresh_period_years": 4,
+    "ground_annual_partial_compute_replacement_fraction": 0.01,
+    "ground_decommission_usd_per_kw_end": 1000,
+    "orbit_availability": 0.9,
+    "ground_availability": 0.97,
+    "compute_utilization": 0.8,
+    "orbit_performance_retention_factor": 0.9,
+    "ground_performance_retention_factor": 1.0
+  },
+  "what_if_modifiers": {
+    "baseline": {},
+    "lower_space_manufacturing": {
+      "solar_array_manufacture_usd_per_kg": 500,
+      "battery_pack_manufacture_usd_per_kg": 400,
+      "radiator_system_manufacture_usd_per_kg": 400,
+      "bus_shield_comms_manufacture_usd_per_kg": 1250,
+      "orbit_integration_usd_per_kw": 2500
+    },
+    "refresh_every_6_years": {
+      "orbit_refresh_period_years": 6
+    },
+    "partial_failure_10pct": {
+      "orbit_annual_partial_compute_replacement_fraction": 0.1
+    },
+    "module_failure_1pct_stress": {
+      "orbit_annual_whole_module_loss_probability": 0.01
+    },
+    "high_availability_low_manufacturing": {
+      "solar_array_manufacture_usd_per_kg": 500,
+      "battery_pack_manufacture_usd_per_kg": 400,
+      "radiator_system_manufacture_usd_per_kg": 400,
+      "bus_shield_comms_manufacture_usd_per_kg": 1250,
+      "orbit_integration_usd_per_kw": 2500,
+      "orbit_availability": 0.97,
+      "orbit_performance_retention_factor": 1.0
+    }
+  },
+  "provenance": {
+    "gpu_tdp_w": "NVIDIA H200 SXM official up to 700W: https://www.nvidia.com/en-in/data-center/h200/",
+    "orbital_mass_design": "R1 physical model; NASA solar ROSA 100 W/kg and BCG radiator 400m2/100kW are limited proxy anchors",
+    "gpu_prices_orbit_build_and_ops": "ALL FINANCIAL COMPONENT UNIT PRICES ARE EXPLICIT ANALYST WHAT-IF ASSUMPTIONS, NOT OBSERVED PURCHASE PRICES",
+    "ground_prices": "ALL ANALYST WHAT-IF ASSUMPTIONS, NOT BCG 20-year TCO decomposition; results cannot be compared as calibrated peer benchmarks",
+    "failure_rates": "ANNUAL partial IT replacement fraction versus annual whole-module loss probability; NOT BCG's unspecified 5/10/20/30 percent failure rate parameter",
+    "transport": "Proportional cost-per-delivered-kg what-if only; no integer-per-launch pricing, target orbit, annual launch capacity, volume or physical assembly schedule",
+    "limitations": "Whole-module loss stress uses additive expectation, not stochastic renewal/survival dynamics; it can double-count periodic replacement and is an upper-bound stress illustration"
+  }
+}
