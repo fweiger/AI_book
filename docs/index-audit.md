@@ -6,6 +6,7 @@
 
 - GitHub Actions 定时触发：每天 **UTC 01:30 / 北京时间 09:30**（GitHub 不保证精确执行时刻），还可以手动 `workflow_dispatch`。
 - PR 触发只运行 Python 单测和现有知识库结构校验，**不会误把 PR 分支的文件当成 main 上已正式入库**。
+- `main` 上工作流代码、测试、操作文档或 `INDEX.md` 变更时，通过限定路径的 push 事件执行即时真实审计（也覆盖本 PR 首次合并）；所有报告只读，不自动提交修复。
 - 工作流进入 `main` 后，定时/手动运行才会通过只读 GitHub API 获取 `main` SHA、完整文件树、全部 Issues 和全部 PR（按 100 条分页）。
 - 报告位置：每次 Action 的 **Step Summary** + artifact `ai-book-index-audit-<run_id>`，包含 `report.md` 和 `report.json`，保留 30 天。
 - 工作流仅申请 `contents:read`、`issues:read`、`pull-requests:read`；**不修改** INDEX、Issue/PR 状态，不自动创建新 Issue，不自动合并 PR，也不恢复已迁出的公开内容。
