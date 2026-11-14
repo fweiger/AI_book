@@ -79,3 +79,11 @@
 - 直接目视核对LSE广受引用的Broadberry—Gupta作者PDF表1–5（印刷pp32–35）：英国原棉年均消费**1750年代2.8→1800年代59.6→1840年代526.3百万磅**；英国棉织出口历史固定官方价同窗口86→8352→85947千英镑；当期价英国制造棉织品出口1784—86 **797千英镑** → 1804—06 **16,339千英镑**；**不可混合当期价和1697官方价**。
 - 首轮关键机制：印度棉布跨境贸易和英国进口竞争先于1771英国Cromford机器工厂应用；技术商业化和生产率提升后出口逆转，英国对印度本土市场1831—35的估计份额仍仅3.9%。与Allen高工资利润模型、Raman实物纱线密度、Crafts反对性评论、MIT美国奴役劳动生产原棉后期供给作证据分级。**不是已完成H1—H7因果裁决或五国产业同口径面板。**
 - 四个子国案例M0已阶段收束；暂停无边界财政档案追踪。下一步用英荷英法的机器采用/要素价格建立同一工业化结果的判别性对照；保持本Issue #30与Draft PR #31开放/草稿。
+
+## M3 方向纠偏落实：五国H1—H7证据矩阵及英印棉纺技术竞争（2026-11-14）
+
+- [五国H1—H7综合研究：技术、工资能源、全球棉布贸易、工匠技能与殖民资本](data/TOPIC010_FIVE_COUNTRY_H1_H7_EVIDENCE_MATRIX_COTTON_TECH_COMPARISON_M3_20261114.md)：**回到“英国为什么率先持续工业化”**，使用原Issue七假说并以四个已冻结首轮殖民帝国案例作对照；区分**制造技术首次出现、企业采用、实际规模/生产率、出口竞争力**，不给主权财税数据的数量研究取代产业因果研究。
+- [五国×七假说=35条支持/反例矩阵CSV](data/five_country_H1_H7_industrialization_competing_hypotheses_matrix_m3.csv)：每条含英国结果定义、对应国家、历史对照、最强反例、来源URL、证据级别、因果未运行和不可比标识；**不是35票的AI投票**。
+- [原棉年均使用、英印棉布进出口、技术前沿劳动工时18条原值](data/cotton_india_britain_1700_1850_trade_skill_adoption_source_observations_m3.csv)与[8项可复算指标](data/uk_cotton_trade_technology_comparative_bridge_derived_m3.csv)，来源Broadberry–Gupta(2005) CEPR作者原稿Table1/3/4/8、与2009同行评审文章明确**同作者相关版本**，原稿PDF实得SHA256`9a63fff33030510ae2da94fa1384bc8c93c157e0b93d162c3c6c0753409e3638`；原始19世纪海关簿与机械史原账**未独立重新取得**。
+- [35格和18项源数据标准库验证器](data/validate_five_country_hypotheses_and_cotton_outcome_bridge_m3.py)，已在当前研究分支重新下载实际运行，`PASS matrix_cells=35 cotton_anchors=18`、派生8行CSV SHA256`8a8a71286312400f56b4b3051ca58a508b1bc453d5eb14fecc84b45873e28f9b`。核心判别冲突：**Allen(2011)跨国高工资廉价煤** vs **Kelly–Mokyr–Ó Gráda(2023)英国郡级低起始工资/高机械技能**，两种估计量不同，不能直接按谁对谁错投票。棉纺产出原料规模放大、最佳实践纺纱工时下降 ≠ 全国人均生产率/奴役资本的单因果结果。
+- **下一步唯一方向**：不重新打开国家财政档案逐叶工作；从[Warwick/CAGE Broadberry等英国历史GDP及产业数据](https://warwick.ac.uk/fac/soc/economics/research/centres/cage/data/datasets/17-01-22-british_economic_growth_1270_1870/)与英国/荷兰/法国同业工资能源和设备采用来源，建立产业因变量及国家可比性桥，针对H2/H6/H7进行竞争性预测检验；未取得这些原始数据仍标`NOT_ACQUIRED`。
