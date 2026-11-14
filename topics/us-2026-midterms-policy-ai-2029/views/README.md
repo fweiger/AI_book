@@ -65,3 +65,7 @@ J -->|"保留历史版本并提出新问题"| H
 
 ## 2026-11-14 第七轮：学区真实税差与2025同源通胀预测的反例（v0.2.7）
 - [VIEW-S001 C04/C07/C09 第七轮追加评估](claim_reassessments_2026-11-14_round7.csv)：C04 Texas Comptroller官方Del Valle ISD Ch313 #1496的2025报告版本有2024税年毛税差**$43.496m**、2025报告年**$42.608m**，但不等于Travis县Ch381已经付给Tesla的现金；早版对2024税年预测**$20.643m**→新版同年报告**$43.496m**是信息版本修订，不是2027政治新补贴。C07/C09 [同一发布者提前预期的2025年7/11覆盖](../reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)中Core惊讶与2Y当日方向只有**2/4吻合**，Headline**2/5**，均p1.0，与此前跨年跨机构Core6/7相差明显，不能据个别历史样本声称预测模型已验证。仅追加评估，原作者VIEW-S001观点原始快照不覆盖。
+
+
+## 2026-11-14第八轮：学区已收到PILOT和CPI预测发言者分层（v0.2.8）
+- [VIEW-S001 C04/C10/C07三条新核查](claim_reassessments_2026-11-14_round8.csv)：C04 Del Valle ISD学区FY2022—25正式财报记录Tesla Ch313相关PILOT累计$51,493,026，明确**企业向学校支付的方向**，不是县级grant；C10 FY2025学校报告与候选税年CDR收入保护+补充支付的差额**$976,875未对平**，不存在可核企业净现金收益额；C07 2024-04-09同发布者不同文章分别给银行单机构预测和市场共识，需区分owner和发布时间，不能把2Y当日+23bp直接归因CPI。[H09收款报告](../reports/2026-11-14_h09_delvalle_school_afr_pilot_receipts_and_cdr_crosswalk.md)及[H10数据质量报告](../reports/2026-11-14_h10_2024_same_publisher_cpi_preview_coverage_and_source_types.md)。原作者观点与前七轮证据仍不改写。
