@@ -118,3 +118,9 @@
 - 已下载2026-01-14官方主报告PDF（36页，SHA`9f2826cfc39357c54d6e6203e60946b6ce9ea627cfceeeaf4d4cd343066c6bc8`）：正文不包含B9完整原始数值，全部表格单独Excel；2026Jan独立B9b不能替代B9。2026-02-06以后B9原表有勘误注释，所以**勘误前后差值仍NA**。
 - 寻找首发B9需要历史档案原URL/bytes/SHA/首次公开日、同一zone和目标年份定义；本轮Wayback访问超时不能称为档案不存在。若无法得到，按[来源可用性合同](reports/2026-11-14_h03_uncorrected_b9_source_gate.md)继续保留缺失，不再凭猜测填写0或+10MW。
 - 用2025官方原版与2026Jan独立B9b同目标2027—2030对照，B9b修订-1855/-2128/-2112/+1765MW，PJM整体夏季峰值修订-3735/-4414/-4564/-875MW；差幅比例仅作规模敏感性，**不归因政策或AI实物建设**。
+
+
+## H09州381官方金额空白、H10 CPI公布日稳健性验证（v0.2.3）
+1. 县级付款核算：Travis County×Colorado River Project LLC官方2020—22合格Grant受益、应付、实发、9%扣留和既付后追回USD仍无公开核对表。[州官方381数据](cases/musk-2026/texas_comptroller_0005328_registry_snapshot.csv)金额字段空白，不能当0；县财政透明网站Ubuntu TLS访问失败只是无法取数，不是没有付款。优先从官方Auditor/PBO付款或开放记录获取，按Performance Year与Payment Date分开，再去检验Tesla集团财务影响。
+2. 年度金额有别于2020签约时十年预计**约$14m**；绝不计算`14m×9%`冒充实际。学区Chapter313优惠独立法域，不可填入Travis县Chapter381现金格。
+3. H10[22次CPI公布日×US Treasury事件样本](reports/2026-11-14_h10_cpi_release_ust_22_event_robustness.md)已经完成探索性月内随机化；2Y完整样本p=0.0483但是删除2026-11-10后p=0.1389、分年也不稳健，因此**下一步应取得公告前专业CPI共识、CME合法可用历史FedWatch/FF期货及分钟级2Y变化**，再剥除同日其他宏观消息，而不是反复调整阈值追求显著性。
