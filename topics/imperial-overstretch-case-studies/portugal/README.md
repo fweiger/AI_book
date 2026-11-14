@@ -159,3 +159,12 @@
 - 葡萄牙[2011年硕士论文](https://repositorio.iscte-iul.pt/bitstream/10071/4540/1/Tese%20Manuel%20Jos%C3%A9%20Benavente%20Rodrigues.pdf)第70页指出Rio黄金相关**1%机构往来款部分对应1763年以后，但于1766年才记入借方**，证明记账年不等于黄金到港/税收现金入库年，金额未知。
 - 独立作者Mont Serrath（2013）[《Sæculum》公开原文](https://periodicos.ufpb.br/index.php/srh/article/download/19810/10945/37156)报告1765年另一个年度财政名义结果**−554,031,592 réis**，与Rodrigues（2019）四Contadorias损益收益**+2,690,834,984 réis**差**3,244,866,576 réis**，但**指标不同，不能视作现金丢失或历史财政亏损得以证实**；他另明确写出**1766年371.4 contos存款金库贷款未能在所核查国库账目中找到对应入账**，仍需债权人/国库双边核查。
 - [2019附录E八个Caixa余额原表](data_m2/rodrigues2019_1765_annex_e_eight_caixa_balances_m3.csv)、[7项跨作者财政/黄金税/1766贷款凭证矩阵](data_m2/independent_1763_1766_fiscal_timing_and_2013_cash_vs_2019_accrual_sources_m3.csv)、[18项计算结果](data_m2/rodrigues2011_2019_montserrath2013_1765_cash_cross_source_bridge_m3.csv)、[实际运行的标准库复算脚本及原PDF SHA+文本验证](data_m2/reproduce_1765_caixa_2019_annex_vs_2011_and_2013_cash_series_m3.py)。真实原稿与2013附带Excel仍`NOT_ACQUIRED`，因果模型仍`NOT_RUN`。
+
+
+## M3最新增量｜1765—1767年实收/实付国库账册621—628，四级会计凭证核验1766年存款金库贷款
+
+- [完整专项报告：AHTC_1765_1767_DIRECT_CASH_BOOKS_621_624_FOUR_LEDGER_LOAN_RECONCILIATION_M3_20261114.md](AHTC_1765_1767_DIRECT_CASH_BOOKS_621_624_FOUR_LEDGER_LOAN_RECONCILIATION_M3_20261114.md)：重新取得审计法院**1977年官方216页馆藏目录**，新增精确定位`Livros de registo das entradas e pagamentos no Real Erário nas Caixas de rendimentos correntes e pretéritos`卷**617—620（1765年）、621—624（1766年）、625—628（1767年）**，属于国库入款/付款历史登记簿，而不是已拿到原账图像。
+- 该目录同时定位第一Contadoria`Livros Diário`第**548/549卷**、Reino/Ilhas日记簿**2718/2719**、Rio/东非/亚洲日记簿**3982**、西非/Bahia日记簿**4160**，以及`Livros Mestre`第**537/538/2699/3976/4154**与日记草簿，构建**债权人Junta del Depósito→1766国库收付簿621—624→Contadoria日记簿→总账537与相对账户**的四层核对路径。
+- 源目录发现可审计的日期异常：1765年619卷从**7月22日**开始导致7月21日目录层面未涵盖；1766年623和624卷都标**9月5日**；1767年626卷标出不存在的**6月31日**（未擅自改成6月30日），627从7月3日起；另有日记草簿556/557在1766年9月月份范围重叠。
+- 新增[官方28卷精确调阅表](data_m2/ahtc_1765_1767_receipts_diaries_master_crossledger_28_volumes_m3.csv)、[来源完整性/日期异常标准库QA程序](data_m2/validate_ahtc_1765_1767_direct_cash_books_28_volumes_m3.py)，**实际从当前GitHub分支取文件及官方档案原PDF进行SHA锁定检查并运行PASS**；用人为把“6月31日”自动纠正为6月30日的反向测试验证程序会拒绝。
+- 2013年Mont Serrath报告**未找到1766年371.4 contos贷款的相应国库入账**；本轮**只推进具体应查档案位置**，仍`1766_LOAN_TREASURY_CASH_ENTRY_NOT_IDENTIFIED / HISTORIC_HANDWRITTEN_PAGES_NOT_ACQUIRED`，没有发出档案申请、没有完成历史财政现金链或2025黄金ASCM因果复现。
