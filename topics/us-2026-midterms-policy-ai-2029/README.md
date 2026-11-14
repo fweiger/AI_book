@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H08均UNTESTED。** 版本 0.1.11；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.0；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -10,14 +10,16 @@
 **每一条箭头是不同的待检验假说，且允许反向反馈、跨国家对照和链路游走。**
 
 ## 研究导航
-- [整体假说与机制 FRAMEWORK](FRAMEWORK.md) · [H01—H08详细注册表](HYPOTHESES.md) · [路径状态 PATHWAYS](PATHWAYS.md)
+- [整体假说与机制 FRAMEWORK](FRAMEWORK.md) · [H01—H10详细注册表](HYPOTHESES.md) · [路径状态 PATHWAYS](PATHWAYS.md)
 - [可量化指标 METRICS](METRICS.md) · [数据源与PIT事实底座 SOURCES](SOURCES.md) · [审计与识别规则 PROTOCOL](PROTOCOL.md)
 - [多AI独立工作合同 COLLABORATION](COLLABORATION.md) · [下一轮 NEXT](NEXT.md)
 - [研究问题](questions.md) · [正式论点状态](claims.md) · [知识地图](knowledge-map.md) · [可机读图谱](knowledge-graph.json) · [阅读路线](reading-path.md)
 - [CSV数据合同](data/README.md) · [版本记录](CHANGELOG.md) · [过程会话](sessions/README.md)
+- **新统一研究层**：[专家档案/作品库](experts/README.md) → [观点来源池](views/README.md) → [观点×假说映射](hypotheses/view_hypothesis_links.csv) → [H01—H10](HYPOTHESES.md) → [因果链及逐边检验](chains/README.md) ↔ [统一91项指标目录](metrics/README.md) ↔ [事件数据/反证](data/evidence_events.csv)。
+- **案例专线**：[马斯克Texas/国会/赦免/现金流](cases/musk-2026/README.md) · [H09研究任务 #55](https://github.com/fweiger/AI_book/issues/55) · [CPI/PCE→Fed→融资H10研究任务 #56](https://github.com/fweiger/AI_book/issues/56)。
 - [外部财经评论者/UP主观点池（独立观点与事实分离）](views/README.md) · [大湾区老姚2026-11-14观点核查卡](views/2026-11-14-dayawanqu-laoyao.md) · [可机读主张表](views/claim_register.csv) · [观点池长期跟踪Issue #54](https://github.com/fweiger/AI_book/issues/54)
 
-## 9个可直接接手的AI任务
+## 11个可直接接手的AI任务
 | 工作ID | 核心研究 | Issue |
 |---|---|---|
 | H01 | 制度对抗与行政阻断 | [#42](https://github.com/fweiger/AI_book/issues/42) |
@@ -29,6 +31,8 @@
 | H07 | 金融市场与宏观传导 | [#48](https://github.com/fweiger/AI_book/issues/48) |
 | H08 | 非政治AI周期与全球对照 | [#49](https://github.com/fweiger/AI_book/issues/49) |
 | DATA-00 | 数据源、PIT与统一证据账本 | [#50](https://github.com/fweiger/AI_book/issues/50) |
+| H09 | 企业政商关联、Texas优惠/国会监督与财务后果 | [#55](https://github.com/fweiger/AI_book/issues/55) |
+| H10 | CPI/PCE→FOMC预期/决议→再融资成本 | [#56](https://github.com/fweiger/AI_book/issues/56) |
 
 ## 明确边界
 - AP已宣布民主党赢得2027年参众两院多数，但选举认证/席位细节应动态更新；民主党并非在2026-11已经开始控制新一届国会。
