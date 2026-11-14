@@ -37,6 +37,7 @@
 
 首轮各国合计50条历史事件、39项来源登记、20条数值与待获取指标记录；这是**来源准入与结构化第一轮**，并非已完成跨国因果回归。各案工作文件分别在独立PR中，不直接修改本Draft PR的已提交主研究数字。
 
+- [英国—荷兰1600—1765技术采用、工资能源与H1—H7竞争解释审计](data/TOPIC010_UK_NLD_TECH_ADOPTION_WAGES_ENERGY_1600_1765_20261114.md)——严格区分风力机械锯木、煤炭/蒸汽采用、产业组织及1750后增长；以荷兰高财政动员和便宜泥炭作为反例，复用Costa源表比较3个50年窗口；[15条证据](data/britain_netherlands_evidence_1600_1765.csv)、[7项假说反证](data/britain_netherlands_hypothesis_falsifiers_1600_1765.csv)、[3期财政同源对照](data/britain_netherlands_fiscal_comparator_1600_1749.csv)。因果识别尚未运行。
 - [2026-11-14 四国案例第一轮阶段出口与研究重定向](data/TOPIC010_CROSS_EMPIRE_STAGE_GATE_AND_REFOCUS_20261114.md)——四国M0/M1来源/事件/数值记录结构已达到首轮门槛；暂停与上位假说无关的原始汇票或小额账表深挖。上位P1—P4转向英国与荷兰技术采用、高工资/能源、棉纺品贸易变迁、五国最小财政可比面板；阶段出口不等于历史因果已通过。
 - [四国首轮机制比较：50事件、39来源、20指标](data/FOUR_EMPIRE_M0_SYNTHESIS.md)——西班牙/荷兰/葡萄牙/法国各自独立Draft PR，五轨检验与反例。
 - [美国地缘屏障、产业规模与对外战略对照](data/USA_GEOSTRATEGIC_CONTROL_V1.md)——1898殖民扩张、1913制造业领先与1941租借法的类比边界。
