@@ -98,3 +98,12 @@ https://ateneodemadrid.com/biblioteca/
 - No new online 1807 folded balance image acquired and no message sent. All four earlier 1783-only references retain their original date labels; 1808 new references are independently date-stamped to 1808.
 
 **Single next action:** through user-authorized contact to **biblioteca@ateneodemadrid.es**, request a scan or precise permission for **Ateneo A-Caj.179/5 (1808 meeting, published 1815) including the complete 1807 balance foldout**; in parallel ask Banco Historical Archive for the **1807 original account books that match the now pinpointed 1808 AJG inventory series**, particularly Real Hacienda principal vs overdue-interest. Until a response or lawful image acquisition, this is ACCESS_BLOCKED rather than a ledger-reconciliation pass.
+
+
+---
+
+## M2g correction of digitization scope (2026-11-14)
+
+The M2f conclusion **"Sin objeto digital asociado"** applies **only to the Ateneo de Madrid 1808 physical holding record within the Madrid union catalog**. It should not be generalized into a statement that no original Banco de San Carlos governing minutes are available digitally from other institutions.
+
+[Banco de España's official digitized historical collections](https://www.bde.es/wbe/es/punto-informacion/contenidos/servicios/archivo-historico/colecciones-digitalizadas/) explicitly describe original early San Carlos board and shareholder minutes in their own repository, and [Hispana government aggregator metadata](https://hispana.mcu.es/en/registros/registro.do?idBib=59036776&tipoRegistro=MTD) identifies a concrete 1790 original board book under archive ID ES.28079.AHBE/01.01//000147, 276 folios. The repository returned HTTP400 in this session; **no original 1790 PDF or 1808 original meeting foldout was downloaded, and no 1808 target item ID verified**. See the [M2g report](M2G_1829_PRIMARY_SETTLEMENT_AND_CAPITAL_DATE_AUDIT_20261114.md) for the revised acquisition route.
