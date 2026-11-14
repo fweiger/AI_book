@@ -1,0 +1,14 @@
+sheet,author_excel_column,normalized_variable,unit,definition_and_limit,source_2019
+GDPs,A,year,calendar year,individual year,https://doi.org/10.1017/S0022050719000056
+GDPs,B,pc_gdp_1990_gk,1990 Geary-Khamis international dollars per capita,historical model reconstruction,https://doi.org/10.1017/S0022050719000056
+GDPs,C,population_persons,persons,historical population reconstruction,https://doi.org/10.1017/S0022050719000056
+GDPs,D,population_million,million persons,C divided by 1000000,https://doi.org/10.1017/S0022050719000056
+GDPs,E,real_gdp_million_1990_gk,million 1990 GK international dollars,B multiplied by D,https://doi.org/10.1017/S0022050719000056
+GDPs,F,real_gdp_index_1850_100,index (1850=100),real GDP relative to 1850,https://doi.org/10.1017/S0022050719000056
+GDPs,G,nominal_gdp_index_1850_100,index (1850=100),nominal GDP relative to 1850,https://doi.org/10.1017/S0022050719000056
+GDPs,H,nominal_gdp_million_reis,million reis (contos de reis),historically reconstructed nominal GDP,https://doi.org/10.1017/S0022050719000056
+CPIs,A,year,calendar year,individual year,https://doi.org/10.1017/S0022050719000056
+CPIs,B,cpi_silver_1850_100,index (1850=100),aggregate CPI valued in silver; NOT a real exchange rate or sectoral nontradable price,https://doi.org/10.1017/S0022050719000056
+CPIs,C,silver_price_reis_per_gram,reis per gram of silver,silver conversion factor,https://doi.org/10.1017/S0022050719000056
+CPIs,D,silver_price_index_1850_100,index (1850=100),silver price index,https://doi.org/10.1017/S0022050719000056
+CPIs,E,cpi_reis_1850_100,index (1850=100),"B multiplied by D/100; aggregate nominal CPI, NOT sectoral nontradables index",https://doi.org/10.1017/S0022050719000056
