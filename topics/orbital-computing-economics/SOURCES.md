@@ -20,3 +20,16 @@
 优先级：运载服务商任务专属公开合同/发射许可数据及NASA/ESA官方工程资料 ＞ 原始实验/同行评审论文 ＞ 政府技术综述 ＞ 咨询机构可复算模型 ＞ 企业营销。不同证据性质不可直接取平均。
 
 可追加的独立问题：Starship不同任务构型实际发射服务价格何时公开且可交易、未来长期报价是否涉及批量合同、超大型可展开散热器的质量单位面积、在轨算力设备失效率与可维护性。目前这些均保持 `UNKNOWN` 或 `SCENARIO`。
+## 2026-11-14 视频核查新增证据
+| ID | 公开来源 | 对应可验证主张 | 级别与限制 |
+|---|---|---|---|
+| S08 | [SpaceX Flight 15官方任务页](https://www.spacex.com/launches/starship-flight-15) | 目标26颗V3及两级塔捕计划 | 一手**计划**，不是最终回收结果 |
+| S09 | [Space.com 2026-11-14星舰15实时报道](https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-14-2026-starship-first-double-landing-attempt) | 26颗部署、B22中止、SpaceX解说GNC故障类别 | 多次直播更新；随时间变化，媒体转述须标记 |
+| S10 | [AP第15飞报道](https://apnews.com/article/f9452dd86770dda36828a35bb27d65ee) | 入轨/部署、B22在墨西哥湾损失 | 独立新闻，不能证明精确FTS机制 |
+| S11 | [Reuters FAA全国停飞报道](https://www.reuters.com/world/us/faa-issues-national-ground-stop-due-extraordinary-circumstance-reasons-safety-2026-11-13/) | 航管通讯故障与全国停飞 | 不能证明对B22塔捕产生影响 |
+| S12 | [SpaceX SEC 2026年招股披露](https://www.sec.gov/Archives/edgar/data/1181412/000162828026042639/spaceexplorationtechnologi.htm) | V3预期100t、未来200t、60颗V3预期容量、轨道AI算力战略 | 公司披露中的**前瞻性估计**，不是型号现役认证 |
+| S13 | [SpaceX SEC 2026年三季度报告](https://www.sec.gov/Archives/edgar/data/1181412/000162828026066880/spcx-20260930.htm) | Starship研发/试验成本按季度披露 | 未有第15飞单次总成本审计 |
+| S14 | [Ars Technica 2026年9月V3报道](https://arstechnica.com/space/2026/09/starships-first-orbital-launch-gives-lift-to-spacexs-next-gen-starlinks/) | V3约2吨/颗 | 公开媒体报道，不是本次官方运单 |
+| H03 | 用户提供的2026-11-14未来学研究局视频转写，本地私有MD（Ubuntu MCP只读） | $130M/发、$20–30M/发、$40–85/kg及FAA相关猜测等**作者观点** | 未提供原始财务模型，不视为证实数字；公开仓库不复制私人转写全文 |
+
+上述核查分析与证据边界详见 [FLIGHT15_COST_FACTCHECK_20261114.md](FLIGHT15_COST_FACTCHECK_20261114.md)。
