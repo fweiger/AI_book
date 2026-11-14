@@ -20,3 +20,10 @@
 
 ## 状态与审查
 `UNKNOWN, SUPPORTED, CHALLENGED, MIXED, SUPERSEDED`按**每个假说节点/候选边/整个路径分别记**，支持和反证都必须保留。PR合并前为讨论/草案；GitHub CI通过仅保证结构和链接，不证明经济因果。
+
+## v0.2.0 两入口、多对多指标和逐边审计
+- `expert_id→work_id→view_claim_id→H_id→chain_id→metric_id→evidence_id→判定时点` 是**引用网络**，不是单向已经确定的因果；H也可从宏观问题直接新建，不要求所有H都源于专家。
+- 同一作品多个观点、一条VIEW同时链接H09与H10、一条指标同时支撑多H均通过多对多关联表建模。只在明确原始机构/发布时点时把经济数值进指标观测；主张表不能作为宏观真值表。
+- `metrics/catalog.csv` 已包括全部91个旧/新指标定义或指标族；具体数值按 `published_at/source_version/period/entity/geo/units` 存，禁止同一政策指标跨Tesla和SpaceX错误合并；定义被改动时必须加版次，不覆盖此前PIT。
+- `chain_registry.csv/chain_edges.csv` 逐边登记必备资料、强反证和状态；同一链前两边成功≠最后盈利或资本市场因果。链ID `CHAIN-*` 与旧正式K01—K15因果边分别命名，不能复用已有K07/K08/K09。
+- 样本不足时可以记录描述性源和可证伪预测，不能宣称回归显著、加息概率、实际政策优惠回收或已发生赦免。新的H09/H10为未验证机制，并不自动形成正式因果C-ID。
