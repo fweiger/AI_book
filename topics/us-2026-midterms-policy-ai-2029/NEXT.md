@@ -102,3 +102,9 @@
 - PJM 2025原版报告直接证明B9b **于2025年首次出现**，所以追求2023/24原版同名B9b不现实。旧版B9只作为Above Embedded，跨2025六月total的proxy只能标跨出版来源。
 - **仍须追查**2026-01-14更正前B9真实原文件（或PJM正式2/6数据修订差表）。已有1/13修改的独立B9b，但2/6B9是更正后的文件；**不可推算勘误效应=8/9/10MW**。另外不能从两表的数学残差反推实际已供电DC客户容量。
 - 2027目标RTO v2025原版17721MW→2026早期独立B9b15866MW为-1855MW，当前合并版15856为-1865MW，2026五月回顾2025/26序列17726→15866为-1860MW；三组数据用于**来源敏感性和PIT校验**，不是实际项目状态。
+
+
+## 2026-11-14 已取得Travis县书记官正式Minutes及BEA33个月——未完成问题明确转移
+- **H09会议纪要原件已得到，不再列缺失**：[2026-04-07两项正式表决](reports/2026-11-14_h09_official_minutes_primary_confirmation.md)和[带SHA的表](cases/musk-2026/travis_official_votes_20260407.csv)已有：Item26 4-0/1弃权扣留2020–22合格grant 9%；Item6同票数批准2025/26社区投入方案，工作人员说明社区投入义务约2025 $2m和2026 $3.2m。**该义务不是政府付给Tesla的钱**。
+- **H09真正缺口改为金钱链**：追踪2020—22各年度Travis County grant eligibility、税款实际缴付、核发和到账明细、9%被扣留的**绝对USD**、最终县法官签署文件；区分`withheld-before-payment`与`recapture-after-disbursement`。没有实际现金对账之前H09现金流边仍UNTESTED。
+- **H10完整连续PCE已取得**：BEA官方月度headline/core共33行[CSV](data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)，[报告](reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)、[复算PASS](analysis/recompute_h10_bea_snapshot.py)；**下一步不是重复抓当前版指数**，而是找2025—26月份的首次发布存档、专业一致预期时间戳和Fed基金期货真实预期价格，才可以量化公告surprise与2年期利率变化。旧PCE8月首次0.2%和后修0.3%的冲突必须保留PIT版本。
