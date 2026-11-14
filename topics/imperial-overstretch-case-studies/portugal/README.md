@@ -72,3 +72,11 @@
 - [GOLD_REMITTANCES_TO_GDP_BRIDGE_AND_DATA_ACCESS_AUDIT_M2_20261114.md](GOLD_REMITTANCES_TO_GDP_BRIDGE_AND_DATA_ACCESS_AUDIT_M2_20261114.md)：1720—1804年黄金私人/公共汇回与同期葡萄牙名义GDP的单位、窗口、原始数据和因果边界审计，并核实openICPSR于2026年8月退役及ICPSR新平台自动流量验证阻断。
 - [gold_to_nominal_gdp_fiveyear_bridge_m2.csv](data_m2/gold_to_nominal_gdp_fiveyear_bridge_m2.csv)（17期已验证衍生CSV），[reproduce_gold_gdp_bridge_m2.py](data_m2/reproduce_gold_gdp_bridge_m2.py)（实际运行、锁定作者Excel SHA256的复算脚本）。
 - **1720—1804年名义黄金汇回额／同期GDP累计总额约2.9298%，其中公共渠道0.6482%、私人2.2816%。** 这是跨研究年度口径对齐的*流量比率*，**不是殖民金矿GDP增量、公共税收净率或帝国净ROI**。严格2025 ASCM及财政年度表仍未获得，不得以此替代模型复算。
+
+
+## M2深化｜铸币局黄金来源交叉审查 + DEBT.PT三份原始Excel债务复算
+
+- [MINT_ARCHIVE_GOLD_DATA_VERSION_AND_SOVEREIGN_DEBT_REDTEAM_M2_20261114.md](MINT_ARCHIVE_GOLD_DATA_VERSION_AND_SOVEREIGN_DEBT_REDTEAM_M2_20261114.md)：基于Sousa（2008）铸币局研究与2025黄金论文附录核对16个同窗口五年段，发现1780–1784年黄金汇回额差1,726 contos（差异集中在公共分类），以及2024债务表的口径问题。
+- [DEBTPT_PRIMARY_DEBT_COFFERS_CREDITORS_AUDIT_M2_20261114.md](DEBTPT_PRIMARY_DEBT_COFFERS_CREDITORS_AUDIT_M2_20261114.md)：**实际取得DEBT.PT官方A/B/C三份Excel并版本锁定**；A年度债务/偿付+Palma–Reis名义GDP复算**1641–1800连续160年**，C的1641–1682债权人类别汇总，B的财政金库数据结构与使用边界。
+- [年度债务与偿付占GDP比率CSV](data_m2/debtpt_annual_debt_gdp_ratios_1641_1800_m2.csv)；[十年分组](data_m2/debtpt_decadal_annual_ratio_means_m2.csv)；[债权人类别汇总](data_m2/debtpt_creditor_categories_1641_1682_m2.csv)；[可复算的Python脚本](data_m2/reproduce_debtpt_annual_ratios_m2.py)；[完整M2数据目录](data_m2/README.md)。
+- 关键边界：已记录债务存量/GDP在1694年≈**5.59%**、1763年≈**9.01%**、1800年≈**6.40%**，不能称为全口径主权负债。**1748年2024发表9%与原始版本重算8.15%仍待解释**；债务偿付/GDP与债务偿付/国家支出不能混淆。完整财政军费年度序列、帝国净ROI、2025黄金ASCM因果复现仍未完成。
