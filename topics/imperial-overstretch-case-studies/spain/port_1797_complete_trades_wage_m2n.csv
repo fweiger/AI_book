@@ -1,0 +1,11 @@
+record_id,historical_year,worker_category,count,daily_nominal_reales,modeled_if_all_present_same_day_nominal_reales,value_status,source_id,source_print_page,read_status_and_boundary
+M2N-W01,1797,amasadores_5,78,5,390,PUBLISHED_NUMBER_RATE_DERIVED_PRODUCT,ESP-M2N-S01,236,Amasadores are distinct from peones; no actual payroll disbursement verified
+M2N-W02,1797,peones_5,18,5,90,PUBLISHED_NUMBER_RATE_DERIVED_PRODUCT,ESP-M2N-S01,236,General laborers; day worked not known
+M2N-W03,1797,peones_4_5,163,4.5,733.5,PUBLISHED_NUMBER_RATE_DERIVED_PRODUCT,ESP-M2N-S01,236,No common employment day verified
+M2N-W04,1797,peones_4,21,4,84,PUBLISHED_NUMBER_RATE_DERIVED_PRODUCT,ESP-M2N-S01,236,Historical nominal wage tier
+M2N-W05,1797,peones_subtotal,202,,907.5,DERIVED_SUBCATEGORY_NOT_ALL_CONSTRUCTION,ESP-M2N-S01,236,18+163+21; M2m valid for peones only; not entire lower-wage trades
+M2N-W06,1797,amasadores_plus_peones_4_groups,280,,1297.5,DERIVED_CONDITIONAL_WORKDAY_SUBTOTAL,ESP-M2N-S01,236,Adds 78 amasadores at 5 nominal reales each; NOT actual 1797 paid or unpaid wages; other skilled categories not included
+M2N-W07,1797,skilled_albaniles_avg_approx,23,7.7,177.1,APPROXIMATE_HISTORIAN_MEAN_MULTIPLICATION,ESP-M2N-S01,236,"Source rate range7–8.5 and avg ~7.7, exact individual wage sum unknown; do not add to exact subtotal as measured"
+M2N-W08,1797,senior_master_and_foreman,2,,,PUBLISHED_HEADCOUNT_UNQUANTIFIED_RATE,ESP-M2N-S01,236,1 maestro albañil and1 capataz; source excerpt cut before salary level; no fabricated rate
+M2N-W09,1797,distinct_workers_in_explicit_cited_groups,305,,,DERIVED_MINIMUM_EXPLICIT_ROLES,ESP-M2N-S01,236,78+202+23+2=305; likely other workforce categories; NOT actual whole-project roster total
+M2N-W10,1797,conditional_280_group_mean_rate,280,4.633928571428571,,DERIVED_QUOTIENT,ESP-M2N-S01,236,"1297.5/280; based on published tiers, not mean of actual wages disbursed"

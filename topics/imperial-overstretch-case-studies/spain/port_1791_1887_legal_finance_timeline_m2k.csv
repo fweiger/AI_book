@@ -1,0 +1,27 @@
+date,event,what_happened,source_grade,source_id,boundary
+1791 late,Trade permission,Valencia national exports to America authorized by Crown,PORT AUTHORITY MODERN SUMMARY,M2K-S06,Exact date not sourced
+1792-01,Port started,Mirallas Grao port construction began,PORT AUTHORITY MODERN SUMMARY,M2K-S06,Physical/technical rival risk silting
+1793-01-29,Pledged port tax,Consular dues doubled for harbor building,1887 FIRST PARTY RETELLING,M2K-S01,Original 1793 decree not obtained
+1793-05-28,Silk levy,Royal order authorized silk export/processing duties as port finance,1887 FIRST PARTY RETELLING,M2K-S01,No revenue collection amounts
+1794-04-10,Original printed levy rules,Local Junta port-construction and tax-collection instruction; 10pp,ORIGINAL PRINT CATALOG ONLY,M2K-S03,Original source images timeout
+1794-10-07,Credit policy,Crown urged Banco to fund Grao harbor,1887 FIRST PARTY RETELLING,M2K-S01,Not bank disbursement yet
+1795-02-07,Bank conditional offer,Initial 200k of1m considered contingent on sovereign approval,1887 FIRST PARTY RETELLING,M2K-S01,Conditional not cash-paid
+1795-04-03,Finance ministry support,Hacienda ordered project resource review,1887 FIRST PARTY RETELLING,M2K-S01,Not Crown directly borrower
+1795-09-04,Credit and security proposal,Bank proposed8.363895m 500k monthly 5pc 20y; local taxes and1237 pledged shares,1887 FIRST PARTY RETELLING,M2K-S01,Secured loan not necessarily sovereign debt
+1795-09-28,Royal approval,Crown approved financing operation and authorized local agent to sign deed,1887 FIRST PARTY RETELLING,M2K-S01,Royal approval != direct Crown contract
+1795-10-06,Madrid loan deed,Banco and Junta signed notarial loan,1887 FIRST PARTY RETELLING,M2K-S01,Original agreement not acquired
+1795-10-22,Valencia ratification,Local Junta approved bank deed,1887 FIRST PARTY RETELLING,M2K-S01,Original ratification not acquired
+1795-11 to1797-03,Loan disbursement,Loan funded 17 tranches in vales reales,1862 CERTIFICATE IN 1887 CASE,M2K-S01,Nominal claim not metallic cash
+1798-02-16,Board replacement,Royal-created Junta Protectora chaired by Captain General,1887 FIRST PARTY RETELLING,M2K-S01,Supervision != borrower
+1802-07-16,Tax pass-through,"Royal tax collectors collect new port contribution, must remit to Junta",1887 FIRST PARTY RETELLING,M2K-S01,"Earmarked revenue arrears, not initial debt title"
+1817-11-10,Arrears instruction,Royal order: remit levies collected or Treasury conditionally liable for capital/interest,1887 FIRST PARTY RETELLING,M2K-S01,"Conditional instruction, actual assumption unverified"
+1818-01-07,Repeated instruction,Royal order repeated collections/arrears instruction,1887 FIRST PARTY RETELLING,M2K-S01,No proof of payment
+1828-08-22,Bank claim,Banco represented local project still owed over4m reales,1887 FIRST PARTY RETELLING,M2K-S01,Claim vs realized asset separated
+1829-06 (23 or29),Government-bank workout,40m consideration for entire Crown-bank claim portfolio,1829 ORIGINAL AND1887 RETELLING,M2K-S08;M2K-S01,Contested signing date; bank share equity receipt vs cash timing unresolved
+1836-04-20,Accounting custody,Suppressed Junta books to Gobierno Civil; funds to Caja Caminos/Correos per reports,1887 FIRST PARTY RETELLING,M2K-S01,Archive historical transfer not present-day file locator
+1839-10-24,Local liquidation,Claimed unpaid loan balance as of June1839,1887 FIRST PARTY RETELLING,M2K-S01,Local Junta ledger original not read
+1862-11-13,Repayment certificate,Hacienda Valencia certified cumulative 1797–1836 Bank receipts13.703208m,1887 FIRST PARTY CASE EXTRACT,M2K-S01,Not independently verified 1862 original account
+1870-07-19,Intermediate recognition,"Junta Deuda recommended recognizing bank rent, no final payment shown",1887 FIRST PARTY CASE EXTRACT,M2K-S01,Not final binding outcome
+1874-01-29,Council opposition,State Council Hacienda section recommended refusing bank public-debt status,1887 FIRST PARTY CASE EXTRACT,M2K-S01,Internal administrative opinion
+1884-03-18,Treasury refusal,Ministry Hacienda refused bank claim as Crown carga de justicia,1884 ORIGINAL PRINT,M2K-S02,Later adjudication cited settlement
+1887-10-24,Final adverse judgment,Council State administrative litigation rejected Bank claim/upheld1884; government counterclaim procedurally disallowed,1887 ORIGINAL JUDGMENT,M2K-S01,"Court relied on1829 settlement extinction, not precise originally incurred Treasury debt value"

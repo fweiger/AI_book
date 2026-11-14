@@ -1,0 +1,108 @@
+# CASE-ESP-001 · M2k — 1887年终局判决重审1795格劳港口银行贷款的国家责任
+
+研究日期2026-11-14。唯一权威Issue https://github.com/fweiger/AI_book/issues/32 ，同一Draft PR https://github.com/fweiger/AI_book/pull/36 。现有M2j研究不得因为发现1887新文件而被无声覆盖，按本报告加注法律与会计条件。
+
+**证据等级**：**PRIMARY_1887_JUDICIAL_GAZETTE_P557_TO_559_PDF_IMAGE_VERIFIED**（本轮网页 PDF screenshot 曾超时，重试后三页原出版扫描均成功显示）；**PRIMARY_1884_MINISTRY_GAZETTE_P224_TO_225_IMAGE_VERIFIED**（M2j）；**PRIMARY_1794_JUNTA_TAX_INSTRUCTION_CATALOG_VERIFIED_ORIGINAL_PAGES_NOT_READ**；**1795_ORIGINAL_NOTARIAL_CONTRACT_NOT_ACQUIRED**；**LOAN_CASH_VALUATION_CAUSAL_NOT_RUN**。
+
+## 1. 根本性新增原始文献：1887-10-24判决，于1887-11-26《马德里公报》全文发表
+
+**原件**：https://www.boe.es/gazeta/dias/1887/11/26/pdfs/GMD-1887-330.pdf ，印刷**第557、558、559页**。王太后 María Cristina 以未成年国王 Alfonso XIII 名义颁布1887-10-24王令，按 **Consejo de Estado Sala de lo Contencioso**意见处置 Banco de España（承继 Banco de San Carlos）请求撤销1884-03-18财政部行政拒付令的诉讼；1887-11-03书记员记录作为终局决议公布。
+
+**本轮真实PDF影像结果**：web.run PDF screen index2/3/4第一次超时，随后 **screen index3（印刷558）以及 index2/index4（印刷557、559）全部成功显示**；由此区别于 M2i 2014 PDF只读检索文本而截图超时。原版视觉核对了签署、法院终局内容及第558页的财政交易陈述。
+
+**司法结论（法律推理不能被简化）**：
+- 驳回Banco de España诉讼请求，使**1884-03-18财政部拒认“carga de justicia”的决定持续有效**；
+- **国家检察官的反请求不符合该行政诉讼程序，故不予受理**；保留适当另行主张的权利。**这不是裁判认定银行应退还某个确定金额**。
+- 法院主要认为：该贷款债权，银行过去已向国家提出补偿请求，应纳入其1828年债权债务总清单和**1829年4000万雷亚尔全面和解**；**所以1887不能再向国库单独请求付款**。
+- 这**不能**反推出「王室从未授权贷款，国家征税从未参与，政府绝不可能负有中间代收税款/担保责任」。这是把**最终诉请消灭**与**1795原始签约方身份**区分开的第一手司法先例。
+
+**必须保留不同权威的事实与法律判断层级**：
+1884财政部说原始1795签约方是银行与瓦伦西亚工程Junta、王室没有直接介入贷款契约；1887法院进一步列举1794—1795年王室多项**融资批准/向银行提出支持请求**、1802以后王室税务代收、1817—18对代收款拖欠和还本付息的条件性指令。**“王室许可融资”不是“中央国库亲自成为借款人”，但“不是原始借款人”也不等于中央财政后来绝无条件性风险。**
+
+## 2. 1794—1818年融资机制，在1887原始判决的正式证据中逐项可追
+
+| 法令或事实 | 新可追踪内容 | 严格口径 |
+|---|---|---|
+| 1793-01-29、05-28 王室税令 | 港口建设可使用**加倍的领事税（derecho consular）**，以及出口丝绸/工坊用丝的定额税款 | 指定税种，**不是本项目已获得逐年实际税收额** |
+| 1794-10-07 | 王室财政部催请圣卡洛斯银行考虑资助港口 | 财政支持政策，而非直接借据 |
+| 1795-02-07、04-03 | 银行先承诺有条件拨款，财政部同意进一步审查工程和征税 | 仍非发生了所有现金提款 |
+| 1795-09-04、09-28 | 银行提出融资8.363895m，按月50万、20年、5%，以**港口专用税收入＋1,237股Junta持有的Propios y Pósitos证券**作担保；王室批准融资安排 | 抵押证券股数**不是债务额或兑现额**；正式借款合同仅银行与地方Junta签 |
+| 1795-10-06/10-22 | 马德里银行贷款合同、瓦伦西亚Junta追认，1762等旧法令不相关 | 原始公证书影像仍未取得，1887的记述是**距原文约92年的诉讼档案转录** |
+| 1798-02-16 | 港口Junta Protectora由上级军事长官（Captain-General）主持 | 政治/行政监管增强，不自动代表王室直接举债 |
+| 1802-07-16 | 港口税费更换成由皇家税官与地籍税合并征收、后转给Junta的款项 | 新的**国库代收—转付风险**，有可能与直接王室借款本金是不同预算科目 |
+| 1817-11-10、1818-01-07 | 王室要求欠缴的港口税款划转，或以条件性方式讨论财政部承担银行利息/本金 | 提供国家风险敞口的制度性支持；**未取得原始被催款金额与国库实际履行记录** |
+| 1828-08-22 | 银行向王室求偿港口工程尚欠逾400万雷亚尔 | 银行提出的索赔，不同于王室已确认支付义务 |
+
+**港务局独立历史背景校核**：[瓦伦西亚港务局官方展览资料2018第8页](https://www.valenciaport.com/wp-content/uploads/Exposicion-La-Darsena-historica-1.pdf)已由本轮PDF截图实核，载1791年对美贸易许可放宽、1794年进一步允许贸易、1792年港口动工、长期因泥沙及战争停顿。该来源确认**贸易开放→建港需求**的年代顺序和自然风险，**不等于证明银行贷款具备正净现值或殖民贸易机会全部被战争挤出**。
+
+这条机制必须建模为：
+
+\`贸易授权→港口物流需求→Junta增征地方税→抵押特定税源从银行借款→Royal tax collectors后代征→转付拖欠和法定保障争议→1829统一和解→1887诉请消灭\`
+
+其中的每一箭头各有不同会计主体与交易时间，**不可用一笔“国债负担”概括全部。**
+
+## 3. 真正找到原始1795贷款文书所经历的“司法案卷复制路径”
+
+1887公报第558页明确回顾：银行继承机构在**1862-12-27**提出正式赔付请求时，附有**1795-10-22瓦伦西亚追认合同的公证誊本 (testimonio de la escritura)**、**1862-11-13瓦伦西亚财政会计师证明**（列17次放款及后续收款）、**1839港口Junta清算证明**、1820及其他税款分配陈述。1862—1887行政/诉讼 **expediente** 的存在已经由当时官方判决确定，故查找原始合同不必只盯1795马德里公证人目录，还可查**Consejo de Estado诉讼案卷附件**。
+
+**档案路径A — 1836年的真实移交记录**：1884年行政文件和1887年诉讼均记载港口Junta停止后，账房资料依1836年王令送 **Archivo del Gobierno Civil de Valencia**，但剩余款项另交其他政府金库。现今[瓦伦西亚省议会档案馆官方 Gobierno Civil 基金](https://arxiu.dival.es/es/guia-del-archivo/content/gobierno-civil-valencia)覆盖1739—1958，**GC:c.1 Exp. generales**中有关于Banco de San Carlos股份的主题描述。然而**只说明可能有同机构的历史档案传承线索，不证明1795港口公证借据已经保存在该GC:c.1具体盒子**；要求馆方二次编目定位。
+
+**档案路径B — 当时港口融资税源原始文件**：[Biblioteca Valenciana数字古籍目录原件8776](https://bivaldi.gva.es/es/consulta/registro.do?id=8776)，作者 **Real Junta Particular de Comercio y Agricultura de Valencia**，1794-04-10的10页*Instrucción ... para la percepción de arbitrios y conclusión de la obra del puerto*，索书号 **XVIII/4279(28)**，Public Domain Mark，数字图像的组路径已索引。本轮馆藏页实际阅读，数字“完整作品”入口超时，**没有打开原十页正文**。它是**1794工程税源规则**，不是1795银行贷款协议；若获原页，可检验抵押税收合法范围及与1795契约抵押物的一致性。
+
+**路径C — 港务局和省议会保存较晚会计账**：
+- [Autoridad Portuaria de Valencia档案](https://www.valenciaport.com/autoridad-portuaria/archivo/)的正式说明多是19世纪中叶—1940年案卷、1861年后年报，适合**1862证明/港口事后税费**而非默认为持有1795借据。
+- [瓦伦西亚省议会基金](https://archivo.dival.es/es/fondo-documental/fondo-diputacion)列**DV:F.4.2港口总账（1852—1915）**，及更晚港口税款账，不能以1862账冒充1795原合同。
+- 最有可能的**司法案卷索引**是1887判决指向的 **Banco de España诉Hacienda（诉1884-03-18 Real Orden）**，但当前没有拿到Consejo de Estado具体卷件签号。
+
+完整可执行馆藏搜索清单：[port_original_archive_chain_m2k.csv](port_original_archive_chain_m2k.csv)。没有发送带研究者身份的邮件或复制申请。
+
+## 4. “300雷亚尔来源差异”得到独立同期官方材料的交叉指向，但尚未解决
+
+M2j通过**1884年原始财政裁决**发现该文正文把1795合同名义本金 **8,363,895雷亚尔＋12½ maravedís** 与约定总利息 **4,604,679雷亚尔＋26⅓ maravedís**相加，本应得到**12,968,575雷亚尔＋4⅚ maravedís**，原1884总额却写成**12,968,875雷亚尔＋4⅚ maravedís**，多**300雷亚尔**。
+
+**1887年原版第558页已经实际视觉核查**，判决对同一原借据重述本金 **8,363,895**和利息 **4,604,679**整雷亚尔（该段省略两项尾数），同时印刷的总额在页面上显示成 **“2.968.575 reales y 5 maravedises”**。这些数字：
+1. **1887重述的百万位似乎漏了前导数字“1”**。按照本金+利息，**原本量级约1,296万雷亚尔，不可能只有296万**。应如实将“2.968.575 +5mrs”存为**1887 PUBLISHED_LITERAL_TEXT_WITH_SUSPECTED_DROPPED_LEADING_1**；不得先变为官方确认12968575。
+2. 1887剩余完整尾数“968.575”和整雷亚尔分项的加总（8,363,895＋4,604,679=12,968,574；原1884细分尾数溢出形成12,968,575）**一致支持1884的“.875”可能是编印错误**，但仍须原1795公证书以识别正确数值。
+3. 1887文尾尾数为5 maravedís，1884精确分项为4⅚ maravedís，相差1/6马拉维迪，属于**另一小数近似或转录问题**，源刊名义金额不得擅改。
+4. **本项目的进一步检验目标不是找一个看起来最整齐的总数**，而是查原1795 deed 是否有各年期还本付息金额表、银行会计现金/Vales估值，以及约定利率是否在后续变更。
+
+所有原引述及算术置于 [port_loan_nominal_repayment_m2k.csv](port_loan_nominal_repayment_m2k.csv) 和M2j检查表，保留两份官方公报原值。
+
+## 5. 1862年财政证明给出新的实收历史序列，但不能把“还款总额>本金”当净利润
+
+1887判决第558页明言：**1862年瓦伦西亚财政会计师证明**列出银行从 **1797—1807、1813—1821、1826—1836**三个阶段收到本金及利息等项**累计13,703,208名义雷亚尔**。
+
+相对1884分项名义承诺总额 **12,968,575雷亚尔＋4⅚马拉维迪**，简单两数差约**734,633雷亚尔**。但1847、1854、1862、1870各项账里涉及 *vales reales* 政府票据和不同债权类别：
+- 不能不经比较**面值、购买时成交价格、偿还时牌价、税款由谁实缴、利息是否包括滞纳/延迟**就说银行赚到73万或国家超额赔付。
+- 同一1862认证、1839清算还列银行**剩余本金3,680,113雷亚尔＋33mrs、利息822,892雷亚尔＋11mrs**，说明记账方式并非一个可直接用于净利润计算的单一现金流账。发生支付/仍有主张两个不同法律事实可以同时存在。
+- 国家不同机关对1870年的银行主张曾有**初步认可**，但1874 Council section和1884行政机关反对，1887终局法院驳回。所以政府与银行的**债务风险敞口及信用确权会动态变化**，不能拿1887终局状态逆推1795每年国库现金债息为零。
+
+**重要反例**：1887案卷还转述其他地方私营债权人获得不同认可路径、以及1837/39预算曾列某些港口债务拨款但没有证明确已支付；**同一项目、不同债权人、不同签约/偿债条件，国家是否负责可能不一样**。适合以后构造债权类别面板，而不是“一项港口工程只有一个国债总额”。
+
+## 6. AC检查及下一步
+
+**PASS**：
+- 1887-11-26原版公报p557/p558/p559 screenshot成功，准确读取1887-10-24终局裁判：维持1884行政拒付，**国家反请求仅程序不受理**；
+- 法律来源分辨：1795王室批准投资 ≠ 签订银行贷款成为直接借款人，1802征税委托 ≠现金财政实际偿债，1829债权和解导致1887银行诉请消灭 ≠财政军费挤出；
+- 独立新的档案传承路线：1836委托旧港口会计送省民政档案、1862/1887司法案卷附原1795合同誊本，馆方GC:c.1和BIVALDI 1794原始税费指令具体目录记录核实；
+- 官方港务史2018 p8真实截图核对1791贸易开放、1792工程与泥沙风险；M2j的300-real差、1887断裂前导1及1/6 maravedí冲突**原值保留**；
+- GH源文件回读、CSV结构、外键、账目比较与CI执行将在本轮末另行记录。
+
+**NOT_ACQUIRED**：1795最初借贷及追认公证原件、1862财政证明完整逐年表、1839地方工程账册、1836移交后的准确现代档号、1794本地税源指令10页正文、1807银行王室债权原始总账、英国数据服务ESFDB原表。
+
+**NOT_RUN**：真实现金及政府票据价值损益、财政代征款挤占国债利息军费、银行商业信贷及港口工程因果回归。
+
+**单一下步**：用**1887年财政诉讼案卷所附1795-10-22合同誊本**作为第一优先项，向能鉴定1887历史Consejo de Estado案卷的档案机构或瓦伦西亚 **Gobierno Civil historic funds** 查询签号和许可；获得至少第一页、贷款/担保/还本付息条款与签名页，连同1862财政师完整账款证明，以原文件精确确认300雷亚尔印本差异、实际 Val­es 估值和王室担保法律身份。保持#32 Open、Draft PR #36 未合并，不提交受限原件或在未验证时宣布因果结果。
+
+
+---
+
+## M2l custodial archive update — exact 1887 case still not acquired
+
+The [Spanish Consejo de Estado archival page](https://www.consejo-estado.es/actividad/archivo-y-biblioteca/) says it preserves its records generated after 1850 and has a historic fonds of around 130,000 cases from 1833–1939. The 1887 lawsuit is therefore a priority **institutional-scope candidate** for its own archive, but **no individual casefile signatura has been found**.
+
+The Consejo's [Memoria 2023, published p84, section 3.1.2](https://www.consejo-estado.es/wp-content/uploads/2024/07/Memoria-2023.pdf) officially states that researchers may submit remote inquiries, and opinion files preceding 1987 often require paper/manual catalogs because they are not digitized. This text was read from the PDF extraction; a PDF screenshot attempt returned 403, so it is PUBLISHED_TEXT_CHECKED and not image verified here.
+
+Its real archivists' email is **archivo.biblioteca@consejo-estado.es**, telephone +34 915166356 / 357, from the [official contact page](https://www.consejo-estado.es/transparencia/). The [Valencia Gobierno Civil archive](https://archivo.dival.es/es/fondo-documental/fondo-gobierno-civil) has official fondo ES.462508.ADPV / Gobierno Civil (1739–1958), with series GC:c.1 (1739–1924) referencing Banco San Carlos share materials, plus verified email **archivo.general@dival.es**. Neither institution has confirmed the specific 1795 original bank-port loan deed or court annex in its published item register. **NO EMAIL SENT**.
+
+See [M2l report](M2L_1887_COUNCIL_ARCHIVE_CUSTODIAN_AND_1795_DEED_REQUEST_20261114.md), [seven-document acquisition matrix](port_1795_casefile_acquisition_matrix_m2l.csv), and the existing [unsent Spanish inquiry](ARCHIVAL_REQUEST_ES_M2E_20261114.md). The bank's notarized 1795 contract, underlying year-by-year 1862 repayment certificate, and Bank1807 Real Hacienda ledger are still NOT_ACQUIRED. Do not promote the 300-real historic print discrepancy to an accounting correction or infer bank profit/credit/royal Navy causal crowdout.

@@ -1,0 +1,16 @@
+component,value_million_nominal_reales,accounting_role,factual_or_derived,source_id,source_location,note
+assets_total,313.4,balance_sheet_assets,PUBLISHED,ESP-M2D-S02,Banco de Espana 1994 Table I.1 printed page 27,"Official bank historical study referencing Tedde 1988, not original 1807 ledger"
+royal_treasury_claim_gross,217.3,bank_asset_claim_to_crown,PUBLISHED,ESP-M2D-S02,Table I.1,Includes overdue interest per Tedde 2000; source category not reconciled to 2010 narrower Crown debt
+cash_caja_total,9.3,bank_accounting_cash,PUBLISHED,ESP-M2D-S02,Table I.1 note a,"8.3m government vales, 1.0m metallic; Fundación BBVA 2005 rounded cash 9.2 not 9.3"
+cash_government_vales,8.3,paper_government_obligation_in_cash_account,PUBLISHED,ESP-M2D-S02,Table I.1 note a,Not metallic liquidity; may carry market discount
+cash_metal,1,metallic_cash,PUBLISHED,ESP-M2D-S02,Table I.1 note a,Fraction of total assets 0.32 pct; historical notes not a liquidity coverage ratio
+other_assets_aggregated,86.8,assets_less_treasury_and_cash,DERIVED,ESP-M2D-S02,Table I.1 all other lines,"Includes public works, suspended debtors, Philippines company, correspondent balances, share loans etc"
+capital,240,book_shareholders_capital,PUBLISHED,ESP-M2D-S02,Table I.1,Capital not necessarily realizable loss absorbing modern CET1
+dividends_in_arrears,40.1,liability_unpaid_dividends,PUBLISHED,ESP-M2D-S02,Table I.1,Outstanding unpaid dividends not debt interest and not state liability directly
+other_liabilities_aggregated,33.3,liabilities_less_capital_and_dividend_arrears,DERIVED,ESP-M2D-S02,Table I.1,"Includes reserves, deposits, P&L, miscellaneous; not separately reproduced"
+gov_share_assets_pct,69.34,gov_debt_concentration_pct,DERIVED,ESP-M2D-S02,217.3/313.4,Not leverage ratio and not causal effect
+metallic_cash_share_assets_pct,0.32,metallic_cash_concentration_pct,DERIVED,ESP-M2D-S02,1.0/313.4,Actual physical metal not all liquidity in modern sense
+retrospective_2010_gov_debt_million_pesetas,41.6,narrow_government_debt_account,LITERATURE_REPORTED,ESP-M2D-S03,Banco de Espana 2010 p130,Historical 1807 normalized into later pesetas by author; different component definition not reconciled
+retrospective_2010_gov_debt_million_reales,166.4,narrow_gov_equivalent_4_reales_per_peseta,DERIVED,ESP-M2D-S03,41.6*4 with 2017 Banco de Espana conversion footnote,Use account normalized retrospective 4:1; no proof same claim scope as 217.3
+crown_measure_gap_1994_vs_2010_million_reales,50.9,difference_between_distinct_definitions,DERIVED,ESP-M2D-S02;ESP-M2D-S03,217.3-166.4,"Unexplained; >43m overdue interest documented but inclusion might explain only part, not established reconciliation"
+cash_measure_gap_1994_vs_2005_million_reales,0.1,publisher_series_discrepancy,DERIVED,ESP-M2D-S01;ESP-M2D-S02,9.3-9.2,Possibly rounding/reconstruction; preserve original source versions

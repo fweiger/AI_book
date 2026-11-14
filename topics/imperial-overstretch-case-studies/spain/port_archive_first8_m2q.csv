@@ -1,0 +1,9 @@
+priority,catalogue_item,pdf_page_1based,caja,numero,period_from_catalog,first_retrieval_question,expected_accounting_evidence,explicit_exclusion,access_status
+1,742,321,56,19,1797-01,Confirm original roster available and fields/date,worker_names_and_categories,not payment or arrears,NOT_REQUESTED
+2,736,320,77,20,approx_1795_1810,Confirm notebook-by-notebook coverage of Feb1797,accrued_daily_wages,not automatic cash paid,NOT_REQUESTED
+3,737,320,78,4,approx_1795_1810,Confirm Feb1797 coverage and receipt signatures,accrued_wages_possible_payment_not_confirmed,not guaranteed 1797,NOT_REQUESTED
+4,142,29,56,17,1796-05_to_1797-12,Confirm dated bank vales receipt and face,bank_paper_inflow,not metal proceeds or payroll cash,NOT_REQUESTED
+5,144,29,154,5,1796-12_to_1797-01,Verify notes received at Jan1797 boundary,bank_vales_receipt,not worker salary,NOT_REQUESTED
+6,565,290,147,5,1797,Inspect selected disbursement order counterparty and cash,consulado_payment_orders,271 is document count not amount,NOT_REQUESTED
+7,152,31,159,10,1798,Inspect general cargo-data tax loan payment sections,consulado_loan_receipt_payment_reconciliation,not retroactive proof of 1797 wage arrears,NOT_REQUESTED
+8,139,28,130,9,1795_to_1797,Inspect project creditor repayments,lender_payments,not worker wages,NOT_REQUESTED

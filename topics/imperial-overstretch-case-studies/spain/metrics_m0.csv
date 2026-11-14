@@ -1,0 +1,3 @@
+metric_id,period,metric,value_low,value_high,unit,owner_scope,source_id,evidence_status,limitations
+ESP-M001,1572-1576,mita_rotational_workers,12000,14000,persons_per_year,Potosi Indigenous males under compelled rotation,ESP-S02,literature_reported_range,NOT a population stock of enslaved Africans; about 12k–14k one-year worker contingents
+ESP-M002,1760-1810,colonial_mining_inflows_share_crown_revenue,,,percent,Crown receipts New Spain silver shipments,ESP-S07,NOT_ACQUIRED,AHR scholarly review mentions up to 15 percent but this secondary figure is not transcribed without original table
