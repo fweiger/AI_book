@@ -33,3 +33,11 @@
 - [h03_pjm_2026_sep_rto_submitted_pipeline.csv](h03_pjm_2026_sep_rto_submitted_pipeline.csv)：五年RTO申请及DOM/AEP浓度；切勿把D/C当成审批或实际兑现。
 - [h03_pjm_2026_sep_source_discrepancy.csv](h03_pjm_2026_sep_source_discrepancy.csv)：Exelon FERC Nov3引用值 vs PJM Oct12会后值，暂不相同口径。
 - [recompute_h03_autumn_submission.py](../analysis/recompute_h03_autumn_submission.py)：标准库复算RTO、DOM子区，并可附原XLSX SHA校验全部145行。
+
+## H03 Firm合同→项目接入→实际收入来源台账（2026-11-14）
+- [h03_dominion_contract_stage_history.csv](h03_dominion_contract_stage_history.csv)：2023/2025/2026三份Dominion ELOA/CLOA/ESA阶段储备，不等于投入运营。
+- [h03_dominion_completed_campus_and_sales_share.csv](h03_dominion_completed_campus_and_sales_share.csv)：2024/2025新园区数量、规划最终MW及DC电力销售份额。
+- [h03_dominion_highload_revenue_quarters.csv](h03_dominion_highload_revenue_quarters.csv)：同SEC分类下2025/2026 Q1–Q3高负荷销售实际收入。
+- [h03_aep_evidence_scope_matrix.csv](h03_aep_evidence_scope_matrix.csv)：AEP PJM 2025近端ESA与2026全区域含ERCOT合同类型对照。
+- [h03_maturity_scope_crosswalk.csv](h03_maturity_scope_crosswalk.csv)：明确何种分子分母可比较，防止错误“兑现率”。
+- [H03合同/收入离线复算](../analysis/recompute_h03_firm_operating.py)。

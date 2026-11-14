@@ -29,3 +29,6 @@
 ## H03：下一步不是扩大申请量，而是从申请穿透到firm、accepted与realized
 - [2026年秋季申请口径审计](reports/2026-11-14_h03_sep2026_pipeline_capacity_vs_demand.md)将CAPACITY、DEMAND、Firm合同、PJM最终采纳、真实投产拆成5阶段。DOM与AEP占2027折算需求约77.6%，优先寻找二者**有实际签约时间/ESA/CC、项目MW、计划/实际并网日期**的公开报告。
 - 2027-01的正式PJM Load Forecast公布后，只有同项目/同定义/同目标年的需求才能计算F/D、A/D；必须和Exelon FERC表的数值差单独核对，不得把不同资料的差值当取消。
+
+## H03下一轮：优先Firm合同同批项目与真实带电资料
+[Dominion和AEP合同-运营对照报告](reports/2026-11-14_h03_firm_operating_reconciliation.md)显示：Dominion 2025新接入园区数和最终设计容量↓，但2026 ESA储备及High Load实际收入↑，并非同一观测对象的矛盾趋势。下一步获取2026年新增园区/项目实际带电日期、公司High Load计量MWh及2027同比、PJM正式接纳2027需求（同批/同公用事业）和ESA/LOA合同金额与原计划完工日期。当前仍不具备F→A→R项目级兑现率，不计算市场总体“批文通过率”。

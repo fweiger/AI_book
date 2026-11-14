@@ -10,3 +10,5 @@
 - [2026-11-14 PJM宏观经济输入负对照](2026-11-14-h03-july-economic-control.md)
 
 - [2026-11-14 PJM秋季容量/需求申请审计](2026-11-14-h03-september-pjm-requests.md)
+
+- [2026-11-14 H03 Firm合同和实体业务对照](2026-11-14-h03-firm-operating.md)

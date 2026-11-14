@@ -41,3 +41,11 @@
 - `A/D`：PJM同批、同指标、同目标年的最终接受负荷与申请比；2027正式forecast尚未发布，当前**NA**；不同资料版本和嵌入量不能直接除。
 - `R/A`：同批最终接受的项目到目标日实际并网/使用电力占比；未有项目对应实际，当前**NA**。
 - `ZONE_CONCENTRATION`：按**折算需求D**分区；2027DOM+AEP占77.611%，禁止与DOM子区叠加。
+
+## H03新增Firm与实体业务的不同粒度指标
+- `ESA_COMPANY_PIPELINE_SHARE`：同日同地区同公司ESA储备 / 所有阶段合同储备；Dominion 2026-09为12.2/54.9=**22.22%**，只是合同阶段占比，非PJM接纳或项目投产率。
+- `NEW_CONNECTED_DC_CAMPUS_COUNT`：该年度新带电园区**数量**；`NEW_CAMPUS_ULTIMATE_MW`：那些园区的**未来设计总MW**，不是当年真实峰值用电。2024/25 Dominion园区数量15→11，设计容量977→744MW。
+- `HIGH_LOAD_REVENUE_YOY`：同公司同类高负荷业务实际季度收入同比，包含非数据中心及电价/燃料因素，不用来推导真实DC MW。
+- `AEP_2025_PJM_ESA_LOWER_BOUND`：对2025-09 PJM AEP特定近端需求队列，ESA **严格 >8600/11182=76.91%**；不是跨公司/跨年度对2026-10的成熟度估计。
+- `PROJECT_FIRM_TO_ACTUAL_MW`：需要项目ID、ESA生效/初始计划日期、真实并网/实际计量与PJM最终接受相同批次。当前全域无法计算，应为NA。
+- 可比性判断由[data/h03_maturity_scope_crosswalk.csv](data/h03_maturity_scope_crosswalk.csv)记录，禁止使用不同公司的全国合同、PJM未来单年申请、公司收入直接相除。

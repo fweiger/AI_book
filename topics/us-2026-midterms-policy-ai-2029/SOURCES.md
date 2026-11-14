@@ -45,3 +45,12 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 - PJM LAS [官网当日会议记录](https://www.pjm.com/committees-and-groups/subcommittees/las)：2026-09-29会议，10-12公布[官方Informational Only Capacity and Demand Requests XLSX](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260929/20260929-post-meeting---informational-only-capacity-and-demand-requests.xlsx)，SHA256 `211c1f69bfbb52e4e6499b5aa2f42004a65c7def4471d9e84a581e77970d7d51`，28,419字节（北京/武汉MCP独立一致）。两表分别为CAPACITY、DEMAND，各包含DOM子区、PENLC下级与RTO总计；不是最终正式采纳。分区与目标年数据见[第三轮H03](reports/2026-11-14_h03_sep2026_pipeline_capacity_vs_demand.md)。
 - Exelon [2026-11-03 FERC投诉档案](https://www.pjm.com/-/media/DotCom/documents/ferc/filings/2026/20261103-el27-11-000.pdf)引用Sept大型负荷请求量与10-12会后表不一致；该文件是**诉讼当事人提交的材料而非PJM最终认可的新预测**，具体数值分歧先进入[冲突台账](data/h03_pjm_2026_sep_source_discrepancy.csv)。
 - PJM[ODEC Data Center Demand Forecasting Process](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/odec-documentation.pdf)：可核查Firm ESA/CC、LOA或study request不计入、74%计量需求因子和三年爬坡；只针对该公用事业，不当作PJM审批率。
+
+## H03公司合同与业务落地：新的原始资料（2026-11-14）
+- [Dominion 2026-10-30 Q3原始投资者演示](https://s2.q4cdn.com/510812146/files/content_files/2026-10-30-DE-IR-3Q-2026-earnings-call-slides-vTC.pdf)：2023-07、2025-12、2026-09签约阶段ELOA/CLOA/ESA；公司报告总量四舍五入而分阶段和可能相差0.1GW。同公司ESA占比不是PJM项目投产率。
+- [Dominion 2026 Proxy](https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-20260319.htm)：2024/2025分别新接入15/11个园区，园区最终规划容量977/744MW。MW不是当年已实际计量负荷。
+- [Dominion 2025 10-K](https://www.sec.gov/Archives/edgar/data/715957/000119312526063120/d-20251231.htm)：数据中心占Virginia Power电力销售2024 26%、2025 28%。
+- Dominion 2026 SEC 10-Q [Q1](https://www.sec.gov/Archives/edgar/data/715957/000119312526200275/R16.htm) / [Q2](https://www.sec.gov/Archives/edgar/data/715957/000119312526327487/R36.htm) / [Q3](https://www.sec.gov/Archives/edgar/data/715957/000119312526440697/R16.htm) 的High Load regulated electric sales：含部分非DC/AI客户，美元收入不等于MWh。
+- [PJM官方AEP近端负荷与Firm定义](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/aep-documentation.pdf)：2025-09同批次11,182MW近端增加，其中>8,600MW签ESA；仅是特定PJM运营范围的历史合同下界。
+- [AEP 2026-10-28 Q3公告](https://www.aep.com/news/stories/view/12347/)：新增15GW签约及全区域至2031 84GW的ESA**或**LOA；[AEP SEC Q3](https://www.sec.gov/Archives/edgar/data/73986/000000490426000072/aep-20260930.htm)涉及Texas/ERCOT签约与当地流程暂停，**不能当PJM接受/投入使用**。
+- [完整分析与原始数据口径交叉表](reports/2026-11-14_h03_firm_operating_reconciliation.md)。

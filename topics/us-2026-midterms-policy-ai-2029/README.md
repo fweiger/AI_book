@@ -50,3 +50,6 @@
 
 ## H03秋季负荷申请：容量、需求折算与项目兑现分离（2026-11-14）
 - [PJM 2026-10会后官方容量/需求实测结构报告](reports/2026-11-14_h03_sep2026_pipeline_capacity_vs_demand.md)；[145行分区与年份](data/h03_pjm_2026_sep_submission_capacity_demand_zone.csv)；[5年RTO汇总](data/h03_pjm_2026_sep_rto_submitted_pipeline.csv)；[跨来源口径冲突](data/h03_pjm_2026_sep_source_discrepancy.csv)；[双重校验脚本](analysis/recompute_h03_autumn_submission.py)。提交量≠最终接受≠实际投产。
+
+## H03第四轮：Firm合同、数据中心园区接入与收入（2026-11-14）
+- [Dominion/AEP签约到运营三层研究](reports/2026-11-14_h03_firm_operating_reconciliation.md)：2026选前ESA合同储备、2024/25实际新增园区及最终容量、2026高负荷客户收入、AEP全国/PJM/ERCOT合同范围对照。附[五份来源范围CSV](data/README.md)及[复算脚本](analysis/recompute_h03_firm_operating.py)。**合同签约、园区带电、计量需求、公司收入不可互相直接作为分母；H03政治因果仍待检验。**
