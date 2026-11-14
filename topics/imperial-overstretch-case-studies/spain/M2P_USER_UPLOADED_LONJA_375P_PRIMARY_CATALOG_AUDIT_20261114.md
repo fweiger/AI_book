@@ -11,7 +11,7 @@ https://www.valencia.es/documents/20142/10105335/DOCUMENTACI%C3%93N%2BLONJA.pdf/
 
 **Binary identity:** 1,250,307 bytes; 375 PDF pages; SHA-256 **2fa3f442c35e39673b9add55525ba0e28b21f9dc8e1d62f240b39e90ada229fb**; PDF creator Microsoft: Print To PDF; metadata creation 2021-10-18 08:27:17 +02:00. Attached file SHA is calculated over exact user-uploaded bytes, not inferred from any online copy.
 
-**Evidence grade upgraded:** MUNICIPAL_ORIGINAL_PUBLISHED_FINDING_AID_DIRECT_READ_AND_SELECTED_PAGE_IMAGES_CHECKED. **Not** the 1797 manuscript inside a physical archival box, which still requires separate archival access.
+**Evidence grade upgraded:** FIRST_PARTY_MUNICIPAL_PUBLISHED_FINDING_AID_DIRECT_READ_AND_SELECTED_PAGE_IMAGES_CHECKED. **Not** the 1797 manuscript inside a physical archival box, which still requires separate archival access.
 
 ## 2. The precise 1797 worker roster: now direct official catalogue proof
 
