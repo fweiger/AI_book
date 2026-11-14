@@ -84,7 +84,7 @@ def main():
         assert abs(top2-float(line["dom_aep_combined_share_pct"]))<0.002
         other=next(x for x in dif if int(x["target_year"])==year)
         assert abs(float(other["exelon_ferc_filing_2026_11_03_mw"])-float(other["pjm_postmeeting_informational_2026_10_12_demand_mw"])-float(other["numerical_difference_mw"]))<0.002
-        reports.append({"year":year,"submitted_capacity_mw":total,"submitted_demand_mw":float(agg["submitted_demand_mw"]),"demand_to_capacity_pct":round(ratio,3),"dom_aep_share_pct":round(top2,3)})
+        reports.append({"year":year,"submitted_capacity_mw":float(agg["submitted_capacity_mw"]),"submitted_demand_mw":float(agg["submitted_demand_mw"]),"demand_to_capacity_pct":round(ratio,3),"dom_aep_share_pct":round(top2,3)})
     if args.input is not None:
         src=parse_xlsx(args.input)
         for record in rows:
