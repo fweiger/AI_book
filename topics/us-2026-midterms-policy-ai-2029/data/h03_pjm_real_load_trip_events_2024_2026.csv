@@ -1,0 +1,4 @@
+event_date,approx_large_load_transfer_mw,observation_type,scope,event_time_context,source_release,source_url,limitations
+2024-07-10,1500,APPROX_COMPUTATIONAL_LARGE_LOAD_TRANSFER,DOMINION_ZONE,NOT_REPORTED,PJM_RETROSPECTIVE_2026_AUG,https://insidelines.pjm.com/pjm-dominion-review-large-load-transfer-event/,"Approximate prior event, not entire datacenter actual peak; no timestamp and split by customer"
+2025-02-17,1500,APPROX_COMPUTATIONAL_LARGE_LOAD_TRANSFER,DOMINION_ZONE,NOT_REPORTED,PJM_RETROSPECTIVE_2026_AUG,https://insidelines.pjm.com/pjm-dominion-review-large-load-transfer-event/,"Approximate prior event, not entire datacenter actual peak"
+2026-07-22,3800,APPROX_DATA_CENTER_TRANSFER_TO_BACKUP_GENERATION,DOMINION_ZONE,07:56_EDT_LINE_FAULT,PJM_2026_AUG_11,https://insidelines.pjm.com/pjm-dominion-review-large-load-transfer-event/,"PJM reported approx 3800MW event, net RTO drop 3779MW; not annual DC peak and cannot infer annual growth"

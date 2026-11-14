@@ -1,0 +1,13 @@
+report_month,fiscal_year,receipts_usd_bn,outlays_usd_bn,deficit_usd_bn,precision,data_type,source_api,snapshot_extraction_date
+2015-10,2016,211.046,347.578,136.532,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2016-10,2017,221.692,265.884,44.192,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2017-10,2018,235.341,298.555,63.214,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2018-10,2019,252.692,353.183,100.491,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2019-10,2020,245.520,379.988,134.468,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2020-10,2021,237.698,521.769,284.071,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2021-10,2022,283.927,448.983,165.055,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2022-10,2023,318.576,406.374,87.798,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2023-10,2024,403.434,469.997,66.564,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2024-10,2025,326.770,584.221,257.450,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2025-10,2026,404.371,688.721,284.350,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14
+2026-10,2027,368.940,773.004,404.064,rounded_0.001bn,MTS_table_1_current_year_October_month_record,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,2026-11-14

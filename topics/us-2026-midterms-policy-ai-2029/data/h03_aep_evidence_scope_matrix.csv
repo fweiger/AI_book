@@ -1,0 +1,6 @@
+evidence_id,asof,jurisdiction_scope,horizon,metric_definition,value,unit,source_url,limit
+AEP-PJM-2025-NEAR,2025-09,PJM_AEP_operating_companies,2026-2030,submitted_near_term_load,11182,MW,https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/aep-documentation.pdf,Submitted near-term PJM large load adjustments; September2025 cohort and later PJM documented forecast
+AEP-PJM-2025-ESA,2025-09,PJM_AEP_operating_companies,2026-2030,signed_ESA_STRICTLY_GREATER_THAN,8600,MW,https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/aep-documentation.pdf,"Over 8600 MW signed ESA; threshold lower bound, not actual delivered or PJM accepted share"
+AEP-ALL-2026,2026-09-30,ALL_AEP_TERRITORIES_INCLUDING_ERCOT,through2031,fully_executed_ESA_OR_LOA,84000,MW,https://www.aep.com/news/stories/view/12347/,"Corporate nationwide ESA-or-LOA contract reserve, NOT PJM-only or ESA-only"
+AEP-NEW-Q3,2026-Q3,ALL_AEP_TERRITORIES_INCLUDING_ERCOT,future,incremental_signed_Q3_ESA_OR_LOA,15000,MW,https://www.aep.com/news/stories/view/12347/,Signed during quarter; not energized MW
+AEP-TEXAS-ERCOT,2026-09-30,AEP_TEXAS_ERCOT_NOT_PJM,through2031,signed_LOA_while_studies_paused,49000,MW,https://www.sec.gov/Archives/edgar/data/73986/000000490426000072/aep-20260930.htm,ERCOT Batch Zero study/energization policy pause; cannot attribute to PJM or future Congress

@@ -1,0 +1,9 @@
+observation_id,scope,asof,target_horizon,value,unit,measurement,comparison_rule,potential_comparator,reason
+DOM-2026-ESA,Dominion_Energy_Virginia,2026-09,all_planning_years,12.2,GW,signed_esa_stock,INTRA_DOMINION_ONLY,dom_stage_total_54.9GW,Company companywide inventory - not a 2027 PJM zone cohort
+DOM-2026-STOCK,Dominion_Energy_Virginia,2026-09,all_planning_years,54.9,GW,all_stage_contract_stock,INTRA_DOMINION_ONLY,esa_12.2GW,"ELOA/CLOA/ESA are cumulative contract stages, not delivered load"
+DOM-2025-CONNECTION,Dominion_Energy_Virginia,2025,new_sites_in_2025,744,MW,ultimate_capacity_newly_connected,NOT_COMPARABLE,ESA_2026_12.2GW,Cohort dates and design capacity differ
+DOM-2026-HIGHLOAD-REVENUE,Virginia_Power,2026Q3,three_months,706,USD_million,highload_revenue_including_non_dc,NOT_COMPARABLE,PJM_2027_DOM_submission_8441MW,"Money incl prices and some non-DC, not metered MW"
+AEP-2025-NEAR,AEP_PJM_subset,2025-09,2026-2030,11182,MW,submitted_near_term,MATCH_ONLY_WITH_AEP_2025_SIGNED_ESA_LB,over_8600MW_ESA,"PJM 2025 cohort, not all AEP contracts"
+AEP-2025-ESA-LB,AEP_PJM_subset,2025-09,2026-2030,8600,MW,signed_ESA_strict_lower_bound,MATCH_ONLY_WITH_AEP_2025_NEAR,11182MW_near,"Strictly more than 8600, cannot claim exact fraction"
+AEP-2026-CORPORATE,All_AEP_including_ERCOT,2026-09-30,through2031,84000,MW,signed_ESA_or_LOA,NOT_COMPARABLE,PJM_AEP_2027_D5112MW,"Different geography, stage and time"
+PJM-2026-RTO-DEMAND,PJM_RTO,2026-10-12,2027,17462.7,MW,utility_submitted_demand,NOT_COMPARABLE,Firm_ESA_or_ACTUAL_R,Submitted planning MW not validated and not delivered

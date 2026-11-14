@@ -1,0 +1,24 @@
+zone,zone_level,years_checked_each_source,january_standalone_B9b_vs_combined_different_years,february_standalone_B9_vs_combined_different_years,max_abs_source_offset_mw,difference_pattern,explanation,source_family
+AE,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+BGE,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+DPL,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+JCPL,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+METED,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+PECO,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+PENLC,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+PEPCO,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+PL,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+PS,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+RECO,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+UGI,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+AEP,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+APS,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+ATSI,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+COMED,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+DAYTON,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+DEOK,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+DLCO,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+EKPC,PJM_ZONE,21,21,21,10,EKPC_NEGATIVE_10_9_8,Current combined includes negative EKPC peak-shaving adjustment while separate breakdowns have zero EKPC; RTO mirrors EKPC exact magnitude,PJM official standalone and combined B9/B9b workbooks
+OVEC,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+DOM,PJM_ZONE,21,0,0,0,IDENTICAL_2026_TO_2046,All 21 source values matched exactly; no other zone difference,PJM official standalone and combined B9/B9b workbooks
+RTO,RTO_AGGREGATE,21,21,21,10,RTO_POSITIVE_10_9_8,Current combined includes negative EKPC peak-shaving adjustment while separate breakdowns have zero EKPC; RTO mirrors EKPC exact magnitude,PJM official standalone and combined B9/B9b workbooks

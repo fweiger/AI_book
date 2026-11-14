@@ -1,0 +1,9 @@
+period,year,value,metric,source_url,limitations
+Q3,2025,1066,cooling_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+Q3,2026,1313,cooling_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+JAN_SEP,2025,1698,cooling_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+JAN_SEP,2026,1925,cooling_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+Q3,2025,0,heating_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+Q3,2026,8,heating_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+JAN_SEP,2025,2118,heating_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect
+JAN_SEP,2026,2277,heating_degree_days,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,Dominion Energy Virginia territory actual heating/cooling degree days; not isolated data center effect

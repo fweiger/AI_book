@@ -1,0 +1,119 @@
+# TOPIC-011｜指标和公式口径 v0.1
+
+> **统一指标目录现已抽离到 [metrics/catalog.csv](metrics/catalog.csv)**（94个定义/指标族），含 I01–I14、37个既有H03命名指标和I15–I54；**本文件保留历史定义、H03原始版本注释及复算来源**，不再为新H09/H10在本文内复制指标。统一引用与PIT数据规则见 [metrics/README.md](metrics/README.md)，本轮已核BLS数值样例见 [observations_seed.csv](metrics/observations_seed.csv)。
+
+
+| ID | 对应 | 可操作定义 | 来源/频率 | 限制 |
+|---|---|---|---|---|
+| I01 | H01 | 重大法案通过→签署/否决、关键票数、正式调查、停摆天数**分别计数** | Congress/White House 周月 | 不能把不同强度事件简单加总 |
+| I02 | H02 | (同口径实际非利息联邦支出-冻结CBO预期)/冻结CBO预期 | Treasury/CBO 月财年 | 只是支出偏离，不是财政刺激总量 |
+| I03 | H02 | -Δ(周期调整初级财政余额/GDP) | CBO/BEA 季年 | 必须处理周期、税收和估计修订 |
+| I04 | H03 | 州/县已生效AI/数据中心监管覆盖的项目MW | 官方许可证 月 | 议案、草案不算执行 |
+| I05 | H03 | 到原计划投产日仍延期项目MW / 到期项目MW | 项目数据库 季 | 分母必须固定，避免只选失败项目 |
+| I06 | H03/H04 | 数据中心实际施工、投产MW；分名义/实际投资 | Census/企业 季 | 不等于AI专属投资 |
+| I07 | H04 | Σ同一目标年度最新CAPEX指引与PIT冻结指引的差 / Σ冻结指引 | SEC/IR 季 | 财年和公司总CAPEX口径不一，缺值不得填0 |
+| I08 | H04 | CAPEX同比增速与同比增速的变化分列 | SEC/IR 季 | 增长放缓≠投资总量下降 |
+| I09 | H04/H08 | 云业务收入/AI负载、资金流、服务器利用率（如公开） | IR 季 | 定价变化影响收入的可比性 |
+| I10 | H05 | 事前定义重大外交、关税、军务 vs 国内政策事件的**数量和比例** | White House/Federal Register 月 | 地缘危机混杂 |
+| I11 | H06 | 政策受益州与2028选举竞争程度相关性 | FEC/国会 季 | 不能观察政治人物真实动机 |
+| I12 | H07 | 政策事件T+1/T+5/T+20风险因子调整超额收益 | 合法市场数据 事件 | 公告时区/货币共同冲击 |
+| I13 | H07/H08 | UST期限利差、信用利差、融资成本 | UST/FRED 日周 | 同时受到FOMC影响 |
+| I14 | H08 | 美国政策高暴露项目与海外/低暴露项目的差异 | 项目与公司 季 | 先验证平行趋势/样本选择 |
+
+**研究顺序：** 首先冻结数据定义与发布日，然后历史基线/对照，最后预注册方向/阈值和未来目标日期。当前没有运行任何历史统计检验；不要虚构显著性、胜率或Bayes后验。资产市场事件反应不等于真实AI投资下降，更不等于政治因果。
+
+## H03新增可用的分层指标（候选，尚无项目级结果）
+- `H03_PJM_TOTAL_PEAK_REVISION`：年度Y的本次PJM全区域夏季峰值预测MW减同年度上版预测MW；**这是总体负荷预测修订，含非数据中心因素**；数据见[h03 PJM CSV](data/h03_pjm_forecast_revisions_2026.csv)。
+- `H03_VA_ELECTRICITY_TAX_EXPOSURE`：适用数据中心计税期内实际kWh×$0.011，不等于100MW选址门槛；目前只有9个**非真实项目的模型情景**。
+- `H03_NEW_100MW_SITING_EXPOSURE`：是否2026-07-01后申请Virginia新的>=100MW需要本地选址审批项目；只有符合定义才处理；已获批扩建不大于额外100MW另行分类。
+- `H03_REALIZED_DELAY_MW`：到原计划投产日却未投产MW/到期计划MW，需要项目独立记录。**当前UNKNOWN，不得填0或用PJM全区预测代替。**
+
+## H03新基线指标：实际与预测的可比性
+- `H03_PJM_2025_LARGE_LOAD_ERROR` = (同一分区2025年实际`Historical July Peak` - 2025版`Load Forecast July Peak`) / 2025版预测。只统计**双方都有报告的主要分区**；RTO和各DOM子区不再求和。
+- `H03_MATCHED_FORECAST_COVERAGE` = 有历史实际的2025预测主要分区预测MW / RTO 2025全部预测MW；本轮7566/7735=97.815%。这是**预测量覆盖率，不是全部实际负荷覆盖率**。
+- `H03_PJM_VINTAGE_REVISION` = 对同一个目标年Y，PJM 2026-01预测MW - 2025-01预测MW；必须分`Large Load Adjustment` vs 整体夏峰负荷，分预测版本和zone。
+- `H03_REALIZED_LOAD_YOY` = 同一报告体系主要分区历史2025峰值相对2024实际峰值变化。统计只描述历史增长，**不能等于建设项目完成率**。
+源指标和校验见[H03研究报告](reports/2026-11-14_h03_pjm_large_load_realization.md)。
+
+- `H03_PJM_MACRO_ONLY_PEAK_REVISION`：同一规划年度`July 2026 informational summer coincident peak - January 2026 official summer coincident peak`，单位MW；严格标记**informational only、总峰值非数据中心、发生在选举前**。研究用途是宏观预测输入导致的普通版本修订对照，不是政策效果测量。
+
+## H03新增四阶段项目兑现指标（截至2026-11-14）
+- `C=SUBMITTED_CAPACITY_MW`：提交者容量口径；`D=SUBMITTED_DEMAND_MW`：经需求比率折算，不等于PJM准入。
+- `D/C`：2027全区17462.7/30466.9 = 57.317%。这是模型/企业提交中的容量→需求比，不是审批率。
+- `F/D`：具有ESA、CC等满足PJM firm条件的需求占提交需求比，当前**全国NA**；部分ODEC案例仅能描述承诺筛选机制。
+- `A/D`：PJM同批、同指标、同目标年的最终接受负荷与申请比；2027正式forecast尚未发布，当前**NA**；不同资料版本和嵌入量不能直接除。
+- `R/A`：同批最终接受的项目到目标日实际并网/使用电力占比；未有项目对应实际，当前**NA**。
+- `ZONE_CONCENTRATION`：按**折算需求D**分区；2027DOM+AEP占77.611%，禁止与DOM子区叠加。
+
+## H03新增Firm与实体业务的不同粒度指标
+- `ESA_COMPANY_PIPELINE_SHARE`：同日同地区同公司ESA储备 / 所有阶段合同储备；Dominion 2026-09为12.2/54.9=**22.22%**，只是合同阶段占比，非PJM接纳或项目投产率。
+- `NEW_CONNECTED_DC_CAMPUS_COUNT`：该年度新带电园区**数量**；`NEW_CAMPUS_ULTIMATE_MW`：那些园区的**未来设计总MW**，不是当年真实峰值用电。2024/25 Dominion园区数量15→11，设计容量977→744MW。
+- `HIGH_LOAD_REVENUE_YOY`：同公司同类高负荷业务实际季度收入同比，包含非数据中心及电价/燃料因素，不用来推导真实DC MW。
+- `AEP_2025_PJM_ESA_LOWER_BOUND`：对2025-09 PJM AEP特定近端需求队列，ESA **严格 >8600/11182=76.91%**；不是跨公司/跨年度对2026-10的成熟度估计。
+- `PROJECT_FIRM_TO_ACTUAL_MW`：需要项目ID、ESA生效/初始计划日期、真实并网/实际计量与PJM最终接受相同批次。当前全域无法计算，应为NA。
+- 可比性判断由[data/h03_maturity_scope_crosswalk.csv](data/h03_maturity_scope_crosswalk.csv)记录，禁止使用不同公司的全国合同、PJM未来单年申请、公司收入直接相除。
+
+## H03队列成熟度、总实物电量与2027监管负对照（v0.1.7）
+- `DOM_QUEUE_PROJECTED_DATE_COVERAGE`=已有预计接入日MW / 申请队列MW：2026-02披露的25,000/70,000≈**35.714%**。其中45GW的批次时间参考截至2025-12，因此只是近似队列成熟度，**不是Firm/批准/实际电量兑现率**。
+- `DOM_PHYSICAL_DELIVERED_YOY`=同一Dominion Energy Virginia全区域同期间Electricity Delivered MWh同比：2025全年100.2/94.5−1=**+6.03%**、2026年前三季80.6/76.1−1=**+5.91%**、第三季度29.4/27−1=**+8.89%**，全是所有客户的真实电量，不是数据中心专属。
+- `DOM_DC_SALES_SHARE`=数据中心占Virginia Power Electricity Sales的比例2024=26%、2025=28%，必须另保留该份额的分母原文；**尚未严格证明可与上面的全部Delivered直接相乘**。
+- `H03_COOLING_DEGREE_DAYS_Q3`：Dominion 2026Q3 1313 vs2025Q3 1066（+23.17%），气象因素；不能因用电增长就说全来自AI建设。
+- `GS5_BILLED_DEMAND_FLOOR_SCENARIO`：100MW合同而实际需求20MW，T&D最低可计费85MW、适用时Generation最低可计费60MW；**是费率计费基础而非实际用电MW，绝非收入美元**。生效2027-01-01，批准2025-11-25。
+- `PJM_PROJECT_REALIZED_FROM_DATED_QUEUE`：必须匹配同一个申请/接入点的预计日期、实际带电、计量MWh。当前项目级数据库未定位，保持NA，不能由25/70推算。
+
+
+
+## H03 v0.1.8真正DC专属的历史观察与外部预测注册
+- `DOM_DC_OBSERVED_COINCIDENT_PEAK_2025`：Dominion Energy原信函报告2025DC客户同时峰值**约4000MW**，可作为2026-01及2026-11两个PIT截止的历史数据，但公司范围不是PJM DOM区域或RTO全部LLA。非新增项目容量。
+- `DOM_DC_EXTERNAL_FORECAST_YYYY`：由2026-01-06信函公开并2026-02-02列入PJM资料的公司未来预测，2027=4933MW、2028=5448、2029=5980；**是外部发行人预测**，本研究2026-11回溯录入，不伪称自己的2026-01事前预注册。未来实际需要同公司、DC分类、同时峰值定义才能评价。
+- `DOM_CONTRACT_STAGE_FIRM_SHARE`：按公司2026-01解释将**CLOA+ESA**视为Firm、ELOA非Firm；2025Dec 21.2/48.5=43.711%，2026Sep22.0/54.9=40.073%。Firm存量+3.77%，Firm占比下降3.64pp。**此处的公司Firm不是PJM正式accepted，更不是实际接电**。
+- `PJM_LARGE_LOAD_TRIP_MW`：2026-07-22约3800MW计算/数据中心负荷切到自备电源；PJM系统实时净负荷从99984至96205（净3779MW）。为**事件冲击**，不能用2025DC年度峰值做同比或者算公司客户占比。
+- `PJM_REGISTRY_PUBLIC_AGGREGATE`：>=50MW范围FERC于2026-10-09接受，2027-03-01已有/即将投运大型负荷申报截止；仅公开配电区域汇总（具保密限制），目前真实CSV状态NA。与VA SCC拟议DP约100MW匿名公开队列**不同法域与范围**。
+- `VIRGINIA_SCC_QUEUE_PUBLICATION_STATUS`：2026-10-23官方Order仍`CONTINUED`，匿名项目清单未实际核实；保留May12 vs May25日期冲突，不能把interim当final或上市。
+
+## H03真实历史Forecast-vintage回测（v0.1.9）
+- `PJM_LLA_SIGNED_BIAS_MW`=历史实际`Historical July Peak`−该目标年当年或旧版`Load Forecast July Peak`。**正值=低估**，范围RTO/DOM/AEP等同一zone，LLA非数据中心专属。
+- `BIAS_VS_FORECAST_PCT`=100(actual/forecast−1)，分母是预测MW；`APE_VS_ACTUAL`=100|actual−forecast|/actual，分母是**实际MW**。不能将11.935%偏差当10.662%绝对百分比误差。
+- `MAPE_EQUAL_ZONES`=mean(APE)（同样区域各占一票），`WAPE_LOAD_WEIGHTED`=100Σ|actual−forecast|/Σactual。仅使用两版都有的同目标同区域共同样本，父子分区RTO/DOM不可重复相加。2025目标DOM+AEP+PS三地区2024/25版本WAPE 3.070%→8.772%，MAPE 13.400%→8.637%，**不是显著性结果**。
+- `CRA_2030_POWER_SHORTFALL_SCENARIO`=约11.5GW（2026-11-02 CRA报告未来Hard Supply Constraint假设），不是2026实际缺电/政策造成的损失，也不得将它同PJM容量市场短缺不同口径累加。
+
+## H03v0.1.10：历史“实际”与预测数值本身也必须做来源版本审计
+- `H03_CROSS_PUBLISHED_HIST_VALUE_DIFF` = 2026-05 PJM RTO `Historical July Peak`−2025-06 PJM `RTO Total Large Load Adjustments History`。2014—2024共同11年，2026数值都较高，相对差+2.34%—+5.26%、中位+3.966%。**定义是否完全同口径未核实**，所以该项是出版来源差，**不是实物增长率、不是经证实的历史重述**。
+- `H03_CROSS_PUBLISHED_FORECAST_DIFF`=2026-05回顾表同标签`vintage,target_year,RTO`预测值−2025-06材料同标签值。21条同名预测均可配对；2023版8/8负差、2024版7/7正差、2025版3正3负。未来按实际发行文件SHA冻结原始预测，禁止假设2026回顾表自动等于当年公布的原值。
+- `H03_BACKTEST_SOURCE_SENSITIVITY`：预测和历史值都取自**同一次出版物**计算`actual/forecast−1`，与第二个出版物内部同法的结果对照。目标2023-v2023 21.43% vs29.35%即差7.92pp；只证明来源敏感，不说明预测能力真实改变。
+- 2025原版Table B9b目标2025的RTO7729MW vs2026准确性回顾同标签7735MW仅+6MW，虽然较小也应版本记录。两个表分别使用Summer Peak和July Peak字样，PIT时点/定义差无法忽略。
+- 上轮H03 31条预测-实际及三区WAPE/MAPE是在**2026-05同一回顾源**内部一致计算，算术有效；**不能直接当全历史PIT原版误差分布**。后续真实预测打分应同时给`original_release_vintage`和`retrospective_rebased_vintage`双评分，必要时输出`NOT_COMPARABLE`。
+
+
+## H03原版B9/B9b桥接和来源选择稳健性（within-source verified）
+- `I55` B9b Total Associated−B9 Above Embedded（MW）：**仅2025原版同一工作簿**可以作为精确按年/区域统计差；2025目标RTO=4138MW、DOM3286MW、AEP349MW、其他503MW，**不是被批准或取消DC项目**。
+- `I56` 上述同源差额占Total Associated百分比，2025首年RTO为4138/7729=53.539%，DOM占RTO差额79.410%。2023/24跨文件按同标签得出的1726/3018MW只是带`UNCONFIRMED`标志的proxy。
+- `I57` 历史预测准确率的出版版本敏感性：以相同2026五月后验实际8167.174MW，2025六月Total表v2024/v2025预测7642/7729MW对应APE6.430%/5.365%（新版更准）；2026五月回顾v2024/v2025预测7939.180/7735MW对应APE2.792%/5.292%（新版更差）。**不是预测真实能力反转，而是源定义不一致时排名不稳定**。指标必须记录`publication,forecast_vintage,target_year,metric_basis,actual_vintage`。
+- 原版2024PDF明确2024-02-01 Revised但LAS网址2023-12-27，做点时刻预测误差时**以确实可证明的版本发布日期为准**。见[完整计算](reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)。
+
+## H03v10：2025原版与2026订正版B9/B9b未来负荷模型修订
+- `H03_B9_ADDITIONAL_VINTAGE_REVISION`：固定目标年度及PJM区域，2026当前原版B9 Above Embedded－2025原版B9，2027全区**−2883MW**；额外模型负荷修订而非已实现DC项目。
+- `H03_EMBEDDED_RELATED_RESIDUAL_REVISION`：同区同年`[v26(B9b−B9)]−[v25(B9b−B9)]`，2027全区**+1018MW**；只是两个统计层次的差额，不是实际已上电MW。
+- `H03_B9B_TOTAL_ASSOCIATED_VINTAGE_REVISION`：同年B9b v2026当前−B9b v2025原版，2027全区**−1865MW**；三项恒等`−2883+1018=−1865`。严禁把所有Large Load都写成纯DC/AI。
+- `H03_POSTCORRECTION_RETROSPECTIVE_OFFSET`：2026May Accuracy回顾`2026 Forecast July Peak` RTO−当前2026原版B9b，对2026—2031为+10MW、2032—2035为+9MW；**未知具体原因**。2026原版B9在2/6订正，不能回填为1/14首发同版。
+- [完整机器数据及验算](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，指标已追加统一catalog I58–I61；父子区域不能重复求和，当前没有项目级投产证据。
+
+### PJM B9算法原文确认（2026-01-23）
+官方[LAS建模演示第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)明确B9来自`Final Forecast`与`No DC History Removal Model Sensitivity`的差。因此`I59` B9b−B9及其跨版本差额是**模型统计残差**而非历史直接计量或项目可兑现资本；尤其当数据中心历史剥离、PJM EIA商业部门数据与接纳项目口径改变时，不能将+1018MW当作“实际嵌入需求新增”。本轮所有2026B9均来自2/6校正后的现存原表，原1/14字节文件尚未核实。
+
+## H03第十一轮：EKPC peak-shaving是否入表引起的8—10MW RTO来源差（I62）
+- `I61`先前状态“9—10MW无法解释”**已由本轮更正**：`Accuracy_RTO−Combined_original_B9b_RTO = -Combined_EKPC`，21年所有年份均成立；独立1月B9b与五月Accuracy RTO完全一致。两个独立附件EKPC=0，合并文件B9/B9b的EKPC=-10/-9/-8。其PJM官方类别为Peak Shaving Program，不是DC项目。
+- `I62` `PJM_RTO_EKPC_PSA_SOURCE_SCOPE_DELTA`：`Jan_Standalone_B9b_RTO - Combined_B9b_RTO = -Combined_EKPC`，同时`FebStandalone_B9_RTO-Combined_B9_RTO=-Combined_EKPC`，年度2026—31=10MW，2032—37=9MW，2038—46=8MW。**只测来源是否纳入削峰调整，不测实际负荷增长**。
+- `B9b`初见2025原版公司报告，2023/24同名表缺失是source schema演进（不是用户未检索到）。项目级Firm/Accepted/Realized与政治因果仍NA/UNTESTED。
+- PJM 1/14月度附件第2行明示PSA不纳入，但初版1/14 B9额外表未取得，仍不能把1月B9b−2/6B9认定为同日期首发真实差额。详见[来源报告](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)。
+
+## H03第十二轮：原B9版本门槛与整体RTO修订规模对照
+- `I63`：是否确实取得2026-02-06之前未订正B9的**同一定义、原始文件SHA和发布时点**。当前**false**，由此`Feb6_B9_correction_delta_MW=NA`，不能拿1月B9b推算更正前B9，也不能因Wayback暂不可达得出未发布结论。
+- `I64`：`100*abs(2026JanStandaloneB9b−2025OriginalB9b)/abs(2026RTO夏季峰值−2025RTO夏季峰值)`，目标2027、2028、2029、2030分别**49.665%、48.210%、46.275%、201.714%**（2030方向相反）。**仅描述两组未来负荷预测修订幅度，不是一个可加的AI经济贡献率**；B9b已包含模型嵌入项，统计对象非DC专属。
+- [十条来源原始SHA及门槛](data/h03_pre_correction_b9_source_availability.csv)、[四年修订量数据](data/h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)、[标准库复算](analysis/recompute_h03_pre_correction_source_gate.py)。
+
+## H03第十三轮：专家/诉讼证据源表标识与更正占比
+- `I65`：`EXPERT_EXHIBIT_PJM_TABLE_MATCH`——对同`vintage×target_year×zone`，FERC诉讼EN1引用的2023 Load Adjustments**与PJM原B8a分布式太阳能六格全匹配（6/6）**，但与原B9大型负荷六格**0/6匹配**。这是源表/指标身份审计，不是统计显著性或法律裁判。
+- `I66`：`CORRECTED_PJM_B9_Y0_PLUS_5_SHARE`——用真实PJM原B9除同版PJM RTO Summer Peak：2023版第5年2028为9866/155703=**6.336%**，EN1错误4185/155703=2.688%，低估3.649pp。以2026版第5年2031的41477/191017=21.714%对比，增长占比倍数从**8.079x修正为3.427x**；这是跨版预测指标比较，不是实际投产增长率。
+- `I67`：`LITIGANT_HISTORICAL_VINTAGE_SOURCE_QUALITY`——2017—22历史行暂标`LITIGANT_EXHIBIT_ONLY_NOT_PRIMARY_VERIFIED`，2023行`SOURCE_TABLE_MISMATCH_B8A`，2024—26仅在单独原官方源确认后才能纳入正式PIT/统计检验。支持H03、H08，但不升级国会政治因果。
+- [PDF原始SHA与六格复算证据](reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)。

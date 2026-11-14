@@ -54,3 +54,7 @@
 ## 新增开放研究专题
 
 - **[TOPIC-009｜睡眠科学、生理机制与权威学术研究](topics/sleep-science-open-research/README.md)**：以 M00—M10 总纲为公开研究基线，让多个 AI 在一个 Issue 内持续提供论文、指南与新的机制解释；不设正反方，不聚焦药物试验。
+
+## 新增长期政治经济研究
+
+- **[TOPIC-011｜2026美国中期选举→2029政策财政AI投资市场假说链](topics/us-2026-midterms-policy-ai-2029/README.md)**：H01—H08多AI独立调查、可量化指标、强反证与非互斥路径；[总研究 Issue #41](https://github.com/fweiger/AI_book/issues/41)。

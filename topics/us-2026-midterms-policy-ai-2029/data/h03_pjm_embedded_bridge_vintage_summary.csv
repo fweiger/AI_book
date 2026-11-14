@@ -1,0 +1,4 @@
+vintage,n_years,first_target_year,first_total_mw,first_above_embedded_mw,first_total_minus_above_mw,first_residual_share_pct,residual_mean_mw,residual_min_mw,residual_max_mw,residual_cv_pct,confidence_class,note
+2023,8,2023,3957,2231,1726,43.618903,1650.750000,1616,1726,2.098447,CROSS_PUBLICATION_PROXY_NOT_EXACT_DECOMPOSITION,Near-stable residual across target years; not proof of site-level construction or cross-publication metric identity
+2024,7,2024,5682,2664,3018,53.115100,2984.714286,2937,3035,1.156283,CROSS_PUBLICATION_PROXY_NOT_EXACT_DECOMPOSITION_REVISED_2024_02_01_PDF,Near-stable residual across target years; not proof of site-level construction or cross-publication metric identity
+2025,6,2025,7729,3591,4138,53.538621,4132.333333,4053,4255,1.524477,SAME_OFFICIAL_XLSX_B9_VS_B9B,Near-stable residual across target years; not proof of site-level construction or cross-publication metric identity

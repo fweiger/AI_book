@@ -1,0 +1,7 @@
+year,metric,value,unit,source_url,metric_scope_and_limit
+2024,new_connected_campuses,15,count,https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-20260319.htm,Actual new campus count in one calendar year; not total active campuses
+2025,new_connected_campuses,11,count,https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-20260319.htm,Actual new campus count in one calendar year; not total active campuses
+2024,new_connected_campuses_ultimate_capacity,977,MW,https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-20260319.htm,Ultimate capacity of newly connected campuses; NOT metered realized coincident peak
+2025,new_connected_campuses_ultimate_capacity,744,MW,https://www.sec.gov/Archives/edgar/data/715957/000119312526115180/d-20260319.htm,Ultimate capacity of newly connected campuses; NOT metered realized coincident peak
+2024,data_center_share_electricity_sales,26,percent,https://www.sec.gov/Archives/edgar/data/715957/000119312526063120/d-20251231.htm,Share of Virginia Power electricity sales; not campus growth nor AI-only
+2025,data_center_share_electricity_sales,28,percent,https://www.sec.gov/Archives/edgar/data/715957/000119312526063120/d-20251231.htm,Share of Virginia Power electricity sales; not campus growth nor AI-only
