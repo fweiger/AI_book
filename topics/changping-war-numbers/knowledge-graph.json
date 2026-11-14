@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-013",
+  "title": "长平之战兵力、杀降数字与史料可信度",
+  "topic_version": "0.1.0",
+  "updated_at": "2026-11-15",
+  "source_level": "古籍文本核对＋现代论文全文＋考古保护规划（争议结论未定）",
+  "books": [],
+  "nodes": [
+    {
+      "id": "C001",
+      "type": "claim",
+      "title": "史记四十万降卒的文献记载",
+      "source_status": "史籍文字已核，数字真实性未核"
+    },
+    {
+      "id": "C002",
+      "type": "claim",
+      "title": "前后四十五万斩首虏的累计口径",
+      "source_status": "史籍文字已核，统计口径待定"
+    },
+    {
+      "id": "C003",
+      "type": "claim",
+      "title": "二万五千人断后路和五千骑隔营",
+      "source_status": "史籍文字已核，战术量化待定"
+    },
+    {
+      "id": "C004",
+      "type": "claim",
+      "title": "六十万出自王翦伐楚段落",
+      "source_status": "史籍文字已核，禁止跨战役套用"
+    },
+    {
+      "id": "C005",
+      "type": "claim",
+      "title": "现代学者对四十万数字提出怀疑",
+      "source_status": "2016文章全文已读，争议未定"
+    },
+    {
+      "id": "C006",
+      "type": "claim",
+      "title": "永录1号约130余骨骼个体与其他地点",
+      "source_status": "官方保护规划核读，规模推断有限"
+    },
+    {
+      "id": "C007",
+      "type": "claim",
+      "title": "骨骼创伤与埋葬机制应区分",
+      "source_status": "2016论文转引考古，原刊未核"
+    },
+    {
+      "id": "C008",
+      "type": "claim",
+      "title": "视频战国人口与粮食运输数字",
+      "source_status": "视频全文已读，史料未核"
+    },
+    {
+      "id": "C009",
+      "type": "claim",
+      "title": "清代宣传军额与参战兵力类比",
+      "source_status": "视频全文已读，档案未核"
+    },
+    {
+      "id": "C010",
+      "type": "claim",
+      "title": "2023骨骼暴露点中存在普通墓葬",
+      "source_status": "官方保护规划核读"
+    }
+  ],
+  "edges": [
+    {
+      "source": "C001",
+      "target": "C002",
+      "relation": "口径对照",
+      "note": "最后降卒不能与前后累计混同"
+    },
+    {
+      "source": "C003",
+      "target": "C001",
+      "relation": "待验证",
+      "note": "切断道路不构成直接总兵力上限"
+    },
+    {
+      "source": "C004",
+      "target": "C001",
+      "relation": "禁止直接推断",
+      "note": "王翦伐楚的60万人不等于长平秦军人数"
+    },
+    {
+      "source": "C005",
+      "target": "C001",
+      "relation": "质疑",
+      "note": "学者主张但不构成低兵力实测"
+    },
+    {
+      "source": "C006",
+      "target": "C007",
+      "relation": "延伸",
+      "note": "创伤和死亡方式的直接简报仍待核"
+    },
+    {
+      "source": "C010",
+      "target": "C006",
+      "relation": "对照",
+      "note": "暴露点不等同独立战俘坑"
+    },
+    {
+      "source": "C008",
+      "target": "C001",
+      "relation": "待验证",
+      "note": "视频数量不等于史实"
+    },
+    {
+      "source": "C009",
+      "target": "C008",
+      "relation": "类比",
+      "note": "跨朝代类比不可作为直接证据"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "兵力数字的史料系谱",
+      "nodes": [
+        "C001",
+        "C002",
+        "C004",
+        "C005"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "考古和杀俘方式",
+      "nodes": [
+        "C006",
+        "C007",
+        "C010"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "人口和粮食约束",
+      "nodes": [
+        "C008",
+        "C001"
+      ]
+    },
+    {
+      "id": "Q09",
+      "name": "明清军额类比",
+      "nodes": [
+        "C009",
+        "C008"
+      ]
+    }
+  ],
+  "constraints": [
+    "古籍记载存在≠记载数字属实",
+    "抽样尸骨数≠整场死者数",
+    "战场局部截断兵力≠对方总兵力上限",
+    "不将王翦伐楚60万变成长平秦军60万",
+    "不以清代案例直接证明战国数字"
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md"
+}
