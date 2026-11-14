@@ -1,4 +1,10 @@
 # TOPIC-011｜版本记录
+
+## 2026-11-14 | 第十四轮M0政治传导优先级重排（资料/研究更新，topic_version仍0.2.4）
+- 回到TOPIC-011的选举主线，按AP两院判定、Reuters 11/13议程、Reuters 11/12高盛相反投资预测与官方参院/总统制度门槛，分开政治事实、意向与实际政策/经济因果。强调2027未生效政策尚不可当结果。
+- 新增[研究报告](reports/2026-11-14_h01_h02_h04_political_mechanism_stage_audit_round14.md)、[8行政治信号快照](data/h01_h02_h04_round14_policy_signal_snapshot_20261114.csv)及[会话](sessions/2026-11-14-round14-election-transmission-triage.md)；提出104/110/116/119届的历史对照及H01/H02/H04三条可执行的量化验收。
+- 不重复注册原E001/E004等来源，不新增I/E/F/C/Q ID；第十三轮H03错误来源审计继续作为独立数据质量任务。H01—H10仍UNTESTED，P-A—P-D仍UNKNOWN；PR #51未合并。
+
 ## 2026-11-14 | topic_version 0.2.4 — H09履约年/付款年错位与H10四年46个CPI历史事件检验
 - **H09合同现金时钟**：Travis 2020原签署协议1.22/5.2/7.4/8/9显示2020—22履约年度对应在合规且无税务上诉情况下2022—24的条件性付款目标10月31日；不得把withhold扣留解释为已付后recapture追缴。新增3行合同时间映射和报告，实际合格grant/ACH/9%扣留USD仍NA。
 - **官方大附件取证**：Ubuntu MCP完整下载2026-04-07 Travis County 103437809字节/255页Agenda Packet（SHA `e93233825a...`），`pdftotext -layout`全文索引并重读page15 Item6/page253 Item26，二者`Attachments: None`、`Fiscal Impact and Source of Funding:`空白。证明公开packet本身未附补助核算表，但不能据此推断县其他部门没有付款记录。保存页级机器审计及限制报告。
