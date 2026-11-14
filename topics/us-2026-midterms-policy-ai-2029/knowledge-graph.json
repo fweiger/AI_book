@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.1.11",
+  "topic_version": "0.2.0",
   "topic_id": "TOPIC-011",
   "title": "2026 US midterms to 2029 Trump term end: competing policy fiscal AI economic hypotheses",
   "source_level": "Public fact seed and untested framework",
@@ -158,6 +158,28 @@
       "id": "Q10",
       "type": "research_question",
       "title": "Question 10"
+    },
+    {
+      "id": "H09",
+      "type": "hypothesis",
+      "title": "企业政治资源暴露、地方优惠与国会监督的公司财务传导",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H10",
+      "type": "hypothesis",
+      "title": "通胀/就业与Fed政策对融资成本的传导",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "Q11",
+      "type": "research_question",
+      "title": "Musk corporate political policy exposure and cashflow"
+    },
+    {
+      "id": "Q12",
+      "type": "research_question",
+      "title": "CPI PCE Fed policy to refinancing"
     }
   ],
   "edges": [
@@ -370,6 +392,51 @@
       "source": "Q10",
       "target": "ROOT",
       "relation": "数据质量问题（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H09",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H10",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "Q11",
+      "target": "H09",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q12",
+      "target": "H10",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "H01",
+      "target": "H09",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H06",
+      "target": "H09",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H09",
+      "target": "H07",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H10",
+      "target": "H07",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H10",
+      "target": "H08",
+      "relation": "竞争机制（待验证）"
     }
   ],
   "reading_paths": [
@@ -399,6 +466,25 @@
       "nodes": [
         "H08",
         "H04",
+        "H07"
+      ]
+    },
+    {
+      "id": "R04",
+      "name": "Musk Texas policy congressional and financing",
+      "nodes": [
+        "ROOT",
+        "H01",
+        "H09",
+        "H07"
+      ]
+    },
+    {
+      "id": "R05",
+      "name": "inflation FOMC and firm refinancing",
+      "nodes": [
+        "ROOT",
+        "H10",
         "H07"
       ]
     }
