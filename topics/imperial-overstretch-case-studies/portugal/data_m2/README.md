@@ -135,3 +135,14 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [reproduce_fiscal_a1_debt_service_m2.py](reproduce_fiscal_a1_debt_service_m2.py) | 实际在研究Runner下载源DEBT.PT A及GitHub文件重新执行，`PASS appendix_a1_rows=36 matched_revenue_entries=7 debt_local_window=15 year1748_table_conflict=OPEN` |
 
 详情：[官方财政附录日期级审计](../FISCAL_A1_DATED_BUDGETS_1748_DEBT_VERSION_AUDIT_M2_20261114.md)。源原始DEBT.PT未镜像；两个生成CSV的SHA-256：`c9f97912cf00d876868450d956ca41634f653f721f119fade21f588dae507881`，`616dff3b7361257124c35aab6e2e0c38a16718675498f1625929edcb8e5067af`。**严格财政因果识别／ASCM均NOT_RUN**。
+
+
+## 候选M3增量：DEBT.PT年度存量变化与净发行的账务质量审计（2026-11-14）
+
+| 文件 | 数据、单位、历史与核验边界 |
+|---|---|
+| [debtpt_issuance_vs_stock_delta_1642_1800_m3.csv](debtpt_issuance_vs_stock_delta_1642_1800_m3.csv) | **159行**相邻年度DEBT.PT `Debt stock` D/E/F/H/I，单位百万名义réis；记录存量变化、`juros`净发行、短债净发行、残差及0.01百万réis阈值异常标记 |
+| [debtpt_1740s_net_issuance_comparison_m3.csv](debtpt_1740s_net_issuance_comparison_m3.csv) | 4组十年净长期债务发行、短债净发行与存量变化的对照；1743年占1741–50长期净发行53.430639%，非总财政收入占比 |
+| [reproduce_debtpt_issuance_stockflow_m3.py](reproduce_debtpt_issuance_stockflow_m3.py) | 已实际执行：严格验证官方原始DEBT.PT A Excel SHA256，逐年唯一/连续及长期+短债存量的算术一致性，**不假设整个159年Δ存量=发行**，显式保留1640—1660年代20处发行/存量残差；生成两份派生CSV |
+
+官方DEBT.PT A源：https://debt.pt/pdf/DEBT_%201529-1557%20%26%201641_1800.xlsx；源SHA-256 `b2024474a20442b5577ca4667067edf22ffdf71a30faad01971f5a8d13104d17`；生成全年CSV SHA256 `ff06b830cc0106eb7c82a8d14e2047f1c0df0144c43cc164e539278cdd88e604`，四组十年CSV SHA256 `477c18897359e5970ec72ea633a8e39018518ce029fbb92a3e3ec28a4e01eaf9`。同源净发行数据只是历史债务会计记录，**不是独立证据证明巴西黄金实际支付了当年发行的现金**。完整报告：[1743年发行与债务存量/发行时间错位审计](../DEBT_1743_ISSUANCE_STOCKFLOW_ACCOUNTING_AND_1748_SOURCE_CONFLICT_M3_20261114.md)。阶段仍为业务Issue #34 OPEN，Draft PR #38未合并。
