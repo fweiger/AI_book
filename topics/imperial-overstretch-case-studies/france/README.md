@@ -177,3 +177,10 @@ M3**只完成条约级金融工具及事件先后核验**：实际贴现净收�
 - **来源数据质量新增**：NYPL将`Francis Banquier`列为个人名字，但HSP Collection 1874记录真实商号`Willing and Francis`；是否把法语`banquiers`误释成人名，只有取得NYPL两页原件才可以最终确认。NYPL有公开影像入口，但本轮尚未逐字核对原手稿。
 
 **状态**：`ORIGINAL_ARCHIVE_DESCRIPTION_VERIFIED`，实际200万资金交割`NOT_ACQUIRED`；法国公库最终净收入`NOT_ACQUIRED`；殖民军费支出`NOT_ACQUIRED`；历史因果`NOT_RUN`。复用原 Issue #35、Draft PR #39。
+
+## M3-A4：1803年“200万”跨币种、跨主体和跨档案资金辨析（2026-11-14）
+
+- [M3-A4｜美元200万拨款、法郎200万殖民信用与巴林预付款的来源对照审计](CASE_FRA_M3A4_TWO_MILLIONS_CURRENCY_AND_GUARANTEE_CROSSWALK_20261114.md)：新增美国1803-02-26国会正式法案（`$2m`外交支出授权）、1803-07-29 Madison对`$2m`原拟用途的说明、1803-08-21 Monroe争议中的`$2m`提前担保、NYPL `EM.2249`于1803-09-13记录的**2m法郎**圣多明各军需出票安排，以及1902年《Monroe通信目录》**1803-11-14 Baring Brothers→Barbé-Marbois**涉及`Two millions advance`**币种未标**的法语副本。两份历史“200万”**不能未经凭证认定同一笔，更不能直接按金额相加**。
+- [9项同额/异额资金事件来源映射CSV](louisiana_two_millions_crosswalk_m3.csv)：以`fund_family`区分法条授权、美元担保、法国殖民汇票、银行合同内每月2m法郎、及10m法郎预付，标记金额与货币、日期、会计事件和证据等级。**此表是来源映射，不是收款流水**。
+- [7项交叉对账与否证要求CSV](louisiana_two_millions_audit_questions_m3.csv)：重点核验1803-11-14原信币种、USD2m担保是否关联FF10m预付、EM2249殖民汇票与Louisiana 52m合同是否从属、银行每月2m本就包含在52m内。
+- **本轮唯一下一步**：取得1803-11-14 Baring→Marbois法语副本2页，与NYPL EM2249两页原件逐项比对出票人、付款方、受益人、币种及票据号码；任何`2m`金额都不可自动视作实付或独立新增现金。法国财政净到账`NOT_ACQUIRED`，圣多明各真实军费`NOT_ACQUIRED`，因果`NOT_RUN`。保持原 Issue #35 / Draft PR #39。
