@@ -93,3 +93,6 @@
 
 ## H03第十一轮：2026 B9b初始附件、PSA削峰项及EKPC 21年来源差闭合（2026-11-14）
 - [官方四XLSX逐格来源审计](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)：1/14独立B9b（Excel元信息1/13）、2/6订正后的独立B9、当前合并B9/B9b和五月Accuracy交叉核验。2026—2046 **23一级zone×21目标年两组对照**中，只有EKPC与RTO出现差异；独立表EKPC=0、合并表EKPC=-10/-9/-8，数值严格解释RTO偏移，5月Accuracy RTO与独立1月B9b全21年一致。PJM月度附件明确**不含PSA削峰调整**；该负值不是纯DC需求取消。2025原版报告确认**B9b首次引入2025**，所以2023/24原版无同源B9b并非文件漏找。2026**2/6订正前B9**仍未找到，不计算修正量。
+
+## H03第十二轮：2/6前原B9来源门槛与RTO预测修订对照（2026-11-14）
+- [原B9尚未取得的证据资格审计](reports/2026-11-14_h03_uncorrected_b9_source_gate.md)：PJM 2026-01-14主报告PDF共36页、SHA固定，正文没有完整B9数据附件；独立Jan B9b只能确认Total，2/6以后独立B9与合并Excel都已更正。**不能计算Feb6嵌入负荷修正量（NA）**，并不等于历史版本确实不存在。[来源登记](data/h03_pre_correction_b9_source_availability.csv)、[2027—30整体RTO峰值 vs B9b总量修订规模](data/h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)与[复算脚本](analysis/recompute_h03_pre_correction_source_gate.py)。两组修订规模比2027—29约46—50%，只是绝对值对照，**不是可加的因果份额**。
