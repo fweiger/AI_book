@@ -36,7 +36,7 @@
 关键会计主体：Cohen商行是**私人商人**，其按合同承接未售商品可能带来公司销售收入，也有VOC支付服务费这一反向支出；国家对VOC的补助则属于第三种账簿；原始会计是否包含实物移交与票据清算仍未知。不能把Cohen服务付款与政府拨款混成同方向国家救助。
 
 ## 5. 真实档案获取与权限边界
-[voc_m3d_original_auction_archive_targets.csv](voc_m3d_original_auction_archive_targets.csv) 精确列出12组档案材料及优先顺序，特别是`25/3`合同原件、`25/79,...139`服务费用收据、拍卖报告`16/95`等与1991? **年份必须为1791**—1794历史价格表`15/81`；没有任何原始出纳凭证被本轮抄录。
+[voc_m3d_original_auction_archive_targets.csv](voc_m3d_original_auction_archive_targets.csv) 精确列出12组档案材料及优先顺序，特别是`25/3`合同原件、`25/79,...139`服务费用收据、拍卖报告`16/95`等与1791—1794年的历史价格表`15/81`；没有任何原始出纳凭证被本轮抄录。
 
 荷兰国家档案馆的[开放数据正式说明](https://www.nationaalarchief.nl/onderzoeken/open-data/archiefinventarissen-digitale-objecten-en-scans-van-archieven)给出EAD XML目录`unitid`→METS文档UUID→JPEG影像的合法检索路径，但本轮直接访问该馆的特定3.02.33 OAI/GetRecord端点未成功，经容器直接请求域名亦无法DNS解析；**没有取得目标卷号对应的MET​S UUID或原始页面**。本轮仅有官方网页编目和沿革说明，不能宣称合同原件看过。
 
