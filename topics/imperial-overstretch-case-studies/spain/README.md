@@ -321,3 +321,13 @@ Issue #32 OPEN、Draft PR #36保留，不合并。
 - **统计基准问题**：该表有**5个跨年度/不规则时段**，1756全年与1756–1757跨期同时存在，不能直接按年份拼接、推断1757年度下降或与1757驻军兵变简单相关。**real de vellón按34maravedís的进位来自西班牙文化部辞书，是否与原文章按每8reales换算的银比索口径一致仍需史料核实。**
 - **档案新入口**：西班牙PARES精确馆藏[1757年Ocoa海湾船队往来 `SANTO_DOMINGO,942,N.67`](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/13111419)（25叶）；[1757年英国私掠船袭击 `SANTO_DOMINGO,942,N.53`](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/13105153)（64叶）；[1786年Banco San Carlos军需采购线索 `SGU,LEG,7150,1`](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/1303557)（大卷194叶）。**仅核验官方档案描述，不是已读原件，军需采购与1757军饷或1797瓦伦西亚港贷款不能混账**。
 - **验证状态**：三个新文件GitHub回读、CSV20/6条结构和运算PASS；原PDF页面截图/原手写档案取得NOT_ACQUIRED，军饷与航运因果NOT_RUN，档案馆邮件NOT_SENT。继续复用Issue#32和Draft PR#36。
+
+---
+
+## CASE-ESP-001｜首轮五轨综合研究已阶段收束（2026-11-14，优先阅读）
+
+**最新、优先于此前M2p—M2t“下一步继续调卷”陈述的阶段决策**：[**西班牙殖民帝国1492—1824五维度阶段结论和跨国比较交付报告**](CASE_ESP_001_FIVE_TRACK_COUNTRY_STAGE_SYNTHESIS_20261114.md) · [五轨阶段门数据表](case_esp_001_five_track_stage_gate_20261114.csv) · [原6项验收条件逐项审查](case_esp_001_original_ac_review_20261114.csv) · [收束决议研究日志](sessions/2026-11-14-spain-case-first-round-capstone-and-parent-handoff.md)。
+
+**核心结论**：A矿业/工程技术、B强制劳动/白银和贸易、C外交战争、D王室和跨殖民财政/债务、E本土制造业与政治独立五轨首轮证据**已覆盖**，有12个M0事件、10个M0来源和2个初轮指标记录、另有1778—1820年度财政及贸易出版表各43行及海军/1808债务/银行历史重建。支持西班牙通过美洲资源扩大财政和跨殖民防务网络，面临战争融资、财政调度和政治联盟风险；**不能**推出帝国总净收益、债息直接挤出制造业、财政破产单独造成独立，或“西班牙没有工业”。
+
+**阶段状态**：`FIRST_PASS_CASE_SYNTHESIS_READY`，`COUNTRY_CAUSAL_ROI_NOT_IDENTIFIED`，`M3_COMPARISON_PENDING_AT_PARENT`。原始AGS/UKDS部分国库账、同口径制造业数据、独立历史评审尚未完成。保持 **Issue #32 OPEN / Draft PR #36 DRAFT**，不关闭/不合并/不宣称全面验收。**后续不要因先前文件里写了“下一步调阅某档案号”，就自动继续M2u微观追档；默认交接给TOPIC-010父Issue#30做国家比较**。
