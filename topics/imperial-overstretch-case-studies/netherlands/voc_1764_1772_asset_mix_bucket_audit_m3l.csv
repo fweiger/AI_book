@@ -1,0 +1,5 @@
+author_liquidity_bucket,sum_1764_million_current_guilders,sum_1772_million_current_guilders,absolute_change_million_guilders,recomputed_bucket_pct_change,author_printed_change_pct,bucket_share_1772_pct,bucket_share_1764_pct,source_id,source_locator,source_url,caveat
+MOST_LIQUID,111,81,-30,-27.02703,-27,10.20151,13.77171,NLD-S73,Table_4,https://doi.org/10.1111/ehr.13345,PERCENT_CHANGE_PRINTED_IS_BUCKET_CHANGE_NOT_THE_FIRST_ASSET_ROW; estimated grouping
+LESS_LIQUID,663,593,-70,-10.55807,-11,74.68514,82.25806,NLD-S73,Table_4,https://doi.org/10.1111/ehr.13345,PERCENT_CHANGE_PRINTED_IS_BUCKET_CHANGE_NOT_THE_FIRST_ASSET_ROW; estimated grouping
+ILLIQUID,32,120,88,275.00000,275,15.11335,3.97022,NLD-S73,Table_4,https://doi.org/10.1111/ehr.13345,PERCENT_CHANGE_PRINTED_IS_BUCKET_CHANGE_NOT_THE_FIRST_ASSET_ROW; estimated grouping
+ALL_ESTIMATED_ASSETS,806,794,-12,-1.48883,,100.00000,100.00000,NLD-S73,Table_4,https://doi.org/10.1111/ehr.13345,Total reconstructed portfolio approximate; no actual census
