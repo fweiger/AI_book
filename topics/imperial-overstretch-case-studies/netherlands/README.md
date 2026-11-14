@@ -64,3 +64,10 @@
 - [新增来源登记](source_registry_m2b.csv)及[研究会话](sessions/2026-11-14-voc-specie-remittance-m2b.md)。
 
 原始档案`1.04.02`的`inv. 4596`（1771—1780）与`4597`（1781—1790）目录标为DIGITALIZED，但本轮文件影像链接返回HTTP404，**档案账页NOT_ACQUIRED**；de Korte(1984/2000)完整附录亦未获取，历史金额冲突与战争因果分析保持`OPEN/NOT_RUN`。保留本Draft PR，不合并main。
+
+## M2C（2026-11-14）— VOC第四次英荷战争债务及原始档案来源链
+
+- [M2C债务估计与原始档案定位](M2C_WAR_DEBT_ARCHIVE_LINEAGE_20261114.md)：荷兰新海事史依据de Korte(1984)附录14，转述1780—1784年VOC债务从超过2900万至超过5100万荷兰盾、战时近增2200万（**非原始账页**）；同时标明1760年另有3230万荷兰盾报道，口径未对齐，不拟合单调时间序列。
+- [8条带下界/近似/承诺类型的债务、补助与商品占比观察](voc_credit_war_synthesis_m2c.csv)，[8个原始档案及历史刊物精确目标](voc_primary_archive_targets_m2c.csv)，[5项来源登记](source_registry_m2c.csv)，[研究会话](sessions/2026-11-14-voc-war-debt-m2c.md)。
+- 新发现：Nationaal Archief **1.10.31 inv.15** 保存**1640—1770年所有VOC商会的equipage成本与回航收益**，部分刊载于1872年《Kroniek》第40—41页，是裁决M1的f370m与f465.7m冲突的优先原始路径。档案目录已核对，**原件没有读取**；DBNL扫描已定位但PDF返回HTTP429。
+- 现有VOC 1.04.02 **4596/4597**（1771—1780、1781—1790）仍未取得账页；官方EAD→METS/IIIF接口已定位，但本轮没有成功取到这两卷的影像UUID。1740成本风险、1780战争信用冲击和政府现金支出仍需分账，因果模型`NOT_RUN`。
