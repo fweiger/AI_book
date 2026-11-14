@@ -126,3 +126,8 @@
 - [h03_pre_correction_b9_source_availability.csv](h03_pre_correction_b9_source_availability.csv)：10个来源状态，含Jan原PDF的页数/字节/SHA、Jan独立B9b、Feb订正B9、当前合并与五月回顾，Wayback访问超时和外部镜像情况；未获得的bytes、SHA保留**空字段**而非数值零。
 - [h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv](h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)：2027—2030两个模型预测总量修订的绝对幅度比，**B9b含已嵌入模型成分，不可当政治/数据中心实际贡献率**。
 - [离线复算及PDF可选SHA核对](../analysis/recompute_h03_pre_correction_source_gate.py)，[完整研究报告](../reports/2026-11-14_h03_uncorrected_b9_source_gate.md)。
+
+
+## H09州官方380/381记录+H10 CPI事件日稳健性（2026-11-14）
+- [Texas Comptroller公开380/381 CSV单条登记及SHA](../cases/musk-2026/texas_comptroller_0005328_registry_snapshot.csv)：Travis County×Colorado River Project LLC编号0005328，州备案2022-05最近更新、总货币值空白非零、截止日期与县签署合同差一天。[来源/不能算9%实际美元的报告](../reports/2026-11-14_h09_texas_381_registry_missing_cash_audit.md)，[2020/21/22独立年度金额空值记录](../cases/musk-2026/travis_2020_2022_grant_cash_reconciliation.csv)。2020签约新闻十年估算不能乘9%冒充官方实际现金扣留。
+- [22个真实CPI公布日×Treasury日度2Y/10Y CSV](h10_cpi_release_treasury_2y10y_2025_2026.csv)，2025-01—2026-11与非公布交易日444个对照；[同月20,000次随机化+去异常稳健性](../reports/2026-11-14_h10_cpi_release_ust_22_event_robustness.md)，[标准库计算脚本](../analysis/recompute_h10_cpi_release_ust_events.py)。该统计结果是日度关联，未取得当天预发布CPI一致预期/期货分解，不能认定利率变动由CPI造成。
