@@ -1,0 +1,5 @@
+decade,metric,existing_m1_decadal_annual_average_pesos,existing_m1_converted_decade_total_pesos,cardenas_2022_1994_five_years_combined_pesos,delta_existing_minus_card_pesos,delta_pct_of_card,existing_source,comparison_source,validation_status,inference_boundary
+1780s,castile,1655605,16556050,16556000,50,0.000302,Cuadro8_current_M1,Cardenas2022_Table1.2,ARITHMETIC_PASS_SOURCE_RECONCILIATION_OPEN,decadal annual mean times ten vs sum of two five-year totals
+1780s,situados,6170565,61705650,61650000,55650,0.090268,Cuadro8_current_M1,Cardenas2022_Table1.2,ARITHMETIC_PASS_SOURCE_RECONCILIATION_OPEN,source scope vintage or typo needs original Table A
+1790s,castile,4317453,43174530,43174000,530,0.001227,Cuadro8_current_M1,Cardenas2022_Table1.2,ARITHMETIC_PASS_SOURCE_RECONCILIATION_OPEN,decadal annual mean times ten vs sum of two five-year totals
+1790s,situados,4748523,47485230,47335000,150230,0.317378,Cuadro8_current_M1,Cardenas2022_Table1.2,ARITHMETIC_PASS_SOURCE_RECONCILIATION_OPEN,not automatically attributable to rounding
