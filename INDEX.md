@@ -8,6 +8,7 @@
 
 | TOPIC-002 | [市场微观结构：订单流、流动性与价格形成](topics/market-microstructure-orderflow/README.md) | 交易规则怎样形成价格、价差与流动性？ | `交易机制` `订单流` `Wind L2` | 1 | CATALOG_SEEDED |
 | TOPIC-003 | [交易心理：亏损、纪律与可验证执行](topics/trading-psychology-execution/README.md) | 决策偏差如何影响风险与执行？ | `行为决策` `交易心理` `风险` | 1 | CATALOG_SEEDED |
+| TOPIC-006 | [金融 AI：从可信数据到专业建模、持续 Agent 与预测](topics/financial-ai-data-to-decision/README.md) | 数据可靠之后，还缺什么才能生成专业财务模型、持续工作并超越专家预测？ | `金融AI` `数据质量` `后训练` `持续Agent` `预测评估` | 0（以公开演讲与论文为主） | DISCUSSION_ONLY / NEEDS_EVIDENCE |
 
 | TOPIC-009 | [睡眠科学与生理机制：开放式多 AI 研究](topics/sleep-science-open-research/README.md) | M00—M10 的机制体系、权威医学/神经科学文献与跨维度研究问题 | `睡眠科学` `神经生理` `昼夜节律` `多AI协作` | 公开来源 | FRAMEWORK_READY |
 
