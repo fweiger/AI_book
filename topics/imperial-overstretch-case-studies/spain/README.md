@@ -1,6 +1,6 @@
-# CASE-ESP-001｜西班牙帝国第一轮证据审查（M0）
+# CASE-ESP-001｜西班牙殖民帝国研究（M0 初始证据 + M1 深化史料）
 
-**权威Issue**：[AI_book #32](https://github.com/fweiger/AI_book/issues/32) · **上位**：[TOPIC-010 #30](https://github.com/fweiger/AI_book/issues/30) · **状态**：第一轮史料/事件与数值证据准入；原始马德里财政年度账本、跨国因果回归尚未取得。
+**权威Issue**：[AI_book #32](https://github.com/fweiger/AI_book/issues/32) · **上位**：[TOPIC-010 #30](https://github.com/fweiger/AI_book/issues/30) · **Draft PR**：[ #36](https://github.com/fweiger/AI_book/pull/36) · **状态**：M0结构通过；M1来源与已发表十年均值新增；M2马德里逐年原始数据尚未取得；M3因果识别未运行。
 
 ## 第一轮结论（不是最终因果判决）
 
@@ -34,3 +34,22 @@
 [12条事件](events_m0.csv)、[10项来源](source_registry_m0.csv)、[2个候选指标（其中一项有发表区间）](metrics_m0.csv)。格式与年份可按CSV检查；原始王室财政年度表 `NOT_ACQUIRED`，因果识别 `NOT_RUN`。
 
 **下一项唯一任务：** 逐表取得Marichal和Barbier–Klein对1780—1807的收入、军费、殖民汇款与贷款明细，统一银比索/里亚尔/法定币、国库本土与新西班牙会计口径后再做趋势与支出收入比例。
+
+
+---
+
+## M1 实质性增量（2026-11-14；仍属Draft，不是最终结论）
+
+- [M1深入研究、反证与史料审查](M1_SOURCE_AUDIT_20261114.md)：帝国资源汲取—财政转移—战争融资—地方精英政治反弹的分层解释；明确没有运行因果复算。
+- [新增来源登记](source_registry_m1.csv)：7项机构史料、已发表数据集和最新工作论文，标注实际阅读层级。
+- [1720—1799年新西班牙境外财政汇款十年均值](remittance_decadal_m1.csv)：8行已发表表格转录，分汇往卡斯蒂利亚与其他殖民地situados，逐行做加法校验；并非年度原始账本或王室净利润。
+- [M2财政数据字段及核验要求](fiscal_data_dictionary_m1.md)：UK Data Service ESFDB 3104 / g104spd3.tab 1784—1807年（24行、16列）代码簿，CHKTOT和MREVTOT不一致、MREGION缺失、INDIES及LOANS含非税收项的限制。
+- [2026-11-14研究session](sessions/2026-11-14-spain-m1-fiscal-audit.md)与[变更日志](CHANGELOG.md)。
+
+### M1阶段性定量观察
+
+- 1780—1789年新西班牙每年平均向卡斯蒂利亚汇款 **1,655,605比索**，向其他殖民统治区以situados形式汇款 **6,170,565比索**，合计 **7,826,170比索**。
+- 1790—1799年同口径相应为 **4,317,453 / 4,748,523 / 9,065,976 比索/年**；总体汇款提高，但两个目的地的构成改变。来源：Martínez López-Cano（2022），Cuadro 8，引用Marichal与Souto（2012）。[原始发表PDF](https://museosdelbancocentral.org/wp-content/uploads/2022/03/Monedas-Medios-de-Cambio-y-Espacios-de-Circulacion-en-America-Latina-y-Espana-1500-1900.pdf)。
+- 2025年Chiovelli等论文使用85所王室国库的历史档案数字化资料；Table 3基线样本为79所国库和1,959个国库-年度观测，报告改革收入效应0.290 log points（约33.6%）。这是**作者的工作论文估计，不是本案例的独立复算或整个帝国税收增长率**。详见M1报告。
+
+**当前唯一下一项工作：** 获取获准使用的ESFDB Spain `g104spd3.tab` 年度记录，核对1784—1807年24行数据的缺失、汇总差异和财政分类，再开始M2可复算年表；未获数据不作债息占比、军费占比及净收益估计。
