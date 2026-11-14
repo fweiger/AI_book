@@ -1,0 +1,19 @@
+# Spain CASE-ESP-001 · M2m session · 2026-11-14
+
+Canonical task https://github.com/fweiger/AI_book/issues/32, original Draft PR https://github.com/fweiger/AI_book/pull/36, branch topic-010/case-esp-001-spain-20261114; Task Center ENTRY recovered current rules; no new issue or task required.
+
+## What actually progressed
+Current web research failed to find an accessible specific Consejo 1887 casefile and original 1795 notarial loan or original 1862 accountant certificate; still UNSENT two Spanish archive inquiry drafts. New viable **project level liquidity/wage causal mechanism** traced from separate published local history documents:
+
+- Ricardo Franch Benavent, 2009, *El comercio y el puerto de Valencia en el siglo XVIII*, in *La Ciudad de Valencia Historia* I, print pp300–307, University Valencia RODERIC PDF text reliably retrievable. Port began construction **26 Mar1792**, disputed large engineer-led project, trading authorization1791/1794, earmarked taxes1793, bank loan1795, documented by historian wage protest **11 Feb1797**, new Junta **16 Feb1798**, construction interrupted. Web PDF screenshot was ATTEMPTED and **FAILED HTTP403**. Underlying port Junta original wage records NOT inspected.
+- Same historian 2012 *Revista de Historiografía* 16 pp105–118, published university PDF indexed text: 1795 project budget about **15m nominal reales**, bank loan approximate 8.3m, contemporaneous wage riot date reaffirmed. Web screenshot failed403; same author/underlying2007 chapter, not independent first-party proof.
+- Same historian, 2016 *Obradoiro Historia Moderna* 25 pp207–242 DOI10.15304/ohm.25.3202, publisher PDF indexed snippet **print p217**. Reported 1797 port general workforce subcategory **202 peones ≈45% of whole site**, daily wage tiers 18×5,163×4.5,21×4 nominal reales. Derived **907.5 conditional reales per common working day**, mean4.492574 reales/person-day, not actual site daily payroll or historical wage arrears. 23 further skilled masons earning 7–8.5 and estimated mean7.7, separate from peon wages; any 177.1 estimate approximate only. Publisher PDF open503; original page screenshot NOT_VERIFIED. 2016 cites SAME author's 2007 port monograph pp192–194, unpublished original payroll NOT READ.
+- First-party 1884/1887 Gaceta transcripts from M2j/M2k for **1795 8,363,895 whole nominal reales +12.5mrs** in vales reales; historic contract original not obtained. Cross-source face loan share vs 2012 15m project budget = **55.7593%** face-of-planned-amount only, not actual spending percentage or realized metallic cash.
+- Project timing: 1797 Feb11 unpaid wages reportedly occurred while last loan tranche nominally scheduled for March1 1797. No causal assertion about delayed tranche or Tax transfer (royal collector change is actually1802, later), physical silting and inter-Junta governance alternative confounders.
+
+## Scope/QA of session
+**New files** M2M_1797_PORT_WAGE_ARREARS_AND_CREDIT_STRESS_20261114.md, port_1797_wage_labor_snapshot_m2m.csv, port_1792_1798_credit_wage_mechanism_m2m.csv, source_registry_m2m.csv, this session, README/CHANGELOG and addendum to UNSENT archival request for exact 2007 source p192-194 + 1797 wage list.
+
+**Inferences not performed:** no 1797 wages due vs actually disbursed; no employment day counts; no 1795 vales-to-cash realization; no monthly port levies or bank overdrafts; no annual navy budget coupon causal effects. Historic initial 1795 original contract and UKDS Madrid raw still NOT_ACQUIRED. All calculations with dates, sources, evidence grade registered; git tests separately.
+
+**Unique next:** obtain legal access to Franch(2007) *La fase inicial del puerto de Valencia a finales del Antiguo Régimen* pp192–194 and citations to original 1797 Junta labor roster/protest records. This bridges port board monthly labor wages with bank tranches and original 1795 deed via already prepared Consejo archival requests. No mail sent, PR Draft, Issue Open.
