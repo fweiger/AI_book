@@ -229,3 +229,13 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [rodrigues2011_2019_montserrath2013_1765_cash_cross_source_bridge_m3.csv](rodrigues2011_2019_montserrath2013_1765_cash_cross_source_bridge_m3.csv) | **18项**计算和源状态：以前年度收入Caixa净额**176,662,534 réis**，当年Caixa净额**182,862,590**，加总359525124；2019正文约2765contos与同版附录净额差约2,405.475contos（**定义未查明**）；独立2013名义财政结果与2019损益收益差3,244.867contos（**不能当现金损失**） |
 
 完整审计：[1765年八项Caixa净额精确复原及2013独立财政/1766存款金库贷款冲突](../CAIXA_1765_EIGHT_APPENDIX_ACCOUNTS_RECONCILE_2011_AND_2013_FISCAL_CONFLICT_M3_20261114.md)。本轮实际下载学校2011/2019原文和2013期刊PDF，源哈希锁定，代码`PDF_HASH_AND_TEXT_{2011,2013,2019}_PASS`，且18项派生CSV SHA256 `817eca49033bd21f796605908ee46f5e20fcd33df79631a40119de7621c679e5`。**原版AHTC FGER账册、2013财政序列随论文的CD-ROM Excel仍未取得；不能据发表表格得出葡萄牙国家现金衰竭或黄金造成制造业挤出的因果结论。**
+
+
+## M3补充：1977年官方馆藏28卷，1766国库实收/实付登记簿621—624及复式记账日记簿
+
+| 文件 | 本轮独立验证与边界 |
+|---|---|
+| [ahtc_1765_1767_receipts_diaries_master_crossledger_28_volumes_m3.csv](ahtc_1765_1767_receipts_diaries_master_crossledger_28_volumes_m3.csv) | **28条1977年审计法院正式目录书号**：12本1765—67实际入款/付款登记簿**617—628**、5本Contadoria总账（含**537/2699/3976/4154**）、6本日记簿（含**548/549/3982**）、5本草簿。P0只有**1766收付簿621—624＋总账537＋日记簿548/549/3982**（8册），其余作为核对扩展；全是**档案元数据，不是历史交易图像** |
+| [validate_ahtc_1765_1767_direct_cash_books_28_volumes_m3.py](validate_ahtc_1765_1767_direct_cash_books_28_volumes_m3.py) | Python标准库官方来源校验：锁定[1977年官方原目录PDF](https://erario.tcontas.pt/pt/arquivo_biblioteca/instrumentos_pesquisa/Inventario_Adenda_Erario_Regio.pdf) SHA256 `fd31975695bfbc0c5299e5eed2dda24c6b21c976eadd43528e7ff79baaef6739`；真实执行`PASS 28 ... P0=8 ... catalogue_date_flags=6`，人工将1767年目录的“**6月31日**”误改为6月30日时测试故意失败（EXIT2），防止隐形修数据。|
+
+[完整分析、与2011/2013/2019版本研究的关联和逐笔账证验收](../AHTC_1765_1767_DIRECT_CASH_BOOKS_621_624_FOUR_LEDGER_LOAN_RECONCILIATION_M3_20261114.md)。档案馆于2024年移存ANTT，申请原稿或馆方现有数字副本仍应通过审计法院`dadi@tcontas.pt`确认。**目前无任何原稿新页取得，1766年371.4 contos实际入库未被证实。**
