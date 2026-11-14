@@ -18,3 +18,11 @@
 - Added M2 source_registry_m2.csv and M2 session and linked case README.
 - Bottom-layer UKDS g104spd3.tab, AGS accounts, El Colegio NE.zip and uniform debt-interest/war expenditures still NOT_ACQUIRED; causality and independent archival audit NOT_RUN.
 - Keep #32 OPEN and PR #36 DRAFT; no main graph or formal C-ID promotion.
+
+## 2026-11-14 — M2b naval financing and numerator-definition audit (Draft)
+
+- Added visually inspected historical journal Barbier (1984) tables II–IV as **derived** five-period navy/central government spending and six quinquennial Cádiz Indies proxy / Navy expense comparisons; original copyrighted annual Table II and reprint PDF not uploaded.
+- Added report, M2b source registry and session; compared Marichal (1997) imputed broad Indias contribution vs Prados (2024) narrower direct remittances, marked mismatch of financial owner/denominator and 1808 missing accounts.
+- Navy share rose to 31.51% for 1793–96, later 14.32% for 1797–1801; no interest cost displacement causal test; overseas shipyards/Havana spending excluded.
+- UKDS 3104 original TAB remains NOT_ACQUIRED due registered-user End User Licence; M2b naval table available via publisher preview but is not raw Simancas ledgers.
+- PR #36 remains Draft, Issue #32 remains OPEN, formal knowledge graph untouched.
