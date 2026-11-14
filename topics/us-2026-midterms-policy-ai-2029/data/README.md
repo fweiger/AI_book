@@ -79,3 +79,9 @@
 - [VIEW-S001外部评论者来源与研究协议](../views/README.md)；[10条观点主张登记](../views/claim_register.csv)。**VIEW主张≠独立事实证据**。
 - [evidence_events.csv](evidence_events.csv)已新增 **E061—E067**：议员计划调查、德州采访、BLS CPI、Waller讲话、同期市场行情、CRS法律备忘、捐款媒体估计。严格区分来源类型 F/R/P 及选举前后PIT；这些是**事件或报道存在**，不是原评论者完整因果链的证明。
 - 债务期限、FCF、利差的样本级企业面板尚未建立，不能生成政治暴露×融资压力的实测交互系数。
+
+## 统一指标层v0.2.0（定义扩容，不是已完成时序采集）
+- [指标总目录](../metrics/catalog.csv)：原I01—I14 + 历史H03的37个独立指标名 + I15—I54 40个新宏观/公司指标；所有既有ID不改，历史旧源不强制迁移。
+- [官方BLS CPI7行样例](../metrics/observations_seed.csv)：period与publication timestamp分开，9月值仅作为2026-11-10发布文稿的回顾值，不冒充最初9月发布PIT。
+- [专家EX/作品WORK](../experts/README.md) → [观点VIEW](../views/README.md) → [观点×H](../hypotheses/view_hypothesis_links.csv) → [CHAIN](../chains/README.md)。
+- [H09 Texas/监督/赦免的空合同与程序表](../cases/musk-2026/README.md)：**没有真实合同/传票/赦免原件之前只保留表头，缺失不是0**。
