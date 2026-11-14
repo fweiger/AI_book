@@ -45,3 +45,12 @@ M2m、M2n的错误，不是历史学者数据有假，而是研究方未按**不
 这三种状态不得互相替代，尤其不能通过假设所有280人都同时劳动去反推1797工人工资债务。
 
 **下一唯一动作**：向市立档案馆确认 A.M.V. Documentación Lonja, Caja56, Exp19 的现行馆藏题名、年代、页码、复制权限，取得允许的最小范围原始雇工名单/工资付款页；再另找1797-02-11骚动原始文书以连接银行与港务Junta的实际现金流。Issue #32 OPEN、PR #36 DRAFT、不合并。
+
+
+---
+
+## M2p 2026-11-14 archival ACCESS STATUS UPGRADE — replaces former catalogue download blocker
+
+The actual city-published 375-page DOCUMENTACIÓN LONJA finding-aid PDF was supplied by the researcher in this conversation and directly opened and page-rendered. PDF p321, catalogue entry742, **confirms A.M.V. Doc Lonja Caja56 nº19 is the January1797 Valencia Grao port employees roster, 30 manuscript folios, olim28–1**. This is now **FIRST_PARTY_OFFICIAL_FINDING_AID_PAGE_IMAGE_VERIFIED**, stronger than the M2n/M2o "only scholar-cited exact box and catalogue download timed out" statement; those earlier statuses are historic stage-specific blockers, not current status. The 30-folio original worker roster itself remains **NOT_ACQUIRED**, and actual wages unpaid cannot be inferred from inventory.
+
+The same city catalogue p319–321 has #735, #738, #740, #741 earned-versus-paid payroll record titles for Dec1795–Oct1796, #736/#737 uncertain-era wage accrual notebooks 11+25, and separate bank loan vales receipt/treasury records pp27–31. Hence these are **legally requestable primary-source targets**, not original internal accounts or wage debts actually read. See [M2p direct city original catalogue audit](M2P_USER_UPLOADED_LONJA_375P_PRIMARY_CATALOG_AUDIT_20261114.md), its [21-item source lookup matrix](lonja_1792_1798_primary_archive_targets_m2p.csv), and [binary source manifest incl. exact SHA256](source_manifest_valencia_lonja_m2p.csv). The entire original PDF binary has NOT been pushed to the public repo (redistribution permission not verified).
