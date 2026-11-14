@@ -9,3 +9,7 @@
 - K04：H08→H04→H07，非政治竞争机制；
 - K05：H06→H01，选举激励反向反馈，尚未验证。
 - 实证所需指标与证据源：[METRICS](METRICS.md)、[SOURCES](SOURCES.md)、[data](data/README.md)。**不能由一件事件证实全条因果链**。
+
+## 外部评论者观点源（非正式因果节点）
+- [VIEW来源池](views/README.md) → [VIEW-S001｜大湾区老姚](views/2026-11-14-dayawanqu-laoyao.md) → [10项主张表](views/claim_register.csv) → [事件账本E061—E067](data/evidence_events.csv)。不同评论者相同叙述不能计为独立验证。
+- **K07政策优惠/国会监督→企业现金流、K08通胀/利率→融资偿债、K09两者交互**仅是H01/H07/H08的候选*研究路径*；在取得公司级事件及资产负债表数据之前**不写入正式有向图谱新因果边**，H01—H08维持UNTESTED。
