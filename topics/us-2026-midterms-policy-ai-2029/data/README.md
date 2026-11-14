@@ -41,3 +41,13 @@
 - [h03_aep_evidence_scope_matrix.csv](h03_aep_evidence_scope_matrix.csv)：AEP PJM 2025近端ESA与2026全区域含ERCOT合同类型对照。
 - [h03_maturity_scope_crosswalk.csv](h03_maturity_scope_crosswalk.csv)：明确何种分子分母可比较，防止错误“兑现率”。
 - [H03合同/收入离线复算](../analysis/recompute_h03_firm_operating.py)。
+
+## H03第五轮：队列、州级2027旧法规与真实MWh（2026-11-14）
+- [h03_dominion_scc_queue_cohort.csv](h03_dominion_scc_queue_cohort.csv)：Dominion SCC原申请~70GW，其中25GW预计接入日期已分配、45GW在分批研究；不是实际接入和Firm合同。
+- [h03_virginia_scc_pre_election_tariff_and_queue_rules.csv](h03_virginia_scc_pre_election_tariff_and_queue_rules.csv)：2025批准的GS-5费率及2026 interim匿名队列要求，含生效日期、案卷状态及豁免口径。
+- [h03_dominion_actual_delivered_mwh_2024_2026.csv](h03_dominion_actual_delivered_mwh_2024_2026.csv)：真实Delivered百万MWh的全年/Q2/Q3/YTD同周期数据（全客户范围，非DC专属）。
+- [h03_dominion_dc_sales_share_annual.csv](h03_dominion_dc_sales_share_annual.csv)：DC占Virginia Power电力销售比例，单列不同分母。
+- [h03_dominion_weather_2025_2026.csv](h03_dominion_weather_2025_2026.csv)：冷暖度日数供真实电量控制，尚未做模型去天气效应。
+- [h03_gs5_minimum_billed_demand_scenarios.csv](h03_gs5_minimum_billed_demand_scenarios.csv)：15种假设100/25/300MW合同计费底线（MW不是美元、非实际用电）。
+- [h03_aep_pre_election_security_and_tariff_status.csv](h03_aep_pre_election_security_and_tariff_status.csv)：2026前已审批/未决收费机制及Texas ERCOT金融担保与初期申请。
+- [标准库复算脚本](../analysis/recompute_h03_queue_and_physical.py)。

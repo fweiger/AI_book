@@ -1,0 +1,9 @@
+period,year,source_disclosure_date,delivered,unit,source_url,population,limitations
+ANNUAL,2024,2026-03-17,94.5,million_MWh,https://www.sec.gov/Archives/edgar/data/715957/000119312526115192/dei-ars-12312025.pdf,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Actual broad area deliveries; includes residential/commercial/industry and DC; NOT DC-only
+ANNUAL,2025,2026-03-17,100.2,million_MWh,https://www.sec.gov/Archives/edgar/data/715957/000119312526115192/dei-ars-12312025.pdf,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Annual report made available 2026-Mar; total != data center only
+Q2,2025,2026-08-05,23.7,million_MWh,https://www.sec.gov/Archives/edgar/data/103682/000119312526327487/d-20260630.htm,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Actual 3 months ended June30; not DC-only
+Q2,2026,2026-08-05,24.7,million_MWh,https://www.sec.gov/Archives/edgar/data/103682/000119312526327487/d-20260630.htm,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Actual 3 months ended June30; not DC-only
+Q3,2025,2026-10-30,27.0,million_MWh,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Actual 3 months ended Sep30; reported rounded to 0.1m MWh
+Q3,2026,2026-10-30,29.4,million_MWh,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Hotter Q3; weather confound; no DC-only split
+JAN_SEP,2025,2026-10-30,76.1,million_MWh,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Year-to-date total delivered through Sep30
+JAN_SEP,2026,2026-10-30,80.6,million_MWh,https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm,TOTAL_DOMINION_ENERGY_VIRGINIA_ELECTRICITY_DELIVERED,Year-to-date total delivered through Sep30

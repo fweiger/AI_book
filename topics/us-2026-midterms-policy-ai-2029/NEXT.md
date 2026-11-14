@@ -32,3 +32,9 @@
 
 ## H03下一轮：优先Firm合同同批项目与真实带电资料
 [Dominion和AEP合同-运营对照报告](reports/2026-11-14_h03_firm_operating_reconciliation.md)显示：Dominion 2025新接入园区数和最终设计容量↓，但2026 ESA储备及High Load实际收入↑，并非同一观测对象的矛盾趋势。下一步获取2026年新增园区/项目实际带电日期、公司High Load计量MWh及2027同比、PJM正式接纳2027需求（同批/同公用事业）和ESA/LOA合同金额与原计划完工日期。当前仍不具备F→A→R项目级兑现率，不计算市场总体“批文通过率”。
+
+## 下一轮H03真正可以取得的“项目级数据源”
+- 优先核查Virginia SCC PUR-2026-00011下**匿名公开队列库**是否依2026-05-12 interim要求上线，字段最少EDC、县、申请时间戳、申请MW、队列阶段及项目延期说明；该要求目前是**修订提案的指令**，不是已验证上线。得到真实官方清单后按`source_file_hash+queue_timestamp+county+EDC+MW`检查匹配，不能假设官方已给稳定ID；歧义匹配不纳入前瞻推断。
+- 对照2025-11-25已公布、2027-01-01生效GS-5的旧公告与2027-01-03新国会事件。2027首季新合同变化先区分州费率预期/生效、项目准备及联邦新法。
+- 保持[真实交付MWh](data/h03_dominion_actual_delivered_mwh_2024_2026.csv)与[DC电力销售占比](data/h03_dominion_dc_sales_share_annual.csv)分表；寻找客户分类的**真实MWh**及同区域实际投产时间，不把高负荷收入美元或PJM预测MW直接替代。
+- 完整新证据见[第五轮H03报告](reports/2026-11-14_h03_queue_tariff_physical_delivery.md)和[新脚本](analysis/recompute_h03_queue_and_physical.py)。

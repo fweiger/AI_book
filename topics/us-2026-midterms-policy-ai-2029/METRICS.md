@@ -49,3 +49,11 @@
 - `AEP_2025_PJM_ESA_LOWER_BOUND`：对2025-09 PJM AEP特定近端需求队列，ESA **严格 >8600/11182=76.91%**；不是跨公司/跨年度对2026-10的成熟度估计。
 - `PROJECT_FIRM_TO_ACTUAL_MW`：需要项目ID、ESA生效/初始计划日期、真实并网/实际计量与PJM最终接受相同批次。当前全域无法计算，应为NA。
 - 可比性判断由[data/h03_maturity_scope_crosswalk.csv](data/h03_maturity_scope_crosswalk.csv)记录，禁止使用不同公司的全国合同、PJM未来单年申请、公司收入直接相除。
+
+## H03队列成熟度、总实物电量与2027监管负对照（v0.1.7）
+- `DOM_QUEUE_PROJECTED_DATE_COVERAGE`=已有预计接入日MW / 申请队列MW：2026-02披露的25,000/70,000≈**35.714%**。其中45GW的批次时间参考截至2025-12，因此只是近似队列成熟度，**不是Firm/批准/实际电量兑现率**。
+- `DOM_PHYSICAL_DELIVERED_YOY`=同一Dominion Energy Virginia全区域同期间Electricity Delivered MWh同比：2025全年100.2/94.5−1=**+6.03%**、2026年前三季80.6/76.1−1=**+5.91%**、第三季度29.4/27−1=**+8.89%**，全是所有客户的真实电量，不是数据中心专属。
+- `DOM_DC_SALES_SHARE`=数据中心占Virginia Power Electricity Sales的比例2024=26%、2025=28%，必须另保留该份额的分母原文；**尚未严格证明可与上面的全部Delivered直接相乘**。
+- `H03_COOLING_DEGREE_DAYS_Q3`：Dominion 2026Q3 1313 vs2025Q3 1066（+23.17%），气象因素；不能因用电增长就说全来自AI建设。
+- `GS5_BILLED_DEMAND_FLOOR_SCENARIO`：100MW合同而实际需求20MW，T&D最低可计费85MW、适用时Generation最低可计费60MW；**是费率计费基础而非实际用电MW，绝非收入美元**。生效2027-01-01，批准2025-11-25。
+- `PJM_PROJECT_REALIZED_FROM_DATED_QUEUE`：必须匹配同一个申请/接入点的预计日期、实际带电、计量MWh。当前项目级数据库未定位，保持NA，不能由25/70推算。

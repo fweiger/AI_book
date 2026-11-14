@@ -12,3 +12,5 @@
 - [2026-11-14 PJM秋季容量/需求申请审计](2026-11-14-h03-september-pjm-requests.md)
 
 - [2026-11-14 H03 Firm合同和实体业务对照](2026-11-14-h03-firm-operating.md)
+
+- [2026-11-14 SCC 70GW队列与GS-5生效的前瞻因果控制](2026-11-14-h03-queue-and-physical-delivery.md)

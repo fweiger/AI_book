@@ -54,3 +54,14 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 - [PJM官方AEP近端负荷与Firm定义](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/aep-documentation.pdf)：2025-09同批次11,182MW近端增加，其中>8,600MW签ESA；仅是特定PJM运营范围的历史合同下界。
 - [AEP 2026-10-28 Q3公告](https://www.aep.com/news/stories/view/12347/)：新增15GW签约及全区域至2031 84GW的ESA**或**LOA；[AEP SEC Q3](https://www.sec.gov/Archives/edgar/data/73986/000000490426000072/aep-20260930.htm)涉及Texas/ERCOT签约与当地流程暂停，**不能当PJM接受/投入使用**。
 - [完整分析与原始数据口径交叉表](reports/2026-11-14_h03_firm_operating_reconciliation.md)。
+
+## H03第五轮：弗吉尼亚州2025批准、2027生效的规定与项目队列（时点反证）
+- [Dominion于2026-02-02向SCC提交PUR-2026-00011原申请](https://www.scc.virginia.gov/docketsearch/DOCS/8%40%23101%21.PDF)：约70GW大型接入点请求，25GW已有直至2031预计接入日期、另45GW截至2025-12已分批研究日期；申请非正式批准或已通电，数据发生/报告时间略有差别。
+- [SCC 2026-05-12 interim order](https://www.scc.virginia.gov/docketsearch/DOCS/8c5b01%21.PDF)：修订流程须纳入匿名公开项目请求数据库每年至少更新2次、县名/EDC/申请时点/状态/MW，**截至本次未定位该官方库上线网址，也不能把中间命令当最终批准**。
+- [SCC 2025-11-25 GS-5决定](https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html) / [2026-02官方问答](https://www.scc.virginia.gov/about-the-scc/scc-facts/)：2027-01-01生效，最低14年合同、85%输配电合同需求计费、适用时60%发电、担保最高至最低合约收费60%。这均是**选举前已决定的州监管措施**。
+## H03实际交付电量及反证
+- [Dominion 2025正式年度报告](https://www.sec.gov/Archives/edgar/data/715957/000119312526115192/dei-ars-12312025.pdf)：Dominion Energy Virginia实际Electricity Delivered 2024=94.5百万MWh、2025=100.2百万MWh。
+- [Dominion SEC 2026-09-30 10-Q](https://www.sec.gov/Archives/edgar/data/103682/000119312526440697/d-20260930.htm)：2026Q3实际29.4 vs2025Q3 27.0百万MWh，2026 YTD 80.6 vs2025 76.1百万MWh；同页2026Q3制冷度日1313 vs2025Q3 1066，天气变化需要控制。
+- [Dominion 2025公司10-K](https://www.sec.gov/Archives/edgar/data/715957/000119312526063120/d-20251231.htm)：数据中心占Virginia Power电力销售份额26%→28%；尚未验证与Electricity Delivered完全一致的分母，不发布乘积为DC专属MWh。
+- [AEP 2026第三季SEC 10-Q](https://www.sec.gov/Archives/edgar/data/73986/000000490426000072/aep-20260930.htm)：2026-09止8个辖区大负荷特殊费率提案已有6个批准，2个待决；ERCOT Batch Zero约45GW请求在2026-07获得约$2bn不同形式的金融担保，**不代表项目投资或通电**。
+详细口径分层见[第五轮报告](reports/2026-11-14_h03_queue_tariff_physical_delivery.md)。
