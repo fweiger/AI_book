@@ -83,7 +83,7 @@
 
 ## 第八轮：原刊地图覆盖补齐与现代地形方向性试算
 
-- [研究报告：六瓦片DEM、平均/最大坡度下的东西南北贯通](research/2026-11-15-eighth-directional-screen.md) · [16个情景CSV](models/modern_dem_directional_crossing_summary.csv)。
+- [研究报告：六瓦片DEM、平均/最大坡度下的东西南北贯通](research/2026-11-15-eighth-directional-screen.md) · [16个情景CSV](models/modern_dem_directional_crossing_summary.csv) · [Ubuntu已独立复跑的源码](models/modern_dem_directional_crossing_v1.py)。
 - 2023原刊图1B经度标注到113°15′，旧窗东界113.14°不足；本轮改为112.60–113.30E、35.62–35.95N。
 - 现代DEM平均≤10°东西不贯通、南北贯通；平均≤15°两向贯通（东西71.23km，南北38.21km）；块内最大坡度≤15°东西不通、≤20°才通73.29km。**全为假定坡度阈值、算法边界起点，并非战国道路或军事守关人数**。
 - 当前0.8.0仍是资料审核稿，赵40万是否被杀未定。

@@ -29,4 +29,4 @@
 ## 研究输出
 
 - [16组扩窗真实DEM试算CSV](../models/modern_dem_directional_crossing_summary.csv)，可追溯参数与结果。
-- 模型源程序：已在Ubuntu MCP实际执行；本次先归档结果和方法，完整独立脚本待在审稿分支补交并重新跑验。
+- [完整可重复执行Python源码](../models/modern_dem_directional_crossing_v1.py)：已在Ubuntu重新直接执行，实际生成的16行CSV与已提交的汇总结果逐字一致（程序已验证；不代表历史路线正确）。
