@@ -36,3 +36,4 @@
 - [2026-11-14 18个月CPI/PCE同月环比相关与缺失样本检验](2026-11-14-h10-cpi-pce-matched-18m.md)
 
 - [2026-11-14 H03勘误前B9来源缺失及RTO修订幅度比审计](2026-11-14-h03-uncorrected-b9-source-gate.md)
+- [2026-11-14 H09州官方金额缺失和H10 CPI发布日美债22事件反证](./2026-11-14-h09-state-record-h10-cpi-release-ust-falsification.md)
