@@ -33,3 +33,17 @@
 | H03 | 用户提供的2026-11-14未来学研究局视频转写，本地私有MD（Ubuntu MCP只读） | $130M/发、$20–30M/发、$40–85/kg及FAA相关猜测等**作者观点** | 未提供原始财务模型，不视为证实数字；公开仓库不复制私人转写全文 |
 
 上述核查分析与证据边界详见 [FLIGHT15_COST_FACTCHECK_20261114.md](FLIGHT15_COST_FACTCHECK_20261114.md)。
+
+## R3轨道维护与法规新增证据（2026-11-14）
+
+| ID | 资料与日期 | 证实的范围 | 不能外推的结论 |
+|---|---|---|---|
+| S15 | [NASA 2026-11-05 国际空间站完成第8块iROSA安装](https://www.nasa.gov/blogs/spacestation/2026/11/05/spacewalkers-install-final-roll-out-solar-array/) | ISS电力能力约160→215kW，升级工作18次EVA | 无人自由飞行算力站必须用同样数量EVA或同样人力成本 |
+| S16 | [NASA 2026 小型航天器电源技术目录](https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/) | 100W/kg的ROSA公开产品表；NASA观察历史任务比功率约30W/kg聚集 | 2.5MW阵列已通过产品化、轨道部署或成本认证 |
+| S17 | [NASA 2026 航天器电子设备目录](https://www.nasa.gov/smallsat-institute/sst-soa/small-spacecraft-avionics/) | 辐射容忍、纠错、冗余、ECC等技术需求与部分产品轨道履历 | NVIDIA H200阵列在轨故障率/采购价 |
+| S18 | [NASA 2026 发射、部署与轨道转运](https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/) | 拼车/专属发射目的轨道、体积、适配器与时间差别 | 星舰100吨/发到任意指定轨道的真实商业合同 |
+| S19 | [美国联邦公报2024-08-09 FCC离轨规则](https://www.govinfo.gov/content/pkg/FR-2024-08-09/html/2024-17093.htm) | 对适用的低轨非受控重入目标，**任务结束后**5年内完成处置 | 所有低轨设施5年强制结束经营 |
+| S20 | [NASA GAO 2026-04-28 space-based data center报告](https://www.gao.gov/products/gao-26-109012) | 能源、热、辐射、链路和在轨服务风险 | 设备制造/维护已可用成交价 |
+| S21 | [SpaceX Starship官方设计说明](https://new.spacex.com/vehicles/starship) | 可回收构型100+t为设计目标 | 2026年已经能出售$25M/100t到550km发射服务 |
+
+**数据质量警示**：基于NASA的100W/kg产品指标，R3推导的1MW约2.5MW额定光伏并未获NASA、供应商对完整阵列的工程认证；R3所有发射合同、电子年故障率、维修机器人价格和成本数字仍是`scenario`。见 [R3报告](R3_ORBIT_SERVICE_DISPATCH_20261114.md)。
