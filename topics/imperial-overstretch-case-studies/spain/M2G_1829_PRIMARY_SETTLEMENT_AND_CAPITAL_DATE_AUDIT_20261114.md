@@ -115,3 +115,19 @@ Rafael Moreno Fernández (AECA 2012), publisher PDF **pages 15–18 visually che
 It also documents **1790-07-06** banking risk classification (340.791m source book total, 47.017m loss, 18.170m doubtful Giro, 140.834m suspended inaccessible), showing pre-1793 war fragility; actual write-offs not equal 60% doubtful/unavailable classes.
 
 The full [M2h source audit](M2H_1790_BANK_ASSET_QUALITY_AND_DIVIDEND_CAPITAL_AUDIT_20261114.md) records original item-level archive locators and uncorrected 1-real/1-maravedí published-source arithmetic gaps. Historical original ledger still NOT_ACQUIRED; avoid claiming legal capitalization definitely happened in 1790 or 1795 until primary book review.
+
+
+---
+
+## M2j legal-first-party payment and debtor-identity addendum (2026-11-14)
+
+**Upgrade of one previously blocked issue, WITHOUT claiming original bank receipt:** Spain's official **Gaceta de Madrid 26 April 1884, printed pp224–225**, containing the **18 March 1884 Ministry of Finance adjudication**, has now been **VISUALLY VERIFIED in the original scanned pages**:
+https://www.boe.es/gazeta/dias/1884/04/26/pdfs/GMD-1884-117.pdf
+
+The Treasury's 1884 official ruling expressly states that it had **made effective to Banco de San Carlos the amount agreed** in the 1829 settlement. This is **RETROSPECTIVE_PUBLIC_OFFICIAL_ATTESTATION_OF_PAYMENT** of the contractual settlement, not an 1829 bank cashier receipt or proof of the exact dates/payment instrument. Do not continue to imply there is absolutely no later documented official testimony of performance; instead accurately say **primary 1829–1831 settlement payment books and timing NOT_ACQUIRED**. Also the 1884 retrospective refers to a **23 June** 1829 deal, while the original 1829 treaty published in the Gaceta says **29 June**; *source-to-source historical date discrepancy unresolved*.
+
+The **same 1884 ruling** distinguished a bank loan to **Valencia Grao port works Junta** (contracts 6/22 Oct 1795, disbursed 1795–97 in *vales reales*) from Spanish sovereign indebtedness. Although a local public-works entity was authorized to borrow and could incur a 1839 past-due bank balance, the 1884 Crown rejected successor Banco de España's attempt to reclassify that bank asset as a **direct Treasury liability**. Underlying borrower and signed contract partner govern debt ownership. **Do not add all Banco assets of public works to royal debt, or treat this local 1839 account as evidence the 1829 Crown settlement was void.**
+
+The first-party printed 1884 contract text itself contains **300 whole reales mismatch**: principal8,363,895 reales+12.5maravedis and scheduled interest4,604,679 reales+26⅓maravedis sum12,968,575 reales+4⅚maravedis, whereas its printed total is12,968,875 reales+4⅚maravedis. Its separate 1839 arrears principal+interest DOES perfectly add. The mismatch is preserved as an archival source QC blocker, not automatically assigned to original1795 instrument.
+
+For complete data/evidence gates see [M2j original published-source audit](M2J_1793_AGM_RULES_1884_VALENCIA_DEBT_AND_SETTLEMENT_AUDIT_20261114.md), [1884 loan facts](bank_1884_valencia_loan_and_1829_payment_m2j.csv) and [historical money QC](bank_1884_primary_source_arithmetic_checks_m2j.csv). Neither maritime debt-service crowdout nor 1807 Banco creditor principal/interest reconciliation has been performed.
