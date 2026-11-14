@@ -1,4 +1,10 @@
 # TOPIC-011｜版本记录
+
+## 2026-11-14｜第十七轮成法内容—预算反事实—2027既有政策时钟（保持当前专题语义版本）
+- 通过GovInfo下载H.R.1424/H.R.748/H.R.1初版及三份最终成法6个HTML，SHA256/字节全部核对；逐节抽取P.L.110-343 TARP §115、P.L.116-136 CARES §2201、P.L.119-21 Medicaid §71119与能源§70512/70513，再接财政部/IRS真实执行与CBO官方估算。新增[16条机器台账](data/h02_round17_policy_section_budget_actual_2008_2026.csv)、[6份原始SHA](data/h02_round17_gpo_bill_to_law_6files_sha.csv)、[Python复算](analysis/recompute_h02_round17_policy_section_budget_actual.py)、[研究报告](reports/2026-11-14_h02_round17_policy_section_budget_baselines_and_legacy_2027.md)及会话记录。
+- 同一2025已成法律相对CBO 2025-01基线+3.4万亿赤字与参院预算执行基线-3660亿美元（皆为2025–34常规预测，基线不同）；2026-02 CBO含利息/宏观为约+4.2万亿，同期同法不应相加。Medicaid章整体预计2025–34减少赤字8868亿、2034未参保增加750万人，均非实际。
+- 2027-01-01 Medicaid规则和2027末部分45Y/48E风光税惠变化是2025原法预设的延迟实施，尚无2027实绩，不能归因2026选后新国会。脚本在Ubuntu带--verify-gpo实跑PASS；全部H01—H10因果UNTESTED、路径UNKNOWN，PR未合并。
+
 ## 2026-11-14 | topic_version 0.2.7 — H09官方Del Valle学区Ch313毛税差两报表版本与H10同源2025 CPI方向反证
 - H09实际从Texas Comptroller[Del Valle ISD Ch313 #1496项目](https://comptroller.texas.gov/economy/development/prop-tax/ch313/agreement-docs-details.php?id=1496)取回**Reporting Year2023官方CDR原XLSX**（官网posted2026-02-06，SHA`f076ff...`）及**Reporting Year2025官方CDR原XLSX**（posted2026-10-14，SHA`a0d3dc...`），通过Python stdlib解压OOXML检验`Gross_Tax_Saving=Tax_Levy_Without_Limitation−Tax_Levy_With_Limitation`和历史税年/报告vintage。新版列税年2022 $8,285,753、2023 $22,996,432、2024 **$43,496,033**、2025报告年 **$42,608,055** 毛税负差；2024较旧版同税年预测$20,642,965增加**$22,853,068**，2025较早预测$18,524,844增加$24,083,211，属于**不同披露时点/旧预测与更新实际税年口径的差**，不是证实新政治补贴。另有学区Revenue Protection与Supplemental Payments，不能把毛税差冒充净已实现公司现金、更**绝对不能填入Travis县Chapter381仍未知的9%扣留支付USD**。官方两版14行CSV、带SHA直取复算程序、详细报告，Ubuntu实际`PASS`。
 - H10对前一轮2023—26跨发布者10日期便利样本core6/7方向一致结果增加固定源负对照。冻结**2025全部11次BLS真实CPI发布时间**；只有7次在同一[Calculated Risk](https://www.calculatedriskblog.com/)有带原始发表时间的公布前市场共识，剩余4次预测值记NA，不借用事后财经日历/单机构其它源。按BLS各次首次公告与Treasury 2Y有符号全日bp，**headline有非零surprise5例仅2/5同向，core有非零surprise4例仅2/4同向，双侧精确二项p均1.0**；反例2025-01-15 headline意外偏热+0.1pp而2Y-10bp、2025-03-12 core偏冷-0.1pp而2Y+7bp。证明旧6/7不能当跨样本稳定交易预测，仍需真正高频期货/专业同源全量PIT才能估计因果。11行覆盖和7行真实预测CSV、统一源方向复算程序与研究报告均由Ubuntu基于GitHub源码及CSV`PASS`。
