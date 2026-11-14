@@ -2,6 +2,9 @@
 
 > **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.7；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
+## 第十七轮｜成法条款、财政双基线与2027旧法时钟（2026-11-14）
+- [已成法政策→CBO双预算基线→实际执行与2027旧法生效的完整研究](reports/2026-11-14_h02_round17_policy_section_budget_baselines_and_legacy_2027.md) · [16条来源/金额/日期台账](data/h02_round17_policy_section_budget_actual_2008_2026.csv) · [6份原提案及最终成法SHA](data/h02_round17_gpo_bill_to_law_6files_sha.csv) · [Python复算](analysis/recompute_h02_round17_policy_section_budget_actual.py)；证明2025 P.L.119-21对不同CBO预算基线分别+3.4万亿/-3660亿美元且2027既有Medicaid和风光税惠规则不是2027新国会法案。Ubuntu联网6份GPO SHA与数据校验PASS。H01—H10完整因果UNTESTED，P-A—P-D UNKNOWN，PR #51未合并。
+
 ## 第十六轮 H01 官方逐案转化率（2026-11-14）
 - [GovInfo逐案56,777件真实历史漏斗与方法报告](reports/2026-11-14_h01_round16_govinfo_56777_bill_stage_funnel.md) · [四届×政策类别36行CSV](data/h01_round16_billstatus_funnel_110_116_118_119.csv) · [GPO八份ZIP的SHA来源清单](data/h01_round16_govinfo_source_manifest.csv) · [Python复算代码](analysis/recompute_h01_billstatus_funnel_round16.py) · [两份重大法律载体政策标签错位案例](data/h01_round16_bill_vehicle_policy_drift_examples.csv)。截至各届第二年11/14，110/116/118/119届H.R./S.提案成法率分别为3.9386%/1.3488%/0.6533%/0.6993%。119与118未经调整的比例接近，但不同立法期/分类和经济冲击尚未可比，**H01仍UNTESTED**；不把普通议案等同联合决议，不把GovInfo`PolicyArea`当最终法案政策经济内容。最新研究仍在PR #51未合并。
 
