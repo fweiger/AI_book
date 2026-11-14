@@ -40,3 +40,4 @@
 
 - [2026-11-14 H03 FERC诉讼附件2023大负荷数据疑似误引太阳能B8a](2026-11-14-h03-ferc-en1-source-audit.md)
 - [2026-11-14 H09履约年/付款年错位与官方255页议案包、H10 2023—26四年46次CPI事件统计](2026-11-14-h09-payment-cohort-h10-46-events.md)
+- [2026-11-14 H09县返利2025无付款历史证据与H10 Nov10 CPI公布前预期/FedWatch事件](./2026-11-14-h09-rebate-no-payment-h10-cpi-preconsensus.md)
