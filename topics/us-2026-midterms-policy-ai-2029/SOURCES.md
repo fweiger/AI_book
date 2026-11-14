@@ -94,3 +94,11 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 - [BLS 官方10月CPI原文（2026-11-10发布）](https://www.bls.gov/news.release/archives/cpi_11102026.htm)：headline SA MoM 0.4%，Sep 0.6%；core 0.3%、food 0.5%、energy 0.7%（Sep 5.2%）、shelter 0.3%。严格区分已公布时点与样本月，按指标`I15—I19`进入[七行官方数值种子](metrics/observations_seed.csv)，所有美国同比缺口按[BLS政府停摆FAQ](https://www.bls.gov/cpi/additional-resources/2025-federal-government-shutdown-impact-cpi-faq.htm)逐系列标NA，而非编造。
 - [Fed Waller 2026-11-10讲话原文](https://www.federalreserve.gov/newsevents/speech/waller20261110a.htm)：明确个人偏好12月25bp以及高于预期时考虑50bp的条件性发言；其中个人意见不同于委员会投票/宣告。
 - 宏观长期：`I20/I21/I54` BEA [PCE指数](https://www.bea.gov/data/personal-consumption-expenditures-price-index)、`I23/I24` [FOMC声明会议](https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm)、`I26/I27` [美国财政部收益率](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview?type=daily_treasury_yield_curve)、`I31—I36` SEC/IR公司披露。不把FRED第三方转录自动当发行人SEC原文。
+
+
+## H03数据定义审计：2023/2024原版与2025同源B9/B9b
+- [PJM 2023原始Load Report](https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2023-load-report.pdf)的`Table B-9 ADJUSTMENTS ABOVE EMBEDDED` RTO目标2023=2231MW；2023文档封面印`January 2023`，LAS索引另列2023-05-22，**原PDF首次可得日期仍待确认**，不是2025六月`Total`的同指标原值。
+- [PJM 2024原始Load Report](https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2024-load-report.pdf)的`Table B-9 ABOVE EMBEDDED`目标2024=2664MW，PDF封面标`Revised 2/1/2024`但LAS目录标2023-12-27，**当前PDF内容不能未经历史版验证就标记在2023-12-27已知**。
+- [PJM 2025原版工作簿](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2025-load-report-tables.xlsx)：同一SHA `a9a797f2d3cf34154db466b74e045d1334dfebede87ec6dc3739805093474ef5`中Table B9和Table B9b的2025 RTO分别3591/7729MW，DOM1684/4970，AEP1412/1761；可**逐行直接差分、分区汇总闭合**。已复用北京/武汉MCP双端验证该SHA。
+- [PJM 2025六月LAS Total回顾材料](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2025/20250613/20250613-item-03---large-load-adjustment-process-improvement-discussion.pdf)对v2023/v2024分别记录RTO首年3957/5682MW，分别与**不同发行文件**的B9差1726/3018MW，只是跨出版物`proxy`，不能冒充精确的“已嵌入MW”。
+- [PJM 2026五月Accuracy XLSX](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx)与2025六月Total是另外的July-vs-Summer/历史覆盖源，2025目标RTO同标签2024/2025预测均不一致；[来源版本与排序敏感性报告](reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)保留未解决的定义问题。

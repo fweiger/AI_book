@@ -25,3 +25,10 @@
 
 ## 现阶段尚未交付
 **没有**完整FEC逐笔捐款、Tesla/Texas历史合同全表、实际传票记录、SEC企业匹配财务表、公司级债券面板，也没有完成统计显著性和因果识别。未来填充时保留 `NA` 和真实来源，不得以0冒充缺失。
+
+
+## H03原版PJM大型负荷统计口径校验
+- I55（MW）原始同版`Table B9b Total Associated−Table B9 Above Embedded`；2025原版B9/B9b同一个XLSX来源，跨2025—2030 RTO/DOM/AEP/其他RTO已闭合，**不是DC实际投产或取消的MW**。
+- I56（%）在同一版本上的这个差额 / B9b，总2025目标RTO为53.539%，DOM占差额79.410%。2023/24跨报告相减必须标`PROXY_UNCONFIRMED`。
+- I57（%）同一个真实后验目标下使用两组不同公开预测定义的APE排名；2025六月Total与2026五月July Retrospective对v2024/v2025模型给出不同的相对排名，**仅为量化来源定义敏感性**。
+- 数据：[五个CSV与可复算脚本](../reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)。此指标属于“来源/PIT可比性先验检验”，不是新增政治因果边，也不应并入未来预测F-ID。

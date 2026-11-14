@@ -24,3 +24,6 @@
 
 - [2026-11-14 大湾区老姚：马斯克／CPI／政治—融资双重暴露观点来源核查](2026-11-14-commentator-laoyao-musk-cpi.md)
 - [2026-11-14 专家/观点→H09-H10→共享指标层→因果链架构重构 v0.2.0](2026-11-14-expert-hypothesis-metric-chain-v020.md)
+
+
+- [2026-11-14 H03 B9 above-embedded与B9b total原始发布版本实证](2026-11-14-h03-original-embedded-bridge.md)

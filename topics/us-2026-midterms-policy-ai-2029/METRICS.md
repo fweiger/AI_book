@@ -83,3 +83,10 @@
 - `H03_BACKTEST_SOURCE_SENSITIVITY`：预测和历史值都取自**同一次出版物**计算`actual/forecast−1`，与第二个出版物内部同法的结果对照。目标2023-v2023 21.43% vs29.35%即差7.92pp；只证明来源敏感，不说明预测能力真实改变。
 - 2025原版Table B9b目标2025的RTO7729MW vs2026准确性回顾同标签7735MW仅+6MW，虽然较小也应版本记录。两个表分别使用Summer Peak和July Peak字样，PIT时点/定义差无法忽略。
 - 上轮H03 31条预测-实际及三区WAPE/MAPE是在**2026-05同一回顾源**内部一致计算，算术有效；**不能直接当全历史PIT原版误差分布**。后续真实预测打分应同时给`original_release_vintage`和`retrospective_rebased_vintage`双评分，必要时输出`NOT_COMPARABLE`。
+
+
+## H03原版B9/B9b桥接和来源选择稳健性（within-source verified）
+- `I55` B9b Total Associated−B9 Above Embedded（MW）：**仅2025原版同一工作簿**可以作为精确按年/区域统计差；2025目标RTO=4138MW、DOM3286MW、AEP349MW、其他503MW，**不是被批准或取消DC项目**。
+- `I56` 上述同源差额占Total Associated百分比，2025首年RTO为4138/7729=53.539%，DOM占RTO差额79.410%。2023/24跨文件按同标签得出的1726/3018MW只是带`UNCONFIRMED`标志的proxy。
+- `I57` 历史预测准确率的出版版本敏感性：以相同2026五月后验实际8167.174MW，2025六月Total表v2024/v2025预测7642/7729MW对应APE6.430%/5.365%（新版更准）；2026五月回顾v2024/v2025预测7939.180/7735MW对应APE2.792%/5.292%（新版更差）。**不是预测真实能力反转，而是源定义不一致时排名不稳定**。指标必须记录`publication,forecast_vintage,target_year,metric_basis,actual_vintage`。
+- 原版2024PDF明确2024-02-01 Revised但LAS网址2023-12-27，做点时刻预测误差时**以确实可证明的版本发布日期为准**。见[完整计算](reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)。

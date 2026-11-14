@@ -72,3 +72,7 @@
 
 ## H03第八轮：历史值和预测值的公开版本漂移（2026-11-14）
 - [完整数据来源审计报告](reports/2026-11-14_h03_publication_vintage_bias_audit.md)：PJM 2025-06公布2014—24历史RTO值，与2026-05回顾报告中的`Historical July Peak`在11个共同年份都不一致，后者高约2.34%—5.26%、中位3.966%。同2023/24/25预测版本的21个同目标年数值在不同来源亦有差异；**未核实是定义、月份还是历史更新，不得直接称为已发生的新增负荷或政治因果**。附[11年历史表](data/h03_pjm_rto_2014_2024_cross_publication_history.csv)、[21个预测差表](data/h03_pjm_rto_2023_2030_cross_publication_forecasts.csv)、[3个误差敏感性情景](data/h03_pjm_rto_2023_2024_error_definition_sensitivity.csv)、[离线及双原表校验](analysis/recompute_h03_source_vintage_audit.py)。
+
+
+## H03后续实证｜原版Table B9与B9b不同计量范围的精确审计（2026-11-14）
+- [完整数据分析报告](reports/2026-11-14_h03_embedded_bridge_and_original_vintages.md)：2025官方原版**同一Excel**中2025 RTO B9“Above Embedded”3591MW、B9b“Total Associated”7729MW，差4138MW；其中DOM3286MW(79.41%)、AEP349MW(8.43%)、其余503MW。2023/24原版B9与2025六月Total跨文档对照约分别差1726/3018MW，但**非同一份发行文件，不可直接当精确嵌入MW**。不同出版物还会反转2025预测版本的误差排名（原始口径未严格对齐），见[数据明细](data/h03_pjm_original_above_embedded_vs_total_bridge_2023_2030.csv)、[同源zone桥接](data/h03_pjm_2025_within_workbook_zone_bridge.csv)、[标准库复算](analysis/recompute_h03_original_bridge.py)。

@@ -85,3 +85,12 @@
 - [官方BLS CPI7行样例](../metrics/observations_seed.csv)：period与publication timestamp分开，9月值仅作为2026-11-10发布文稿的回顾值，不冒充最初9月发布PIT。
 - [专家EX/作品WORK](../experts/README.md) → [观点VIEW](../views/README.md) → [观点×H](../hypotheses/view_hypothesis_links.csv) → [CHAIN](../chains/README.md)。
 - [H09 Texas/监督/赦免的空合同与程序表](../cases/musk-2026/README.md)：**没有真实合同/传票/赦免原件之前只保留表头，缺失不是0**。
+
+
+## H03原版预测的B9/B9b统计层桥接（2026-11-14）
+- [h03_pjm_original_above_embedded_vs_total_bridge_2023_2030.csv](h03_pjm_original_above_embedded_vs_total_bridge_2023_2030.csv)：21个`vintage×target_year`，2023/24跨文件proxy、2025同原始Excel差额，严格分类。
+- [h03_pjm_embedded_bridge_vintage_summary.csv](h03_pjm_embedded_bridge_vintage_summary.csv)：三个版本差额均值/范围/CV，用于观察相对稳定基础项但不宣称项目真实容量。
+- [h03_pjm_2025_within_workbook_zone_bridge.csv](h03_pjm_2025_within_workbook_zone_bridge.csv)：2025原版B9和B9b，RTO/DOM/AEP/other四级×2025—30共24行、来源SHA，RTO汇总不重复算子区。
+- [h03_pjm_rto_2025_forecast_ranking_by_publication.csv](h03_pjm_rto_2025_forecast_ranking_by_publication.csv)：相同后验actual、两组出版源的2024/25版预测APE排序反转，仅表明来源敏感。
+- [h03_pjm_original_document_revision_manifest.csv](h03_pjm_original_document_revision_manifest.csv)：2023原PDF、2024修订PDF、2025原版XLSX、2025六月回顾及2026五月准确性XLSX，记录实际可知日冲突和metric定义。
+- [标准库校验脚本](../analysis/recompute_h03_original_bridge.py)可附`--original-2025-xlsx`直接验证官方同源2025 B9、B9b各RTO/DOM/AEP的6年度数值。
