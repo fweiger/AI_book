@@ -205,3 +205,15 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [rodrigues1765_royal_treasury_derived_fiscal_identity_m3.csv](rodrigues1765_royal_treasury_derived_fiscal_identity_m3.csv) | 程序实际生成的16项会计总额、比例、来源口径与未决冲突状态；**非AHTC原始手稿逐笔审计** |
 
 大学公开原文：[2011年硕士PDF](https://repositorio.iscte-iul.pt/bitstream/10071/4540/1/Tese%20Manuel%20Jos%C3%A9%20Benavente%20Rodrigues.pdf) SHA256 `533d24ceb52b53a4e8994f1a72739b04feb36f162304a3f28c13173f6bd7b3e5`；[2019年博士PDF](https://repositorio.iscte-iul.pt/bitstream/10071/19808/1/PhD_Manuel_Benavente_Rodrigues.pdf) SHA256 `ca8b83728950b1746440baad2ac522b9dd5010f4237ebb5a8a6e3b6c528b565e`。已真实复算的16指标派生CSV SHA256：`1141284907ff7149b9bf20f25a785292c100854b36701de19847818add81a138`。研究全文：[1765年收入、战争支出、税收地域与现金账两个版本审计](../RODRIGUES_1765_ACCOUNTING_WAR_ARREARS_TAX_ORIGIN_2011_2019_CASH_AUDIT_M3_20261114.md)。下一原始目标：AHTC FGER Livros Mestre 537、2699、3976、4154，尤其2699 fólio 10对应的1765军费结转和`Caixa`原页。文件中的手稿`NOT_ACQUIRED`，2025黄金ASCM`NOT_RUN`。
+
+
+## M3来源继承与1766军费旧账结转（2026-11-14）
+
+| 文件 | 来源、真实验证及限制 |
+|---|---|
+| [rodrigues_1765_regional_reclass_2011_2019_persistent_70k_m3.csv](rodrigues_1765_regional_reclass_2011_2019_persistent_70k_m3.csv) | **8条**2011 Table3.31 vs2019 Table5.9四地区双口径收入逐数比较：两版源行一致、原产地重分类合计各比公布总数少**70,000 réis**，不能把两版算作独立原账验证或自行增补某一地区 |
+| [rodrigues2019_1765_1766_first_contadoria_account_rollover_m3.csv](rodrigues2019_1765_1766_first_contadoria_account_rollover_m3.csv) | **8条**2019 Table4.5第一Contadoria余额及损益累计借贷：1765/1766损益累计借方**441/4080 contos**，会计结账受1762—66军费既有财务官约**1564 contos旧账转款**影响，不能当作国家年度战争现金支出 |
+| [reproduce_1765_1766_archival_account_rollover_and_editions_m3.py](reproduce_1765_1766_archival_account_rollover_and_editions_m3.py) | 标准库QA脚本，实跑PASS验证**70,000 réis跨版本继承**、8条余额、1564 contos历史叙述的来源和非现金警告；档案手稿并未实际取得 |
+| [rodrigues_1765_1766_edition_and_war_rollover_summary_m3.csv](rodrigues_1765_1766_edition_and_war_rollover_summary_m3.csv) | **11项**派生量，发布SHA256 `acc4d0a70a243f053fee0dc650e10522db6b419930d6875677f840190cab6ad3`；需以标准库脚本与当前源CSV再构建验证；含非当期现金提示 |
+
+完整分析：[1766财政军费历史旧账结转与1765地区税源表两版继承差异](../1766_MILITARY_TREASURER_ROLLOVER_2011_2019_REGIONAL_TABLE_LINEAGE_M3_20261114.md)。**最小档案获取目标**是AHTC/FGER **Livro537 fólio36和fólio274**；另一组军费账为**Livro2699 fólio10/15**。这些馆藏尚未获得原稿图像，不能声称已完成1762/1766实际现金流时间戳或资源诅咒ASCM复现。
