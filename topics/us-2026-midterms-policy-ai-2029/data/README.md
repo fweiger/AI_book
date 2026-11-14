@@ -74,3 +74,8 @@
 - [h03_pjm_rto_2023_2030_cross_publication_forecasts.csv](h03_pjm_rto_2023_2030_cross_publication_forecasts.csv)：21个同标签RTO预测版本/目标年跨公开文档差异；2025版有原版B9b可复核，2023/24版目前只来自2025-06汇总PPT。
 - [h03_pjm_rto_2023_2024_error_definition_sensitivity.csv](h03_pjm_rto_2023_2024_error_definition_sensitivity.csv)：同一出版物内部的3对历史误差率用于展示来源敏感性，非统计显著或实体电量变化。
 - [recompute_h03_source_vintage_audit.py](../analysis/recompute_h03_source_vintage_audit.py)：纯标准库复算，可使用`--accuracy-xlsx`检查2026原始全RTO历史/预测数据，用`--original-2025-xlsx`核查2025官方原版B9b，共享来源SHA；2025六月PPT为原文表格人工转录，证据深度如实保留。
+
+## COMMENTATOR VIEW与事实交叉核验（2026-11-14）
+- [VIEW-S001外部评论者来源与研究协议](../views/README.md)；[10条观点主张登记](../views/claim_register.csv)。**VIEW主张≠独立事实证据**。
+- [evidence_events.csv](evidence_events.csv)已新增 **E061—E067**：议员计划调查、德州采访、BLS CPI、Waller讲话、同期市场行情、CRS法律备忘、捐款媒体估计。严格区分来源类型 F/R/P 及选举前后PIT；这些是**事件或报道存在**，不是原评论者完整因果链的证明。
+- 债务期限、FCF、利差的样本级企业面板尚未建立，不能生成政治暴露×融资压力的实测交互系数。
