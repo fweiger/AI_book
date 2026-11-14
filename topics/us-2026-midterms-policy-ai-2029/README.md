@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.5；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.6；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 第十五轮 H01 历史国会实证（2026-11-14）
 - [104—119届实质立法、选举日前/届末、正式总统否决和跨时期分组的实算报告](reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md) · [16届历史CSV](data/h01_congress_104_119_historical_laws_20261014.csv) · [标准库复算](analysis/recompute_h01_congress_historical_comparison.py) · [会话记录](sessions/2026-11-14-round15-h01-historical-congress-veto.md)。104和110选举前实质法律均286，110届4次推翻总统否决；“分立=全面立法停滞”受到直接反例，但H01较弱机制及2027经济因果仍UNTESTED。Pew分类非官方、119届不完整，未合并main。
@@ -117,3 +117,8 @@
 ## 2025年尚未发放的县级优惠与11月10日真实CPI意外值（v0.2.5）
 - **H09**：[2025-11新闻引用县政府：Travis县当时尚未向Tesla发放此项grant](reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)，需区分这条有日期的R级记录与[2026-04-07正式9%扣留](reports/2026-11-14_h09_official_minutes_primary_confirmation.md)。**2026年实际支付/扣留绝对USD仍UNKNOWN**，VPR/VPD不能保证涵盖所有财政现金交易。
 - **H10**：[2026-11-10 CPI发布前预测→官方实际→Cboe FedWatch→Treasury同日变化](reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)：11-09预测整体/core环比0.3/0.2、BLS 11-10实际0.4/0.3，各**+0.1个百分点surprise**；Cboe报道12月25bp情景概率周一84%、周二90.5%、50bp情景周二9.5%；UST 2Y+17bp、10Y+10bp。**这些为先后事件节点，仍非独立因果识别**。[15行数据](data/h10_20261110_cpi_consensus_fedwatch_rate_event.csv) · [Ubuntu标准库复算PASS](analysis/recompute_h10_20261110_cpi_pit_anchor.py)。MetaTrader季调指数forecast与CRTLAB未季调指数forecast混用会产生错误surprise方向，预发布时间未核的网页forecast被排除。
+
+
+## v0.2.6 官方2022县级零返利与10次有来源时点CPI意外值
+- **H09**：[Travis County 2022-01-31官方县项目汇总](reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)明确当时Tesla项目`Zero rebates paid`且首履约年校验待完成；另一项目也尚未付款。与2025-11 KUT报道、2026-04县官方9%扣留分开按时点理解，**不推断2026年仍无付款、不推断政治动机**。
+- **H10**：[2023—26十次真实事前CPI预测＋官方首次公布＋Treasury有符号方向研究](reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)：10个有日期预测中8次核心CPI surprise非零、7次2Y当日方向可比较、6次同向1次反向（**2025-03-12 CPI低于预期但2Y+7bp**），双侧精确二项检验p=0.125，尚不构成稳定策略。[46份事后网页日历](data/h10_cpi_release_ust_46event_vendor_archive_not_pit.csv)均未获真实forecast首发时点；[10次真正有事前出处的CSV](data/h10_cpi_pre_release_dated_forecasts_10events_2023_2026.csv)、[源码复算PASS](analysis/recompute_h10_pre_release_cpi_surprise_10_events.py)，严禁混合两个数据层或将全日价格变化视为CPI纯因果。
