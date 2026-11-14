@@ -311,3 +311,13 @@ Issue #32 OPEN、Draft PR #36保留，不合并。
 - **新数据**：Julián 2017转录自1751年财政证明（AHN Consejos20764 pieza1 fols39v–41v）的八个1742–1750年度到账金额，人民币或港口工资本金均不适用，原文为历史银比索整数部分；加总**1,349,179**，1745缺失而非0。1756年4月20日La Flecha携154,585比索1 tomín5 granos抵达Ocoa、涉及1753–54军饷的历史出版物描述不是军饷签收原始凭证。
 - **新增机构级准入**：西班牙AGI 2025–28官方服务说明PARES可查部分数字化文书、档案咨询**agi2@cultura.gob.es**；墨西哥AGN官方Reales Cédulas指南核实大系列vol1–241有索引，但**没有核实vol78 exps104/109原始页**。
 - **验证范围**：8条历史到账数据和9条来源账核查通过，未取得AGI/AGNM原始卷页，未运行资金延迟→兵变/帝国衰落因果检验；档案咨询草稿**UNSENT**。保持Issue #32 OPEN、Draft PR #36。
+
+---
+
+## M2t — 圣多明各1754–1774财政到账再审计与1757 PARES同时代档案（2026-11-14）
+
+- [M2t完整报告](M2T_SANTO_DOMINGO_1754_1774_TOTAL_RECONCILIATION_PARES_1757_SHIPPING_20261114.md) · [1754–1774年20个时期的reales/maravedís逐行CSV](santo_domingo_1754_1774_reales_maravedis_m2t.csv) · [6项PARES正式馆藏/旧学术档号证据分级索引](santo_domingo_pares_archive_fiscal_shipping_m2t.csv)。
+- **算术审计发现**：Julián2017 `Clío`印刷p47重引Sevilla Soler1980表格的20行整数雷亚尔和是**28,790,201**，小单位maravedís合计**246**；如果按34小单位进一雷亚尔且“--”为无小单位，进位后合计**28,790,208雷亚尔8maravedís**。表格印刷合计却是**28,720,208雷亚尔28maravedís**，正文第48页写**28,790,208雷亚尔28maravedís**：表格和正文相差**70,000雷亚尔**，正文和重算小单位余数差20。原1980版未阅、PDF截图CACHE_MISS，**不能称原始印刷影像或原手写账本的错误已证实**。
+- **统计基准问题**：该表有**5个跨年度/不规则时段**，1756全年与1756–1757跨期同时存在，不能直接按年份拼接、推断1757年度下降或与1757驻军兵变简单相关。**real de vellón按34maravedís的进位来自西班牙文化部辞书，是否与原文章按每8reales换算的银比索口径一致仍需史料核实。**
+- **档案新入口**：西班牙PARES精确馆藏[1757年Ocoa海湾船队往来 `SANTO_DOMINGO,942,N.67`](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/13111419)（25叶）；[1757年英国私掠船袭击 `SANTO_DOMINGO,942,N.53`](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/13105153)（64叶）；[1786年Banco San Carlos军需采购线索 `SGU,LEG,7150,1`](https://pares.cultura.gob.es/ParesBusquedas20/catalogo/description/1303557)（大卷194叶）。**仅核验官方档案描述，不是已读原件，军需采购与1757军饷或1797瓦伦西亚港贷款不能混账**。
+- **验证状态**：三个新文件GitHub回读、CSV20/6条结构和运算PASS；原PDF页面截图/原手写档案取得NOT_ACQUIRED，军饷与航运因果NOT_RUN，档案馆邮件NOT_SENT。继续复用Issue#32和Draft PR#36。
