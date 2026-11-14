@@ -146,3 +146,14 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [reproduce_debtpt_issuance_stockflow_m3.py](reproduce_debtpt_issuance_stockflow_m3.py) | 已实际执行：严格验证官方原始DEBT.PT A Excel SHA256，逐年唯一/连续及长期+短债存量的算术一致性，**不假设整个159年Δ存量=发行**，显式保留1640—1660年代20处发行/存量残差；生成两份派生CSV |
 
 官方DEBT.PT A源：https://debt.pt/pdf/DEBT_%201529-1557%20%26%201641_1800.xlsx；源SHA-256 `b2024474a20442b5577ca4667067edf22ffdf71a30faad01971f5a8d13104d17`；生成全年CSV SHA256 `ff06b830cc0106eb7c82a8d14e2047f1c0df0144c43cc164e539278cdd88e604`，四组十年CSV SHA256 `477c18897359e5970ec72ea633a8e39018518ce029fbb92a3e3ec28a4e01eaf9`。同源净发行数据只是历史债务会计记录，**不是独立证据证明巴西黄金实际支付了当年发行的现金**。完整报告：[1743年发行与债务存量/发行时间错位审计](../DEBT_1743_ISSUANCE_STOCKFLOW_ACCOUNTING_AND_1748_SOURCE_CONFLICT_M3_20261114.md)。阶段仍为业务Issue #34 OPEN，Draft PR #38未合并。
+
+
+## M3证据：1743降息债务转换与帝国税源抵押金库
+
+| 新文件 | 可核查内容和限制 |
+|---|---|
+| [debtpt_selected_fiscal_coffers_debt_service_changes_m3.csv](debtpt_selected_fiscal_coffers_debt_service_changes_m3.csv) | 读取DEBT.PT官方B workbook `Long-term debt`原始工作表八个特定金库；J/K是1722—1761**净债券数量/偿付余额变化**，M/N是1762—1800净变化，不是累计税收或1743单年度账目 |
+| [reproduce_debtpt_colonial_coffers_m3.py](reproduce_debtpt_colonial_coffers_m3.py) | 源哈希锁定、按原始工作表行号核验的标准库复算器；**已实际执行PASS selected_coffers=8**，源行32包含`1% tax on gold from Brasil after 1716`且J=516、K=50.983813百万réis；不对八个来源无条件加总 |
+| [juro_1743_1749_debt_conversion_evidence_m3.csv](juro_1743_1749_debt_conversion_evidence_m3.csv) | 精确日期、1947年历史著作原文引用与1752年Pombalina馆藏定位，以及2021/2024转述的**旧债转移≈5,000 contos**；它不等于DEBT.PT 1743净新增≈507.943 contos，更非新现金净流入 |
+
+完整研究报告：[1743年降息/宗主教座堂转债与殖民黄金税偿债金库](../1743_JUROS_CONVERSION_GOLD_EARMARKED_COFFERS_PROVENANCE_M3_20261114.md)。官方B XLSX网址 https://debt.pt/pdf/FISCAL%20COFFERS_%20debt%20service%201529-1557%20%26%201641_1800.xlsx；源SHA256 `48727613d6463b990842b7098a5b5c25aeaf9235ced3bb142634b591af5b6850`；8行派生CSV SHA256 `d7285cf22af3716211f2ed12cf62bb4d7009c319fcd92b2e2a45c696316429c5`。底层法律/1752手稿以及直接券级新融资证据仍`NOT_ACQUIRED`，不应视为已完成殖民财富→财政收入→产业损失因果链。
