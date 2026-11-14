@@ -1,4 +1,9 @@
 # TOPIC-011｜版本记录
+## 2026-11-14 | topic_version 0.2.6 — 2022正式县零返利和10次CPI事前预测的方向检验
+- **H09**：取得[Travis County 2022-01-31官方项目汇总](reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)：Tesla/Colorado River项目当时Zero rebates paid, performance year1 verification pending；另有县协议项目同期零返利，不能未经对照推断Tesla受到特殊政治打压。它是2022年F级历史状态，与2025-11媒体引用尚无返利（R级）不同。后续2026美元额及实际追缴仍缺；原付款状态CSV追加2022官方行。
+- **H10**：检查2023—26共46次CPI公布日的前一天历史供应商日历，headline/core各仅28天实际与预测并列，网页已事后回填actual，**预测值没有可核原始首发时间，均标非PIT**。另独立取得10个有事前日期的Reuters/MNI/InvestingLive/Continuum/CalculatedRisk/FXStreet预期，严格区分单机构与专业共识；对应BLS首发和官方Treasury有符号日差。核心8次非零surprise、7次2Y非零方向，6次同向、2025-03-12核心低于预测0.1pp却2Y+7bp是强反例、另1次2Y不变。双侧精确二项p=0.125，剔2026-11-10后5/6、p=0.21875，**无显著性/样本外胜率结论**。两份供应商forecast在2026-03-11和11-10的核心历史值0.3与预先发表的0.2不同，不能认定历史网页是当时市场可见一致预期；不等于证明数据商故意篡改。
+- 新增官方H09与H10来源证据E109—E111、2个统一指标、观点VIEW-S001 C04/C07/C09增量评估、2份真实报告/2个可复算脚本/数据CSV；全部完整假说H01—H10仍UNTESTED，未新增因果C-ID。PR #51仍研究分支待审核。
+
 
 ## 2026-11-14 | 第十五轮H01真实历史立法/否决基线（不修改现有topic_version 0.2.5）
 - 从Pew2026-10-15的Congress.gov衍生历史表转录104—119届16行“选举日前实质/纪念法”，用NARA核104—118共15届完整法律编号、众院官方统一/分立表以及参院官方4届否决和推翻，新增[数据](data/h01_congress_104_119_historical_laws_20261014.csv)、[离线校验](analysis/recompute_h01_congress_historical_comparison.py)、[原始来源和结论报告](reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md)、[会话](sessions/2026-11-14-round15-h01-historical-congress-veto.md)。
