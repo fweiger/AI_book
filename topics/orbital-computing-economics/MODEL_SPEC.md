@@ -20,12 +20,13 @@ E_battery(t+Δt) = E_battery(t) + η_ch E_charge(t) − E_discharge(t)/η_dis
 
 ## 3. 热平衡与可行面积
 ```
-Q_radiated = εσ A_effective × (T_r⁴ − T_sink_effective⁴) − Q_external_absorbed
-Q_generated + Q_external_absorbed = Q_radiated + Q_other_out + dU/dt
-A_effective = [Q_generated + Q_external_absorbed − Q_other_out]
+Q_emitted_gross = εσ A_effective × (T_r⁴ − T_sink_effective⁴)
+Q_emitted_net = Q_emitted_gross − Q_external_absorbed
+Q_generated = Q_emitted_net + Q_other_out + dU/dt
+A_effective = [Q_generated + Q_external_absorbed − Q_other_out − dU/dt]
               / [εσ(T_r⁴ − T_sink_effective⁴)]
 ```
-两式仅表达同一能量平衡的重排概念，使用时**不得重复从辐射项扣除外部吸收、又在Q_generated中加一次**；数值模型需选一套一致符号：建议计算 `Q_rad_net=εσA(T_r⁴−T_sink⁴)−Q_abs`，在稳态令 `Q_rad_net=Q_generated−Q_other_out`。
+以上四式使用同一套符号：外界吸收热量只在净辐射中扣除一次。稳态令 `dU/dt=0`；`Q_other_out` 是通过其他明确物理路径离开的热量，不能无依据设为正数。
 
 基准自检值（理想有效单面，不含环境辐射/遮挡）：
 - `350K, ε=1, 1MW`：约1175m²；
