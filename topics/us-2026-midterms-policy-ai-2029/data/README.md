@@ -153,3 +153,8 @@
 ## 2025-11县级无已发返利报道和2026-11-10 CPI预期差（v0.2.5）
 - [Travis County县级税惠2025-11没有发放的媒体纪实](../cases/musk-2026/travis_rebate_disbursement_status_asof_2025.csv)（Statesman与KUT同源，不是Auditor原始付款账）；[报告](../reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)。**不能外推到2026/11无付款**，不可用报道的“零已发”填合同总金额或Grant eligible基数。
 - [2026-11-10单事件15行数据源/时间戳/季调口径表](h10_20261110_cpi_consensus_fedwatch_rate_event.csv)、[完整报告](../reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)、[离线检查脚本](../analysis/recompute_h10_20261110_cpi_pit_anchor.py)已由Ubuntu基于GitHub真数据运行PASS。Pre-release预测0.3/0.2月环比、BLS实际0.4/0.3，各+0.1pp；Cboe引用周一/周二FedWatch +25bp情景概率84→90.5%、周二+50bp9.5%，仅为报道级日度快照，不是前后5分钟独立因果。BLS SA与NSA指数以及未校时间的两家日历forecast不能混用。
+
+
+## H09正式2022支付基线与H10十次可核事前预期（v0.2.6）
+- [Travis County2022官方项目汇总对应的有日期状态](../cases/musk-2026/travis_rebate_disbursement_status_asof_2025.csv)：2022-01-31零返利已支付、绩效年1验收待完成（F类官方概览），与2025新闻引用无已付、2026正式9%扣留分日期；[事实与局限报告](../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)。不将历史零付款外推到2026实付。
+- [10次有真正事前日期的专业CPI预测/BLS首发/UST有符号日变动](h10_cpi_pre_release_dated_forecasts_10events_2023_2026.csv)与[46份事后供应商日历（均非PIT）](h10_cpi_release_ust_46event_vendor_archive_not_pit.csv) **分别留在两个数据库**。前者10例中8例核心surprise非零、7例2Y非零、6例方向一致，双侧p0.125；后者46日期headline/core各有28例可见预测但源时间不明，不得计算专业前瞻命中。[专业报告](../reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md) · [方向二项检验](../analysis/recompute_h10_pre_release_cpi_surprise_10_events.py) · [来源冲突验证](../analysis/audit_h10_dated_vs_archive_forecast_conflicts.py)，两个程序经Ubuntu基于Github实际CSV跑通PASS。
