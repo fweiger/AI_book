@@ -49,4 +49,20 @@
 
 **下一个唯一、高决策价值的动作**：不再新增国家独立小史实；优先获取并运行Juhász (2018) 的**合法可获取**复现包，检验基线`1803/1812`连续DD及核心安慰剂规格（1803前趋势、毛纺/皮革、资本—劳动比率/机器质量），并记录原始样本与发表版本差异。若仍因认证/权限限制而取不到数据，标记`BLOCKED`并停止，不得以作者公开表格虚构重复回归。然后直接做 TOPIC-010 的**AC-06/07 证据成熟度审核**，在需要外部历史学家评审时保持Draft。
 
+## 五、2018 AER 官方复现包的文件级核查（本轮新增）
+
+[AER正式复现包：openICPSR 项目113114，V1，2019-10-12](https://www.openicpsr.org/openicpsr/project/113114/version/V1/view) 的`replication_files_20151730_update1`子目录**公开网页已经实际列出具体文件名和大小**，不再只是一个不清楚内部内容的归档入口：
+
+| 官方目录文件名 | 网页显示大小 | 适合验证的研究对象 | 数据是否已实际读取 |
+|---|---:|---|---|
+| `department_shortrun_panel.dta` | 121.7 KB | 基线1803/1812连续DD、资本劳动比率、机器质量等 | **NO** |
+| `department_pretreatment_panel.dta` | 26.1 KB | 1794/1803战前近似趋势/安慰剂 | **NO** |
+| `department_longrun.dta` | 46.8 KB | 1840、1887等后期持续性回归 | **NO** |
+| `tables_maintext.do` | 9 KB | 主文模型变量和Stata回归命令 | **NO** |
+| `ReadMe.pdf` | 31.5 KB | 复算环境与运行步骤 | **NO** |
+
+来源定位：[openICPSR 项目子目录（真实文件清单）](https://www.openicpsr.org/openicpsr/project/113114/version/V1/view?path=%2Fopenicpsr%2F113114%2Ffcr%3Aversions%2FV1%2Freplication_files_20151730_update1&type=folder)。本轮进一步打开`tables_maintext.do`的文件级页面，显示下载需要经过`download/terms`；web访问返回`Cache miss`，尚未取得实际`.do`字节，更未取得任一`.dta`数据。因此本轮**只能把旧状态由“找到了数据包”提升为“明确定位五个文件及需核的具体数据对象”**，不能将文件目录列表冒充数据复现成功，不能宣称绝对需要登录（实际提示是JS与下载条款；未完成下载）。
+
+**停机规则**：若无法合法取得这些文件字节并运行所需回归环境，不构造伪原始样本。保持`ICPSR_FILES_LOCATED_DOWNLOAD_NOT_ACQUIRED`并交付方法学审计；实证复算可在数据可用时恢复。
+
 **本轮状态**：`PUBLISHED_CAUSAL_DESIGN_REVIEW_DONE`; `PAPER_RESULTS_SOURCE_CONFIRMED`; `LOCAL_CAUSAL_REPLICATION_NOT_RUN`; `INDEPENDENT_HISTORIAN_REVIEW_NOT_RUN`; `PARENT_ISSUE_OPEN`; `DRAFT_PR_OPEN`。
