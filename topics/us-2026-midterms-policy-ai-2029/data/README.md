@@ -1,6 +1,6 @@
 # TOPIC-011｜M0机器注册表
 
-- [hypothesis_registry.csv](hypothesis_registry.csv)：H01—H08，初始状态UNTESTED。
+- [hypothesis_registry.csv](hypothesis_registry.csv)：H01—H10，初始状态UNTESTED。
 - [causal_edges.csv](causal_edges.csv)：候选有向机制边，绝非已确认因果。
 - [evidence_events.csv](evidence_events.csv)：**少量**确实有公开来源的事件样例，事件日与发布日期分开；不是完整数据库。
 - [path_states.csv](path_states.csv)：P-A至P-D各自UNKNOWN；后续按asof追加快照。
@@ -94,3 +94,8 @@
 - [h03_pjm_rto_2025_forecast_ranking_by_publication.csv](h03_pjm_rto_2025_forecast_ranking_by_publication.csv)：相同后验actual、两组出版源的2024/25版预测APE排序反转，仅表明来源敏感。
 - [h03_pjm_original_document_revision_manifest.csv](h03_pjm_original_document_revision_manifest.csv)：2023原PDF、2024修订PDF、2025原版XLSX、2025六月回顾及2026五月准确性XLSX，记录实际可知日冲突和metric定义。
 - [标准库校验脚本](../analysis/recompute_h03_original_bridge.py)可附`--original-2025-xlsx`直接验证官方同源2025 B9、B9b各RTO/DOM/AEP的6年度数值。
+
+
+## H09/H10本轮真正取得的实物数据（2026-11-14）
+- **H09**：[Travis County/SpaceX法律实体优惠合同登记3行](../cases/musk-2026/incentive_contracts.csv)及[事件六行](../cases/musk-2026/policy_event_ledger.csv)。包含2020原始Travis County合同、2025县级审查、2026-04据地方KUT报道的9%预期返利扣减、2025Tesla年报的合并财务不重大披露、2026-11 Starbase未来税惠申请；**KUT扣减的正式书记官会议记录和绝对美元尚未拿到，不能标经官方直接核查**。[原始协议核查报告](../reports/2026-11-14_h09_travis_texas_incentive_preelection_control.md)。主事件账增加E073—E077，其中新政府影响还未被识别。
+- **H10**：[BLS CPI/月度22行](h10_bls_cpi_sa_monthly_2025_2026.csv)、[Treasury 2Y/10Y 467交易日](h10_us_treasury_2y_10y_daily_2025_2026.csv)、[BEA PCE发布版本4条](h10_bea_pce_release_vintages_2026.csv)、[FOMC真正政策两条](h10_fomc_official_decisions_2026.csv)；[离线脚本](../analysis/recompute_h10_open_data.py)在Ubuntu真实运行PASS，报告见[H10第一轮](../reports/2026-11-14_h10_cpi_pce_fomc_treasury_pit_baseline.md)。**2025-10 CPI缺值NA，2026-08 BEA PCE数值存在后续修订**，不能视为首次公示时已可知；未抓全量核心PCE指数/期货预期/企业债务面板。
