@@ -112,3 +112,11 @@
 - [四项期末资金分类CSV](marbois_1788_unconsumed_funds_m2.csv)；[五条小单位冲突检查CSV](marbois_1788_nxi_control_diagnostics_m2.csv)：新原文与旧OCR小计差5苏，并与1798四基金结余差1苏9德尼，问题未关闭。
 
 来源阅读级别：原书索引文字与算术PASS，扫描原图逐格审查BLOCKED；1789 Proisy账本内容、王室国库实际收付与因果模型仍NOT_ACQUIRED/NOT_RUN。
+
+## M2 新增研究：地方预算控制权、政治指控与证据等级（2026-11-14）
+
+- [1789—1790殖民地财政控制权及多方争议报告](CASE_FRA_M2_POLITICAL_FISCAL_AUTHORITY_1789_1790.md)：1789北部省议会指控Marbois把超过「二百万的殖民地资金」转法，不当作已证明转账；1790Marbois本人对粮食获利**另一项具体指控**答辩；1790圣马克议会要求每月20万里弗尔拨款、Proisy因专款约束拒绝的后期史载；区分政治争论与真实资金收付。
+- [政治/财政主张和证据链 CSV](political_fiscal_claims_1789_1790_m2.csv)：7条信息，含日期、行为主体、金额是否有已确认币种/执行凭证、反证要求。
+- [政治财政原始与次级来源 CSV](political_fiscal_sources_m2.csv)：5项来源，标注偏见、部分翻译及争议材料不能代替银行流水；文书标题日期9月21与现代英译末尾8月21不符，保持 OPEN。
+
+**状态**：政争存在 `PRIMARY_TEXT_SUPPORTED`，实际“二百万”汇款`UNVERIFIED_POLITICAL_CLAIM`，20万/月拨款 `RETROSPECTIVE_REQUEST_NOT_PAYMENT`；1788主金库/王室收款账 `NOT_ACQUIRED`，因果`NOT_RUN`。沿用 Draft PR #39，不合并。
