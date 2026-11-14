@@ -1,0 +1,4 @@
+period_start,period_end,n_years,central_revenue_with_empire_pct_gdp,central_revenue_without_empire_pct_gdp,net_imperial_contribution_gdp_percentage_points,source_table,source_url,definition_note
+1650,1699,50,2.2,2.0,0.2,Costa_Henriques_Palma_2024_Table3,https://doi.org/10.1093/ereh/heae003,published_half_century_reconstruction_not_annual_census
+1700,1749,50,5.2,4.1,1.1,Costa_Henriques_Palma_2024_Table3,https://doi.org/10.1093/ereh/heae003,published_half_century_reconstruction_not_annual_census
+1750,1799,50,4.7,3.6,1.1,Costa_Henriques_Palma_2024_Table3,https://doi.org/10.1093/ereh/heae003,published_half_century_reconstruction_not_annual_census
