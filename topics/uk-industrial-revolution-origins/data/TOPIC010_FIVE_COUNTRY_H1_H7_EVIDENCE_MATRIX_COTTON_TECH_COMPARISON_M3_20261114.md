@@ -36,7 +36,7 @@
 
 ## 2. 首轮建立工业化真正结果/中介数据：棉布国际竞争与机械纺纱
 
-**首次取得并实际读取** Stephen Broadberry & Bishnupriya Gupta (2005) `CEPR DP5183`公开作者稿 [Cotton Textiles and the Great Divergence](https://muslintrust.org/wp-content/uploads/2018/01/wrap_broadberry-cotton-textiles-and-the-great-diverge.pdf)：
+**本轮独立下载并核读（与上位分支已有M3A棉纺研究属同一原始发表谱系，不视为独立样本）** Stephen Broadberry & Bishnupriya Gupta (2005) `CEPR DP5183`公开作者稿 [Cotton Textiles and the Great Divergence](https://muslintrust.org/wp-content/uploads/2018/01/wrap_broadberry-cotton-textiles-and-the-great-diverge.pdf)：
 - 原PDF已在网络开放Runner取得，**303,134字节，SHA256 `9a63fff33030510ae2da94fa1384bc8c93c157e0b93d162c3c6c0753409e3638`**；`pdftotext -layout`核查 Table 1 原PDF第38页、Table 3/4第39页和Table 8第42页。网页PDF截图工具报告`CACHE_MISS`，**无权声称截图级原页图像核验已通过**。
 - 2005作者工作论文和同作者 [Broadberry–Gupta (2009), *Economic History Review*](https://doi.org/10.1111/j.1468-0289.2008.00438.x) 是**相关出版链**而非独立研究重复样本。2009论文摘要独立确认工业工资差异和英国竞争力后移，不能未经逐数对照把2005每项表格都标为2009正式版的数字。
 - 直接底层 `Davis`贸易登记、`Wadsworth & Mann`原棉、`Baines/Ellison`历史源表、`Catling`机械小时数据**本项目未再次查原件**。
@@ -103,6 +103,14 @@ mixed_h6_claim_still_open=YES published_working_paper=NOT_CAUSAL_REPLICATION
 derived_rows=8
 ```
 衍生8行数据的SHA256 `8a8a71286312400f56b4b3051ca58a508b1bc453d5eb14fecc84b45873e28f9b`，使用了精确Decimal计算。**测试检验的是35格引用和反例均不缺、各国七假说完整覆盖、表1/3/4/8的已公布原值、价格/单位口径区分，未运行跨国经济计量或因果模型。** 不对35条状态打分、投票或计算假说成功率；每条只是来源登记与可证伪研究入口。
+
+
+## 4A. 已有平行成果整合：只把真正新增的比较判断作为本轮贡献
+
+在本报告编写过程中，上位研究分支另有已交付、需优先复用的两个正式增量：
+- [M3A 英国—印度棉布进口、英国原棉投入与全球棉布出口的三阶段交叉表](TOPIC010_M3A_COTTON_MARKET_MECHANIZATION_FIVE_COUNTRY_HYPOTHESIS_20261114.md)，包括更完整的16期间原棉+固定1697官方价出口序列、英荷商社印度布进口EIC/VOC同源表以及1840年代扩产，**与本轮18个锚点部分同源重叠，不得并为两个独立数量数据集、不应重复计算统计权重**。
+- [英国—荷兰 1600—1765 技术采用、相对工资与燃料可达性研究](TOPIC010_UK_NLD_TECH_ADOPTION_WAGES_ENERGY_1600_1765_20261114.md)，提供早期荷兰风力锯木商业机械化与伦敦/阿姆斯特丹泥炭煤炭近似价格差异；比“荷兰只有高工资没有工匠”更强，**应作为H1/H6/H7荷兰对照的优先证据**。
+- **本轮相对上面两个报告的增量**：①35单元的**五国**×H1—H7逐格强反例矩阵（不只是英国—荷兰）；②Kelly–Mokyr–Ó Gráda(2023)与Allen(2011)跨估计层级冲突的正式裁决约束；③Table8细纱最佳实践工时及1831—35印度市场份额同表显式加注；④可复算35格完整性/单数字篡改拒绝QA。**此为并列资料的去重整合，而非声称三篇报告对应三次独立复现**。
 
 ## 5. 阶段综合结论：先提出“机制组合”但尚不把它写成已识别因果律
 
