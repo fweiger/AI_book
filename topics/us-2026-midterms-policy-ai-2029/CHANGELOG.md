@@ -1,4 +1,10 @@
 # TOPIC-011｜版本记录
+## 2026-11-14 | topic_version 0.2.2 — 官方县会议纪要与BEA核心PCE连续序列的真实核验
+- H09通过Travis County CivicClerk公开OData找到2026-04-07会议（event3609），实际取回**县Clerk正式8页Minutes**（SHA ff8a5ae0...）及**23页会议Transcript**（SHA 0d7a5a89...）；会议**Item26以4-0/1弃权通过扣留Colorado River Project LLC 2020—22合格grant9%**，**Item6以相同票数通过2025/26社区投入方案**。KUT原媒体报道仍保留为初始线索，但“是否存在正式通过的9%决议”升级为政府一手F；县级实际grant美元金额、已付款追回未得，均NA。这一行动发生选举前；不改变H09完整政治因果UNTESTED。
+- 官方Transcript新增公司**社区投入义务**线索：至少约等于每年县级M&O税额10%，2025约$2m、2026约$3.2m；**不是县政府补贴发放额或公司已实际完工项目的精确现金成本**。新增两行官方决议机器表、政策事件H09TX-0007~0009与E083~E085证据，所有与同一会议相关来源不重复算独立冲击。
+- H10从BEA官方`Section2All_xls.xlsx`的`T20804-M`读取2024-01至2026-09 **33个月Headline/Core PCE季调指数**，原始xlsx SHA f5037fee...，月份/环比/同比全列保留。2026-09 core环比+0.3165%（BEA公布0.3%）、core同比+3.1212%（公布3.1%），与官方2026-10-29发布吻合；2026-08 core按回顾版得0.2620%，不得覆盖9月30日首次公报0.2%。[离线标准库验证](analysis/recompute_h10_bea_snapshot.py)在Ubuntu针对最新Github CSV实际运行**PASS**。
+- 保留旧H01–H10各个因果假说状态UNTESTED、图谱节点与K边ID不变；本轮为来源、数值与检验补丁并非未来情景兑现，未新增统计显著性/量化预测。所有文件仍在PR #51研究分支，未合并main。
+
 
 ## 2026-11-14｜H03第十一轮：RTO 8—10MW来源差已精确定位EKPC削峰；B9b于2025才首次发布
 - PJM独立2026 Jan B9b、Feb6 corrected B9、当前combined B9/B9b、May Accuracy四档SHA固定，2026—2046共21年、23顶层区域两组对照验证；除EKPC和RTO外其余441个zone-year两组**全完全相同**。
