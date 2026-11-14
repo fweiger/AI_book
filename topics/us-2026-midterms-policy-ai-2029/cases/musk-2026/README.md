@@ -81,3 +81,9 @@
 - [Texas Comptroller #1496 两版原始CDR年度Excel及SHA核验报告](../../reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)：2025报告版税年2022/23/24毛税收节省分别$8.286m/$22.996m/$43.496m，2025报告当期$42.608m；`Gross_Tax_Saving`为**学区税负在估值限制前后账面差额**，还有Revenue Protection与Supplemental Payments，**不是公司到手现金的净额**。
 - [两版各税年14行机器表](delvalle_ch313_1496_2023_vs_2025_vintages.csv)及[官网原始XLSX直取解析/校验PASS](../../analysis/recompute_h09_delvalle_1496_ch313_vintages.py)：税年2024早版预测$20.643m而较新版同年$43.496m，差$22.853m，说明资产/模型和披露版本必须隔离。官网2025报告于2026-10-14发布，**早于2026-11选举**。
 - **学区Chapter313和Travis County Chapter381是两个协议，不允许把本表Gross Savings填进县原2020—22 9%扣留的未知eligible grant base**；仍须Auditor县级实付及学区年度真实税单/补偿支付数据。
+
+
+## 学区FY2022—2025真实财报PILOT收入及未对平差额（v0.2.8）
+- [Del Valle ISD官方AFR及CDR候选税年对账](../../reports/2026-11-14_h09_delvalle_school_afr_pilot_receipts_and_cdr_crosswalk.md)：直接读取EMMA FY2022/24/25三个年度财报PDF，每份原件SHA已冻结，FY2024上年比较栏给出FY2023的PILOT。学区2022—25四财政年度分别报告收取/确认与Tesla Chapter313有关的PILOT **$999,609 / $9,543,964 / $17,946,611 / $23,002,842**，合计$51,493,026，是**公司向学区付、学区记入收入**，不是政府发给Tesla的钱。
+- [分财政年度及候选前一Tax Year的四行对账表](delvalle_school_afr_pilot_FY2022_2025_vs_ch313_cdr.csv)与[原始PDF及CDR独立复算程序](../../analysis/recompute_h09_delvalle_school_pilot_afr_reconciliation.py)已Ubuntu运行PASS；2022—24财报PILOT与CDR中Revenue Protection + Supplemental的候选跨年度值相等，但**2025财报$23,002,842与税年2024 CDR合计$22,025,967相差$976,875仍未解释**。缺具体付款日期、纳税单和调整凭证，不得直接计算净实际公司税收优惠。
+- **Travis County Ch381县级返利实际美元依然未知**；不得用上述学校Ch313收款去填2020—22县协议9%扣留基数。
