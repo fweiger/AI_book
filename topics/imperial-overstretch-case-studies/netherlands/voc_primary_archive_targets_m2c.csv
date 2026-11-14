@@ -1,0 +1,9 @@
+record_id,collection,inventory_no,years,contents,access_status,next_action,url
+NLD-A001,NA_1.04.02,4596,1771-1780,VOC_general_balance_all_chambers,CATALOGUE_VERIFIED_IMAGES_NOT_ACQUIRED,Extract 1779 unsold goods debts and anticipations,https://www.nationaalarchief.nl/onderzoeken/archief/1.04.02/beschrijving/content_and_structure
+NLD-A002,NA_1.04.02,4597,1781-1790,VOC_general_balance_all_chambers,CATALOGUE_VERIFIED_IMAGES_NOT_ACQUIRED,Extract 1781-1784 debts and lending,https://www.nationaalarchief.nl/onderzoeken/archief/1.04.02/beschrijving/content_and_structure
+NLD-A003,NA_1.10.31,8,1711;1756-1772,VOC_preliminary_balances,CATALOGUE_VERIFIED_ITEMS_NOT_ACQUIRED,Partially published Kroniek 1872 several pages,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NLD-A004,NA_1.10.31,9,1638-1770,VOC_domestic_financial_summaries,CATALOGUE_VERIFIED_ITEMS_NOT_ACQUIRED,Partially published Kroniek 1872 pp38-39,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NLD-A005,NA_1.10.31,15,1640-1770,All_six_VOC_chambers_equipage_cost_and_return_proceeds,CATALOGUE_VERIFIED_ITEMS_NOT_ACQUIRED,PRIORITY reconcile 370 vs 465.7 million; partly printed Kroniek 1872 pp40-41,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NLD-A006,NA_1.10.31,16,1736-1768,VOC_goods_and_prices,CATALOGUE_VERIFIED_ITEMS_NOT_ACQUIRED,Kroniek 1872 pp40-41 print excerpt,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NLD-A007,NA_1.10.31,172,1753-1768,VOC_Asian_finance_summaries,CATALOGUE_VERIFIED_ITEMS_NOT_ACQUIRED,Kroniek 1872 pp42-49 and 72; currency crosswalk needed,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NLD-A008,DBNL_Kroniek_1872,40-41,1872_print_publication,Printed_excerpt_Ghesel_inventory15,SCANS_LOCATED_NOT_READ_HTTP429,Public domain archive 49.56MB PDF request 429; no values transcribed,https://www.dbnl.org/titels/titel.php?id=_kro004187101

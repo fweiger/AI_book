@@ -1,0 +1,10 @@
+# CASE-NLD-001 M3B source and numerical checks | 2026-11-14
+- Authority existing AI_book#33 and Draft PR#37; same topic-010/case-nld-001-netherlands-20261114 branch.
+- Read full HTML publisher article Peter M Solar and Pim de Zwart 2017 International Journal of Maritime History, Table1 and technical sheathing discussion; no original logbooks extracted.
+- Same-port Batavia mean duration Dutch vs EIC 1770–75=253 vs173 days with N156 and N20; 1783–92=238 vs179 with N238 and N10. Published Table1 median 237 vs160; 231 vs173. Gap mean 80→59; median 77→58, not statistically significant test.
+- Full article says broader EIC advantage widens across Asian destinations, but Batavia-matched subset narrows; identify destination/selection Simpson-type potential without claiming formal Simpson paradox or statistical significance.
+- Copper adoption chronology VOC experiments 1777/1780/1783/1786; 1788 Canton letter; 1789 chamber delay; 1791 first Dutch coppered new East Indiaman sailing; end1792 non-binding request; June1794 new-build mandatory. EIC 1789 78% of hired ships coppered, NOT all ships.
+- Original NA 1.04.18.02 archive first-view scan URLs clicked, HTTP404, but exact confirmed catalogue IDs: 10735 (1779-80 general ledger), 10736 (1780-81 general ledger), 10795 (1780-81 general journal), 10796 (1781-82 journal), 10801 (1779-80 separate journal). Original entries inaccessible, not transcribed.
+- Original NA 3.02.33 exact references 1, 2 (1790-95 minutes), 12 (annexes1-16) and 23 (annex index) all catalogue DIGITALIZED but first scan links HTTP404; cannot infer actual subsidy disbursed amounts.
+- New 4-row company-port summary CSV, 2-row exact cross-period difference CSV, 10-event copper adoption chronology, 9-row target archive locator, 4-source registry, report and session, README navigation. No de Korte full appendix and prior equipage 370/465.7m conflict still open.
+- Single next: get specific scans of NA inv10735, 10796 and 3.02.33 inv23 or direct credited actual cash/guarantee original annex; validate date/unit before company/state matching.
