@@ -15,7 +15,7 @@
 - [多AI独立工作合同 COLLABORATION](COLLABORATION.md) · [下一轮 NEXT](NEXT.md)
 - [研究问题](questions.md) · [正式论点状态](claims.md) · [知识地图](knowledge-map.md) · [可机读图谱](knowledge-graph.json) · [阅读路线](reading-path.md)
 - [CSV数据合同](data/README.md) · [版本记录](CHANGELOG.md) · [过程会话](sessions/README.md)
-- **新统一研究层**：[专家档案/作品库](experts/README.md) → [观点来源池](views/README.md) → [观点×假说映射](hypotheses/view_hypothesis_links.csv) → [H01—H10](HYPOTHESES.md) → [因果链及逐边检验](chains/README.md) ↔ [统一94项指标目录](metrics/README.md) ↔ [事件数据/反证](data/evidence_events.csv)。
+- **新统一研究层**：[专家档案/作品库](experts/README.md) → [观点来源池](views/README.md) → [观点×假说映射](hypotheses/view_hypothesis_links.csv) → [H01—H10](HYPOTHESES.md) → [因果链及逐边检验](chains/README.md) ↔ [统一98项指标目录](metrics/README.md) ↔ [事件数据/反证](data/evidence_events.csv)。
 - **案例专线**：[马斯克Texas/国会/赦免/现金流](cases/musk-2026/README.md) · [H09研究任务 #55](https://github.com/fweiger/AI_book/issues/55) · [CPI/PCE→Fed→融资H10研究任务 #56](https://github.com/fweiger/AI_book/issues/56)。
 - [外部财经评论者/UP主观点池（独立观点与事实分离）](views/README.md) · [大湾区老姚2026-11-14观点核查卡](views/2026-11-14-dayawanqu-laoyao.md) · [可机读主张表](views/claim_register.csv) · [观点池长期跟踪Issue #54](https://github.com/fweiger/AI_book/issues/54)
 
