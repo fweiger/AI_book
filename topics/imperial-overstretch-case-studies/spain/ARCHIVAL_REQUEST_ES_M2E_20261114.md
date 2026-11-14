@@ -272,3 +272,38 @@ Atentamente,
 [Nombre y contacto que completará personalmente el investigador]
 
 **Estado:** UNSENT / UNDERLYING_2007_SOURCE_PAGES_NOT_ACQUIRED / ORIGINAL_1797_WORKFORCE_ROLL_NOT_ACQUIRED / NO_PERSONAL_DATA_SENT.
+
+
+---
+
+## I — M2n consulta archivística con signatura exacta de trabajadores portuarios de 1797 (BORRADOR; NO ENVIADO)
+
+**Destinatario (consultas generales confirmado en web municipal):** archivo@valencia.es  
+**Asunto:** Solicitud de referencia e imágenes autorizadas — AMV Documentación Lonja, caja 56, expediente 19 (obreros del puerto, 1797)
+
+Estimado personal del Archivo Histórico Municipal de València:
+
+En el artículo de Ricardo Franch Benavent, *Salario y condiciones de trabajo en la industria de la seda valenciana del siglo XVIII*, publicado en *Obradoiro de Historia Moderna*, núm.25 (2016), **página impresa 236**, DOI 10.15304/ohm.25.3202, se menciona expresamente la siguiente signatura de documentación histórica del personal del puerto de València:
+
+**A.M.V., Documentación Lonja, caja 56, expediente nº 19.**
+
+Según dicho estudio, un registro de trabajadores de las obras del puerto en 1797 incluía 78 amasadores que percibían 5 reales diarios, además de 18 peones a 5 reales, 163 peones a 4,5 reales y 21 peones a 4 reales. La misma publicación remite a la investigación previa del autor, *La fase inicial del puerto de Valencia a finales del Antiguo Régimen*, en *Historia del puerto de Valencia* (2007), páginas 192–194.
+
+He comprobado que el Ayuntamiento publica en línea el inventario de **Documentación Lonja**, aunque no he podido leer la ficha concreta de esta caja en el voluminoso PDF. Antes de solicitar imágenes, agradecería verificar:
+
+1. ¿Se conserva el expediente bajo la signatura **Caja 56, nº 19**, o existe una signatura actual, nueva caja o folio diferente? ¿Cuál es el título, fecha exacta y extensión del expediente?
+2. ¿Aparece dentro de la documentación una relación nominal de los obreros de 1797, sus oficios y jornales? ¿Se trata de un estado de plantilla, una nómina de salarios devengados o un libro de pagos efectivamente realizados?
+3. ¿Es posible consultar o recibir **solo** una reproducción permitida de la portada/ficha y de las páginas que contienen esas categorías salariales, bajo las condiciones y tarifas indicadas por el Archivo?
+4. Para contrastar un conflicto por jornales atrasados supuestamente ocurrido **el 11 de febrero de 1797**, ¿existe en este expediente o en otra serie algún acta, oficio, informe, memorial, relación de cantidades debidas o recibo de pago que permita determinar el **importe devengado, efectivamente abonado y pendiente de pago**?
+5. Si la documentación del puerto se dispersó entre la Junta de Comercio, el Ayuntamiento y otros archivos, ¿pueden orientar sobre los libros de caja de la Junta del puerto, ingresos de arbitrios portuarios y transferencias del Banco Nacional de San Carlos de 1795–1798?
+
+No presupongo que los trabajadores cobraran directamente del Banco ni que la suma hipotética de salarios diarios de quienes figuran en el expediente represente una deuda salarial. Tampoco necesito copias de todo el fondo. Respetaré las condiciones vigentes de consulta y reproducción y no redistribuiré imágenes sin autorización.
+
+Muchas gracias por su ayuda.
+
+Atentamente,  
+[Nombre y contacto del investigador; a completar por el titular antes del envío]
+
+**Identificación y estado:** OFFICIAL_CUSTODIAN_CONTACT_VERIFIED / SCHOLAR_CITED_ORIGINAL_CALL_NUMBER / CURRENT_ITEM_PRESENCE_NOT_CONFIRMED / PUBLISHED_ARTICLE_P236_TEXT_READ_IMAGE_NOT_OBTAINED / ORIGINAL_LABOR_RECORD_NOT_ACQUIRED / EMAIL_NOT_SENT / NO_PERSONAL_ID_SHARED.
+
+Para consulta presencial, el Ayuntamiento indica **citapreviaarchivohco@valencia.es** como correo separado de reservas, Archivo Histórico Municipal, Palacio de Cervelló, Plaça Tetuán 3, València.
