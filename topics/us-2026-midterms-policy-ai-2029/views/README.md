@@ -57,3 +57,7 @@ J -->|"保留历史版本并提出新问题"| H
 ## 2025无已支付县grant与首次可对齐CPI意外值（VIEW-S001第四次补核）
 - [本次对C04/C07/C08/C09的4行时点化证据与反例](claim_reassessments_2026-11-14_round5.csv)：C04截至2025-11新闻报道县尚未支付本项返利（非2026实付结论）；C07已有2026-11-09发布前整体/核心CPI一致预期与11-10 BLS实际+0.1pp；C08 Cboe引用FedWatch对25/50bp情景在当天的市场再定价；C09两年期国债全日+17bp与10Y+10bp证实当天市场价格变化，但同时消息混杂、CPI不同季调网页预期不可混用。
 - [单事件来源/时序/禁用的网页forecast合规报告](../reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)，保留每条VIEW原始作者观点及早期同年度评估版本而不覆盖。
+
+
+## 2026-11-14 第六轮：官方县2022现金状态与10个真正事前CPI预测（v0.2.6）
+- [VIEW-S001-C04/C07/C09增量评估三行](claim_reassessments_2026-11-14_round6.csv)：C04 [Travis County2022官方项目汇总](../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)证明2022-01-31零已付返利、首绩效年度核验待完成，非2026最新支付额；C07/C09 [10次可证明发布于CPI首发之前的预测与UST有符号变动](../reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)核心6/7方向一致但p=0.125且存在2025-03-12明显反例；46次[供应商历史日历](../data/h10_cpi_release_ust_46event_vendor_archive_not_pit.csv)未经原始forecast发行时间核验全部不得作PIT。保持作者原始主张及此前所有评估记录不覆盖。
