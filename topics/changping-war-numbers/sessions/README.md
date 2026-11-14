@@ -19,3 +19,5 @@
 - [2026-11-15 第八轮：原刊地图扩窗及DEM定向测试](2026-11-15-eighth-map-extent.md)
 
 - [2026-11-15 第九轮：DEM多尺度阈值与9m秦垒外推](2026-11-15-ninth-terrain-scale.md)
+
+- [2026-11-15 第十轮：战略孔道、政府地图及原图配准检查](2026-11-15-tenth-corridor-map-evidence.md)

@@ -1,0 +1,50 @@
+{
+  "image_crop_pixels": [
+    717,
+    557
+  ],
+  "source": "user-provided Li/Hou 2023 p62 Fig1B - no image redistributed",
+  "pixel_inputs_rough": {
+    "longitude_label_center_px": [
+      [
+        112.75,
+        177
+      ],
+      [
+        113,
+        367
+      ],
+      [
+        113.25,
+        542
+      ]
+    ],
+    "latitude_label_center_px": [
+      [
+        35.833333333333336,
+        215
+      ],
+      [
+        35.666666666666664,
+        365
+      ]
+    ],
+    "scale_bar_0_10km_px": [
+      437,
+      531
+    ]
+  },
+  "longitude_gridlabel_pixels_per_km": [
+    8.41,
+    7.75
+  ],
+  "latitude_gridlabel_pixels_per_km": 8.1,
+  "scale_bar_pixels_per_km": 9.4,
+  "apparent_scale_differences_percent": [
+    11.7,
+    21.3,
+    16.1
+  ],
+  "interpretation": "VISUAL_PREFLIGHT_ONLY_NO_PRECISE_GRID_INTERSECTIONS",
+  "warning": "Approximate label centers and scale bar are not precise georeferencing control points; differences may come from label placement, schematic drawing and rescaling. This does NOT prove 1998 original map or Li/Hou field work was wrong. Do not digitize the Qin 125km line as WGS84 geometry from this figure."
+}

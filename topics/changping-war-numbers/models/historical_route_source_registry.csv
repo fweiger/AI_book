@@ -1,0 +1,7 @@
+id,historical_object,stage,side,source_level,source,route_nodes_ordered,geometry,key_issue
+WEST,西侧战略通道,regional_approach,qin_or_zhao_unknown,BOOK_EXCERPT_ONLY,Jin_Xie_1998,"乌岭;空仓岭;长平方向",NO_VALIDATED_GPS,"需古道/关口坐标;与终期包围圈不同"
+SOUTH,南侧战略通道,regional_approach,qin_or_zhao_unknown,BOOK_EXCERPT_AND_LATE_GAZETTEER,Jin_Xie_1998+modern_Jincheng,"羊肠坂碗子城附近;天井关;晋城盆地;长平方向",NO_VALIDATED_GPS,"现存碗子城为后世遗址;战国同路待证"
+ZHAO_W,空仓岭赵军西线,defensive_phase,zhao,GOV_HISTORICAL_RECONSTRUCTION,Gaoping_plan_2024,"老马岭/空仓岭;发鸠山;高平西侧",NO_VALIDATED_GPS,不是秦最后125km围圈
+ZHAO_E,丹河赵军东线,defensive_phase,zhao,GOV_HISTORICAL_RECONSTRUCTION,Gaoping_plan_2024,"丹朱岭;丹河;韩王山;大粮山",NO_VALIDATED_GPS,古代渡口/工事待考
+ZHAO_N,百里石长城赵北线,defensive_phase,zhao,GOV_HISTORICAL_RECONSTRUCTION,Gaoping_plan_2024,"丹朱岭;朗公山;羊头山;金泉山;马鞍壑",NO_VALIDATED_GPS,现存各段断代与兵力未知
+QIN_F,秦军末期包围圈复原,last_46_day_encirclement,qin,RECONSTRUCTED_NOT_DIRECT_MEASURED,Jin_Xie_1998+Li_Hou_2023,约125km复原闭环,NO_VALIDATED_GPS,秦垒连续性/满编时点及125km路线未独立测绘
