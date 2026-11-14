@@ -1,0 +1,7 @@
+ac_id,original_acceptance_condition,first_pass_status,evidence_boundary
+"AC-01","5 tracks A-E with source and coercion/population classification","FIRST_PASS_PASS","not full causality"
+"AC-02","8+ events with unique source-linked years","PASS_STRUCTURAL","12 entries"
+"AC-03","6+ graded sources","PASS_REGISTRY","10 initial and later supplements"
+"AC-04","at least one numeric value with time owner source unit","PASS_PUBLISHED_RECONSTRUCTION","43 annual fiscal +43 trade rows and longer published transfers"
+"AC-05","2+ alternative explanations and falsifiers","PASS_DESIGN","none measured as causal effect"
+"AC-06","independent PR structural/CSV historical review","PARTIAL_INDEPENDENT_REVIEW_NOT_CONFIRMED","issue open / PR draft / current CI not run"
