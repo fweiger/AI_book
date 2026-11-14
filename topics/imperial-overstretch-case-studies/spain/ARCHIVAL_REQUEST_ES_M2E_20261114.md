@@ -197,3 +197,54 @@ Atentamente,
 **Guías de conservación ya consultadas**: el Archivo General y Fotográfico de la Diputación de Valencia describe el fondo Gobierno Civil (ES.462508.ADPV / Gobierno Civil; GC:c.1 expedientes generales), pero la presencia del concreto expediente de 1795 NO ESTÁ CONFIRMADA. El Archivo de la Autoridad Portuaria de Valencia cuenta principalmente con fondos del siglo XIX medio en adelante, por lo que puede resultar más adecuado para documentos posteriores a 1850.
 
 **Estado de ejecución:** CUSTODIAN_INQUIRY_DRAFT_ONLY; NOT_SENT; NO_PERSONAL_ID_COLLECTED; ORIGINAL_1795_CONTRACT_AND_1862_CERTIFICATE_NOT_ACQUIRED.
+
+
+---
+
+## G — M2l solicitud lista para enviar al ARCHIVO DEL CONSEJO DE ESTADO (BORRADOR SIN ENVIAR)
+
+**Destinatario público verificado:** archivo.biblioteca@consejo-estado.es  
+**Asunto:** Signatura del expediente contencioso Banco de España contra Hacienda (24-10-1887), préstamo al Grao de Valencia (1795)
+
+Estimado equipo del Archivo y Biblioteca del Consejo de Estado:
+
+He comprobado en su página institucional que el fondo histórico conserva expedientes de **1833 a 1939** y que su Memoria de 2023, sección 3.1.2, contempla consultas de investigadores por vía telemática y la búsqueda de documentos antiguos mediante catálogos manuales.
+
+Solicito su ayuda para **identificar la signatura del expediente contencioso-administrativo** seguido por el **Banco de España contra la Administración General del Estado**, en impugnación de la **Real Orden del Ministerio de Hacienda de 18 de marzo de 1884**, relativo a créditos del antiguo Banco Nacional de San Carlos por las obras del **puerto del Grao de Valencia**. Consta como **Real Decreto de 24 de octubre de 1887**, inserto en la *Gaceta de Madrid* de **26 de noviembre de 1887, número 330, páginas 557–559**:
+https://www.boe.es/gazeta/dias/1887/11/26/pdfs/GMD-1887-330.pdf
+
+El recurso fue desestimado al considerar extinguida la reclamación por el convenio general del Banco de San Carlos con Hacienda en 1829. La publicación menciona una solicitud del Banco de **27 de diciembre de 1862** acompañada de los antecedentes siguientes, cuya conservación deseo verificar:
+
+1. **Testimonio de la escritura de préstamo del 6 de octubre de 1795**, ratificada por la Junta Particular de Comercio y Agricultura de Valencia el **22 de octubre de 1795**.
+2. **Certificación de la Contaduría de la Hacienda pública de Valencia de 13 de noviembre de 1862**, que serviría para desglosar los **13.703.208 reales** recibidos por el Banco en diversos periodos de 1797–1836.
+3. **Liquidación de los créditos de la Junta de las obras del puerto a 30 de junio de 1839**, formalizada en octubre de ese año.
+4. Órdenes reales relativas a los arbitrios hipotecados y al cobro por las oficinas de Rentas Reales (especialmente **1795, 1802, 1817 y 1818**).
+
+¿Podrían indicarme, por favor: **a)** el número de expediente y su sección o fondo, **b)** si se conservan las piezas incorporadas como pruebas, **c)** el índice de documentos o paginación pertinente, **d)** el acceso telemático o presencial autorizado y los posibles costes de reproducción, y **e)** si el expediente fue transferido a otro archivo, su actual institución custodio?
+
+La pregunta responde a una discrepancia entre la cifra total del contrato citada en la *Gaceta* de 1884 y la suma de principal e intereses, que difiere en **300 reales**. Necesito verificar el original del préstamo, la garantía y las partidas de contabilidad antes de efectuar inferencias financieras. Solicito inicialmente **solo el índice y las páginas pertinentes**, sin presumir autorización para reproducir públicamente los documentos.
+
+Muchas gracias por su ayuda.
+
+Atentamente,  
+[Identidad y contacto académico: a completar personalmente por el investigador]
+
+**ESTADO**: CUSTODIAN_AND_EMAIL_VERIFIED / DOCUMENT_SPECIFIC_ID_NOT_FOUND / PRE_1987_ARCHIVE_SEARCH_MANUAL_PER_OFFICIAL_REPORT / REQUEST_NOT_SENT / USER_IDENTITY_NOT_COLLECTED.
+
+### Mensaje alternativo para el Archivo de la Diputación de Valencia (también NO ENVIADO)
+
+**Destinatario público verificado:** archivo.general@dival.es  
+**Asunto:** Fondo Gobierno Civil de Valencia GC:c.1: documentos de la Junta del puerto del Grao transferidos en 1836
+
+Estimado equipo del Archivo General y Fotográfico de la Diputación de Valencia:
+
+La *Gaceta de Madrid* de 26 de noviembre de 1887 (núm.330, pp.557–559) menciona que los documentos de contabilidad de la antigua Junta del puerto del Grao fueron entregados al **Archivo del Gobierno Civil** después de la extinción de la Junta, en virtud de la disposición de **20 de abril de 1836**.
+
+Su catálogo actual del fondo **ES.462508.ADPV / Gobierno Civil** (1739–1958) y la serie **GC:c.1 Expedientes generales** (1739–1924) mencionan acciones del Banco de San Carlos y documentación de propios.
+
+¿Se conserva en este fondo algún **inventario de la transferencia de 1836**, expediente de la **escritura del préstamo de 6 y 22 de octubre de 1795** entre el Banco de San Carlos y la Junta Particular de Comercio y Agricultura, o el libro de **liquidaciones de 1839**? Agradecería, si procede, la signatura y la orientación para consultar páginas concretas sobre principal, intereses, garantías y los arbitrios del puerto, bajo las condiciones de reproducción que indiquen.
+
+Atentamente,  
+[Identidad y contacto académico: a completar personalmente por el investigador]
+
+**ESTADO:** NO_ENVIADO; la presencia de la escritura específica en GC:c.1 **no está verificada**.
