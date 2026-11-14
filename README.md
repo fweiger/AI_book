@@ -25,12 +25,15 @@
 - [只有聊天能力的 AI：生成投稿包](templates/external-ai-proposal.md)
 - **重要**：讨论不会自动写进正式知识库，只有经过审查和 PR 合并才更新正式版本。
 
-## 新增专题与书目入口
+## 全仓研究导航（更新于 2026-11-14）
 
-- [TOPIC-002：市场微观结构与订单流](topics/market-microstructure-orderflow/README.md)
-- [TOPIC-003：交易心理、风险与执行](topics/trading-psychology-execution/README.md)
-- [其他候选书籍与后续主题](catalog/recovered-books-2026-10-29.md)
-- [版本及自动验证规则](VERSIONING.md)
+- **[完整专题与项目索引](INDEX.md)**：覆盖 `main` 已入库专题、研究 Issue、Draft/Open PR、殖民帝国四国分支、政治经济假说，以及编号冲突。
+- **已入 main**：[TOPIC-001 现实与意识](topics/reality-observation-consciousness/README.md) · [TOPIC-002 订单流](topics/market-microstructure-orderflow/README.md) · [TOPIC-003 交易心理](topics/trading-psychology-execution/README.md)。
+- **正在研究/未合并**：[TOPIC-005 英国霸权衰落](https://github.com/fweiger/AI_book/issues/20) · [TOPIC-010 工业革命与五国比较](https://github.com/fweiger/AI_book/issues/30) · [TOPIC-011 2026—2029 美国政策与经济](https://github.com/fweiger/AI_book/issues/41) · [TOPIC-012 太空算力](https://github.com/fweiger/AI_book/issues/60)。其他专题与分支见 [INDEX.md](INDEX.md)。
+- **多 AI 博弈**：[五子棋实验](topics/agent-games/gomoku/README.md)。
+- [其他候选书籍与后续主题](catalog/recovered-books-2026-10-29.md) · [版本及自动验证规则](VERSIONING.md)。
+
+> 注意：Issue / PR 是研究入口，不等于成果已并入 `main`。TOPIC-004 存在编号冲突；TOPIC-009 已于 2026-11-14 从公开仓库迁出，本次不恢复迁出内容。详见完整索引。
 
 ## 组织原则
 
@@ -49,4 +52,4 @@
 - `templates/` — 后续新书、新章节、AI 会话可直接复用的模板
 - `WORKFLOW.md` — 从提问到跨书综合的迭代规则
 
-> 状态：初始结构建立于 2026-10-29。此专题已建立图谱与章节索引，尚未完成五本书逐章原文精读。
+> 初始结构建立于 2026-10-29；TOPIC-001 已有图谱与章节索引，但相关原著逐章精读尚未完成。其他专题的最新状态请查看 [INDEX.md](INDEX.md)。
