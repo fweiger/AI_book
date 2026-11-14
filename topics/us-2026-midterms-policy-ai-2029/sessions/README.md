@@ -39,3 +39,4 @@
 - [2026-11-14 H09州官方金额缺失和H10 CPI发布日美债22事件反证](./2026-11-14-h09-state-record-h10-cpi-release-ust-falsification.md)
 
 - [2026-11-14 H03 FERC诉讼附件2023大负荷数据疑似误引太阳能B8a](2026-11-14-h03-ferc-en1-source-audit.md)
+- [2026-11-14 H09履约年/付款年错位与官方255页议案包、H10 2023—26四年46次CPI事件统计](2026-11-14-h09-payment-cohort-h10-46-events.md)
