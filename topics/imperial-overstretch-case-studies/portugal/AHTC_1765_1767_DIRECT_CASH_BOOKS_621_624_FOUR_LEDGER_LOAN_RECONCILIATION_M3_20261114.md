@@ -81,7 +81,7 @@ D. **实际资金使用与旧账核销侧**：追查`537 fólio36`中1762—66�
 - [28条官方馆藏卷号和来源标注表](data_m2/ahtc_1765_1767_receipts_diaries_master_crossledger_28_volumes_m3.csv)（2019等论文涉及的旧总账与新现金流原簿以真实系列区分）；
 - [28卷官方来源、历史日期错误及藏号验证脚本](data_m2/validate_ahtc_1765_1767_direct_cash_books_28_volumes_m3.py)。
 
-在网络化研究Runner中，实际重新下载本仓库当前分支CSV/脚本、1977年审计法院官方216页PDF，对官方PDF SHA256及27年以上旧书号的系列/日期、全部P0集合、原始手稿未取得状态执行**EXIT0 PASS**：
+在网络化研究Runner中，实际重新下载本仓库当前分支CSV/脚本、1977年审计法院官方216页PDF，对官方PDF SHA256及1977年官方书号对应的系列/日期、全部P0集合、原始手稿未取得状态执行**EXIT0 PASS**：
 
 ```text
 PASS 1977_archival_book_locations=28 cash_1765_1767=12
