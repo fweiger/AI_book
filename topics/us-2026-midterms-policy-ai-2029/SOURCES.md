@@ -65,3 +65,13 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 - [Dominion 2025公司10-K](https://www.sec.gov/Archives/edgar/data/715957/000119312526063120/d-20251231.htm)：数据中心占Virginia Power电力销售份额26%→28%；尚未验证与Electricity Delivered完全一致的分母，不发布乘积为DC专属MWh。
 - [AEP 2026第三季SEC 10-Q](https://www.sec.gov/Archives/edgar/data/73986/000000490426000072/aep-20260930.htm)：2026-09止8个辖区大负荷特殊费率提案已有6个批准，2个待决；ERCOT Batch Zero约45GW请求在2026-07获得约$2bn不同形式的金融担保，**不代表项目投资或通电**。
 详细口径分层见[第五轮报告](reports/2026-11-14_h03_queue_tariff_physical_delivery.md)。
+
+
+
+## H03第六轮：2026-11-14核实的原始PJM/DC实测与监管文档
+- [Dominion 2026-01-06三页给PJM的Data Center Load Adjustment信函](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/dominion-documentation.pdf)（[PJM官方2026-02-02 Forecast Adjustment文档入口](https://www.pjm.com/planning/resource-adequacy-planning/load-forecast-dev-process.aspx)）：2025DC专属计量同时峰值约4000MW、2026—46全部公司未来DC同时峰值预测；ELOA不Firm，CLOA被公司视为Firm，ESA近端签约。**公司DC计量值不是DOM整区LLA历史值**。
+- [Dominion公司2026-10-30 Q3投资者材料](https://s2.q4cdn.com/510812146/files/content_files/2026-10-30-DE-IR-3Q-2026-earnings-call-slides-vTC.pdf)：2025Dec与2026Sep ELOA/CLOA/ESA同公司阶段库存（历史快照发布日期是2026-10，避免数据泄露）。
+- [PJM 2026-08-11大型负荷转移真实事件](https://insidelines.pjm.com/pjm-dominion-review-large-load-transfer-event/)：2026-07-22 07:56北弗吉尼亚230kV线路故障后约3800MW DC/计算负荷切换备用；PJM即时总负荷99984→96205MW，净差3779MW。**这是实际事件观察而非DC总峰值或合同进度**。
+- [SCC PUR-2026-00011 2026-10-23官方最新Order](https://www.scc.virginia.gov/docketsearch/DOCS/8fc501%21.PDF)（doc261060105）：案件**continued**，未正式批准Dominion队列标准；[SCC 2026-05-12原始Interim](https://www.scc.virginia.gov/docketsearch/DOCS/8c5b01%21.PDF)与10-23回顾称May25存在**原始日期冲突**，保留而非覆盖。
+- [FERC ER26-3515 2026-10-09官方命令](https://elibrary.ferc.gov/eLibrary/docinfo?accession_Number=20261009-3055)、[PJM 2026-11-09 ER26-3515-002合规文件](https://www.pjm.com/pjmfiles/directory/etariff/FercDockets/9976/20261109-er26-3515-002.pdf)：接受≥50MW大型负荷登记并拟10-12生效、**IRAS被驳回**。RAA Schedule 11载明2027-03-01初始报送、公开端仅按区域可能提供汇总并保护商业秘密；未验证项目级公开源上线。[PJM门户](https://www.pjm.com/markets-and-operations/large-load)仍显示旧`Pending`文字，法律状态以FERC为准。
+- [第六轮完整研究与历史源冲突审计](reports/2026-11-14_h03_registry_and_dc_peak_baseline.md)，机器状态见[对照表](data/h03_data_discrepancies_and_controls.csv)。

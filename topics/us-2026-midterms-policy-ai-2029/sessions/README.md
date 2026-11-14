@@ -14,3 +14,6 @@
 - [2026-11-14 H03 Firm合同和实体业务对照](2026-11-14-h03-firm-operating.md)
 
 - [2026-11-14 SCC 70GW队列与GS-5生效的前瞻因果控制](2026-11-14-h03-queue-and-physical-delivery.md)
+
+
+- [2026-11-14 H03原始DC同时峰值、Firm修正及双登记制度核验](2026-11-14-h03-registry-dc-peak.md)

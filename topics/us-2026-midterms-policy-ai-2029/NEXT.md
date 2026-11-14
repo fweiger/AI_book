@@ -38,3 +38,11 @@
 - 对照2025-11-25已公布、2027-01-01生效GS-5的旧公告与2027-01-03新国会事件。2027首季新合同变化先区分州费率预期/生效、项目准备及联邦新法。
 - 保持[真实交付MWh](data/h03_dominion_actual_delivered_mwh_2024_2026.csv)与[DC电力销售占比](data/h03_dominion_dc_sales_share_annual.csv)分表；寻找客户分类的**真实MWh**及同区域实际投产时间，不把高负荷收入美元或PJM预测MW直接替代。
 - 完整新证据见[第五轮H03报告](reports/2026-11-14_h03_queue_tariff_physical_delivery.md)和[新脚本](analysis/recompute_h03_queue_and_physical.py)。
+
+
+
+## 优先：SCC #52与PJM双登记数据，而非混杂的电网总峰值
+- **第一个已可验收的纯DC基线**：[Dominion 2026-01公司信函](reports/2026-11-14_h03_registry_and_dc_peak_baseline.md)锁定2025实际峰值约4GW、2027—2029预测4933/5448/5980MW。将来收到2027/28/29同公司同定义实际后计算误差，避免使用DOM区域2025 LLA 5563MW冒充纯DC。
+- **2026/27 Firm状态**：CLOA+ESA与ELOA区分；跟踪公司同季合同存量，记录2025Dec→2026Sep Firm 21.2→22GW、占比43.71→40.07%，不当作逐项目兑现。
+- **SCC #52**：2026-10-23原Order继续审理，下一次核对PUR-2026-00011真实最终批准/匿名队列下载。5-12中间命令后续10-23日期写5-25的矛盾保留，避免查找不存在第二次裁定。
+- **PJM电网登记**：FERC在2026-10-09接受>=50MW registry，PJM11-09报合规，存2027-03-01初始报送截止与公开端按EDC区域汇总限制；发现可用汇总后按RTO/区域/年份统计且**不假装取得项目级信息**。同期监控SCC拟议≥100MW州队列，另见[机器状态表](data/h03_state_federal_large_load_registry_status.csv)。

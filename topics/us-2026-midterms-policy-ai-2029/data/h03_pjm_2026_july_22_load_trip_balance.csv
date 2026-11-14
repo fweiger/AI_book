@@ -1,0 +1,2 @@
+event_date,PJM_RTO_load_mw_before,PJM_RTO_load_mw_after,net_RTO_load_drop_mw,PJM_reported_approx_DC_transfer_mw,report_source_url,limitation
+2026-07-22,99984,96205,3779,3800,https://insidelines.pjm.com/pjm-dominion-review-large-load-transfer-event/,"Net PJM-wide real-time drop includes dynamic system changes, not exact site DC metered total; source reports approximate transfer"

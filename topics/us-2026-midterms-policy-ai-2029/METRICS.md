@@ -57,3 +57,13 @@
 - `H03_COOLING_DEGREE_DAYS_Q3`：Dominion 2026Q3 1313 vs2025Q3 1066（+23.17%），气象因素；不能因用电增长就说全来自AI建设。
 - `GS5_BILLED_DEMAND_FLOOR_SCENARIO`：100MW合同而实际需求20MW，T&D最低可计费85MW、适用时Generation最低可计费60MW；**是费率计费基础而非实际用电MW，绝非收入美元**。生效2027-01-01，批准2025-11-25。
 - `PJM_PROJECT_REALIZED_FROM_DATED_QUEUE`：必须匹配同一个申请/接入点的预计日期、实际带电、计量MWh。当前项目级数据库未定位，保持NA，不能由25/70推算。
+
+
+
+## H03 v0.1.8真正DC专属的历史观察与外部预测注册
+- `DOM_DC_OBSERVED_COINCIDENT_PEAK_2025`：Dominion Energy原信函报告2025DC客户同时峰值**约4000MW**，可作为2026-01及2026-11两个PIT截止的历史数据，但公司范围不是PJM DOM区域或RTO全部LLA。非新增项目容量。
+- `DOM_DC_EXTERNAL_FORECAST_YYYY`：由2026-01-06信函公开并2026-02-02列入PJM资料的公司未来预测，2027=4933MW、2028=5448、2029=5980；**是外部发行人预测**，本研究2026-11回溯录入，不伪称自己的2026-01事前预注册。未来实际需要同公司、DC分类、同时峰值定义才能评价。
+- `DOM_CONTRACT_STAGE_FIRM_SHARE`：按公司2026-01解释将**CLOA+ESA**视为Firm、ELOA非Firm；2025Dec 21.2/48.5=43.711%，2026Sep22.0/54.9=40.073%。Firm存量+3.77%，Firm占比下降3.64pp。**此处的公司Firm不是PJM正式accepted，更不是实际接电**。
+- `PJM_LARGE_LOAD_TRIP_MW`：2026-07-22约3800MW计算/数据中心负荷切到自备电源；PJM系统实时净负荷从99984至96205（净3779MW）。为**事件冲击**，不能用2025DC年度峰值做同比或者算公司客户占比。
+- `PJM_REGISTRY_PUBLIC_AGGREGATE`：>=50MW范围FERC于2026-10-09接受，2027-03-01已有/即将投运大型负荷申报截止；仅公开配电区域汇总（具保密限制），目前真实CSV状态NA。与VA SCC拟议DP约100MW匿名公开队列**不同法域与范围**。
+- `VIRGINIA_SCC_QUEUE_PUBLICATION_STATUS`：2026-10-23官方Order仍`CONTINUED`，匿名项目清单未实际核实；保留May12 vs May25日期冲突，不能把interim当final或上市。

@@ -51,3 +51,14 @@
 - [h03_gs5_minimum_billed_demand_scenarios.csv](h03_gs5_minimum_billed_demand_scenarios.csv)：15种假设100/25/300MW合同计费底线（MW不是美元、非实际用电）。
 - [h03_aep_pre_election_security_and_tariff_status.csv](h03_aep_pre_election_security_and_tariff_status.csv)：2026前已审批/未决收费机制及Texas ERCOT金融担保与初期申请。
 - [标准库复算脚本](../analysis/recompute_h03_queue_and_physical.py)。
+
+
+
+## H03第六轮：公司DC专属实测/预测与两个监管登记路径
+- [h03_dominion_dc_only_physical_and_forecasts.csv](h03_dominion_dc_only_physical_and_forecasts.csv)：2025纯DC约4GW实际同时峰值+2026Jan原信函的2026—46共21个DC-only预测，不当成2026Nov独立本团队预注册。
+- [h03_dominion_firm_capacity_stages_backtest.csv](h03_dominion_firm_capacity_stages_backtest.csv)：CLOA+ESA公司Firm，ELOA非Firm，2025Jul/Dec及2026Sep，保留**历史快照实际披露日**。
+- [h03_pjm_real_load_trip_events_2024_2026.csv](h03_pjm_real_load_trip_events_2024_2026.csv)：2024/25/26三次PJM负荷转换事件，非实际数据中心全年峰值增长。
+- [h03_pjm_2026_july_22_load_trip_balance.csv](h03_pjm_2026_july_22_load_trip_balance.csv)：2026-07-22 PJM实时整体净下降3779MW与公告“约3800MW”。
+- [h03_state_federal_large_load_registry_status.csv](h03_state_federal_large_load_registry_status.csv)：VA SCC拟议100MW DP队列仍待审 vs FERC接受PJM >=50MW登记，2027-03初始报送，公开仅可能为区域汇总。
+- [h03_data_discrepancies_and_controls.csv](h03_data_discrepancies_and_controls.csv)：5-12 vs5-25官方日期、PJM网站过期Pending、2025纯DC实际4GW与DOM区域LLA5563MW不能混比。
+- [纯标准库复核](../analysis/recompute_h03_matured_dc_baseline.py)，以及[第六轮报告](../reports/2026-11-14_h03_registry_and_dc_peak_baseline.md)。历史原始信函公开2026-02，研究归档2026-11。
