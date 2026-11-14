@@ -97,3 +97,11 @@
 - [1781年殖民税预算、据称实际税额和王室实收的争议说明](CASE_FRA_M2_METROPOLITAN_ARCHIVE_ROUTE_20261114.md)：1787年Calonne称其1781实际账单独项目为零；1781Necker正常预算410万；1788Necker答辩称1781该税产出368.7万。**三者是争议中的不同口径，均非本轮已核实的王室实收现金。**
 - [1781年Necker—Calonne会计争论CSV](necker_calonne_domaine_1781_accounting_dispute_m2.csv)：5条记录，明确区分和平预算、政治争论、后世校刊及一手凭证目录；41.3万差额只做算术，不称实际收税缺口。
 - [补充原始收据档号](metropolitan_fiscal_archives_m2.csv)：法国财政档案`SAEF 0Fi-0000253/75`，1781-02-08波尔多“domaine d'Occident”收据，**目录已找到、金额及原件未取得**。
+
+## M2 新增：1788财政书目版本及误差定位（2026-11-14）
+
+- [原刊谱系及差异审计报告](CASE_FRA_M2_EDITION_LINEAGE_AND_VARIANTS_20261114.md)：区分1789年圣多明多当地1788全年报告、1790年巴黎重刊、1798英文转述，并新定位Proisy 1790年出版的**1789全年财政账**。
+- [刊本与期间登记CSV](edition_provenance_m2.csv)：8条有出版年份、会计覆盖年、来源URL、学术核实状态的记录。
+- [数字冲突审计CSV](printing_discrepancy_register_m2.csv)：5条差异，保留2000里弗尔、300里弗尔3苏8德尼及7苏转录异常，不擅改前轮历史数据。
+
+阶段：书目存在性与旧货币差额计算通过；原刊表格页像**未审核**，财政净益和历史因果**NOT_RUN**。

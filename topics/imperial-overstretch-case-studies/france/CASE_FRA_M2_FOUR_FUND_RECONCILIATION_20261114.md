@@ -54,3 +54,7 @@ Laborie说明税务官员收取的主要出口 `octroi` 税通常集中于 **Cai
 - **下一项唯一工作**：针对Marbois1790年 N.º XI、Caisse de la Marine分表与 Laborie1798年附录的页像核对三处差异；再查1788年王室 `Domaine d'Occident` 实际现金收付、海军转账与地方账中的汇票对手方。
 
 因果回归 NOT_RUN；巴黎国库实际取得殖民净收益 NOT_ACQUIRED；原页高清图像核验 BLOCKED。
+
+## 6. 不同刊本的数字冲突尚需原页证据
+
+详见[1788财政版本审计](CASE_FRA_M2_EDITION_LINEAGE_AND_VARIANTS_20261114.md)。本报告中四金库逐德尼复算的PASS仅证明**录入的数值可以内部平衡**；1789 Port-au-Prince当年原刊、1790巴黎重刊与1798英文转录可能存在排版/转录差异。原页未核查，不能宣布2,000l、300l3s8d、7s差异已解决。
