@@ -158,3 +158,8 @@
 ## H09正式2022支付基线与H10十次可核事前预期（v0.2.6）
 - [Travis County2022官方项目汇总对应的有日期状态](../cases/musk-2026/travis_rebate_disbursement_status_asof_2025.csv)：2022-01-31零返利已支付、绩效年1验收待完成（F类官方概览），与2025新闻引用无已付、2026正式9%扣留分日期；[事实与局限报告](../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)。不将历史零付款外推到2026实付。
 - [10次有真正事前日期的专业CPI预测/BLS首发/UST有符号日变动](h10_cpi_pre_release_dated_forecasts_10events_2023_2026.csv)与[46份事后供应商日历（均非PIT）](h10_cpi_release_ust_46event_vendor_archive_not_pit.csv) **分别留在两个数据库**。前者10例中8例核心surprise非零、7例2Y非零、6例方向一致，双侧p0.125；后者46日期headline/core各有28例可见预测但源时间不明，不得计算专业前瞻命中。[专业报告](../reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md) · [方向二项检验](../analysis/recompute_h10_pre_release_cpi_surprise_10_events.py) · [来源冲突验证](../analysis/audit_h10_dated_vs_archive_forecast_conflicts.py)，两个程序经Ubuntu基于Github实际CSV跑通PASS。
+
+
+## Ch313 Del Valle税基限制与2025同发布者CPI事前预测样本（v0.2.7）
+- [H09 Texas Comptroller Del Valle ISD #1496 Chapter313 两版CDR×税年14行](../cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv)，含两份原始XLSX URL/SHA、正式posted日期、税年是否未来预测、学区税负差及Revenue Protection/Supplemental Payments，和[版本差解释](../reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)。**与Travis县381返利实际支付完全分开**，两次Excel读取/恒等式/差额已Ubuntu实际运行PASS。
+- [H10 2025年全部11次真实CPI发行中同一来源Calculated Risk仅7条提前时间戳的专业共识及4条NA](h10_cpi_consistent_publisher_2025_pre_release_cohort.csv)；[固定来源方向反证报告](../reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)，[独立复算脚本](../analysis/recompute_h10_2025_consistent_publisher_cpi_direction.py)运行PASS：Headline非零surprise同向2/5，Core2/4，双侧Exact p皆1.0，不复现此前混源10事件Core6/7。**历史完整性只有7/11且Treasury是整日波动，不能推断预测胜率和CPI独立因果。**
