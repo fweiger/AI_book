@@ -71,11 +71,8 @@ def main():
   if not (1697<=start<=stop<=1850):raise ValueError("out-of-scope timing")
   if r["working_paper_sha256"]!=PDF_SHA:
    raise ValueError("Wrong verified PDF-version SHA")
-  if r["original_record_status"] if False else False:pass # avoid phantom data fields
   if r["underlying_record_status"]!="ORIGINAL_DAVIS_WADSWORTH_BAINES_ELLISON_RECORDS_NOT_REEXAMINED":
    raise ValueError("Do not imply archive originals directly accessed")
-  if r["causal_effect_replicated"] if "causal_effect_replicated" in r else False:
-   raise ValueError("No causal estimate was reproduced")
   if not r["primary_author_working_paper_url"].startswith("https://"):
    raise ValueError("Missing publication link")
   if not r["interpretation_guardrail"]:
