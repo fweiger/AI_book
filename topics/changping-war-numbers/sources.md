@@ -19,3 +19,20 @@
 - **D**：影视视频、宣传口径、口耳相传、转写文本等。
 - 同一《史记》内容被多本文章重复引述时，**不能算多份独立证据**。
 - 研究不复制受版权保护的论文全文，不公开本地文件路径和私网地址。
+
+## 第二轮增补学术资料（阅读状态见每行；不把未读全文说成精读）
+
+| ID | 资料 | 阅读状态及能证实的边界 |
+|---|---|---|
+| S09 | [管东贵，1979，《戰國至漢初的人口變遷》](https://www11.ihp.sinica.edu.tw/storage/w2_file/3679WtUccCg.pdf) | 全文关键段落核读；总人口数部分由古籍卒数反推，不独立 |
+| S10 | [张善余，2003，《中国人口地理》出版社样章](https://www.ecsponline.com/yz/BB82CF303A8484BE382D899850DF33373000.pdf) | 核读样章；郭沫若秦赵合计约500–600万人是推算而非清册 |
+| S11 | [王晖，2015，《西周金文与军制新探》](https://www.xuebao.snnu.edu.cn/info/1072/5855.htm) | 校方摘要核读；西周师制不是战国征兵上限 |
+| S12 | [胡大贵、冯一下，1987，《试论秦代徭戍制度》](https://wkxb.sicnu.edu.cn/Publish/201605/20160513162729109.pdf) | 论文关键段落；喜的傅籍年龄学界有分歧 |
+| S13 | [宫宅洁 Kiyoshi Miyake，2018，Bamboo and Silk 1(1):121–151](https://brill.com/view/journals/bsms/1/1/article-p121_121.pdf) | 论文摘要与相关章节直接查读；出土里耶简晚于长平 |
+| S14 | [吴磊佳 Leijia Wu，2024，A Study on the Battle of Changping](https://doi.org/10.1163/22127453-bja10021) | 2024正式论文作者大学存稿关键论证已读；与2016张广志意见相反 |
+| S15 | [Chun Fung Tong，The Emergence of Logistics Networks... Early China](https://doi.org/10.1017/eac.2025.10032) | 论文关键部分已读；秦征服期230–221 BCE，晚于长平 |
+| S16 | [Wicky Tse，2017，Cutting the Enemy’s Line of Supply](https://doi.org/10.1163/22127453-12341315) | 摘要/关键段落核读；交通线拦截战术不可线性反推敌全军 |
+| S17 | [Shuang Chen，2022，Demography of Qing China](https://doi.org/10.1093/acrefore/9780190277727.013.445) | 权威条目摘要；19世纪中叶约4.3亿而非康雍 |
+| S18 | [李硕，2020，长平战争技术采访](https://www.thepaper.cn/newsDetail_forward_7305868) | 媒体访谈；低兵力估计非独立同行评议测量 |
+
+**源独立性提示**：同一个战国“卒数”既被用于估人口又用于论军额，源不独立；多篇论文引用《史记》不能算多个古代目击来源。S14 UTS大学作者稿全文链接在[学术争论笔记](research/2026-11-15-academic-debate.md)。

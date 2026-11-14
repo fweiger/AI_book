@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "topic_id": "TOPIC-013",
   "title": "长平之战兵力、杀降数字与史料可信度",
-  "topic_version": "0.1.0",
+  "topic_version": "0.2.0",
   "updated_at": "2026-11-15",
-  "source_level": "古籍文本核对＋现代论文全文＋考古保护规划（争议结论未定）",
+  "source_level": "出土制度研究、历史人口论文、考古规划、学界对立解释；数值结论未定",
   "books": [],
   "nodes": [
     {
@@ -66,6 +66,66 @@
       "type": "claim",
       "title": "2023骨骼暴露点中存在普通墓葬",
       "source_status": "官方保护规划核读"
+    },
+    {
+      "id": "C011",
+      "type": "claim",
+      "title": "军额反推人口造成循环论证",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C012",
+      "type": "claim",
+      "title": "秦赵分国人口未有独立同期清册",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C013",
+      "type": "claim",
+      "title": "商周秦兵制口径差异",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C014",
+      "type": "claim",
+      "title": "河内15岁以上特别动员",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C015",
+      "type": "claim",
+      "title": "2024论文提出卒含后勤民众",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C016",
+      "type": "claim",
+      "title": "秦简轮换与长期戍及粮草网络",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C017",
+      "type": "claim",
+      "title": "遗址坑位数不能等比例推40万",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C018",
+      "type": "claim",
+      "title": "可动员人口和可长期供养人数不同",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C019",
+      "type": "claim",
+      "title": "清朝4亿主要属于19世纪",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
+    },
+    {
+      "id": "C020",
+      "type": "claim",
+      "title": "商君书战后作战与供粮人口分工",
+      "source_status": "研究第二轮：独立人口与真实兵力均未定"
     }
   ],
   "edges": [
@@ -116,6 +176,54 @@
       "target": "C008",
       "relation": "类比",
       "note": "跨朝代类比不可作为直接证据"
+    },
+    {
+      "source": "C011",
+      "target": "C012",
+      "relation": "方法警戒",
+      "note": "人口估计依军额则不独立"
+    },
+    {
+      "source": "C012",
+      "target": "C008",
+      "relation": "反证",
+      "note": "视频国别人口未独立核对"
+    },
+    {
+      "source": "C013",
+      "target": "C014",
+      "relation": "制度对照",
+      "note": "河内15+特殊征调"
+    },
+    {
+      "source": "C015",
+      "target": "C005",
+      "relation": "学术争论",
+      "note": "吴2024对照张2016"
+    },
+    {
+      "source": "C016",
+      "target": "C018",
+      "relation": "制度支持",
+      "note": "轮戍使累计与同时不同"
+    },
+    {
+      "source": "C017",
+      "target": "C006",
+      "relation": "证据边界",
+      "note": "不能18×130外推"
+    },
+    {
+      "source": "C019",
+      "target": "C009",
+      "relation": "年代纠正",
+      "note": "康熙与晚清人口不可比"
+    },
+    {
+      "source": "C020",
+      "target": "C016",
+      "relation": "制度但非同代名单",
+      "note": "长平后政策论说"
     }
   ],
   "reading_paths": [
@@ -152,6 +260,26 @@
       "nodes": [
         "C009",
         "C008"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "国别人口估计独立性",
+      "nodes": [
+        "C011",
+        "C012",
+        "C013",
+        "C014"
+      ]
+    },
+    {
+      "id": "Q08",
+      "name": "兵员口径学术争议",
+      "nodes": [
+        "C005",
+        "C015",
+        "C016",
+        "C018"
       ]
     }
   ],
