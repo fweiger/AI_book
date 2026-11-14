@@ -2,6 +2,9 @@
 
 > **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.8；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
+## 第十八轮 H02：2027—2029财政分项真实基线及付款时钟（2026-11-14）
+- [CBO 2026-02版FY2027—29财政与初级赤字完整报告](reports/2026-11-14_h02_round18_cbo_feb2026_fiscal_baseline_timing_bridge.md) · [4年财政年度宽表](data/h02_cbo_feb2026_fiscal_baseline_round18_wide.csv) · [142条官方数据分项](data/h02_cbo_feb2026_fiscal_baseline_round18_long.csv) · [两份CBO官方来源SHA](data/h02_cbo_feb2026_source_manifest_round18.csv) · [7条选前已知政策桥接](data/h02_round18_pre_election_policy_baseline_bridge.csv) · [纯Python复算](analysis/recompute_h02_cbo_feb2026_baseline_round18.py)。CBO预计FY2027/28/29赤字1887.203/2079.658/2019.715十亿美元；跨财年付款调整−123.583/+123.583十亿美元会使2028/29初级赤字占GDP变化方向与未调整值相反。**只属于2026-02选前固定预测基线，不是2026-11-02完整政策基线或2027真实财政冲量**；P.L.119-74/75在报告法律截止后签署，净FY2027—29效果目前NA。H01—H10完整因果仍UNTESTED、P-A—P-D UNKNOWN；PR #51尚未合并。
+
 ## 第十七轮｜成法条款、财政双基线与2027旧法时钟（2026-11-14）
 - [已成法政策→CBO双预算基线→实际执行与2027旧法生效的完整研究](reports/2026-11-14_h02_round17_policy_section_budget_baselines_and_legacy_2027.md) · [16条来源/金额/日期台账](data/h02_round17_policy_section_budget_actual_2008_2026.csv) · [6份原提案及最终成法SHA](data/h02_round17_gpo_bill_to_law_6files_sha.csv) · [Python复算](analysis/recompute_h02_round17_policy_section_budget_actual.py)；证明2025 P.L.119-21对不同CBO预算基线分别+3.4万亿/-3660亿美元且2027既有Medicaid和风光税惠规则不是2027新国会法案。Ubuntu联网6份GPO SHA与数据校验PASS。H01—H10完整因果UNTESTED，P-A—P-D UNKNOWN，PR #51未合并。
 
