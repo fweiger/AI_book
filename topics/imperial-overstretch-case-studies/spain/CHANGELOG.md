@@ -26,3 +26,12 @@
 - Navy share rose to 31.51% for 1793–96, later 14.32% for 1797–1801; no interest cost displacement causal test; overseas shipyards/Havana spending excluded.
 - UKDS 3104 original TAB remains NOT_ACQUIRED due registered-user End User Licence; M2b naval table available via publisher preview but is not raw Simancas ledgers.
 - PR #36 remains Draft, Issue #32 remains OPEN, formal knowledge graph untouched.
+
+
+## 2026-11-14 — M2c parliamentary debt, annual interest due and Banco creditor discrepancy (Draft)
+
+- Added 1811 Spanish parliamentary source reporting 1808 debt categories, official estimated 7.194bn nominal reales plus 33 maravedís, and 219.591m nominal reales of annual interest **due (not paid)**, preserving a 34-maravedí real instead of misreading historical notation as decimal.
+- Added Banco de España institutional evidence: 1794 Treasury claims at chartered Banco de San Carlos ~107m, 1807 ~217m including >43m overdue interest; 2017 bank history estimates 70% bank assets concentrated in Crown exposure. These are retrospective creditor accounts and are not equal to 1808 Parliamentary debtor schedule 125.653m.
+- Recorded the 1811 contemporary contest of debt stock estimates 7.194bn vs Canga's 7.864bn, recognized debt 5.973bn under narrower criteria, and a 20,000 reales internal difference in two bank claims from the parliamentary text.
+- Committed M2c report, debt CSV, creditor-side CSV, source registry, research session and README expansion. Official parliamentary PDF text searchable; screenshot HTTP403. Copyrighted full PDFs not uploaded.
+- Remain NOT_ACQUIRED: UKDS study 3104 g104spd3.tab, AGS original ledger, Banco original accounts, matched same-year debt interest actually paid and full Army/Navy outlays. No crowd-out causal claims; PR remains Draft/Issue OPEN.
