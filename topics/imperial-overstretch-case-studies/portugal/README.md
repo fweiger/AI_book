@@ -142,3 +142,11 @@
 - 1765年按**税金征收地**，海外相关财政部门入账份额约**15.69%**；按研究者对**应税商品原产地**重新分组后约**55.86%**，属于统计口径改变而非殖民税收同比增长，亦不等于帝国税收净ROI。作者重分类地区四行加总比印刷总计少**70,000 réis（0.07 contos）**，已保留`SOURCE_REGIONAL_RECLASS_70K_REIS_OPEN`。
 - 同作者2011版与2019版的4项精确资产、负债和利润金额完全相同，但两类`Caixa`账户余额分别为**2011年359.525124 contos**和**2019年约2,765 contos**：`CAIXA_VERSION_DEFINITION_CONFLICT_OPEN`，不能任选其一当实际1765国家全部现金；底层四本AHTC FGER Livros Mestre**537、2699、3976、4154**的原账及`2699 fólio 10`军费结转单仍未取得。
 - 本轮新增[22类收入/支出/战争源分类](data_m2/rodrigues2019_1765_royal_treasury_revenue_expense_war_m3.csv)、[四个地区税金收缴地和商品原产地双视图](data_m2/rodrigues2019_1765_revenue_collection_vs_origin_region_m3.csv)、[2011/2019两版核对表](data_m2/rodrigues_1765_master2011_vs_phd2019_account_edition_audit_m3.csv)、[16项独立计算结果](data_m2/rodrigues1765_royal_treasury_derived_fiscal_identity_m3.csv)及[已实际运行的整数réis复算脚本](data_m2/reproduce_1765_royal_treasury_fiscal_functional_bridge_m3.py)。仍属于发表账表的内部可复算性，非已调阅原始王室手稿或历史因果效应。
+
+
+## M3增量：1766年1,564 contos军事旧账集中结算与1765税收地区表跨版本差异
+
+- [1766_MILITARY_TREASURER_ROLLOVER_2011_2019_REGIONAL_TABLE_LINEAGE_M3_20261114.md](1766_MILITARY_TREASURER_ROLLOVER_2011_2019_REGIONAL_TABLE_LINEAGE_M3_20261114.md)：已独立下载ISCTE同作者**2011硕士和2019博士**原文，确认1765税源地区重分类收入的**70,000 réis**差额在2011 Table3.31/3.32与2019 Table5.9/5.11中**原值逐项相同、连续存在**，不是2019版独有，也不是两个独立档案样本。
+- 新的原账定位及历史解释：2019博士正文第87页详述**Luís Gomes Peixoto在1762—1766累计约1,564 contos的借方责任余额，于1766一次转至军事费用损益**；定位**AHTC/FGER Livro Mestre 537 fólio 36**，1766-12-31余额在**fólio 274**。作者提示款项可能在更早时点已支付，此结转**不是1766年的新现金战争开支**。
+- 同一Contadoria 1765/1766损益累计借方**441 vs 4,080 contos（账面规模比9.25倍）**，但不是王国完整年度支出，也不能用作战争费用同比增长。葡萄牙[军事历史档案馆的Erário子基金](https://ahm-exercito.defesa.gov.pt/details?id=41254)独立确认1763年7月9日的旧军需会计机构撤销。
+- 新的[两版地区数据源追溯CSV](data_m2/rodrigues_1765_regional_reclass_2011_2019_persistent_70k_m3.csv)、[1765/1766第一Contadoria对照CSV](data_m2/rodrigues2019_1765_1766_first_contadoria_account_rollover_m3.csv)、[11项派生结果](data_m2/rodrigues_1765_1766_edition_and_war_rollover_summary_m3.csv)与[标准库可复算程序](data_m2/reproduce_1765_1766_archival_account_rollover_and_editions_m3.py)，均保留`ORIGINAL_MANUSCRIPT_NOT_ACQUIRED / CASH_FLOW_NOT_IDENTIFIED`。
