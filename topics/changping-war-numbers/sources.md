@@ -91,3 +91,10 @@
 - **S50** [Mapzen Terrain Tiles 公共DEM数据](https://registry.opendata.aws/terrain-tiles/)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
 - **S51** [GRASS r.walk和r.viewshed官方工具文档](https://grass.osgeo.org/grass-stable/manuals/r.walk.html)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
 - **S52** [山西大学乔松林师资简介](https://history.sxu.edu.cn/szdw/qzjs/zgsx/zggds/gdsfjs/001c01080ec74162a63b6d85786da505.htm)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+
+## 第八轮源追加
+
+- **S53** 用户上传李冀侯甬坚2023原刊第62页图1B，实际图形经纬标注已直接复核；原版权PDF不上传GitHub。
+- **S54** [AWS公开Mapzen DEM](https://registry.opendata.aws/terrain-tiles/)：第八轮六瓦片Ubuntu成功访问及算法初筛，属现代数据。
+- **S55** [姜湾2025古道ArcGIS复原](https://m.fx361.com/news/2025/0330/26465334.html)：DEM与实地古道结合才可定历史路网。
+- **S56** [《地理研究》南方丝路古道网络](https://www.dlyj.ac.cn/CN/abstract/article/1000-0585/51576)：古道路基/渡点GPS，非长平直接史实。

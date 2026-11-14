@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "topic_id": "TOPIC-013",
   "title": "长平之战兵力、杀降数字与史料可信度",
-  "topic_version": "0.7.0",
+  "topic_version": "0.8.0",
   "updated_at": "2026-11-15",
   "source_level": "真实现代DEM高程初筛＋学者军官防御地理和GIS方法研究；历史兵员未知",
   "books": [],
@@ -462,6 +462,42 @@
       "type": "claim",
       "title": "现代DEM初筛不是已完成前260年具体古道/GIS阻断及守军人数模拟",
       "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C077",
+      "type": "claim",
+      "title": "2023原刊第62页图1B标到东经113°15′；旧DEM窗口东界113.14°覆盖不全",
+      "source_status": "2026-11-15 Ubuntu模型实算，历史兵力尚未独立验证"
+    },
+    {
+      "id": "C078",
+      "type": "claim",
+      "title": "扩窗112.60–113.30E/35.62–35.95N真实取六块DEM，1019×593像元，高程672–1481米",
+      "source_status": "2026-11-15 Ubuntu模型实算，历史兵力尚未独立验证"
+    },
+    {
+      "id": "C079",
+      "type": "claim",
+      "title": "平均坡度≤10°模型南北可贯通、东西未贯通；达到条件像元76.21%，但面积不代表连通性",
+      "source_status": "2026-11-15 Ubuntu模型实算，历史兵力尚未独立验证"
+    },
+    {
+      "id": "C080",
+      "type": "claim",
+      "title": "平均坡度≤15°条件东西71.23km、南北38.21km；是自动边界起终点的现代坡度成本路径",
+      "source_status": "2026-11-15 Ubuntu模型实算，历史兵力尚未独立验证"
+    },
+    {
+      "id": "C081",
+      "type": "claim",
+      "title": "块内最大坡度≤15°东西不贯通，放宽20°才贯通约73.29km；结果对聚合与阈值敏感",
+      "source_status": "2026-11-15 Ubuntu模型实算，历史兵力尚未独立验证"
+    },
+    {
+      "id": "C082",
+      "type": "claim",
+      "title": "上述路径并非公元前260年道路、秦125km围困线，也不能推算守军人数或赵俘死亡数",
+      "source_status": "2026-11-15 Ubuntu模型实算，历史兵力尚未独立验证"
     }
   ],
   "edges": [
@@ -866,6 +902,42 @@
       "target": "C070",
       "relation": "状态说明",
       "note": "DEM初筛已跑，历史军事路线未跑"
+    },
+    {
+      "source": "C077",
+      "target": "C078",
+      "relation": "分析范围修正",
+      "note": "图1B东侧113度15分不在旧窗113.14度内"
+    },
+    {
+      "source": "C078",
+      "target": "C079",
+      "relation": "真实现代DEM实算",
+      "note": "10度阈值是一种人为通行假设"
+    },
+    {
+      "source": "C080",
+      "target": "C079",
+      "relation": "阈值敏感性",
+      "note": "提高坡度上限使WE连通"
+    },
+    {
+      "source": "C081",
+      "target": "C080",
+      "relation": "聚合敏感性",
+      "note": "块最大坡度更保守"
+    },
+    {
+      "source": "C082",
+      "target": "C033",
+      "relation": "禁止直接推断",
+      "note": "现代路网测试不能证明秦累计68万"
+    },
+    {
+      "source": "C082",
+      "target": "C001",
+      "relation": "禁止直接推断",
+      "note": "现代地形不能单证杀降40万"
     }
   ],
   "reading_paths": [
