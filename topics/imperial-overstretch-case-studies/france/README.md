@@ -120,3 +120,11 @@
 - [政治财政原始与次级来源 CSV](political_fiscal_sources_m2.csv)：5项来源，标注偏见、部分翻译及争议材料不能代替银行流水；文书标题日期9月21与现代英译末尾8月21不符，保持 OPEN。
 
 **状态**：政争存在 `PRIMARY_TEXT_SUPPORTED`，实际“二百万”汇款`UNVERIFIED_POLITICAL_CLAIM`，20万/月拨款 `RETROSPECTIVE_REQUEST_NOT_PAYMENT`；1788主金库/王室收款账 `NOT_ACQUIRED`，因果`NOT_RUN`。沿用 Draft PR #39，不合并。
+
+## M2 同期财政官员答辩与SHD馆藏：1785—1791预算、征税、私人信用（2026-11-14）
+
+- [BnF Wante（1790）连续财政答辩与SHD原档案路线](CASE_FRA_M2_DIRECT_REBUTTALS_AND_1789_BUDGET_ARCHIVES_20261114.md)：第二次答辩1790-01-09、第三次答辩日期1790-02-13/03-13有手写修订；首次答辩附**1789年计划支出表**。另定位SHD **MS142第99件（1789预计开支汇总）**、**MS338（1785外国商船实际港口进出口与税款）**及**MS353（1787—1791 Magnac私人贸易书信约1200封）**。
+- [六项原始材料获取清单CSV](original_finance_sources_1789_1790_m2.csv)：档号、会计期间、预算/实际/私人账户类型、目录确认与原件尚未取得的状态。
+- [原始财务证据六道校核条件CSV](prospective_finance_evidence_requirements_m2.csv)：两套1789预算刊本的同源性，1790答辩的指控与原日期，1785外国船舶税收及1788私人信用票据筛查。
+
+**本轮无新增已审计财务金额**：所有馆藏新发现仅为原始材料入口，预算**不等于**支付，私人汇票**不等于**王室国库现金。既有1788 Marbois原表的7苏等OCR冲突依旧`OPEN`；因果`NOT_RUN`。
