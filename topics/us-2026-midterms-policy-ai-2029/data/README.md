@@ -121,3 +121,8 @@
 
 ## H10：18个有效月份的CPI/PCE同月相关性（截至2026-11-14）
 - [CPI与PCE按月对齐CSV](h10_cpi_pce_aligned_monthly_2025_2026.csv)含21个日历月份，明确保留2025-01、2025-10、2025-11的CPI缺失，**只有18个有效同比源中同月环比配对**；并非两组全时段都有有效数据。 [Python标准库复算](../analysis/recompute_h10_cpi_pce_alignment.py)在Ubuntu实际运行PASS：headline r=0.946129、core r=0.553099。 [完整分析](../reports/2026-11-14_h10_cpi_pce_alignment_18_month_sample.md)。该关联仅为同月数据描述，不代表Fed因果/市场预测。
+
+## H03第十二轮：勘误前B9原始字节门槛
+- [h03_pre_correction_b9_source_availability.csv](h03_pre_correction_b9_source_availability.csv)：10个来源状态，含Jan原PDF的页数/字节/SHA、Jan独立B9b、Feb订正B9、当前合并与五月回顾，Wayback访问超时和外部镜像情况；未获得的bytes、SHA保留**空字段**而非数值零。
+- [h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv](h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)：2027—2030两个模型预测总量修订的绝对幅度比，**B9b含已嵌入模型成分，不可当政治/数据中心实际贡献率**。
+- [离线复算及PDF可选SHA核对](../analysis/recompute_h03_pre_correction_source_gate.py)，[完整研究报告](../reports/2026-11-14_h03_uncorrected_b9_source_gate.md)。
