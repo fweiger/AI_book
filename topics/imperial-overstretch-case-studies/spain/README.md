@@ -301,3 +301,13 @@ Issue #32 OPEN、Draft PR #36保留，不合并。
 - **实际新发现**：公开学术表1显示1765–1788向Barlovento汇款Serrano重建84,453,062银比索，Marichal–Souto–Klein对照103,172,038，差18,718,976（对后者18.14%）。表4只有**23行1766–1788**，真实总收入112,185,483、实际收到situados 74,541,779，论文公布两项平均值却恰等于**÷24**（4,674,395与3,105,907），按23行应为4,877,629.70与3,240,946.91；是否编辑/未披露处理待查。已发表逐年百分比平均约69%，**与金额加权总体比率66.45%不是同一种统计量**。
 - **额外史料突破**：2012 Marichal–Souto论文提供Veracruz→La Habana→Santo Domingo等多节点situados运输延误/现金凑集机制，记1758驻军欠薪抗议并引用AGNM卷件；2017多米尼加历史科学院《Clío》Amadeo Julián记为**1757**，并给出**AGI Santo Domingo 1088/1092**原始馆藏号。双日期原卷未读，来源冲突保留，不能误当两次样本。
 - **完成验证**：从论文公开HTML逐行取表并计算，两个CSV 24/23行、第三冲突登记2行、原始表总额/年比例复算通过；本地执行与GitHub文件**相同 blob SHA**的Python校验脚本退出码0。**只有公布数据算术PASS**，手写账本独立验证、战争/债息/殖民衰退因果均NOT_RUN。#32仍Open，Draft PR #36未合并，无档案申请邮件发送。
+
+---
+
+## M2s — 圣多明各1741/1757兵变与1758后续财政命令：独立档案链、历史到账数值（2026-11-14）
+
+- [M2s 主研究报告](M2S_SANTO_DOMINGO_1741_1757_1758_ARCHIVE_AND_CASH_RECEIPTS_20261114.md) · [1742—1750年8条到账复算表](santo_domingo_1742_1750_received_situados_m2s.csv) · [9条事件/原始档案溯源矩阵](santo_domingo_event_claim_provenance_m2s.csv) · [AGI与AGNM原档调阅咨询稿——未发送](ARCHIVAL_REQUEST_ES_SANTO_DOMINGO_M2S_20261114.md)。
+- **史料交叉核查**：Julián 2017与Gutiérrez Montoya–Marchena 2017都写圣多明各驻军抗议**1757年**，指向 **AGI Santo Domingo 1088/1092和1042/1092**；但2012 Marichal–Souto记**1758年**，引用**AGNM Reales Cédulas Originales vol78 exps104/109 / Historia vol570 f39**。部分作者共用Marchena史料研究链，因此没有形成原档独立核验；**年份冲突仍OPEN**。
+- **新数据**：Julián 2017转录自1751年财政证明（AHN Consejos20764 pieza1 fols39v–41v）的八个1742–1750年度到账金额，人民币或港口工资本金均不适用，原文为历史银比索整数部分；加总**1,349,179**，1745缺失而非0。1756年4月20日La Flecha携154,585比索1 tomín5 granos抵达Ocoa、涉及1753–54军饷的历史出版物描述不是军饷签收原始凭证。
+- **新增机构级准入**：西班牙AGI 2025–28官方服务说明PARES可查部分数字化文书、档案咨询**agi2@cultura.gob.es**；墨西哥AGN官方Reales Cédulas指南核实大系列vol1–241有索引，但**没有核实vol78 exps104/109原始页**。
+- **验证范围**：8条历史到账数据和9条来源账核查通过，未取得AGI/AGNM原始卷页，未运行资金延迟→兵变/帝国衰落因果检验；档案咨询草稿**UNSENT**。保持Issue #32 OPEN、Draft PR #36。
