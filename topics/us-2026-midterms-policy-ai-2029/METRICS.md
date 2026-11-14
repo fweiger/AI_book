@@ -33,3 +33,11 @@
 源指标和校验见[H03研究报告](reports/2026-11-14_h03_pjm_large_load_realization.md)。
 
 - `H03_PJM_MACRO_ONLY_PEAK_REVISION`：同一规划年度`July 2026 informational summer coincident peak - January 2026 official summer coincident peak`，单位MW；严格标记**informational only、总峰值非数据中心、发生在选举前**。研究用途是宏观预测输入导致的普通版本修订对照，不是政策效果测量。
+
+## H03新增四阶段项目兑现指标（截至2026-11-14）
+- `C=SUBMITTED_CAPACITY_MW`：提交者容量口径；`D=SUBMITTED_DEMAND_MW`：经需求比率折算，不等于PJM准入。
+- `D/C`：2027全区17462.7/30466.9 = 57.317%。这是模型/企业提交中的容量→需求比，不是审批率。
+- `F/D`：具有ESA、CC等满足PJM firm条件的需求占提交需求比，当前**全国NA**；部分ODEC案例仅能描述承诺筛选机制。
+- `A/D`：PJM同批、同指标、同目标年的最终接受负荷与申请比；2027正式forecast尚未发布，当前**NA**；不同资料版本和嵌入量不能直接除。
+- `R/A`：同批最终接受的项目到目标日实际并网/使用电力占比；未有项目对应实际，当前**NA**。
+- `ZONE_CONCENTRATION`：按**折算需求D**分区；2027DOM+AEP占77.611%，禁止与DOM子区叠加。

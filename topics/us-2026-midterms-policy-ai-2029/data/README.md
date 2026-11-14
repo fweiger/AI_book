@@ -27,3 +27,9 @@
 - [标准库源验证与离线复算](../analysis/recompute_h03_pjm_accuracy.py)。源XLSX未复制进GitHub；需从官方URL独立合法获取，SHA变更时另开版本。
 
 - [h03_pjm_2026_july_macro_only_revisions.csv](h03_pjm_2026_july_macro_only_revisions.csv)：5个总区与4个规划年度的2026-01 vs2026-07总系统峰值预测，选前且仅供参考，来源SHA逐行登记；[校验程序](../analysis/recompute_h03_pjm_july_macro_update.py)。
+
+## H03新增2026年秋季真实申请表（非实际投产）
+- [h03_pjm_2026_sep_submission_capacity_demand_zone.csv](h03_pjm_2026_sep_submission_capacity_demand_zone.csv)：PJM官方XLSX两sheet 29条行对象×2027-2031=145行，容量和折算需求并排，保存Excel物理行、父/子角色和SHA。
+- [h03_pjm_2026_sep_rto_submitted_pipeline.csv](h03_pjm_2026_sep_rto_submitted_pipeline.csv)：五年RTO申请及DOM/AEP浓度；切勿把D/C当成审批或实际兑现。
+- [h03_pjm_2026_sep_source_discrepancy.csv](h03_pjm_2026_sep_source_discrepancy.csv)：Exelon FERC Nov3引用值 vs PJM Oct12会后值，暂不相同口径。
+- [recompute_h03_autumn_submission.py](../analysis/recompute_h03_autumn_submission.py)：标准库复算RTO、DOM子区，并可附原XLSX SHA校验全部145行。

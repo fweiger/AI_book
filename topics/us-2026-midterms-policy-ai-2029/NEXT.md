@@ -25,3 +25,7 @@
 
 ## PJM总峰值非政治修订对照（2026-11-14补充）
 - [经济输入更新负对照](reports/2026-11-14_h03_pjm_july_2026_macro_negative_control.md)已核实：2026-07重新输入Moody经济预测使PJM 2027/28全系统夏峰参考值比1月上修593MW；这一选前更新不因2027新国会引发。后续要以**真正的政策生效事件+项目建设事实**区分普通预测修订。
+
+## H03：下一步不是扩大申请量，而是从申请穿透到firm、accepted与realized
+- [2026年秋季申请口径审计](reports/2026-11-14_h03_sep2026_pipeline_capacity_vs_demand.md)将CAPACITY、DEMAND、Firm合同、PJM最终采纳、真实投产拆成5阶段。DOM与AEP占2027折算需求约77.6%，优先寻找二者**有实际签约时间/ESA/CC、项目MW、计划/实际并网日期**的公开报告。
+- 2027-01的正式PJM Load Forecast公布后，只有同项目/同定义/同目标年的需求才能计算F/D、A/D；必须和Exelon FERC表的数值差单独核对，不得把不同资料的差值当取消。

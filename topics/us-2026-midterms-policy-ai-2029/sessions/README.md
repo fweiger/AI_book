@@ -8,3 +8,5 @@
 - [2026-11-14 PJM实际负荷/预测覆盖核验](2026-11-14-h03-pjm-source-verification.md)
 
 - [2026-11-14 PJM宏观经济输入负对照](2026-11-14-h03-july-economic-control.md)
+
+- [2026-11-14 PJM秋季容量/需求申请审计](2026-11-14-h03-september-pjm-requests.md)

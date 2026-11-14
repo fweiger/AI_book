@@ -40,3 +40,8 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 
 ### PJM July2026宏观预测负对照（非真实电力消耗）
 [PJM官方2026-07-24 Mid-Year Update XLSX](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-mid-year-update-informational-only.xlsx)；SHA256 `8c2ed5a594c501718dc29755cb044b9d6bcbeac48fc751a6c25014ae1f99a94c`。原表自称For Informational Purposes Only，模型结构与其他假设按原文维持2026-01，仅使用Moody's Analytics June 2026经济预测。指标是**Total Summer Coincident Peak MW**而非Data Center或Large Load Adjustment。见[专门解释](reports/2026-11-14_h03_pjm_july_2026_macro_negative_control.md)。
+
+## 2026年9月PJM大型负荷申请，2026-10-12会后版本
+- PJM LAS [官网当日会议记录](https://www.pjm.com/committees-and-groups/subcommittees/las)：2026-09-29会议，10-12公布[官方Informational Only Capacity and Demand Requests XLSX](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260929/20260929-post-meeting---informational-only-capacity-and-demand-requests.xlsx)，SHA256 `211c1f69bfbb52e4e6499b5aa2f42004a65c7def4471d9e84a581e77970d7d51`，28,419字节（北京/武汉MCP独立一致）。两表分别为CAPACITY、DEMAND，各包含DOM子区、PENLC下级与RTO总计；不是最终正式采纳。分区与目标年数据见[第三轮H03](reports/2026-11-14_h03_sep2026_pipeline_capacity_vs_demand.md)。
+- Exelon [2026-11-03 FERC投诉档案](https://www.pjm.com/-/media/DotCom/documents/ferc/filings/2026/20261103-el27-11-000.pdf)引用Sept大型负荷请求量与10-12会后表不一致；该文件是**诉讼当事人提交的材料而非PJM最终认可的新预测**，具体数值分歧先进入[冲突台账](data/h03_pjm_2026_sep_source_discrepancy.csv)。
+- PJM[ODEC Data Center Demand Forecasting Process](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/odec-documentation.pdf)：可核查Firm ESA/CC、LOA或study request不计入、74%计量需求因子和三年爬坡；只针对该公用事业，不当作PJM审批率。

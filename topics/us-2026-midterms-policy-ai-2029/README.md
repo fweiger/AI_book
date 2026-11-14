@@ -47,3 +47,6 @@
 
 ## H03额外负对照：2026-07仅供参考的宏观输入更新
 - [PJM七月经济输入更新分析](reports/2026-11-14_h03_pjm_july_2026_macro_negative_control.md)：2026-07**仅供参考**同一模型结构、经济输入更新的PJM全系统峰值预测，对2027/28 RTO较2026-01上修593MW(+0.370%)，发生在选举前。附[CSV](data/h03_pjm_2026_july_macro_only_revisions.csv)和[复算脚本](analysis/recompute_h03_pjm_july_macro_update.py)。
+
+## H03秋季负荷申请：容量、需求折算与项目兑现分离（2026-11-14）
+- [PJM 2026-10会后官方容量/需求实测结构报告](reports/2026-11-14_h03_sep2026_pipeline_capacity_vs_demand.md)；[145行分区与年份](data/h03_pjm_2026_sep_submission_capacity_demand_zone.csv)；[5年RTO汇总](data/h03_pjm_2026_sep_rto_submitted_pipeline.csv)；[跨来源口径冲突](data/h03_pjm_2026_sep_source_discrepancy.csv)；[双重校验脚本](analysis/recompute_h03_autumn_submission.py)。提交量≠最终接受≠实际投产。
