@@ -71,3 +71,32 @@ No identity/contact data collected. No institution reply claimed.
 **Separate factual advance (not part of archival application):** Tedde de Lorca, Banco de España (2000) reports a large wartime decline in Banco San Carlos' silver-export profit, which is an alternative bank stress mechanism to sovereign crowding out. Report: [M2f](M2F_SILVER_BANK_REVENUE_AND_1808_ARCHIVAL_CONTINUITY_20261114.md).
 
 **Status:** CONTACT_VERIFIED; ITEM_HOLDING_VERIFIED; DIGITAL_OBJECT_NOT_LISTED; ORIGINAL_FOLDED_1807_BALANCE_NOT_ACQUIRED; EXACT_1807_LEDGER_CALL_NUMBER_UNKNOWN; REQUEST_NOT_SENT.
+
+
+---
+
+## C — Consulta de identificadores permanentes del repositorio digital del Banco de España (M2g; no enviada)
+
+**Asunto: Identificadores de actas digitalizadas Banco de San Carlos, 1790–1795 y Junta de 1808, y conciliación de capital histórico**
+
+Estimado equipo del Archivo Histórico del Banco de España:
+
+En la sección oficial de fondos digitalizados de su Archivo (https://www.bde.es/wbe/es/punto-informacion/contenidos/servicios/archivo-historico/colecciones-digitalizadas/) he localizado la colección de **actas de los órganos de gobierno del Banco de San Carlos** dentro del Repositorio Institucional, con enlace de colección https://repositorio.bde.es/handle/123456789/17572.
+
+El agregador de patrimonio cultural Hispana registra, por ejemplo, un libro original ya descrito y digitalizado: **Actas de la Junta de Dirección del Banco Nacional de San Carlos (1790)**, archivo **ES.28079.AHBE/01.01//000147**, fechas 5 de julio a 6 de octubre de 1790, 276 folios, enlace https://repositorio.bde.es/handle/123456789/18791. Desafortunadamente, mi acceso al sitio del repositorio ha devuelto un error y no he podido abrir el PDF de ese expediente.
+
+Agradecería su ayuda para **identificar los enlaces permanentes y las signaturas**, y aclarar las condiciones de uso, de estos documentos históricos:
+
+1. La **Junta General de Accionistas de 20 de abril de 1808** (Vigesimosexta Junta), particularmente las memorias y el balance de cierre del ejercicio 1807, sus anexos y notas sobre créditos de la Real Hacienda.
+2. Las **actas, acuerdos y libros de capital de 1790 a 1795** relativos a las compras de acciones propias y al paso del capital nominal de **300 millones a 240 millones de reales**. La síntesis del Banco de España publicada en 2017 data la reducción en 1790, mientras que el cuadro 9.8 de Fundación BBVA (2005) mantiene 300 millones en el balance hasta 1794 y 240 millones a partir de 1795; solicito las referencias originales para aclarar la distinta fecha de decisión, reducción económica e inscripción contable.
+3. El **Libro Mayor de la Real Hacienda y los intereses vencidos** en el Banco a 31 de diciembre de 1807, junto con los registros auxiliares que permitan separar principal, intereses acumulados y cuentas en litigio.
+4. Si estuvieran digitalizados, los documentos originales correspondientes al **convenio con la Hacienda de 29 de junio de 1829**, aprobado el 9 de julio y publicado en la Gaceta de Madrid el 3 de septiembre (http://www.boe.es/gazeta/dias/1829/09/03/pdfs/GMD-C-1829-122.pdf).
+
+La consulta es únicamente académica. No presupongo autorización para reproducir ni redistribuir las imágenes, y agradeceré que indiquen la licencia o los requisitos para su consulta y cita.
+
+Muchas gracias por su orientación.
+
+Atentamente,
+[Nombre y contacto del investigador — completar personalmente]
+
+**Registro de estado**: COLLECTED_PUBLIC_COLLECTION_METADATA; 1790_DIGITAL_ITEM_METADATA_CONFIRMED; 1808_TARGET_PDF_NOT_OPENED; CUSTODIAN_CONTACT_NOT_SENT; IDENTITY_NOT_COLLECTED. Conservar estas limitaciones incluso si un enlace institucional existe, hasta visualizar efectivamente el documento.
