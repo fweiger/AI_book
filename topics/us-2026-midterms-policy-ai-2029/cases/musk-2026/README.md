@@ -41,10 +41,17 @@
 - [逐边检验](../../chains/chain_edges.csv)、[统一指标](../../metrics/catalog.csv)、[新H09/H10正式假说](../../HYPOTHESES.md)。
 
 ## 下一轮最小可验收项
-**Texas已取得2020正式合同及2026年4月地方新闻的选前扣减记录**；下一步优先取得2026-04-07县书记官正式会议记录、2020—25补助应发及实付美元，以及2026-12-09 Starbase未来听证完成后的真实结果；国会正式监督仍待一手程序文件，明确它们实际是否改变某个法人项目的权利/义务；其次按SEC明确截面财务数据构建行业对照；若找不到需要标`NO_EVIDENCE_FOUND`并保存搜索时点，不作结果暗示。
+**Texas已取得2020正式合同及2026年4月地方新闻的选前扣减记录**；2026-04-07县书记官正式会议记录已经取得；下一步优先取得2020—25补助应发及实付美元，以及2026-12-09 Starbase未来听证完成后的真实结果；国会正式监督仍待一手程序文件，明确它们实际是否改变某个法人项目的权利/义务；其次按SEC明确截面财务数据构建行业对照；若找不到需要标`NO_EVIDENCE_FOUND`并保存搜索时点，不作结果暗示。
 
 
 ## H09首轮真实政策与报表核验（2026-11-14）
 - [Travis County正式签署合同与选举前审查反证报告](../../reports/2026-11-14_h09_travis_texas_incentive_preelection_control.md)：Colorado River Project LLC公司法人、2020–2041合同、70/75/80%按合格县级M&O财产税grant计算；2026-04-07 **据地方KUT现场报道**对2020—22有关返利扣减9%，并非已查明追回多少现金。
 - [政策事件六行时间账](policy_event_ledger.csv)：2025年地方合规审查已存在是2026-11选举后因果判断的**负对照**；Tesla 2025 SEC年报称相关2023—25 county grant在合并报表中不重大；Starbase SpaceX约240亿美元为计划投资、12/9为未来税惠听证，不是已经获得补贴。
-- [真实合同台账3行](incentive_contracts.csv)：缺少原始实际兑现金额及具体县级4月表决最终会议纪要时标`NA/REPORTED`；国会/赦免程序表仍仅表头，不推断已强制作证或签赦免。
+- [真实合同台账3行](incentive_contracts.csv)：县级4月决议已获官方Minutes和Transcript确认（F），但缺原始实际兑现金额时仍标`NA`；国会/赦免程序表仍仅表头，不推断已强制作证或签赦免。
+
+
+## H09一手官方决议补充（2026-11-14，县级文件）
+- [官方Travis County 2026-04-07 Commissioners Court会议记录](https://traviscotx.portal.civicclerk.com/event/3609/files)：**Item26 4赞成、0反对、1弃权正式通过**，扣留Colorado River Project LLC **2020—22三履约年度合格grant的9%**，属选前地方行政决议。原先KUT报道作为历史证据保留，不再将是否有正式会议纪要列为缺失。
+- 同日Item6也以**4赞成、0反对、1弃权**批准2025及2026的Community Involvement方案，**并不是所有未来税惠都终止**。政府工作人员说明公司社区投入义务最低为每年县级M&O税约10%，并估算2025约200万美元/2026约320万美元；**不是政府实际支付的grant或实际已完工项目**。
+- [正式Minutes/Transcript及SHA的逐议案台账](travis_official_votes_20260407.csv) · [官方证据专项报告](../../reports/2026-11-14_h09_official_minutes_primary_confirmation.md)；原始8页Minutes和23页Transcript源自同一场政府会议，不能当两个独立政策冲击。
+- **仍缺**：2020—22各年度eligible grant的原定USD、已发付与实际扣留、后续执行文件，不能据9%推Tesla现金损失绝对值、追回已付现金或盈利变化。
