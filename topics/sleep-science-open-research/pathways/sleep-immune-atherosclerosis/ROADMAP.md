@@ -9,6 +9,12 @@
 | 3 | [P03 免疫路径](modules/03-neuroimmune/projects/P03-mechanistic-signatures.md) | 先选一条可测机制和少量预设指标；技术/成本通过再扩 |
 | 4 | [P05 可逆性/联合干预](modules/05-interventions/projects/P05-reversibility-and-drugs.md) | 仅在伦理、药理、预实验及客观睡眠效果证实后讨论临床方案 |
 
+## 2026-11-14 已有交付与未完成事项
+
+- **P01**：已经建立 [13 项近邻竞争研究矩阵](modules/01-evidence/CLOSEST_STUDIES_20261114.md)，标注动物/人群、暴露和结局及可证伪创新；仍需正式全量查新。
+- **P06**：已经建立 [三队列/15 计数 SOP](modules/06-clinical/COHORT_AUDIT_PROTOCOL.md) 和 [数据字典](modules/06-clinical/COHORT_DATA_DICTIONARY.md)；**真实院内配对统计=未执行**。
+- **主临床问题**：从泛化“睡眠差—炎症—动脉硬化”收窄为“非呼吸相关 NREM 觉醒—斑块易损性/功能免疫”，保留可逆性长期目标，强调需要有序的时间验证。
+
 ## 24 个月作为院级研究规划的约束
 - 0–3 个月：现有数据交集审计＋查新＋SOP＋伦理/数据授权。
 - 3–12 个月：连续招募/历史队列整理、暴露及影像一致性实验、预设免疫检测。

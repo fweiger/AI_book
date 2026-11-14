@@ -1,6 +1,6 @@
 # PATH-ASCVD-01 · 睡眠—免疫—动脉粥样硬化：面向卒中预防的研究路径
 
-状态：**RESEARCH_PORTFOLIO / 候选研究体系，非因果定论** · 所属专题：[TOPIC-009](../../README.md) · 版本对应 TOPIC-009 v0.3.0（合并后生效）。
+状态：**RESEARCH_PORTFOLIO / 候选研究体系，非因果定论** · 所属专题：[TOPIC-009](../../README.md) · 版本对应 TOPIC-009 v0.3.1（完成 PR 审查后生效）。
 
 ## 一个总问题
 **非呼吸相关睡眠碎片化及不同睡眠破坏方式，是否通过可识别、可调节的神经—免疫过程影响动脉粥样硬化斑块易损性和进展，进而提供卒中发生前的风险干预窗口？**
@@ -16,6 +16,11 @@
 | W04 血管/组织 | [影像与病理](modules/04-vascular/README.md) | 斑块易损性、MRI、CEA 同患者组织验证 | [P04](modules/04-vascular/projects/P04-mri-cea-pairing.md) |
 | W05 可干预性 | [预防与干预](modules/05-interventions/README.md) | 非药物改善与药物候选的可证伪机制、安全边界 | [P05](modules/05-interventions/projects/P05-reversibility-and-drugs.md) |
 | W06 临床可行性 | [队列设计](modules/06-clinical/README.md) | 时间先后、三高/OSA 混杂、样本交集与经费 | [P06](modules/06-clinical/projects/P06-cohort-feasibility.md) |
+
+## 2026-11-14 研究深化增量
+
+- [13 项最接近论文/创新查重矩阵](modules/01-evidence/CLOSEST_STUDIES_20261114.md)：已经明确哪些题目和院内研究重复风险较高。
+- [临床三队列与 15 项漏斗 SOP](modules/06-clinical/COHORT_AUDIT_PROTOCOL.md) · [可交付院内的数据字典](modules/06-clinical/COHORT_DATA_DICTIONARY.md)：真实患者级数据**未获取**。
 
 ## 四个共同基线文件
 - [证据梯度、已核验原始论文与尚待核实问题](EVIDENCE.md)
