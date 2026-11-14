@@ -44,3 +44,8 @@
 - 原版同指标的`ΔB9 (I58)`、`Δ(B9b−B9) (I59)`、`ΔB9b (I60)`三层恒等；2027全RTO分别−2883/+1018/−1865MW，属于**2025原版对2026当下修订版的前瞻模型对照**，绝不是已完成的DC实物资产。
 - `I61`处理2026当前B9b与2026May Accuracy回顾同标签之间RTO+9/10MW差，关键区域相符，但原因尚未识别；同一来源内部区域聚合与回顾出版口径要分别标记。
 - [完整H03第十轮来源及计算报告](../reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，对所有模型和状态边继续标UNTESTED。
+
+
+## BEA NIPA月度PCE 33个月（2026-11-14新增）
+- [官方BEA月度整体+核心PCE季调指数33个月](../data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)，2024-01至2026-09，`DPCERG`/ `DPCCRG`，含计算得到的环比与同比；原始Section2All Excel SHA每行记录。
+- [PCE官方源及版本核验](../reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md) · [离线复算脚本](../analysis/recompute_h10_bea_snapshot.py) Ubuntu实际运行PASS；此表是2026-11-14**当前版本**，非各月最初发布值，不能覆盖BEA历史版次记录。
