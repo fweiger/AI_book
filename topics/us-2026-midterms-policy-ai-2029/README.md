@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.1；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.2；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -22,6 +22,10 @@
 ## H09/H10第一轮真实数据（2026-11-14）
 - [H09 Texas县签署合同、选前9%优惠扣减与SEC财报审计](reports/2026-11-14_h09_travis_texas_incentive_preelection_control.md)：已取得**2020 Travis County签署原件**，2026-04据KUT报道已扣减部分2020—22应得补助9%，**发生在2026-11选举前**；Tesla SEC披露2023—25相关grant不重大；SpaceX Starbase新税惠仅是2026-12-09未来听证，拟投240亿美元≠获批补贴。具体的实际美元损失、县正式4月会议纪要、2027新政府新增因果仍NA。
 - [H10 22个月BLS CPI指数、467交易日UST、BEA修订与真实Fed决议](reports/2026-11-14_h10_cpi_pce_fomc_treasury_pit_baseline.md)：Ubuntu执行[离线复算脚本](analysis/recompute_h10_open_data.py)PASS；2026-11-09→10两年期UST+17bp，十年期+10bp；BEA八月core PCE后验修订0.2→0.3说明必须按发布版本PIT，勿将后续数据当此前FOMC已知。无独立因果回归或企业融资结果。
+
+## H09县议案一手确认与H10 BEA连续月度数据（2026-11-14补核）
+- [Travis County县书记官2026-04-07官方Minutes/Transcript](reports/2026-11-14_h09_official_minutes_primary_confirmation.md)：**议案26 4票赞成0反对1弃权，扣留2020—22合格grant的9%**；同日**议案6**亦以4-0、1弃权批准2025—26社区投入方案。县政府原始文书PDF、SHA与逐议案台账均已核到[H09县级原始表](cases/musk-2026/travis_official_votes_20260407.csv)；这一行为早于选举、尚未取得扣留绝对USD与实际追回款，不能称2027政治效应。
+- [BEA NIPA官方连续33个月整体/核心PCE季调指数](data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)：2024-01至2026-09，2026-09核心PCE环比0.3165%、同比3.1212%；[BEA来源版本说明](reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)及[离线复算脚本](analysis/recompute_h10_bea_snapshot.py)已在Ubuntu实际运行**PASS**。2026-11-14取回版不是每个月原始首发PIT。
 
 ## 11个可直接接手的AI任务
 | 工作ID | 核心研究 | Issue |
