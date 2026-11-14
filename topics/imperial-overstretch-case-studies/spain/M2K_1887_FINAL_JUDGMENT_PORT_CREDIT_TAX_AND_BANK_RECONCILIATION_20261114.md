@@ -93,3 +93,16 @@ M2j通过**1884年原始财政裁决**发现该文正文把1795合同名义本�
 **NOT_RUN**：真实现金及政府票据价值损益、财政代征款挤占国债利息军费、银行商业信贷及港口工程因果回归。
 
 **单一下步**：用**1887年财政诉讼案卷所附1795-10-22合同誊本**作为第一优先项，向能鉴定1887历史Consejo de Estado案卷的档案机构或瓦伦西亚 **Gobierno Civil historic funds** 查询签号和许可；获得至少第一页、贷款/担保/还本付息条款与签名页，连同1862财政师完整账款证明，以原文件精确确认300雷亚尔印本差异、实际 Val­es 估值和王室担保法律身份。保持#32 Open、Draft PR #36 未合并，不提交受限原件或在未验证时宣布因果结果。
+
+
+---
+
+## M2l custodial archive update — exact 1887 case still not acquired
+
+The [Spanish Consejo de Estado archival page](https://www.consejo-estado.es/actividad/archivo-y-biblioteca/) says it preserves its records generated after 1850 and has a historic fonds of around 130,000 cases from 1833–1939. The 1887 lawsuit is therefore a priority **institutional-scope candidate** for its own archive, but **no individual casefile signatura has been found**.
+
+The Consejo's [Memoria 2023, published p84, section 3.1.2](https://www.consejo-estado.es/wp-content/uploads/2024/07/Memoria-2023.pdf) officially states that researchers may submit remote inquiries, and opinion files preceding 1987 often require paper/manual catalogs because they are not digitized. This text was read from the PDF extraction; a PDF screenshot attempt returned 403, so it is PUBLISHED_TEXT_CHECKED and not image verified here.
+
+Its real archivists' email is **archivo.biblioteca@consejo-estado.es**, telephone +34 915166356 / 357, from the [official contact page](https://www.consejo-estado.es/transparencia/). The [Valencia Gobierno Civil archive](https://archivo.dival.es/es/fondo-documental/fondo-gobierno-civil) has official fondo ES.462508.ADPV / Gobierno Civil (1739–1958), with series GC:c.1 (1739–1924) referencing Banco San Carlos share materials, plus verified email **archivo.general@dival.es**. Neither institution has confirmed the specific 1795 original bank-port loan deed or court annex in its published item register. **NO EMAIL SENT**.
+
+See [M2l report](M2L_1887_COUNCIL_ARCHIVE_CUSTODIAN_AND_1795_DEED_REQUEST_20261114.md), [seven-document acquisition matrix](port_1795_casefile_acquisition_matrix_m2l.csv), and the existing [unsent Spanish inquiry](ARCHIVAL_REQUEST_ES_M2E_20261114.md). The bank's notarized 1795 contract, underlying year-by-year 1862 repayment certificate, and Bank1807 Real Hacienda ledger are still NOT_ACQUIRED. Do not promote the 300-real historic print discrepancy to an accounting correction or infer bank profit/credit/royal Navy causal crowdout.
