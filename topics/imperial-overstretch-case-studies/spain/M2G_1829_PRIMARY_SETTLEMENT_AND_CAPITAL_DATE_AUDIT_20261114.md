@@ -99,3 +99,19 @@ https://portal.mineco.gob.es/ca-es/ministerio/publicaciones/papel/Pagines/Real_C
 - **版权：** 官方原版1829报纸扫描未上传；数字化档案原件 CC BY-NC-ND 限制在具体文件层级保留；BBVA和央行的出版统计仅保存少量数字与衍生数据。
 
 **单一下一动作：** 通过官方 Banco de España数字化治理记录找到 **1808年银行股东大会与1790—1795年股本回购/缩减决议的永久文件编号或数字PDF**（必要时向档案馆请求精确数字档案链接），再以这些原件核对1807原始余额表的资产分类和1790/1795股本时间断点。若该库仍阻断，则使用Ateneo已确认的A-Caj.179/5原始印本复制许可路径。PR保留Draft，Issue保持OPEN。
+
+
+---
+
+## M2h next-round addendum (2026-11-14): published evidence for an alternate dividend-capital denominator
+
+The earlier M2g statement "1790 reduction versus first BBVA book-capital change in 1795 remains unverified" is still right **about the formal source-ledger posting date**, but M2h supplies relevant **contemporaneous 1790 dividend decisions as reported by a careful archival historian**.
+
+Rafael Moreno Fernández (AECA 2012), publisher PDF **pages 15–18 visually checked**, reports:
+- **1790 shareholders AGM, debating FY1789 profits**: proposal 12,000,000 nominal reales as 5% dividend was **rejected** (31 yes,210 no).
+- **FY1790 proposed distribution**, approved in the following **1791 AGM** per historian: 12,000,000 nominal reales at 5%, therefore **240,000,000 nominal reales implied dividend-eligible base**; no cash dividend transfer independently verified.
+- Historical bank nominal/authorized capital remains 300,000,000 (1782 charter) and BBVA published Table9.8 says 1794 year-end book Capital 300m, 1795 240m. Dividend-eligible base, historical effective shares after bank buyback, formal legal capital and published end-year nominal book capital **are not safely interchangeable**.
+
+It also documents **1790-07-06** banking risk classification (340.791m source book total, 47.017m loss, 18.170m doubtful Giro, 140.834m suspended inaccessible), showing pre-1793 war fragility; actual write-offs not equal 60% doubtful/unavailable classes.
+
+The full [M2h source audit](M2H_1790_BANK_ASSET_QUALITY_AND_DIVIDEND_CAPITAL_AUDIT_20261114.md) records original item-level archive locators and uncorrected 1-real/1-maravedí published-source arithmetic gaps. Historical original ledger still NOT_ACQUIRED; avoid claiming legal capitalization definitely happened in 1790 or 1795 until primary book review.
