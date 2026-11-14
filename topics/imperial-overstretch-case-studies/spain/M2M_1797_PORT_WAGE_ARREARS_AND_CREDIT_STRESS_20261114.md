@@ -22,7 +22,7 @@ https://roderic.uv.es/rest/api/core/bitstreams/e3e5b250-084d-4ba7-a4f2-dd0dd268b
 
 ## 2. 2016年同行评审论文提供1797名义日薪的微观分布
 
-Franch Benavent (2016), 《Salario y condiciones de trabajo en la industria de la seda valenciana del siglo XVIII》, *Obradoiro de Historia Moderna* 25 (2016), pp207—242, DOI **10.15304/ohm.25.3202**，出版印刷 **p217** ，尽管其主文研究丝织业工资，在一条专门比较建筑工人工资的注释中引用其本人 2007年港口史 pp192—194，报道1797年港口施工名册**202名 peones（普通工人），约占总人员的45%**：
+Franch Benavent (2016), 《Salario y condiciones de trabajo en la industria de la seda valenciana del siglo XVIII》, *Obradoiro de Historia Moderna* 25 (2016), pp207—242, DOI **10.15304/ohm.25.3202**，出版印刷 **p236** ，尽管其主文研究丝织业工资，在一条专门比较建筑工人工资的注释中引用其本人 2007年港口史 pp192—194，报道1797年港口施工人数**202名 peones（普通工人）及另78名 amasadores（和泥工）**；此前关于202人占全工程45%的说法**未在本轮读取的原刊p236段落找到直接支持，隔离为UNVERIFIED**：
 
 | 日薪（名义雷亚尔/人） | 工人人数 | 人数占202比重 | 如果全部同一天上工，当天工资本金 |
 |---:|---:|---:|---:|
@@ -33,15 +33,15 @@ Franch Benavent (2016), 《Salario y condiciones de trabajo en la industria de l
 
 - **准确算术**：18+163+21=202；18×5+163×4.5+21×4=**907.5名义雷亚尔/假定共同工作日**；平均4.492574雷亚尔/人·工作日。
 - 这**不是**1797年实际工资应付、实付、或已拖欠907.5雷亚尔的证据。原文给的是年度“名册”工人工价类别，不保证202人同一日都工作/持有现金支票；缺逐日出勤、工资簿、拖欠周期、社保/工程承包人费用。
-- 来源称202名约等于全体工人45%，因此全体工人**约449人是四舍五入的粗略隐含人数**，不能报告为准确总人数，更不能把907.5雷亚尔当成全工程的每日人工开支。
+- 原刊p236另列78名amasadores，每人日薪5名义雷亚尔。M2m的202名peones／907.5雷亚尔只是三组普通工人的条件性小计；四组体力劳动者合计280人、1297.5雷亚尔。此前202人约占全体45%及由此得出的约449总人数，在本轮可见p236段落没有直接依据，**撤销作为已验证数据的使用**。
 - 同一2016研究又提到约**23名更熟练的泥瓦工**，其日薪**7—8.5雷亚尔**，报告平均约**7.7**。23×7.7=约177.1雷亚尔的示例量级，**由于7.7本身已经是取整平均，并不是23人各自真实日工资逐项复算**，故另列为 APPROXIMATE_DERIVED_ONLY、不能加入验收过的总表。
 
 2016的官方期刊文章页：https://revistas.usc.gal/index.php/ohm/article/view/3202 ，全文PDF：https://revistas.usc.gal/index.php/ohm/article/download/3202/3966
-本轮出版社网页/原PDF多次出现 503；搜索索引返回明确原刊p217的文句，DOI与发表年在官方期刊文章目录独立确认，但**没有对p217进行本轮 PDF 原图核验**。不能把 Academia.edu 镜像段落当作另一个独立历史名册或源页图片。
+本轮出版社网页/原PDF多次出现 503；搜索索引返回明确原刊p236的文句，DOI与发表年在官方期刊文章目录独立确认，但**没有对p236进行本轮 PDF 原图核验**。不能把 Academia.edu 镜像段落当作另一个独立历史名册或源页图片。
 
 **潜在主原稿**：Franch Benavent (2007) 《La fase inicial del puerto de Valencia a finales del Antiguo Régimen》, 收于 *Historia del puerto de Valencia*，pp184—203，尤其**pp192—194**被2016文章明确用于1797工人工价；Dialnet确认为该书章节，但标识**全文不可用**：
 https://dialnet.unirioja.es/servlet/libro?codigo=572492
-该2007章节可能引用原始 Junta 港口用工表、工资簿或历史案卷；若没有读到pp192—194及其脚注，尚不能主张已经定位到工资簿的准确签号。
+该2007章节可能引用原始 Junta 港口用工表、工资簿或历史案卷；若没有读到pp192—194及其脚注，M2n已从2016论文p236脚注直接识别**A.M.V. Documentación Lonja Caja56 Exp19**原始档案号，但档案馆未独立确认该卷完整内容、未阅原工资簿、骚动事件档案号仍未找到。
 
 数据详见 [port_1797_wage_labor_snapshot_m2m.csv](port_1797_wage_labor_snapshot_m2m.csv)。
 
@@ -85,3 +85,12 @@ https://dialnet.unirioja.es/servlet/libro?codigo=572492
 **NOT_ACQUIRED**：2007研究 pp192—194正文/注脚以及所引1797工资工人原始名册和事件报告、1795银行贷款公证原件、1862逐笔银行还款证明、1807皇家银行债权原总账、UKDS许可Madrid资料。**NOT_RUN**：实际1797工人工资拖欠债权总量、劳动冲突因果识别、银行 *vales* 成交价值、国债利息—财政军费/私人贷款挤出回归。
 
 **下一唯一行动**：先合法取得 **Franch(2007)《La fase inicial del puerto de Valencia》pp192—194及注脚**，由此识别1797雇工名册和1797-02-11工资骚动的**原始档案号**；并继续由M2l既定官方馆藏渠道查询1887案件附件，对齐银行放款与港口工资支付。原 PR #36维持Draft、Issue #32维持Open，不能因条件性工资估值通过算术就把历史实付/拖欠记为核验通过。
+
+
+---
+
+## M2n原始脚注与统计口径更正（2026-11-14）
+
+原先本报告对2016论文港口劳动名册引述页码写为p217，现据原出版可检索文本更正为**印刷p236**（PDF原页截图仍未取得）。Franch 2016同一页明确引用**A.M.V., Documentación Lonja, Caja56, Exp19**，系学者所引1797原始工人名册档案签号；本项目尚未实际开启该盒。
+
+2016资料除本报告所列202名peones外，还包含78名amasadores、每人日薪5雷亚尔。故202名对应907.5雷亚尔只是一类普通工的条件性单日工资总额；四组合计**280人、1297.5雷亚尔**，另有23名熟练泥瓦工（7—8.5/日，平均约7.7）与2名高级施工人员（本项目未核其日薪）。原“202约等于整个工程45%”缺本轮原刊p236直接依据，已标记UNVERIFIED，不将其用于推导全体人数。参见 [M2n详细更正](M2N_1797_ORIGINAL_PAYROLL_SIGNATURA_AND_TRADE_WAGES_20261114.md)。原工人名册和1797-02-11骚动报告仍NOT_ACQUIRED，真实工资支付额及资金压力因果NOT_RUN。
