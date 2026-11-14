@@ -24,8 +24,10 @@ flowchart TB
     J --> Q
     Q --> R
     L[权威文献与科学证据] --> Q
+    EXP[权威专家-论文索引] --> L
+    EXP --> Q
 ```
 
 **箭头表示研究路径与概念归类，不表示每条通路已经在人体中实验证实。**
 
-[核心框架](FRAMEWORK.md) · [权威矩阵](AUTHORITY_MATRIX.md) · [跨维度映射](CROSS_DIMENSION.md) · [问题列表](questions.md) · [机器图谱](knowledge-graph.json)。
+[专家研究索引](experts/README.md) · [核心框架](FRAMEWORK.md) · [权威矩阵](AUTHORITY_MATRIX.md) · [跨维度映射](CROSS_DIMENSION.md) · [问题列表](questions.md) · [机器图谱](knowledge-graph.json)。
