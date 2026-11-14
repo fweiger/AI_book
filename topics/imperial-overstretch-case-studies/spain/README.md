@@ -133,7 +133,7 @@
 ## M2f 白银贸易利润冲击、1808银行治理连续性与档案获取阻断（2026-11-14）
 
 - [M2f 深度来源审计](M2F_SILVER_BANK_REVENUE_AND_1808_ARCHIVAL_CONTINUITY_20261114.md)、[银行白银出口与业务利润历史观察](bank_silver_export_profit_m2f.csv)、[1808年银行董事会时间线及原始卷/页号码](bank_1808_board_archival_chronology_m2f.csv)、[M2f来源注册](source_registry_m2f.csv)、[研究session](sessions/2026-11-14-spain-m2f-silver-board.md)。
-- **新增竞争性机制**：Banco de España Tedde（2000）公开PDF原出版页截图核查显示，Banco San Carlos白银出口1790–94年均约120百万名义雷亚尔、业务利润约3百万，1801–07分别约14百万及0.3百万，1999及2000并非观察年份（**实际是1799和1800无白银出口**）。相应按来源近似数估算出口量约下降88.33%、白银出口业务利润约下降90%；此为不等长度历史时期的已发表估计，不是原始逐年报表或因果识别，不应把“没有白银出口”当“银行其他业务利润为零”。
+- **新增竞争性机制**：Banco de España Tedde（2000）公开PDF原出版页截图核查显示，Banco San Carlos白银出口1790–94年均约120百万名义雷亚尔、业务利润约3百万，1801–07分别约14百万及0.3百万，**1799和1800年均无白银出口**。相应按来源近似数估算出口量约下降88.33%、白银出口业务利润约下降90%；此为不等长度历史时期的已发表估计，不是原始逐年报表或因果识别，不应把“没有白银出口”当“银行其他业务利润为零”。
 - **新的原始档案卷页线索（仅1808董事会，不是1807银行总账）**：Banco de España（2009/2010）作者脚注列ABE Secretaría AJG **libro 204，fols.251及以下（1808-04-09）**；**libro 194，fols.42–45v（09-10）、53–56（09-17）、66–66v（10-05）**。仅定位原档案卷/页，原页未获准阅览；不得将其当成1807债务本金或利息账册。
 - **极强说法的反证**：历史研究记录1808-05-02马德里动乱后，银行董事会1808-05-09和14日仍有会议；这反证“银行行政机关立即完全停止活动”，但不足以证明商业贷款或银行资金流恢复正常。
 - **原始1807财务附页仍受限**：[马德里自治区联合馆藏目录](https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=63115)对Ateneo A-Caj.179/5确认1808实物馆藏、明确写**Sin objeto digital asociado**；[Ateneo官方馆方联系页面](https://ateneodemadrid.com/biblioteca/)明确列馆藏及复制服务邮箱 **biblioteca@ateneodemadrid.es**。已在[未发送西班牙语申请文稿](ARCHIVAL_REQUEST_ES_M2E_20261114.md)补全收件人和卷页咨询问题；**没有发送邮件、没有提供身份、没有获得扫描件**。
