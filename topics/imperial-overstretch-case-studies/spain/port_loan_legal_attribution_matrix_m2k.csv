@@ -1,0 +1,8 @@
+event,date,state_government_action,bank_loan_contract_party,legal_financing_status,source_id,interpretation
+1795 royal authorization,1795-09-28,CROWN_AUTHORIZED_OPERATION,JUNTA_LOCAL_SIGNED_LOAN,CROWN_NOT_SIGNED_LOAN,M2K-S01,Approval of operation vs contracting-party role distinct
+1802 tax collection,1802-07-16,ROYAL_TAX_COLLECTOR,LOCAL_EARMARKED_LEVIES,TREASURY_PASS_THROUGH_EXPOSURE_POSSIBLE,M2K-S01,Cannot equate collected levy arrears with government original loan principal
+1817 conditional payment,1817-11-10,CROWN_ISSUED_CONDITIONAL_BACKSTOP,LOCAL_JUNTA_NONPAYMENT,CONDITIONAL_TREASURY_RESPONSIBILITY,M2K-S01,Whether fulfilled/guarantee matured requires original royal decree
+1870 debt board,1870-07-19,PRELIMINARY_RECOGNITION_PROPOSED,BANK_VS_STATE_CLAIM,NOT_FINAL,M2K-S01,Different govt departments disputed case
+1884 ministry denial,1884-03-18,ADMIN_DENIAL,JUNTA_AS_DIRECT_BORROWER,TREASURY_NOT_DIRECT_PARTY_DEED,M2K-S02,"1884 says original loan not直接 signed by Crown, distinct from approved operation"
+1887 court ruling,1887-10-24,FINAL_BANK_CLAIM_DISMISSED,BANK_SEEKING_TREASURY_COLLECTION,EXTINGUISHED_VIA_1829_SETTLEMENT,M2K-S01,Court did not independently settle historic contingent Royal tax-pass-through damages
+1887 state counterclaim,1887-10-24,PROCEDURAL_RECONVENTION_NOT_ADMITTED,GOVT_SEEKING_OVERPAYMENT,NO_MERITS_DAMAGES_JUDGMENT,M2K-S01,State preserved ability to bring separate action but no adjudicated refund
