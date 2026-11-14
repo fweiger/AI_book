@@ -58,3 +58,16 @@ Acceso oficial: https://www.bde.es/wbe/es/punto-informacion/contenidos/servicios
 Ateneo: 1808 historical holding located, 1807 foldout not inspected, request NOT_SENT.
 Banco Historical Archive: series located and 1783 book examples recorded; exact 1807 item signaturas UNKNOWN; request NOT_SENT.
 No identity/contact data collected. No institution reply claimed.
+
+
+---
+
+## M2f verified institutional contact and precise 1808 AJG book refs (not sent)
+
+**Recipient for Part A:** Biblioteca del Ateneo de Madrid — **biblioteca@ateneodemadrid.es**. The institution's [own Library page](https://ateneodemadrid.com/biblioteca/) explicitly allows remote archive/library consultations and requests for authorized document reproductions at this address. No message has been sent and no personal sender address was supplied. The [Madrid Community catalog](https://bibliotecavirtualmadrid.comunidad.madrid/bvmadrid_publicacion/es/consulta/registro.do?id=63115) confirms that the Ateneo holds the 1808 physical issue **A-Caj.179/5** but explicitly marks **Sin objeto digital asociado**, i.e. the official record itself does not provide an online object. Ask the librarian **specifically to verify that the local exemplar has the 1807 balance foldout complete**; the 2025 antiquarian catalog's folded leaf refers to another physical exemplar.
+
+**Extra source-locator facts for Part B:** Banco de España historical scholarship (Moreno Fernández, 2009/2010, pp.119 and 140, footnotes 58, 32–34) identifies archival 1808 board minutes **ABE, Secretaría, AJG, libro 204 (AR), folios 251 y siguientes (9 April 1808)** and **AJG, libro 194, folios 42–45v (10 September), 53–56 (17 September), 66–66v (5 October)**. These are **1808 board minute references, not 1807 general balance or Real Hacienda subledger signatures**. The archive must provide the *specific 1807* book identifiers. The 2010 bank historian additionally reports a bookkeeping-control and duplicated-dividend inquiry associated with April 1808 board minutes, potentially relevant to an original account audit. **Do not claim any AJG originals were accessed.**
+
+**Separate factual advance (not part of archival application):** Tedde de Lorca, Banco de España (2000) reports a large wartime decline in Banco San Carlos' silver-export profit, which is an alternative bank stress mechanism to sovereign crowding out. Report: [M2f](M2F_SILVER_BANK_REVENUE_AND_1808_ARCHIVAL_CONTINUITY_20261114.md).
+
+**Status:** CONTACT_VERIFIED; ITEM_HOLDING_VERIFIED; DIGITAL_OBJECT_NOT_LISTED; ORIGINAL_FOLDED_1807_BALANCE_NOT_ACQUIRED; EXACT_1807_LEDGER_CALL_NUMBER_UNKNOWN; REQUEST_NOT_SENT.
