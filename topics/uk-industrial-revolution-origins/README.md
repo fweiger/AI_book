@@ -87,3 +87,10 @@
 - [原棉年均使用、英印棉布进出口、技术前沿劳动工时18条原值](data/cotton_india_britain_1700_1850_trade_skill_adoption_source_observations_m3.csv)与[8项可复算指标](data/uk_cotton_trade_technology_comparative_bridge_derived_m3.csv)，来源Broadberry–Gupta(2005) CEPR作者原稿Table1/3/4/8、与2009同行评审文章明确**同作者相关版本**，原稿PDF实得SHA256`9a63fff33030510ae2da94fa1384bc8c93c157e0b93d162c3c6c0753409e3638`；原始19世纪海关簿与机械史原账**未独立重新取得**。
 - [35格和18项源数据标准库验证器](data/validate_five_country_hypotheses_and_cotton_outcome_bridge_m3.py)，已在当前研究分支重新下载实际运行，`PASS matrix_cells=35 cotton_anchors=18`、派生8行CSV SHA256`8a8a71286312400f56b4b3051ca58a508b1bc453d5eb14fecc84b45873e28f9b`。核心判别冲突：**Allen(2011)跨国高工资廉价煤** vs **Kelly–Mokyr–Ó Gráda(2023)英国郡级低起始工资/高机械技能**，两种估计量不同，不能直接按谁对谁错投票。棉纺产出原料规模放大、最佳实践纺纱工时下降 ≠ 全国人均生产率/奴役资本的单因果结果。
 - **下一步唯一方向**：不重新打开国家财政档案逐叶工作；从[Warwick/CAGE Broadberry等英国历史GDP及产业数据](https://warwick.ac.uk/fac/soc/economics/research/centres/cage/data/datasets/17-01-22-british_economic_growth_1270_1870/)与英国/荷兰/法国同业工资能源和设备采用来源，建立产业因变量及国家可比性桥，针对H2/H6/H7进行竞争性预测检验；未取得这些原始数据仍标`NOT_ACQUIRED`。
+
+
+## M3-B — 2026-11-14：英国棉纱出口地理分布与法国后发采用
+
+- [M3B实证补充报告](data/TOPIC010_M3B_COTTON_YARN_EXPORT_GEOGRAPHY_FRENCH_ADOPTION_20261114.md)及[Hansard 1839棉纱出口三年份×六分项源表](data/cotton_yarn_export_destinations_hansard_1839_m3b.csv)：英国议会1839-03-12公布1818/1830/1834棉纱出口地理数据，逐年份五地区求和均与公布总计一致；1834年英国棉纱出口81,335,559磅，其中德国/比利时/荷兰合并地区占**48.2556%**，印度/中国合并占**6.7381%**。这些是**棉纱（中间品）出口重量**而不是全部棉纺成品/殖民地市场份额，也不等于原海关账本已独立复核。
+- [Juhász（2018）American Economic Review](https://doi.org/10.1257/aer.20151730)法国1803—1815贸易封锁准自然实验发表结果：法国不同地区的相对保护提升了后发棉纺机械技术采用；是**作者的因果研究**，本项目尚未获取复现数据或重跑。为原H2/H5/H7提供英国以外的重要产业化反例。
+- 对既有[M3A棉纺贸易和机器机制报告](data/TOPIC010_M3A_COTTON_MARKET_MECHANIZATION_FIVE_COUNTRY_HYPOTHESIS_20261114.md)提供**新来源家族、非重复时间段/地理维度**，不再扩展四国微观财政档案；英法同年代机器采用比较和复制论文识别仍NOT_RUN。
