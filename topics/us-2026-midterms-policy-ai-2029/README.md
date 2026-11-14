@@ -2,6 +2,9 @@
 
 > **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.5；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
+## 第十五轮 H01 历史国会实证（2026-11-14）
+- [104—119届实质立法、选举日前/届末、正式总统否决和跨时期分组的实算报告](reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md) · [16届历史CSV](data/h01_congress_104_119_historical_laws_20261014.csv) · [标准库复算](analysis/recompute_h01_congress_historical_comparison.py) · [会话记录](sessions/2026-11-14-round15-h01-historical-congress-veto.md)。104和110选举前实质法律均286，110届4次推翻总统否决；“分立=全面立法停滞”受到直接反例，但H01较弱机制及2027经济因果仍UNTESTED。Pew分类非官方、119届不完整，未合并main。
+
 ## 第十四轮政治经济主线研究（2026-11-14）
 - [民主党两院选举结果→立法制度约束→财政/AI投资竞争路径的M0审计](reports/2026-11-14_h01_h02_h04_political_mechanism_stage_audit_round14.md) · [8个政治信号来源/阶段快照](data/h01_h02_h04_round14_policy_signal_snapshot_20261114.csv) · [会话审计](sessions/2026-11-14-round14-election-transmission-triage.md)。重点从H03专家材料可靠性回到H01/H02/H04主线；不把拟议政策算作已实施政策；所有H因果仍UNTESTED、四路径仍UNKNOWN。未新增统一指标/证据ID，仍在PR #51研究分支。
 
