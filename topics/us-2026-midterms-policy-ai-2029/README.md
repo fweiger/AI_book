@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.4；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.5；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 第十四轮政治经济主线研究（2026-11-14）
 - [民主党两院选举结果→立法制度约束→财政/AI投资竞争路径的M0审计](reports/2026-11-14_h01_h02_h04_political_mechanism_stage_audit_round14.md) · [8个政治信号来源/阶段快照](data/h01_h02_h04_round14_policy_signal_snapshot_20261114.csv) · [会话审计](sessions/2026-11-14-round14-election-transmission-triage.md)。重点从H03专家材料可靠性回到H01/H02/H04主线；不把拟议政策算作已实施政策；所有H因果仍UNTESTED、四路径仍UNKNOWN。未新增统一指标/证据ID，仍在PR #51研究分支。
@@ -110,3 +110,7 @@
 
 ## H03第十三轮｜FERC诉讼专家EN1的2023“负荷调整”行高度疑似引用了PJM太阳能B8a（2026-11-14）
 - [官方双PDF六格对照及完整审计报告](reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)：Exelon 2026-11-03向FERC EL27-11-000提交EN1的2023版`Load Adjustments`六目标年**全等于PJM2023原B-8a Distributed Solar（2888/3269/3566/3841/4035/4185MW）**，却**全不等于官方B-9 Above Embedded（2231/3393/4654/6594/8300/9866MW）**；两份官方源SHA已实测。2023版第五年目标2028大型负荷占PJM峰值应为**6.336%**，而诉讼附件误列仅**2.688%**；2026版第五年相对2023第五年的占比倍数从表面**8.079倍**修正为**3.427倍**。这是**诉讼附件来源误引疑点**，不评价当事人动机/诉讼胜负，也不否认真实大型负荷增长。2017—22旧版仅留附件二手数据，未全部核原表。数据见[六格CSV](data/h03_ferc_en1_2023_solar_vs_b9_six_years.csv)与[标准库复算](analysis/recompute_h03_ferc_en1_table_source_audit.py)。
+
+## 2025年尚未发放的县级优惠与11月10日真实CPI意外值（v0.2.5）
+- **H09**：[2025-11新闻引用县政府：Travis县当时尚未向Tesla发放此项grant](reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)，需区分这条有日期的R级记录与[2026-04-07正式9%扣留](reports/2026-11-14_h09_official_minutes_primary_confirmation.md)。**2026年实际支付/扣留绝对USD仍UNKNOWN**，VPR/VPD不能保证涵盖所有财政现金交易。
+- **H10**：[2026-11-10 CPI发布前预测→官方实际→Cboe FedWatch→Treasury同日变化](reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)：11-09预测整体/core环比0.3/0.2、BLS 11-10实际0.4/0.3，各**+0.1个百分点surprise**；Cboe报道12月25bp情景概率周一84%、周二90.5%、50bp情景周二9.5%；UST 2Y+17bp、10Y+10bp。**这些为先后事件节点，仍非独立因果识别**。[15行数据](data/h10_20261110_cpi_consensus_fedwatch_rate_event.csv) · [Ubuntu标准库复算PASS](analysis/recompute_h10_20261110_cpi_pit_anchor.py)。MetaTrader季调指数forecast与CRTLAB未季调指数forecast混用会产生错误surprise方向，预发布时间未核的网页forecast被排除。
