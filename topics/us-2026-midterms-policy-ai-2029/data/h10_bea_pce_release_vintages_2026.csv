@@ -1,0 +1,5 @@
+"record_id","reference_month","variable","release_date","vintage","month_change_pct_official","year_change_pct_official","source_url","status","critical_limit"
+"BEA-V01","2026-08","core_pce_mom","2026-09-30","FIRST_RELEASE","0.2","3.0","https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026","OFFICIAL_PUBLISHED","Aug2026 estimate at publication; future revisions possible"
+"BEA-V02","2026-08","core_pce_mom","2026-10-29","REVISED_IN_SEPT_RELEASE","0.3","","https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026","OFFICIAL_REVISED","Revised Aug monthly value in Sep release table; not originally known on Sep30"
+"BEA-V03","2026-09","core_pce_mom","2026-10-29","FIRST_RELEASE","0.3","3.1","https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026","OFFICIAL_PUBLISHED","September data released AFTER Oct28 FOMC so cannot be counted as information known to that meeting"
+"BEA-V04","2026-09","headline_pce_mom","2026-10-29","FIRST_RELEASE","0.5","3.6","https://www.bea.gov/news/2026/personal-income-and-outlays-september-2026","OFFICIAL_PUBLISHED","Headline PCE not same as CPI; core PCE target proxy"
