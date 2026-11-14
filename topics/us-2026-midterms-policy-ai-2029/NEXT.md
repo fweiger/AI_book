@@ -144,3 +144,8 @@
 1. **H09不再把2020—22履约年度当2020—22付款年度**：Travis原协议给出按条件正常2022/23/24才支付，受文书与税务估值上诉可能延后。已取得103MB/255页官方2026-04-07 Agenda Packet，但第15页Item6与第253页Item26均没有任何附件、财政金额空白；下一步只能从Auditor/PBO的原始`tax paid/eligible/approved/ACH paid/withheld/recapture`文书取得绝对USD，对账不能用合同日期替代实际现金日期。
 2. **H10延长历史样本到2023—26共46个CPI发布日、967个Treasury交易日**，[完整分期和强反例](reports/2026-11-14_h10_cpi_release_ust_46event_historical_robustness.md)：2023—24收益率公告日绝对变动明显较大，2025—26偏弱；总两年期方向21升22降3持平，完全无法支持“公布日收益率通常上涨”。实际离线复算PASS，且统计p未经多重比较修正并非CPI因果。
 3. 后续先取得2023—26各次CPI**首次发布版数值与前一分钟专业一致预期**，Fed Funds期货/2Y债券08:29与08:35附近历史行情及其他同日重大新闻。然后在2023—24与2025—26不同利率环境、同波动率的对照下，研究`surprise`方向和幅度对政策预期的影响；不因为4年平均历史波动大就构造“未来买卖收益率”。
+
+
+## 2025年尚未发放返利、2026-11 CPI已有预期差但缺高频（v0.2.5）
+- **H09已取得有日期的现金状态**：[KUT 2025-11-26](reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)新闻引用县政府当时尚未向Tesla发放县级返利。后续研究不应反复说“没有任何现金线索”；**真正缺的是2025-11-27以后特别2026-04-07扣留决议执行的实付、核定、扣留和已付后追回USD**。先取County Auditor PBO `Performance Year, Eligible Grant, Approved Grant, Payment Date, Cash, Withheld, Recaptured`，VPD若只有发票/分录需用ACH去重而且可能不含全部grant。公开请求目前未实际发出。
+- **H10首次具有事前预测值的真实事件已入库**：[2026-11-09整体/core CPI MoM预期0.3/0.2，11-10 BLS0.4/0.3，两项+0.1pp](reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)；Cboe报告FedWatch 25bp情景概率周一84→周二90.5%、周二50bp9.5%，Treasury日变化2Y+17bp/10Y+10bp。但**不是CPI纯因果**。下一步将这一模式应用于2023—26更多次事前预期，并争取合法获取同源CME/FF期货08:29—08:35及美国国债盘中报价，控制当日Fed官员发言。不可用无首发时间的MetaTrader SA指数或CRTLAB NSA指数历史forecast拼伪惊喜度。
