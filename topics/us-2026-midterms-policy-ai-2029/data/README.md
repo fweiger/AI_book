@@ -143,3 +143,8 @@
 - [Travis County原合同2020—22履约年与正常付款年2年错位映射](../cases/musk-2026/travis_grant_payment_cohorts_2020_2022.csv)及[合同分段审计](../reports/2026-11-14_h09_grant_payment_year_lag_contract_audit.md)，正常2022—24的10月31日目标日期均为**有条件应付款日，未核实际支付/9%扣留USD**。
 - [正式2026-04-07县Agenda Packet 255页两项议案CSV](../cases/musk-2026/travis_20260407_agenda_packet_documents.csv)与[文件SHA及页面核验](../reports/2026-11-14_h09_agenda_packet_255pages_no_grant_figures.md)，公开Agenda Item6/26皆Attachments None，Fiscal Impact栏空白。不能把“公开文件没有附表”当县本身没有付款记录。
 - [2023/24美国Treasury官方2Y/10Y 500交易日](h10_us_treasury_2y10y_daily_2023_2024.csv)合并[2025/26 467日](h10_us_treasury_2y_10y_daily_2025_2026.csv)，以BLS实际日历形成[46事件日表](h10_cpi_release_ust_46events_2023_26.csv)。[完整分期结果及非因果限制](../reports/2026-11-14_h10_cpi_release_ust_46event_historical_robustness.md)，[完整标准库复算](../analysis/recompute_h10_cpi_release_treasury_2023_26.py)已运行PASS；未获得发布前市场共识/分钟收益率时不评价Fed决策因果。
+
+
+## 2025-11县级无已发返利报道和2026-11-10 CPI预期差（v0.2.5）
+- [Travis County县级税惠2025-11没有发放的媒体纪实](../cases/musk-2026/travis_rebate_disbursement_status_asof_2025.csv)（Statesman与KUT同源，不是Auditor原始付款账）；[报告](../reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)。**不能外推到2026/11无付款**，不可用报道的“零已发”填合同总金额或Grant eligible基数。
+- [2026-11-10单事件15行数据源/时间戳/季调口径表](h10_20261110_cpi_consensus_fedwatch_rate_event.csv)、[完整报告](../reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)、[离线检查脚本](../analysis/recompute_h10_20261110_cpi_pit_anchor.py)已由Ubuntu基于GitHub真数据运行PASS。Pre-release预测0.3/0.2月环比、BLS实际0.4/0.3，各+0.1pp；Cboe引用周一/周二FedWatch +25bp情景概率84→90.5%、周二+50bp9.5%，仅为报道级日度快照，不是前后5分钟独立因果。BLS SA与NSA指数以及未校时间的两家日历forecast不能混用。
