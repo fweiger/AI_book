@@ -1,0 +1,5 @@
+period,year_start,year_end,n_years,net_new_juros_sum_million_reis,net_short_issue_sum_million_reis,recorded_net_issue_sum_million_reis,total_stock_change_million_reis,sum_stock_minus_net_issue_million_reis,event_1743_share_of_decade_net_juros_pct,status
+1731-1740,1731,1740,10,110.988046,-34.846494,76.141552,76.141552,-0.000000,,stockflow_reconciles_for_this_decade
+1741-1750,1741,1750,10,950.658676,-6.956687,943.701989,943.701989,-0.000000,53.430639,stockflow_reconciles_for_this_decade
+1751-1760,1751,1760,10,1055.377340,-92.854255,962.523085,962.523086,0.000000,,stockflow_reconciles_for_this_decade
+1761-1770,1761,1770,10,374.731229,-35.291680,339.439549,339.439549,-0.000000,,stockflow_reconciles_for_this_decade
