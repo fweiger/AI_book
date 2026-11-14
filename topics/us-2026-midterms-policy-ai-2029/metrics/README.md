@@ -67,3 +67,8 @@
 - I65：诉讼EN1标Large Load的2023预测版6格与官方B8a Solar 6/6相同、与B9 0/6相同，是**来源错表疑点**，防止把太阳能对负荷的调整当数据中心新负荷。
 - I66：纠正2023版Y0+5的负荷调整占RTO峰值`9866/155703=6.336%`，而EN1`4185/155703=2.688%`；2026版Y0+5比例21.714%，相对倍数由8.079纠正为3.427。不代表实际需求已建成。
 - I67：2017—22 FERC投诉附件的其他版本尚未独立核PJM原件，标`LITIGANT_EXHIBIT_ONLY`；这一处错误不能推广为所有法律证据均错。见[源报告](../reports/2026-11-14_h03_ferc_en1_solar_table_mismatch.md)。
+
+
+## 2023—2026四年CPI公布日回溯（v0.2.4）
+- [US Treasury 2023与2024官方2Y/10Y每日500行](../data/h10_us_treasury_2y10y_daily_2023_2024.csv)与[原2025/26 467行](../data/h10_us_treasury_2y_10y_daily_2025_2026.csv)组合，按[BLS真实历史发布日期](https://www.bls.gov/schedule/2023/home.htm)构建[46次发布日CSV](../data/h10_cpi_release_ust_46events_2023_26.csv)，包含**signed和absolute两种不同指标**；新增共享`H10_CPI_RELEASE_2Y_SIGNED_BP`、`H10_CPI_RELEASE_10Y_SIGNED_BP`，旧ABS指标保留。
+- [四年分时期/异常值稳健性](../reports/2026-11-14_h10_cpi_release_ust_46event_historical_robustness.md)：2023/24与2025/26公布日波动强度不同；2Y总计21次上涨22次下跌3次不变。Ubuntu对967真实日数据运行[离线脚本](../analysis/recompute_h10_cpi_release_treasury_2023_26.py) PASS。公布日大幅波动的强度≠走势方向≠CPI意外值≠FOMC因果。
