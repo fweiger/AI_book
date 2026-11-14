@@ -52,3 +52,8 @@ J -->|"保留历史版本并提出新问题"| H
 ## 四年46次CPI公布日和县合同支付时间差的观点复核（v0.2.4）
 - [VIEW-S001-C04/C09追加两行带原始来源的审查表](claim_reassessments_2026-11-14_round3.csv)：C04县9%扣留证实是选举前当地行为，合同允许履约年与实际付款年错位，金额仍NA；C09 2023—26 CPI公布日两年期收益率为21涨/22跌/3不变，不能用绝对波动高推断收益率必涨或Fed必加息。
 - [H09合同/官方议案包](../reports/2026-11-14_h09_grant_payment_year_lag_contract_audit.md) · [H10 46事件历史分期](../reports/2026-11-14_h10_cpi_release_ust_46event_historical_robustness.md)。此处是原评论者观点的**后验新资料审计**，不会改写或重复计量初始视频作者主张为官方事实。
+
+
+## 2025无已支付县grant与首次可对齐CPI意外值（VIEW-S001第四次补核）
+- [本次对C04/C07/C08/C09的4行时点化证据与反例](claim_reassessments_2026-11-14_round5.csv)：C04截至2025-11新闻报道县尚未支付本项返利（非2026实付结论）；C07已有2026-11-09发布前整体/核心CPI一致预期与11-10 BLS实际+0.1pp；C08 Cboe引用FedWatch对25/50bp情景在当天的市场再定价；C09两年期国债全日+17bp与10Y+10bp证实当天市场价格变化，但同时消息混杂、CPI不同季调网页预期不可混用。
+- [单事件来源/时序/禁用的网页forecast合规报告](../reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)，保留每条VIEW原始作者观点及早期同年度评估版本而不覆盖。
