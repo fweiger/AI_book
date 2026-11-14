@@ -72,3 +72,39 @@ python3 reproduce_gold_gdp_bridge_m2.py \
 ```
 
 复算输出CSV SHA256 `bbf1d77cbe014f22ed5d0ffbf1bd311cad253ee956911e83266ca12d62f3b162`，脚本 SHA256 `ccd49e95c5d25b1f51884f38cb772e6eca901ee0d81e6b83e06d4b738038a157`，两个GitHub blob哈希均已确认与本地运行验证文件**逐字节一致**。黄金对同期GDP的累计名义强度：总2.9298%，公共0.6482%，私人2.2816%。这是历史数据的**描述性比率**，不是财政税收率、国内价值增加或黄金负面因果效应。
+
+
+## 2026-11-14 M2 新增：DEBT.PT原始Excel和债权人分布
+
+来源：[DEBT.PT — Sovereign debt and private credit in Portugal, 1640–1800](https://debt.pt/)（PTDC/HARHIS/28809/2017），官方 [Documentation](https://debt.pt/pdf/DOCUMENTATION.pdf)，以及[Palma–Reis 2019作者GDP](https://doi.org/10.1017/S0022050719000056)。**全套原始工作簿仅提供官方链接与SHA-256，不在本公共仓库重新发行二进制源文件或原始具名债权记录。** 详见 [DEBT.PT审计报告](../DEBTPT_PRIMARY_DEBT_COFFERS_CREDITORS_AUDIT_M2_20261114.md)。
+
+| 新文件 | 内容与边界 |
+|---|---|
+| [debtpt_annual_debt_gdp_ratios_1641_1800_m2.csv](debtpt_annual_debt_gdp_ratios_1641_1800_m2.csv) | **160年**(1641–1800)长期/可记录短期债务**存量**、偿付**流量**÷同年名义GDP的百分比；历史重建不等于完整现代国债普查 |
+| [debtpt_decadal_annual_ratio_means_m2.csv](debtpt_decadal_annual_ratio_means_m2.csv) | **17个**十年时期的*年度比率简单均值*，1640s和1800s样本不足10年有明确标记；非十年总额比值 |
+| [debtpt_creditor_categories_1641_1682_m2.csv](debtpt_creditor_categories_1641_1682_m2.csv) | **13类**原书债权人本金分布汇总（469债权人、700份juros），保留未分类占比；只代表1641–82样本，不可外推到1750年全部债权人 |
+| [reproduce_debtpt_annual_ratios_m2.py](reproduce_debtpt_annual_ratios_m2.py) | 实际执行的Python标准库XLSX解析/核验程序；严格校验来源A与2019 GDP Excel各自SHA-256，输出连续160年债务率和偿付率，运行状态`PASS` |
+| [sousa_2008_manifestos_5year_m2.csv](sousa_2008_manifestos_5year_m2.csv) | Sousa 2008原论文铸币局登记五年总黄金汇款17行；末期1800–1807 |
+| [gold_manifestos_2008_vs_2025_reconciliation_m2.csv](gold_manifestos_2008_vs_2025_reconciliation_m2.csv) | 与2025 Table B.1逐期匹配，最后一期1800–07 vs 1800–04标记不能比，1780–84差额−1,726 contos |
+| [sousa_2008_decadal_gold_private_public_m2.csv](sousa_2008_decadal_gold_private_public_m2.csv) | 2008 Table 2九组按十年公布公共/私人**年均**汇回金额，不能当作十年合计 |
+| [sovereign_debt_2024_crosscountry_benchmarks_m2.csv](sovereign_debt_2024_crosscountry_benchmarks_m2.csv) | 2024论文Table1国债存量/GDP原始发表基准（荷兰指Holland省） |
+| [sovereign_debt_service_2024_benchmarks_m2.csv](sovereign_debt_service_2024_benchmarks_m2.csv) | 2024 Table2偿付/国家**支出**，不是偿付/GDP或偿付/收入 |
+| [audit_gold_sources_and_debt_m2.py](audit_gold_sources_and_debt_m2.py) | 已从当前GitHub分支**重新下载六个文件并执行EXIT 0**的历史表格算术审查器 |
+
+### 原始来源版本清单（本轮实际下载）
+
+- [A DEBT 1529–1557 & 1641–1800.xlsx](https://debt.pt/pdf/DEBT_%201529-1557%20%26%201641_1800.xlsx)：45,111 B；SHA256 `b2024474a20442b5577ca4667067edf22ffdf71a30faad01971f5a8d13104d17`。
+- [B FISCAL COFFERS](https://debt.pt/pdf/FISCAL%20COFFERS_%20debt%20service%201529-1557%20%26%201641_1800.xlsx)：35,399 B；SHA256 `48727613d6463b990842b7098a5b5c25aeaf9235ced3bb142634b591af5b6850`。
+- [C CREDITORS](https://debt.pt/pdf/CREDITORS%20_%201641_1683.xlsx)：78,444 B；SHA256 `5e277c7f512babefa5427ec5995946e6cb91ecd9a13f447b82a3c55df452b667`。
+- Palma/Reis作者GDP XLSX 83,313 B；SHA256 `ee80439059ebfa3f67f870430671098fe6c853000be64d2605111285ee63045c`。
+
+### 复算160年比率
+
+```bash
+python3 reproduce_debtpt_annual_ratios_m2.py \
+  --source-debt-xlsx /local/path/DEBT_PT_A.xlsx \
+  --source-gdp-xlsx /local/path/palmareis_JEH_2019.xlsx \
+  --output /tmp/portugal_1641_1800_debt_gdp.csv
+```
+
+官方工作簿A的`Debt stock!D/E/F`与`Debt service!D/E/F`单位réis；GDP H单位百万réis，分母必须乘100万。`PASS years=160 stock_err=0 service_err=0`，派生CSV SHA256 `bdda94a8ce33f806f5adf10b23472ded1d1c68c8de12c59509f04b48e3a905ea`。2024债务论文1748年9%与该版本复算8.15225%存在**待核验来源分母冲突**。**ASCM模型NOT_RUN，国库年度总收入与军费面板NOT_ACQUIRED**。
