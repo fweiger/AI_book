@@ -64,7 +64,7 @@ def parse(z,c,typ,cutoff):
             s=earlier(acts.get('17000',()),cutoff)
             p=earlier(acts.get('28000',()),cutoff)
             law=earlier(acts.get('36000',()),cutoff)
-            rep=earlier(reports,cutoff)
+            rep=earlier(reports+acts.get('5000',[])+acts.get('14000',[]),cutoff)
             rows.append(dict(congress=c,bill_id=f'{c}{typ}{number}',bill_type=typ,
                              introduced=intro,committee_reported=rep,
                              house_passed=h,senate_passed=s,
