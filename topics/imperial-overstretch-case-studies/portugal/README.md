@@ -150,3 +150,12 @@
 - 新的原账定位及历史解释：2019博士正文第87页详述**Luís Gomes Peixoto在1762—1766累计约1,564 contos的借方责任余额，于1766一次转至军事费用损益**；定位**AHTC/FGER Livro Mestre 537 fólio 36**，1766-12-31余额在**fólio 274**。作者提示款项可能在更早时点已支付，此结转**不是1766年的新现金战争开支**。
 - 同一Contadoria 1765/1766损益累计借方**441 vs 4,080 contos（账面规模比9.25倍）**，但不是王国完整年度支出，也不能用作战争费用同比增长。葡萄牙[军事历史档案馆的Erário子基金](https://ahm-exercito.defesa.gov.pt/details?id=41254)独立确认1763年7月9日的旧军需会计机构撤销。
 - 新的[两版地区数据源追溯CSV](data_m2/rodrigues_1765_regional_reclass_2011_2019_persistent_70k_m3.csv)、[1765/1766第一Contadoria对照CSV](data_m2/rodrigues2019_1765_1766_first_contadoria_account_rollover_m3.csv)、[11项派生结果](data_m2/rodrigues_1765_1766_edition_and_war_rollover_summary_m3.csv)与[标准库可复算程序](data_m2/reproduce_1765_1766_archival_account_rollover_and_editions_m3.py)，均保留`ORIGINAL_MANUSCRIPT_NOT_ACQUIRED / CASH_FLOW_NOT_IDENTIFIED`。
+
+
+## M3新证据｜1765年Caixa八笔借贷账精确复原2011数值、2013独立负财政结果、1763黄金税延迟入账
+
+- [CAIXA_1765_EIGHT_APPENDIX_ACCOUNTS_RECONCILE_2011_AND_2013_FISCAL_CONFLICT_M3_20261114.md](CAIXA_1765_EIGHT_APPENDIX_ACCOUNTS_RECONCILE_2011_AND_2013_FISCAL_CONFLICT_M3_20261114.md)：实地取得Rodrigues（2019）博士**附录E**四个财政分账机构**8项**1765-12-31 `Caixa`账户的借/贷金额：**借方3,875,142,979、贷方3,515,617,855，净额359,525,124 réis**，**逐réis精确匹配同作者2011硕士论文的359.525124 contos**。因此此前“2011现金数字来自哪里”**在发表附表口径下已解决**；2019正文仍写**约2,765 contos**，其不同统计范围或文字错误原因**仍OPEN**，不能继续把前一项也标全未解决。
+- 新的原始档案申请定位已缩小到8叶：**AHTC/FGER Livro 537 folios 227/180、2699 folios 138/154、3976 folios 107/129、4154 folios 12/80**。这次取得的是作者经原账重建的机构PDF附录，不是直接获取这8叶原始手稿。该净额也并非国库实物硬币盘点。
+- 葡萄牙[2011年硕士论文](https://repositorio.iscte-iul.pt/bitstream/10071/4540/1/Tese%20Manuel%20Jos%C3%A9%20Benavente%20Rodrigues.pdf)第70页指出Rio黄金相关**1%机构往来款部分对应1763年以后，但于1766年才记入借方**，证明记账年不等于黄金到港/税收现金入库年，金额未知。
+- 独立作者Mont Serrath（2013）[《Sæculum》公开原文](https://periodicos.ufpb.br/index.php/srh/article/download/19810/10945/37156)报告1765年另一个年度财政名义结果**−554,031,592 réis**，与Rodrigues（2019）四Contadorias损益收益**+2,690,834,984 réis**差**3,244,866,576 réis**，但**指标不同，不能视作现金丢失或历史财政亏损得以证实**；他另明确写出**1766年371.4 contos存款金库贷款未能在所核查国库账目中找到对应入账**，仍需债权人/国库双边核查。
+- [2019附录E八个Caixa余额原表](data_m2/rodrigues2019_1765_annex_e_eight_caixa_balances_m3.csv)、[7项跨作者财政/黄金税/1766贷款凭证矩阵](data_m2/independent_1763_1766_fiscal_timing_and_2013_cash_vs_2019_accrual_sources_m3.csv)、[18项计算结果](data_m2/rodrigues2011_2019_montserrath2013_1765_cash_cross_source_bridge_m3.csv)、[实际运行的标准库复算脚本及原PDF SHA+文本验证](data_m2/reproduce_1765_caixa_2019_annex_vs_2011_and_2013_cash_series_m3.py)。真实原稿与2013附带Excel仍`NOT_ACQUIRED`，因果模型仍`NOT_RUN`。
