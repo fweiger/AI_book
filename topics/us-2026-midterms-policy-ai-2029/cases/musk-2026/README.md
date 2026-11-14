@@ -60,3 +60,8 @@
 ## 官方州级381登记协议金额仍缺（v0.2.3）
 - [Texas Comptroller官方登记0005328行](texas_comptroller_0005328_registry_snapshot.csv)来源是州级公开[Chapter 380/381 CSV](https://assets.comptroller.texas.gov/open-data-files/ch380.csv)，文件SHA已冻结。州备案总金额和资金来源列是**空字符串/NA**，最后更新时间2022-05-01；不能据此声称2026状态为Active或县已支付0美元。州截止日记2041-12-30、县签署原件记2041-12-31，冲突待审。
 - [2020—2022逐年度eligible/approved/paid/withheld/recaptured现金对账表](travis_2020_2022_grant_cash_reconciliation.csv)：县级2026-04-07正式扣留9%已核，但实际核准与美元拨付尚未取得；不能使用签约时十年约1400万美元估值直接推2020—22扣留额。[完整缺口审计](../../reports/2026-11-14_h09_texas_381_registry_missing_cash_audit.md)。
+
+
+## H09合同付款年错位与103MB议案Packet排除（v0.2.4）
+- 原合同Section1.22/1.23、5.2、7.4—7.7和8规定2020/21/22三个履约年度**正常分别对应2022/23/24付款年**，条件包括履约审查、实际缴税及估值上诉结束。[计划与实际现金严格区分的3行队列表](travis_grant_payment_cohorts_2020_2022.csv)及[合同解读](../../reports/2026-11-14_h09_grant_payment_year_lag_contract_audit.md)；9%扣留是`withhold`，不能自动等同`recapture`既付现金。
+- [2026-04-07官方Agenda Packet 103437809字节/255页实读](../../reports/2026-11-14_h09_agenda_packet_255pages_no_grant_figures.md)，第15页Item6及第253页Item26均有`Attachments: None`和空`Fiscal Impact`，这份公开packet未有年度grant或ACH明细。PDF SHA见[审计CSV](travis_20260407_agenda_packet_documents.csv)。**没有公开附件不等于县预算/审计部门不持有真实付款凭证**。
