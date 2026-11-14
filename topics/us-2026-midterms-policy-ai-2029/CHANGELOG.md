@@ -1,4 +1,10 @@
 # TOPIC-011｜版本记录
+
+## 2026-11-14 | 第十五轮H01真实历史立法/否决基线（不修改现有topic_version 0.2.5）
+- 从Pew2026-10-15的Congress.gov衍生历史表转录104—119届16行“选举日前实质/纪念法”，用NARA核104—118共15届完整法律编号、众院官方统一/分立表以及参院官方4届否决和推翻，新增[数据](data/h01_congress_104_119_historical_laws_20261014.csv)、[离线校验](analysis/recompute_h01_congress_historical_comparison.py)、[原始来源和结论报告](reports/2026-11-14_h01_round15_congressional_productivity_veto_historical_baseline.md)、[会话](sessions/2026-11-14-round15-h01-historical-congress-veto.md)。
+- 104和110选前实质法均286，全部法分别332/448；差额116项全部来自Pew纪念性分类，属于指标解释偏误。110届11否决、4推翻，反证“分立政府必然全面立法停滞”；119仅为截至2026-10-14未完结快照121项，其中实质109。
+- 1995—2008和2009—2024按分立/统一分组的描述性差异方向不同；小样本/时代趋势/危机混杂，无因果估计、p值或2027预算/AI投资结果。H01—H10完整因果UNTESTED，P-A—P-D UNKNOWN；PR #51仍开放、尚未合并。
+
 ## 2026-11-14 | topic_version 0.2.5 — 县税惠历史付款报道和CPI事前预期/FedWatch正式事件链
 - **H09纠偏**：Statesman/KUT 2025-11(17/26日)新闻引用Travis县官员明确**截至当时尚未向Tesla支付本项县税返利**；这是一条有报道日期的R级现金状态，不是County Auditor ACH原始账。KUT指向Statesman同一底层报道，不重复计两次独立证据。2026-04正式9%合格grant扣留仍成立；**不能由2025未付款得出2026年同样零付款，2026绝对USD和是否追回已付现金仍缺**。新增3行阶段状态记录及报告。
 - **H10首次发布前预期差锚点**：2026-11-09 22:31 UTC FXStreet事前报道及Reuters预告称10月headline/core CPI SA MoM预期0.3%/0.2%，11-10 08:30EST BLS首次实际0.4%/0.3%，各**+0.1百分点surprise**。Cboe 11-10引述CME FedWatch十二月25bp情景概率周一84%→周二90.5%，50bp情景周二9.5%；官方US Treasury同日2Y收益率+17bp、10Y+10bp。该链节点均有源但**精确CME盘中快照及Fed讲话混杂未分离**，不据此判断“纯CPI导致概率/收益率变化”或50bp已实施。
