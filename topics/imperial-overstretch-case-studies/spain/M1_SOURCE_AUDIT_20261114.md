@@ -16,7 +16,7 @@ The 2022 edited volume published by Fundación Museos del Banco Central de Costa
 | Decade | Castile pesos/year | Situados pesos/year | Both pesos/year | Situados share |
 |---|---:|---:|---:|---:|
 | 1770–1779 | 1,435,062 | 3,453,880 | 4,888,942 | 70.65% |
-| 1780–1789 | 1,655,605 | 6,170,565 | 7,826,170 | 78.84% |
+| 1780–1789 | 1,655,605 | 6,170,565 | 7,826,170 | 78.85% |
 | 1790–1799 | 4,317,453 | 4,748,523 | 9,065,976 | 52.38% |
 
 Full published 1720–1799 decade table is transcribed with source in remittance_decadal_m1.csv. The two components reconcile exactly to the printed total for each row. Shares here are calculated from displayed aggregates and rounded to 2 decimal places. The shift in the *composition* of remittances is descriptive; there is no established causal explanation from this table alone.
