@@ -83,3 +83,8 @@
 ## 正式2022县现金源和10次PIT核心CPI方向检验（v0.2.6）
 - `H09_OFFICIAL_COUNTY_REBATE_PAID_STATUS_AT_SOURCE_DATE`以[官方Travis 2022-01-31协议汇总](../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)作F级有日期状态输入，**不可等价为2026支付USD、也不替代报道级状态指标**。
 - `H10_CORE_CPI_SURPRISE_2Y_SIGN_CONCORDANCE`在公告前有已核日期的市场或机构预测、BLS首发实际值及美债有符号日变化均存在且非零时，才定义方向是否一致；其他写NA。[10事件原始数据](../data/h10_cpi_pre_release_dated_forecasts_10events_2023_2026.csv)与[报告](../reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)显示核心6/7一致、二项双侧p=0.125，**不具有样本外规则或CPI因果的证明力**。[事后46日历](../data/h10_cpi_release_ust_46event_vendor_archive_not_pit.csv)不能混入该真实事前数据组。
+
+
+## 学校毛税负差及固定2025事前预期来源（v0.2.7）
+- `H09_CH313_DELVALLE_GROSS_SCHOOL_TAX_SAVING_USD`、`H09_CH313_DELVALLE_CDR_VERSION_DELTA_USD`、`H09_CH313_DELVALLE_REVENUE_PROTECTION_REPORTED_USD`分别追踪学区Chapter313毛税收节省、同税年不同报告vintage差、另列补偿科目；**不是Travis县Chapter381的grant实付，也不是企业净收益**。[两版本14税年行](../cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv)。
+- `H10_UNIFORM_DATED_CPI_CORE_SURPRISE_UST2Y_DIRECTION`用于当CPI首发、**固定同源真实提前发布的专业共识**及两年期真实有符号日变动都可观察且surprise非零时，才计算1/0；缺项写NA，不把事后历史财经日历的预测补入。[2025固定11次发行与7条预告](../data/h10_cpi_consistent_publisher_2025_pre_release_cohort.csv)及[检验报告](../reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)说明同向仅Core2/4、Headline2/5，不是未来预测胜率。
