@@ -154,3 +154,8 @@
 ## 2025年尚未发放返利、2026-11 CPI已有预期差但缺高频（v0.2.5）
 - **H09已取得有日期的现金状态**：[KUT 2025-11-26](reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)新闻引用县政府当时尚未向Tesla发放县级返利。后续研究不应反复说“没有任何现金线索”；**真正缺的是2025-11-27以后特别2026-04-07扣留决议执行的实付、核定、扣留和已付后追回USD**。先取County Auditor PBO `Performance Year, Eligible Grant, Approved Grant, Payment Date, Cash, Withheld, Recaptured`，VPD若只有发票/分录需用ACH去重而且可能不含全部grant。公开请求目前未实际发出。
 - **H10首次具有事前预测值的真实事件已入库**：[2026-11-09整体/core CPI MoM预期0.3/0.2，11-10 BLS0.4/0.3，两项+0.1pp](reports/2026-11-14_h10_cpi_20261110_true_preconsensus_fedwatch_rate_anchor.md)；Cboe报告FedWatch 25bp情景概率周一84→周二90.5%、周二50bp9.5%，Treasury日变化2Y+17bp/10Y+10bp。但**不是CPI纯因果**。下一步将这一模式应用于2023—26更多次事前预期，并争取合法获取同源CME/FF期货08:29—08:35及美国国债盘中报价，控制当日Fed官员发言。不可用无首发时间的MetaTrader SA指数或CRTLAB NSA指数历史forecast拼伪惊喜度。
+
+
+## H09县级正式2022无付款基线和H10真实10次事前CPI（v0.2.6）
+- **H09已经证实县历史2022无grant付款/首履约年核验待完成**：[官方县项目汇总报告](reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)，KUT 2025-11也记当时未支付；2026-04正式批准9%扣留三个2020–22履约年的eligible grant。**真正缺的是2025-11后2026各法人与年份实际县Auditor/PBO金钱账**。需按Performance Year、Payment Year、Grant Approval、ACH Number、Paid、Withheld、Recaptured取一手记录；未取得不填0、2022历史状态不延伸至2026。
+- **H10真正事前预测×市场方向小样本已完成**：[10个有来源日期的CPI事件和完整报告](reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)，核心7个可比较2Y方向仅6次吻合、二项双侧p0.125，且2025-03-12存在相反方向；**不可把6/7说成85.7%的真实样本外胜率**。其余46次事后供应商网页数据不能直接作为时点可知的PIT，历史预期单机构/共识也不能未经归一化直接拼样本。下一步优先系统取得**2023—26同一个事前共识源**的全部官方发稿前预测，结合BLS首次release及2024-06-12与FOMC同日的剔除检验，并取得08:29/08:35 UST/FF期货真实时间戳价格；没有微观报价则H10因果仍UNTESTED。
