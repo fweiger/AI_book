@@ -31,3 +31,5 @@
 - `H03_PJM_VINTAGE_REVISION` = 对同一个目标年Y，PJM 2026-01预测MW - 2025-01预测MW；必须分`Large Load Adjustment` vs 整体夏峰负荷，分预测版本和zone。
 - `H03_REALIZED_LOAD_YOY` = 同一报告体系主要分区历史2025峰值相对2024实际峰值变化。统计只描述历史增长，**不能等于建设项目完成率**。
 源指标和校验见[H03研究报告](reports/2026-11-14_h03_pjm_large_load_realization.md)。
+
+- `H03_PJM_MACRO_ONLY_PEAK_REVISION`：同一规划年度`July 2026 informational summer coincident peak - January 2026 official summer coincident peak`，单位MW；严格标记**informational only、总峰值非数据中心、发生在选举前**。研究用途是宏观预测输入导致的普通版本修订对照，不是政策效果测量。

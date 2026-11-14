@@ -37,3 +37,6 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 
 ## H03新增PJM官方历史/预测同源可比数据（2026-11-14）
 [PJM 2026-05-29 Load Forecast Accuracy Report PDF](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-forecast-accuracy-report.pdf)与[XLSX官方数值源](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx)，SHA256 `e0f24fe03a79af016826089c653b2c2e15e55edcb04a7bd4be5fa643136425fc`。两台云电脑独立取得同一版本。字段：每个zone的`Historical July Peak`、`2024/2025/2026 Load Forecast July Peak`，数量单位MW。未报告实际的zone留空，DOM subzone不可重复累加，**大负荷调整不能代表纯AI数据中心建设**。见[研究报告](reports/2026-11-14_h03_pjm_large_load_realization.md)。
+
+### PJM July2026宏观预测负对照（非真实电力消耗）
+[PJM官方2026-07-24 Mid-Year Update XLSX](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-mid-year-update-informational-only.xlsx)；SHA256 `8c2ed5a594c501718dc29755cb044b9d6bcbeac48fc751a6c25014ae1f99a94c`。原表自称For Informational Purposes Only，模型结构与其他假设按原文维持2026-01，仅使用Moody's Analytics June 2026经济预测。指标是**Total Summer Coincident Peak MW**而非Data Center或Large Load Adjustment。见[专门解释](reports/2026-11-14_h03_pjm_july_2026_macro_negative_control.md)。

@@ -44,3 +44,6 @@
 
 ## PJM 2025实际负荷与不同版本预测的首次数值对照（2026-11-14）
 - [H03第二轮PJM真实兑现偏差与预测版本分析](reports/2026-11-14_h03_pjm_large_load_realization.md)：PJM 2025实际大型负荷、2025版预测误差、四区可比覆盖97.8%、Dominion差异、2026版对2027和2035大型负荷的反向修订。数据：[2025分区](data/h03_pjm_2025_zone_observed_vs_forecast.csv)、[历史2019–25](data/h03_pjm_historical_july_2019_2025.csv)、[版本修订](data/h03_pjm_2025_to_2026_vintage_revisions.csv)、[独立校验](analysis/recompute_h03_pjm_accuracy.py)。
+
+## H03额外负对照：2026-07仅供参考的宏观输入更新
+- [PJM七月经济输入更新分析](reports/2026-11-14_h03_pjm_july_2026_macro_negative_control.md)：2026-07**仅供参考**同一模型结构、经济输入更新的PJM全系统峰值预测，对2027/28 RTO较2026-01上修593MW(+0.370%)，发生在选举前。附[CSV](data/h03_pjm_2026_july_macro_only_revisions.csv)和[复算脚本](analysis/recompute_h03_pjm_july_macro_update.py)。

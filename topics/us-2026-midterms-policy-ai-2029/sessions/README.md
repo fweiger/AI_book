@@ -6,3 +6,5 @@
 - [2026-11-14 H03州级法律、电网预测与跨党法案证据](2026-11-14-h03-policy-grid.md)
 
 - [2026-11-14 PJM实际负荷/预测覆盖核验](2026-11-14-h03-pjm-source-verification.md)
+
+- [2026-11-14 PJM宏观经济输入负对照](2026-11-14-h03-july-economic-control.md)
