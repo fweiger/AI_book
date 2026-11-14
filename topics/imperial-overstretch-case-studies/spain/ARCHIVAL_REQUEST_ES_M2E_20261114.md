@@ -133,3 +133,33 @@ Atentamente,
 Estoy contrastando una estimación histórica según la cual la Junta de 1790 **rechazó** el dividendo correspondiente a 1789 (31 votos a favor y 210 en contra), pero una propuesta de 12 millones nominales de reales como 5% sobre el **ejercicio de 1790** se aprobó en la siguiente Junta de 1791, lo que implica una base de distribución de 240 millones de reales, frente a otra publicación que mantiene 300 millones como capital de balance hasta 1794. Las fuentes impresas contienen discrepancias mínimas de un real y un maravedí; sería útil la comprobación visual con las cuentas originales.
 
 **Estado de tramitación:** únicamente plantilla de consulta; NOT_SENT. No se ha utilizado ni transmitido identidad, email ni información personal; no se han recibido imágenes ni una respuesta de custodios.
+
+
+---
+
+## E — M2i consulta abreviada de impresos originales de 1790 y 1791 (BORRADOR, SIN ENVIAR)
+
+Estimado personal del Archivo Histórico de la Facultad de Teología de Granada:
+
+He identificado tres impresos del Fondo Saavedra relacionados con el Banco Nacional de San Carlos, con originales digitales catalogados:
+
+1. **ES 18087 AHFT 7-FSAAVEDRA_C25_007**: sesiones de Junta de 1790, 216 páginas, archivo maestro de 322,8 MiB.
+2. **ES 18087 AHFT 7-FSAAVEDRA_C25_010**: Reales Órdenes y Resoluciones de 1790 y el informe de Pedro de Lerena relativo a la representación de los accionistas de 28 abril de 1790; 72 páginas, archivo maestro de 108,5 MiB.
+3. **ES 18087 AHFT 7-FSAAVEDRA_C25_008**: Junta General celebrada los días 17 a25 octubre de1791, edición catalogada en1792, 362 páginas, archivo maestro de 511,1 MiB.
+
+Adicionalmente, la Biblioteca Nacional de España declara digitalizada la **Novena Junta General de octubre de 1791** bajo signatura **HA/8649(7)**, objeto **hd0069882062**, pero el visor de imágenes responde con error HTTP403 desde mi entorno.
+
+¿Podrían facilitarme un acceso autorizado **a un número reducido de páginas** que incluyan las portadas y acuerdos sobre:
+(a) el número y las fechas exactas de cada Junta (su catálogo registra *octava* tanto para la serie de1790 como para la de1791, mientras que BNE identifica la de1791 como *novena*);
+(b) el capital libre para nuevas operaciones tras la recompra de30.000 acciones y el acuerdo de dividendos con cargo a los beneficios de1790;
+(c) el dictamen real sobre el abono de intereses de anticipaciones y pérdidas por provisiones;
+(d) las partidas del sobreprecio de las30.000 y628 acciones compradas, que aparecen con dos importes distintos en estudios modernos.
+
+Se solicitan únicamente copias o imágenes cuyo uso esté permitido por el archivo, información de página y las condiciones de cita. No solicito los archivos íntegros de108–511MiB ni autorización presunta de redistribución.
+
+Gracias por su ayuda.
+
+Atentamente,
+[Firma, identidad y contacto del investigador, a completar por el interesado]
+
+**Estado:** DIGITIZED_OBJECT_METADATA_VERIFIED; BNE_IMAGE_HTTP403; AHFT_PRIMARY_PAGES_NOT_ACQUIRED; REQUEST_NOT_SENT; USER_IDENTITY_NOT_COLLECTED.
