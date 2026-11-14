@@ -181,3 +181,14 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [validate_sousa2003_treasury_royal_mint_deposit_loans_m3.py](validate_sousa2003_treasury_royal_mint_deposit_loans_m3.py) | 实际运行`PASS rows=8`：校验**371.4/673=55.2%**，保留1765/1767未知月日、贷款/黄金存量对铸币年度流量的不相容性，1798记录数额不视为当年新增贷款 |
 
 研究报告：[1743铸币/旧债、前黄金糖税和1760年代国库流动性跨档案核查](../PRE_GOLD_CREDIT_COLLATERAL_1743_COINAGE_1760S_TREASURY_LIQUIDITY_AUDIT_M3_20261114.md)。来源：1841 [《O Panorama》印刷148页](https://hemerotecadigital.cm-lisboa.pt/obras/opanorama/1841/N210/N210_master/N210.pdf)和[2003年Sousa原论文印刷788—790页](https://revistas.rcaap.pt/analisesocial/article/download/35368/24541/156638)。两份CSV来源文件SHA256分别是`326a50d242e0450ca0dfad2efcfb6b95bad9a72d2d1ded7e6dab9a2c37739d0a`、`360172f1baf149a4c84d63e48c281e8bffbcd18d44d17f5ec8a67dda052e6219`。**原始贷款契据、国库现金流水、降息法令原件和ICPSR因果复现仍NOT_ACQUIRED/NOT_RUN**。
+
+
+## M3资料取得再升级｜审计法院官方1763—1777年原始国库账簿卷号和1765会计重建
+
+| 新文件 | 真实来源与审计边界 |
+|---|---|
+| [ahtc_1763_1777_treasury_original_ledger_requisition_inventory_m3.csv](ahtc_1763_1777_treasury_original_ledger_requisition_inventory_m3.csv) | **21条**官方1977历史账簿检索号：**10册**指定半年收入/支出总账、**6册**现金簿、**5册**命令/税收欠款/士兵旧欠饷账。属于**官方档案目录元数据**，不是已经取得对应手稿原件；2024移库后当前`cota`待馆方核实 |
+| [treasury_1765_cash_accounts_vs_gold_coin_stock_provenance_m3.csv](treasury_1765_cash_accounts_vs_gold_coin_stock_provenance_m3.csv) | **7条**2019 Rodrigues博士论文原文1765年复式记账重建与2003 Sousa国库黄金记录：`two Caixa accounts 2765 contos`与`gold coins 76.8 contos`不属于同日同实体可直接对账的统计；**会计收益2690≠财政余额或税收**，发表约数的1 conto残差不得伪称底账错误 |
+| [validate_ahtc_ledger_requisition_and_1765_cash_specie_scope_m3.py](validate_ahtc_ledger_requisition_and_1765_cash_specie_scope_m3.py) | 实际运行`PASS AHTC_archival_locator_rows=21 ... ACCOUNT_AND_ASOF_NOT_COMPARABLE ... original_manuscripts=NOT_ACQUIRED`，审查历史账簿编号、来源访问状态和库存/流量不同口径 |
+
+官方馆藏目录：[AHTC Inventário (1977)](https://erario.tcontas.pt/pt/arquivo_biblioteca/instrumentos_pesquisa/Inventario_Adenda_Erario_Regio.pdf)（216页，SHA256 `fd31975695bfbc0c5299e5eed2dda24c6b21c976eadd43528e7ff79baaef6739`）；[馆藏机构与预约状态](https://www.tcontas.pt/pt-pt/TribunalContas/ArquivoBiblioteca/Paginas/Arquivo-e-Biblioteca.aspx)：2024移存ANTT，联系`dadi@tcontas.pt`申请原件查看或数字副本；[2019 Rodrigues博士论文](https://repositorio.iscte-iul.pt/bitstream/10071/19808/1/PhD_Manuel_Benavente_Rodrigues.pdf) 339页，SHA256 `ca8b83728950b1746440baad2ac522b9dd5010f4237ebb5a8a6e3b6c528b565e`。两份派生CSV SHA256：`32d4458e84298ac6772cc22d3ba9a73409c1d0c92907fba851fbea3d35d40150`、`c5b1a40a0626d9700f65198eddef0054bb92e1d97019f9327cac9f914f4992ac`。完整报告：[国库原始账簿卷号及1765现金与金储备不同口径审计](../AHTC_1763_1777_ORIGINAL_TREASURY_VOLUME_MAP_1765_CASH_VS_GOLD_SCOPE_M3_20261114.md)。
