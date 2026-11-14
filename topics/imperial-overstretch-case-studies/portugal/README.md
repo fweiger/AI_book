@@ -87,3 +87,10 @@
 - [FISCAL_CAPACITY_GOLD_REMITTANCES_DEBT_SERVICE_BRIDGE_M2_20261114.md](FISCAL_CAPACITY_GOLD_REMITTANCES_DEBT_SERVICE_BRIDGE_M2_20261114.md)：使用Costa–Henriques–Palma（2024）公开Table3“含/不含帝国的中央财政收入/GDP”与DEBT.PT的160年债务偿付，再将1720—1799的公共黄金和实际同段债务偿付量对接；突出原文**帝国贡献已扣除部分帝国相关开支**，不等于全帝国ROI。
 - [2024财政基准表](data_m2/fiscal_revenue_with_without_empire_2024_table3_m2.csv) · [分期收入/债务偿付口径对照](data_m2/fiscal_revenue_vs_debt_service_periods_m2.csv) · [按年匹配黄金与债务偿付量](data_m2/public_gold_vs_debt_service_matched_periods_m2.csv) · [复算程序](data_m2/reproduce_fiscal_capacity_gold_debt_bridge_m2.py)。
 - 新描述性发现：1720–49公共黄金汇款／同期偿债额≈**218%**，1750–79≈**173%**，1780–99≈**46%**（采用2008黄金版本则约**62%**）；该对比是独立账户的**规模比例**，不是实际偿债拨款流向、债息挤出金额或殖民收益率。2024财政论文只给基准重建分期收入指标，尚无连续年度财政全账。
+
+
+## M2新增｜2024财政附录A1/A2真实基准年份与1748主权债务率的版本冲突
+
+- [完整日期级财政审计报告](FISCAL_A1_DATED_BUDGETS_1748_DEBT_VERSION_AUDIT_M2_20261114.md)：核读2024 *Anatomy of a Premodern State* 官方在线Appendix A1 **36条**历史中央财政名义收入观察和Appendix A2的巴西黄金税制变迁；用DEBT.PT同年债务偿付数据检验**7个**可对齐财政观察，标注真实日期、期间均值、估算和来源差异。
+- [A1财政原值与作者原始参考文献CSV](data_m2/fiscal_nominal_revenue_benchmarks_appendix_a1_2024_m2.csv) · [A2黄金税制沿革CSV](data_m2/brazilian_gold_tax_institutions_appendix_a2_2024_m2.csv) · [7组财政/偿债对照](data_m2/fiscal_a1_explicit_years_vs_debt_service_m2.csv) · [1748年债务率附近15年版差审计](data_m2/debt_1748_published_vs_current_source_window_m2.csv) · [独立复算程序](data_m2/reproduce_fiscal_a1_debt_service_m2.py)。
+- 结果：1716年已记录债务偿付相当于该年发表名义中央财政收入的**7.76%**，1730年**6.33%**；1762—1777年**10.08%**是分期名义**年均对年均**的描述性比值。这并非独立核验的完整王室现金预算或军费挤出效应。2024债务Table1的**1748年9%**与当前版本锁定原始债务/GDP计算**8.1523%**，按正常四舍五入应为8%，故`ROUNDING_NOT_SUFFICIENT`，真实版本差异继续`OPEN`。
