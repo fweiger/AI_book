@@ -163,3 +163,37 @@ Atentamente,
 [Firma, identidad y contacto del investigador, a completar por el interesado]
 
 **Estado:** DIGITIZED_OBJECT_METADATA_VERIFIED; BNE_IMAGE_HTTP403; AHFT_PRIMARY_PAGES_NOT_ACQUIRED; REQUEST_NOT_SENT; USER_IDENTITY_NOT_COLLECTED.
+
+
+---
+
+## F — M2k consulta precisa de expediente judicial Banco de España–Grao (BORRADOR; NO ENVIADO)
+
+**Asunto: Identificación del expediente contencioso de 1887 y copia testimoniada del préstamo de 1795 (puerto del Grao de Valencia)**
+
+Estimado personal del Archivo Histórico competente:
+
+Investigo la secuencia histórica de obligaciones entre el Banco Nacional de San Carlos, la Junta Particular de Comercio y Agricultura de Valencia y la Hacienda Real, relativa a las obras del puerto del Grao.
+
+He revisado las páginas **557–559 del número 330 de la Gaceta de Madrid, de 26 de noviembre de 1887**, que reproducen la resolución del 24 de octubre de 1887 dictada en el litigio del Banco de España contra la Administración General, impugnando la Real Orden de Hacienda de 18 de marzo de 1884. Referencia oficial:
+https://www.boe.es/gazeta/dias/1887/11/26/pdfs/GMD-1887-330.pdf
+
+El expediente menciona expresamente documentos que agradecería localizar mediante signaturas y, si es posible, consultar por imágenes de unas pocas páginas autorizadas:
+
+1. **Escritura de préstamo otorgada en Madrid el 6 de octubre de 1795** entre el Banco de San Carlos y representantes de la Junta Particular de Comercio y Agricultura de Valencia, y **testimonio de su ratificación otorgada en Valencia el 22 de octubre de 1795**. El testimonio consta como anexo de la instancia del Banco de España presentada el **27 de diciembre de 1862**.
+2. **Certificación de la Contaduría de Hacienda pública de Valencia de 13 de noviembre de 1862**, con la relación detallada de los pagos recibidos por el Banco entre 1797–1807, 1813–1821 y 1826–1836, por importe total publicado de 13.703.208 reales.
+3. **Liquidación de la Junta de 24 de octubre de 1839**, referida a la situación al 30 de junio del mismo año, incluyendo principal, intereses y valor de los vales reales.
+4. **Reales Órdenes de 28 de septiembre de 1795, 16 de julio de 1802 y 10 de noviembre de 1817**, con especial interés en los arbitrios hipotecados al préstamo, la recaudación por empleados de Rentas Reales y la eventual responsabilidad por retrasos en su entrega.
+5. La disposición de **20 de abril de 1836 y la documentación de entrega al Archivo del Gobierno Civil de Valencia** de los papeles contables de la Junta de obras del puerto del Grao.
+
+Hay dos discrepancias que exigen el texto original de la escritura: la Gaceta de 1884, p.224, expresa un total previsto de **12.968.875 reales** aunque sus partidas de principal e intereses suman **12.968.575 reales**, con diferencia de 300 reales; la publicación de 1887, p.558, parece omitir una cifra inicial en su importe total. También deseo determinar si la autorización real de la financiación implicó alguna garantía estatal separada del contrato celebrado directamente con la Junta.
+
+¿Podrían indicar el **archivo actual custodio**, la **signatura exacta**, la existencia de imágenes digitalizadas, la paginación de los documentos y las condiciones de consulta, cita y reproducción? No se solicita autorización implícita para reutilizar ni publicar imágenes de los documentos.
+
+Muchas gracias.
+Atentamente,
+[Nombre, institución y dirección de contacto que completará personalmente el investigador]
+
+**Guías de conservación ya consultadas**: el Archivo General y Fotográfico de la Diputación de Valencia describe el fondo Gobierno Civil (ES.462508.ADPV / Gobierno Civil; GC:c.1 expedientes generales), pero la presencia del concreto expediente de 1795 NO ESTÁ CONFIRMADA. El Archivo de la Autoridad Portuaria de Valencia cuenta principalmente con fondos del siglo XIX medio en adelante, por lo que puede resultar más adecuado para documentos posteriores a 1850.
+
+**Estado de ejecución:** CUSTODIAN_INQUIRY_DRAFT_ONLY; NOT_SENT; NO_PERSONAL_ID_COLLECTED; ORIGINAL_1795_CONTRACT_AND_1862_CERTIFICATE_NOT_ACQUIRED.
