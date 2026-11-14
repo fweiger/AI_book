@@ -44,3 +44,12 @@
 - Detected major **UNRECONCILED** institutional source conflict: 2010 Banco p130 narrower 1807 Hacienda debt 41.6m retro pesetas=166.4m reales (53.10%) vs broader 1994 217.3m (69.34%); 50.9m reales/16.24ppt gap; do not relabel unexplained component as interest without accounting ledgers.
 - Identified Banco de España archival Section17 (ES.28079.AHBE/01.17) source catalog and official forms; exact 1807 book call number absent; no personal data supplied and no request sent. Published PDFs searchable but screenshot operations timed out; not archival original.
 - New M2d audit, concentration CSV, book balance diagnostics CSV, source registry, session; README updated. Keep Draft PR #36 / Issue #32 OPEN and causal tests NOT_RUN.
+
+
+## 2026-11-14 — M2e 1808 original shareholder meeting publication and bank revenue mix (Draft)
+
+- Found primary Banco San Carlos 20 Apr 1808 shareholders' meeting **printed 1815** in Madrid union catalog **Ateneo A-Caj.179/5**. 2025 antiquarian physical description says it includes a **folded 1807 year-end bank balance**; document identified but not scanned, so PRIMARY_LOCATED_NOT_READ.
+- Found accounting-history study Appendix 2 with actual original Banco account-book identifiers **for 1783 only**: 471 balance, 67/353 diary, 129/238 general ledger; no 1807 volume IDs known. Created original-bank-source-locator table and Spanish draft archive requests, NOT SENT, no user identity used.
+- New independent **historic earnings-mix dimension** from Banco de España 2010: 1791–99 Crown advances PLUS other investments share of cumulative banking income 52.2%, commercial discounting 5.3%; 1800–08 80.2%, 0.3%. Not direct lending/causal displacement. Added income mix CSV.
+- The **1994 published Banco de España Cuadro I.1 PDF image** was now successfully inspected, unlike prior M2d timeout. It confirms all 10 published assets and six liabilities items total 313.4m reales each; corrected M2d report verification addendum. Source still 1994 Tedde-derived secondary publication, not 1807 original ledger.
+- Added M2e report, 3 research CSVs, targeted Spanish unsent inquiry memo, new session, README/CHANGELOG. Outstanding 217.3m/166.4m/125.653m remains unresolved and causal crowd-out NOT_RUN; keep #32 OPEN, PR #36 DRAFT.
