@@ -35,7 +35,7 @@ def main():
     assert len(index)==10
     assert index["PJM_JAN14_B9_PRE_CORRECTION"]["availability_status"]=="NOT_LOCATED_UNCORRECTED_B9"
     assert not index["PJM_JAN14_B9_PRE_CORRECTION"]["sha256_if_accessed"]
-    assert num(index["PJM_JAN14_B9_PRE_CORRECTION"]["bytes_if_accessed"])==0
+    assert index["PJM_JAN14_B9_PRE_CORRECTION"]["bytes_if_accessed"]==""
     assert index["PJM_2026_MAIN_PDF_JAN14"]["sha256_if_accessed"]==PDF_SHA
     assert int(index["PJM_2026_MAIN_PDF_JAN14"]["pages_if_pdf"])==36
     assert index["PJM_JAN14_B9B_INDEPENDENT"]["sha256_if_accessed"]==JAN_B9B_SHA
