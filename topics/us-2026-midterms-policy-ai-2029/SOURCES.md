@@ -22,3 +22,9 @@
 
 ## 来源级别
 L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查所述段落与定义；L3多个**真正独立**一手源比对；L4复算量化结果并报告负结果。转载/同一匿名来源的多篇报道不能充当多份独立证据。预测必须记录“当时已可知/未来才发布”的PIT标签。
+
+## M0新增已读取数据与时间戳
+- [Treasury MTS Table 1 API](https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1)：在Ubuntu MCP执行官方请求，`record_calendar_month:eq:10`返回204行，每年报告里当前FY/上FY有两个October，必须选**当前财年**。保存[12年快照](data/treasury_october_2015_2026.csv)，所有值美元十亿，截到3位；提取于2026-11-14。2026-10财政记录**11-12才发布**，非选前可知。
+- [CBO 2026-02-11展望](https://www.cbo.gov/publication/61882)为PIT预测，[CBO 2026-11-09 FY总结](https://www.cbo.gov/publication/61986)解释FY2026实际/基线差异；本研究将预测与事后数据分开。
+- 选前企业原始业绩：[Meta](https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx) / [Alphabet](https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9/default.aspx) / [Amazon](https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/) / [Microsoft](https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1) / [Oracle](https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx)。Oracle FY27 90—95bn来自[非官方电话会转录](https://stockanalysis.com/stocks/orcl/transcripts/689425-q1-2027/)，尚需官方音频复核。
+- 详细观测与误判边界见[2026-11-14 M0报告](reports/2026-11-14_m0_readout.md)。

@@ -1,0 +1,12 @@
+id,reference_period,publication_date,PIT_pre_election,metric,value_usd_bn,figure_class,source_url,calculation,limitations
+F001,FY2026,2026-02-11,TRUE,CBO_FY2026_deficit_projection,1852,approx_derived,https://www.cbo.gov/publication/61986,1992-140,Derived_from_reported_deficit_surprise;rounding
+F002,FY2026,2026-11-09,FALSE,FY2026_deficit_realized,1992,rounded_actual,https://www.cbo.gov/publication/61986,CBO_2026_fiscal_review,Fiscal_year_ends_2026_09_30
+F003,FY2026,2026-11-09,FALSE,FY2026_deficit_above_2026_02_baseline,140,reported_variance,https://www.cbo.gov/publication/61986,reported_by_CBO,Revenue_shortfall_drives
+F004,FY2026,2026-11-09,FALSE,FY2026_revenue_below_baseline,193,reported_variance,https://www.cbo.gov/publication/61986,reported_by_CBO,Difference_not_revenue_level
+F005,FY2026,2026-11-09,FALSE,FY2026_outlay_below_baseline,53,reported_variance,https://www.cbo.gov/publication/61986,reported_by_CBO,Difference_not_outlay_level
+F006,FY2027,2026-02-11,TRUE,CBO_FY2027_deficit_projection,1887,forecast,https://www.jec.senate.gov/public/index.cfm/republicans/newsroom?ID=3C735708-F711-4976-A827-F4A86157ECD2,JEC_quotes_latest_CBO_baseline,Not_2027_realized_or_spending_impulse
+F007,FY2028,2026-02-11,TRUE,CBO_FY2028_deficit_projection,2080,forecast,https://www.jec.senate.gov/public/index.cfm/republicans/newsroom?ID=3C735708-F711-4976-A827-F4A86157ECD2,JEC_quotes_CBO_baseline,Not_future_actual
+F008,FY2029,2026-02-11,TRUE,CBO_FY2029_deficit_projection,2020,forecast,https://www.jec.senate.gov/public/index.cfm/republicans/newsroom?ID=3C735708-F711-4976-A827-F4A86157ECD2,JEC_quotes_CBO_baseline,Not_future_actual
+F009,2026-10,2026-11-12,FALSE,MTS_Oct2026_receipts,368.940,nominal_monthly_actual,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,Treasury_API_october,Month_activity_before_election_but_release_after
+F010,2026-10,2026-11-12,FALSE,MTS_Oct2026_outlays,773.004,nominal_monthly_actual,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,Treasury_API_october,Unadjusted_for_payment_timing
+F011,2026-10,2026-11-12,FALSE,MTS_Oct2026_deficit,404.064,nominal_monthly_actual,https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1,Treasury_API_october,Unadjusted_for_payment_timing
