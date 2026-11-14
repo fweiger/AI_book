@@ -98,3 +98,14 @@ https://cervantesvirtual.com/obras/autor/banco-de-san-carlos-espana-94044
 **PASS（发表资料层）**：实际打开AECA PDF四页截图核查；四类资产的1-real差额、详细损失/抵补的1-maravedí差额、12m/5%=240m分母和1790投票结果复算。**BLOCKED**：1790股东大会原印本页、银行总账和1794原始AJD会议簿、1807银行原账、英国数据服务许可原表。**NOT_RUN**：国债利息直接挤占海军或银行对商户贷款的定量因果。
 
 **唯一下一动作**：从AHFT获得其1790股东大会原印本 7-FSAAVEDRA_C25_007 的可阅读页影像（尽量限缩相关1789—90资本/政府利息议题页，遵守许可，不搬运大体积版权原件），并利用已精确定位的AHBE Libro145、Libro154与Caja984查询对应原始卷页，最终核实“分红有效资本240m vs账面资本300m”的制度/入账桥，再继续1807原账和实际债息挤出研究。
+
+
+---
+
+## M2i follow-on source-critical correction (2026-11-14)
+
+The earlier M2h statement that "we still lack primary 1791 AGM original" remains true for **page images**, but a BNE digitized **original 1791 October ninth AGM issue has now been pinpointed: HA/8649(7), digital item hd0069882062, https://hemerotecadigital.bne.es/issue.vm?id=0069882062**. Actual web access returned **HTTP403**, so no original financial/meeting page read. AHFT also has printed original **C25_008** (1791, 362pp, 511.1MiB digital master) and a focused **C25_010** (1790 King/Lerena orders, 72pp, 108.5MiB), likewise cataloged NOT read. AHFT currently labels 1791 octava while BNE and Banco2014 call it novena; historical author 2014 bibliography also calls October1790 octava while AHFT lists April–June1790 octava. Consult original title pages; do not silently resolve or collapse.
+
+**Additional historical money/credit evidence:** AECA 2012 PDF **p19 screenshot** directly checked, reporting royal indemnity award 9m nominal reales **24 Aug1793** after 7 Aug1793 auditors' submission, original Banco book AHBE AJD **libro153 fols139v–145v**. Royal order award ≠ verified actual paid cash, and could overlap earlier recognized interest categories.
+
+**New 20,000-reales definitional conflict:** AECA2012 PDF screenshot p17 **5,284,027 whole reales+26 maravedis** for total 30,628 shares' buyback overprice at 1790 balance. Banco2014 EHE67 p128 source text describes 30k shares **5,175,849 suffix14** +628 shares **128,178 suffix12**, sum **5,304,027 suffix26**; 20,000 whole reales difference. Different vintage and litigation/balance account scope unproved comparable, do not call either an audited typo. See [M2i report](M2I_1790_1793_ROYAL_ORDERS_AGM_AND_PREMIUM_CONFLICT_20261114.md) and [data](bank_buyback_premium_crosssource_m2i.csv). M2h historical conclusion about 1790 prewar financial fragility remains, original books NOT_ACQUIRED.
