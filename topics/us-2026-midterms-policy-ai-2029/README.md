@@ -38,3 +38,6 @@
 
 ## M0真实数据（2026-11-14新增）
 - [第一轮H02/H04定量观察](reports/2026-11-14_m0_readout.md)：财政部API的2015—2026年12个10月、FY2026相对CBO基线差异、五家大型科技企业选前CAPEX。脚本：[recompute_m0.py](analysis/recompute_m0.py)。**仅描述统计，尚不能认定政治因果**。
+
+## H03州级政策、电网预测及联邦法案（2026-11-14）
+- [H03第一轮政策→电力负荷报告](reports/2026-11-14_h03_policy_grid_baseline.md)：Virginia已经生效的数据中心用电税、100MW新建选址规则、PJM 2026-01选前预测修订、选后旧国会BAAJA程序投票。附[来源级事件表](data/h03_policy_events_2026.csv)、[PJM预测修订CSV](data/h03_pjm_forecast_revisions_2026.csv)、[税率敏感性CSV](data/h03_va_electricity_tax_scenarios.csv)、[离线复算脚本](analysis/recompute_h03_m0.py)。**已生效法律≠已证明建设延期**。
