@@ -24,3 +24,10 @@
 - `H03_VA_ELECTRICITY_TAX_EXPOSURE`：适用数据中心计税期内实际kWh×$0.011，不等于100MW选址门槛；目前只有9个**非真实项目的模型情景**。
 - `H03_NEW_100MW_SITING_EXPOSURE`：是否2026-07-01后申请Virginia新的>=100MW需要本地选址审批项目；只有符合定义才处理；已获批扩建不大于额外100MW另行分类。
 - `H03_REALIZED_DELAY_MW`：到原计划投产日却未投产MW/到期计划MW，需要项目独立记录。**当前UNKNOWN，不得填0或用PJM全区预测代替。**
+
+## H03新基线指标：实际与预测的可比性
+- `H03_PJM_2025_LARGE_LOAD_ERROR` = (同一分区2025年实际`Historical July Peak` - 2025版`Load Forecast July Peak`) / 2025版预测。只统计**双方都有报告的主要分区**；RTO和各DOM子区不再求和。
+- `H03_MATCHED_FORECAST_COVERAGE` = 有历史实际的2025预测主要分区预测MW / RTO 2025全部预测MW；本轮7566/7735=97.815%。这是**预测量覆盖率，不是全部实际负荷覆盖率**。
+- `H03_PJM_VINTAGE_REVISION` = 对同一个目标年Y，PJM 2026-01预测MW - 2025-01预测MW；必须分`Large Load Adjustment` vs 整体夏峰负荷，分预测版本和zone。
+- `H03_REALIZED_LOAD_YOY` = 同一报告体系主要分区历史2025峰值相对2024实际峰值变化。统计只描述历史增长，**不能等于建设项目完成率**。
+源指标和校验见[H03研究报告](reports/2026-11-14_h03_pjm_large_load_realization.md)。

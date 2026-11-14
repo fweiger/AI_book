@@ -19,3 +19,9 @@
 - [h03_pjm_forecast_revisions_2026.csv](h03_pjm_forecast_revisions_2026.csv)：6个预测年份的PJM全RTO夏季系统峰值2025→2026版本下修/上修，绝非数据中心独有负荷。
 - [h03_va_electricity_tax_scenarios.csv](h03_va_electricity_tax_scenarios.csv)：3种MW×3种负荷率的**假设情景**，不是项目实际成本。
 - [H03离线复算](../analysis/recompute_h03_m0.py)及[观察报告](../reports/2026-11-14_h03_policy_grid_baseline.md)。
+
+## PJM官方2026-05-29 XLSX测量值（严格源校验）
+- [h03_pjm_2025_zone_observed_vs_forecast.csv](h03_pjm_2025_zone_observed_vs_forecast.csv)：23个分区/子区、2024/2025预测与历史实际、误差及空值；源SHA256在每行。
+- [h03_pjm_historical_july_2019_2025.csv](h03_pjm_historical_july_2019_2025.csv)：RTO/DOM/AEP/COMED/PS五区2019—2025的大负荷历史峰值，避免缺值叠加。
+- [h03_pjm_2025_to_2026_vintage_revisions.csv](h03_pjm_2025_to_2026_vintage_revisions.csv)：同目标年预测版本修订，部分主区与子区仅做分开比较不求和。
+- [标准库源验证与离线复算](../analysis/recompute_h03_pjm_accuracy.py)。源XLSX未复制进GitHub；需从官方URL独立合法获取，SHA变更时另开版本。
