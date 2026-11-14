@@ -112,3 +112,8 @@
 - [h03_pjm_2026_jan_feb_publication_manifest.csv](h03_pjm_2026_jan_feb_publication_manifest.csv)：独立B9b、订正B9、当前合并、五月Accuracy、2025引入B9b说明的原始URL/大小/SHA和PIT边界；另[1月月度PSA排除附件](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/total-monthly-load-adjustments.xlsx)见来源表。
 - [h03_pjm_2027_rto_baseline_publication_sensitivity.csv](h03_pjm_2027_rto_baseline_publication_sensitivity.csv)：2027在三个不同RTO forecast来源比较的-1855/-1860/-1865MW，**不能混日期当实体损失**。
 - [标准库4原始文件核验脚本](../analysis/recompute_h03_ekpc_source_reconciliation.py)、[完整报告](../reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)。
+
+
+## 2026-04-07正式县书记官Minutes + H10 BEA连续33个月（补充）
+- [Travis County 2026-04-07 Item26与Item6官方决议台账](../cases/musk-2026/travis_official_votes_20260407.csv)记录4-0+1弃权的**9%合格grant扣留**、同时2025—26后续社区项目批准、原始PDF/Transcript SHA及发布日期，主证据E083—E085；**实际扣留USD未确认**。[原始会议专项研究](../reports/2026-11-14_h09_official_minutes_primary_confirmation.md)。
+- [BEA官方NIPA 2024-01—2026-09共33个月headline/core PCE指数](h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)，来源原始Excel SHA，完整环比/同比；[复算PASS脚本](../analysis/recompute_h10_bea_snapshot.py)；[数据版本报告](../reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)。2026-11-14后见修订不能伪装作历史每月首发版本。
