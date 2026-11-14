@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.2.0",
+  "topic_version": "0.3.0",
   "topic_id": "TOPIC-009",
   "title": "睡眠科学与生理机制：开放式AI协作研究",
   "source_level": "公开书目与摘要/机制框架，未做独立系统综述",
@@ -209,6 +209,19 @@
       "title": "权威专家—论文—方法证据索引",
       "status": "SEED_METADATA_L1",
       "entry": "experts/README.md"
+    },
+    {
+      "id": "PATH-ASCVD-01",
+      "type": "research_path",
+      "title": "睡眠破坏—免疫—动脉粥样硬化/卒中预防（研究路径）",
+      "status": "CANDIDATE_FRAMEWORK",
+      "entry": "pathways/sleep-immune-atherosclerosis/README.md"
+    },
+    {
+      "id": "Q13",
+      "type": "research_question",
+      "title": "非呼吸相关睡眠碎片化—免疫—斑块易损性的证据缺口与时间方向",
+      "status": "OPEN"
     }
   ],
   "edges": [
@@ -491,6 +504,61 @@
       "source": "EXPERT_ATLAS",
       "target": "M10",
       "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "PATH-ASCVD-01",
+      "relation": "跨维度候选研究路径（非因果）"
+    },
+    {
+      "source": "Q13",
+      "target": "PATH-ASCVD-01",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M00",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M01",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M02",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M03",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M04",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M06",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "M09",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "SL02",
+      "relation": "研究主题关联（非因果）"
+    },
+    {
+      "source": "PATH-ASCVD-01",
+      "target": "SL05",
+      "relation": "研究主题关联（非因果）"
     }
   ],
   "reading_paths": [
@@ -534,6 +602,22 @@
         "M02",
         "SL01",
         "SL03"
+      ]
+    },
+    {
+      "id": "PATH-ASCVD-01",
+      "name": "睡眠—免疫—动脉粥样硬化临床转化候选路径",
+      "nodes": [
+        "ROOT",
+        "PATH-ASCVD-01",
+        "M00",
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M06",
+        "SL02",
+        "Q13"
       ]
     }
   ],
