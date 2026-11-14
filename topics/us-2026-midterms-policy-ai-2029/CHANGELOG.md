@@ -1,4 +1,11 @@
 # TOPIC-011｜版本记录
+
+## 2026-11-14 | 第十六轮H01逐案实算（保留topic_version现值）
+- 在Ubuntu MCP从GPO官方GovInfo真实下载并检查110/116/118/119届hr/s 8份ZIP，按各届第二年11/14逐XML解析56,777项普通议案；输出[36行阶段/主题表](data/h01_round16_billstatus_funnel_110_116_118_119.csv)、[8源SHA](data/h01_round16_govinfo_source_manifest.csv)、[77行审计样例](data/h01_round16_bill_status_audit_examples.csv)、[标准库复算](analysis/recompute_h01_billstatus_funnel_round16.py)、[报告](reports/2026-11-14_h01_round16_govinfo_56777_bill_stage_funnel.md)与sessions记录。
+- 法案提出/两院通过/成法：110届10943/456/431，116届13642/197/184，118届15460/117/101，119届16732/136/117；成法率3.9386/1.3488/0.6533/0.6993%。各源有SHA，成法无缺失的两院动作码；GPO档案历史重新出版非历史原始PIT。
+- 发现委员会报告字段漏计186条（四届72/43/55/16），按GPO正式报告动作码5000/14000并入后完整复算。对H.R.1424(2008)、H.R.748(2020)一手原案/最终成法核验发现政策内容与单值PolicyArea存在重大漂移；H01统计“立法载体”，H02应分析最终条款。
+- H01—H10真实政治/投资因果仍UNTESTED、路径P-A—P-D UNKNOWN；现有PR #51未合并main。下一轮需要正式跨议案政策条款链接、党派分层和预算生效数据。
+
 ## 2026-11-14 | topic_version 0.2.6 — 2022正式县零返利和10次CPI事前预测的方向检验
 - **H09**：取得[Travis County 2022-01-31官方项目汇总](reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)：Tesla/Colorado River项目当时Zero rebates paid, performance year1 verification pending；另有县协议项目同期零返利，不能未经对照推断Tesla受到特殊政治打压。它是2022年F级历史状态，与2025-11媒体引用尚无返利（R级）不同。后续2026美元额及实际追缴仍缺；原付款状态CSV追加2022官方行。
 - **H10**：检查2023—26共46次CPI公布日的前一天历史供应商日历，headline/core各仅28天实际与预测并列，网页已事后回填actual，**预测值没有可核原始首发时间，均标非PIT**。另独立取得10个有事前日期的Reuters/MNI/InvestingLive/Continuum/CalculatedRisk/FXStreet预期，严格区分单机构与专业共识；对应BLS首发和官方Treasury有符号日差。核心8次非零surprise、7次2Y非零方向，6次同向、2025-03-12核心低于预测0.1pp却2Y+7bp是强反例、另1次2Y不变。双侧精确二项p=0.125，剔2026-11-10后5/6、p=0.21875，**无显著性/样本外胜率结论**。两份供应商forecast在2026-03-11和11-10的核心历史值0.3与预先发表的0.2不同，不能认定历史网页是当时市场可见一致预期；不等于证明数据商故意篡改。
