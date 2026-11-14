@@ -46,3 +46,8 @@
 - **2026/27 Firm状态**：CLOA+ESA与ELOA区分；跟踪公司同季合同存量，记录2025Dec→2026Sep Firm 21.2→22GW、占比43.71→40.07%，不当作逐项目兑现。
 - **SCC #52**：2026-10-23原Order继续审理，下一次核对PUR-2026-00011真实最终批准/匿名队列下载。5-12中间命令后续10-23日期写5-25的矛盾保留，避免查找不存在第二次裁定。
 - **PJM电网登记**：FERC在2026-10-09接受>=50MW registry，PJM11-09报合规，存2027-03-01初始报送截止与公开端按EDC区域汇总限制；发现可用汇总后按RTO/区域/年份统计且**不假装取得项目级信息**。同期监控SCC拟议≥100MW州队列，另见[机器状态表](data/h03_state_federal_large_load_registry_status.csv)。
+
+## H03预测误差回测已执行，不再把下修当实体投资下降（2026-11-14）
+- [第七轮报告](reports/2026-11-14_h03_vintage_backtest_cra_competing_path.md)包含31条PJM旧版预测-目标年实际对应的回溯检验。重点：2025目标DOM旧版2024预测5538MW比2025新版4970MW更接近实际5563MW；DOM+AEP+PS三地WAPE3.07→8.77%变差而MAPE13.40→8.64%变好。样本仅三地一个目标年，**不能进行总体统计显著性或推断2027因果**。
+- 监控2027等新年度的**真实**同定义负荷，区别PJM地区LLA与Dominion纯DC实际峰值；对未来每次负荷预期修订先匹配版本、分区、目标年并执行[离线脚本](analysis/recompute_h03_vintage_calibration.py)。
+- **竞争路径**：2026-11-02选前CRA已列合同/许可/芯片/供应电网1-in-10限制及2030约11.5GW情景缺口。新国会的后续政策只有在剥离这些旧有机制与州GS5等控制后才可判断增量影响。SCC项目队列[#52](https://github.com/fweiger/AI_book/issues/52)、PJM Registry[#53](https://github.com/fweiger/AI_book/issues/53)并行跟进，尚未获得完整公开项目级数据。

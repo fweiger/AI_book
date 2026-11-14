@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H08均UNTESTED。** 版本 0.1.8；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H08均UNTESTED。** 版本 0.1.9；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -59,3 +59,7 @@
 
 ## H03第六轮：DC专属实际峰值、未来纯DC预测、双登记制度（2026-11-14）
 - [PJM数据中心4GW实测与2027–29预期及SCC/PJM登记状态](reports/2026-11-14_h03_registry_and_dc_peak_baseline.md)：Dominion 2025纯数据中心同时峰值约4GW、2026-01锁定的2027/2028/2029预测4933/5448/5980MW；公司CLOA+ESA Firm阶段占比2025-12 43.71%→2026-09 40.07%，虽绝对规模21.2→22.0GW；2026-07 PJM约3800MW真实负荷转移事件。SCC 2026-10-23**仍继续审理**，PJM 50MW Registry **被FERC接受**但只要求公开区域汇总。数据源、可比性和[标准库复算](analysis/recompute_h03_matured_dc_baseline.py)。[SCC项目数据追踪Issue #52](https://github.com/fweiger/AI_book/issues/52)。
+
+
+## H03第七轮：31条历史预测版本真实回测 × 2026-11-02 CRA供电约束竞争路径
+- [完整预测误差及CRA反事实报告](reports/2026-11-14_h03_vintage_backtest_cra_competing_path.md)；[PJM31条forecast-vs-actual](data/h03_pjm_load_forecast_vintage_backtest_2023_2025.csv)、[同批三区WAPE/MAPE](data/h03_pjm_2025_paired_vintage_scorecard.csv)、[CRA机制与情景](data/h03_cra_nov2026_scenario_assumptions.csv)、[离线+SHA源校验脚本](analysis/recompute_h03_vintage_calibration.py)。**相同2025目标三地区MAPE改善，但WAPE恶化**，说明模型版本修订/区域规模权重会影响未来政治归因；CRA估计2030硬供电约束可能造成约11.5GW缺口（非已实现，也非政治已造成）。

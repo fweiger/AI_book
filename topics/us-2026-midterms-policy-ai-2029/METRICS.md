@@ -67,3 +67,9 @@
 - `PJM_LARGE_LOAD_TRIP_MW`：2026-07-22约3800MW计算/数据中心负荷切到自备电源；PJM系统实时净负荷从99984至96205（净3779MW）。为**事件冲击**，不能用2025DC年度峰值做同比或者算公司客户占比。
 - `PJM_REGISTRY_PUBLIC_AGGREGATE`：>=50MW范围FERC于2026-10-09接受，2027-03-01已有/即将投运大型负荷申报截止；仅公开配电区域汇总（具保密限制），目前真实CSV状态NA。与VA SCC拟议DP约100MW匿名公开队列**不同法域与范围**。
 - `VIRGINIA_SCC_QUEUE_PUBLICATION_STATUS`：2026-10-23官方Order仍`CONTINUED`，匿名项目清单未实际核实；保留May12 vs May25日期冲突，不能把interim当final或上市。
+
+## H03真实历史Forecast-vintage回测（v0.1.9）
+- `PJM_LLA_SIGNED_BIAS_MW`=历史实际`Historical July Peak`−该目标年当年或旧版`Load Forecast July Peak`。**正值=低估**，范围RTO/DOM/AEP等同一zone，LLA非数据中心专属。
+- `BIAS_VS_FORECAST_PCT`=100(actual/forecast−1)，分母是预测MW；`APE_VS_ACTUAL`=100|actual−forecast|/actual，分母是**实际MW**。不能将11.935%偏差当10.662%绝对百分比误差。
+- `MAPE_EQUAL_ZONES`=mean(APE)（同样区域各占一票），`WAPE_LOAD_WEIGHTED`=100Σ|actual−forecast|/Σactual。仅使用两版都有的同目标同区域共同样本，父子分区RTO/DOM不可重复相加。2025目标DOM+AEP+PS三地区2024/25版本WAPE 3.070%→8.772%，MAPE 13.400%→8.637%，**不是显著性结果**。
+- `CRA_2030_POWER_SHORTFALL_SCENARIO`=约11.5GW（2026-11-02 CRA报告未来Hard Supply Constraint假设），不是2026实际缺电/政策造成的损失，也不得将它同PJM容量市场短缺不同口径累加。

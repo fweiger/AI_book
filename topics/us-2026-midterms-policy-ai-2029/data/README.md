@@ -62,3 +62,9 @@
 - [h03_state_federal_large_load_registry_status.csv](h03_state_federal_large_load_registry_status.csv)：VA SCC拟议100MW DP队列仍待审 vs FERC接受PJM >=50MW登记，2027-03初始报送，公开仅可能为区域汇总。
 - [h03_data_discrepancies_and_controls.csv](h03_data_discrepancies_and_controls.csv)：5-12 vs5-25官方日期、PJM网站过期Pending、2025纯DC实际4GW与DOM区域LLA5563MW不能混比。
 - [纯标准库复核](../analysis/recompute_h03_matured_dc_baseline.py)，以及[第六轮报告](../reports/2026-11-14_h03_registry_and_dc_peak_baseline.md)。历史原始信函公开2026-02，研究归档2026-11。
+
+## H03第七轮：31条历史预测版本回测与CRA电力供给竞争解释
+- [h03_pjm_load_forecast_vintage_backtest_2023_2025.csv](h03_pjm_load_forecast_vintage_backtest_2023_2025.csv)：历史31个zone×target_year×vintage匹配，2023/24/25版本，采用2026-05事后汇编的真实LLA，记录SHA及发布时间，不等同于纯DC或独立项目建设真实兑现。
+- [h03_pjm_2025_paired_vintage_scorecard.csv](h03_pjm_2025_paired_vintage_scorecard.csv)：共同DOM/AEP/PS三区、同2025目标、2024与2025版本各一行，WAPE和MAPE权重分明。
+- [h03_cra_nov2026_scenario_assumptions.csv](h03_cra_nov2026_scenario_assumptions.csv)：CRA 2026-11-02场景机制、未来2030约11.5GW供电缺口，且明确场景≠已实现。
+- [recompute_h03_vintage_calibration.py](../analysis/recompute_h03_vintage_calibration.py)：纯标准库重算；附`--input`与原XLSX SHA和31条单元格比对。原XLSX未作为仓库附件上传，需从PJM官网下载保留原始文件。
