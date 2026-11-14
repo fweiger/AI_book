@@ -292,3 +292,12 @@ Issue #32 OPEN、Draft PR #36保留，不合并。
 - 瓦伦西亚市立档案官方现行咨询/预约通路、通常每人每天8卷上限与2015年影像复制规章已定位；所有实物调阅、复制、邮件和授权均 **NOT_REQUESTED/NOT_ACQUIRED**，不能冒充已取得原件。
 - 2022年墨西哥经济史出版商试读PDF的Table1.2已影像核对，1795–99向卡斯蒂利亚与加勒比分别为18,851和24,119**千比索（五年累计）**；加勒比占出境合计56.13%。与既有M1十年均值存在小幅 `situados` 版本差异，数据合并前须回查原表。1997/2020 Marichal文章表2仅PDF文字核对、截图403。
 - 保持两条研究路径互不假装证实因果：港务本土微观支付链，以及殖民地到本土国库的制度/资金桥。下一唯一动作由有身份和授权的研究者向市立档案馆询问Caja56 nº19、Caja77 nº20、Caja78 nº4的在库和1797年覆盖、复制途径；**尚未发送**。#32 OPEN, Draft PR #36不合并。
+
+---
+
+## M2r — 西班牙加勒比财政汇款的发送/接收双口径与年度均值审计（2026-11-14）
+
+- [M2r完整报告](M2R_SPANISH_CARIBBEAN_SITUADOS_RECONCILIATION_AND_MEAN_DENOMINATOR_AUDIT_20261114.md)、[Serrano 2020 表1：24年双版本CSV](barlovento_dual_sender_reconstructions_m2r.csv)、[表4：23年哈瓦那实际入账CSV](havana_reception_account_table4_m2r.csv)、[可运行stdlib算术审计](validate_situados_m2r.py)、[1757/1758圣多明各军饷事件档案号冲突登记](santo_domingo_military_pay_arrears_1757_1758_conflict_m2r.csv)。
+- **实际新发现**：公开学术表1显示1765–1788向Barlovento汇款Serrano重建84,453,062银比索，Marichal–Souto–Klein对照103,172,038，差18,718,976（对后者18.14%）。表4只有**23行1766–1788**，真实总收入112,185,483、实际收到situados 74,541,779，论文公布两项平均值却恰等于**÷24**（4,674,395与3,105,907），按23行应为4,877,629.70与3,240,946.91；是否编辑/未披露处理待查。已发表逐年百分比平均约69%，**与金额加权总体比率66.45%不是同一种统计量**。
+- **额外史料突破**：2012 Marichal–Souto论文提供Veracruz→La Habana→Santo Domingo等多节点situados运输延误/现金凑集机制，记1758驻军欠薪抗议并引用AGNM卷件；2017多米尼加历史科学院《Clío》Amadeo Julián记为**1757**，并给出**AGI Santo Domingo 1088/1092**原始馆藏号。双日期原卷未读，来源冲突保留，不能误当两次样本。
+- **完成验证**：从论文公开HTML逐行取表并计算，两个CSV 24/23行、第三冲突登记2行、原始表总额/年比例复算通过；本地执行与GitHub文件**相同 blob SHA**的Python校验脚本退出码0。**只有公布数据算术PASS**，手写账本独立验证、战争/债息/殖民衰退因果均NOT_RUN。#32仍Open，Draft PR #36未合并，无档案申请邮件发送。
