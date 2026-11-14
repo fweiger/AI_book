@@ -35,3 +35,12 @@
 - Recorded the 1811 contemporary contest of debt stock estimates 7.194bn vs Canga's 7.864bn, recognized debt 5.973bn under narrower criteria, and a 20,000 reales internal difference in two bank claims from the parliamentary text.
 - Committed M2c report, debt CSV, creditor-side CSV, source registry, research session and README expansion. Official parliamentary PDF text searchable; screenshot HTTP403. Copyrighted full PDFs not uploaded.
 - Remain NOT_ACQUIRED: UKDS study 3104 g104spd3.tab, AGS original ledger, Banco original accounts, matched same-year debt interest actually paid and full Army/Navy outlays. No crowd-out causal claims; PR remains Draft/Issue OPEN.
+
+
+## 2026-11-14 — M2d 1807 Banco balance and long-run sovereign assets (Draft)
+
+- Added Banco de España (1994) published year-end 1807 book balance gross Treasury 217.3m reales/total assets 313.4m, metal 1m vs total Caja 9.3m, outstanding dividends 40.1m; only selected factual lines and derived balance residuals kept in new CSV, not copyrighted full table.
+- Added Fundación BBVA (2005) Table 9.8 longitudinal historical bank source (Tedde 1988), summarized into six original period aggregates; 23 annual observations in 1784–1808, 1792/93 missing, and a source-lineage warning: 1994 and 2005 are not independent primary confirmation.
+- Detected major **UNRECONCILED** institutional source conflict: 2010 Banco p130 narrower 1807 Hacienda debt 41.6m retro pesetas=166.4m reales (53.10%) vs broader 1994 217.3m (69.34%); 50.9m reales/16.24ppt gap; do not relabel unexplained component as interest without accounting ledgers.
+- Identified Banco de España archival Section17 (ES.28079.AHBE/01.17) source catalog and official forms; exact 1807 book call number absent; no personal data supplied and no request sent. Published PDFs searchable but screenshot operations timed out; not archival original.
+- New M2d audit, concentration CSV, book balance diagnostics CSV, source registry, session; README updated. Keep Draft PR #36 / Issue #32 OPEN and causal tests NOT_RUN.
