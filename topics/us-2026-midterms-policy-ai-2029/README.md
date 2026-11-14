@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.2；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.3；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -29,6 +29,10 @@
 
 ## H10 18个月CPI/PCE环比实证对照（2026-11-14）
 - [CPI和PCE同月变化的描述性统计](reports/2026-11-14_h10_cpi_pce_alignment_18_month_sample.md)：2025-01—2026-09共21个月，因CPI起始和2025年10月缺值，只有**18个月有效配对**。整体月环比Pearson `r=0.946129`，核心月环比`r=0.553099`；这意味着核心两种通胀指标并非简单替代品，**并不证实美联储因果或加息预测**。[21行含缺失CSV](data/h10_cpi_pce_aligned_monthly_2025_2026.csv)和[离线复算PASS](analysis/recompute_h10_cpi_pce_alignment.py)。
+
+## H09州级协议与H10 22次CPI事件（v0.2.3）
+- [H09 Texas Comptroller官方381协议登记与金额缺失审计](reports/2026-11-14_h09_texas_381_registry_missing_cash_audit.md)：确认协议0005328唯一匹配Colorado River Project LLC/Travis County，但州数据库`totl_agmt_am`是**NA不是$0**、last_update停于2022-05、州截止日2041-12-30与县原签合同12-31不一致；2026-04决议9%金额尚未核算，不能用2020签约时估算10年优惠$14m来乘9%。
+- [H10 BLS 22个CPI发布日对US Treasury 2Y/10Y波动及强反例](reports/2026-11-14_h10_cpi_release_ust_22_event_robustness.md)：2Y发布日绝对变化5.2727bp vs同月随机日3.9813bp，探索性未校正p=0.0483；**排除2026-11-10后p=0.1389**、分年不达0.05，说明初步统计不稳健，不能直接宣称CPI因果/交易策略。附[22事件CSV](data/h10_cpi_release_treasury_2y10y_2025_2026.csv)与[离线复算程序](analysis/recompute_h10_cpi_release_ust_events.py)。
 
 ## 11个可直接接手的AI任务
 | 工作ID | 核心研究 | Issue |
