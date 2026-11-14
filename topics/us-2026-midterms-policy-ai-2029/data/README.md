@@ -1,4 +1,12 @@
 # TOPIC-011｜M0机器注册表
+
+## 第十九轮：2026选举前公共法律全集、正式CBO评分与草案版本隔离
+- [h02_round19_2026_election_pre_enacted_bills.csv](h02_round19_2026_election_pre_enacted_bills.csv)：GovInfo2026-01-15至11-02全部67项P.L.119-70..136的签署日、议案/政策原始标签及官方逐案链接；[四份BILLSTATUS源ZIP SHA](h02_round19_119th_sources_sha.csv)，[六份重点成法的GPO HTML SHA](h02_round19_6_enacted_law_sha.csv)。
+- [h02_round19_pl11998_secure_america_cbo_section_outlays.csv](h02_round19_pl11998_secure_america_cbo_section_outlays.csv)：CBO2026-06-10 S.2最终通过法案七条款FY2026授权及FY2026—2035预计直接支出。FY2027—29合计53.433bn美元，注意仅直接支出增量，既非真实支出也不是CBO完整新赤字预测；FY2026两行*小于50万美元保留删失标志。
+- [h02_round19_cbo_budget_bridges_scored_vs_unscored.csv](h02_round19_cbo_budget_bridges_scored_vs_unscored.csv)：11项法规/发布版次的评分阶段及是否可加分类，包含P.L119-74/75的FY2026合计约+2bn酌情资金、119-75§528的IRS旧拨款撤回11.661bn、119-103临时拨款全年年化CBO假设、草案版本映射；未知分年金额保持NA。
+- [h02_round19_fy2026_29_partial_policy_score_bridge.csv](h02_round19_fy2026_29_partial_policy_score_bridge.csv)：只将2026-02 CBO总支出基线与6月S.2旧法律评分分列，不误作完整2026-11-02最新基线；[离线核对及联网6法SHA](../analysis/recompute_h02_round19_policy_bridge.py) · [第十九轮方法报告](../reports/2026-11-14_h02_round19_67_election_pre_laws_s2_budget_bridge.md)。
+- 财政预测、预算授权、直接支出、实际现金和2027国会引起的经济因果均是不同对象，不能无依据合并。来源报告没有取得CBO PDF byte SHA，虽网页PDF源文本和相关页面已经核读，仍需保留这一层级差异。
+
 ## 第十八轮 H02财政预算固定源与选前政策桥
 - [h02_cbo_feb2026_fiscal_baseline_round18_wide.csv](h02_cbo_feb2026_fiscal_baseline_round18_wide.csv)：FY2026—29四年完整的收入、支出、净利息、非利息、初级赤字及跨财年支付调整（4行），包括国防/健康/Medicaid。
 - [h02_cbo_feb2026_fiscal_baseline_round18_long.csv](h02_cbo_feb2026_fiscal_baseline_round18_long.csv)：142个官方财年分项/派生指标，来源为CBO 2026-02版次（投递时已复核，不能冒充初发Excel字节）。
