@@ -33,8 +33,8 @@ def main():
     s=load("h03_va_electricity_tax_scenarios.csv")
     assert len(s)==9
     for r in s:
-        cap=float(r["capacity_mw"]); load=float(r["average_utilization_fraction"])
-        kwh=cap*1e3*8760*load
+        cap=float(r["capacity_mw"]); utilization=float(r["average_utilization_fraction"])
+        kwh=cap*1e3*8760*utilization
         almost(kwh,float(r["electricity_kwh_year"]))
         amt=kwh*float(r["rate_usd_kwh"])
         almost(amt,float(r["annualized_va_tax_usd"]))
