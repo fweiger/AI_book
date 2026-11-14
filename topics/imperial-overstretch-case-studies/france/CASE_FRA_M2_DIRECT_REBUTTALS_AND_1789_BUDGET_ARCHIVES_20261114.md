@@ -3,7 +3,7 @@
 **权威Issue：** https://github.com/fweiger/AI_book/issues/35  
 **既有Draft PR：** https://github.com/fweiger/AI_book/pull/39  
 **阶段**：M2原始材料**发现、馆藏核对与方法设计**，并非已经读取纸本总账、预算数值或验证政治指控。本轮**没有为任何新发现的档案捏造财政数值**。  
-**关联记录**：[finance_originals_queue_m2.csv](finance_originals_queue_m2.csv)
+**关联记录**：[original_finance_sources_1789_1790_m2.csv](original_finance_sources_1789_1790_m2.csv)
 
 ## 一、新证据链：1789—1790年财政争议有官员的同期连续答辩
 
