@@ -7,4 +7,4 @@
 - 被阻挡：NA 4596/4597影像访问HTTP404，de Korte(1984)完整附录未取得；f370m vs f465.7m仍未裁决。
 - 文件：本会话、[M2B审计](../M2B_SPECIE_REMITTANCE_AUDIT_20261114.md)、[现金观察CSV](../voc_amsterdam_specie_allocated_vs_shipped_m2b.csv)、[来源登记](../source_registry_m2b.csv)、案例README入口。
 - 未开展：战争因果回归、VOC亚洲利润率账本复算、专家独立审查。
-- 下一步：获取NA 4596/4597可读账页或de Korte原版原始附录，以1799/1781分别查资金余额、拍卖欠款、负债与计价单位。
+- 下一步：获取NA 4596/4597可读账页或de Korte原版原始附录，以1779/1781分别查资金余额、拍卖欠款、负债与计价单位。
