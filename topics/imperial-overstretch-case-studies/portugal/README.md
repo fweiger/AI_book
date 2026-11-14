@@ -109,3 +109,12 @@
 - [1743_JUROS_CONVERSION_GOLD_EARMARKED_COFFERS_PROVENANCE_M3_20261114.md](1743_JUROS_CONVERSION_GOLD_EARMARKED_COFFERS_PROVENANCE_M3_20261114.md)：串联Azevedo (1947) 印刷页375明确定位的**1743年2月4日降息法令、1743—1745年宗主教座堂转款及1752年档案、1749年再次转换**，与Costa/Miranda/Nogues-Marco (2021工作稿及2024正式出版)所述约**5,000百万réis旧债转移**；强调它**不是1743年新借现金**，不能和DEBT.PT当年净新增长期`juros`≈**507.943百万réis**简单合并。
 - [DEBT.PT B殖民相关偿债金库8行核验CSV](data_m2/debtpt_selected_fiscal_coffers_debt_service_changes_m3.csv)、[可复算脚本](data_m2/reproduce_debtpt_colonial_coffers_m3.py)、[1743—1749年历史/法律/档案定位表](data_m2/juro_1743_1749_debt_conversion_evidence_m3.csv)。官方原始B XLSX经SHA锁定和真实运行，确认**1722—1761年巴西黄金运输1%税相关金库债务偿付净变化+50.984百万réis**、海外事务委员会+41.093百万réis。这些是**跨40年债务偿付安排的净变化，不是黄金税收入、当期新借款或1743年现金流**。
 - 2021工作论文在1706—1750年1,519份债券登记中报告殖民税源关联约17%；2024剑桥出版章在1760年观察基准下报告约24%，**样本分母不同，严禁当作7个百分点的同比增长**。法令和档案底稿尚未直接获得；完整核验和2025黄金ASCM仍`NOT_RUN`。
+
+
+## M3新增｜1743–1753债券原始档案精确索引与1775后慈善会信用配置反证
+
+- [AHU_1743_1753_BOND_MANUSCRIPTS_NONCASH_ISSUANCE_AND_2019_CREDIT_ALLOCATION_M3_20261114.md](AHU_1743_1753_BOND_MANUSCRIPTS_NONCASH_ISSUANCE_AND_2019_CREDIT_ALLOCATION_M3_20261114.md)：优先定位**AHU_CU_PADRÕES DE JURO Cod.2003（1743–1753）**海外税源/宗主教座堂债券登记，以及**AHU_CU_CONHECIMENTOS DOS JUROS DA ÍNDIA Cod.491（1742–1752）**印度战争商人融资。两卷目前仅有档案**目录转录**，手稿未取得，原Cod.2003还存在缺页风险。
+- 巴西国家图书馆官方AHU档案目录明确定位**1744-08-29的70,000 cruzados 5%债券补偿印度官职请求权（AHU_CU_Reino Cx.125 pasta32）**、**1753-06-14以国债和其他权利交换Cumã/Cametá殖民管辖权（Cx.60 pasta65）**。这两个案例证明某些`padrões de juro`有**非现金对价**，不能将所有发行金额当作王室新增现金；不能从这两份目录推算1743净现金融资。
+- [九条档案馆藏号/证据等级CSV](data_m2/archival_locator_juro_cash_financing_1743_1753_m3.csv) + [档案来源状态验证程序](data_m2/validate_archival_locator_and_cash_claims_m3.py)（实际执行PASS，9条档案手稿均标`NOT_ACQUIRED`）。
+- [Lisbeth Rodrigues 2019原文](https://doi.org/10.4000/lerhistoria.4730)提供**独立于此前Costa团队稿件版本**的信用分层反证：里斯本慈善会1775年后购买20份债券，其中19份公布本金可加总**179.854 contos**、五笔直接向国库资金**106.774 contos**（已知本金的**59.37%**），另外15笔是私人二级市场买卖（14笔本金已知）。另一张财政年投资Table4公布**195.510 contos**，与Table5已知数值差**15.656 contos**；缺失本金及年度/账户覆盖差异尚未分解，记`SOURCE_RECONCILIATION_OPEN`。这些差异不能自动归因1743年，也不识别1775禁私人放贷的因果挤出。
+- [2019购买市场分层摘要CSV](data_m2/misericordia_2019_bond_primary_secondary_reconciliation_m3.csv) + [实际运行的数量核查脚本](data_m2/reproduce_juro_primary_secondary_2019_m3.py)。
