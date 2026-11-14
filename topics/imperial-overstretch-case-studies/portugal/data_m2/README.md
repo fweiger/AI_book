@@ -192,3 +192,16 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [validate_ahtc_ledger_requisition_and_1765_cash_specie_scope_m3.py](validate_ahtc_ledger_requisition_and_1765_cash_specie_scope_m3.py) | 实际运行`PASS AHTC_archival_locator_rows=21 ... ACCOUNT_AND_ASOF_NOT_COMPARABLE ... original_manuscripts=NOT_ACQUIRED`，审查历史账簿编号、来源访问状态和库存/流量不同口径 |
 
 官方馆藏目录：[AHTC Inventário (1977)](https://erario.tcontas.pt/pt/arquivo_biblioteca/instrumentos_pesquisa/Inventario_Adenda_Erario_Regio.pdf)（216页，SHA256 `fd31975695bfbc0c5299e5eed2dda24c6b21c976eadd43528e7ff79baaef6739`）；[馆藏机构与预约状态](https://www.tcontas.pt/pt-pt/TribunalContas/ArquivoBiblioteca/Paginas/Arquivo-e-Biblioteca.aspx)：2024移存ANTT，联系`dadi@tcontas.pt`申请原件查看或数字副本；[2019 Rodrigues博士论文](https://repositorio.iscte-iul.pt/bitstream/10071/19808/1/PhD_Manuel_Benavente_Rodrigues.pdf) 339页，SHA256 `ca8b83728950b1746440baad2ac522b9dd5010f4237ebb5a8a6e3b6c528b565e`。两份派生CSV SHA256：`32d4458e84298ac6772cc22d3ba9a73409c1d0c92907fba851fbea3d35d40150`、`c5b1a40a0626d9700f65198eddef0054bb92e1d97019f9327cac9f914f4992ac`。完整报告：[国库原始账簿卷号及1765现金与金储备不同口径审计](../AHTC_1763_1777_ORIGINAL_TREASURY_VOLUME_MAP_1765_CASH_VS_GOLD_SCOPE_M3_20261114.md)。
+
+
+## M3 1765年四个Contadorias：发表收入/战争结转/税源统计口径及同作者版本审计
+
+| 新文件 | 可重复核对的信息与限制 |
+|---|---|
+| [rodrigues2019_1765_royal_treasury_revenue_expense_war_m3.csv](rodrigues2019_1765_royal_treasury_revenue_expense_war_m3.csv) | 2019 Rodrigues大学博士论文Table5.7 **10类**账面收入、Table5.3 **6类**账面费用、Table5.5 **6类**战争费用子项，共22行；总额恰好满足收入-支出=收益；战费为军事支出内部**子集**且涉及1762战事的迟延记账，不能另行加到支出合计 |
+| [rodrigues2019_1765_revenue_collection_vs_origin_region_m3.csv](rodrigues2019_1765_revenue_collection_vs_origin_region_m3.csv) | 2019原文Table5.9/5.11 4个地区，税收在征收地海外约15.6857%、商品原产地重分类海外约55.8579%；出版地区重分类收入和报告总计有**70,000 réis残差**，不可擅自填补 |
+| [rodrigues_1765_master2011_vs_phd2019_account_edition_audit_m3.csv](rodrigues_1765_master2011_vs_phd2019_account_edition_audit_m3.csv) | 2011硕士Table3.33 vs2019博士Table5.1 5项对照；4项精确借方/贷方/前期收益/当期收益一致，两类`Caixa`合计却分别写**359.525124 contos**和**约2,765 contos**，现金范围或修订原因未证实 |
+| [reproduce_1765_royal_treasury_fiscal_functional_bridge_m3.py](reproduce_1765_royal_treasury_fiscal_functional_bridge_m3.py) | **真正执行通过**的标准库整数réis检查脚本：22行分类、4区域、2版本、战争费子集、内部会计两条恒等式、70,000 réis地区源差及现金版差必须显式保留 |
+| [rodrigues1765_royal_treasury_derived_fiscal_identity_m3.csv](rodrigues1765_royal_treasury_derived_fiscal_identity_m3.csv) | 程序实际生成的16项会计总额、比例、来源口径与未决冲突状态；**非AHTC原始手稿逐笔审计** |
+
+大学公开原文：[2011年硕士PDF](https://repositorio.iscte-iul.pt/bitstream/10071/4540/1/Tese%20Manuel%20Jos%C3%A9%20Benavente%20Rodrigues.pdf) SHA256 `533d24ceb52b53a4e8994f1a72739b04feb36f162304a3f28c13173f6bd7b3e5`；[2019年博士PDF](https://repositorio.iscte-iul.pt/bitstream/10071/19808/1/PhD_Manuel_Benavente_Rodrigues.pdf) SHA256 `ca8b83728950b1746440baad2ac522b9dd5010f4237ebb5a8a6e3b6c528b565e`。已真实复算的16指标派生CSV SHA256：`1141284907ff7149b9bf20f25a785292c100854b36701de19847818add81a138`。研究全文：[1765年收入、战争支出、税收地域与现金账两个版本审计](../RODRIGUES_1765_ACCOUNTING_WAR_ARREARS_TAX_ORIGIN_2011_2019_CASH_AUDIT_M3_20261114.md)。下一原始目标：AHTC FGER Livros Mestre 537、2699、3976、4154，及2669/2699对应的1765军费结转和`Caixa`原页。文件中的手稿`NOT_ACQUIRED`，2025黄金ASCM`NOT_RUN`。
