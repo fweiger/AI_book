@@ -1,6 +1,6 @@
 # PATH-ASCVD-01 · 睡眠—免疫—动脉粥样硬化：面向卒中预防的研究路径
 
-状态：**RESEARCH_PORTFOLIO / 候选研究体系，非因果定论** · 所属专题：[TOPIC-009](../../README.md) · 版本对应 TOPIC-009 v0.3.1（完成 PR 审查后生效）。
+状态：**RESEARCH_PORTFOLIO / 候选研究体系，非因果定论** · 所属专题：[TOPIC-009](../../README.md) · 版本对应 TOPIC-009 v0.3.2（方法深化完成后生效）。
 
 ## 一个总问题
 **非呼吸相关睡眠碎片化及不同睡眠破坏方式，是否通过可识别、可调节的神经—免疫过程影响动脉粥样硬化斑块易损性和进展，进而提供卒中发生前的风险干预窗口？**
@@ -21,6 +21,12 @@
 
 - [13 项最接近论文/创新查重矩阵](modules/01-evidence/CLOSEST_STUDIES_20261114.md)：已经明确哪些题目和院内研究重复风险较高。
 - [临床三队列与 15 项漏斗 SOP](modules/06-clinical/COHORT_AUDIT_PROTOCOL.md) · [可交付院内的数据字典](modules/06-clinical/COHORT_DATA_DICTIONARY.md)：真实患者级数据**未获取**。
+
+## 2026-11-14 第三轮：P02/P03/P04 与临床转译
+
+- [临床转译主方案 V1：暴露→影像→免疫→组织的分阶段研究](CLINICAL_TRANSLATION_PLAN.md)：明确研究主假说、估计目标、关键混杂、样本量与盲态止损关口。
+- [PSG 事件级非呼吸觉醒和 HR/PTT 反应](modules/02-exposure/EVENT_LEVEL_AROUSAL_PROTOCOL.md) · [睡眠破坏方式的独立动物比较](modules/02-exposure/SLEEP_MODE_COMPARISON.md)。
+- [髓系功能免疫 SOP](modules/03-neuroimmune/IMMUNE_SIGNATURE_PROTOCOL.md) · [MRI 高危斑块与 CEA 匹配 SOP](modules/04-vascular/MRI_CEA_ENDPOINTS.md)。
 
 ## 四个共同基线文件
 - [证据梯度、已核验原始论文与尚待核实问题](EVIDENCE.md)
