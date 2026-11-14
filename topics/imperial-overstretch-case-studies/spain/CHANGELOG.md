@@ -10,3 +10,11 @@
 - Unresolved: original Madrid annual records, El Colegio de México NE.zip workbook, original AGS manuscripts, military / debt interest data, causal replication and independent historical review all NOT_ACQUIRED/NOT_RUN.
 - No formal knowledge graph / claims / topic_version updated: M1 evidence remains a Draft case and is not accepted as an integrated formal claim.
 - All operations on branch topic-010/case-esp-001-spain-20261114 and existing Draft PR #36; do not merge or close Issue #32 without review.
+
+## 2026-11-14 — M2 published annual data and descriptive recomputation (Draft)
+
+- Added publisher-attributed, CC BY 4.0, 43-year annual reconstructed fiscal (Table 6.2) and trade (Table 6.4) CSVs for 1778–1820. Distinguish published reconstruction from originals.
+- Added M2_YEARLY_RECONSTRUCTION_20261114.md reporting six interval averages, share denominators and unstable correlation, 1808 accounting regime break, return of remittances 1802–1804, and post-1815 continued exports despite zero Indies remittances in the published fiscal series.
+- Added M2 source_registry_m2.csv and M2 session and linked case README.
+- Bottom-layer UKDS g104spd3.tab, AGS accounts, El Colegio NE.zip and uniform debt-interest/war expenditures still NOT_ACQUIRED; causality and independent archival audit NOT_RUN.
+- Keep #32 OPEN and PR #36 DRAFT; no main graph or formal C-ID promotion.
