@@ -34,7 +34,7 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 | TOPIC-010 | [为何工业革命首先发生在英国？1450—1850 五国比较 #30](https://github.com/fweiger/AI_book/issues/30) | [跨国基线草稿 PR #31](https://github.com/fweiger/AI_book/pull/31) | `ISSUE + DRAFT PR` |
 | TOPIC-011 | [2026 中期选举至 2029：美国政策—财政—AI 投资—市场竞争性假说 #41](https://github.com/fweiger/AI_book/issues/41) | [研究框架 PR #51](https://github.com/fweiger/AI_book/pull/51) | `ISSUE + OPEN PR` |
 | TOPIC-012 | [太空算力：轨道光伏、发射、散热与全生命周期经济性 #60](https://github.com/fweiger/AI_book/issues/60) | [M0 研究总纲草稿 PR #61](https://github.com/fweiger/AI_book/pull/61) | `ISSUE + DRAFT PR` |
-| TOPIC-013 | [长平之战：坑杀40万与古代参战数字史料审计 #64](https://github.com/fweiger/AI_book/issues/64) | [研究分支](https://github.com/fweiger/AI_book/tree/topic/TOPIC-013/2026-11-15-changping-troop-counts)（待审） | `ISSUE + 草稿分支` |
+| TOPIC-013 | [长平之战：坑杀40万与古代参战数字史料审计 #64](https://github.com/fweiger/AI_book/issues/64) | [首轮研究 Draft PR #65](https://github.com/fweiger/AI_book/pull/65) | `ISSUE + DRAFT PR` |
 
 **TOPIC-009 编号保留，不列为在库研究。** 睡眠科学专题曾经合并至公开仓库，但已通过 [2026-11-14 迁出提交 37f5189](https://github.com/fweiger/AI_book/commit/37f518998fb3a86ed6a3a2ef9dda56e054bfb3f0) 从公开 `main` 删除；不要从历史 PR 复制内容来恢复，也不要重复使用该编号。
 
