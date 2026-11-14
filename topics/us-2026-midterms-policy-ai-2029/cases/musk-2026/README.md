@@ -55,3 +55,8 @@
 - 同日Item6也以**4赞成、0反对、1弃权**批准2025及2026的Community Involvement方案，**并不是所有未来税惠都终止**。政府工作人员说明公司社区投入义务最低为每年县级M&O税约10%，并估算2025约200万美元/2026约320万美元；**不是政府实际支付的grant或实际已完工项目**。
 - [正式Minutes/Transcript及SHA的逐议案台账](travis_official_votes_20260407.csv) · [官方证据专项报告](../../reports/2026-11-14_h09_official_minutes_primary_confirmation.md)；原始8页Minutes和23页Transcript源自同一场政府会议，不能当两个独立政策冲击。
 - **仍缺**：2020—22各年度eligible grant的原定USD、已发付与实际扣留、后续执行文件，不能据9%推Tesla现金损失绝对值、追回已付现金或盈利变化。
+
+
+## 官方州级381登记协议金额仍缺（v0.2.3）
+- [Texas Comptroller官方登记0005328行](texas_comptroller_0005328_registry_snapshot.csv)来源是州级公开[Chapter 380/381 CSV](https://assets.comptroller.texas.gov/open-data-files/ch380.csv)，文件SHA已冻结。州备案总金额和资金来源列是**空字符串/NA**，最后更新时间2022-05-01；不能据此声称2026状态为Active或县已支付0美元。州截止日记2041-12-30、县签署原件记2041-12-31，冲突待审。
+- [2020—2022逐年度eligible/approved/paid/withheld/recaptured现金对账表](travis_2020_2022_grant_cash_reconciliation.csv)：县级2026-04-07正式扣留9%已核，但实际核准与美元拨付尚未取得；不能使用签约时十年约1400万美元估值直接推2020—22扣留额。[完整缺口审计](../../reports/2026-11-14_h09_texas_381_registry_missing_cash_audit.md)。
