@@ -43,3 +43,9 @@
 - 对照指标先作`war_spending/treasury_revenue`、`company_military_operating_cost/company_net_sales`、`external_debt_service/available_fx`，各自保留相异会计主体。**统计未跑，不做虚假的跨国点估计。**
 
 后续需要评估每案是否符合IMR-01的**边际扩张不经济、财税融资不可持续、相对战略力量下降**哪一个或多个阈值。源资料及反例优先国家Issue，父主题只存横向比较与导航。
+
+---
+
+## 后续四国五轨国家级阶段收束（2026-11-14）
+
+**M0资料基础已扩展为完整A—E首轮比较报告**：请优先读取[四国殖民帝国发展路径和退出机制综合终稿](TOPIC010_FOUR_EMPIRES_COLONIAL_PATHS_AE_STAGE_CAPSTONE_20261114.md)，以及[20格A—E源级矩阵](four_empire_colonial_AE_mechanism_evidence_matrix_20261114.csv)。原本M0文件保留历史首轮研究视角，不能再以其“下一批按国家深挖财税”当成当前优先研究命令。四个子国初轮可阶段收束，遗留跨国成本与因果审计明确留白；唯一下一步为父任务#30的独立历史与方法审查，不再继续追一笔支票/银行余额/地方账本。
