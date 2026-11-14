@@ -97,3 +97,6 @@
 - `H03_B9B_TOTAL_ASSOCIATED_VINTAGE_REVISION`：同年B9b v2026当前−B9b v2025原版，2027全区**−1865MW**；三项恒等`−2883+1018=−1865`。严禁把所有Large Load都写成纯DC/AI。
 - `H03_POSTCORRECTION_RETROSPECTIVE_OFFSET`：2026May Accuracy回顾`2026 Forecast July Peak` RTO−当前2026原版B9b，对2026—2031为+10MW、2032—2035为+9MW；**未知具体原因**。2026原版B9在2/6订正，不能回填为1/14首发同版。
 - [完整机器数据及验算](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，指标已追加统一catalog I58–I61；父子区域不能重复求和，当前没有项目级投产证据。
+
+### PJM B9算法原文确认（2026-01-23）
+官方[LAS建模演示第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)明确B9来自`Final Forecast`与`No DC History Removal Model Sensitivity`的差。因此`I59` B9b−B9及其跨版本差额是**模型统计残差**而非历史直接计量或项目可兑现资本；尤其当数据中心历史剥离、PJM EIA商业部门数据与接纳项目口径改变时，不能将+1018MW当作“实际嵌入需求新增”。本轮所有2026B9均来自2/6校正后的现存原表，原1/14字节文件尚未核实。

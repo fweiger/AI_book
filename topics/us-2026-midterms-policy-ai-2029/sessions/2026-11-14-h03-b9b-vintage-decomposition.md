@@ -11,3 +11,6 @@ RTO目标2027：2025 B9额外13668、B9b总17721（差4053）；2026B9额外1078
 2026 accuracy retrospect RTO 2027=15866 vs当前原版B9b15856，相差10MW；各目标2026—31差10、2032—35差9，重要分区DOM/AEP/COMED/PS/PL全匹配。原因未确认，不能当现实负荷新增/删除。
 
 研究只比较模型版本，不是物理实现或联邦政策因果。完整[报告](../reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)、[60行数据](../data/h03_pjm_2025_2026_original_b9_b9b_revisions.csv)、[区级贡献](../data/h03_pjm_2027_original_zone_revision_contributions.csv)、[回顾差异](../data/h03_pjm_2026_original_vs_accuracy_rto.csv)及[复算脚本](../analysis/recompute_h03_b9b_vintage_decomposition.py)。
+
+## 追加官方算法源核验
+[PJM 2026-01-23 LAS第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)证明对有DC历史的区域，建模先清除EIA商业和PJM小时历史里的DC再加总规划负荷；B9来自保留DC历史的敏感性模型与最终预测的差。这支持统计分解恒等式的解释，但不能把B9b−B9当客户真实表计，或从1/23演示推算2/6勘误MW。官方原文属于2026年中期选举前证据。

@@ -93,3 +93,6 @@
 - [2025与2026两个原版预测双层分解](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)已量化2027总量下修−1865MW来自额外调整−2883MW/基础关联残差+1018MW，并覆盖2026—35年度与DOM/AEP/COMED/PS/PL主要区域。**这不是AI实体投资/建设减速**，也不能拿2026-02-06订正文件当2026-01-14首发同版。
 - 下一项重点是寻找**2026-01-14未更正B9原版的真实文件或PJM发布的2/6差额说明**，验证2/6勘误究竟改变哪些目标年/区域；若没有首版SHA或历史文档，不编造更正影响数值。
 - 对照2026 Accuracy历史回顾RTO存在+9/10MW的来源差，其他主要区同数值，保留独立状态表而非无说明更新原预测值。之后才可扩充真正有PIT意义的预测误差与数据中心真实兑现研究。
+
+## B9计算勘误下一条可核操作
+已确认[PJM 2026-01-23 LAS第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)对B9使用`final forecast vs no-removal sensitivity`的官方算法；下一阶段应优先寻找同一2026原始workbook在2026-01-14和2026-02-06之间**两份实际字节**，或PJM明确公布的错误影响差表。若只有1/23定性流程而无旧版源，不填“修正了X MW”。2027政策影响仍UNTESTED。

@@ -117,3 +117,6 @@ L0仅标题线索；L1机构、发布日期和链接已确认；L2直接核查�
 - [PJM 2026年当前可得Long Term Load Forecast Tables](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-load-report-tables.xlsx)：371564 bytes，SHA `59a62facf819962e430101c96dd1335229d8173fb6886dd8045ced325443f607`，其中B9第6行明确`updated 2/6/2026 to correct for an error calculating embedded`，它并非可以追认为2026-01-14首个版本字节。PJM表头仍分别是Above Embedded（额外调整）和Total Associated（关联总量），两层都**不是数据中心专属已实现值**。
 - [PJM 2026-05 Forecast Accuracy XLSX](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/2026-accuracy-report.xlsx)，SHA `e0f24fe03a79af016826089c653b2c2e15e55edcb04a7bd4be5fa643136425fc`；v2026 RTO 2026—31比上述当前原始B9b均高10MW、2032—35高9MW，DOM/AEP/COMED/PS/PL同年数值相符。**尚无来源解释RTO差9–10MW的原因**；不能强制将其当某项目取消或投入。
 - [2026—2035年度与区级定量桥接](reports/2026-11-14_h03_b9b_vintage_decomposition_2025_2026.md)，机器文件保存各workbook原始SHA、文件发布时间与2026B9更正说明。
+
+## H03 B9双模型敏感性方法一手来源（补充2026-11-14核实）
+- [PJM LAS 2026-01-23 2026 Long-Term Load Forecast预测程序第28页](https://www.pjm.com/-/media/DotCom/committees-groups/subcommittees/las/2026/20260123/20260123-item-03---pjm-2026-long-term-load-forecast---presentation.pdf)：有历史DC的区域先从EIA月度商业数据和PJM小时负荷历史剔除DC，再加入final total accepted large load；对无历史DC的区域直接加入accepted load；B9通过“**不剔除历史DC的模型敏感性**”与最终模型比较产生Above Embedded。该程序证实B9是模型差异，**B9b−B9不能解释为客户真实计量DC MW或个体项目数量**。这是一手方法来源，不能证明2026-02-06勘误的具体数值。
