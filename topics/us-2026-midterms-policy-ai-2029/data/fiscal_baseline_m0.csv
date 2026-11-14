@@ -1,5 +1,5 @@
 id,reference_period,publication_date,PIT_pre_election,metric,value_usd_bn,figure_class,source_url,calculation,limitations
-F001,FY2026,2026-02-11,TRUE,CBO_FY2026_deficit_projection,1852,approx_derived,https://www.cbo.gov/publication/61986,1992-140,Derived_from_reported_deficit_surprise;rounding
+F001,FY2026,2026-02-11,TRUE,CBO_FY2026_deficit_projection,1853,official_baseline,https://www.cbo.gov/publication/61912,original_Feb2026_baseline_table,FY2026_2026Feb_pre_election_forecast;comparison_nov2026_rounded_deficit_surprise_140bn
 F002,FY2026,2026-11-09,FALSE,FY2026_deficit_realized,1992,rounded_actual,https://www.cbo.gov/publication/61986,CBO_2026_fiscal_review,Fiscal_year_ends_2026_09_30
 F003,FY2026,2026-11-09,FALSE,FY2026_deficit_above_2026_02_baseline,140,reported_variance,https://www.cbo.gov/publication/61986,reported_by_CBO,Revenue_shortfall_drives
 F004,FY2026,2026-11-09,FALSE,FY2026_revenue_below_baseline,193,reported_variance,https://www.cbo.gov/publication/61986,reported_by_CBO,Difference_not_revenue_level
