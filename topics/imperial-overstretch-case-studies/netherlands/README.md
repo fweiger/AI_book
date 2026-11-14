@@ -79,3 +79,13 @@
 - [7条公司/政府/股东资金方向观察](voc_early_credit_fiscal_events_m2d.csv)，[6个档案精确目标](voc_fiscal_direction_archives_m2d.csv)、[来源注册](source_registry_m2d.csv)及[研究会话](sessions/2026-11-14-voc-early-credit-m2d.md)。
 - 尤其关注Van Ghesel官方目录 **1.10.31 inv.17**：1602—1748年VOC向国家为特许权与续期支付款项，方向与政府提供补贴**相反**；inv.19是到1770年的VOC股息记录。目录已读，但**没有读取具体账页及金额**。
 - **强反例**：公司成立初期已有战争财务压力、政府援助、短债、跨商会透支及股息承诺，却未立即终结。1780的特殊性不能被“首次举债”解释；仍需1760—1790逐年一致口径原账来测定战争和殖民治理成本的相对因果权重。原始4596/4597、de Korte附录及f370m/f465.7m冲突保持`NOT_ACQUIRED/OPEN`。
+
+## M2E（2026-11-14）— 1992/1997统计冲突的舍入排除、成本双计审计与1672战争负例
+
+- [M2E完整可复算审计](M2E_PUBLISHED_ACCOUNTING_CONFLICT_AUDIT_20261114.md)：重新截图核查Gaastra（1992）国家档案英文导论和同一作者（1997）《The Great Circle》表1，量化比较**6项分期汇总**并检验正常发表精度四舍五入的最大可能误差，保留数据冲突，不改写M0/M1原记录。
+- [6项出版物对账与舍入检验CSV](voc_1992_1997_six_metric_reconciliation_m2e.csv)：1640–1700 equipage 370 vs 465.7m，差95.7m，标准舍入界仅±0.8m；1700–1795 imports差12.9m、sales差−9.2m，同样不能由通常舍入解释；其余两项可以舍入解释。
+- [16期年度均值描述表](voc_period_annualized_descriptive_m2e.csv)：1790–1795五年尾期总额除以5，前15个十年期总额除以10，**这是窗口均值，不是真实逐年观测，也非通胀调整**；不得据此拟合1780战争ATE。
+- [4个机制负例与历史冲击窗口](voc_mechanism_negative_cases_m2e.csv)：1672年VOC承受多国战争的融资危机后仍继续经营，比1606早期危机更接近1780的历史比较；1692—1702亚洲账面损失含前期会计更正，不能直接断定VOC整体亏损。
+- 1997同篇正文把1770–1780 equipage写作“198m”，但表1印作**186.5m**、销售**199.6m**，两者差**13.1m**与正文“13m”一致，故标记`LIKELY_PROSE_ROW_MISALIGNMENT`，不是VOC底层账本最终裁决。
+- **高风险双计警报**：1997表1脚注证实`equipage`覆盖造船、远航资金/货物、工资及**债息**；不能在支出计量模型中直接`equipage + interest`，也不能将`Europe sales-equipage`叫作VOC净利润或殖民军费净额。
+- [研究会话记录](sessions/2026-11-14-voc-reconciliation-m2e.md)。1872年《Kroniek》扫描PDF长51,971,261字节被网页内容长度上限阻断，原书p40–41、NA Van Ghesel原件15及VOC公司真实战时账册仍`NOT_ACQUIRED`；de Korte原附录未得，因果检验/独立学术复审`NOT_RUN`。保留Draft PR且不合并main。
