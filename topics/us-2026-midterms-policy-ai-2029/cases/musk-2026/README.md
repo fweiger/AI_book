@@ -65,3 +65,8 @@
 ## H09合同付款年错位与103MB议案Packet排除（v0.2.4）
 - 原合同Section1.22/1.23、5.2、7.4—7.7和8规定2020/21/22三个履约年度**正常分别对应2022/23/24付款年**，条件包括履约审查、实际缴税及估值上诉结束。[计划与实际现金严格区分的3行队列表](travis_grant_payment_cohorts_2020_2022.csv)及[合同解读](../../reports/2026-11-14_h09_grant_payment_year_lag_contract_audit.md)；9%扣留是`withhold`，不能自动等同`recapture`既付现金。
 - [2026-04-07官方Agenda Packet 103437809字节/255页实读](../../reports/2026-11-14_h09_agenda_packet_255pages_no_grant_figures.md)，第15页Item6及第253页Item26均有`Attachments: None`和空`Fiscal Impact`，这份公开packet未有年度grant或ACH明细。PDF SHA见[审计CSV](travis_20260407_agenda_packet_documents.csv)。**没有公开附件不等于县预算/审计部门不持有真实付款凭证**。
+
+
+## 2025-11报道尚无实际县返利发放（v0.2.5，R来源）
+- [Statesman 2025-11与KUT 2025-11-26对县政府履约审查的报道](travis_rebate_disbursement_status_asof_2025.csv)记录**截至2025-11尚未向Tesla发放此项Travis County grant**；原报道与转述同源不能重复计为两笔独立县付款审计。[历史时点分析](../../reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)。
+- 正式[县2026-04-07 9%扣留](travis_official_votes_20260407.csv)在之后发生，但2025-11→2026-11之间的实际`paid/withheld/recaptured USD`仍待County Auditor/PBO原始账；不能用2020签约时十年预测约$14m替代。官方VPR/VPD只反映部分已付款明细，查询页面无法访问不代表零支付。
