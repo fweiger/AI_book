@@ -2,6 +2,9 @@
 
 **权威Issue**：[AI_book #34](https://github.com/fweiger/AI_book/issues/34) · **上位研究**：[TOPIC-010 #30](https://github.com/fweiger/AI_book/issues/30)。**数据状态：**首批历史发表于同行评审的量化结果已结构化；原始巴西黄金运出和葡萄牙年度产业/财政面板尚未下载复算。
 
+
+> **研究阶段门更新（2026-11-14）：国家级A—E首轮覆盖、13事件/9来源/8初始数值已达到第一轮独立案例交付范围，财政M2/M3深度证据保存以备审计，但不再无限追查1743债券/1765国库余额/1766军费旧账。当前将本案标为`FIRST_PASS_FROZEN_FOR_TOP_LEVEL_COMPARISON`（仅表示首轮研究阶段冻结、不是Issue或PR正式关闭）。下一阶段返回[TOPIC-010上位Issue #30](https://github.com/fweiger/AI_book/issues/30)，对照英国为何率先采用煤—蒸汽—棉纺技术并形成持续产业增长；仅当五国H1—H7矩阵证明某条新原档会改变跨国判别结论时再激活本案具体账本。详见[上位研究阶段门审计](https://github.com/fweiger/AI_book/blob/topic/TOPIC-010/2026-11-14-m0-source-timeline/topics/uk-industrial-revolution-origins/data/TOPIC010_FOUR_EMPIRE_STAGE_GATE_REFOCUS_TO_UK_INDUSTRIALIZATION_20261114.md)。所有`NOT_ACQUIRED`/`NOT_RUN`保持不变。**
+
 ## 首轮发现：帝国贸易可以创造财富，同时黄金可以压制制造业
 
 有两篇结论表面冲突、实际上研究对象不同的量化论文：
