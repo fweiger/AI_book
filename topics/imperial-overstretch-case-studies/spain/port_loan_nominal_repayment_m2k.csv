@@ -1,0 +1,11 @@
+metric_id,historic_window,reported_whole_reales_or_shares,reported_maravedis,unit,source_id,claim_boundary
+PRINCIPAL_1795,1795 loan,8363895,12.5,vales reales,M2K-S01;M2K-S02,Banco->Valencia Junta; original deed not read
+SCHEDULED_INTEREST_1795,1795-1816,4604679,26.333333,nominal historical reales,M2K-S02,Scheduled contractual accrual not actual receipts
+REPORTED_TOTAL_1884,1884 paraphrase of1795,12968875,4.833333,nominal historical reales,M2K-S02,Exactly 300 reales higher than reported source components
+DERIVED_SUM_OF_COMPONENTS,arithmetic derived,12968575,4.833333,nominal historical reales,M2K-S02,"Derived number, not claiming original deed explicitly stated this"
+LITERAL_TOTAL_1887,1887 printed p558,2968575,5,nominal historical reales,M2K-S01,"Official p558 appears to print '2.968.575'; missing 10 million leading digit suspected; use direct image, never silently correct"
+CERTIFIED_REPAYMENTS_1797_1836,1862 official certification summarized1887,13703208,,not verified metallic cash equivalent,M2K-S01,"Nominal multi-era capital+interest payments per trial record, valuation and tranche allocation unresolved"
+UNPAID_CAPITAL_CLAIM_1839,1839 liquidation,3680113,33,vales reales,M2K-S01;M2K-S02,Claimed remaining port-board debt
+UNPAID_INTEREST_CLAIM_1839,1839 liquidation,822892,11,vales reales,M2K-S01;M2K-S02,Not Royal debt coupon cash paid
+PLEDGED_PROPIOS_POSITOS_SHARES,1795 proposed collateral,1237,,shares count,M2K-S01,Security instruments not 1237 reales
+BANK_CROWN_GLOBAL_WORKOUT_1829,1829 global settlement,40000000,,new bank equity treaty,M2K-S08;M2K-S01,Different Crown-bank portfolio not stand-alone local loan installment
