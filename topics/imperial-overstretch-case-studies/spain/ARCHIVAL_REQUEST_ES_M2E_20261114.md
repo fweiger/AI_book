@@ -248,3 +248,27 @@ Atentamente,
 [Identidad y contacto académico: a completar personalmente por el investigador]
 
 **ESTADO:** NO_ENVIADO; la presencia de la escritura específica en GC:c.1 **no está verificada**.
+
+
+---
+
+## H — M2m consulta de la nómina de trabajadores del Grao en 1797 (BORRADOR, NO ENVIADO)
+
+**Para la biblioteca de la Universitat de València / archivo del Gobierno Civil de Valencia, según proceda:**
+
+**Asunto:** Fuente original de las nóminas del puerto del Grao de Valencia (1797) y del conflicto de jornales de 11 febrero 1797
+
+Estimados/as investigadores/as y archiveros/as:
+
+Estoy contrastando datos citados por Ricardo Franch Benavent en *La fase inicial del puerto de Valencia a finales del Antiguo Régimen*, incluido en *Historia del puerto de Valencia* (Universitat de València, 2007, ISBN 978-84-370-6812-1), **pp.184–203, especialmente pp.192–194**.
+
+Una publicación posterior del mismo autor (*Obradoiro de Historia Moderna* 25, 2016, pp.207–242, DOI 10.15304/ohm.25.3202, p.217) afirma que una relación de trabajadores del puerto de **1797** incluye **202 peones**, repartidos en 18 trabajadores a 5 reales por jornada, 163 a 4,5 reales y 21 a 4 reales, y supone alrededor del 45% del personal de la obra. Otra síntesis de 2009 menciona un conflicto laboral por jornales impagados **el 11 de febrero de 1797**. Todavía no he podido consultar el capítulo original de 2007 ni las cuentas de la Junta de obras.
+
+¿Podrían indicarme **(a)** la disponibilidad de las páginas 192–194 del estudio de 2007 y sus notas de fuente, y **(b)** la signatura de la lista original de trabajadores, nóminas y libros de jornales de la Junta que permita comprobar la fecha y la frecuencia de pagos, jornadas efectivamente trabajadas, importes pendientes y la incidencia del 11 febrero 1797? Me interesa únicamente identificar la fuente y consultar, conforme a los derechos de acceso, una cantidad limitada de páginas. No doy por supuesto ningún permiso para redistribuir imágenes.
+
+Esta información se confrontaría en una investigación académica con las entregas de vales reales por el Banco Nacional de San Carlos a la Junta entre 1795 y 1797, pero no presupongo que los trabajadores fueran remunerados directamente por el Banco ni que el importe teórico de una jornada sea la deuda salarial real.
+
+Atentamente,
+[Nombre y contacto que completará personalmente el investigador]
+
+**Estado:** UNSENT / UNDERLYING_2007_SOURCE_PAGES_NOT_ACQUIRED / ORIGINAL_1797_WORKFORCE_ROLL_NOT_ACQUIRED / NO_PERSONAL_DATA_SENT.
