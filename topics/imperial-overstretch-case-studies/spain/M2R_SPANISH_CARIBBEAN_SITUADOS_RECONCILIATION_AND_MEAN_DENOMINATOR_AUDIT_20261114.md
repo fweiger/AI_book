@@ -71,3 +71,12 @@ Marichal & Matilde Souto 2012论文“[La Nueva España y el financiamiento del 
 - **NOT_ACQUIRED：** 原始AGI哈瓦那现金收支手稿、AGNM1757/1758实际王室令和驻军欠薪簿、1797瓦伦西亚港工资账、1994原论文原始表；也未取得UKDS授权数据库。
 - **NOT_RUN：** 任何正式跨地区账簿因果识别、军事冲突与债务挤出回归、利润/工业衰落因果分析。
 - **唯一下一研究动作：** 先追踪2012文集所引AGNM `Reales Cédulas Originales vol.78 exps.104,109` 与 `Historia vol.570 f.39` 的数字馆藏/年份，核对1757/1758军饷抗议的真实日期、金额和加拨25,000比索的王室命令；再以**付款实际签收**而非财政预算/名义拨款推断财政网络中的流动性瓶颈。瓦伦西亚原账册申请保持独立阻断。
+
+## 5. M2r增量：圣多明各1757/1758驻军欠薪年代冲突与原档双线索
+
+新增研究原文：Amadeo Julián (2017), “Comercio colonial, circulación monetaria y el Situado en Santo Domingo en el siglo XVIII”, `Clío` (Academia Dominicana de la Historia), año86, núm.194, 印刷pp39–41、73–74，[学会官网PDF](https://academiadominicanahistoria.org.do/wp-content/uploads/2018/04/clio194.pdf)。期刊PDF可检索正文全文已读，截图返回CACHE_MISS，**不是原档影像复核**。
+
+- 本文将驻军抗议记为**1757年**；报告约150–180名驻军、部分1754–1757年的薪资积欠、通过谈判先付三个月、随后补足要求；印刷p41脚注29与p74史料清单指向 **AGI, Santo Domingo, 1088 / 1092**。该稿还指出1761年墨西哥金库对圣多明各有**20万比索历史欠拨**、提出年偿1万的表述，须用原始账本核对，**不能视为实际每年偿付**。
+- Marichal & Souto (2012) 印刷p28记作**1758年**、大于10个月未领饷、王室决定situado增加25,000比索，注引 **AGNM, Reales Cédulas Originales vol.78 exps.104/109, Historia vol.570 f.39**。两文可能描述同一事件的骚动年/法令年/欠薪年度差异，但**尚无原档确认**。
+- 存为 [1757/1758冲突双来源登记](santo_domingo_military_pay_arrears_1757_1758_conflict_m2r.csv)。它是一个有明确馆藏号的、比本土瓦伦西亚港更贴近殖民财政网络的候选机制案例，不新增国家/任务Issue。
+- 新的第一优先行动是**查询AGI Santo Domingo 1088/1092的1757原卷与AGNM vol78 exps104/109的1758王室令真实文书日期**。先解决事件年，再试图把实际拨款、接收、发薪与抗议归为同一财政传导链，不能将同一事件重复纳入统计样本。
