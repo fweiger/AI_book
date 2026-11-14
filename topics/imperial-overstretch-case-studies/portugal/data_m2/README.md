@@ -169,3 +169,15 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [misericordia_2019_bond_primary_secondary_reconciliation_m3.csv](misericordia_2019_bond_primary_secondary_reconciliation_m3.csv) | **7项**作者表4和表5会计口径对照：已知19笔本金179.853941 contos，五笔国库直付106.773748、已知14笔二级市场73.080193；Table4发表总额195.509941，`Table4-Table5_known=15.656000` contos为**未对平源差**；不能把缺项直接填成差额。
 
 研究报告：[1743—1753债券档案与1775后国债/私人信用分配](../AHU_1743_1753_BOND_MANUSCRIPTS_NONCASH_ISSUANCE_AND_2019_CREDIT_ALLOCATION_M3_20261114.md)。2019复算CSV SHA256 `9aa0202054679039f4fadd783b4c67ad2037589e910928ae02d7683b27ba5236`。官方AHU两册的**手稿未读/目录原版访问受阻**；第三方目录镜像与作者复现不视为原始凭证。1775年禁贷有1768先行限制、1769私人放贷已停止、1755地震及坏账等混杂因素，`CAUSAL_EFFECT_NOT_RUN`。
+
+
+## M3附加审计：黄金繁荣前糖税/海关抵押 + 1760年代王室金储备和国内借贷
+
+| 文件 | 内容及审计边界 |
+|---|---|
+| [pre_gold_tax_collateral_1743_1749_1750_edict_coinage_source_audit_m3.csv](pre_gold_tax_collateral_1743_1749_1750_edict_coinage_source_audit_m3.csv) | **9条史实/出版文本主张**：1647年商业借款20万cruzados与糖税抵押、1662年步兵融资、1704–06年480contos海关收入抵押、1743降息与1743–44铸币4,196contos/旧债处理5,000contos、**1749 vs 1750年3月16日**降息法规日期来源冲突；**1704–06这笔具体贷款利率未确认** |
+| [validate_pre_gold_credit_collateral_and_edict_dispute_m3.py](validate_pre_gold_credit_collateral_and_edict_dispute_m3.py) | 实际运行`PASS rows=9`：逐条审查货币单位、出版来源、税源范围、1775之前债务传统及法律日期两种主张；绝不把铸币和旧债转移当可相抵的财政现金流 |
+| [sousa2003_1763_1798_treasury_gold_mint_deposit_loans_m3.csv](sousa2003_1763_1798_treasury_gold_mint_deposit_loans_m3.csv) | Sousa(2003)公布的**8条**1763/1766国家铸币、1763/1765/1767国库金币持有存量、1766→1777公共存款贷款未偿余额、1777全部借款人未偿额、1798国库借款报告量，源作者引用ANTT Ministerio do Reino具体馆藏盒号，**未直接调阅原始手稿** |
+| [validate_sousa2003_treasury_royal_mint_deposit_loans_m3.py](validate_sousa2003_treasury_royal_mint_deposit_loans_m3.py) | 实际运行`PASS rows=8`：校验**371.4/673=55.2%**，保留1765/1767未知月日、贷款/黄金存量对铸币年度流量的不相容性，1798记录数额不视为当年新增贷款 |
+
+研究报告：[1743铸币/旧债、前黄金糖税和1760年代国库流动性跨档案核查](../PRE_GOLD_CREDIT_COLLATERAL_1743_COINAGE_1760S_TREASURY_LIQUIDITY_AUDIT_M3_20261114.md)。来源：1841 [《O Panorama》印刷148页](https://hemerotecadigital.cm-lisboa.pt/obras/opanorama/1841/N210/N210_master/N210.pdf)和[2003年Sousa原论文印刷788—790页](https://revistas.rcaap.pt/analisesocial/article/download/35368/24541/156638)。两份CSV来源文件SHA256分别是`326a50d242e0450ca0dfad2efcfb6b95bad9a72d2d1ded7e6dab9a2c37739d0a`、`360172f1baf149a4c84d63e48c281e8bffbcd18d44d17f5ec8a67dda052e6219`。**原始贷款契据、国库现金流水、降息法令原件和ICPSR因果复现仍NOT_ACQUIRED/NOT_RUN**。
