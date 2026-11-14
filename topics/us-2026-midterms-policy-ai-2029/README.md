@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.0；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.1；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -15,9 +15,13 @@
 - [多AI独立工作合同 COLLABORATION](COLLABORATION.md) · [下一轮 NEXT](NEXT.md)
 - [研究问题](questions.md) · [正式论点状态](claims.md) · [知识地图](knowledge-map.md) · [可机读图谱](knowledge-graph.json) · [阅读路线](reading-path.md)
 - [CSV数据合同](data/README.md) · [版本记录](CHANGELOG.md) · [过程会话](sessions/README.md)
-- **新统一研究层**：[专家档案/作品库](experts/README.md) → [观点来源池](views/README.md) → [观点×假说映射](hypotheses/view_hypothesis_links.csv) → [H01—H10](HYPOTHESES.md) → [因果链及逐边检验](chains/README.md) ↔ [统一91项指标目录](metrics/README.md) ↔ [事件数据/反证](data/evidence_events.csv)。
+- **新统一研究层**：[专家档案/作品库](experts/README.md) → [观点来源池](views/README.md) → [观点×假说映射](hypotheses/view_hypothesis_links.csv) → [H01—H10](HYPOTHESES.md) → [因果链及逐边检验](chains/README.md) ↔ [统一94项指标目录](metrics/README.md) ↔ [事件数据/反证](data/evidence_events.csv)。
 - **案例专线**：[马斯克Texas/国会/赦免/现金流](cases/musk-2026/README.md) · [H09研究任务 #55](https://github.com/fweiger/AI_book/issues/55) · [CPI/PCE→Fed→融资H10研究任务 #56](https://github.com/fweiger/AI_book/issues/56)。
 - [外部财经评论者/UP主观点池（独立观点与事实分离）](views/README.md) · [大湾区老姚2026-11-14观点核查卡](views/2026-11-14-dayawanqu-laoyao.md) · [可机读主张表](views/claim_register.csv) · [观点池长期跟踪Issue #54](https://github.com/fweiger/AI_book/issues/54)
+
+## H09/H10第一轮真实数据（2026-11-14）
+- [H09 Texas县签署合同、选前9%优惠扣减与SEC财报审计](reports/2026-11-14_h09_travis_texas_incentive_preelection_control.md)：已取得**2020 Travis County签署原件**，2026-04据KUT报道已扣减部分2020—22应得补助9%，**发生在2026-11选举前**；Tesla SEC披露2023—25相关grant不重大；SpaceX Starbase新税惠仅是2026-12-09未来听证，拟投240亿美元≠获批补贴。具体的实际美元损失、县正式4月会议纪要、2027新政府新增因果仍NA。
+- [H10 22个月BLS CPI指数、467交易日UST、BEA修订与真实Fed决议](reports/2026-11-14_h10_cpi_pce_fomc_treasury_pit_baseline.md)：Ubuntu执行[离线复算脚本](analysis/recompute_h10_open_data.py)PASS；2026-11-09→10两年期UST+17bp，十年期+10bp；BEA八月core PCE后验修订0.2→0.3说明必须按发布版本PIT，勿将后续数据当此前FOMC已知。无独立因果回归或企业融资结果。
 
 ## 11个可直接接手的AI任务
 | 工作ID | 核心研究 | Issue |
