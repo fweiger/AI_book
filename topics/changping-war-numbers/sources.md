@@ -70,3 +70,13 @@
 - S35 《资治通鉴》卷105：384年慕容垂20余万攻邺筑围 https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91/%E5%8D%B7105
 - S36 《资治通鉴》卷198：高丽靺鞨15万前来救安市 https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)/%E5%8D%B7198
 - S37 《资治通鉴》卷4：华阳秦斩魏13万的战果记述 https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%92_(%E8%83%A1%E4%B8%89%E7%9C%81%E9%9F%B3%E6%B3%A8)/%E5%8D%B7004
+
+## 第六轮增补来源 S38—S44
+
+- **S38** [《太行日报》2026-10-22转载晋城文旅《晋城，也有长城！》](https://finance.sina.com.cn/wm/2026-10-22/doc-iniwavxm5980446.shtml)：逐段7遗址长度与起止地名，公开文旅登记源，已核网页。
+- **S39** [《山西晚报》2026-04-24《论百里石长城》](https://www.sxwbs.com/detail/4f604083480b4070bc8937dbaa2167f4?contentType=1&t=MjAyNi0wNC0yNA%3D%3D)：转引明万历府志及1960年代约120km调查、提出更早边界之论；原调查未直接获取。
+- **S40** [高平2024–2040遗址保护规划](https://xxgk.jcgov.gov.cn/jcsrmzf/zc/jszb/202502/P020250218395708726584.pdf)：赵军三线中的百里石北线，PDF可检文字；资料仍是历史地理重建。
+- **S41** [杨名宇（2020）《秦赵长平歼灭战之研究》，《步兵季刊》276期](https://www.mnd.gov.tw/File/33375)：将百里石列赵第三防线；部分引用靳谢/旧战史，非独立考古确认。
+- **S42** [《三国志》卷28《诸葛诞传》](https://zh.wikisource.org/zh-hans/%E4%B8%89%E5%9C%8B%E5%BF%97/%E5%8D%B728)：二十六万总军与围寿春、游军备外寇分开。
+- **S43** [《晋书》卷105《石勒载记》](https://www.shidianguji.com/book/HY2029/chapter/1kw0p1ohg6qlf)：石虎四万讨曹嶷、围广固及石挺济师分阶段。
+- **S44** [《资治通鉴》卷219](https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91_(%E5%9B%9B%E9%83%A8%E5%8F%A2%E5%88%8A%E6%9C%AC)/%E5%8D%B7%E7%AC%AC%E4%BA%8C%E7%99%BE%E4%B8%80%E5%8D%81%E4%B9%9D)：太原多路十万；睢阳初攻十三万，均需与表1同段核对。

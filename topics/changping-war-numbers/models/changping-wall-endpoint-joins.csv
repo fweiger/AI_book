@@ -1,0 +1,5 @@
+节点,起始遗址ID,终止遗址ID,地名锚点,是否为完全一致坐标的理由,目前判定,缺口
+J01,LC01,LC02,北山村,两段端点同指北山村附近，但方向“北0.32km”与“西北0.32km”不同,approximate_not_proven,未获得坐标
+J02,LC02,LC03,泉头村,北山段末端“泉头村北0.5km”，泉头段起点“泉头村西北0.38km”不完全相同,approximate_not_proven,未获得坐标
+J03,LC03,GP01,宝龙寺山顶,均述宝龙寺西北约0.3km，端点文字高度重合,same_descriptive_landmark_not_GIS_verified,未获得坐标
+J04,GP01,GP02,曹家沟北土路,均述曹家沟村北1.5km，土路打断山脊处,same_descriptive_landmark_not_GIS_verified,未获得坐标
