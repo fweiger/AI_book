@@ -65,3 +65,10 @@
 - [官方35页附录审计：黄金公共/私人汇款、ASCM国家权重、价格数据覆盖率](OFFICIAL_SUPPLEMENT_GOLD_FLOW_ASCM_WEIGHTS_M2_20261114.md)
 - [黄金五年公共/私人流量 B.1](data_m2/gold_remittances_fiveyear_b1_1720_1804_m2.csv) · [ASCM基准与剔除西荷权重 B.3/B.4](data_m2/ascm_donor_weights_b3_b4_m2.csv) · [11种商品价格覆盖率 B.5](data_m2/commodity_price_coverage_b5_m2.csv)
 - 统计边界：黄金汇回额是**流量**，包含私人转移，不是殖民净财政收入；1720–1804的公共名义汇款/全部汇款为**22.12%**（本轮对B.1逐行求和，不是税收占GDP）；ASCM模型真正的1694年处理后结果及2025 Table1 1700年GDP冲突仍待原始输入核验。
+
+
+## M2后续｜黄金汇回与名义GDP分母对接（2026-11-14）
+
+- [GOLD_REMITTANCES_TO_GDP_BRIDGE_AND_DATA_ACCESS_AUDIT_M2_20261114.md](GOLD_REMITTANCES_TO_GDP_BRIDGE_AND_DATA_ACCESS_AUDIT_M2_20261114.md)：1720—1804年黄金私人/公共汇回与同期葡萄牙名义GDP的单位、窗口、原始数据和因果边界审计，并核实openICPSR于2026年8月退役及ICPSR新平台自动流量验证阻断。
+- [gold_to_nominal_gdp_fiveyear_bridge_m2.csv](data_m2/gold_to_nominal_gdp_fiveyear_bridge_m2.csv)（17期已验证衍生CSV），[reproduce_gold_gdp_bridge_m2.py](data_m2/reproduce_gold_gdp_bridge_m2.py)（实际运行、锁定作者Excel SHA256的复算脚本）。
+- **1720—1804年名义黄金汇回额／同期GDP累计总额约2.9298%，其中公共渠道0.6482%、私人2.2816%。** 这是跨研究年度口径对齐的*流量比率*，**不是殖民金矿GDP增量、公共税收净率或帝国净ROI**。严格2025 ASCM及财政年度表仍未获得，不得以此替代模型复算。
