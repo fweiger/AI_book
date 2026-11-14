@@ -1,0 +1,548 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.2.0",
+  "topic_id": "TOPIC-009",
+  "title": "睡眠科学与生理机制：开放式AI协作研究",
+  "source_level": "公开书目与摘要/机制框架，未做独立系统综述",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "ROOT",
+      "type": "framework",
+      "title": "睡眠科学研究框架 M00–M10"
+    },
+    {
+      "id": "CROSS",
+      "type": "research",
+      "title": "跨机制研究与证据不足领域"
+    },
+    {
+      "id": "M00",
+      "type": "research_dimension",
+      "title": "睡眠定义、结构与测量",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M01",
+      "type": "research_dimension",
+      "title": "睡眠稳态与睡眠负债",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M02",
+      "type": "research_dimension",
+      "title": "昼夜节律与光照",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M03",
+      "type": "research_dimension",
+      "title": "自主神经、HPA 与高唤醒",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M04",
+      "type": "research_dimension",
+      "title": "夜间血糖、代谢和反调节",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M05",
+      "type": "research_dimension",
+      "title": "肠脑轴、迷走神经与菌群",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M06",
+      "type": "research_dimension",
+      "title": "呼吸调节、OSA 与睡眠碎片化",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M07",
+      "type": "research_dimension",
+      "title": "睡眠环境：空气、热、光、噪声",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M08",
+      "type": "research_dimension",
+      "title": "REM、梦境和异态睡眠",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M09",
+      "type": "research_dimension",
+      "title": "行为和外源时序因素",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "M10",
+      "type": "research_dimension",
+      "title": "睡眠障碍分类与鉴别框架",
+      "status": "FRAMEWORK_ONLY"
+    },
+    {
+      "id": "SL01",
+      "type": "sleep_outcome",
+      "title": "SL01",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL02",
+      "type": "sleep_outcome",
+      "title": "SL02",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL03",
+      "type": "sleep_outcome",
+      "title": "SL03",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL04",
+      "type": "sleep_outcome",
+      "title": "SL04",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL05",
+      "type": "sleep_outcome",
+      "title": "SL05",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL06",
+      "type": "sleep_outcome",
+      "title": "SL06",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL07",
+      "type": "sleep_outcome",
+      "title": "SL07",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "SL08",
+      "type": "sleep_outcome",
+      "title": "SL08",
+      "status": "OUTCOME_DEFINED"
+    },
+    {
+      "id": "Q01",
+      "type": "research_question",
+      "title": "睡眠健康应怎样定义与测量？SL01—SL08 是否存在缺失结果维度？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q02",
+      "type": "research_question",
+      "title": "稳态睡眠压力与生物钟如何共同解释同一种夜醒或入睡延迟？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q03",
+      "type": "research_question",
+      "title": "高唤醒的认知、EEG、自主神经和 HPA 指标是否一致？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q04",
+      "type": "research_question",
+      "title": "夜间血糖反调节与觉醒的关联在人群/设备/实验条件中如何区分？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q05",
+      "type": "research_question",
+      "title": "肠脑轴哪些环路直接参与睡眠，动物证据如何与人类研究对应？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q06",
+      "type": "research_question",
+      "title": "睡眠呼吸障碍如何通过微觉醒与结构改变影响功能？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q07",
+      "type": "research_question",
+      "title": "温度、噪声、光照与通风对睡眠影响如何区分？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q08",
+      "type": "research_question",
+      "title": "梦境、REM、睡眠瘫痪及异态睡眠应怎样科学分类？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q09",
+      "type": "research_question",
+      "title": "咖啡因、运动、进食和时间同步有何共同机制与差异？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q10",
+      "type": "research_question",
+      "title": "睡眠疾病分类怎样与正常个体差异区分，而不变成药物治疗综述？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q11",
+      "type": "research_question",
+      "title": "现有 M00—M10 是否缺少独立维度（例如免疫、炎症、疼痛、性激素/年龄、遗传）？",
+      "status": "OPEN"
+    },
+    {
+      "id": "Q12",
+      "type": "research_question",
+      "title": "不同睡眠指标与设备的测量误差如何影响机制解释？",
+      "status": "OPEN"
+    },
+    {
+      "id": "EXPERT_ATLAS",
+      "type": "research_index",
+      "title": "权威专家—论文—方法证据索引",
+      "status": "SEED_METADATA_L1",
+      "entry": "experts/README.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ROOT",
+      "target": "M00",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M01",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M02",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M03",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M04",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M05",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M06",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M07",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M08",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M09",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M10",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL01",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL02",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL03",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL04",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL05",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL06",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL07",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "SL08",
+      "relation": "结果域分类（非因果）"
+    },
+    {
+      "source": "Q01",
+      "target": "M00",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q02",
+      "target": "M01",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q03",
+      "target": "M03",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q04",
+      "target": "M04",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q05",
+      "target": "M05",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q06",
+      "target": "M06",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q07",
+      "target": "M07",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q08",
+      "target": "M08",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q09",
+      "target": "M09",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q10",
+      "target": "M10",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q11",
+      "target": "CROSS",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q12",
+      "target": "M00",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "M01",
+      "target": "SL01",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M01",
+      "target": "SL02",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M02",
+      "target": "SL03",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M02",
+      "target": "SL04",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M03",
+      "target": "SL02",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M04",
+      "target": "SL02",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M05",
+      "target": "SL05",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M06",
+      "target": "SL02",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M07",
+      "target": "SL02",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M08",
+      "target": "SL08",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M09",
+      "target": "SL03",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "M10",
+      "target": "SL07",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "CROSS",
+      "target": "ROOT",
+      "relation": "候选研究关联（非医学因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "EXPERT_ATLAS",
+      "relation": "专家论文索引入口（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M00",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M01",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M02",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M03",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M04",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M05",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M06",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M07",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M08",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M09",
+      "relation": "专家和论文主题映射（非医学因果）"
+    },
+    {
+      "source": "EXPERT_ATLAS",
+      "target": "M10",
+      "relation": "专家和论文主题映射（非医学因果）"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "睡眠表型与标准",
+      "nodes": [
+        "ROOT",
+        "M00",
+        "SL01",
+        "SL08"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "稳态与节律",
+      "nodes": [
+        "M01",
+        "M02",
+        "SL02",
+        "SL03"
+      ]
+    },
+    {
+      "id": "Q11",
+      "name": "机制扩展",
+      "nodes": [
+        "CROSS",
+        "M03",
+        "M04",
+        "M05",
+        "M07"
+      ]
+    },
+    {
+      "id": "EXP-ROUTE-01",
+      "name": "从专家和论文进入稳态与生物钟机制",
+      "nodes": [
+        "EXPERT_ATLAS",
+        "M01",
+        "M02",
+        "SL01",
+        "SL03"
+      ]
+    }
+  ],
+  "claim_index": "claims.md",
+  "constraints": [
+    "机制分类与因果证实分开",
+    "动物实验不得直接推断人类疗效",
+    "AI协作不设置正反方",
+    "不录入私人医疗数据",
+    "讨论不得自动写入正式结论"
+  ]
+}
