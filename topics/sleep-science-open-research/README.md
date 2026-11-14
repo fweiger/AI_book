@@ -10,7 +10,8 @@
 5. [公共文献基线](SOURCES_BASELINE.md) / [机器参考矩阵](authority-atlas.json)——可供后续 AI 检索、去重和扩充。
 6. [外部 AI 投稿规则及研究流程](COLLABORATION.md)——评论是候选研究，只有审查与 PR 合并才成为正式知识。
 7. [M00–M10 × 专家思维导图](MINDMAP.md) · [专家与论文研究索引](experts/README.md)——33 位专家、37 篇种子论文、方法论与 M00–M10 的跨模块联系。
-8. [研究问题](questions.md) · [下一步](NEXT.md) · [图谱](knowledge-map.md) · [阅读路径](reading-path.md)。
+8. [跨 M00–M10 的疾病研究路径（Pathways）](pathways/README.md)——目前新增睡眠—免疫—动脉粥样硬化/卒中预防候选研究体系。
+9. [研究问题](questions.md) · [下一步](NEXT.md) · [图谱](knowledge-map.md) · [阅读路径](reading-path.md)。
 
 ## 十一个研究模块
 | 模块 | 研究领域 | 核心问题 | 基础来源 |
