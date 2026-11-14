@@ -1,0 +1,10 @@
+year_start,year_end,pc_gdp_pct_change,population_pct_change,real_gdp_pct_change,scope,author_source
+1650,1700,18.947322,9.348591,30.067221,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1694,1700,-15.781293,-0.32325,-16.05353,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1700,1750,38.948919,5.39488,46.445046,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1694,1750,17.020983,5.054191,22.935447,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1750,1755,-0.527553,0.183399,-0.345122,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1750,1800,-33.221041,18.601385,-20.79923,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1755,1800,-32.866878,18.384269,-20.524944,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1800,1822,12.202443,5.926157,18.851736,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
+1800,1850,0.762664,17.692059,18.589653,two_point_descriptive_not_causal,https://doi.org/10.1017/S0022050719000056
