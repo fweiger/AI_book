@@ -1,5 +1,11 @@
 # TOPIC-011｜首轮研究执行队列（2026-11-14）
 
+## 第十九轮 H02 2026选前法律全面盘点与重大旧法分年估算已完成（2026-11-14）
+- **实算数据**：[完整报告](reports/2026-11-14_h02_round19_67_election_pre_laws_s2_budget_bridge.md)、[67项官方P.L.119-70至136全量](data/h02_round19_2026_election_pre_enacted_bills.csv)、[GovInfo四类ZIP SHA](data/h02_round19_119th_sources_sha.csv)、[六份关键法原文SHA](data/h02_round19_6_enacted_law_sha.csv)、[S.2七项拨款CBO按年度评分](data/h02_round19_pl11998_secure_america_cbo_section_outlays.csv)、[11条分层评分/缺失记录](data/h02_round19_cbo_budget_bridges_scored_vs_unscored.csv)、[仅分列未合成的财政基线桥](data/h02_round19_fy2026_29_partial_policy_score_bridge.csv)、[Python标准库联网核原始法律并复算PASS](analysis/recompute_h02_round19_policy_bridge.py)。
+- **最重要数值**：2026-06-10 P.L.119-98法律授权69.545bn美元，CBO预计FY2027/28/29直接支出15.482/17.913/20.038bn，三年53.433bn；这是2026选举前既有法律，将来不可直接归因2027国会。P.L119-74/75约+2bn是**FY2026酌情资金相对年化基线**，其FY2027—29分年Outlays尚未核；P.L119-103 9月临时拨款截至12/11，CBO 8月全年年化1.701tn BA/1.869tn Outlays不是实际和净新增，不能直接减Feb基线。
+- **下一轮H02 #43硬验收**：以67个已成法Law-ID为全集审计每一项对应的**最终法案版本、独立CBO/JCT评分、FY2027/28/29真实分年度BA与Outlays、与哪一版预算基线比较**。第一优先补P.L119-75完整最终法医疗和IRS§528撤回11.661bn旧预算（注意草案E/F与正式I/J迁移）、P.L119-86 DHS全年额度、P.L119-103已签临时拨款实际短窗和后续延长。找不到最终一致评分就NA，而不是伪造2026-11-02官方“完整赤字”。
+- **H01/H06/H08联合**：将上述全部标记为PRE_ELECTION_OLD_LAW；2027新国会进入任何行动链须按提案/通过/签署/执行/公司或州项目实际独立观测。所有H完整因果UNTESTED，路径UNKNOWN。
+
 ## 第十八轮 H02财政完整分项实算已完成（2026-11-14）
 - **已完成**：[CBO 2026-02官方版次财政核验报告](reports/2026-11-14_h02_round18_cbo_feb2026_fiscal_baseline_timing_bridge.md)、[FY2026—29四年预算宽表](data/h02_cbo_feb2026_fiscal_baseline_round18_wide.csv)、[142行可复核长表](data/h02_cbo_feb2026_fiscal_baseline_round18_long.csv)、[官方source commit/SHA](data/h02_cbo_feb2026_source_manifest_round18.csv)、[Python复算程序](analysis/recompute_h02_cbo_feb2026_baseline_round18.py)、[7行老法/后截点立法桥接](data/h02_round18_pre_election_policy_baseline_bridge.csv)。官方CBO repo固定commit，Ubuntu独立校验收入加总、三类支出及净利息、调整前后赤字和CBO发布表数字，PASS。
 - **新增可证伪识别结论**：FY2028/29付款时间校正分别−123.583/+123.583bn美元；初级赤字占GDP调整后2027→28→29为2.340/2.130/2.274%，与原始趋势方向不同。**这仍非周期调整财政冲量，不能归因新国会**。
