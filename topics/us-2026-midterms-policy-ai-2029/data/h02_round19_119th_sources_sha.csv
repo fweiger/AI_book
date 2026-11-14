@@ -1,0 +1,5 @@
+type,url,sha256,bytes
+hr,https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119-hr.zip,9353242e56b8c4e42e19d37c3596a6ced446b2b3c0dcac529c6ebb84b73784c9,33430028
+s,https://www.govinfo.gov/bulkdata/BILLSTATUS/119/s/BILLSTATUS-119-s.zip,db614135963ad173482481e593d1763e5ab0987a0f7b0aeb5667b43624f8aec5,13607224
+hjres,https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hjres/BILLSTATUS-119-hjres.zip,e996cb39f45463258000151861943dcf861bb6067920612e9854c85c3f4ba398,684625
+sjres,https://www.govinfo.gov/bulkdata/BILLSTATUS/119/sjres/BILLSTATUS-119-sjres.zip,8f98685609cb321bda36d34583812c4978c8c29048fff1e9e492e4988eda0a85,541900
