@@ -108,3 +108,15 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 ```
 
 官方工作簿A的`Debt stock!D/E/F`与`Debt service!D/E/F`单位réis；GDP H单位百万réis，分母必须乘100万。`PASS years=160 stock_err=0 service_err=0`，派生CSV SHA256 `bdda94a8ce33f806f5adf10b23472ded1d1c68c8de12c59509f04b48e3a905ea`。2024债务论文1748年9%与该版本复算8.15225%存在**待核验来源分母冲突**。**ASCM模型NOT_RUN，国库年度总收入与军费面板NOT_ACQUIRED**。
+
+
+## M2 2024财政能力 × DEBT.PT债务偿付 × 2008/2025黄金流量
+
+| 新增文件 | 核验与口径 |
+|---|---|
+| [fiscal_revenue_with_without_empire_2024_table3_m2.csv](fiscal_revenue_with_without_empire_2024_table3_m2.csv) | 同行评审2024论文Table3，3个半世纪分期含/不含帝国中央收入/GDP，**作者分期基准重建**，不提供年度收入值 |
+| [fiscal_revenue_vs_debt_service_periods_m2.csv](fiscal_revenue_vs_debt_service_periods_m2.csv) | 上述公开分期收入指标 vs DEBT.PT逐年偿债/GDP在对应50年的**算术平均**，最后一列是**两种分期概括比率之比，非真实“偿债占国家收入”** |
+| [public_gold_vs_debt_service_matched_periods_m2.csv](public_gold_vs_debt_service_matched_periods_m2.csv) | 1720–49、1750–79和1780–99按**同年份及同单位百万réis**汇总2025 TableB1公共黄金及DEBT.PT债务偿付金额；附以Sousa2008修订敏感性 |
+| [reproduce_fiscal_capacity_gold_debt_bridge_m2.py](reproduce_fiscal_capacity_gold_debt_bridge_m2.py) | **实际运行通过的**版本锁定程序，需分别从DEBT.PT和Palma–Reis作者官网下载源XLSX，读取本仓库历史短表并再生两份CSV |
+
+报告：[帝国净财政贡献与公共黄金/债务偿付审计](../FISCAL_CAPACITY_GOLD_REMITTANCES_DEBT_SERVICE_BRIDGE_M2_20261114.md)。2024 fiscal Table3 DOI https://doi.org/10.1093/ereh/heae003；作者Footnote9说明帝国贡献扣除帝国相关费用，但该口径并非全部殖民长期经济净回报。运行输出CSV SHA-256：`8766845fc79226c7a84d79d0c215fe94283d4e786ddd57122126a0a52aeb6a8a`、`5c22f41dc7106590c36061f939af2f6363063193d6dfe8aea4fe972de1abb57e`。严格标注：财政研究完整年度原始收入/支出 **NOT_ACQUIRED**；1694黄金ASCM模型 **NOT_RUN**；1748债务率发表冲突 **OPEN**。
