@@ -49,3 +49,7 @@
 ## BEA NIPA月度PCE 33个月（2026-11-14新增）
 - [官方BEA月度整体+核心PCE季调指数33个月](../data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)，2024-01至2026-09，`DPCERG`/ `DPCCRG`，含计算得到的环比与同比；原始Section2All Excel SHA每行记录。
 - [PCE官方源及版本核验](../reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md) · [离线复算脚本](../analysis/recompute_h10_bea_snapshot.py) Ubuntu实际运行PASS；此表是2026-11-14**当前版本**，非各月最初发布值，不能覆盖BEA历史版次记录。
+
+
+## CPI/PCE同月配对初步检验（H10，18个月）
+- [21个月并表、其中18个月双侧有环比](../data/h10_cpi_pce_aligned_monthly_2025_2026.csv)，[分析报告](../reports/2026-11-14_h10_cpi_pce_alignment_18_month_sample.md)。当前季调版Pearson整体`r=0.946129`、核心`r=0.553099`，只是2025-02至2026-09非连续月份间的描述性共动指标，**不是政策变量或独立Fed因果效应**。[离线复算](../analysis/recompute_h10_cpi_pce_alignment.py)已真实执行PASS。
