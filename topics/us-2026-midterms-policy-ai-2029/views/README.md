@@ -61,3 +61,7 @@ J -->|"保留历史版本并提出新问题"| H
 
 ## 2026-11-14 第六轮：官方县2022现金状态与10个真正事前CPI预测（v0.2.6）
 - [VIEW-S001-C04/C07/C09增量评估三行](claim_reassessments_2026-11-14_round6.csv)：C04 [Travis County2022官方项目汇总](../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)证明2022-01-31零已付返利、首绩效年度核验待完成，非2026最新支付额；C07/C09 [10次可证明发布于CPI首发之前的预测与UST有符号变动](../reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)核心6/7方向一致但p=0.125且存在2025-03-12明显反例；46次[供应商历史日历](../data/h10_cpi_release_ust_46event_vendor_archive_not_pit.csv)未经原始forecast发行时间核验全部不得作PIT。保持作者原始主张及此前所有评估记录不覆盖。
+
+
+## 2026-11-14 第七轮：学区真实税差与2025同源通胀预测的反例（v0.2.7）
+- [VIEW-S001 C04/C07/C09 第七轮追加评估](claim_reassessments_2026-11-14_round7.csv)：C04 Texas Comptroller官方Del Valle ISD Ch313 #1496的2025报告版本有2024税年毛税差**$43.496m**、2025报告年**$42.608m**，但不等于Travis县Ch381已经付给Tesla的现金；早版对2024税年预测**$20.643m**→新版同年报告**$43.496m**是信息版本修订，不是2027政治新补贴。C07/C09 [同一发布者提前预期的2025年7/11覆盖](../reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)中Core惊讶与2Y当日方向只有**2/4吻合**，Headline**2/5**，均p1.0，与此前跨年跨机构Core6/7相差明显，不能据个别历史样本声称预测模型已验证。仅追加评估，原作者VIEW-S001观点原始快照不覆盖。
