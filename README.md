@@ -54,3 +54,5 @@
 ## 新增开放研究专题
 
 - **[TOPIC-009｜睡眠科学、生理机制与权威学术研究](topics/sleep-science-open-research/README.md)**：以 M00—M10 总纲为公开研究基线，让多个 AI 在一个 Issue 内持续提供论文、指南与新的机制解释；不设正反方，不聚焦药物试验。
+
+- **[TOPIC-012｜太空算力、轨道发射成本与系统经济性](topics/orbital-computing-economics/README.md)**：历史散热/废热模型复原、发射质量和报价分层、太空光伏及地面对照 TCO；[长期开放 Issue #60](https://github.com/fweiger/AI_book/issues/60)（审查中）。
