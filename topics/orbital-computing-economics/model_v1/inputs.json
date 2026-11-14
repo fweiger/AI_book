@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "source_status": "MIXED_PUBLIC_PROXIES_AND_SCENARIO_ASSUMPTIONS_NOT_VALIDATED_DESIGN",
+  "model_orbit": "LEO generic illustration; no exact altitude/inclination selected",
+  "design": {
+    "it_load_kw": [
+      100,
+      1000,
+      10000
+    ],
+    "power_overhead_factor": 1.2,
+    "eclipse_fraction": 0.3,
+    "orbit_period_hours": 1.5,
+    "solar_pv_eol_factor": 0.8,
+    "charge_discharge_roundtrip_efficiency": 0.85,
+    "solar_array_specific_power_w_per_kg": 100,
+    "battery_pack_specific_energy_wh_per_kg": 180,
+    "battery_max_depth_of_discharge": 0.8,
+    "battery_discharge_efficiency": 0.9,
+    "radiator_temperature_kelvin": 350,
+    "radiator_emissivity": 0.9,
+    "radiator_effective_view_factor": 0.75,
+    "radiator_area_floor_m2_per_100kw_it": 400,
+    "radiator_system_specific_mass_kg_per_m2": 3,
+    "compute_specific_mass_kg_per_kw_it": 5,
+    "bus_comms_shield_mass_kg_per_100kw_it": 500
+  },
+  "market": {
+    "proportional_delivery_price_usd_per_kg_scenarios": [
+      1500,
+      500,
+      100,
+      40
+    ],
+    "future_dedicated_flight_usd": 25000000,
+    "future_dedicated_effective_mass_kg_per_flight": 100000,
+    "ground_20y_tco_reference_usd_per_mw": 265000000,
+    "bcg_orbit_20y_tco_reference_usd_per_mw": 700000000,
+    "bcg_launch_share_reference": 0.2
+  },
+  "provenance": {
+    "solar_array_specific_power_w_per_kg": "NASA 2026 small-spacecraft power chapter Table 3-2: Redwire ROSA 100 W/kg; extrapolation not verified; https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/",
+    "radiator_area_floor_m2_per_100kw_it": "BCG 2026 illustrative 400 m2 for 100 kW satellite; https://www.bcg.com/publications/2026/space-based-data-centers-cost-outlook",
+    "ground_20y_tco_reference_usd_per_mw": "BCG 2026 230-300m USD/MW range, 265m midpoint research assumption",
+    "bcg_orbit_20y_tco_reference_usd_per_mw": "BCG 2026 660-750m USD/MW range; 700m representative rounded",
+    "bcg_launch_share_reference": "BCG 2026: launch about one-fifth of hypothetical orbital TCO",
+    "all_other_design_inputs": "EXPLICIT UNVALIDATED SCENARIOS, not measured full system and may not scale",
+    "future_dedicated_flight_usd": "VIDEO SPECULATION: midpoint $25m of $20-30m future full reuse, NOT commercial contract",
+    "future_dedicated_effective_mass_kg_per_flight": "FUTURE assumption 100t to target orbit, NOT Flight 15 delivered capacity",
+    "proportional_delivery_price_usd_per_kg_scenarios": "$1500/kg BCG illustration, $500/$100/$40 future what-if; not an observable SpaceX price"
+  }
+}
