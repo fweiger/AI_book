@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.3.0",
+  "research_orbit": "ILLUSTRATIVE circular LEO at 550 km, beta angle varies independently; not a trajectory or annual beta distribution",
+  "earth_radius_km": 6371.0,
+  "earth_mu_km3_s2": 398600.4418,
+  "altitude_km": 550.0,
+  "beta_angles_deg": [0, 30, 45, 60, 70],
+  "compute_it_kw": [100, 1000],
+  "hardware_refresh_period_years": 4,
+  "partial_compute_failure_fraction_per_year_assumed": 0.02,
+  "analysis_horizon_years": 20,
+  "real_discount_rate": 0.08,
+  "target_beta_deg_for_logistics": 0,
+  "pricing_cases": [
+    {"name": "per_kg_100_whatif", "kind": "proportional", "usd_per_kg": 100},
+    {"name": "per_kg_1500_bcg_context_not_quote", "kind": "proportional", "usd_per_kg": 1500},
+    {"name": "future_25m_100t_dedicated_video_scenario", "kind": "dedicated", "flight_price_usd": 25000000, "payload_capacity_kg": 100000}
+  ],
+  "repair_policies": ["annual_repair", "four_year_refresh_only"],
+  "sources": {
+    "nasa_2026_power_w_per_kg": "https://www.nasa.gov/smallsat-institute/sst-soa/power-subsystems/ : smallsat ROSA table 100 W/kg; NOT 225kW certified array",
+    "nasa_2026_launch": "https://www.nasa.gov/smallsat-institute/sst-soa/integration-launch-and-deployment/ : dedicated vs rideshare orbital access, separation interfaces and volumes",
+    "nasa_2026_iss": "https://www.nasa.gov/blogs/spacestation/2026/11/05/spacewalkers-install-final-roll-out-solar-array/ : eight iROSA, 18 spacewalks, generation 160 to 215 kW, NOT extrapolatable labor costs",
+    "nasa_avionics": "https://www.nasa.gov/smallsat-institute/sst-soa/small-spacecraft-avionics/ : radiation, ECC and fault mitigation not same as commercial GPU reliability",
+    "fcc_disposal": "https://www.govinfo.gov/content/pkg/FR-2024-08-09/html/2024-17093.htm : 5-year post-mission disposal requirement where applicable; NOT a maximum operating life",
+    "spacex_starship": "https://new.spacex.com/vehicles/starship : 100+t fully reusable DESIGN target; not this 550km orbit confirmed payload or firm price",
+    "dispatch_cost": "USD25m per dedicated flight and 100t to target orbit BOTH speculative and not purchasable contract",
+    "partial_failure": "2% per year from earlier R2 what-if; NOT an observed failure rate",
+    "orbit_geometry": "Analytical circular orbit, spherical Earth cylindrical shadow, beta fixed; no penumbra, oblate earth, ephemerides, comm or assembly"
+  }
+}
