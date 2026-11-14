@@ -106,3 +106,8 @@
 - `I62` `PJM_RTO_EKPC_PSA_SOURCE_SCOPE_DELTA`：`Jan_Standalone_B9b_RTO - Combined_B9b_RTO = -Combined_EKPC`，同时`FebStandalone_B9_RTO-Combined_B9_RTO=-Combined_EKPC`，年度2026—31=10MW，2032—37=9MW，2038—46=8MW。**只测来源是否纳入削峰调整，不测实际负荷增长**。
 - `B9b`初见2025原版公司报告，2023/24同名表缺失是source schema演进（不是用户未检索到）。项目级Firm/Accepted/Realized与政治因果仍NA/UNTESTED。
 - PJM 1/14月度附件第2行明示PSA不纳入，但初版1/14 B9额外表未取得，仍不能把1月B9b−2/6B9认定为同日期首发真实差额。详见[来源报告](reports/2026-11-14_h03_ekpc_jan_vs_feb_release_reconciliation.md)。
+
+## H03第十二轮：原B9版本门槛与整体RTO修订规模对照
+- `I63`：是否确实取得2026-02-06之前未订正B9的**同一定义、原始文件SHA和发布时点**。当前**false**，由此`Feb6_B9_correction_delta_MW=NA`，不能拿1月B9b推算更正前B9，也不能因Wayback暂不可达得出未发布结论。
+- `I64`：`100*abs(2026JanStandaloneB9b−2025OriginalB9b)/abs(2026RTO夏季峰值−2025RTO夏季峰值)`，目标2027、2028、2029、2030分别**49.665%、48.210%、46.275%、201.714%**（2030方向相反）。**仅描述两组未来负荷预测修订幅度，不是一个可加的AI经济贡献率**；B9b已包含模型嵌入项，统计对象非DC专属。
+- [十条来源原始SHA及门槛](data/h03_pre_correction_b9_source_availability.csv)、[四年修订量数据](data/h03_rto_2025_2026_summer_vs_b9b_revision_magnitude.csv)、[标准库复算](analysis/recompute_h03_pre_correction_source_gate.py)。
