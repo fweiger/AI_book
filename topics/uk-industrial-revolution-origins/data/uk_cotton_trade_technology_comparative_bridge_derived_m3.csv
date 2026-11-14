@@ -1,0 +1,9 @@
+metric,value,unit,source,interpretation_guardrail
+matrix_unique_cells,35,H_by_country_cells,original_TOP-010_hypothesis_contract,Qualitative evidence admission only; no causal coefficients or significance scores
+cotton_raw_use_growth_1700s_to_1840s,478.454545,ratio,Broadberry_Gupta_2005_Table1,Different underlying historic original source periods; gross cotton used not output per worker
+cotton_raw_use_growth_1770s_to_1840s,109.645833,ratio,Broadberry_Gupta_2005_Table1,"Raw annual avg million lb, not value of exports or plantation wealth"
+british_export_vs_indian_import_1784_1786,0.593006,ratio,Broadberry_Gupta_2005_Table3B,Different destinations: UK exports to all vs Indian cloth imports to Britain; descriptive scale only
+british_export_vs_indian_import_1794_1796,2.253112,ratio,Broadberry_Gupta_2005_Table3B,Current nominal GBP000; no constant-price comparability to Table3A or causal protection effect
+british_export_vs_indian_import_1804_1806,19.852977,ratio,Broadberry_Gupta_2005_Table3B,UK all-market exports divided by UK imports from India not same bilateral competitive market
+best_practice_spin_hours_1780_to_1825,14.814815,ratio_reduced_hours,Broadberry_Gupta_2005_Table8,Technology frontier hours per 100lb 80s yarn; NOT mean factory industry worker productivity
+british_share_of_indian_cotton_market_1831_1835,3.9,percent,Broadberry_Gupta_2005_Table4,Historical Ellison1886 reconstructed Indian market share not a contemporary registry proof

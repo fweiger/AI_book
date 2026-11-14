@@ -1,0 +1,7 @@
+benchmark_id,time_label,period_start,period_end,metric,value,unit,precision,source_url,interpretation_limit
+OBR-1700,1700-01,1700,1701,govt_debt_ratio,22,percent_GDP,financial_year,https://articles.obr.uk/300-years-of-uk-public-finance-data/index.html,historic GDP reconstruction; not central tax revenue
+OBR-PRE1793,eve of Napoleonic Wars,1789,1793,govt_debt_ratio,155,percent_GDP,approximate_period,https://articles.obr.uk/300-years-of-uk-public-finance-data/index.html,date not pinpointed in article; do not assign single exact year
+OBR-1815,1815 after Waterloo,1815,1815,govt_debt_ratio,180,percent_GDP_approx,approximate,https://articles.obr.uk/300-years-of-uk-public-finance-data/index.html,"article says close to 180, not exact"
+OBR-C18,18th century,1700,1799,average_tax_receipts_ratio,8,percent_GDP_approx,century_average,https://articles.obr.uk/300-years-of-uk-public-finance-data/index.html,not a sum of central government Table3 series; no annual observation
+OBR-C18-BORROW,18th-century five major wars,1701,1815,peak_central_borrowing_ratio_lower,5,percent_GDP,war_peak_range,https://articles.obr.uk/300-years-of-uk-public-finance-data/index.html,five major wars peaked between 5 and 11 percent each; range not every year
+OBR-C18-BORROW-UB,18th-century five major wars,1701,1815,peak_central_borrowing_ratio_upper,11,percent_GDP,war_peak_range,https://articles.obr.uk/300-years-of-uk-public-finance-data/index.html,range bounds across wars; not an average or deterministic upper bound for all years

@@ -1,0 +1,34 @@
+event_id,start_year,end_year,date_precision,country_actor,territory,main_domain,related_domain,event_title,evidence_summary,source_id,limitations
+IR-001,1492,1492,year,Spain,Caribbean,B,,Columbus Atlantic voyage under Spanish Crown,The voyage initiated a phase of sustained Spanish overseas activity.,SRC-002,does not prove effective territorial control
+IR-002,1494,1494,year,Spain;Portugal,Atlantic claims,C,B,Treaty of Tordesillas,Crowns agreed a demarcation of claims; actual local control differed.,SRC-001,claimed zone not colonized territory
+IR-003,1498,1498,year,Portugal,"Calicut, India",B,A,Vasco da Gama reaches Indian Ocean trading region,Portuguese overseas contact connected European maritime network to Indian Ocean.,SRC-003,existing Indian Ocean networks predated Europe
+IR-004,1503,1503,year,Spain,Seville,B,D,Casa de Contratacion established,Crown institution to administer Spanish American trade.,SRC-003,administration does not imply trade receipts
+IR-005,1510,1510,year,Portugal,"Goa, India",B,C,Portugal conquers Goa,Portuguese foothold and administrative center in India.,SRC-003,limited regional effective control
+IR-006,1511,1511,year,Portugal,Malacca,B,C,Portuguese forces occupy Malacca,Key straits trading hub was taken by Portugal.,SRC-003,port control not entire peninsula
+IR-007,1519,1521,period,Spain,Central Mexico,B,C,Spanish invasion and conquest of Mexica capital,Military conquest expanded colonial empire with Indigenous alliances.,SRC-003,do not equate conquest with population count
+IR-008,1580,1640,period,Spain;Portugal,Iberian monarchies,C,B,Iberian Union,Spanish and Portuguese crowns shared a monarch while institutions remained partly separate.,SRC-003,not a merger of all colonial administrations
+IR-009,1600,1600,year,England,London and Asian trade zone,B,D,East India Company royal charter,Chartered company received exclusive English Asian trade privileges.,SRC-004,charter records disagree on exact day; year precise
+IR-010,1602,1602,year,Netherlands,Asian maritime network,B,C,VOC founded,States-General gave chartered company trading and coercive rights.,SRC-005,company revenue distinct from state treasury
+IR-011,1607,1607,year,England,"Jamestown, Virginia",B,,First lasting English North American colony,English settlement created by Virginia Company.,SRC-006,not evidence of inland population control
+IR-012,1619,1619,year,Netherlands,Batavia (Jakarta),B,C,VOC establishes Batavia headquarters,Headquarters in Asia reflected wide commercial and territorial operations.,SRC-005,violent displacement of local settlement
+IR-013,1641,1641,year,Netherlands;Portugal,Malacca,C,B,Dutch take Malacca from Portuguese,Key intra-European change in control of straits port.,SRC-007,year cross-check needed in dedicated battle source
+IR-014,1640,1640,year,England,London,D,C,Ship money declared illegal,Parliament challenged crown taxation ahead of civil war.,SRC-008,not a national revenue series
+IR-015,1642,1651,period,England;Scotland;Ireland,British Isles,C,D,British Civil Wars,Severe domestic conflict contradicts the always-peaceful-Britain hypothesis.,SRC-008,conflict intensity requires quantitative follow-up
+IR-016,1651,1651,year,England,English overseas commerce,B,C,Navigation Ordinance,Restriction aimed to displace Dutch carriers in England's imports.,SRC-009,laws do not prove enforcement uniformly
+IR-017,1652,1654,period,England;Netherlands,North Sea and Channel,C,B,First Anglo-Dutch War,Naval war amid trade and shipping competition.,SRC-008,source names conflict only; separate military series pending
+IR-018,1660,1660,year,England,London,A,,Royal Society created,Scientific correspondence and experimental knowledge institution.,SRC-010,not proof primarily founded for colonial trade
+IR-019,1663,1663,year,England,American colonies,B,D,Colonial Navigation Acts expanded,Trade with colonies channeled through English or colonial shipping.,SRC-009,different enactments span 1660-63
+IR-020,1664,1664,year,France,Paris and Asian trade,B,D,French East India Company formed,State-backed chartered company for overseas trade.,SRC-012,later restructuring separate event
+IR-021,1665,1665,year,England,London,A,,Philosophical Transactions founded,A scientific publication channel linking international scholars.,SRC-011,publication existence not industrial spillover
+IR-022,1675,1675,year,England,Greenwich,A,B,Royal Observatory established,Navigation longitude problem was an explicit founding reason.,SRC-013,knowledge-to-industry transfer remains untested
+IR-023,1688,1688,year,England;Netherlands,England,C,D,Glorious Revolution,Change in monarch and military-political institutions.,SRC-014,peacefulness characterization rejected
+IR-024,1694,1694,year,England,London,D,C,Bank of England founded,Bank chartered with primary purpose of financing war against France.,SRC-015,not direct proxy for industrial investment
+IR-025,1709,1709,year,England,Coalbrookdale,A,,Coke-fueled iron smelting by Abraham Darby,Industrial metallurgical innovation predates conventional 1760 start.,SRC-016,reaching scale took decades
+IR-026,1712,1712,year,England,Dudley area,A,,Newcomen atmospheric steam engine,Practical mine-drainage steam power applied.,SRC-017,main initial demand was domestic mining
+IR-027,1714,1714,year,Great Britain,Westminster,A,B,Longitude Act,Rewards to improve reliable determination of sea longitude.,SRC-018,navigation motive historically explicit
+IR-028,1756,1763,period,Great Britain;France;Spain,Europe;North America;India,C,D,Seven Years War,Multi-theater imperial and continental war imposed high financing costs.,SRC-020,war alone not sufficient for industry causation
+IR-029,1757,1757,year,Great Britain,"Bengal, India",C,B,Battle of Plassey,East India Company military victory and political leverage.,SRC-021,did not give full control of entire India
+IR-030,1761,1761,year,Great Britain,Atlantic sea trial,A,B,Harrison H4 tested at sea,Chronometer solution for longitude underwent first voyage.,SRC-019,not immediate universal deployment
+IR-031,1763,1763,year,Great Britain;France;Spain,North America and empire,C,B,Treaty of Paris,Major colonial territorial changes following Seven Years War.,SRC-020,France regained some Caribbean islands; avoid all transferred
+IR-032,1764,1764,year,Great Britain,"Buxar, India",C,B,Battle of Buxar,Company military success reinforced position in eastern India.,SRC-022,state and company actors distinct
+IR-033,1765,1765,year,Great Britain,Bengal;Bihar;Orissa,B,D,Diwani revenue rights,Company secured revenue-collection rights in eastern Indian provinces.,SRC-023,company tax rights are not UK treasury receipts

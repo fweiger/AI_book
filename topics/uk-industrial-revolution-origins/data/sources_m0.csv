@@ -1,0 +1,26 @@
+source_id,institution,document_title,url,source_type,scope_note
+SRC-001,UNESCO Memory of the World,Treaty of Tordesillas (1494),https://www.unesco.org/en/memory-world/treaty-tordesillas,documentary_heritage,"treaty date and claim boundary, not effective sovereignty"
+SRC-002,Library of Congress,Columbus and the 1492 voyage,https://wwws.loc.gov/exhibits/1492/columbus.html,institutional_exhibition,"claims and voyages, not colonial population"
+SRC-003,Metropolitan Museum of Art,Interwoven Globe world textile chronology,https://www.metmuseum.org/exhibitions/listings/2013/interwoven-globe,museum_research_chronology,early Iberian trade events and Iberian Union
+SRC-004,British Library,East India Company royal charters IOR/A/1,https://searcharchives.bl.uk/catalog/036-000178601,archival_catalogue,1600 charter; day inconsistently listed Dec 30/31 in catalogue records; use year
+SRC-005,Rijksmuseum,The Dutch East India Company,https://www.rijksmuseum.nl/en/collection/node/The-Dutch-East-India-Company-VOC--45d4a3daf93e41baae6017768c3d93df,museum_history,1602 company; Batavia in 1619
+SRC-006,US National Park Service,A Short History of Jamestown,https://www.nps.gov/jame/learn/historyculture/a-short-history-of-jamestown.htm,government_historical_overview,"1607 first durable English colony, not whole region controlled"
+SRC-007,Smithsonian National Museum of Asian Art,Encompassing the Globe: Portugal,https://asia.si.edu/whats-on/exhibitions/encompassing-the-globe-portugal-and-the-world-in-the-16th-and-17th-centuries/,museum_research,Portuguese forts and Dutch displacement; timing corroborate separately
+SRC-008,National Army Museum,British Civil Wars,https://www.nam.ac.uk/explore/british-civil-wars,government_museum_history,1642–1651 England Scotland Ireland conflicts and ship money
+SRC-009,UK Parliament,The Navigation Laws,https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/importexport/overview/navigationlaws/,parliament_historical_record,"1651,1660–1663 trade restrictions"
+SRC-010,Royal Society,History of the Royal Society,https://royalsociety.org/about-us/who-we-are/history/,scientific_institution_history,1660 foundation
+SRC-011,Royal Society,History of Philosophical Transactions,https://royalsociety.org/journals/publishing-activities/publishing350/history-philosophical-transactions/,scientific_institution_history,1665 journal launch
+SRC-012,Bibliothèque nationale de France,Compagnie royale des Indes Orientales,https://catalogue.bnf.fr/ark:/12148/cb12567708x,national_library_authority_record,1664 French chartered company; distinguish later reorganizations
+SRC-013,Royal Museums Greenwich,History of Royal Observatory Greenwich,https://www.rmg.co.uk/stories/space-astronomy/history-royal-observatory,museum_history,1675 observatory for longitude problem
+SRC-014,National Army Museum,The Glorious Revolution,https://www.nam.ac.uk/subjects/royalty,government_museum_overview,1688 political succession and military shift
+SRC-015,Bank of England,History of Bank of England,https://www.bankofengland.co.uk/about/history,central_bank_history,1694 founded for war finance
+SRC-016,Historic England,Coalbrookdale Old Furnace,https://historicengland.org.uk/listing/the-list/list-entry/1054135,heritage_primary_site_record,1709 coke smelting
+SRC-017,Science Museum,Newcomen engine in 1712,https://blog.sciencemuseum.org.uk/a-new-age/,museum_history,mine-water pumping application in 1712
+SRC-018,Royal Observatory Greenwich,1714 Longitude Act,https://www.royalobservatorygreenwich.org/articles.php?article=1312,historical_act_transcription,1714 act text with commercial and naval rationale
+SRC-019,Royal Observatory Greenwich,The quest for longitude and H4,https://www.royalobservatorygreenwich.org/articles.php?article=1290,archival_historical_research,1761 first H4 trial
+SRC-020,US Department of State,Treaty of Paris 1763,https://history.state.gov/milestones/1750-1775/treaty-of-paris,government_historical_record,Seven Years War settlements and war debts
+SRC-021,National Army Museum,Battle of Plassey,https://www.nam.ac.uk/explore/battle-plassey,government_museum_history,23 June 1757 and indirect power
+SRC-022,UK Parliament,Parliament and the East India Company,https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/parliament-and-the-american-colonies-before-1765/parliament-and-the-east-india-company/,parliament_historical_record,1757/1764 military victory and territorial revenues
+SRC-023,UK Parliament,Parliament and Empire 1660–1815,https://www.parliament.uk/about/living-heritage/evolutionofparliament/legislativescrutiny/parliament-and-empire/key-dates/parliament-and-empire-1660-1815/,parliament_chronology,1765 and territorial expansion
+SRC-024,SlaveVoyages,Transatlantic slave trade estimates,https://legacy.slavevoyages.org/assessment/estimates,historical_reconstruction,carrier estimates by 25-year periods; not controlled population
+SRC-025,Nationaal Archief,VOC archive overview 1594–1814,https://www.nationaalarchief.nl/onderzoeken/zoekhulpen/overzicht-van-voc-archieven-1594-1814,national_archive_finding_aid,VOC company and state-admin transition; useful later for finances

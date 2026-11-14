@@ -1,0 +1,4 @@
+period_start,period_end,netherlands_pct_annual_basket,england_pct_annual_basket,dutch_to_english_ratio_rounded3,metric,source_table,source_url,interpretation
+1600,1649,17.8,3.3,5.394,per_capita_central_revenue_over_annual_respectability_basket_price,Costa2024_Table2,https://academic.oup.com/view-large/493054754,"published within-50y median; percent of annual standard basket NOT GDP pct, NOT tax or industrial output"
+1650,1699,17.9,5.7,3.14,per_capita_central_revenue_over_annual_respectability_basket_price,Costa2024_Table2,https://academic.oup.com/view-large/493054754,"published within-50y median; percent of annual standard basket NOT GDP pct, NOT tax or industrial output"
+1700,1749,38.4,16.9,2.272,per_capita_central_revenue_over_annual_respectability_basket_price,Costa2024_Table2,https://academic.oup.com/view-large/493054754,"published within-50y median; percent of annual standard basket NOT GDP pct, NOT tax or industrial output"
