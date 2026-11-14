@@ -126,3 +126,10 @@
 - Rita Martins de Sousa (2003) 报告**1743–1744年国家黄金铸币4,196 contos**，同期旧债处理约5,000 contos来自Azevedo的后继引用，**铸币流量≠国库净收益、旧债换手≠全额现金偿还，不可相减当国库缺口**。同一研究引用ANTT原始档案，给出**1763年12月31日国库金储备835 contos、1765年76.8、1767年67.2**及**1766年借款至1777年仍欠371.4 contos**，需要分开黄金余额/年度铸币/债务存量的性质。
 - 新的[九条1647—1750事件及债券法律日期冲突CSV](data_m2/pre_gold_tax_collateral_1743_1749_1750_edict_coinage_source_audit_m3.csv) + [QA脚本](data_m2/validate_pre_gold_credit_collateral_and_edict_dispute_m3.py)；[八条1763—1798国库黄金和国内借款发表数据CSV](data_m2/sousa2003_1763_1798_treasury_gold_mint_deposit_loans_m3.csv) + [QA脚本](data_m2/validate_sousa2003_treasury_royal_mint_deposit_loans_m3.py)。全部已实际读取源出版论文并运行脚本通过。
 - **法令日期冲突继续开放**：Azevedo1947/Sousa2003记1749-03-16降息至4.5%，1841年的《O Panorama》却记1750-03-16；目前尚未得到1883年官方Gomes汇编原文p318。源等级以`ORIGINAL_LAW_NOT_ACQUIRED`保留，不择一伪称已证实。
+
+
+## M3新增｜葡萄牙国家审计法院 AHTC 1763—1777王室财政原始账簿精确卷号与1765会计口径审计
+
+- [AHTC_1763_1777_ORIGINAL_TREASURY_VOLUME_MAP_1765_CASH_VS_GOLD_SCOPE_M3_20261114.md](AHTC_1763_1777_ORIGINAL_TREASURY_VOLUME_MAP_1765_CASH_VS_GOLD_SCOPE_M3_20261114.md)：实际取得 **1977年审计法院官方原始档案目录**（216页），注册**21条**相关卷号：1763/1765/1766/1767/1777年各半年`Tesouraria-mor receita e despesa`账簿第**2—10、29—30**卷、现金账簿第**155—159、169**卷，以及税收欠款簿399、财政命令405/406/410和军人旧欠饷5351。当前档案根据2024年协议存放ANTT，需通过审计法院档案服务确认当前藏号、预约及数字化副本；**官方目录已读，原账原件仍NOT_ACQUIRED**。
+- **独立取得2019年Rodrigues博士论文原文**，其对1765年四个财政分账机构合并后的两类`Caixa`账户余额报告约**2,765 contos**；与Sousa（2003）引用ANTT报告的1765年**76.8 contos国库黄金货币存量**属于不同现金/硬币口径且未能确认同日，**不能把两者视为矛盾或直接求黄金占比**。1765年作者报会计收益约2,690 contos，不能当王国财政盈余；公开近似数值的1 conto算术差异仍需原账核对。
+- [21条原始账簿调阅清单](data_m2/ahtc_1763_1777_treasury_original_ledger_requisition_inventory_m3.csv)、[7项会计与黄金不同口径摘要](data_m2/treasury_1765_cash_accounts_vs_gold_coin_stock_provenance_m3.csv)、[来源等级与定义QA脚本](data_m2/validate_ahtc_ledger_requisition_and_1765_cash_specie_scope_m3.py)。**实际在研究Runner从GitHub当前分支重新下载并运行通过**，记录`original_manuscripts=NOT_ACQUIRED`及`transaction_causal_effect=NOT_RUN`；无未经授权的档案原件上传。
