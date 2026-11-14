@@ -7,6 +7,8 @@
 
 精确完整性预期是：`(1838−1755)×12 + 2 = 998`个**日历月份**，与指南公布的**998 entries**相符；但这只是日期范围与发表条目数的一致性，并不等于本轮已经检查998行均有数值、无缺失或无重复。
 
+**另外两项必须保留的原始目录差异**：英国图书馆卷册标题的终点是**1838-02-28**，但Bowen指南表示原卷最后一条价格为**1838-03-03**；本轮没有卷页，无法解释三天差异。Bowen数据目录摘要把`Stock_Transfers_Monthly`起点写成**1756年**，详细第26项说明却写成**1755年1月**；本研究结构表暂按更精确的详细说明填写并标为`SOURCE_INTERNAL_START_YEAR_DISCREPANCY`，待真正取得数据文件后验证。关于`Stock_Transfers_Monthly`的2,880条条目，指南列出三列计量量、覆盖约960个月，不能将2,880误当作2,880笔股票交易。**这些是文件说明的元数据不一致，并非本轮已经在原始数据里找到的数值错误。**
+
 **关键事件研究口径陷阱**：M3L的`英国EIC股票1772年6月高点→12月底约−27%`不能用Bowen单纯的`6月最后交易日价格→12月最后交易日价格`直接替代，因为前者基准是**6月盘中/月内高点**，而后者在最后交易日取**区间最低价**。未来需查看原始英国图书馆1732–1838日度股价卷或Neal当代印刷报价的6月峰值与12月逐日记录，再核对股息发放日、名义资本变动和伦敦—阿姆斯特丹交易时差，才能真正复现跌幅与保证金触发。
 
 另一路 Larry Neal [ICPSR1008](https://www.icpsr.umich.edu/web/ICPSR/studies/1008/summary)为现成的当代印刷 *Course of the Exchange* 与阿姆斯特丹新闻价格文献数据，ICPSR官方明确称此版为**public use一般公众可访问、无需会员机构归属**；而同一Neal资料的旧英国分发版本[UKDA3211](https://doc.ukdataservice.ac.uk/doc/3211/mrdoc/UKDA/UKDA_Study_3211_Information.htm)历史文档则要求英国居民或英国机构身份。**两种平台的分发权限不同，不是两个价格研究样本**。本轮实际网页下载受JavaScript/账户界面限制，两个研究项目价格数据文件均`NOT_ACQUIRED`；不得传输或私自复制受限制数据文件。
@@ -16,7 +18,7 @@ H.V. Bowen *East India Company: Trade and Domestic Financial Statistics 1755–1
 
 工作簿结构完整录入[voc_ukda5690_eic_27_workbook_schema_m3m.csv](voc_ukda5690_eic_27_workbook_schema_m3m.csv)。核心工作簿：`Stock_Prices` (998 month-end observations documented); `Stock_Transfers_Monthly`（月度笔数与转让名义股票价值，**不是市场成交金额**）；`Income_Sales`（伦敦公司自营商品**销售的毛现金收入**）；`Income_Total`（伦敦总现金流入）；`Payments_Bills_of_Exchange`（海外汇票**已兑付本金及利息现金**）；`Payments_Dividends`（已经支付给股东的股息）；`Payments_Duties`（包含为获许可私商代收代付税费）；`Exports_Total`与`Imports_Total`（**历史invoice账面价而非现金实收**）。
 
-**最大会计口径纠偏**：1760—1814年EIC出入货物invoice一般在实际采购价基础上加入约**10%**的名义运输和整备成本；发票价与收货卖价不是同类交易。Bowen特别说明 `Income_Sales` 是销售收款、尚未扣除关税、运费及附加成本，而且不含由私人商人委托公司代售货物的现金；`Income_Total`是现金流入也不是公司利润。不能用`British invoice price - VOC Asia cost`解释成本优势，不能把英国EIC公司销售当英国国库财政收入。详见 [官方指南印刷pp4, 12](https://doc.ukdataservice.ac.uk/doc/5690/mrdoc/pdf/guide.pdf)。
+**最大会计口径纠偏**：1760—1814年EIC商品invoice通常在采购价基础上加入约**10%**，其中亚洲进口发票定价实践因地区而异，不能对全部进口机械按1.10反推采购价的名义运输和整备成本；发票价与收货卖价不是同类交易。Bowen特别说明 `Income_Sales` 是销售收款、尚未扣除关税、运费及附加成本，而且不含由私人商人委托公司代售货物的现金；`Income_Total`是现金流入也不是公司利润。不能用`British invoice price - VOC Asia cost`解释成本优势，不能把英国EIC公司销售当英国国库财政收入。详见 [官方指南印刷pp4, 12](https://doc.ukdataservice.ac.uk/doc/5690/mrdoc/pdf/guide.pdf)。
 
 **重要会计年度边界**：1813年前英国EIC以**7月1日至次年6月30日**为财务年；因此‘1780年度’在这套表中实际是1779-07-01到1780-06-30，早于第四次英荷战争于1780-12-20正式开始。荷兰VOC本土记账年常为4月中旬结账，阿姆斯特丹汇兑银行为1月中旬结账，BGB亚洲账为8月31日结账。以上不是同样的`year=1780`样本；不可直接拼成年份相同的双差分。股票转让与股价月份按**自然月**，与财务年不一致。
 
