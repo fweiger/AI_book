@@ -1,5 +1,11 @@
 # TOPIC-011｜首轮研究执行队列（2026-11-14）
 
+## 第十八轮 H02财政完整分项实算已完成（2026-11-14）
+- **已完成**：[CBO 2026-02官方版次财政核验报告](reports/2026-11-14_h02_round18_cbo_feb2026_fiscal_baseline_timing_bridge.md)、[FY2026—29四年预算宽表](data/h02_cbo_feb2026_fiscal_baseline_round18_wide.csv)、[142行可复核长表](data/h02_cbo_feb2026_fiscal_baseline_round18_long.csv)、[官方source commit/SHA](data/h02_cbo_feb2026_source_manifest_round18.csv)、[Python复算程序](analysis/recompute_h02_cbo_feb2026_baseline_round18.py)、[7行老法/后截点立法桥接](data/h02_round18_pre_election_policy_baseline_bridge.csv)。官方CBO repo固定commit，Ubuntu独立校验收入加总、三类支出及净利息、调整前后赤字和CBO发布表数字，PASS。
+- **新增可证伪识别结论**：FY2028/29付款时间校正分别−123.583/+123.583bn美元；初级赤字占GDP调整后2027→28→29为2.340/2.130/2.274%，与原始趋势方向不同。**这仍非周期调整财政冲量，不能归因新国会**。
+- **下一轮H02 #43唯一硬任务**：CBO财政版本在2026-01-14锁定法律，P.L.119-74/75是选举前已签署而未入2月基线的拨款法。补齐2026-01-15至11-02的新法律/正式得分及FY2027—29分年度支出，完成真正的2026-11-02选前已知政策桥；净影响未知保持NA。以后对120届2027新法与Treasury月度现金做差分，并控制原P.L.119-21的2027延迟生效。FY2027首季仍旧国会、FY2029跨2029-01-20总统换届。
+- **H03/H04的交叉任务**：财政/Medicaid/电力税费总量不是AI CAPEX，需真实项目、同公司同期间指引和融资回报；全部H01—H10因果仍UNTESTED，路径均UNKNOWN。
+
 ## 第十七轮已完成：政策内容穿透与2027旧法负对照（2026-11-14）
 - **已实际核源/计算**：[三部成法政策穿透报告](reports/2026-11-14_h02_round17_policy_section_budget_baselines_and_legacy_2027.md)，[16条政策-基线-实际/预测数据](data/h02_round17_policy_section_budget_actual_2008_2026.csv)，[六份GPO初版/成法HTML的SHA](data/h02_round17_gpo_bill_to_law_6files_sha.csv)，[可验证脚本](analysis/recompute_h02_round17_policy_section_budget_actual.py)。2008 TARP 7000亿授权→2010变更4750亿→累积4435亿拨付/311亿净成本；2020 CARES首轮IRS实付超过2700亿；同一2025 P.L.119-21相对CBO现行法基线+3.4万亿美元而相对参院执行基线-3660亿，两者不能混合。所有来源与数值已通过实际核验。
 - **选前继承的2027政策（优先负对照）**：2025 P.L.119-21 §71119在2027-01-01启动适用的Medicaid社区参与规则，2026 CMS实施条例已经公布/生效；§70512/70513的风光电45Y/48E部分终止条件影响2027年末与早先施工安排。**这不是2026选举后新国会的改革**。2027项目/医疗数据变化必须先剥离这一既有法律冲击。
