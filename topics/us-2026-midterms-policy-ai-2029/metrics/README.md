@@ -88,3 +88,8 @@
 ## 学校毛税负差及固定2025事前预期来源（v0.2.7）
 - `H09_CH313_DELVALLE_GROSS_SCHOOL_TAX_SAVING_USD`、`H09_CH313_DELVALLE_CDR_VERSION_DELTA_USD`、`H09_CH313_DELVALLE_REVENUE_PROTECTION_REPORTED_USD`分别追踪学区Chapter313毛税收节省、同税年不同报告vintage差、另列补偿科目；**不是Travis县Chapter381的grant实付，也不是企业净收益**。[两版本14税年行](../cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv)。
 - `H10_UNIFORM_DATED_CPI_CORE_SURPRISE_UST2Y_DIRECTION`用于当CPI首发、**固定同源真实提前发布的专业共识**及两年期真实有符号日变动都可观察且surprise非零时，才计算1/0；缺项写NA，不把事后历史财经日历的预测补入。[2025固定11次发行与7条预告](../data/h10_cpi_consistent_publisher_2025_pre_release_cohort.csv)及[检验报告](../reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)说明同向仅Core2/4、Headline2/5，不是未来预测胜率。
+
+
+## 学区PILOT财报确认与CDR跨税年核对（v0.2.8）
+- H09_CH313_DELV_ISD_FY_TESLA_PILOT_REPORTED_RECEIVED_USD 为Del Valle学区年报报告收到/确认的Tesla Chapter313相关PILOT财政年度收入，FY2022–25分别$999,609 / $9,543,964 / $17,946,611 / $23,002,842，**它是学校的收入、企业的合同支出方向，不是政府给Tesla的现金**。
+- H09_CH313_DELV_ISD_FY_PILOT_VS_CDR_RECON_RESIDUAL_USD 为上述学区财政年度PILOT与候选前一Ch313税年报告Revenue Protection+Supplemental之间的算术差额：FY2022/23/24恰好0，FY2025 **+$976,875未对平**。这种跨财年/税年的配对必须在实际税单和资金流验证后才可上升为净效益。 [原始数据/合同区分报告](../reports/2026-11-14_h09_delvalle_school_afr_pilot_receipts_and_cdr_crosswalk.md)。
