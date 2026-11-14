@@ -54,3 +54,21 @@ python3 reproduce_gdp_from_author_xlsx.py --source /path/to/palmareis_JEH_2019.x
 | [commodity_price_coverage_b5_m2.csv](commodity_price_coverage_b5_m2.csv) | 第33页B.5；11种商品×4个年份段的作者公布覆盖率。1701–1800年Soap=62、Candle=88、Linen=91；价格插值敏感性仍NOT_RUN |
 
 B.1名义数总计私人211,080、公共59,965、合计271,045，单位均百万réis；公共占比22.1236%。B.3/B.4各指标权重的绝对归一误差不超过2e−9。**作者官方附录已取得**，但ICPSR 209481可执行完整复现包仍**NOT_ACQUIRED**；不会以官方表格归一测试代替论文ASCM因果检验。
+
+
+## M2 Gold × GDP同期对接与数据复算（2026-11-14）
+
+- [gold_to_nominal_gdp_fiveyear_bridge_m2.csv](gold_to_nominal_gdp_fiveyear_bridge_m2.csv)：新增17行（1720–1804连续17个五年段），将官方附录B.1的五年私人/公共黄金名义汇款对上Palma–Reis 2019作者Excel `GDPs!H` 的**五个年度名义GDP之和**，均为百万réis；含公共/私人分项的GDP比率、五年平均人均GDP和双重来源标记。
+- [reproduce_gold_gdp_bridge_m2.py](reproduce_gold_gdp_bridge_m2.py)：标准库+既有[reproduce_gdp_from_author_xlsx.py](reproduce_gdp_from_author_xlsx.py)读取作者Excel，校验原始SHA256、时间连续性及公共/私人汇回量，再从原始文件运行生成桥接CSV。
+- [完整审计与ICPSR 2026年平台迁移说明](../GOLD_REMITTANCES_TO_GDP_BRIDGE_AND_DATA_ACCESS_AUDIT_M2_20261114.md)。
+
+实际运行命令（需从作者公开链接自行取得原始XLSX；本仓库未镜像）：
+
+```bash
+python3 reproduce_gold_gdp_bridge_m2.py \
+  --source /local/path/palmareis_JEH_2019.xlsx \
+  --gold-file gold_remittances_fiveyear_b1_1720_1804_m2.csv \
+  --output /tmp/gold_bridge.csv
+```
+
+复算输出CSV SHA256 `bbf1d77cbe014f22ed5d0ffbf1bd311cad253ee956911e83266ca12d62f3b162`，脚本 SHA256 `ccd49e95c5d25b1f51884f38cb772e6eca901ee0d81e6b83e06d4b738038a157`，两个GitHub blob哈希均已确认与本地运行验证文件**逐字节一致**。黄金对同期GDP的累计名义强度：总2.9298%，公共0.6482%，私人2.2816%。这是历史数据的**描述性比率**，不是财政税收率、国内价值增加或黄金负面因果效应。
