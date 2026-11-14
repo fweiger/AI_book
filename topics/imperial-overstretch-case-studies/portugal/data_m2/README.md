@@ -157,3 +157,15 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [juro_1743_1749_debt_conversion_evidence_m3.csv](juro_1743_1749_debt_conversion_evidence_m3.csv) | 精确日期、1947年历史著作原文引用与1752年Pombalina馆藏定位，以及2021/2024转述的**旧债转移≈5,000 contos**；它不等于DEBT.PT 1743净新增≈507.943 contos，更非新现金净流入 |
 
 完整研究报告：[1743年降息/宗主教座堂转债与殖民黄金税偿债金库](../1743_JUROS_CONVERSION_GOLD_EARMARKED_COFFERS_PROVENANCE_M3_20261114.md)。官方B XLSX网址 https://debt.pt/pdf/FISCAL%20COFFERS_%20debt%20service%201529-1557%20%26%201641_1800.xlsx；源SHA256 `48727613d6463b990842b7098a5b5c25aeaf9235ced3bb142634b591af5b6850`；8行派生CSV SHA256 `d7285cf22af3716211f2ed12cf62bb4d7009c319fcd92b2e2a45c696316429c5`。底层法律/1752手稿以及直接券级新融资证据仍`NOT_ACQUIRED`，不应视为已完成殖民财富→财政收入→产业损失因果链。
+
+
+## M3补充｜AHU债券手稿目录及Misericórdia一二级市场审计（2026-11-14）
+
+| 文件 | 内容及证据等级 |
+|---|---|
+| [archival_locator_juro_cash_financing_1743_1753_m3.csv](archival_locator_juro_cash_financing_1743_1753_m3.csv) | **9条**精确法令/账簿/档案目录：AHU Cod.2003（1743–1753宗主教座堂/海外委员会）、Cod.491（1742–1752印度战争商人融资）、1744-08-29补偿性债券（AHU_CU_Reino Cx.125 pasta32）、1753-06-14殖民管辖权换债（Cx.60 pasta65），及葡萄牙财政部历史债券目录、旧法令和晚期慈善会真实收息账簿；**所有未读的历史手稿仍`NOT_ACQUIRED`** |
+| [validate_archival_locator_and_cash_claims_m3.py](validate_archival_locator_and_cash_claims_m3.py) | **实跑PASS**：9条来源ID不重复，日期/URL合法，档案原件未取得时不可宣称已读取，标明1744/1753为非现金法律对价；只是元数据QA而不是原始档案验证 |
+| [reproduce_juro_primary_secondary_2019_m3.py](reproduce_juro_primary_secondary_2019_m3.py) | Lisbeth Rodrigues (2019) Table5的**日期、金额、是否交给王室国库**的有限转录及统计核算；20笔中19笔有本金，源论文对照[DOI](https://doi.org/10.4000/lerhistoria.4730)，CC BY-NC 4.0署名，未镜像论文或全部买卖私人记录 |
+| [misericordia_2019_bond_primary_secondary_reconciliation_m3.csv](misericordia_2019_bond_primary_secondary_reconciliation_m3.csv) | **7项**作者表4和表5会计口径对照：已知19笔本金179.853941 contos，五笔国库直付106.773748、已知14笔二级市场73.080193；Table4发表总额195.509941，`Table4-Table5_known=15.656000` contos为**未对平源差**；不能把缺项直接填成差额。
+
+研究报告：[1743—1753债券档案与1775后国债/私人信用分配](../AHU_1743_1753_BOND_MANUSCRIPTS_NONCASH_ISSUANCE_AND_2019_CREDIT_ALLOCATION_M3_20261114.md)。2019复算CSV SHA256 `9aa0202054679039f4fadd783b4c67ad2037589e910928ae02d7683b27ba5236`。官方AHU两册的**手稿未读/目录原版访问受阻**；德国/葡萄牙等档案镜像转载与作者复现不视为原始凭证。1775年禁贷有1768先行限制、1769私人放贷已停止、1755地震及坏账等混杂因素，`CAUSAL_EFFECT_NOT_RUN`。
