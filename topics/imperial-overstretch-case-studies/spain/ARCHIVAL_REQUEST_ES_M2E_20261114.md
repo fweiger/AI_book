@@ -100,3 +100,36 @@ Atentamente,
 [Nombre y contacto del investigador — completar personalmente]
 
 **Registro de estado**: COLLECTED_PUBLIC_COLLECTION_METADATA; 1790_DIGITAL_ITEM_METADATA_CONFIRMED; 1808_TARGET_PDF_NOT_OPENED; CUSTODIAN_CONTACT_NOT_SENT; IDENTITY_NOT_COLLECTED. Conservar estas limitaciones incluso si un enlace institucional existe, hasta visualizar efectivamente el documento.
+
+
+---
+
+## D — Consulta AHFT Granada y AHBE de las cuentas de 1790 (M2h, borrador; NO ENVIADO)
+
+**Asunto: Identificación de páginas originales Banco de San Carlos 1790 — 7-FSAAVEDRA_C25_007 / libros 145 y 154**
+
+Estimado equipo del Archivo Histórico de la Facultad de Teología de Granada:
+
+Estoy trabajando en una auditoría histórica sobre la separación entre el capital contable nominal del Banco Nacional de San Carlos y el capital utilizado para calcular dividendos durante 1789–1795.
+
+En su catálogo digital de actas he identificado **ES 18087. AHFT 7-FSAAVEDRA_C25_007**, una copia impresa de las sesiones de la **Octava Junta General de Accionistas** de 1790, publicación catalogada en 1792. Se anuncia un archivo maestro **AFT_FSAAVEDRA_C025_007.pdf**, de aproximadamente **322,8 MiB**. La página de consulta y el gran archivo digital no se han podido abrir desde mi entorno; no he accedido a las imágenes originales.
+
+¿Podrían facilitar un enlace funcional o una copia autorizada, preferiblemente **solo de las páginas relevantes** para verificar:
+1. La resolución de la Junta sobre el dividendo de 1789 propuesto al 5% (12 millones de reales), la votación favorable y contraria, y las cuentas citadas.
+2. El tratamiento y amortización o mantenimiento en cartera de las 30.000 acciones propias recompradas y las otras 628 acciones.
+3. Las reclamaciones de intereses y pérdidas en aprovisionamientos frente a la Real Hacienda, así como las cuentas usadas para estimar el capital vigente.
+
+También agradecería la paginación, las condiciones de cita, reproducción académica y eventuales costes. No doy por supuesto permiso para redistribuir imágenes.
+
+Atentamente,
+[Nombre e información de contacto aportados por el investigador autorizado]
+
+**Para el Archivo Histórico del Banco de España (AHBE)**, agradecería cotejar las referencias archivísticas citadas por Rafael Moreno Fernández (AECA 2012; Banco de España, EHE 67, 2014):
+- Secretaría AJD **libro 145, folios 289–291**, Junta de Dirección del 20 de abril de 1790.
+- Secretaría **caja 984**, documentación de la orden de 21 de mayo de 1790 relacionada con la compra de acciones.
+- Secretaría AJD **libro 154, folios 271–274v**, Junta de Dirección del 5 de julio de 1794, con alegaciones separadas sobre 30.000 y 628 acciones.
+- Si es posible, el **Libro Mayor de capital y acciones propias, diario y cuentas de dividendos del ejercicio de 1790** y el asiento de reducción de 300 a 240 millones nominales, cualquiera que sea su fecha real.
+
+Estoy contrastando una estimación histórica según la cual la Junta de 1790 **rechazó** el dividendo correspondiente a 1789 (31 votos a favor y 210 en contra), pero una propuesta de 12 millones nominales de reales como 5% sobre el **ejercicio de 1790** se aprobó en la siguiente Junta de 1791, lo que implica una base de distribución de 240 millones de reales, frente a otra publicación que mantiene 300 millones como capital de balance hasta 1794. Las fuentes impresas contienen discrepancias mínimas de un real y un maravedí; sería útil la comprobación visual con las cuentas originales.
+
+**Estado de tramitación:** únicamente plantilla de consulta; NOT_SENT. No se ha utilizado ni transmitido identidad, email ni información personal; no se han recibido imágenes ni una respuesta de custodios.
