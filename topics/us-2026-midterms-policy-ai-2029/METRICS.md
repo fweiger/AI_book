@@ -1,6 +1,6 @@
 # TOPIC-011｜指标和公式口径 v0.1
 
-> **统一指标目录现已抽离到 [metrics/catalog.csv](metrics/catalog.csv)**（91个定义/指标族），含 I01–I14、37个既有H03命名指标和I15–I54；**本文件保留历史定义、H03原始版本注释及复算来源**，不再为新H09/H10在本文内复制指标。统一引用与PIT数据规则见 [metrics/README.md](metrics/README.md)，本轮已核BLS数值样例见 [observations_seed.csv](metrics/observations_seed.csv)。
+> **统一指标目录现已抽离到 [metrics/catalog.csv](metrics/catalog.csv)**（94个定义/指标族），含 I01–I14、37个既有H03命名指标和I15–I54；**本文件保留历史定义、H03原始版本注释及复算来源**，不再为新H09/H10在本文内复制指标。统一引用与PIT数据规则见 [metrics/README.md](metrics/README.md)，本轮已核BLS数值样例见 [observations_seed.csv](metrics/observations_seed.csv)。
 
 
 | ID | 对应 | 可操作定义 | 来源/频率 | 限制 |
