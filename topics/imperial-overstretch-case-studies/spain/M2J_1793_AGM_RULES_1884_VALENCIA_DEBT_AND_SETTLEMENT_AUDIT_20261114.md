@@ -107,3 +107,16 @@ https://www.boe.es/gazeta/dias/1884/04/26/pdfs/GMD-1884-117.pdf
 **NOT_RUN**：控制战争、英国海上封锁、政府债务与银行自营投资风险的因果模型、私人信贷被主权信用挤占、中央债息实际支付对西班牙海军投入的挤出；不把政府已付40m等同战时债息。
 
 **唯一下一动作：** 优先通过合法开放的**1795年瓦伦西亚格劳港工程委员会原始借款合同、国库/港口结算簿或独立正式印本**复核1884转引的 **300雷亚尔合同总额差异**，并锁定其中原债务人和王室是否直接承诺保证；有此同一主体的债务链后，才能把银行 *Obras Públicas*、*Real Hacienda* 项按可核口径勾稽入1829最终重组账。1790/1791已定位原始会议簿继续作为平行受阻材料，不另建任务、不发送无授权的私人档案请求。保留 Issue #32 OPEN 和 Draft PR #36。
+
+
+---
+
+## M2k corrective adjudication addendum (2026-11-14): FINAL 1887 judgment now read
+
+**1884 Treasury's initial refusal was NOT the last legal decision.** The official original [26 November1887 Gaceta, printed pp557–559](https://www.boe.es/gazeta/dias/1887/11/26/pdfs/GMD-1887-330.pdf) has now been VISUALLY CHECKED through actual page screenshots. The Regent's **24 October1887** decision for Consejo de Estado administrative-contentious court **upheld the 1884 refusal** of Banco de España's *carga de justicia* claim, and **declined the Government counterclaim on PROCEDURAL grounds**. Its core holding was **1829 bank–Crown settlement extinguishment**; not a factfinding that sovereign finance/tax administration never participated.
+
+**1887 adds key earlier exposure:** 1794–95 royal orders solicited and approved the bank-funded port works contract (still signed by Bank and separate Valencia port Junta), with earmarked port consular and silk levies plus **1237 pledged Propios y Pósitos shares**; 1802 royal revenue agents collected assigned tax proceeds for onward transfer to Junta and 1817/18 orders addressed arrears and possible conditional Treasury responsibility. Thus M2j's accurate **DIRECT_1795_BORROWER_IS_PORT_JUNTA** finding must not be overstated as **NO_POSSIBLE_CROWN_CONTINGENT_OR_TAX_PASS_THROUGH_LIABILITY**. Conditional duty and state tax collector default require original orders and account books.
+
+**1887 certified repayment details:** the case cites the 1862 public accountant certificate recording **13,703,208 nominal reales received by Bank over 1797–1836**, while 1839 local Junta still listed 4.503m arrears. Those are different cash/paper/period dimensions, not one subtractable bank P&L series.
+
+**1884 source 300-real mismatch is still UNRESOLVED:** 1887 printed p558 visibly gives *2.968.575 reales y 5 maravedises* for the contract total, apparently dropping leading '1' from the 12m expected amount. Its last component digits align with derived **12,968,575** more than 1884's printed **12,968,875**, but neither court publication is the original **1795 notarized contract**. Don't silently fix 1884, 1887 or historic legal loan fields. See the full [M2k source audit](M2K_1887_FINAL_JUDGMENT_PORT_CREDIT_TAX_AND_BANK_RECONCILIATION_20261114.md), [legal responsibility matrix](port_loan_legal_attribution_matrix_m2k.csv) and [nominal repayments](port_loan_nominal_repayment_m2k.csv).
