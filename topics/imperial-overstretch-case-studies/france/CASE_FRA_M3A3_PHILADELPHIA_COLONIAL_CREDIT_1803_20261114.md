@@ -23,7 +23,7 @@
 
 ## 2. 收款银行实体识别：NYPL索引`Francis Banquier`可能是解析错误
 
-NYPL题录呈现`Letter to Thomas Willing and Francis Banquier`，并将`Banquier, Francis`列为个人名称。这里**存在源数据实体歧义**：18–19世纪费城确实有**Willing and Francis**商业行，其历史收藏由宾夕法尼亚历史学会（HSP）`Collection 1874`保存；HSP确认合伙人 Thomas Willing、Thomas Mayne Willing 和 Thomas Willing Francis。[HSP独立机构馆藏指南](https://hsp.org/sites/default/files/legacy_files/migrated/findingaid1874willingsandfrancis.pdf)；[宾州司法系统Thomas Willing生平记载1994–1807 partnership，具体为1794–1807](https://wwwsecure.pacourts.us/Storage/media/pdfs/20220505/193111-willing.pdf)。
+NYPL题录呈现`Letter to Thomas Willing and Francis Banquier`，并将`Banquier, Francis`列为个人名称。这里**存在源数据实体歧义**：18–19世纪费城确实有**Willing and Francis**商业行，其历史收藏由宾夕法尼亚历史学会（HSP）`Collection 1874`保存；HSP确认合伙人 Thomas Willing、Thomas Mayne Willing 和 Thomas Willing Francis。[HSP独立机构馆藏指南](https://hsp.org/sites/default/files/legacy_files/migrated/findingaid1874willingsandfrancis.pdf)；[宾州司法系统Thomas Willing生平材料所列1794–1807年Willing and Francis合伙关系](https://wwwsecure.pacourts.us/Storage/media/pdfs/20220505/193111-willing.pdf)。
 
 待原文核查，法语收信人也许是`Messieurs Willing et Francis, banquiers`（“Willing和Francis，银行商”），而不是存在一个正式姓名为`Francis Banquier`的自然人。**这是备择实体解析假说，不是已从原手稿证实的法文原句**。后续本项目一律暂用`Willing/Francis addressees (identity pending primary scan)`，严禁用`Banquier`作已核定姓氏。
 
