@@ -1,0 +1,5 @@
+period,year_start,year_end,wheat_coverage_pct,maize_coverage_pct,meat_coverage_pct,eggs_coverage_pct,hens_coverage_pct,wine_coverage_pct,olive_oil_coverage_pct,fuel_coverage_pct,linen_coverage_pct,candle_coverage_pct,soap_coverage_pct,source_pdf_page,source_table,source_pdf_url
+1527-1600,1527,1600,89,78,63,51,71,86,74,71,50,36,29,33,B.5,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+1601-1700,1601,1700,100,100,100,99,100,100,100,100,96,89,79,33,B.5,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+1701-1800,1701,1800,100,100,100,100,100,100,100,100,91,88,62,33,B.5,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
+1801-1825,1801,1825,100,100,100,100,100,100,100,100,100,100,78,33,B.5,https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf
