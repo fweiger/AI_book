@@ -43,3 +43,4 @@
 - [2026-11-14 H09县返利2025无付款历史证据与H10 Nov10 CPI公布前预期/FedWatch事件](./2026-11-14-h09-rebate-no-payment-h10-cpi-preconsensus.md)
 - [2026-11-14 H09官方2022零返利历史基线与H10事前预测10事件/46非PIT页面双层核验](2026-11-14-h09-official-2022-h10-pit-forecast-grade.md)
 - [2026-11-14 H09官方学区Ch313两版税差/净现金边界与H10同源2025年7/11 CPI预期来源反例](2026-11-14-h09-delvalle-1496-vintage-h10-2025-source-controlled.md)
+- [2026-11-14 H09学区年报实收PILOT四年对账及H10 2024同发布者来源分层](./2026-11-14-h09-delvalle-actual-pilot-receipts-h10-2024-coverage.md)
