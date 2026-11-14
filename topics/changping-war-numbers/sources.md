@@ -60,3 +60,13 @@
 - S29 靳生禾、谢鸿喜《长平之战——中国古代最大战役之研究》1998、第249页战场地图；李冀、侯甬坚论文引用，原始地理测点未独立取得。
 
 注意：上传论文全文用户可读，不向公开仓库转载版权文件；公开仅上传原创审计分析、必要短引文和事实重算。
+## 第五轮来源 S30—S37
+
+- S30 高平文旅局2025：四段现存战国长城合16km https://www.sxgp.gov.cn/zjgp/fjms_425/202512/t20251210_2295436.shtml
+- S31 《史记三家注·燕召公世家》：索隐引《战国策》廉颇20万在鄗 https://zh.wikisource.org/zh-hans/%E5%8F%B2%E8%A8%98%E4%B8%89%E5%AE%B6%E8%A8%BB/%E5%8D%B7034
+- S32 今见《战国策·燕策三》：廉颇8万在鄗；版本待校 https://ctext.org/wiki.pl?chapter=288289&if=en&remap=gb
+- S33 《史记·白起王翦列传》：华阳秦军斩首13万而非独立军籍 https://zh.wikisource.org/zh-hans/%E5%8F%B2%E8%A8%98/%E5%8D%B7073
+- S34 《三国志·诸葛恪传》：大发州郡20万出征又围合肥新城 https://www.shidianguji.com/book/LS0004/chapter/1j7fnuyablhrv_388
+- S35 《资治通鉴》卷105：384年慕容垂20余万攻邺筑围 https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91/%E5%8D%B7105
+- S36 《资治通鉴》卷198：高丽靺鞨15万前来救安市 https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91_(%E5%9B%9B%E5%BA%AB%E5%85%A8%E6%9B%B8%E6%9C%AC)/%E5%8D%B7198
+- S37 《资治通鉴》卷4：华阳秦斩魏13万的战果记述 https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%92_(%E8%83%A1%E4%B8%89%E7%9C%81%E9%9F%B3%E6%B3%A8)/%E5%8D%B7004
