@@ -31,7 +31,7 @@ J -->|"保留历史版本并提出新问题"| H
 - [VIEW-S001｜大湾区老姚：马斯克、国会调查、赦免、CPI与现金流](2026-11-14-dayawanqu-laoyao.md)
 - [逐主张可机读登记表](claim_register.csv) — `VIEW-S001-C01` 起，包含证据关联、反例与复核时间。
 - [2026-11-14 研究会话审计](../sessions/2026-11-14-commentator-laoyao-musk-cpi.md)
-- [主研究问题 Issue #41](https://github.com/fweiger/AI_book/issues/41) · [研究草案 PR #51](https://github.com/fweiger/AI_book/pull/51)
+- [观点池维护 Issue #54](https://github.com/fweiger/AI_book/issues/54) · [主研究问题 Issue #41](https://github.com/fweiger/AI_book/issues/41) · [研究草案 PR #51](https://github.com/fweiger/AI_book/pull/51)
 
 ## 复用及后续评论者
 
