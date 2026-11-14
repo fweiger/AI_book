@@ -2,6 +2,9 @@
 
 > **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.8；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
+## 第十九轮 H02｜67项2026选前已成法、S.2分年预算与CBO预算版本衔接（2026-11-14）
+- [第十九轮完整研究：67项已成法与2027—29旧法支出](reports/2026-11-14_h02_round19_67_election_pre_laws_s2_budget_bridge.md) · [67项GovInfo逐案台账](data/h02_round19_2026_election_pre_enacted_bills.csv) · [4份BILLSTATUS官方ZIP SHA](data/h02_round19_119th_sources_sha.csv) · [P.L.119-98七条款直接支出](data/h02_round19_pl11998_secure_america_cbo_section_outlays.csv) · [11行CBO已评分/草案/未评分区分](data/h02_round19_cbo_budget_bridges_scored_vs_unscored.csv) · [FY26—29并列财政基线与旧法分年影响](data/h02_round19_fy2026_29_partial_policy_score_bridge.csv) · [Python完整复算](analysis/recompute_h02_round19_policy_bridge.py)。正式CBO 2026-06-10评分：S.2（2026-06成法）FY2026直接BA+69.545bn美元、FY2027/28/29预计直接Outlays+15.482/+17.913/+20.038bn，三年合计53.433bn。CBO 2026-02已明说P.L.119-74/75合计FY2026酌情拨款较原基线约+2bn；**非FY2027—29实际支出**。P.L.119-103短期CR的全年年化预算也不是已授权/已实现的全年金额。H01—H10因果仍UNTESTED，P-A—P-D UNKNOWN；PR #51未合并。
+
 ## 第十八轮 H02：2027—2029财政分项真实基线及付款时钟（2026-11-14）
 - [CBO 2026-02版FY2027—29财政与初级赤字完整报告](reports/2026-11-14_h02_round18_cbo_feb2026_fiscal_baseline_timing_bridge.md) · [4年财政年度宽表](data/h02_cbo_feb2026_fiscal_baseline_round18_wide.csv) · [142条官方数据分项](data/h02_cbo_feb2026_fiscal_baseline_round18_long.csv) · [两份CBO官方来源SHA](data/h02_cbo_feb2026_source_manifest_round18.csv) · [7条选前已知政策桥接](data/h02_round18_pre_election_policy_baseline_bridge.csv) · [纯Python复算](analysis/recompute_h02_cbo_feb2026_baseline_round18.py)。CBO预计FY2027/28/29赤字1887.203/2079.658/2019.715十亿美元；跨财年付款调整−123.583/+123.583十亿美元会使2028/29初级赤字占GDP变化方向与未调整值相反。**只属于2026-02选前固定预测基线，不是2026-11-02完整政策基线或2027真实财政冲量**；P.L.119-74/75在报告法律截止后签署，净FY2027—29效果目前NA。H01—H10完整因果仍UNTESTED、P-A—P-D UNKNOWN；PR #51尚未合并。
 
