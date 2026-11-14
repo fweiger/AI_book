@@ -17,6 +17,11 @@
 | W05 可干预性 | [预防与干预](modules/05-interventions/README.md) | 非药物改善与药物候选的可证伪机制、安全边界 | [P05](modules/05-interventions/projects/P05-reversibility-and-drugs.md) |
 | W06 临床可行性 | [队列设计](modules/06-clinical/README.md) | 时间先后、三高/OSA 混杂、样本交集与经费 | [P06](modules/06-clinical/projects/P06-cohort-feasibility.md) |
 
+## 2026-11-14 研究深化增量
+
+- [13 项最接近论文/创新查重矩阵](modules/01-evidence/CLOSEST_STUDIES_20261114.md)：已经明确哪些题目和院内研究重复风险较高。
+- [临床三队列与 15 项漏斗 SOP](modules/06-clinical/COHORT_AUDIT_PROTOCOL.md) · [可交付院内的数据字典](modules/06-clinical/COHORT_DATA_DICTIONARY.md)：真实患者级数据**未获取**。
+
 ## 四个共同基线文件
 - [证据梯度、已核验原始论文与尚待核实问题](EVIDENCE.md)
 - [统一临床/统计研究方法与数据口径](METHODS.md)
