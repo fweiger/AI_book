@@ -217,3 +217,15 @@ python3 reproduce_debtpt_annual_ratios_m2.py \
 | [rodrigues_1765_1766_edition_and_war_rollover_summary_m3.csv](rodrigues_1765_1766_edition_and_war_rollover_summary_m3.csv) | **11项**派生量，发布SHA256 `acc4d0a70a243f053fee0dc650e10522db6b419930d6875677f840190cab6ad3`；需以标准库脚本与当前源CSV再构建验证；含非当期现金提示 |
 
 完整分析：[1766财政军费历史旧账结转与1765地区税源表两版继承差异](../1766_MILITARY_TREASURER_ROLLOVER_2011_2019_REGIONAL_TABLE_LINEAGE_M3_20261114.md)。**最小档案获取目标**是AHTC/FGER **Livro537 fólio36和fólio274**；另一组军费账为**Livro2699 fólio10/15**。这些馆藏尚未获得原稿图像，不能声称已完成1762/1766实际现金流时间戳或资源诅咒ASCM复现。
+
+
+## M3重大来源核对：2019附录E八项Caixa借贷净额精确等于2011正文、2013独立财政结果口径不等价
+
+| 文件 | 真正获得和验证的证据及禁止推断范围 |
+|---|---|
+| [rodrigues2019_1765_annex_e_eight_caixa_balances_m3.csv](rodrigues2019_1765_annex_e_eight_caixa_balances_m3.csv) | **8条**ISCTE 2019博士附录E原发表金额/借贷方向，覆盖**Livro537 folio227/180、2699 folio138/154、3976 folio107/129、4154 folio12/80**：**借方3,875,142,979，贷方3,515,617,855；signed net=359,525,124 réis**。此净额精确复现2011硕士正文数字，非原始手稿直接审计和现金盘点 |
+| [independent_1763_1766_fiscal_timing_and_2013_cash_vs_2019_accrual_sources_m3.csv](independent_1763_1766_fiscal_timing_and_2013_cash_vs_2019_accrual_sources_m3.csv) | **7条**2011黄金相关1%机构往来款**1763起源/1766记账**、独立作者2013报告1764/65年负名义财政结果及**1766年371.4 contos国库借款入账未找到**、同年的2019损益账正收益、2013转述Tomaz1762—1776海外税源份额等；**观察类型、来源依赖不同，不可拼成同定义序列** |
+| [reproduce_1765_caixa_2019_annex_vs_2011_and_2013_cash_series_m3.py](reproduce_1765_caixa_2019_annex_vs_2011_and_2013_cash_series_m3.py) | 标准库解析/验证**8项方向和金额、2011精确359525124、2019正文约2765 contos差异、2013另一个财政结果**；可选提供官方原文PDF，通过**原文SHA256+pdftotext特征验证**，程序实际以**2011/2013/2019三份官方PDF**运行PASS |
+| [rodrigues2011_2019_montserrath2013_1765_cash_cross_source_bridge_m3.csv](rodrigues2011_2019_montserrath2013_1765_cash_cross_source_bridge_m3.csv) | **18项**计算和源状态：以前年度收入Caixa净额**176,662,534 réis**，当年Caixa净额**182,862,590**，加总359525124；2019正文约2765contos与同版附录净额差约2,405.475contos（**定义未查明**）；独立2013名义财政结果与2019损益收益差3,244.867contos（**不能当现金损失**） |
+
+完整审计：[1765年八项Caixa净额精确复原及2013独立财政/1766存款金库贷款冲突](../CAIXA_1765_EIGHT_APPENDIX_ACCOUNTS_RECONCILE_2011_AND_2013_FISCAL_CONFLICT_M3_20261114.md)。本轮实际下载学校2011/2019原文和2013期刊PDF，源哈希锁定，代码`PDF_HASH_AND_TEXT_{2011,2013,2019}_PASS`，且18项派生CSV SHA256 `817eca49033bd21f796605908ee46f5e20fcd33df79631a40119de7621c679e5`。**原版AHTC FGER账册、2013财政序列随论文的CD-ROM Excel仍未取得；不能据发表表格得出葡萄牙国家现金衰竭或黄金造成制造业挤出的因果结论。**
