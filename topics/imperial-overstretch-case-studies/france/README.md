@@ -169,3 +169,11 @@ M3**只完成条约级金融工具及事件先后核验**：实际贴现净收�
 - [Monroe目录、收款函日期与NARA证券运输差异证据CSV](louisiana_receipt_guarantee_source_leads_m3.csv)（12条）：严格区分目录摘要、机构级实施史、网站PDF文字及真正原件，**不混入此前21条实际交易候选或视作新增法国现金**。
 
 **本轮结论**：找到更直接的法国收款信件和美国外交保证原件位置，但仍无该信原文、实际到账总额及银行预付款抵扣细账。历史收款金额`NOT_ACQUIRED`、实际远征军费`NOT_ACQUIRED`、帝国因果`NOT_RUN`。Issue #35与Draft PR #39继续保持。
+
+## M3-A3：1803年费城200万法郎殖民融资与圣多明各军需汇票（2026-11-14）
+
+- [M3-A3法国财政部—Hope/Baring—费城—圣多明各信用链审计](CASE_FRA_M3A3_PHILADELPHIA_COLONIAL_CREDIT_1803_20261114.md)：新定位**纽约公共图书馆 `EM.2249`（1803-09-13，Marbois两页法语签署信）**，其馆方摘要记载为法国国库通过Hope/Baring在费城筹措**200万法郎**，并为结算圣多明各军需出纳官向驻费城Pichon开出的汇票而安排融资。**这只是筹措/出票/用途线索，承兑、兑现与法国实际现金均未核**，也不能把200万记为路易斯安那债券出售款或先前1000万预付的一部分。
+- [M3-A3信用交易、银行实体与外交结算时序审计CSV](philadelphia_1803_colonial_credit_evidence_m3.csv)（11条）：按会计主体、来源原件级别及同笔金额防重计；补入1804-03-18 Livingston签署留底信（佳士得原件目录），其1804-04-14及05-03信的二手引用、1804-04-25美国股票到巴黎记录，以及1849美财政部追溯债券登记。
+- **来源数据质量新增**：NYPL将`Francis Banquier`列为个人名字，但HSP Collection 1874记录真实商号`Willing and Francis`；是否把法语`banquiers`误释成人名，只有取得NYPL两页原件才可以最终确认。NYPL有公开影像入口，但本轮尚未逐字核对原手稿。
+
+**状态**：`ORIGINAL_ARCHIVE_DESCRIPTION_VERIFIED`，实际200万资金交割`NOT_ACQUIRED`；法国公库最终净收入`NOT_ACQUIRED`；殖民军费支出`NOT_ACQUIRED`；历史因果`NOT_RUN`。复用原 Issue #35、Draft PR #39。
