@@ -108,3 +108,8 @@
 - **H09会议纪要原件已得到，不再列缺失**：[2026-04-07两项正式表决](reports/2026-11-14_h09_official_minutes_primary_confirmation.md)和[带SHA的表](cases/musk-2026/travis_official_votes_20260407.csv)已有：Item26 4-0/1弃权扣留2020–22合格grant 9%；Item6同票数批准2025/26社区投入方案，工作人员说明社区投入义务约2025 $2m和2026 $3.2m。**该义务不是政府付给Tesla的钱**。
 - **H09真正缺口改为金钱链**：追踪2020—22各年度Travis County grant eligibility、税款实际缴付、核发和到账明细、9%被扣留的**绝对USD**、最终县法官签署文件；区分`withheld-before-payment`与`recapture-after-disbursement`。没有实际现金对账之前H09现金流边仍UNTESTED。
 - **H10完整连续PCE已取得**：BEA官方月度headline/core共33行[CSV](data/h10_bea_nipa_pce_headline_core_2024_2026_snapshot.csv)，[报告](reports/2026-11-14_h10_bea_pce_monthly_series_and_vintage.md)、[复算PASS](analysis/recompute_h10_bea_snapshot.py)；**下一步不是重复抓当前版指数**，而是找2025—26月份的首次发布存档、专业一致预期时间戳和Fed基金期货真实预期价格，才可以量化公告surprise与2年期利率变化。旧PCE8月首次0.2%和后修0.3%的冲突必须保留PIT版本。
+
+
+## H10已得CPI/PCE描述性对照：下一步应转向真实PIT与期货市场
+- [18个月有效同月样本](reports/2026-11-14_h10_cpi_pce_alignment_18_month_sample.md)已完成：整体CPI/PCE月环比r=0.946129、核心r=0.553099（严格不填补2025-01/10/11的CPI缺值），[CSV](data/h10_cpi_pce_aligned_monthly_2025_2026.csv)与[复算PASS](analysis/recompute_h10_cpi_pce_alignment.py)。该结果仅说明当前回顾版的同步程度，不是美联储行为回测。
+- **下一轮关键数据不是更多同类新闻**，而是从BLS、BEA存档取得每月真实首发数据及公告前专业共识，匹配对应FOMC当时可用的每个通胀版本和Fed基金期货；比较“首次发布CPI vs PCE的差异”是否在正式政策预测中具有信息增量。没有这些不得把相关0.946说成预测正确率94.6%。
