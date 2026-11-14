@@ -1,0 +1,3 @@
+"event_id","decision_date","policy_effective_date","target_lower_pct","target_upper_pct","target_mid_pct","target_change_bp","vote_for","vote_against","source_url","status","prior_release_known_limits"
+"FOMC-20260916","2026-09-16","2026-09-17","3.75","4.00","3.875","25","12","0","https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm","OFFICIAL_DECISION","Aug2026 PCE Sep30 release and Sep2026 PCE Oct29 release are future at decision time"
+"FOMC-20261028","2026-10-28","2026-10-28","3.75","4.00","3.875","0","10","2","https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf","OFFICIAL_DECISION","Sep PCE Oct29 and Oct CPI Nov10 future relative to Oct28 decision; 2 dissenters favored +25bp not committee decision"
