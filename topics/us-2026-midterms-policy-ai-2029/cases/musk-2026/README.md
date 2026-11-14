@@ -70,3 +70,8 @@
 ## 2025-11报道尚无实际县返利发放（v0.2.5，R来源）
 - [Statesman 2025-11与KUT 2025-11-26对县政府履约审查的报道](travis_rebate_disbursement_status_asof_2025.csv)记录**截至2025-11尚未向Tesla发放此项Travis County grant**；原报道与转述同源不能重复计为两笔独立县付款审计。[历史时点分析](../../reports/2026-11-14_h09_no_rebates_reported_2025_cash_status.md)。
 - 正式[县2026-04-07 9%扣留](travis_official_votes_20260407.csv)在之后发生，但2025-11→2026-11之间的实际`paid/withheld/recaptured USD`仍待County Auditor/PBO原始账；不能用2020签约时十年预测约$14m替代。官方VPR/VPD只反映部分已付款明细，查询页面无法访问不代表零支付。
+
+
+## 2022年县级正式Zero rebates paid与履约审核尚未完成（v0.2.6）
+- [Travis County官方2022-01-31经济发展协议汇总](https://www.traviscountytx.gov/images/planning_budget/Docs/Summary_of_Economic_Development_Agreements_1-31-22.pdf)明确Colorado River Project (Tesla)当时**零返利支付、首绩效年度核验待完成**，是F类官方历史状态；其它县合作项目也曾零返利，需对比合同开始时间与审批年，不推断Tesla独有政策待遇。 [三时点现金状态CSV](travis_rebate_disbursement_status_asof_2025.csv)现有2022 F、2025-11 R及2026-04 F项26表决记录。[独立审计](../../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)。
+- **2026实际付款或追回USD仍UNKNOWN**，不能拿2022的零付款和2025新闻推断2026也未支付。需Travis Auditor/PBO 2020—26已核准/实付/扣留/追回原始账核实。
