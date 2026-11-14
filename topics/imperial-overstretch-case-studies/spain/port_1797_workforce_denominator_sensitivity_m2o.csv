@@ -1,0 +1,11 @@
+calc_id,scenario,peones_count,peon_percent_of_total,implied_total_workers,unit,source_id,grade,warning
+M2O-C01,202 peones / staff share 44.5pct,202,44.5,453.9325842696629,people,ESP-M2O-S01,HYPOTHETICAL_CALCULATION,"This uses stated or assumed published percentage; only middle is central approx, not historic audited headcount"
+M2O-C02,202 peones / staff share 45pct,202,45,448.88888888888886,people,ESP-M2O-S01,HYPOTHETICAL_CALCULATION,"This uses stated or assumed published percentage; only middle is central approx, not historic audited headcount"
+M2O-C03,202 peones / staff share 45.5pct,202,45.5,443.9560439560439,people,ESP-M2O-S01,HYPOTHETICAL_CALCULATION,"This uses stated or assumed published percentage; only middle is central approx, not historic audited headcount"
+M2O-C04,nearest_integer_percent_rounding_assumption_total_min,202,,444,people,ESP-M2O-S01,DERIVED_ASSUMPTION,"If 45 percent rounded to nearest integer pct: min integer N=444, NOT independently verified"
+M2O-C05,nearest_integer_percent_rounding_assumption_total_max,202,,453,people,ESP-M2O-S01,DERIVED_ASSUMPTION,"If 45 percent rounded to nearest integer pct: max integer N=453, NOT independently verified"
+M2O-C06,known_four_trades_people,280,,280,people,ESP-M2O-S01;ESP-M2O-S02,DERIVED_CATEGORY_SUM,78 amasadores plus 202 peones only; not entire works staff
+M2O-C07,known_305_occupations_if_disjoint,305,,305,people,ESP-M2O-S02,DERIVED_ENUMERATED_GROUPS,"280 +23 skilled masons +2 senior; categories appear distinct, no timestamp proof they all worked same day"
+M2O-C08,conditional_single_day_280_wages,280,,1297.5,nominal reales,ESP-M2O-S02,DERIVED_IF_ALL_WORK,Not actual historical wage debt or completed daily payment
+M2O-C09,conditional_single_day_202_peon_wages,202,,907.5,nominal reales,ESP-M2O-S01,DERIVED_IF_ALL_WORK,Not entire workforce or actual paid cash
+M2O-C10,conditional_280_minus_202_daily_rate,78,,390,nominal reales,ESP-M2O-S02,DERIVED_IF_ALL_WORK,"Increment from amasadores, not actual extra paid money"
