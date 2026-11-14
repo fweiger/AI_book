@@ -41,3 +41,16 @@ python3 reproduce_gdp_from_author_xlsx.py --source /path/to/palmareis_JEH_2019.x
 脚本默认校验作者工作簿SHA-256并验证全部年度日期范围、GDP和CPI恒等式，然后输出本目录的五份CSV及来源清单。只有检查不同版本时，才可显式使用 --allow-new-version，结果必须另外存放，不能混入已审核版本。
 
 研究状态：M2作者原始工作簿取得PASS；数据一致性PASS；跨论文1700年差异OPEN；2025年ASCM因果复现NOT_RUN；完整年度财政/军费/债息NOT_ACQUIRED。下一项工作是取得ICPSR 209481的完整实际运行输入，验证其1700年取值和1694干预点，再重跑模型：https://doi.org/10.3886/E209481V1。
+
+
+## 2025年黄金论文官方附录：新增M2数据（2026-11-14）
+
+来源：Kedrosky & Palma（2025）Cambridge University Press官方35页附件 [S0022050725100764sup001.pdf](https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Aarticle%3AS0022050725100764/resource/name/S0022050725100764sup001.pdf)，**1,110,168 bytes，SHA-256=6209adcdc8628d8be011e74838f6e156987bebd4b684f083691dce007b115aac**。本目录只提交转录的数据表与原创核验说明，不镜像官方PDF。正式核查报告在 [上一层目录](../OFFICIAL_SUPPLEMENT_GOLD_FLOW_ASCM_WEIGHTS_M2_20261114.md)。
+
+| 新增文件 | 表格及边界 |
+|---|---|
+| [gold_remittances_fiveyear_b1_1720_1804_m2.csv](gold_remittances_fiveyear_b1_1720_1804_m2.csv) | 附录PDF第31页B.1；1720–1804 17个五年段，私人/公共×名义/不变1720年réis金额及公共比重；**绝非国库净现金流或每年总产金量** |
+| [ascm_donor_weights_b3_b4_m2.csv](ascm_donor_weights_b3_b4_m2.csv) | 第33页B.3/B.4；6国基准与4国剔除西荷方案×CPI/GDP/人均GDP共10行。负权重合法，归一求和测试PASS；**不是重跑回归得到的权重** |
+| [commodity_price_coverage_b5_m2.csv](commodity_price_coverage_b5_m2.csv) | 第33页B.5；11种商品×4个年份段的作者公布覆盖率。1701–1800年Soap=62、Candle=88、Linen=91；价格插值敏感性仍NOT_RUN |
+
+B.1名义数总计私人211,080、公共59,965、合计271,045，单位均百万réis；公共占比22.1236%。B.3/B.4各指标权重的绝对归一误差不超过2e−9。**作者官方附录已取得**，但ICPSR 209481可执行完整复现包仍**NOT_ACQUIRED**；不会以官方表格归一测试代替论文ASCM因果检验。
