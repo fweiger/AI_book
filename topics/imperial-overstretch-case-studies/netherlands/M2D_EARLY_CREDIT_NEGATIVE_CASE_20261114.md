@@ -52,3 +52,10 @@ More consequential conceptual difference: printed p50 states commission-based re
 ## QA / next action
 Six chamber rows, seven independently classified finance facts and six archive locator rows; source IDs and URLs registered. Recomputed chamber sum 5,705,574 vs printed 5,705,573 (residual +1). Author estimate 5,705,573 - 6×85,000=5,195,573, not cash flow. Internal debt not summed into company debt. This is a working-paper numeric transcription, NOT independent primary-ledger replication or independent peer review.
 Next sole priority: acquire a readable Van Ghesel original inventory 15 or 1872 Kroniek pp40-41 for 1640-1700 equipage reconciliation, and actual NA VOC 1.04.02 inventories 4596/4597 or de Korte financial appendix 14 for 1780-84 company debt and debt-maturity structure.
+
+## Explicit validation statuses
+- CSV shape/source foreign keys/recomputed turnover arithmetic: `PASS` (mechanical; does not verify archives independently).
+- Original archival account pages `1.04.02/11046`, `1.04.02/11349` and Van Ghesel `1.10.31/15`, `/17`, `/19`: `NOT_ACQUIRED`.
+- Source conflict (1640–1700 equipage 370m vs 465.7m): `OPEN`.
+- Government commitment vs actual payment reconciliation: `NOT_RUN`.
+- 1780–84 VOC original annual debt reconstruction, statistical causal testing and external historian review: `NOT_RUN`.
