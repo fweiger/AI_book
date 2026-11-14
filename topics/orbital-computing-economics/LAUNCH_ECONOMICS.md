@@ -55,3 +55,15 @@ C_per_delivered_kg = C_delivery / M_operational_in_target_orbit
 
 ## 7. 第一轮待执行的复算任务
 补齐 `model-inputs` 的参数注册表；对每个输入记录来源、情景年份、轨道、任务架构和可信区间。求 `Break_even_launch_USD_per_kg` 并在GPU寿命/故障率/散热质量多参数变化下绘图；复算完成前结论为 `NOT_RUN`。
+
+## 8. 2026-11-14 增补：星舰Flight 15 事实核查与发射经济学更新
+
+本模块新增 [完整审查](FLIGHT15_COST_FACTCHECK_20261114.md)，已从Ubuntu MCP读取「未来学研究局」的转写全文，并与 SpaceX官方任务资料、SpaceX在美SEC披露、独立报道交叉核验：
+
+- 本次26颗V3卫星部署属实（约2t/颗为公开报道约值），按视频假设$130M/52t = **$2500/kg**；`$130M`未有可核单飞财务披露。
+- 60颗×2t=120t 是未来满载假设，`$130M/120t≈$1083/kg`只是条件算术，不等于Flight 15本次实际成本。
+- 完全回收若单飞$20–30M、有效100t，得到`$200–300/kg`。若未来200t，得到`$100–150/kg`。
+- 长期`$40–85/kg`**不能由上述$20–30M与100–200t自然推出**；若100t对应 $4–8.5M/发，若200t对应$8–17M/发，须另外论证。
+- SpaceX披露 Starship V3约100t及V4潜在200t是预期运力、不是第15飞验证值。回收一次不代表可稳定高频复飞。
+
+**模块边界调整**：发射运输只归入 `A_total`，在轨制造/光伏/散热/GPU/通信/维护/折旧归入 `B_total`，参见 [ORBITAL_BUILD_OPERATIONS.md](ORBITAL_BUILD_OPERATIONS.md)。两模块共同决定 `$/effective_GPU-hour`。
