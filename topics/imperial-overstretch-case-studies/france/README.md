@@ -91,3 +91,9 @@
 - [跨洋汇票与税收到账证据要求CSV](cross_atlantic_bill_audit_requirements_m2.csv)：6项资金流节点与严禁重复计数规则。
 
 **阶段状态**：官方目录确认原账存在，不代表G¹原始账本已阅读；1788王室Domaine d’Occident实收现金 `NOT_ACQUIRED`、汇票最终清偿 `NOT_ACQUIRED`。历史统计净利润与因果验证 `NOT_RUN`。上轮1790扫描的7苏等转录差异仍未关闭。
+
+## M2档案新线索：1781年Necker—Calonne殖民税争论与实物收据（2026-11-14）
+
+- [1781年殖民税预算、据称实际税额和王室实收的争议说明](CASE_FRA_M2_METROPOLITAN_ARCHIVE_ROUTE_20261114.md#六1781年-domaine-doccident和平时期预计据称实际账户应税产出的同期争论)：1787年Calonne称其1781实际账单独项目为零；1781Necker正常预算410万；1788Necker答辩称1781该税产出368.7万。**三者是争议中的不同口径，均非本轮已核实的王室实收现金。**
+- [1781年Necker—Calonne会计争论CSV](necker_calonne_domaine_1781_accounting_dispute_m2.csv)：5条记录，明确区分和平预算、政治争论、后世校刊及一手凭证目录；41.3万差额只做算术，不称实际收税缺口。
+- [补充原始收据档号](metropolitan_fiscal_archives_m2.csv)：法国财政档案`SAEF 0Fi-0000253/75`，1781-02-08波尔多“domaine d'Occident”收据，**目录已找到、金额及原件未取得**。

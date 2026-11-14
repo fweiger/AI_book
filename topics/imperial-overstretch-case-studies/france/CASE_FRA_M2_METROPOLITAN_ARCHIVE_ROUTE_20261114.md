@@ -63,3 +63,25 @@ Juliette Françoise, “Monnaie, dette publique et comptabilité : Les circuits 
 - 海地革命及受奴役者反抗仍是独立政治机制，不能由税收链单因替代解释。
 
 **下一项唯一工作：** 从国家档案馆取得 **G¹ 46*** 1788账页及 **G¹ 44*** 同年对手账，定位 `Domaine d’Occident` 收付、期末欠款与流向；如资料不开放则按档号向档案馆申请扫描/阅览，再联系Marbois 1790原报告核查1788地方税汇票。原件未取得记为 `NOT_ACQUIRED`，而非虚构数值。
+
+## 六、1781年 Domaine d'Occident「和平时期预计/据称实际账户/应税产出」的同期争论
+
+**新增最强反证、不能因数值反差而推定真实财政现金流：** 在1787年3月2日法国显贵会议上，Calonne拿出其所谓1781年`compte effectif`与Necker1781年公开`compte rendu`对照，称**Domaine d'Occident**在Necker的正常年度预算中为**4,100,000 livres**，但在Calonne的「实际账」该单独项目列为**0**；这是Calonne的政策辩论陈述，**不是本研究已取得的法王实收现金账**。
+
+Pierre Renouvin (1920), *L'Assemblée de notables de 1787, la conférence du 2 mars*, 文献印刷第**64–65页**，以当时会议记录的校刊文本记录上述说法，并于p.65注释查考Calonne1788年1月《Réponse à M. Necker》（第55页起）和Necker1788年8月《Nouveaux éclaircissements》。同注又记，Necker1788年反驳时称**该税1781年曾产出3,687,000 livres**，并反驳以「实际账」机械比较其本意为展示正常年度资源的1781年预算。上述三项不是三组同定义税收现金。
+
+**确切来源与检验等级：**
+- Necker 1781 原本和平时期预算410万：https://fr.wikisource.org/wiki/Compte_rendu_au_roi_par_M._Necker_ed._1781/%C3%89tat_raisonn%C3%A9_des_recettes_port%C3%A9es_au_Tr%C3%A9sor_royal ，`PRIMARY_PUBLISHED_TEXT_READ`；
+- Calonne 1787同期争论及Necker1788答辩由Renouvin1920按历史会议材料校刊、脚注引述：https://upload.wikimedia.org/wikipedia/commons/7/73/L%27Assemblee_de_notables_de_1787%2C_la_conference_du_2_mars%3B_%28IA_lassembleedenota00fran%29.pdf ，印刷pp.64–65；`HISTORICAL_EDITOR_TRANSCRIPTION_READ / ORIGINAL_1788_CALONNE_NECKER_PAGE_NOT_READ`。PDF网页文本可检索，PDF截图未成功；
+- Calonne原始1788答辩可寻：https://upload.wikimedia.org/wikipedia/commons/c/c5/John_Adams_Library_%28IA_rponsedemdecal00calo%29.pdf ，`PRIMARY_BOOK_LOCATED_NOT_VISUALLY_READ`；
+- Necker原始1788答辩目录：https://books.google.com/books/about/Sur_le_compte_rendu_au_Roi_en_1781_Nouve.html?id=iwBTxfuxGmEC ，`PRIMARY_BOOK_CATALOG_ONLY`。
+
+**方法严格限制：** 410万与368.7万的差额为 **41.3万 livres（形式算术）**，但`budget_peacetime_estimate`与`claimed_tax_product`定义并不相同；**禁止**把41.3万写成已验证的财政税收缺口/收缴损失。Calonne所谓零也只是在其列示的1781年某个实际账户项目中为零，**禁止解释为1781年法国没有征收任何殖民税**，更不能等同1788年巴黎国库的Domaine d'Occident实收。
+
+### 1781年税收实物凭证入口
+
+法国经济与财政部所属 `Service des archives économiques et financières` 在2025年《Collection Dewamin》(1608–1942)官方清单记有 **`0Fi-0000253/75`**：1781年**2月8日**波尔多 Hôtel des Fermes 的 `Reçu de changeur`，文书题中含 **“domaine d’Occident”** 与 **“La Nouvelle Concorde”**。原始馆藏目录来源：https://www.economie.gouv.fr/files/files/directions_services/saef/docs_joints/guide_des_sources/FRSAEF_2241_IR_MDP_Collection%20Dewamin_0Fi-0000239_0Fi-0000256.pdf（PDF内部第101/126页）。
+
+这证明**国家财政档案馆收录了一张具体日期、地点及税种标识的历史收据**，**不证明该张票据的金额、纳税人、实际清偿或王室最终收到现金**；因相关金额未见目录，登记`amount=NOT_ACQUIRED`。它是调查Calonne、Necker口径争议和港口实际税收链的一手凭证候选，尚待查看单据原件。
+
+**1781财政治理争议的核心：** 同一税项可能分别出现在(1)正常预算中、(2)包税机关实际征收中、(3)国库当年实际过账中，而战时税款发生、征收、结算和国库到账可处于不同时点。只有逐账户找到同一交易的对手分录才能判断是否存在流动性缺口或制度性损失。详见 [1781年争论数据CSV](necker_calonne_domaine_1781_accounting_dispute_m2.csv)。
