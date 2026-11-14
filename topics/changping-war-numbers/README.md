@@ -39,3 +39,15 @@
 - [三份可复算情景表](models/population_scenarios.csv)：另见[粮草](models/logistics_scenarios.csv)、[作战/辅助人数构成](models/composition_scenarios.csv)。**全部是假定参数，不是战国史实数据**。
 
 **第二轮核心发现**：不能拿从古籍军额推算的人口，反过来独立证明同一古籍兵额；对于40万“卒”，学界存在支持其可能包含附属人员的对立解释。研究状态仍为`NOT_CONCLUDED`，未合并PR仅为待审成果。
+
+## 第三轮：战线下限模型、秦简口粮与遗骸保存过程（2026-11-15）
+
+**最重要学界增量**： [李冀、侯甬坚2023战线—最低兵力](research/2026-11-15-round3-frontage-model-audit.md)为传统大兵力观点提供了可核公式`At>2.72E`；该**单侧下限**不能独立证明40万精确数字。作者原刊全文及20战例数据表仍待获取。
+
+**实物+简牍更可靠的后勤参照**：[秦简日粮2/3斗与前344年商鞅方升202.15ml](research/2026-11-15-round3-qin-grain-ration.md)，计算[人员日粮容量CSV](models/qin-grain-volume-scenarios.csv)；与原[质量口粮情景](models/logistics_scenarios.csv)并列，不能假设粮食密度/年代一致。
+
+**考古新增线索**：[2020南王庄疑似厚0.6m、长20m骨层](research/2026-11-15-round3-site-taphonomy.md)、地方旧记的宋金明多次收骸再埋葬，提示样本缺失与遗存迁移风险；[埋葬与处理速度CSV](models/burial-processing-scenarios.csv)是反事实容量情景，不是人口测量。
+
+**组织能力新增线索**：[秦昭襄王武库与县郡粮食管理](research/2026-11-15-round3-qin-arsenal-constraint.md)显示确有组织网络，但不提供当年可装备兵力上界。
+
+[战线长度下限CSV](models/frontage_lower_bound.csv)示范10/20/40km时多种兵额都满足下限。专题保留相反假说，所有结论仍待审、PR未合并。
