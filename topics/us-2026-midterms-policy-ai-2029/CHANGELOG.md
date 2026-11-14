@@ -1,4 +1,9 @@
 # TOPIC-011｜版本记录
+## 2026-11-14 | topic_version 0.2.3 — Texas381金额空白与CPI发布日22事件稳健性反证
+- Ubuntu实际从Texas Comptroller官方`ch380.csv`（3,969,329 bytes，SHA`490d64...`）提取唯一Travis County×Colorado River Project LLC协议0005328，协议上总货币金额/资金来源列**空白非0**、状态Active的原数据最近更新2022-05、州结束日2041-12-30与县签署原件2041-12-31冲突。新一行审计CSV、2020—22逐年eligible/approved/paid/withheld/recaptured美元NA账本和专门报告；县实际现金仍缺，2020签约十年优惠约$14m估算不参与9%实际扣留计算。
+- 官方BLS 2025—26已发布CPI事件22次与Treasury已存467日数据对齐，公告日n22、非公告n444；2Y平均绝对变动5.2727bp vs其他交易日3.8806bp，同月20,000次随机安慰剂3.9813bp、探索性p0.0483。**剔2026-11-10 +17bp异常日后p0.1389、2025/2026分年p均>0.05**，10Y全样本p0.208。初步线索不稳健且无公告前consensus/期货/分钟报价，H10整体因果不成立；已上传真实22事件CSV和纯Python可复算脚本及严格局限报告。
+- 新增`H10_CPI_RELEASE_2Y_ABS_BP`和`H10_CPI_RELEASE_10Y_ABS_BP`两项共享指标定义、对应VIEW×H引用；事件源另存E091–E092。所有H01—H10状态未改变（UNTESTED），无正式因果C-ID；本轮仅来源与计算证据PATCH，不预设预测命中。
+
 
 ## 2026-11-14｜H03第十二轮：原B9源缺口明确为数据资格问题
 - 原始2026Jan14 PJM报告PDF有36页，CreationDate 1/12，已校验官方SHA，未找到B9完整数字表；报告明确数字表另置Excel。独立Jan B9b不是B9，2/6更正前B9字节仍缺；Wayback超时与10月其他研究的更正后SHA均不能证明早期档案不存在。
