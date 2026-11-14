@@ -165,3 +165,8 @@
 ## H09县级正式2022无付款基线和H10真实10次事前CPI（v0.2.6）
 - **H09已经证实县历史2022无grant付款/首履约年核验待完成**：[官方县项目汇总报告](reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)，KUT 2025-11也记当时未支付；2026-04正式批准9%扣留三个2020–22履约年的eligible grant。**真正缺的是2025-11后2026各法人与年份实际县Auditor/PBO金钱账**。需按Performance Year、Payment Year、Grant Approval、ACH Number、Paid、Withheld、Recaptured取一手记录；未取得不填0、2022历史状态不延伸至2026。
 - **H10真正事前预测×市场方向小样本已完成**：[10个有来源日期的CPI事件和完整报告](reports/2026-11-14_h10_pre_release_forecasts_10_pit_vs_vendor_not_pit.md)，核心7个可比较2Y方向仅6次吻合、二项双侧p0.125，且2025-03-12存在相反方向；**不可把6/7说成85.7%的真实样本外胜率**。其余46次事后供应商网页数据不能直接作为时点可知的PIT，历史预期单机构/共识也不能未经归一化直接拼样本。下一步优先系统取得**2023—26同一个事前共识源**的全部官方发稿前预测，结合BLS首次release及2024-06-12与FOMC同日的剔除检验，并取得08:29/08:35 UST/FF期货真实时间戳价格；没有微观报价则H10因果仍UNTESTED。
+
+
+## Del Valle学区独立税差与2025固定来源CPI方向反证（v0.2.7）
+1. H09**已经取得另一条真实德州税惠渠道的官方年度金额**：Del Valle ISD Ch313 #1496的2025 CDR显示2024税年毛税差$43.496m、2025报告年毛税差$42.608m；早版对同税年2024未来预测$20.643m，版本差$22.853m，**不构成新增政策或净现金**。[CDR两版14行与公式复算](cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv)、[原始报告/源日期/学区与县隔离](reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)。下一步优先取得学区Ch313每个历史税年的**实际纳税凭证、Revenue Protection补偿、Supplemental Payments最终支付**以计算实体经济净受益；同时Travis县Ch381的9%扣留实际ACH美元依旧未获，**不能用学区gross填县级missing**。两协议按项目/税年/报告版本绝对不能混合。
+2. H10 **完成了更可信的来源稳定性负对照**：[2025全部11次CPI公布，Calculated Risk同发布者仅7次有提前共识，四次空值](data/h10_cpi_consistent_publisher_2025_pre_release_cohort.csv)。核心非零surprise仅4例、2Y同向**2/4**，headline非零5例、2Y同向**2/5**，双侧Exact p均1；此前10个跨源挑选日期的core6/7不能作稳定胜率。研究需系统寻找**同一专业共识渠道的2023—26首次公开历史版本**且确实存于BLS发布时间之前，亦需Treasury/FF期货08:29/08:35交易数据与Fed同日讲话控制；缺这些不能做市场因果或策略。
