@@ -1,0 +1,8 @@
+record_id,year,occupation,workers_count,nominal_daily_rate_reales,conditional_all_work_1_day_nominal_reales_derived,source_id,source_print_pages,verification_level,scope_boundary
+ESP-M2M-W01,1797,unskilled_peon_5_reales,18,5,90,ESP-M2M-S03,2016 p217 citing Franch2007 pp192-194,PUBLISHED_TEXT_INDEXED_ORIGINAL_1797_PAYROLL_NOT_READ,No actual common workday proven; nominal per diem hypothetical
+ESP-M2M-W02,1797,unskilled_peon_4_5_reales,163,4.5,733.5,ESP-M2M-S03,2016 p217 citing Franch2007 pp192-194,PUBLISHED_TEXT_INDEXED_ORIGINAL_1797_PAYROLL_NOT_READ,Cannot assert 163 simultaneously worked entire day or were actually paid
+ESP-M2M-W03,1797,unskilled_peon_4_reales,21,4,84,ESP-M2M-S03,2016 p217 citing Franch2007 pp192-194,PUBLISHED_TEXT_INDEXED_ORIGINAL_1797_PAYROLL_NOT_READ,No actual 1797 wage debt balance
+ESP-M2M-W04,1797,reported_peon_group_total,202,,907.5,ESP-M2M-S03,2016 p217,DERIVED_AND_SOURCE_HISTORIAN_SUM,"202 workers are ca 45 percent of all port staff; total staff ~449 is only rounded implied proxy, not audited count"
+ESP-M2M-W05,1797,reported_peon_share_all_workers_pct,45,,,ESP-M2M-S03,2016 p217,PUBLISHED_TEXT_INDEXED_ROUNDED_SHARE,45 pct rounded; no integer exact total workforce can be calculated from it
+ESP-M2M-W06,1797,peon_group_weighted_avg_daily_reales_derived,202,4.4925742574,,ESP-M2M-S03,2016 p217,DERIVED_CONDITIONAL_WAGE_RATE,"907.5 over 202, weighted nominal rate only; not total site payroll"
+ESP-M2M-W07,1797,qualified_masons_reported,23,7.7,177.1,ESP-M2M-S03,2016 text pp217-218,PUBLISHED_REPORTED_APPROX_MEAN_DERIVED_APPROX_TOTAL,"Author says 23 skilled masons avg7.7 with range7–8.5, multiply average is estimated not exact payroll; not add to source audited totals"
