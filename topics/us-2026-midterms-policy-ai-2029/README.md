@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.3；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.4；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -33,6 +33,10 @@
 ## H09州级协议与H10 22次CPI事件（v0.2.3）
 - [H09 Texas Comptroller官方381协议登记与金额缺失审计](reports/2026-11-14_h09_texas_381_registry_missing_cash_audit.md)：确认协议0005328唯一匹配Colorado River Project LLC/Travis County，但州数据库`totl_agmt_am`是**NA不是$0**、last_update停于2022-05、州截止日2041-12-30与县原签合同12-31不一致；2026-04决议9%金额尚未核算，不能用2020签约时估算10年优惠$14m来乘9%。
 - [H10 BLS 22个CPI发布日对US Treasury 2Y/10Y波动及强反例](reports/2026-11-14_h10_cpi_release_ust_22_event_robustness.md)：2Y发布日绝对变化5.2727bp vs同月随机日3.9813bp，探索性未校正p=0.0483；**排除2026-11-10后p=0.1389**、分年不达0.05，说明初步统计不稳健，不能直接宣称CPI因果/交易策略。附[22事件CSV](data/h10_cpi_release_treasury_2y10y_2025_2026.csv)与[离线复算程序](analysis/recompute_h10_cpi_release_ust_events.py)。
+
+## 四年46次CPI事件研究与县拨款支付年度拆解（v0.2.4）
+- **H09**：[2020—22履约年→2022—24有条件付款年度的合同审计](reports/2026-11-14_h09_grant_payment_year_lag_contract_audit.md)：正常时间表与实际现金分开，不把withhold扣留当成已付后recapture。另实读[2026-04-07县议会103MB/255页官方Agenda Packet](reports/2026-11-14_h09_agenda_packet_255pages_no_grant_figures.md)，页15(Item6)与页253(Item26)明确附件None/财政栏空白，未有真实eligible grant/ACH美元；[原始文件SHA与两项审计CSV](cases/musk-2026/travis_20260407_agenda_packet_documents.csv)。不能把缺失当0或2020签约多年度估算当实付。
+- **H10**：[2023—2026共46次CPI发布日、967个Treasury真实交易日的历史扩样](reports/2026-11-14_h10_cpi_release_ust_46event_historical_robustness.md)：2023—24 2Y当日绝对波动8.875bp vs同月安慰剂5.485bp，2025—26仅5.273 vs3.978bp；四年46次有符号2Y变化21涨22跌3不变。完整20,000次随机化、异常日剔除及分期结果[可复算PASS](analysis/recompute_h10_cpi_release_treasury_2023_26.py)；**因果仍UNTESTED**，这不是加息概率预测或策略收益。
 
 ## 11个可直接接手的AI任务
 | 工作ID | 核心研究 | Issue |
