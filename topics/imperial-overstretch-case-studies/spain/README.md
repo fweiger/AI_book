@@ -214,3 +214,17 @@
 - **仍未获得**：1795原始银行/港务借款契约、1862支付表原页、银行1807 Real Hacienda原始总账、英国数据服务g104spd3；未运行银行信贷/王室债息挤占海军经费因果模型。
 
 **唯一下一步**：向实际保管1887 **Consejo de Estado** 诉讼案卷（Banco de España v Hacienda）或瓦伦西亚 **Gobierno Civil历史基金** 的档案机构定位1862卷内1795-10-22契约誊本及1862财政师支付证明的**原始签号与获许可影像**，以原合同区分税收抵押、实际 Val­es 现金价值及300雷亚尔刊印差异；Issue #32继续Open、PR #36仍Draft。
+
+
+---
+
+## M2l: confirmed current archive custody route for 1887 Banco loan case (2026-11-14)
+
+- [M2l original-document custodian and access report](M2L_1887_COUNCIL_ARCHIVE_CUSTODIAN_AND_1795_DEED_REQUEST_20261114.md), [8 official/referenced archival sources](source_registry_m2l.csv), [7 prioritized historical loan casefile document requests](port_1795_casefile_acquisition_matrix_m2l.csv), [research session](sessions/2026-11-14-spain-m2l-consejo-custodian.md), and revised [UNSENT Spanish library/archive request](ARCHIVAL_REQUEST_ES_M2E_20261114.md).
+- Official [Consejo de Estado archive](https://www.consejo-estado.es/actividad/archivo-y-biblioteca/) says historic fonds includes around 130,000 cases from1833 to1939 and institution documents generated since1850. This makes **Consejo's own archive** the first logical custodian for the 1887-10-24 Banco de España versus Hacienda lawsuit, but **NO SPECIFIC EXPEDIENTE ID OR SURVIVING ANNEX VERIFIED**.
+- The Consejo's [Memoria 2023 printed page84](https://www.consejo-estado.es/wp-content/uploads/2024/07/Memoria-2023.pdf) official text describes researcher inquiries answered remotely, with pre1987 opinion file searches requiring manual catalogs; PDF text read but screenshot attempt403. Specific verified scholarly archive contact **archivo.biblioteca@consejo-estado.es**, +34 915166356/357. **No message actually sent**.
+- [Valencia Provincial Archivo Gobierno Civil](https://archivo.dival.es/es/fondo-documental/fondo-gobierno-civil) official live HTML verifies fondo **ES.462508.ADPV/Gobierno Civil (1739–1958)** and **GC:c.1 (1739–1924)** references to Banco San Carlos shares. Verified contact **archivo.general@dival.es**, +34 963882587; **no original 1795 deed or 1839 ledger item number established**.
+- Precisely request the **1887 court case item ID**, its evidence index, **1795-10-22 notarized loan ratification testimonio** (in 1862 bank petition), **1862-11-13 Valencia public accountant individual repayments certificate**, 1836 Junta archival transfer inventory and 1839 local loan settlement book. Biblioteca Valenciana 1794 original ten-page port tax instruction **XVIII/4279(28)** remains CATALOG_ONLY; Cervantes reprints its bibliographic record, not a second original content read.
+- **Financial conclusions unchanged**: 1884 contract total and components off300 reales, 1887 printed total suspicious, 1797–1836 bank receipts13,703,208 nominal reales cannot equal verified profits, actual original 1795 contract and Banco1807 subledger NOT_ACQUIRED, interest/credit/Navy crowdout causality NOT_RUN.
+
+**Single next action:** obtain authorized local librarian retrieval of **1887 Banco-Hacienda litigation case signatura and the archival annex inventory**, via the officially verified Consejo archival address; upon failure/transfer, fall back to Valencia Gobierno Civil holdings. Issue #32 OPEN, PR #36 DRAFT; no merge or external inquiry performed by assistant.
