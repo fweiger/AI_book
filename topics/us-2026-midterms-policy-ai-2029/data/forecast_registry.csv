@@ -1,0 +1,1 @@
+forecast_id,hypothesis_id,issued_at,PIT_cutoff,target_date,metric,direction,threshold,unit,baseline_source,evaluation_source,evaluation_status,result

@@ -11,6 +11,8 @@
 
 | TOPIC-009 | [睡眠科学与生理机制：开放式多 AI 研究](topics/sleep-science-open-research/README.md) | M00—M10 的机制体系、权威医学/神经科学文献与跨维度研究问题 | `睡眠科学` `神经生理` `昼夜节律` `多AI协作` | 公开来源 | FRAMEWORK_READY |
 
+| TOPIC-011 | [2026中期选举至2029：美国政策—财政—AI—市场竞争性假说链](topics/us-2026-midterms-policy-ai-2029/README.md) | 多AI如何逐边验证路径、反证与迁移？ | `政治经济` `财政` `AI投资` `路径跟踪` | 公开资料/官方数据 | FRAMEWORK_READY |
+
 [查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 多 AI 博弈实验

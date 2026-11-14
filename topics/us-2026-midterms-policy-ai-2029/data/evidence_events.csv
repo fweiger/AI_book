@@ -1,0 +1,5 @@
+evidence_id,event_date,publication_date,observed_date,hypothesis_id,source_type,stance,source_family,url,claim,limits
+E001,2026-11-03,2026-11-05,2026-11-14,H01,F,CONTEXT,AP,https://www.ap.org/the-definitive-source/behind-the-news/calling-control-of-congress-in-the-2026-midterm-elections/,AP projected Democrats won control of both chambers,Not certification or seated Congress
+E002,2026-09-30,2026-11-09,2026-11-14,H02,F,CONTEXT,CBO,https://www.cbo.gov/publication/61986,FY2026 US deficit about USD 2.0tn,Fiscal year ended before election
+E003,2026-10-05,2026-10-05,2026-11-14,H03,R,CONTEXT,Goldman-via-Reuters,https://www.reuters.com/business/goldman-sees-us-data-center-growth-intact-despite-opposition-2026-10-05/,2027-end US data center capacity forecast about 90GW,Forecast capacity GW not AI capex dollars
+E004,2026-11-12,2026-11-12,2026-11-14,H04,R,COMPETING_FORECAST,Goldman-via-Reuters,https://www.investing.com/news/economy-news/ai-to-stay-dominant-force-behind-us-business-investment-in-2027-goldman-says-5020672,2027 year-end annualized AI hardware IP investment forecast about USD 1.4tn,A prediction not observed investment

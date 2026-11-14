@@ -1,0 +1,413 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.0",
+  "topic_id": "TOPIC-011",
+  "title": "2026 US midterms to 2029 Trump term end: competing policy fiscal AI economic hypotheses",
+  "source_level": "Public fact seed and untested framework",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "ROOT",
+      "type": "framework",
+      "title": "2026-2029 US political economic AI paths"
+    },
+    {
+      "id": "P",
+      "type": "layer",
+      "title": "political"
+    },
+    {
+      "id": "L",
+      "type": "layer",
+      "title": "law-policy"
+    },
+    {
+      "id": "M",
+      "type": "layer",
+      "title": "mechanisms"
+    },
+    {
+      "id": "E",
+      "type": "layer",
+      "title": "real-economy"
+    },
+    {
+      "id": "Y",
+      "type": "layer",
+      "title": "market-elections"
+    },
+    {
+      "id": "H01",
+      "type": "hypothesis",
+      "title": "制度对抗与行政阻断",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H02",
+      "type": "hypothesis",
+      "title": "财政冲量与支出重配置",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H03",
+      "type": "hypothesis",
+      "title": "AI监管、能源与数据中心许可",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H04",
+      "type": "hypothesis",
+      "title": "AI投资指引与实际CAPEX",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H05",
+      "type": "hypothesis",
+      "title": "外交、关税、国防重心迁移",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H06",
+      "type": "hypothesis",
+      "title": "2028选举激励",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H07",
+      "type": "hypothesis",
+      "title": "金融市场与宏观传导",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "H08",
+      "type": "hypothesis",
+      "title": "非政治AI周期与全球对照",
+      "status": "UNTESTED"
+    },
+    {
+      "id": "P-A",
+      "type": "path",
+      "title": "P-A",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "P-B",
+      "type": "path",
+      "title": "P-B",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "P-C",
+      "type": "path",
+      "title": "P-C",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "P-D",
+      "type": "path",
+      "title": "P-D",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "Q01",
+      "type": "research_question",
+      "title": "Question 1"
+    },
+    {
+      "id": "Q02",
+      "type": "research_question",
+      "title": "Question 2"
+    },
+    {
+      "id": "Q03",
+      "type": "research_question",
+      "title": "Question 3"
+    },
+    {
+      "id": "Q04",
+      "type": "research_question",
+      "title": "Question 4"
+    },
+    {
+      "id": "Q05",
+      "type": "research_question",
+      "title": "Question 5"
+    },
+    {
+      "id": "Q06",
+      "type": "research_question",
+      "title": "Question 6"
+    },
+    {
+      "id": "Q07",
+      "type": "research_question",
+      "title": "Question 7"
+    },
+    {
+      "id": "Q08",
+      "type": "research_question",
+      "title": "Question 8"
+    },
+    {
+      "id": "Q09",
+      "type": "research_question",
+      "title": "Question 9"
+    },
+    {
+      "id": "Q10",
+      "type": "research_question",
+      "title": "Question 10"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ROOT",
+      "target": "P",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "L",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "M",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "E",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "Y",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H01",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H02",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H03",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H04",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H05",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H06",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H07",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "H08",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "P-A",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "P-B",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "P-C",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "ROOT",
+      "target": "P-D",
+      "relation": "分类包含（非因果）"
+    },
+    {
+      "source": "H01",
+      "target": "H02",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H01",
+      "target": "H03",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H03",
+      "target": "H04",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H04",
+      "target": "H07",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H02",
+      "target": "H07",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H01",
+      "target": "H05",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H05",
+      "target": "H06",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H08",
+      "target": "H04",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H08",
+      "target": "H07",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "H06",
+      "target": "H01",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "P",
+      "target": "L",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "L",
+      "target": "M",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "M",
+      "target": "E",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "E",
+      "target": "Y",
+      "relation": "候选机制（待验证）"
+    },
+    {
+      "source": "Y",
+      "target": "P",
+      "relation": "候选反馈（待验证）"
+    },
+    {
+      "source": "Q01",
+      "target": "H01",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q02",
+      "target": "H02",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q03",
+      "target": "H03",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q04",
+      "target": "H04",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q05",
+      "target": "H05",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q06",
+      "target": "H06",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q07",
+      "target": "H07",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q08",
+      "target": "H08",
+      "relation": "研究问题对应（非因果）"
+    },
+    {
+      "source": "Q09",
+      "target": "ROOT",
+      "relation": "扩展问题（非因果）"
+    },
+    {
+      "source": "Q10",
+      "target": "ROOT",
+      "relation": "数据质量问题（非因果）"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "R01",
+      "name": "fiscal",
+      "nodes": [
+        "ROOT",
+        "H01",
+        "H02",
+        "H07"
+      ]
+    },
+    {
+      "id": "R02",
+      "name": "AI policy",
+      "nodes": [
+        "H01",
+        "H03",
+        "H04",
+        "H07"
+      ]
+    },
+    {
+      "id": "R03",
+      "name": "alternative",
+      "nodes": [
+        "H08",
+        "H04",
+        "H07"
+      ]
+    }
+  ],
+  "claim_index": "claims.md",
+  "constraints": [
+    "hypotheses are not verified causality",
+    "PIT and source independence mandatory",
+    "paths may coexist",
+    "no C-ID validated yet"
+  ]
+}
