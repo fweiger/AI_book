@@ -5,6 +5,14 @@ on:
     # Every day 09:30 Asia/Shanghai (UTC+8); schedules may be delayed by GitHub.
     - cron: '30 1 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/index-audit.yml'
+      - 'scripts/audit_topic_index.py'
+      - 'scripts/tests/test_audit_topic_index.py'
+      - 'docs/index-audit.md'
+      - 'INDEX.md'
   pull_request:
     paths:
       - '.github/workflows/index-audit.yml'
