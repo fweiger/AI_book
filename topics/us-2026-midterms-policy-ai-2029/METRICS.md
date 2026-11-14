@@ -73,3 +73,10 @@
 - `BIAS_VS_FORECAST_PCT`=100(actual/forecast−1)，分母是预测MW；`APE_VS_ACTUAL`=100|actual−forecast|/actual，分母是**实际MW**。不能将11.935%偏差当10.662%绝对百分比误差。
 - `MAPE_EQUAL_ZONES`=mean(APE)（同样区域各占一票），`WAPE_LOAD_WEIGHTED`=100Σ|actual−forecast|/Σactual。仅使用两版都有的同目标同区域共同样本，父子分区RTO/DOM不可重复相加。2025目标DOM+AEP+PS三地区2024/25版本WAPE 3.070%→8.772%，MAPE 13.400%→8.637%，**不是显著性结果**。
 - `CRA_2030_POWER_SHORTFALL_SCENARIO`=约11.5GW（2026-11-02 CRA报告未来Hard Supply Constraint假设），不是2026实际缺电/政策造成的损失，也不得将它同PJM容量市场短缺不同口径累加。
+
+## H03v0.1.10：历史“实际”与预测数值本身也必须做来源版本审计
+- `H03_CROSS_PUBLISHED_HIST_VALUE_DIFF` = 2026-05 PJM RTO `Historical July Peak`−2025-06 PJM `RTO Total Large Load Adjustments History`。2014—2024共同11年，2026数值都较高，相对差+2.34%—+5.26%、中位+3.966%。**定义是否完全同口径未核实**，所以该项是出版来源差，**不是实物增长率、不是经证实的历史重述**。
+- `H03_CROSS_PUBLISHED_FORECAST_DIFF`=2026-05回顾表同标签`vintage,target_year,RTO`预测值−2025-06材料同标签值。21条同名预测均可配对；2023版8/8负差、2024版7/7正差、2025版3正3负。未来按实际发行文件SHA冻结原始预测，禁止假设2026回顾表自动等于当年公布的原值。
+- `H03_BACKTEST_SOURCE_SENSITIVITY`：预测和历史值都取自**同一次出版物**计算`actual/forecast−1`，与第二个出版物内部同法的结果对照。目标2023-v2023 21.43% vs29.35%即差7.92pp；只证明来源敏感，不说明预测能力真实改变。
+- 2025原版Table B9b目标2025的RTO7729MW vs2026准确性回顾同标签7735MW仅+6MW，虽然较小也应版本记录。两个表分别使用Summer Peak和July Peak字样，PIT时点/定义差无法忽略。
+- 上轮H03 31条预测-实际及三区WAPE/MAPE是在**2026-05同一回顾源**内部一致计算，算术有效；**不能直接当全历史PIT原版误差分布**。后续真实预测打分应同时给`original_release_vintage`和`retrospective_rebased_vintage`双评分，必要时输出`NOT_COMPARABLE`。

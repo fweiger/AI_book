@@ -1,0 +1,4 @@
+target_year,forecast_vintage,june2025_report_forecast_mw,june2025_report_history_mw,june2025_actual_minus_forecast_pct_of_forecast,may2026_accuracy_forecast_mw,may2026_accuracy_actual_mw,may2026_actual_minus_forecast_pct_of_forecast,difference_in_bias_percentage_points,limitation
+2023,2023,3957,4805,21.430377,3894.009824,5036.907662,29.350153,7.919776,"Publication-paired retrospective bias scenarios; definition parity unproven, not a decomposition of data revisions"
+2024,2023,5080,5829,14.744094,5015.929775,6135.627244,22.322830,7.578735,"Publication-paired retrospective bias scenarios; definition parity unproven, not a decomposition of data revisions"
+2024,2024,5682,5829,2.587117,5968.295093,6135.627244,2.803684,0.216567,"Publication-paired retrospective bias scenarios; definition parity unproven, not a decomposition of data revisions"

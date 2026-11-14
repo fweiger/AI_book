@@ -68,3 +68,9 @@
 - [h03_pjm_2025_paired_vintage_scorecard.csv](h03_pjm_2025_paired_vintage_scorecard.csv)：共同DOM/AEP/PS三区、同2025目标、2024与2025版本各一行，WAPE和MAPE权重分明。
 - [h03_cra_nov2026_scenario_assumptions.csv](h03_cra_nov2026_scenario_assumptions.csv)：CRA 2026-11-02场景机制、未来2030约11.5GW供电缺口，且明确场景≠已实现。
 - [recompute_h03_vintage_calibration.py](../analysis/recompute_h03_vintage_calibration.py)：纯标准库重算；附`--input`与原XLSX SHA和31条单元格比对。原XLSX未作为仓库附件上传，需从PJM官网下载保留原始文件。
+
+## H03第八轮：跨公开版本的数据质量与PIT审计（2026-11-14）
+- [h03_pjm_rto_2014_2024_cross_publication_history.csv](h03_pjm_rto_2014_2024_cross_publication_history.csv)：11个共同历史年份的PJM 2025-06整数MW和2026-05六位小数值、出版差与比例；定义一致性尚未验证。
+- [h03_pjm_rto_2023_2030_cross_publication_forecasts.csv](h03_pjm_rto_2023_2030_cross_publication_forecasts.csv)：21个同标签RTO预测版本/目标年跨公开文档差异；2025版有原版B9b可复核，2023/24版目前只来自2025-06汇总PPT。
+- [h03_pjm_rto_2023_2024_error_definition_sensitivity.csv](h03_pjm_rto_2023_2024_error_definition_sensitivity.csv)：同一出版物内部的3对历史误差率用于展示来源敏感性，非统计显著或实体电量变化。
+- [recompute_h03_source_vintage_audit.py](../analysis/recompute_h03_source_vintage_audit.py)：纯标准库复算，可使用`--accuracy-xlsx`检查2026原始全RTO历史/预测数据，用`--original-2025-xlsx`核查2025官方原版B9b，共享来源SHA；2025六月PPT为原文表格人工转录，证据深度如实保留。

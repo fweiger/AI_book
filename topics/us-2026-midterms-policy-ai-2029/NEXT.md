@@ -51,3 +51,8 @@
 - [第七轮报告](reports/2026-11-14_h03_vintage_backtest_cra_competing_path.md)包含31条PJM旧版预测-目标年实际对应的回溯检验。重点：2025目标DOM旧版2024预测5538MW比2025新版4970MW更接近实际5563MW；DOM+AEP+PS三地WAPE3.07→8.77%变差而MAPE13.40→8.64%变好。样本仅三地一个目标年，**不能进行总体统计显著性或推断2027因果**。
 - 监控2027等新年度的**真实**同定义负荷，区别PJM地区LLA与Dominion纯DC实际峰值；对未来每次负荷预期修订先匹配版本、分区、目标年并执行[离线脚本](analysis/recompute_h03_vintage_calibration.py)。
 - **竞争路径**：2026-11-02选前CRA已列合同/许可/芯片/供应电网1-in-10限制及2030约11.5GW情景缺口。新国会的后续政策只有在剥离这些旧有机制与州GS5等控制后才可判断增量影响。SCC项目队列[#52](https://github.com/fweiger/AI_book/issues/52)、PJM Registry[#53](https://github.com/fweiger/AI_book/issues/53)并行跟进，尚未获得完整公开项目级数据。
+
+## 第八轮新拦截条件：先证明资料口径一致，再扩大PJM模型回测
+- [来源版本漂移审计](reports/2026-11-14_h03_publication_vintage_bias_audit.md)已完成11年历史值与21条同标签预测的公开源交叉检验，结果表现为系统性的“后出版物更高历史值”及不同预测标签正负偏移。**还未确认Summer Peak vs July Peak/项目覆盖/EDC回填是否同定义，故不称历史真实发生新增长。**
+- 下一步优先在PJM 2023/24原始报告中抽出同目标`B9b total`及`Historical July Peak`，核对2025-06 PPT中旧预测值究竟是否原值；已定位[PJM历年ZIP](https://www.pjm.com/-/media/DotCom/planning/res-adeq/load-forecast/previous-load-forecast-reports.zip)共20个2007—2025成员，2025原表已经SHA直接核验，可按成员Range读取，不必整包下载。
+- 所有2027以后DC-only实际、PJM正式采纳负荷、历史预测准确率需要区分**首次公布时、后续回顾时**两套版本；如果无同一计量定义的确认，按`NOT_COMPARABLE`保留空，不要给虚假的政治效果或“批准率”。

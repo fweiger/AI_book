@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H08均UNTESTED。** 版本 0.1.9；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H08均UNTESTED。** 版本 0.1.10；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 核心问题
 民主党在2026年中期选举赢得下届国会两院控制权以后，2027-01-03新国会履职是否引发立法对抗、财政支出重配、AI监管/能源约束，进而影响企业投资、增长、金融市场和2028选举策略？各环节能否用真实数据确认？特朗普本届任期于2029-01-20结束，2028选举不是研究终点。
@@ -63,3 +63,7 @@
 
 ## H03第七轮：31条历史预测版本真实回测 × 2026-11-02 CRA供电约束竞争路径
 - [完整预测误差及CRA反事实报告](reports/2026-11-14_h03_vintage_backtest_cra_competing_path.md)；[PJM31条forecast-vs-actual](data/h03_pjm_load_forecast_vintage_backtest_2023_2025.csv)、[同批三区WAPE/MAPE](data/h03_pjm_2025_paired_vintage_scorecard.csv)、[CRA机制与情景](data/h03_cra_nov2026_scenario_assumptions.csv)、[离线+SHA源校验脚本](analysis/recompute_h03_vintage_calibration.py)。**相同2025目标三地区MAPE改善，但WAPE恶化**，说明模型版本修订/区域规模权重会影响未来政治归因；CRA估计2030硬供电约束可能造成约11.5GW缺口（非已实现，也非政治已造成）。
+
+
+## H03第八轮：历史值和预测值的公开版本漂移（2026-11-14）
+- [完整数据来源审计报告](reports/2026-11-14_h03_publication_vintage_bias_audit.md)：PJM 2025-06公布2014—24历史RTO值，与2026-05回顾报告中的`Historical July Peak`在11个共同年份都不一致，后者高约2.34%—5.26%、中位3.966%。同2023/24/25预测版本的21个同目标年数值在不同来源亦有差异；**未核实是定义、月份还是历史更新，不得直接称为已发生的新增负荷或政治因果**。附[11年历史表](data/h03_pjm_rto_2014_2024_cross_publication_history.csv)、[21个预测差表](data/h03_pjm_rto_2023_2030_cross_publication_forecasts.csv)、[3个误差敏感性情景](data/h03_pjm_rto_2023_2024_error_definition_sensitivity.csv)、[离线及双原表校验](analysis/recompute_h03_source_vintage_audit.py)。
