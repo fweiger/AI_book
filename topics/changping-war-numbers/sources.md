@@ -80,3 +80,14 @@
 - **S42** [《三国志》卷28《诸葛诞传》](https://zh.wikisource.org/zh-hans/%E4%B8%89%E5%9C%8B%E5%BF%97/%E5%8D%B728)：二十六万总军与围寿春、游军备外寇分开。
 - **S43** [《晋书》卷105《石勒载记》](https://www.shidianguji.com/book/HY2029/chapter/1kw0p1ohg6qlf)：石虎四万讨曹嶷、围广固及石挺济师分阶段。
 - **S44** [《资治通鉴》卷219](https://zh.wikisource.org/zh-hans/%E8%B3%87%E6%B2%BB%E9%80%9A%E9%91%91_(%E5%9B%9B%E9%83%A8%E5%8F%A2%E5%88%8A%E6%9C%AC)/%E5%8D%B7%E7%AC%AC%E4%BA%8C%E7%99%BE%E4%B8%80%E5%8D%81%E4%B9%9D)：太原多路十万；睢阳初攻十三万，均需与表1同段核对。
+
+## 第七轮 S45—S52 新增军事历史地形与GIS来源
+
+- **S45** [山西大学乔松林2019军事历史地理讲座](https://history.sxu.edu.cn/qddlm/xshd/0fd80cb5496e457ebcd96e7614ff1eb7.htm)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S46** [杨名字少校《秦赵长平歼灭战之研究》公开军官文献](https://www.mnd.gov.tw/NewUpload/202005/02%E7%A7%A6%E8%B6%99%E9%95%B7%E5%B9%B3%E6%AE%B2%E6%BB%85%E6%88%B0%E4%B9%8B%E7%A0%94%E7%A9%B6_333230.pdf)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S47** [美国国家公园管理局 Gettysburg KOCOA 方法](https://home.nps.gov/gett/learn/news/gett-battlefield-rehab.htm)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S48** [Zhu 等2017汉代新疆防御体系GIS研究](https://doi.org/10.3390/ijgi6080247)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S49** [Rubio-Campillo等2022古战场多路径/电路理论](https://doi.org/10.1007/s10816-022-09549-7)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S50** [Mapzen Terrain Tiles 公共DEM数据](https://registry.opendata.aws/terrain-tiles/)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S51** [GRASS r.walk和r.viewshed官方工具文档](https://grass.osgeo.org/grass-stable/manuals/r.walk.html)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。
+- **S52** [山西大学乔松林师资简介](https://history.sxu.edu.cn/szdw/qzjs/zgsx/zggds/gdsfjs/001c01080ec74162a63b6d85786da505.htm)（研究对象或方法按第七轮报告严格区别，历史兵数未由此证实）。

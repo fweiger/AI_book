@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "topic_id": "TOPIC-013",
   "title": "长平之战兵力、杀降数字与史料可信度",
-  "topic_version": "0.6.0",
+  "topic_version": "0.7.0",
   "updated_at": "2026-11-15",
-  "source_level": "用户2023原刊+2026晋城文旅逐段遗址+2024保护规划+古籍对照；战线实际GIS坐标与人数仍未知",
+  "source_level": "真实现代DEM高程初筛＋学者军官防御地理和GIS方法研究；历史兵员未知",
   "books": [],
   "nodes": [
     {
@@ -390,6 +390,78 @@
       "type": "claim",
       "title": "军额At若指整个战区总军，与同日单条阵线Af比较无法独立验证史书总数准确",
       "source_status": "2026-11-15 官方/史论/古籍证据与数学条件审计；秦赵实兵数未定"
+    },
+    {
+      "id": "C065",
+      "type": "claim",
+      "title": "山西大学乔松林2019讲座以地图和地理枢纽研究长平三道防线",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C066",
+      "type": "claim",
+      "title": "职业军官杨名字公开卫星战例图和古今地名表，兵额仍取传统数字",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C067",
+      "type": "claim",
+      "title": "KOCOA军史地形法可按关键地形、观察、掩护、障碍和通路组织研究",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C068",
+      "type": "claim",
+      "title": "汉代新疆遗址GIS可视域与防御网文献可用作长平模拟方法参考",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C069",
+      "type": "claim",
+      "title": "古战场电路理论揭示通道、备选路线和瓶颈比一条最短路更完整",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C070",
+      "type": "claim",
+      "title": "Ubuntu实际读取高平研究窗口现代DEM，海拔761–1403m中位963m",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C071",
+      "type": "claim",
+      "title": "同一DEM坡度中位5.1°、小于10°像元81.4%，非行军可达率",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C072",
+      "type": "claim",
+      "title": "廉颇赵防线与白起秦46天围圈是不同防守目标和时期",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C073",
+      "type": "claim",
+      "title": "封锁大规模成建制军队、粮车与彻底防小股逃兵所需兵员不同",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C074",
+      "type": "claim",
+      "title": "守住具体路线需同时考虑观察预警、消息传递、机动响应和补给",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C075",
+      "type": "claim",
+      "title": "李冀2023作者踏勘认为复原秦围圈沿线没有大片不能逾越自然屏障",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
+    },
+    {
+      "id": "C076",
+      "type": "claim",
+      "title": "现代DEM初筛不是已完成前260年具体古道/GIS阻断及守军人数模拟",
+      "source_status": "第七轮：来源直读或Ubuntu现代DEM实跑，公元前260守军仍未定"
     }
   ],
   "edges": [
@@ -728,6 +800,72 @@
       "target": "C021",
       "relation": "识别力限制",
       "note": "At战区总军大于Af阵线最低无法证原额精确"
+    },
+    {
+      "source": "C065",
+      "target": "C056",
+      "relation": "研究方向",
+      "note": "三道防线地理解释依赖古籍及实地"
+    },
+    {
+      "source": "C066",
+      "target": "C065",
+      "relation": "学科对照",
+      "note": "职业军官与历史学家分析互补"
+    },
+    {
+      "source": "C067",
+      "target": "C072",
+      "relation": "方法框架",
+      "note": "按任务和阶段分类地形"
+    },
+    {
+      "source": "C068",
+      "target": "C074",
+      "relation": "方法迁移",
+      "note": "视线和指挥通信不可混为守军密度"
+    },
+    {
+      "source": "C069",
+      "target": "C073",
+      "relation": "方法补充",
+      "note": "多通道和瓶颈需要历史路网"
+    },
+    {
+      "source": "C070",
+      "target": "C071",
+      "relation": "现代DEM实测",
+      "note": "坡度数字从同一DEM派生"
+    },
+    {
+      "source": "C071",
+      "target": "C075",
+      "relation": "对照不是历史定论",
+      "note": "低坡像元占比不能证明古道畅通"
+    },
+    {
+      "source": "C072",
+      "target": "C031",
+      "relation": "战役阶段区别",
+      "note": "赵防线与秦最终125km包围圈不能混算"
+    },
+    {
+      "source": "C073",
+      "target": "C039",
+      "relation": "敏感性",
+      "note": "线性驻兵和要点机动需要对等目标比较"
+    },
+    {
+      "source": "C074",
+      "target": "C073",
+      "relation": "约束",
+      "note": "发现通路不等于有能力守住"
+    },
+    {
+      "source": "C076",
+      "target": "C070",
+      "relation": "状态说明",
+      "note": "DEM初筛已跑，历史军事路线未跑"
     }
   ],
   "reading_paths": [
@@ -887,6 +1025,30 @@
         "C062",
         "C063",
         "C064"
+      ]
+    },
+    {
+      "id": "Q10",
+      "name": "古代军事地形与封锁效能",
+      "nodes": [
+        "C065",
+        "C066",
+        "C067",
+        "C068",
+        "C069",
+        "C072",
+        "C073",
+        "C074",
+        "C075"
+      ]
+    },
+    {
+      "id": "Q10DEM",
+      "name": "现代DEM实跑与历史适用性",
+      "nodes": [
+        "C070",
+        "C071",
+        "C076"
       ]
     }
   ],
