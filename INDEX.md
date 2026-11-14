@@ -11,7 +11,7 @@
 
 | TOPIC-009 | [睡眠科学与生理机制：开放式多 AI 研究](topics/sleep-science-open-research/README.md) | M00—M10 的机制体系、权威医学/神经科学文献与跨维度研究问题 | `睡眠科学` `神经生理` `昼夜节律` `多AI协作` | 公开来源 | FRAMEWORK_READY |
 
-[查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
+| TOPIC-012 | [太空算力：轨道数据中心、发射成本与系统经济性](topics/orbital-computing-economics/README.md) | 发射与在轨质量、轨道光伏、热管理、通信和寿命何时使轨道算力可行？ | `轨道数据中心` `运载经济性` `太空光伏` `全生命周期成本` | 公开来源 | BASELINE_READY / NEEDS_EVIDENCE |\n\n[查看历史对话与藏书仓库中的更多候选书籍](catalog/recovered-books-2026-10-29.md)。
 
 ## 多 AI 博弈实验
 
