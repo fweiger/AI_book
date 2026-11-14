@@ -21,7 +21,7 @@
 
 **反例**：当从平均坡度改为每块最大坡度，992m东西方向的上下界提高到21.92°–22.14°，而124m最大坡度仅12.28°–13.04°。可见连“具体多少度才够”的数字也无法跨尺度当物理常数，更不是车马坡度极限。
 
-完整原始16组输出：[CSV](../models/modern_dem_minimax_resolution_brackets.csv)；[Python可复算代码](../models/modern_dem_minimax_resolution_brackets.py)。这份数据反映现代高程栅格的拓扑连通性，不含道路、水流/渡口、营垒、树木、道路宽与先秦军制。[Mapzen官方格式/数据源说明](https://www.mapzen.com/blog/terrain-tile-service/)，[GRASS r.walk官方文档](https://grass.osgeo.org/grass-stable/manuals/r.walk.html)确认真实行军成本还必须引入摩擦参数、上/下坡方向差异；前两轮临时`1+(slope/8)^2`不等于公认士兵步行速度。
+完整原始16组输出：[CSV](../models/modern_dem_multiresolution_critical_slopes.csv)；[Python可复算代码](../models/modern_dem_multiresolution_brackets.py)。这份数据反映现代高程栅格的拓扑连通性，不含道路、水流/渡口、营垒、树木、道路宽与先秦军制。[Mapzen官方格式/数据源说明](https://www.mapzen.com/blog/terrain-tile-service/)，[GRASS r.walk官方文档](https://grass.osgeo.org/grass-stable/manuals/r.walk.html)确认真实行军成本还必须引入摩擦参数、上/下坡方向差异；前两轮临时`1+(slope/8)^2`不等于公认士兵步行速度。
 
 ## 二、把《2023论文》图3中的9米秦垒放回正确证据层
 
