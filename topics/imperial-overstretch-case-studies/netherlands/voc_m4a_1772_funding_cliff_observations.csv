@@ -1,0 +1,18 @@
+id,period,entity_or_event,measure,value,unit,source_locator,evidence_class,limitation
+M4A-01,1772-Q4,Britain-origin sampled protest bills,face_value,178822,current_guilder,Table_1,PUBLISHED_SAMPLE,Not total national market defaults
+M4A-02,1773-Q1,Britain-origin sampled protest bills,face_value,1345057,current_guilder,Table_1,PUBLISHED_SAMPLE,Not total national market defaults
+M4A-03,1772-Q4,All-origin sampled protest bills,face_value,1693324,current_guilder,Table_1,PUBLISHED_SAMPLE,Total uses author published aggregate not recomputed row subtotal
+M4A-04,1773-Q1,All-origin sampled protest bills,face_value,4161887,current_guilder,Table_1,PUBLISHED_SAMPLE,Sample observations fall from 158 to 78
+M4A-05,1772-09_to_1772-10,Clifford creditor refinancing,paid_existing_creditors,3400000,AWB_bank_florin,Section_III,PUBLISHED_AUTHOR_RECONSTRUCTION,Flow not end-of-period asset or balance
+M4A-06,1772-09_to_1772-10,Clifford creditor refinancing,additional_funds_raised,400000,AWB_bank_florin,Section_III,PUBLISHED_AUTHOR_RECONSTRUCTION,New cash not additive to all gross account turnover
+M4A-07,1772-09_to_1772-10,Clifford syndicate funding,forwarded_for_margin_calls,250000,AWB_bank_florin,Section_III,PUBLISHED_AUTHOR_RECONSTRUCTION,Subset of additional funds raised not independent financing
+M4A-08,1772-12_early,Clifford AWB account,reported_balance_upper_bound,100000,AWB_bank_florin,Section_III,PUBLISHED_THRESHOLD,Strictly less than 100000 not measured exact account balance
+M4A-09,1772-12-15,Dreyers bills protested by Clifford,bill_amount,171000,current_guilder,Section_I,PUBLISHED_DATED_EVENT,Date is reported demand/protest not verified underlying issue date
+M4A-10,1772-12-28,Clifford failure,tenfold_protest_spike,,ratio,Section_I,PUBLISHED_DESCRIPTIVE,No independently checked daily bill-count denominator
+M4A-11,1772-06_to_1772-12,Seppenwolde borrowing,EIC_collateral_loans_approx,3250000,current_guilder,Section_III,PUBLISHED_APPROXIMATE,796 cited in section but sample n795 in Tables2/3 requires scope reconciliation
+M4A-12,1772-06_to_1772-12,Seppenwolde borrowing,number_of_obligaties,796,contracts_or_observations,Section_III,PUBLISHED_UNVERIFIED_SCOPE,Not to be merged with 795 Table2/3 sample
+M4A-13,1766_to_1773,Obligatie Table2_3 sample,number_of_observations,795,observations,Tables_2_3,PUBLISHED_SAMPLE,Scope not established equal to 1772 796 contract subset
+M4A-14,1772-06,BOE emergency assistance,emergency_loans_discount_approx,650000,GBP,Section_IV,PUBLISHED_APPROXIMATE,BOE support not VOC or AWB lending
+M4A-15,1772_to_1773,BOE assistance,loss_on_defaulted_bills_and_collateral_approx,93000,GBP,Section_IV,PUBLISHED_APPROXIMATE,Not a same-cohort lending default percentage
+M4A-16,1772-09,ter_Borch_West_Indies_mortgage_securities,auction_price_of_face_value_approx,80,percent_of_face,Section_II,PUBLISHED_APPROXIMATE,Not EIC equity and not directly same as AWB currency
+M4A-17,1772-09,ter_Borch_mortgage_credit,advance_rate_of_face_value_approx,90,percent_of_face,Section_II,PUBLISHED_APPROXIMATE,Need collateral contracts to compute actual funding gap
