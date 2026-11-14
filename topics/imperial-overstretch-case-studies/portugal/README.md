@@ -44,3 +44,17 @@
 ## 深入机制审查
 
 - [巴西黄金、荷兰病与葡萄牙制造业：2025开放获取原论文的数值、因果链和金融边界](DUTCH_DISEASE_GOLD_TO_MANUFACTURING_V1.md)。其中区分价格/实际汇率的实证机制、王室政治资源诅咒假说，与尚未验证的主权金融危机。
+
+
+## M2｜作者2019 Excel 数据审计：可复算衍生CSV和1700年源数据冲突
+
+- [data_m2/README.md](data_m2/README.md)：原始数据授权边界、来源哈希、字段定义、已有结果与下一步
+- [data_m2/gdp_benchmarks_m2.csv](data_m2/gdp_benchmarks_m2.csv)：14个关键年份、2025论文Table 1对照
+- [data_m2/gdp_decadal_aggregates_m2.csv](data_m2/gdp_decadal_aggregates_m2.csv)：34组十年历史GDP/人口/CPI描述性汇总
+- [data_m2/gdp_window_changes_m2.csv](data_m2/gdp_window_changes_m2.csv)：9组GDP/人口变化；[gdp_rolling_sensitivity_m2.csv](data_m2/gdp_rolling_sensitivity_m2.csv)：4种平滑
+- [data_m2/gdp_source_variable_dictionary_m2.csv](data_m2/gdp_source_variable_dictionary_m2.csv)：13个Excel字段与统计口径
+- [data_m2/gdp_source_manifest_m2.json](data_m2/gdp_source_manifest_m2.json)、[数据复算脚本](data_m2/reproduce_gdp_from_author_xlsx.py)：来源和输出哈希、严格版本校验
+
+**研究数字修正：** 2019作者公开工作簿1700年人均GDP=987.2048，而2025黄金论文Table 1展示830（同源1650年约830）。此前按后者计算的1700—1750年+65.30%存在来源冲突；作者工作簿重算为**+38.95%**，1750—1800年**−33.22%**。该冲突是论文描述表格与公开历史基础数据间的不一致，**尚不证明2025年ASCM实际模型输入有错误**。2025复现包未成功取得，黄金因果参数NOT_RUN，年度财政/军费/债息仍NOT_ACQUIRED。
+
+原始作者Excel因**未确认完整再分发许可证**，不直接上传公开仓库。本目录存的是原创可复算程序、引用指针、重点年份和衍生汇总，保留Draft PR以待独立史料与因果复核。
