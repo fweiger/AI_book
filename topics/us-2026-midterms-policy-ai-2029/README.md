@@ -1,6 +1,6 @@
 # TOPIC-011｜2026美国中期选举→2029政治财政AI投资与市场路径
 
-> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.7；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
+> **研究状态：FRAMEWORK_READY，H01—H10均UNTESTED。** 版本 0.2.8；基线/资料截点 2026-11-14。研究起止：2026-11-03—2029-01-20。总入口：[Issue #41](https://github.com/fweiger/AI_book/issues/41)。本专题是**可证伪、多路径共存、多AI长期研究**，不是为任何一个预言找证据。
 
 ## 第十七轮｜成法条款、财政双基线与2027旧法时钟（2026-11-14）
 - [已成法政策→CBO双预算基线→实际执行与2027旧法生效的完整研究](reports/2026-11-14_h02_round17_policy_section_budget_baselines_and_legacy_2027.md) · [16条来源/金额/日期台账](data/h02_round17_policy_section_budget_actual_2008_2026.csv) · [6份原提案及最终成法SHA](data/h02_round17_gpo_bill_to_law_6files_sha.csv) · [Python复算](analysis/recompute_h02_round17_policy_section_budget_actual.py)；证明2025 P.L.119-21对不同CBO预算基线分别+3.4万亿/-3660亿美元且2027既有Medicaid和风光税惠规则不是2027新国会法案。Ubuntu联网6份GPO SHA与数据校验PASS。H01—H10完整因果UNTESTED，P-A—P-D UNKNOWN，PR #51未合并。
@@ -134,3 +134,8 @@
 - **H09增量税惠真实文件**：[Texas Comptroller Del Valle ISD Chapter313 #1496原始两年度School District Cost Report](reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)已用XLSX原件SHA复核：2025报告版2024税年**毛税负差$43,496,033**，2025税年**$42,608,055**，2024税年对较早2023版的**预测$20,642,965**出现**+$22,853,068报告版本差**；另列Revenue Protection和Supplemental Payments，**绝非Travis县Chapter381已付现金或公司净受益**。[两版14行CSV](cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv) · [官方XLSX直接验证PASS](analysis/recompute_h09_delvalle_1496_ch313_vintages.py)。
 - **H10来源控制下的反例**：[2025全年11个真实CPI公布日、Calculated Risk同一发布者有日期专业共识仅7次](reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)；按BLS首发与Treasury整日2Y有符号波动对照，**headline惊讶方向同向2/5、core同向2/4，两个精确双侧二项p均1.0**，明显弱于此前跨机构便利10日期的core6/7；其它4次同源前瞻未找到就保持NA，不能挪用事后日历/机构不同资料去填。[11行完整发行日期覆盖CSV](data/h10_cpi_consistent_publisher_2025_pre_release_cohort.csv) · [标准库复算PASS](analysis/recompute_h10_2025_consistent_publisher_cpi_direction.py)。
 - 两条研究均不据此升级H09/H10政策因果或预测/交易能力；2026县实际grant USD仍缺、学区净受益现金和CPI公告分钟期货也尚未确认。
+
+
+## v0.2.8｜学区PILOT收入真实财报对账与2024 CPI预测类型检查
+- **H09真实学校收入进展**：[Del Valle ISD财报FY2022—FY2025的Tesla Chapter313 PILOT](reports/2026-11-14_h09_delvalle_school_afr_pilot_receipts_and_cdr_crosswalk.md)通过EMMA三份原PDF SHA/协议附注与财报比较列独立核算：FY2022 $999,609；FY2023 $9,543,964（FY2024比较栏）；FY2024 $17,946,611；FY2025 **$23,002,842**；四财年收入合计**$51,493,026**。这笔学区收到的企业付款**不是Travis县Chapter381返利，更不是Tesla获得的净税惠**。与州学区2025 CDR中候选前一税年Revenue Protection + Supplemental Payments对账，FY2022/23/24恰好一致，**FY2025差$976,875未对平**。[四行来源+税年对账CSV](cases/musk-2026/delvalle_school_afr_pilot_FY2022_2025_vs_ch313_cdr.csv) · [原始PDF/CDR直取复算PASS](analysis/recompute_h09_delvalle_school_pilot_afr_reconciliation.py)。
+- **H10预期来源再分层**：[2024全年12次BLS CPI公布日的同发布者Calculated Risk固定CPI Preview网址覆盖](reports/2026-11-14_h10_2024_same_publisher_cpi_preview_coverage_and_source_types.md)：只找到Apr/Dec两期该固定标题页面，但其它10个月不等于没有其他前瞻文章；2024-04-09同日同发布者CPI Preview里**银行单方预测**与稍晚“Wednesday: CPI”里的**市场共识**不同，不可混作历史median。[12行覆盖记录](data/h10_2024_calculatedrisk_cpi_preview_source_coverage.csv)。H09/H10整体因果依旧UNTESTED，PR不合并main。
