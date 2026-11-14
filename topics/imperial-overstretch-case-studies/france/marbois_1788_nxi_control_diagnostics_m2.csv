@@ -1,0 +1,6 @@
+id,check,left,right,difference,status,caveat
+FRA-CONTROL01,Original prose 3 terms to total,1082001 l7s6d + 604502 l18s2d + 429374 l17s8d,2115879 l3s4d,0,INTEGER_LSD_PASS,Same 1790 source prose not scanned visually
+FRA-CONTROL02,Octroi arrears old OCR vs current prose,429374 l12s8d,429374 l17s8d,5 sous,SOURCE_VARIANT_OPEN,Do not overwrite original image-unverified transcript
+FRA-CONTROL03,Local cash plus unremitted vs Laborie ending four-fund surplus,1511376 l5s2d,1511376 l6s11d,1 sou 9 deniers,ACCOUNT_SCOPE_OR_TRANSCRIPTION_OPEN,Neither source proven same accounting boundary
+FRA-CONTROL04,Marine cash 960787 l16s8d plus new arrears vs Laborie Marine balance,1390162 l14s4d,1390162 l16s4d,2 sous,CANDIDATE_OCR_OR_SCOPE_OPEN,Source printed rows remain unverified
+FRA-CONTROL05,Proisy 1789 fiscal year catalog,Gale reel199 vol755 item4,Numeric cells not acquired,not_calculable,CATALOG_ONLY,No annual trend or ratio

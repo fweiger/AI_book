@@ -1,0 +1,6 @@
+id,year,variable,version_A,version_B,arithmetic_difference,status,next_test
+FRA-VAR001,1788,marine opening balance,1790 PDF index 933160 l5s5d,Laborie 1798 935160 l5s5d,2000 livres,UNRESOLVED_ORIGINAL_IMAGES,Check Port-au-Prince 1789 and Paris 1790 N III plus Laborie table
+FRA-VAR002,1788,marine disbursement total,1790 indexed components 9448488 l7s8d,Laborie 1798 9448188 l4s0d,300 l3s8d,UNRESOLVED_ORIGINAL_IMAGES,Check original ordinary and extraordinary disbursements
+FRA-VAR003,1788,marine closing cash plus receivables,indexed components sum 1390162 l9s4d,1790 indexed subtotal and Laborie 1390162 l16s4d,7 sous,UNRESOLVED_ORIGINAL_IMAGES,Check period account definition and individual digits N XI
+FRA-VAR004,1788,value of merchandise exports,previous Marbois transcription about 180m,Ardouin 1853 about 193m,about 13m,ROUNDING_SCOPE_UNKNOWN,Verify geography price and goods included using original commodity annex
+FRA-VAR005,1788,four fund expense vs balanced sides,Laborie actual listed outlays 11933477 l17s6d,source balance total 13444854 l4s5d,1511376 l6s11d,ACCOUNTING_BALANCE_NOT_LOSS,Verify residual treatment of closing fund balances
