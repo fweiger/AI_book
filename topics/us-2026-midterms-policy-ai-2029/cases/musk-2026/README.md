@@ -75,3 +75,9 @@
 ## 2022年县级正式Zero rebates paid与履约审核尚未完成（v0.2.6）
 - [Travis County官方2022-01-31经济发展协议汇总](https://www.traviscountytx.gov/images/planning_budget/Docs/Summary_of_Economic_Development_Agreements_1-31-22.pdf)明确Colorado River Project (Tesla)当时**零返利支付、首绩效年度核验待完成**，是F类官方历史状态；其它县合作项目也曾零返利，需对比合同开始时间与审批年，不推断Tesla独有政策待遇。 [三时点现金状态CSV](travis_rebate_disbursement_status_asof_2025.csv)现有2022 F、2025-11 R及2026-04 F项26表决记录。[独立审计](../../reports/2026-11-14_h09_county_official_2022_zero_rebates_baseline.md)。
 - **2026实际付款或追回USD仍UNKNOWN**，不能拿2022的零付款和2025新闻推断2026也未支付。需Travis Auditor/PBO 2020—26已核准/实付/扣留/追回原始账核实。
+
+
+## Del Valle ISD Chapter313独立毛税惠量纲（v0.2.7）
+- [Texas Comptroller #1496 两版原始CDR年度Excel及SHA核验报告](../../reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)：2025报告版税年2022/23/24毛税收节省分别$8.286m/$22.996m/$43.496m，2025报告当期$42.608m；`Gross_Tax_Saving`为**学区税负在估值限制前后账面差额**，还有Revenue Protection与Supplemental Payments，**不是公司到手现金的净额**。
+- [两版各税年14行机器表](delvalle_ch313_1496_2023_vs_2025_vintages.csv)及[官网原始XLSX直取解析/校验PASS](../../analysis/recompute_h09_delvalle_1496_ch313_vintages.py)：税年2024早版预测$20.643m而较新版同年$43.496m，差$22.853m，说明资产/模型和披露版本必须隔离。官网2025报告于2026-10-14发布，**早于2026-11选举**。
+- **学区Chapter313和Travis County Chapter381是两个协议，不允许把本表Gross Savings填进县原2020—22 9%扣留的未知eligible grant base**；仍须Auditor县级实付及学区年度真实税单/补偿支付数据。
