@@ -214,3 +214,12 @@
 - [七条跨企业数据口径交叉映射](voc_anglo_dutch_source_comparability_m3m.csv)：英EIC账年截至次年6月30日（1813以前），VOC荷兰账年常4月、汇兑银行1月、BGB亚洲8月。EIC商品`invoice value`一般含约10%名义运输整备加价（进口地区处理并非处处相同），**不等于利润或实际拍卖收款**；`Income_Sales`是伦敦公司自营货物已实收**毛现金**，尚未扣关税和运费，`Payments_Duties`可包括为私商代收代付英国政府关税。EIC账年`1780`到**1780年6月30日**结束，不能直接作为1780年12月后第四次英荷战争的处理样本。
 - [8项新增英国EIC数据指南/原始档案元数据审计](voc_eic_ukda5690_documentation_audit_m3m.csv)：UKDS5690资料称1755年1月—1838年2月共998个当月末股价，**不是已读取的998个实际数据行**；英国图书馆原卷目录写终期1838-02-28，Bowen指南写最后行情1838-03-03，尚未查原页；Stock_Transfers_Monthly指南摘要称1756年起，详述称1755年1月起，暂保留冲突，不能自行判定。作者公布的2,880项股票转让工作表字段可能来自960月×3列，不是2,880笔真实交易。
 - [五条原始卷／独立价格数据及分发平台访问状态](voc_eic_market_prices_archive_access_m3m.csv)、[5条新增权威来源登记](source_registry_m3m.csv)、[研究日志](sessions/2026-11-14-voc-m3m-eic-archival-comparison.md)。Bowen SN5690公开指南文字及印刷p3截图已读取；英国图书馆实体证券卷原页、27份Excel、Larry Neal **ICPSR1008**价格文件`NOT_ACQUIRED`。ICPSR1008称public-use无需成员学校，旧UKDA3211分发条件限英国居民/机构，**同一Neal数据两种分发政策≠两项独立证券史料**。英国EIC与VOC原始财务/价格回归`NOT_RUN`，保留原Draft PR开放未合并。
+
+## M4A-01（2026-11-14）— Wiley复现资料真实入口与1772—73融资到期链算术审计
+
+- [M4A研究报告](M4A_1772_1773_REPLICATION_PACKAGE_AND_FUNDING_CLIFF_20261114.md)：正式期刊页面确证Berre/Kosmetatos (2025) 有`Appendices.docx`(62.7KB)与`Replication.zip`(1.9MB，作者称5份工作簿)。实际附件下载HTTP403；**只验证入口，未获取文件字节/原始账簿**。
+- [17项公开发表的观测与融资事件表](voc_m4a_1772_funding_cliff_observations.csv)：保留荷兰普通盾vs银行弗罗林vs英镑，区分公司融资流/存款余额/证券抵押/样本汇票。
+- [5条复现数据与档案访问审计](voc_m4a_supplement_access_audit.csv)：Wiley两个附件、ICPSR1008、UKDS5690及英国图书馆日价卷均标明实际数据`NOT_ACQUIRED`。
+- [可运行出版表算术复核代码](voc_m4a_published_table_validation.py)：在本地Python执行，重算样本英国来源拒付Q4 1772→Q1 1773 **+652.1765%**、份额**10.5604%→32.3184%**（+21.7580百分点）、英国金额增量占样本总面额增量**47.2435%**。**这些都是论文Table1的样本金额分解，不是原始档案独立再现或因果效果**。
+- **未决数据口径**：Tables2/3的795项抵押贷款公证样本与正文“1772年6—12月796笔EIC抵押贷款”并非已证同一观察总体，先读附录/ZIP后才能裁决；此前未见附录单日报价不能当已验证。BOE1772年救助和Clifford 9—10月筹资的来源级金额也不等于同一公司年度净融资。
+- **下一项唯一动作**：合规取得Wiley复现ZIP/Appendices并逐工作表记录SHA256、来源、观测单位、时间、币种与缺值；如继续403再转ICPSR1008/UKDS5690/作者请求。未进行1772真实报价复算、回归、专家复审；Draft PR继续开放、不合并。
