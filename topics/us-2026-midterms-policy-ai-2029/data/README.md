@@ -176,3 +176,8 @@
 ## Ch313 Del Valle税基限制与2025同发布者CPI事前预测样本（v0.2.7）
 - [H09 Texas Comptroller Del Valle ISD #1496 Chapter313 两版CDR×税年14行](../cases/musk-2026/delvalle_ch313_1496_2023_vs_2025_vintages.csv)，含两份原始XLSX URL/SHA、正式posted日期、税年是否未来预测、学区税负差及Revenue Protection/Supplemental Payments，和[版本差解释](../reports/2026-11-14_h09_delvalle_ch313_official_tax_saving_vintage_comparison.md)。**与Travis县381返利实际支付完全分开**，两次Excel读取/恒等式/差额已Ubuntu实际运行PASS。
 - [H10 2025年全部11次真实CPI发行中同一来源Calculated Risk仅7条提前时间戳的专业共识及4条NA](h10_cpi_consistent_publisher_2025_pre_release_cohort.csv)；[固定来源方向反证报告](../reports/2026-11-14_h10_2025_uniform_publisher_cpi_surprise_direction_falsification.md)，[独立复算脚本](../analysis/recompute_h10_2025_consistent_publisher_cpi_direction.py)运行PASS：Headline非零surprise同向2/5，Core2/4，双侧Exact p皆1.0，不复现此前混源10事件Core6/7。**历史完整性只有7/11且Treasury是整日波动，不能推断预测胜率和CPI独立因果。**
+
+
+## 学区实收PILOT四财年与2024 CPI来源入组完整性（v0.2.8）
+- [H09 Del Valle学区FY2022—25特斯拉相关PILOT财报报告金额、候选Ch313 TaxYear跨期匹配](../cases/musk-2026/delvalle_school_afr_pilot_FY2022_2025_vs_ch313_cdr.csv)：4个不同FiscalYear，报告收入累计$51,493,026，FY2025 vs TaxYear2024 CDR Revenue Protection + Supplemental差$976,875仍未对平。三份EMMA财报PDF原件SHA与Comptr. Ch313 CDR XLSX SHA一一记录，Python [直接复算](../analysis/recompute_h09_delvalle_school_pilot_afr_reconciliation.py) Ubuntu通过PASS。[说明](../reports/2026-11-14_h09_delvalle_school_afr_pilot_receipts_and_cdr_crosswalk.md)。**财报收款≠银行单据≠Tesla企业净补贴≠Travis County 381 grant**。
+- [H10 2024 BLS全年12次公告日与同发布者固定CPI Preview网址覆盖记录](h10_2024_calculatedrisk_cpi_preview_source_coverage.csv)：固定标题只检索到Apr/Dec两期，Apr的银行单家预测与同日另一篇市场共识页面不同；[来源类型研究](../reports/2026-11-14_h10_2024_same_publisher_cpi_preview_coverage_and_source_types.md)。只用于研究来源和PIT进入门槛，绝不当2024全年策略回测。
