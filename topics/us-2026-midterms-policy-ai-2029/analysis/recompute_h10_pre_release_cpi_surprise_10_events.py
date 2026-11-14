@@ -80,4 +80,8 @@ def run():
     return out
 
 if __name__=="__main__":
-    print(json.dumps(run(),ensure_ascii=False,indent=2))
+    output=run()
+    if "--verbose" not in sys.argv:
+        for key in ["core_all_date_grounded","core_only_published_consensus","core_excluding_2026_nov10","headline_all_date_grounded","headline_only_published_consensus"]:
+            output[key].pop("event_rows",None)
+    print("SUMMARY_JSON="+json.dumps(output,ensure_ascii=False))
