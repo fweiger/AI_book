@@ -1,4 +1,11 @@
 # TOPIC-011｜M0机器注册表
+## 第十八轮 H02财政预算固定源与选前政策桥
+- [h02_cbo_feb2026_fiscal_baseline_round18_wide.csv](h02_cbo_feb2026_fiscal_baseline_round18_wide.csv)：FY2026—29四年完整的收入、支出、净利息、非利息、初级赤字及跨财年支付调整（4行），包括国防/健康/Medicaid。
+- [h02_cbo_feb2026_fiscal_baseline_round18_long.csv](h02_cbo_feb2026_fiscal_baseline_round18_long.csv)：142个官方财年分项/派生指标，来源为CBO 2026-02版次（投递时已复核，不能冒充初发Excel字节）。
+- [h02_cbo_feb2026_source_manifest_round18.csv](h02_cbo_feb2026_source_manifest_round18.csv)：CBO官网2026-02报告表对应的官方US-CBO仓库精确commit和两个CSV SHA。GPO/CBO公开发布表交叉核对，脚本[recompute_h02_cbo_feb2026_baseline_round18.py](../analysis/recompute_h02_cbo_feb2026_baseline_round18.py)在Ubuntu实际PASS。
+- [h02_round18_pre_election_policy_baseline_bridge.csv](h02_round18_pre_election_policy_baseline_bridge.csv)：CBO 2026-01-14法律截止、2025既有P.L.119-21、2026签署但未进入2月CBO基线的P.L.119-74与119-75、以及2027旧法延迟生效。没有原始score的金额留空。方法与结果：[第十八轮报告](../reports/2026-11-14_h02_round18_cbo_feb2026_fiscal_baseline_timing_bridge.md)。
+- 注意FY2027包含120届新国会履职前的季度，FY2029跨2029年总统交接，**财年预算不直接等于2027新国会或特朗普任期因果效应**。全部H状态UNTESTED。
+
 
 ## 第十七轮：政策条款、CBO预算估算和实际执行分层
 - [h02_round17_policy_section_budget_actual_2008_2026.csv](h02_round17_policy_section_budget_actual_2008_2026.csv)：16条源记录，覆盖法定授权、后续修改、真实支付/净成本、CBO相对不同预算基线的未来赤字估算、Medicaid覆盖预测及2027旧法规的执行日期。空值绝不填0，2700亿EIP是严格下界，CBO -3660亿与+3.4万亿来自**同一法律但不同基线**。
