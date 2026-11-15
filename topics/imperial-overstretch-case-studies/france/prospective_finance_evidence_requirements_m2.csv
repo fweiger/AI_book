@@ -1,0 +1,7 @@
+check_id,target_source_id,year,metric_or_document_field,expected_type,data_value,verification,cannot_infer
+FRA-REQ01,FRA-PRIM001,1789,planned_colony_total_spend,forecast_budget,NOT_ACQUIRED,Original appended table and currency definition required,Do not book actual cash spent
+FRA-REQ02,FRA-PRIM004,1789,planned_colony_total_spend,forecast_budget,NOT_ACQUIRED,SHD MS142 No99 original image and item crosswalk to BnF annex required,Two catalog entries are not independent two budgets without checking source identity
+FRA-REQ03,FRA-PRIM002,1790,specific_charge_and_defense_text,primary_political_statement,NOT_ACQUIRED,Read Wante 25-page body and pages with financial evidence,Reply existence does not disprove 1789 money remittance allegation
+FRA-REQ04,FRA-PRIM003,1790,money_transfer_counterparty_and_signed_date,primary_political_and_fiscal,NOT_ACQUIRED,Read Gallica original 45pp; verify corrected March date and 1783 debt appendix,Wante fiscal role and debt interests; do not presume neutrality
+FRA-REQ05,FRA-PRIM005,1785,foreign_ship_port_import_export_value_and_tax_paid,actual_foreign_direct_trade,NOT_ACQUIRED,Ship port date commodity tax point and French/colonial currency needed,Cannot annualize foreign vessels to all 1785 trade or extrapolate 1788
+FRA-REQ06,FRA-PRIM006,1788,merchant_bill_payment_date_and_drawer,private_credit_instrument,NOT_ACQUIRED,Sender recipient location issue maturity payment and remittance required,Cannot substitute merchant letters for government cash receipts

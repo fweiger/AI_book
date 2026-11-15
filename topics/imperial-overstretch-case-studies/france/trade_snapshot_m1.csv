@@ -1,0 +1,5 @@
+record_id,year,direction_from_France,total_listed_livres_tournois,all_French_colonies_livres_tournois,colonial_share_percent,source_id,raw_path,raw_commit,cross_year_comparable,limitation
+FRA-T001,1787,Imports,630577112,250347692,39.7,AN_F12_251,sources/Resume/AN_F12_251_Imports_1787.csv,b9734813993d9fcd421f4b165b0a82bed38b6491,NO,1787 national register excludes some intercontinental trade
+FRA-T002,1787,Exports,445295330,95559900,21.46,AN_F12_251,sources/Resume/AN_F12_251_Exports_1787.csv,b9734813993d9fcd421f4b165b0a82bed38b6491,NO,1787 national register excludes some intercontinental trade
+FRA-T003,1788,Imports,537559492,235354492,43.78,AN_F12_251,sources/Resume/AN_F12_251_Imports_1788.csv,b9734813993d9fcd421f4b165b0a82bed38b6491,NO,1788 descriptive within-register share only; not comparable year-on-year to 1787
+FRA-T004,1788,Exports,466385300,100842200,21.62,AN_F12_251,sources/Resume/AN_F12_251_Exports_1788.csv,b9734813993d9fcd421f4b165b0a82bed38b6491,NO,All French colonies; not Saint-Domingue; no taxes or company profits

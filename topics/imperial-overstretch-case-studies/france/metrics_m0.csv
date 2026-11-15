@@ -1,0 +1,6 @@
+metric_id,period,metric,value_low,value_high,unit,owner_scope,source_id,evidence_status,limitations
+FRA-M001,1665-1690,naval_sailors_mobilized,40000,40000,persons_approx_at_least,French Navy conscription system,FRA-S03,PUBLISHED_SCHOLARLY_ESTIMATE,"over 40000, paper introduction not a precise fixed number, lower bound reported approx"
+FRA-M002,1680s,royal_navy_fleet_strength,200,200,ships_approx,French Royal Navy,FRA-S02,PUBLISHED_INSTITUTIONAL_ESTIMATE,"nearly 200 vessels, no ship of line equivalence or naval tonnage"
+FRA-M003,before_1789,saint_domingue_enslaved_African_imports_per_year,30000,30000,persons_per_year_approx,French Saint Domingue plantation trade,FRA-S05,PUBLISHED_HISTORICAL_ESTIMATE,before Revolution period; this is transport inflow not population stock
+FRA-M004,1794,saint_domingue_formerly_enslaved_residents,500000,500000,persons_approx_lower_bound,Saint Domingue enslaved population before abolition,FRA-S09,PUBLISHED_ACADEMIC_PROJECT_ESTIMATE,slightly over half a million; not annual imported people
+FRA-M005,1770-1815,central_budget_deficit_ratio,,,not_available,France central government,FRA-S08,NOT_ACQUIRED,"fiscal crisis established by peer-reviewed article abstract, no original full series"

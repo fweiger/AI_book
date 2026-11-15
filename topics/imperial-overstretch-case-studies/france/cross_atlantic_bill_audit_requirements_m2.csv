@@ -1,0 +1,7 @@
+record_id,variable,financial_owner,time_window,target_primary_record,currency_basis,accounting_definition,status,verification_guardrail
+FRA-CASH-001,tax_farm_gross_collected,Domaine d'Occident metropole,1788,AN G1 46*,livres_tournois,cash_collected_not_trade,NOT_ACQUIRED,Reject pooled traites and non-colonial duty totals
+FRA-CASH-002,net_intermediary_transfer,Ferme generale to Royal Treasury,1788,AN G1 44* and Royal Treasury actual accounts,livres_tournois,cash_or_offset_or_debt_settlement,NOT_ACQUIRED,Cannot infer transfer from farm receipt
+FRA-CASH-003,bill_issue_and_obligation,Saint-Domingue Marine Fund,1788,Marbois N III plus actual bill image,colonial_livres,face_value_instrument,FACE_VALUE_PARTIAL_NO_INDIVIDUAL_BILLS,Prior item 1053105 l10s4d is aggregate local extraordinary-receipt component
+FRA-CASH-004,bill_acceptance_and_maturity,French Navy treasurer,1788_and_later,Navy counterparty register UNKNOWN,contract_specific_currency,accepted_bill_not_cash,NOT_ACQUIRED,1770s Mascarenes maturity conventions must not be imposed on Haiti
+FRA-CASH-005,bill_actual_cash_or_offset_settlement,Royal Navy Treasury and payee,1788_and_later,French Navy Treasury books UNKNOWN,actual_payment_currency,cash_versus_offset,NOT_ACQUIRED,Need evidence for geography and actual debit account
+FRA-CASH-006,net_fiscal_benefit_of_colony,French Royal Treasury,1788,requires all above and attributable defense costs,livres_tournois_after_verified_conversion,derived_net_flow,NOT_CALCULABLE,No assumed naval allocation; slavery and colonial political costs separately documented
