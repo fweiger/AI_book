@@ -30,6 +30,12 @@
 
 **当前唯一工作**：查清维基文库可见34条和研究原本35则的差异，完成四封《答何叔京》原信逐字对应，再按同一标准扩展全体选文。
 
+## V1.0 已解决的计数问题和四封原信导航
+
+从[原选本](https://zh.wikisource.org/wiki/朱子晚年定論)第31节两封朱熹答书 → [2023论文第13页注31](https://ming.cnhis.ncnu.edu.tw/wp-content/uploads/2024/01/ming41_01Yu_full.pdf) → [何叔京4信原著与纪年](Zhuzi-Selection-Count-He-letters-v10.md) → [C020/C021/C023](claims.md) → [四论后续问题](questions.md)。此前 V0.9 的“34/35待解释”“何叔京仅两信已定位”已过时，应以 V1.0 后续审查状态为准。
+
+**下一步骤**：保持稳定 ZWSEL-01–34 以及 ZWSEL-31A/B，逐条推进其他选文完整原信、年代、写作前后文及非选入同期材料的控制对照，不用一两封信替代全书或全部哲学史。
+
 ### 每轮的最小可核路径
 
 选择一个四论问题 → [arguments.md](arguments.md) 的前提和异议 → [traditions.md](traditions.md) 定位人物、文本、时期 → [sources.md](sources.md) 区分原典、译本与二手综述 → 核原文及最强反对意见 → 更新 [claims.md](claims.md)、[knowledge-map.md](knowledge-map.md) 与 [knowledge-graph.json](knowledge-graph.json) → [sessions](sessions/README.md) 留下真实阅读记录。
