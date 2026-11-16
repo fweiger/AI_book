@@ -10,6 +10,7 @@
 
 - [四论研究主架构及统一思想体系卡](four-pillars-framework.md)——本项目的主结构和准入标准。
 - [古今中外哲学体系 × 四论初步矩阵](world-four-pillar-matrix.md)——第一批 14 个思想体系的 O/E/V/M 对照及二手资料来源，尚非原典验收结论。
+- [四论原典示范卡：墨家与亚里士多德](pilot-four-pillar-cards.md)——示范每一个体系如何沿 O/E/V/M 追溯原典、论证及争议，原典局部核对而非全本精读。
 - 原 M1 文件 [concepts.md](concepts.md) 和 [relations.md](relations.md) 继续作为概念分析与内部关系研究，不改变主结构。
 
 ## 中心问题
