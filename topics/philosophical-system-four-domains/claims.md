@@ -24,6 +24,10 @@
 | C015 | 朱熹《大学章句》对格物第五章明言原传阙文，依据程子思想自行补写；该补传不可被引作古代《大学》原文 | P | [《大学章句》第五章原文](https://zh.wikisource.org/wiki/大學章句)、[四论原典审查](C04-C05-zhu-wang-primary-four-pillars.md) | 补传思想如何与其他朱熹著作衔接及版本差异待核 |
 | C016 | 朱熹与王阳明都不排斥知行互相联系；真实分歧包含格物解释、真知的道德判准与修养工夫结构 | P+S+H | [朱王四论原典审查](C04-C05-zhu-wang-primary-four-pillars.md)、[SEP Wang](https://plato.stanford.edu/entries/wang-yangming/) | 王阳明的批评是否针对朱熹本人最强观点或后世简化版本？ |
 
+| C017 | 朱熹本人在《朱子语类》卷九肯定知行相须、行重且主敬与穷理互含；把朱熹说成“须知识全部学完才能行动”与原文冲突 | P+S | [ZW-R05 强反论审查](ZW-R05-strongest-objections-audit-v08.md)、[朱子语类卷九](https://zh.wikisource.org/zh-hans/朱子語類/009) | 弟子记录及年代变化仍须校勘，不能由几段断言全部思想始终不变 |
+| C018 | 王阳明在《传习录》徐爱录第6条直接批评朱熹格物训释，同时卷上第3—5条认可实践细节仍须讲求；这不等于仅凭心情自行决定善 | P+S+H | [ZW-R05 强反论审查](ZW-R05-strongest-objections-audit-v08.md)、[传习录卷上](https://zh.wikisource.org/zh-hans/傳習錄/卷上) | 王是否正确刻画朱熹的最强原义仍有争议 |
+| C019 | 王阳明确实通过《朱子晚年定论》提出朱熹晚年趋于心学的解释，但**朱熹晚年客观上完全否定格物论未被本轮证明** | P+S+H（历史“完全转向”为 U） | [王阳明集卷七《序》](https://zh.wikisource.org/zh-hans/王陽明集/卷07)、[SEP Zhu Xi](https://plato.stanford.edu/entries/zhu-xi/)、[2022 研究摘要](https://aj.xhu.edu.cn/xhdxxbzskb/article/doi/10.12189/j.issn.1672-8505.2022.01.004)、[2023 研究摘要](https://toaj.stpi.niar.org.tw/index/journal/volume/article/4b1141f98da87f85018daaae85a30008) | 未逐条核选本朱熹书信真伪、年代和未入选反证；学术文章只读摘要 |
+
 ### 主张间关系（只作 Draft 导航）
 
 - C002 与 C003：**同属墨家但关系有张力**，需要审查 O/V 和 E/V 的不同论证功能。
