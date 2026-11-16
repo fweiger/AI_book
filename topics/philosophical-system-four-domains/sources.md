@@ -19,6 +19,19 @@
 | S13 | B | [SEP, Analytic Philosophy in Early Modern India（2023）](https://plato.stanford.edu/entries/early-modern-india/) | 已核对正理派/胜论派及新正理学在知识、逻辑、范畴上的组合 | 梵文文本、译本和史学定位复核 |
 | S14 | C（有检索片段，全文读取被限制） | [《墨子·非命上》“三表”，Chinese Text Project](https://ctext.org/mozi/anti-fatalism-i/ens) | 搜索结果显示“三表”段落，可作为研究线索；本轮网页直接展开返回 403 | 用可信古籍镜像/原典版本再核对，**本轮不把它算作已核的完整一手文本** |
 
+## 2026-11-17 补充：两套四论卡的原典定位核查（S15—S20）
+
+| ID | 来源等级 | 本轮实际阅读片段 | 核查范围与限制 |
+| --- | --- | --- | --- |
+| S15 | A* 网络古籍 | [《墨子·法仪》](https://zh.wikisource.org/wiki/%E5%A2%A8%E5%AD%90/%E6%B3%95%E5%84%80) | 阅读法仪、法天、相爱相利相关段；未对照学术校勘本 |
+| S16 | A* 网络古籍 | [《墨子·非命上》](https://zh.wikisource.org/zh-hans/%E5%A2%A8%E5%AD%90/%E9%9D%9E%E5%91%BD%E4%B8%8A) | 阅读三表本/原/用、命定论反驳及利害段；其余篇异本待核 |
+| S17 | A* 英译原典 | [Aristotle Metaphysics IV.1–2, Ross](https://classics.mit.edu/Aristotle/metaphysics.4.iv.html) | 核查“存在之为存在”和多义性/实体的论述；希腊文校勘待核 |
+| S18 | A* 英译原典 | [Posterior Analytics I.2, Mure](https://classics.mit.edu/Aristotle/posterior.1.i.html) | 核查严格科学知识、原因、证明前提条件；未通读全书 |
+| S19 | A* 英译原典 | [Nicomachean Ethics I.1/I.3/I.7/I.13, Ross](https://classics.mit.edu/Aristotle/nicomachaen.1.i.html) | 核查善/目的、伦理精度、人类功能/幸福以及灵魂研究；未核希腊校本 |
+| S20 | B 学术二手 | [SEP Mohism, 2024](https://plato.stanford.edu/entries/mohism/) | 查法的标准涵义、三表与文本层累、相应争议；属当代研究者解释 |
+
+**A*** 仅表示直接打开网上一手文本（古籍页面或经典英译）的**指定段落**；不表示古籍校勘、全本精读或独立评审。跨著作拼接出的 O/E/V/M 结构仍需标 H（解释假说），不可因为各端点有原典就直接升格为历史事实。
+
 ## 引用等级说明
 
 - **直接原典局部核对**：S01/S06/S07。支持的仅是已定位段落，不承诺整书已读。
