@@ -42,6 +42,35 @@
 
 [V0.4 完整审计](source-argument-audit-v04.md)按 P（原文段落直核）、S（学术二手）、I（现代研究者推论）、N（未核）区分证据层次。此处“已核”只表示特定文本段落和引用链接已经打开检查，不代表逻辑推论通过独立审稿。
 
+## V0.6 全球四论理论谱系研究：新增权威学术二手源（S24–S43）
+
+> 本轮检索/核对的是斯坦福哲学百科全书等相关**条目级或指定小节**内容，为下一步锁定原著与争论的 B 级证据。**并未通读每个条目的全部引文与所列原典，更没有读完所有原著**。具体四论命题必须在 [理论谱系](four-pillar-theory-genealogy.md)、[跨传统逻辑](comparative-logic-atlas.md)、[ARG 账本](arguments.md) 中按问题展开。
+
+| 编号 | 学术二手来源 | 对应四论问题及限制 |
+| --- | --- | --- |
+| S24 | [SEP Plato / Plato’s Middle Period](https://plato.stanford.edu/entries/plato-metaphysics/) | O/E/V: 理念、知识和善；对话差异 |
+| S25 | [SEP Confucius](https://plato.stanford.edu/entries/confucius/) | V/M/E: 礼、德性、学习与文本归属 |
+| S26 | [SEP Daoism](https://plato.stanford.edu/entries/daoism/) | O/E/V/M: 道、自然与儒墨辩，区分老庄 |
+| S27 | [SEP Buddha](https://plato.stanford.edu/entries/buddha/) | O/E/V/M: 无常、苦、解脱、修行 |
+| S28 | [SEP Madhyamaka](https://plato.stanford.edu/entries/madhyamaka/) | O/E/V/M: 缘起、空、二谛及解脱 |
+| S29 | [SEP Early Modern India / Navya-Nyāya](https://plato.stanford.edu/entries/early-modern-india/) | O/E/M: 正理、胜论、新正理的融合与精密语言 |
+| S30 | [SEP Ibn Sina’s Metaphysics](https://plato.stanford.edu/entries/ibn-sina-metaphysics/) | O/E/M: 本质/存在与必然/可能，V 另核 |
+| S31 | [SEP Aquinas](https://plato.stanford.edu/entries/aquinas/) | O/V/E: 永恒法、自然法及理性参与 |
+| S32 | [SEP Zhu Xi](https://plato.stanford.edu/entries/zhu-xi/) | O/E/V/M: 理气、格物、德性与修养 |
+| S33 | [SEP Wang Yangming](https://plato.stanford.edu/entries/wang-yangming/) | O/E/V/M: 心即理、良知与知行合一 |
+| S34 | [SEP Descartes’ Epistemology](https://plato.stanford.edu/entries/descartes-epistemology/) | M/E/O: 方法怀疑、确定性与主体 |
+| S35 | [SEP Kant / Kant’s Moral Philosophy](https://plato.stanford.edu/entries/kant/) | E/O/V/M: 先验认识、物自身界限与自主伦理 |
+| S36 | [SEP Hegel’s Dialectics](https://plato.stanford.edu/entries/hegel-dialectics/) | O/E/M: 辩证法和概念内在转化 |
+| S37 | [SEP Husserl](https://plato.stanford.edu/entries/husserl/) | M/E/O: 悬置、还原、意向性；V 另核 |
+| S38 | [SEP Pragmatism](https://plato.stanford.edu/entries/pragmatism/) | M/E/V: 探究和实践，需要区别皮尔士、杜威等 |
+| S39 | [SEP Pragmatic Theory of Truth](https://plato.stanford.edu/entries/truth-pragmatic/) | E/V/M: 各种实用主义真理论并不一致 |
+| S40 | [SEP Stoicism](https://plato.stanford.edu/entries/stoicism/) | O/E/V/M: 原生物理、逻辑、伦理三分互相连接 |
+| S41 | [SEP Critical Theory](https://plato.stanford.edu/entries/critical-theory/) | V/E/M/O: 解放目标、社会批判和认识条件 |
+| S42 | [SEP Feminist Social Epistemology](https://plato.stanford.edu/entries/feminist-social-epistemology/) | E/V/M: 位置性、客观性及认识公正 |
+| S43 | [SEP Philosophy of Liberation](https://plato.stanford.edu/entries/liberation/) | O/E/V/M: 杜塞尔等多路线，不能当单一教义 |
+
+额外 [SEP African Sage Philosophy](https://plato.stanford.edu/entries/african-sage/) 的研究对象是多位智者与访谈项目，不可无证据填为单一 O/E/V/M 体系；[SEP Kant’s Moral Philosophy](https://plato.stanford.edu/entries/kant-moral/) 提供实践理性独立论证的学术入口。二者也属 B 级。
+
 ## 引用等级说明
 
 - **直接原典局部核对**：S01/S06/S07。支持的仅是已定位段落，不承诺整书已读。
