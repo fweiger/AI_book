@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "topic_id": "TOPIC-014",
-  "topic_version": "0.2.0",
+  "topic_version": "0.3.0",
   "title": "四论世界哲学思想体系：古今中外论证与关系研究",
   "updated_at": "2026-11-17",
-  "source_level": "Draft: SEP academic secondary (B), Mozi/Aristotle/Zhu Xi/Wang Yangming excerpts (P), O/E/V/M philosophical reconstructions (H); no independent scholarly approval",
+  "source_level": "Draft P primary excerpt; S academic secondary; S-abstract article abstracts; H cross-text reconstruction; U Zhu Xi complete late conversion historical assertion; no independent scholarly audit",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -157,6 +157,30 @@
       "type": "research_claim",
       "title": "朱熹知行相须、知先行重与王阳明知行合一的核心争论不能简化为先知后行对立",
       "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C017",
+      "type": "research_claim",
+      "title": "朱熹原文否定知行必须截然两段，穷理与主敬互相支撑",
+      "evidence_level": "P+S",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C018",
+      "type": "research_claim",
+      "title": "王阳明直接批评朱子格物训释但并不否定讲求具体践履细节",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C019",
+      "type": "research_claim",
+      "title": "王阳明编朱子晚年定论并主张晚年趋同；朱熹客观全盘转向仍未获证明",
+      "evidence_level": "P+S_abstract+H__historical_assertion_U",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     }
@@ -533,6 +557,120 @@
       "target": "C016",
       "relation": "background_textual_version_problem",
       "evidence_level": "P+S+H"
+    },
+    {
+      "source": "O",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C017",
+      "target": "C016",
+      "relation": "qualifies_nonseparation",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C018",
+      "target": "C016",
+      "relation": "historical_criticism_and_difference",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C018",
+      "target": "C019",
+      "relation": "later_reconciliatory_reinterpretation",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C017",
+      "target": "C019",
+      "relation": "potential_counterevidence_requiring_dates",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C005",
+      "target": "C017",
+      "relation": "supported_by_additional_primary_text",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C006",
+      "target": "C018",
+      "relation": "supported_by_additional_primary_text",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C019",
+      "target": "C017",
+      "relation": "claims_late_reinterpretation_not_proven",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
     }
   ],
   "reading_paths": [
@@ -543,7 +681,8 @@
         "O",
         "C001",
         "C004",
-        "C012"
+        "C012",
+        "C019"
       ]
     },
     {
@@ -554,7 +693,8 @@
         "C003",
         "C008",
         "C013",
-        "C016"
+        "C016",
+        "C019"
       ]
     },
     {
@@ -565,7 +705,8 @@
         "C002",
         "C004",
         "C014",
-        "C016"
+        "C016",
+        "C019"
       ]
     },
     {
@@ -576,7 +717,8 @@
         "C009",
         "C011",
         "C013",
-        "C016"
+        "C016",
+        "C019"
       ]
     }
   ]
