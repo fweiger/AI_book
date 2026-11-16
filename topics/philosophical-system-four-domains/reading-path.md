@@ -9,6 +9,15 @@
 | V 价值论 | [理论谱系](four-pillar-theory-genealogy.md)、[ARG-002/003/004](arguments.md)、[C002/C004/C014](claims.md) | 《传习录》知行段、《尼各马可伦理学》I.7、佛教相关原典 |
 | M 方法论 | [理论谱系](four-pillar-theory-genealogy.md)、[ARG-004/008](arguments.md)、[C009/C011/C013](claims.md) | 朱熹格物与王阳明良知原典、印度新正理原典 |
 
+## V0.7 实际推进：朱熹—王阳明四论争议
+
+- **O→E**：朱熹“物有理，因而须即物穷理”；王阳明“心即理，良知与事相联”，见 [原典审查](C04-C05-zhu-wang-primary-four-pillars.md)。
+- **E↔V**：朱熹知行相须、行重；王阳明把真正道德“知”与实际善行相联系。
+- **M↔V**：朱熹格物穷理与王阳明格物正事均以道德完善为目标，故不能列成“理论派 vs 实践派”。
+- **待证最强反驳**：王阳明是否把朱熹完整的修养方法缩减为后世常见的外求/延迟践履问题？
+
+本轮新增 C015、C016；对应版本图谱升至 0.2.0，但仍是 Draft。
+
 ### 每轮的最小可核路径
 
 选择一个四论问题 → [arguments.md](arguments.md) 的前提和异议 → [traditions.md](traditions.md) 定位人物、文本、时期 → [sources.md](sources.md) 区分原典、译本与二手综述 → 核原文及最强反对意见 → 更新 [claims.md](claims.md)、[knowledge-map.md](knowledge-map.md) 与 [knowledge-graph.json](knowledge-graph.json) → [sessions](sessions/README.md) 留下真实阅读记录。
