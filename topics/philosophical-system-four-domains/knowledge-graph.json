@@ -1,0 +1,1089 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-014",
+  "topic_version": "0.7.0",
+  "title": "四论世界哲学思想体系：古今中外论证与关系研究",
+  "updated_at": "2026-11-17",
+  "source_level": "Draft P directly matched 31B original passage in Zhu Xi collected works vol48; S later anthologies; H cross-pillar logic; U full discrete letter/date, complete selection datings and independent scholarly review",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "O",
+      "type": "pillar",
+      "title": "本体论：存在与世界",
+      "status": "framework_question"
+    },
+    {
+      "id": "E",
+      "type": "pillar",
+      "title": "认识论：知识与真理",
+      "status": "framework_question"
+    },
+    {
+      "id": "V",
+      "type": "pillar",
+      "title": "价值论：善与规范",
+      "status": "framework_question"
+    },
+    {
+      "id": "M",
+      "type": "pillar",
+      "title": "方法论：论证、解释、修养与探究",
+      "status": "framework_question"
+    },
+    {
+      "id": "C001",
+      "type": "research_claim",
+      "title": "柏拉图：理念、知识与善的关系",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C002",
+      "type": "research_claim",
+      "title": "墨家：天、法仪与相爱相利",
+      "evidence_level": "A*+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C003",
+      "type": "research_claim",
+      "title": "墨家：三表、社会效用与真理区分",
+      "evidence_level": "A*+B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C004",
+      "type": "research_claim",
+      "title": "中观：无自性、二谛与解脱",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C005",
+      "type": "research_claim",
+      "title": "朱熹：理、格物与德性修养",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C006",
+      "type": "research_claim",
+      "title": "王阳明：心即理、良知与知行合一",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C007",
+      "type": "research_claim",
+      "title": "笛卡尔：方法怀疑与认识的确定性",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C008",
+      "type": "research_claim",
+      "title": "康德：理论认识批判与实践理性自律",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C009",
+      "type": "research_claim",
+      "title": "亚里士多德：科学证明与伦理精度差别",
+      "evidence_level": "A*+B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C010",
+      "type": "research_claim",
+      "title": "斯多葛：物理、逻辑与伦理系统",
+      "evidence_level": "B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C011",
+      "type": "research_claim",
+      "title": "正理—胜论至新正理的知识与范畴分析",
+      "evidence_level": "B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C012",
+      "type": "research_claim",
+      "title": "阿维森纳：本质存在、必然可能与逻辑",
+      "evidence_level": "B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C013",
+      "type": "research_claim",
+      "title": "实用主义：探究、实践与可错知识",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C014",
+      "type": "research_claim",
+      "title": "女性主义认识论/批判理论：知识与公正",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C015",
+      "type": "research_claim",
+      "title": "朱熹补传：《大学章句》第五章为朱熹依程子思想补写，而非失传原文被找回",
+      "evidence_level": "P",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C016",
+      "type": "research_claim",
+      "title": "朱熹知行相须、知先行重与王阳明知行合一的核心争论不能简化为先知后行对立",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C017",
+      "type": "research_claim",
+      "title": "朱熹原文否定知行必须截然两段，穷理与主敬互相支撑",
+      "evidence_level": "P+S",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C018",
+      "type": "research_claim",
+      "title": "王阳明直接批评朱子格物训释但并不否定讲求具体践履细节",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C019",
+      "type": "research_claim",
+      "title": "王阳明编朱子晚年定论并主张晚年趋同；朱熹客观全盘转向仍未获证明",
+      "evidence_level": "P+S_abstract+H__historical_assertion_U",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C020",
+      "type": "research_claim",
+      "title": "朱子晚年定论34编辑标题中第31含两封朱熹答书，合35封书信，非必然丢失一则",
+      "evidence_level": "P+S_pdf_verified",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C021",
+      "type": "research_claim",
+      "title": "定论四条何叔京节录对应卷40答何叔京二、九、十一、十三，年代约1166/1168但置信度不同",
+      "evidence_level": "P+S_graded",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C022",
+      "type": "research_claim",
+      "title": "朱熹1196左右《答孙敬甫》仍论持敬致知与经书修订，否定全面弃知说",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C023",
+      "type": "research_claim",
+      "title": "朱熹1166–1168早期书信已论本心未发存养；词项出现不足以推断晚年才心学化",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C024",
+      "type": "research_claim",
+      "title": "31A及吕子约复书、朱熹31B短评和续评均见朱子文集卷48；仍未证独立封函和准确日期",
+      "evidence_level": "P_primary_31A_31R_31B; U_independent_letter_envelope_date",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C025",
+      "type": "research_claim",
+      "title": "卷48另封吕子约长回信仍提向外博观众理、经书解释并反对静坐偏执",
+      "evidence_level": "P+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C026",
+      "type": "research_claim",
+      "title": "选本31通信疑在1187系近代考据推断而非朱熹原信直接日期",
+      "evidence_level": "S_historical_conjecture; U_primary_date",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C027",
+      "type": "research_claim",
+      "title": "朱熹31B原文评价操存/放舍两句，局部赞同不能证明全面接受吕子约或后世王阳明心学",
+      "evidence_level": "P+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "O",
+      "target": "C001",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C002",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C007",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C011",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C012",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C001",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C003",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C007",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C009",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C011",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C013",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C014",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C001",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C002",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C003",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C009",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C013",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C014",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C002",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C003",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C007",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C009",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C011",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C012",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C013",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C014",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C005",
+      "target": "C006",
+      "relation": "historical_philosophical_dispute",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C007",
+      "target": "C008",
+      "relation": "later_critical_reconstruction",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C002",
+      "target": "C003",
+      "relation": "intra_tradition_tension",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C002",
+      "target": "C009",
+      "relation": "problem_analogy_not_influence",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C004",
+      "target": "C012",
+      "relation": "problem_analogy_not_influence",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C013",
+      "target": "C014",
+      "relation": "possible_comparison_not_common_school",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "O",
+      "target": "C015",
+      "relation": "research_domain_tag",
+      "evidence_level": "P_as_primary_passage"
+    },
+    {
+      "source": "E",
+      "target": "C015",
+      "relation": "research_domain_tag",
+      "evidence_level": "P_as_primary_passage"
+    },
+    {
+      "source": "M",
+      "target": "C015",
+      "relation": "research_domain_tag",
+      "evidence_level": "P_as_primary_passage"
+    },
+    {
+      "source": "O",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "comparative_interpretation_H"
+    },
+    {
+      "source": "E",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "V",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "M",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "C005",
+      "target": "C016",
+      "relation": "reinterprets_prior_simplification",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "C006",
+      "target": "C016",
+      "relation": "intra_confucian_historical_dispute",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "C015",
+      "target": "C016",
+      "relation": "background_textual_version_problem",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "O",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C017",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C018",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C019",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C017",
+      "target": "C016",
+      "relation": "qualifies_nonseparation",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C018",
+      "target": "C016",
+      "relation": "historical_criticism_and_difference",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C018",
+      "target": "C019",
+      "relation": "later_reconciliatory_reinterpretation",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C017",
+      "target": "C019",
+      "relation": "potential_counterevidence_requiring_dates",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C005",
+      "target": "C017",
+      "relation": "supported_by_additional_primary_text",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C006",
+      "target": "C018",
+      "relation": "supported_by_additional_primary_text",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "C019",
+      "target": "C017",
+      "relation": "claims_late_reinterpretation_not_proven",
+      "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "E",
+      "target": "C020",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C020",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C020",
+      "target": "C019",
+      "relation": "text_selection_count_uncertainty",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C021",
+      "target": "C019",
+      "relation": "dated_counterexample_to_all_late_claim",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C022",
+      "target": "C019",
+      "relation": "late_counterexample_to_total_abandonment",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C021",
+      "target": "C017",
+      "relation": "early_heart_mind_discourse_not_exclusively_late",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C022",
+      "target": "C017",
+      "relation": "late_study_and_practice_coexist",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "O",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C020",
+      "target": "C019",
+      "relation": "count_discrepancy_resolved_not_scholarly_conversion",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C021",
+      "target": "C019",
+      "relation": "four_early_letters_counter_evidence",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C023",
+      "target": "C019",
+      "relation": "early_mind_vocabulary_not_late_only",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C021",
+      "target": "C023",
+      "relation": "timed_early_supports_concept_history",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C020",
+      "target": "C021",
+      "relation": "selection_index_crosswalk",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "O",
+      "target": "C024",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C024",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C024",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C026",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C026",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C020",
+      "target": "C024",
+      "relation": "editorial_count_does_not_prove_complete_original_31B",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C024",
+      "target": "C019",
+      "relation": "selected_quote_not_complete_doctrinal_evidence",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C025",
+      "target": "C019",
+      "relation": "counterexample_to_total_abandonment_of_external_inquiry",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C026",
+      "target": "C019",
+      "relation": "dating_conjecture_limits_late_conversion",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C024",
+      "target": "C025",
+      "relation": "adjacent_but_not_identical_correspondence",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C024",
+      "target": "C026",
+      "relation": "only_indirect_year_conjecture",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C025",
+      "target": "C022",
+      "relation": "cross_period_study_and_cultivation_comparison",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "O",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C024",
+      "target": "C027",
+      "relation": "31B_original_text_supports_limited_agreement",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C027",
+      "target": "C019",
+      "relation": "local_approval_not_wholesale_late_conversion",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C027",
+      "target": "C025",
+      "relation": "disagreement_revealed_in_adjacent_communications",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C024",
+      "target": "C026",
+      "relation": "exact_date_still_not_verified",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C027",
+      "target": "C016",
+      "relation": "agreement_on_cultivation_not_full_doctrinal_identity",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "PATH-O",
+      "title": "O pillar research",
+      "nodes": [
+        "O",
+        "C001",
+        "C004",
+        "C012",
+        "C019"
+      ]
+    },
+    {
+      "id": "PATH-E",
+      "title": "E pillar research",
+      "nodes": [
+        "E",
+        "C003",
+        "C008",
+        "C013",
+        "C016",
+        "C019",
+        "C021",
+        "C024"
+      ]
+    },
+    {
+      "id": "PATH-V",
+      "title": "V pillar research",
+      "nodes": [
+        "V",
+        "C002",
+        "C004",
+        "C014",
+        "C016",
+        "C019",
+        "C027"
+      ]
+    },
+    {
+      "id": "PATH-M",
+      "title": "M pillar research",
+      "nodes": [
+        "M",
+        "C009",
+        "C011",
+        "C013",
+        "C016",
+        "C019",
+        "C022",
+        "C025",
+        "C027"
+      ]
+    }
+  ]
+}
