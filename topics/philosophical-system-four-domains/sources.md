@@ -71,6 +71,19 @@
 
 额外 [SEP African Sage Philosophy](https://plato.stanford.edu/entries/african-sage/) 的研究对象是多位智者与访谈项目，不可无证据填为单一 O/E/V/M 体系；[SEP Kant’s Moral Philosophy](https://plato.stanford.edu/entries/kant-moral/) 提供实践理性独立论证的学术入口。二者也属 B 级。
 
+## V0.7 宋明儒学四论原典核验（S44–S49）
+
+| ID | 等级 | 核对文本 | 四论论证定位及限制 |
+| --- | --- | --- | --- |
+| S44 | P 网络古籍原文 | [朱熹《大学章句》第五章](https://zh.wikisource.org/wiki/大學章句)，参 [CTP 四书章句集注](https://ctext.org/si-shu-zhang-ju-ji-zhu/da-xue-zhang-ju) | 原“传之五章”阙文，朱熹自述依程子意补传；即物穷理、致知。**补传不等于古代《大学》原文** |
+| S45 | P 门人记录文本 | [《朱子语类》卷九·论知行](https://zh.wikisource.org/wiki/朱子語類/009)，[四库本对照](https://zh.wikisource.org/zh-hans/朱子語類_(四庫全書本)/全覽1) | 记“知行相须”“知先行重”“亲历使知更明”；属于门人所录、后人所编，不等于朱熹逐字亲自著书 |
+| S46 | P 门人记录文本 | [《传习录》卷上徐爱录第5—6条](https://zh.wikisource.org/wiki/傳習錄/卷上) | 知行合一、批评“知了再行”和朱子格物的训释，涉及道德真知的概念，非一切命题知识 |
+| S47 | P 门人记录文本 | [《传习录》卷上陆澄录第32—34条](https://zh.wikisource.org/wiki/傳習錄/卷上) | “心外无理”“心即性，性即理”等，支持特定心/理关系的原文存在，**不证明客观物理世界不存在** |
+| S48 | P 公开古籍转录、版本待校 | [王阳明《大学问》，孔子文化网](https://www.chinakongzi.org/kzsf/lsjd/200705/t20070521_28090.htm) | 万物一体之仁、良知、物者事也、格者正也；编辑者钱德洪按语与王阳明正文需区分；作者/版本历史另核 |
+| S49 | S 权威学术二手 | [SEP Zhu Xi（2025 修订）](https://plato.stanford.edu/entries/zhu-xi/)；[SEP Wang Yangming（2024 修订）](https://plato.stanford.edu/entries/wang-yangming/) | 两者有关理、格物、道德认识与修养的竞争性解释。SEP 同时提示王阳明所批评的“格竹即穷尽一切理”未必是朱熹原本最佳解释 |
+
+以上只核定**指定段落文本的实际内容**；未进行刻本校勘和独立哲学史评审。四论的整体关系仍需解释性论证。详细证据与最强异议见 [朱熹—王阳明四论原典审查 V0.7](C04-C05-zhu-wang-primary-four-pillars.md)。
+
 ## 引用等级说明
 
 - **直接原典局部核对**：S01/S06/S07。支持的仅是已定位段落，不承诺整书已读。
