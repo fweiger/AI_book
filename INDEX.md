@@ -35,7 +35,7 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 | TOPIC-011 | [2026 中期选举至 2029：美国政策—财政—AI 投资—市场竞争性假说 #41](https://github.com/fweiger/AI_book/issues/41) | [研究框架 PR #51](https://github.com/fweiger/AI_book/pull/51) | `ISSUE + OPEN PR` |
 | TOPIC-012 | [太空算力：轨道光伏、发射、散热与全生命周期经济性 #60](https://github.com/fweiger/AI_book/issues/60) | [M0 研究总纲草稿 PR #61](https://github.com/fweiger/AI_book/pull/61) | `ISSUE + DRAFT PR` |
 
-| TOPIC-014 | [四论与哲学思想体系：本体论、认识论、价值论、方法论的关系及哲学史比较 #66](https://github.com/fweiger/AI_book/issues/66) | [V1.0 草稿 PR #67](https://github.com/fweiger/AI_book/pull/67)：34标题/35朱熹书信计数已解释；4封《答何叔京》对原信2/9/11/13及1166/1168年代、晚期对照；23候选主张、27节点/105关系，学术独立复核未完成 | `ISSUE + DRAFT PR · NOT_IN_MAIN` |
+| TOPIC-014 | [四论与哲学思想体系：本体论、认识论、价值论、方法论的关系及哲学史比较 #66](https://github.com/fweiger/AI_book/issues/66) | [V1.1 草稿 PR #67](https://github.com/fweiger/AI_book/pull/67)：卷48核出吕子约第31项首答原信及复书，31B完整再答原信和1187确切纪年仍待证；26候选主张、30节点/121关系，独立学术复核未完成 | `ISSUE + DRAFT PR · NOT_IN_MAIN` |
 
 **TOPIC-009 编号保留，不列为在库研究。** 睡眠科学专题曾经合并至公开仓库，但已通过 [2026-11-14 迁出提交 37f5189](https://github.com/fweiger/AI_book/commit/37f518998fb3a86ed6a3a2ef9dda56e054bfb3f0) 从公开 `main` 删除；不要从历史 PR 复制内容来恢复，也不要重复使用该编号。
 
