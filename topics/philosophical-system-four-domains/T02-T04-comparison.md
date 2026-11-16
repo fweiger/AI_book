@@ -2,6 +2,10 @@
 
 > 2026-11-17 · 研究性比较，非历史传播或同源结论。专题 [Issue #66](https://github.com/fweiger/AI_book/issues/66)。原典深化见 [墨家 T02](T02-mozi-four-pillars.md) 和 [亚里士多德 T04](T04-aristotle-four-pillars.md)。全篇严格以本体论 O、认识论 E、价值论 V、方法论 M 四轴组织。
 
+## V0.4 补充证据边界
+
+详见 [原典与论证审计](source-argument-audit-v04.md)。新的反例显示：《明鬼下》中的“无鬼仍可能有益”使墨家 E/V 关系更复杂；[SEP Aristotle's Ethics](https://plato.stanford.edu/entries/aristotle-ethics/) 强调伦理学方法与理论科学的区别。此前的“同篇直接关联”仅指文本中出现该连接，**不等于逻辑有效性已获证明**。四论主框架保持不变。
+
 ## 四论跨体系比较
 
 | 四论 | 墨家 T02 | 亚里士多德 T04 | 比较价值与禁止推断 |
