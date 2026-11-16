@@ -18,6 +18,12 @@
 
 本轮新增 C015、C016；对应版本图谱升至 0.2.0，但仍是 Draft。
 
+## ZW-R05 强反论：下一阅读路线
+
+[原典强反论与选编史审查](ZW-R05-strongest-objections-audit-v08.md) → [朱熹/王阳明 O/E/V/M 原典卡](C04-C05-zhu-wang-primary-four-pillars.md) → [论证 ARG-004B](arguments.md) → [稳定 C017–C019](claims.md) → [来源 S50–S56](sources.md)。
+
+**下一项唯一工作**：逐条核《朱子晚年定论》所录书信真实写作日期、上下文与未入选晚期反例；在此之前不得把朱熹晚年“彻底悔悟转向”认定为历史事实。
+
 ### 每轮的最小可核路径
 
 选择一个四论问题 → [arguments.md](arguments.md) 的前提和异议 → [traditions.md](traditions.md) 定位人物、文本、时期 → [sources.md](sources.md) 区分原典、译本与二手综述 → 核原文及最强反对意见 → 更新 [claims.md](claims.md)、[knowledge-map.md](knowledge-map.md) 与 [knowledge-graph.json](knowledge-graph.json) → [sessions](sessions/README.md) 留下真实阅读记录。
