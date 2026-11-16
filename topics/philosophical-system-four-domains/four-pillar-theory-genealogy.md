@@ -30,7 +30,7 @@
 
 | Q-ID | 根本争论 | 竞争性回答与代表传统 | 与 O/V/M 的内在连接 | 入门证据 |
 | --- | --- | --- | --- | --- |
-| E01 知识的对象 | 知识必须关于稳定、不变的对象吗？ | 柏拉图理念与知识、亚里士多德第一原则/证明、中观二谛区分 | **O**：实在结构决定可知对象？**M**：辩证/证明/二谛分析；**V**：真理如何引导善/解脱 | [Plato metaphysics/epistemology](https://plato.stanford.edu/entries/plato-metaphysics/)、[Aristotle](https://plato.stanford.edu/entries/aristotle-epistemology/)、[Madhyamaka](https://plato.stanford.edu/entries/madhyamaka/) |
+| E01 知识的对象 | 知识必须关于稳定、不变的对象吗？ | 柏拉图理念与知识、亚里士多德第一原则/证明、中观二谛区分 | **O**：实在结构决定可知对象？**M**：辩证/证明/二谛分析；**V**：真理如何引导善/解脱 | [Plato metaphysics/epistemology](https://plato.stanford.edu/entries/plato-metaphysics/)、[Aristotle](https://plato.stanford.edu/entries/aristotle-metaphysics/)、[Madhyamaka](https://plato.stanford.edu/entries/madhyamaka/) |
 | E02 知识来源 | 感知、理性、证言、推理及修养何以成为知识来源？ | 印度 Nyāya/pramāṇa，亚里士多德知识之因，儒家学知与实践 | **M**：来源如何检验？**V**：知者修养和解脱/德性之间的关系 | [Nyāya/early modern India](https://plato.stanford.edu/entries/early-modern-india/)、[Chinese epistemology](https://plato.stanford.edu/entries/chinese-epistemology/) |
 | E03 怀疑与确定性 | 有没有不能怀疑的知识起点？ | 笛卡尔方法怀疑、康德先验条件、休谟因果/归纳问题 | **O**：主体/世界存在的论证边界；**M**：怀疑/先验/经验分析 | [Descartes](https://plato.stanford.edu/entries/descartes-epistemology/)、[Kant](https://plato.stanford.edu/entries/kant/)、[Hume](https://plato.stanford.edu/entries/hume/) |
 | E04 真理与效用 | 真理是与世界符合、探究收敛，还是对实践有效？ | 墨家三表、皮尔士/詹姆斯/杜威的不同实用主义真理观 | **V**：有用是否等于真？**M**：怎样持续探究与纠错？“实用主义=有用即真”是错误的过度压缩 | [Mohism](https://plato.stanford.edu/entries/mohism/)、[Pragmatic Truth](https://plato.stanford.edu/entries/truth-pragmatic/) |
