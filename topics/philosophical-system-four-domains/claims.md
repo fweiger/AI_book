@@ -1,4 +1,4 @@
-# TOPIC-014｜四论比较研究：核心主张登记（C-ID，V0.6）
+# TOPIC-014｜四论比较研究：核心主张登记（C-ID，V0.7）
 
 > **全部为研究分支 Draft 候选主张**，没有任何一条被标记为已通过独立审稿或合并 main。权威入口：[Issue #66](https://github.com/fweiger/AI_book/issues/66)。稳定 ID 用于研究接续，新增证据或异议要修改状态，不覆盖原历史。
 >
@@ -10,8 +10,8 @@
 | C002 | 墨家《法仪》存在“天→规范范型/相爱相利”的明确文本连接，但其规范有效性有争论 | A*+H | [T02](T02-mozi-four-pillars.md)，[ARG-002](arguments.md) | 描述为何能提供道德义务？ |
 | C003 | 《墨子·非命上》三表将判断与利益评价相联，但“有利”不能直接等于“为真” | A*+B+H | [V0.4](source-argument-audit-v04.md) | 三表各篇版本差异；“有利”属于何种判准 |
 | C004 | 印度中观缘起/无自性—二谛—解脱之间可提出四论相联的解释模型 | B+H | [SEP Madhyamaka](https://plato.stanford.edu/entries/madhyamaka/)，[ARG-003](arguments.md) | 宗派内部分歧，原典未逐偈核 |
-| C005 | 朱熹将理气、格物致知与道德修养联系起来 | B+H | [SEP Zhu Xi](https://plato.stanford.edu/entries/zhu-xi/)，[ARG-004](arguments.md) | 何种关系由原文直接支持？ |
-| C006 | 王阳明以心即理、良知、知行合一强调道德认识与实践难以割裂 | B+H | [SEP Wang Yangming](https://plato.stanford.edu/entries/wang-yangming/)，[ARG-004](arguments.md) | 何谓“真知”？不同文本阶段是否一致？ |
+| C005 | 朱熹以即物穷理解释格物致知，且论知行相须，知先、行重；不能概括为知完才能行 | P+S+H | [《大学章句》补传与《朱子语类》卷九原典核对](C04-C05-zhu-wang-primary-four-pillars.md)、[ARG-004](arguments.md) | 原典版本与思想发展差异；认知先后和行动互发是否有紧张？ |
+| C006 | 王阳明将心即理、良知与知行合一连接，并在《传习录》批评将格物与实际践履割裂 | P+S+H | [《传习录》徐爱/陆澄录及《大学问》原典核对](C04-C05-zhu-wang-primary-four-pillars.md)、[ARG-004](arguments.md) | 真知与行动的概念规定是否导致循环？《大学问》编辑层次待审 |
 | C007 | 笛卡尔以方法怀疑重新组织确定性及存在问题，但不能据此认定其价值论已由此证明 | B+H | [SEP Descartes](https://plato.stanford.edu/entries/descartes-epistemology/)，[ARG-005](arguments.md) | 主体观是否需要预设本体论前提？ |
 | C008 | 康德知识批判的认识条件研究与实践理性的道德自主论证具有不同合法性要求 | B+H | [SEP Kant](https://plato.stanford.edu/entries/kant/)，[Kant Moral](https://plato.stanford.edu/entries/kant-moral/)，[ARG-007](arguments.md) | 理论/实践关系历来存在诠释争议 |
 | C009 | 亚里士多德严格证明知识方法与伦理研究的适当精度要求不同 | A*+B+H | [T04](T04-aristotle-four-pillars.md)，[SEP Aristotle Ethics](https://plato.stanford.edu/entries/aristotle-ethics/) | 是否能由不同著作推导出统一的多方法体系 |
@@ -20,6 +20,9 @@
 | C012 | 阿维森纳的本质/存在、必然/可能区分与概念论证紧密关联，但尚无充分证据重建其价值论全貌 | B | [SEP Ibn Sina](https://plato.stanford.edu/entries/ibn-sina-metaphysics/) | 另需灵魂、伦理著作 |
 | C013 | 实用主义强调探究方法与可修正知识的关系，各家真理理论不同，不能归为“有用即真” | B+H | [SEP Pragmatism](https://plato.stanford.edu/entries/pragmatism/)、[Truth](https://plato.stanford.edu/entries/truth-pragmatic/) | 需将皮尔士/詹姆斯/杜威拆成独立研究 |
 | C014 | 某些女性主义认识论与批判理论把社会权力、知识条件及公正目标一起研究，但各理论并不一致 | B+H | [SEP Feminist](https://plato.stanford.edu/entries/feminist-social-epistemology/)、[Critical Theory](https://plato.stanford.edu/entries/critical-theory/) | 规范目标与认识客观性怎样兼容？ |
+
+| C015 | 朱熹《大学章句》对格物第五章明言原传阙文，依据程子思想自行补写；该补传不可被引作古代《大学》原文 | P | [《大学章句》第五章原文](https://zh.wikisource.org/wiki/大學章句)、[四论原典审查](C04-C05-zhu-wang-primary-four-pillars.md) | 补传思想如何与其他朱熹著作衔接及版本差异待核 |
+| C016 | 朱熹与王阳明都不排斥知行互相联系；真实分歧包含格物解释、真知的道德判准与修养工夫结构 | P+S+H | [朱王四论原典审查](C04-C05-zhu-wang-primary-four-pillars.md)、[SEP Wang](https://plato.stanford.edu/entries/wang-yangming/) | 王阳明的批评是否针对朱熹本人最强观点或后世简化版本？ |
 
 ### 主张间关系（只作 Draft 导航）
 
@@ -31,4 +34,4 @@
 - C009 与 C002：标准、证明、善的**问题类比**，没有经核的墨家—亚氏传承链。
 - C013 与 C014：探究过程与社会价值的**可比较性**，不等于一个现代流派。
 
-**下一项只针对一种争论提升证据**：C005/C006 关于格物致知、良知与知行关系，或 C004 中观关于二谛和无自性的关系，逐段核原典后再升格相应主张证据等级。
+**下一项**：针对 C016（朱熹最强版本 vs 王阳明的批评）开展独立文本学及强反论审查；或选 C004 中观二谛/自性做原典核对。C005/C006 已升至指定原文片段 P，但整体四论连接仍 H。
