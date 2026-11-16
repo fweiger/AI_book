@@ -42,6 +42,12 @@
 
 **必须保留**：31B完整原信 U、1187纪年 S-猜测；卷48另一长答只是同题对照，不可被混写成31B全文。
 
+## V1.2 31B可核原文与四论研究
+
+[原选本31B](https://zh.wikisource.org/wiki/朱子晚年定論) → [朱子文集卷48原文答语与前后问答](https://zh.wikisource.org/wiki/晦菴集_(四庫全書本)/卷048) → [御纂朱子全书复引](https://zh.wikisource.org/wiki/御纂朱子全書_(四庫全書本)/全覽1) → [V1.2完整证据分层](ZWSEL-31B-original-found-four-pillar-v12.md) → [C024/C027](claims.md) 与 [ARG-004F](arguments.md)。
+
+**原文归属已解决；仍不确定独立成封/年份**。下一研究优先扩大35封信的可核样本，再检验朱熹整个四论体系有无实质变动。
+
 ### 每轮的最小可核路径
 
 选择一个四论问题 → [arguments.md](arguments.md) 的前提和异议 → [traditions.md](traditions.md) 定位人物、文本、时期 → [sources.md](sources.md) 区分原典、译本与二手综述 → 核原文及最强反对意见 → 更新 [claims.md](claims.md)、[knowledge-map.md](knowledge-map.md) 与 [knowledge-graph.json](knowledge-graph.json) → [sessions](sessions/README.md) 留下真实阅读记录。
