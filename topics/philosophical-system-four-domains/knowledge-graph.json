@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "topic_id": "TOPIC-014",
-  "topic_version": "0.1.0",
+  "topic_version": "0.2.0",
   "title": "四论世界哲学思想体系：古今中外论证与关系研究",
   "updated_at": "2026-11-17",
-  "source_level": "Draft: SEP 学术二手(B)、部分原典段落(A*)、四论研究解释(H); 未独立审稿/未合并",
+  "source_level": "Draft: SEP academic secondary (B), Mozi/Aristotle/Zhu Xi/Wang Yangming excerpts (P), O/E/V/M philosophical reconstructions (H); no independent scholarly approval",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -68,7 +68,7 @@
       "id": "C005",
       "type": "research_claim",
       "title": "朱熹：理、格物与德性修养",
-      "evidence_level": "B+H",
+      "evidence_level": "P+S+H",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     },
@@ -76,7 +76,7 @@
       "id": "C006",
       "type": "research_claim",
       "title": "王阳明：心即理、良知与知行合一",
-      "evidence_level": "B+H",
+      "evidence_level": "P+S+H",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     },
@@ -141,6 +141,22 @@
       "type": "research_claim",
       "title": "女性主义认识论/批判理论：知识与公正",
       "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C015",
+      "type": "research_claim",
+      "title": "朱熹补传：《大学章句》第五章为朱熹依程子思想补写，而非失传原文被找回",
+      "evidence_level": "P",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C016",
+      "type": "research_claim",
+      "title": "朱熹知行相须、知先行重与王阳明知行合一的核心争论不能简化为先知后行对立",
+      "evidence_level": "P+S+H",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     }
@@ -457,6 +473,66 @@
       "target": "C014",
       "relation": "possible_comparison_not_common_school",
       "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "O",
+      "target": "C015",
+      "relation": "research_domain_tag",
+      "evidence_level": "P_as_primary_passage"
+    },
+    {
+      "source": "E",
+      "target": "C015",
+      "relation": "research_domain_tag",
+      "evidence_level": "P_as_primary_passage"
+    },
+    {
+      "source": "M",
+      "target": "C015",
+      "relation": "research_domain_tag",
+      "evidence_level": "P_as_primary_passage"
+    },
+    {
+      "source": "O",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "comparative_interpretation_H"
+    },
+    {
+      "source": "E",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "V",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "M",
+      "target": "C016",
+      "relation": "research_domain_tag",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "C005",
+      "target": "C016",
+      "relation": "reinterprets_prior_simplification",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "C006",
+      "target": "C016",
+      "relation": "intra_confucian_historical_dispute",
+      "evidence_level": "P+S+H"
+    },
+    {
+      "source": "C015",
+      "target": "C016",
+      "relation": "background_textual_version_problem",
+      "evidence_level": "P+S+H"
     }
   ],
   "reading_paths": [
@@ -477,7 +553,8 @@
         "E",
         "C003",
         "C008",
-        "C013"
+        "C013",
+        "C016"
       ]
     },
     {
@@ -487,7 +564,8 @@
         "V",
         "C002",
         "C004",
-        "C014"
+        "C014",
+        "C016"
       ]
     },
     {
@@ -497,7 +575,8 @@
         "M",
         "C009",
         "C011",
-        "C013"
+        "C013",
+        "C016"
       ]
     }
   ]
