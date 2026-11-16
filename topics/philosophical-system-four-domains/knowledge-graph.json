@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "topic_id": "TOPIC-014",
-  "topic_version": "0.3.0",
+  "topic_version": "0.4.0",
   "title": "四论世界哲学思想体系：古今中外论证与关系研究",
   "updated_at": "2026-11-17",
-  "source_level": "Draft P primary excerpt; S academic secondary; S-abstract article abstracts; H cross-text reconstruction; U Zhu Xi complete late conversion historical assertion; no independent scholarly audit",
+  "source_level": "Draft P selected primary text excerpts; S academic secondary full PDF partial reading; H interpretive four-pillar relationships; U 34-vs-35 recension and undated selections; no independent scholarly approval",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -181,6 +181,30 @@
       "type": "research_claim",
       "title": "王阳明编朱子晚年定论并主张晚年趋同；朱熹客观全盘转向仍未获证明",
       "evidence_level": "P+S_abstract+H__historical_assertion_U",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C020",
+      "type": "research_claim",
+      "title": "朱子晚年定论选录数：可见34标题与学术文献原本35则差异待核",
+      "evidence_level": "P+S+U",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C021",
+      "type": "research_claim",
+      "title": "朱子晚年定论至少两条《答何叔京》书信有1168/1169前定年证据",
+      "evidence_level": "P+S",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C022",
+      "type": "research_claim",
+      "title": "朱熹1196左右《答孙敬甫》仍论持敬致知与经书修订，否定全面弃知说",
+      "evidence_level": "P+S+H",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     }
@@ -671,6 +695,96 @@
       "target": "C017",
       "relation": "claims_late_reinterpretation_not_proven",
       "evidence_level": "P_or_S_excerpt_with_H_interpretation"
+    },
+    {
+      "source": "E",
+      "target": "C020",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C020",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C021",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C022",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C020",
+      "target": "C019",
+      "relation": "text_selection_count_uncertainty",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C021",
+      "target": "C019",
+      "relation": "dated_counterexample_to_all_late_claim",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C022",
+      "target": "C019",
+      "relation": "late_counterexample_to_total_abandonment",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C021",
+      "target": "C017",
+      "relation": "early_heart_mind_discourse_not_exclusively_late",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "C022",
+      "target": "C017",
+      "relation": "late_study_and_practice_coexist",
+      "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
     }
   ],
   "reading_paths": [
@@ -694,7 +808,8 @@
         "C008",
         "C013",
         "C016",
-        "C019"
+        "C019",
+        "C021"
       ]
     },
     {
@@ -718,7 +833,8 @@
         "C011",
         "C013",
         "C016",
-        "C019"
+        "C019",
+        "C022"
       ]
     }
   ]
