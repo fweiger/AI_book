@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "topic_id": "TOPIC-014",
-  "topic_version": "0.4.0",
+  "topic_version": "0.5.0",
   "title": "四论世界哲学思想体系：古今中外论证与关系研究",
   "updated_at": "2026-11-17",
-  "source_level": "Draft P selected primary text excerpts; S academic secondary full PDF partial reading; H interpretive four-pillar relationships; U 34-vs-35 recension and undated selections; no independent scholarly approval",
+  "source_level": "Draft P primary passage; S 2023 journal p13 and 2009/2012 academic texts partially read; H interpreted O/E/V/M links; U dates of other selection letters and critical editions; scholarly peer review not_run",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -187,16 +187,16 @@
     {
       "id": "C020",
       "type": "research_claim",
-      "title": "朱子晚年定论选录数：可见34标题与学术文献原本35则差异待核",
-      "evidence_level": "P+S+U",
+      "title": "朱子晚年定论34编辑标题中第31含两封朱熹答书，合35封书信，非必然丢失一则",
+      "evidence_level": "P+S_pdf_verified",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     },
     {
       "id": "C021",
       "type": "research_claim",
-      "title": "朱子晚年定论至少两条《答何叔京》书信有1168/1169前定年证据",
-      "evidence_level": "P+S",
+      "title": "定论四条何叔京节录对应卷40答何叔京二、九、十一、十三，年代约1166/1168但置信度不同",
+      "evidence_level": "P+S_graded",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     },
@@ -204,6 +204,14 @@
       "id": "C022",
       "type": "research_claim",
       "title": "朱熹1196左右《答孙敬甫》仍论持敬致知与经书修订，否定全面弃知说",
+      "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C023",
+      "type": "research_claim",
+      "title": "朱熹1166–1168早期书信已论本心未发存养；词项出现不足以推断晚年才心学化",
       "evidence_level": "P+S+H",
       "status": "draft_candidate",
       "claim_file": "claims.md"
@@ -785,6 +793,60 @@
       "target": "C017",
       "relation": "late_study_and_practice_coexist",
       "evidence_level": "primary_excerpt_with_S_dating_and_H_interpretation"
+    },
+    {
+      "source": "O",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C023",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C020",
+      "target": "C019",
+      "relation": "count_discrepancy_resolved_not_scholarly_conversion",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C021",
+      "target": "C019",
+      "relation": "four_early_letters_counter_evidence",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C023",
+      "target": "C019",
+      "relation": "early_mind_vocabulary_not_late_only",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C021",
+      "target": "C023",
+      "relation": "timed_early_supports_concept_history",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "C020",
+      "target": "C021",
+      "relation": "selection_index_crosswalk",
+      "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
     }
   ],
   "reading_paths": [
