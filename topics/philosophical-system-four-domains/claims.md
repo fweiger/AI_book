@@ -28,6 +28,10 @@
 | C018 | 王阳明在《传习录》徐爱录第6条直接批评朱熹格物训释，同时卷上第3—5条认可实践细节仍须讲求；这不等于仅凭心情自行决定善 | P+S+H | [ZW-R05 强反论审查](ZW-R05-strongest-objections-audit-v08.md)、[传习录卷上](https://zh.wikisource.org/zh-hans/傳習錄/卷上) | 王是否正确刻画朱熹的最强原义仍有争议 |
 | C019 | 王阳明确实通过《朱子晚年定论》提出朱熹晚年趋于心学的解释，但**朱熹晚年客观上完全否定格物论未被本轮证明** | P+S+H（历史“完全转向”为 U） | [王阳明集卷七《序》](https://zh.wikisource.org/zh-hans/王陽明集/卷07)、[SEP Zhu Xi](https://plato.stanford.edu/entries/zhu-xi/)、[2022 研究摘要](https://aj.xhu.edu.cn/xhdxxbzskb/article/doi/10.12189/j.issn.1672-8505.2022.01.004)、[2023 研究摘要](https://toaj.stpi.niar.org.tw/index/journal/volume/article/4b1141f98da87f85018daaae85a30008) | 未逐条核选本朱熹书信真伪、年代和未入选反证；学术文章只读摘要 |
 
+| C020 | 维基文库当前《朱子晚年定论》正文有34个可辨选录小标题，而游腾达2023研究按历史文献称原本35则；现仅能确认**版次/计数差异待核**，不能先归责某一版错 | P+S+U | [选本34项目录/核年账本](Zhuzi-Late-Selections-dating-ledger-v09.md)、[游腾达2023全文PDF](https://ming.cnhis.ncnu.edu.tw/wp-content/uploads/2024/01/ming41_01Yu_full.pdf)第6页 | “段落/书信/选摘篇目”单位及版本目录尚需逐条比较 |
+| C021 | 选本中的《答何叔京十三》有1168年赈饥定年线索，《答何叔京十一》有早于1169年母亲去世的时间上界；因此**至少两条选录材料不能被无条件当作朱熹六十岁后的晚论** | P+S | [选本及书信卷四十对照](Zhuzi-Late-Selections-dating-ledger-v09.md)、[2009台大哲学博士论文80–81页](https://tdr.lib.ntu.edu.tw/bitstream/123456789/9034/1/ntu-98-1.pdf) | 全部选录年代未完成；从两条早例不能外推所有条目都不是晚论 |
+| C022 | 朱熹晚期《答孙敬甫》（年谱归丙辰1196）同时强调持敬、致知互相发明及继续修订《语孟》《大学》；**反对“朱熹晚年全面放弃致知和经学研究”这一过强命题** | P+S+H | [《晦菴集》卷六十三](https://zh.wikisource.org/wiki/晦菴集_(四庫全書本)/卷063)、[《朱子年谱》丙辰条](https://zh.wikisource.org/zh-hant/朱子年譜_(四庫全書本)/朱子論學切要語卷2)、[2009论文81页](https://tdr.lib.ntu.edu.tw/bitstream/123456789/9034/1/ntu-98-1.pdf) | 单封晚期书信不足以证明朱熹全部学说未变化，年份属年谱与研究推定 |
+
 ### 主张间关系（只作 Draft 导航）
 
 - C002 与 C003：**同属墨家但关系有张力**，需要审查 O/V 和 E/V 的不同论证功能。
