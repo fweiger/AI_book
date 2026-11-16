@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.0",
+  "topic_id": "TOPIC-014",
+  "topic_version": "0.1.0",
+  "title": "四论世界哲学思想体系：古今中外论证与关系研究",
+  "updated_at": "2026-11-17",
+  "source_level": "Draft: SEP 学术二手(B)、部分原典段落(A*)、四论研究解释(H); 未独立审稿/未合并",
+  "books": [],
+  "related_books": [],
+  "nodes": [
+    {
+      "id": "O",
+      "type": "pillar",
+      "title": "本体论：存在与世界",
+      "status": "framework_question"
+    },
+    {
+      "id": "E",
+      "type": "pillar",
+      "title": "认识论：知识与真理",
+      "status": "framework_question"
+    },
+    {
+      "id": "V",
+      "type": "pillar",
+      "title": "价值论：善与规范",
+      "status": "framework_question"
+    },
+    {
+      "id": "M",
+      "type": "pillar",
+      "title": "方法论：论证、解释、修养与探究",
+      "status": "framework_question"
+    },
+    {
+      "id": "C001",
+      "type": "research_claim",
+      "title": "柏拉图：理念、知识与善的关系",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C002",
+      "type": "research_claim",
+      "title": "墨家：天、法仪与相爱相利",
+      "evidence_level": "A*+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C003",
+      "type": "research_claim",
+      "title": "墨家：三表、社会效用与真理区分",
+      "evidence_level": "A*+B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C004",
+      "type": "research_claim",
+      "title": "中观：无自性、二谛与解脱",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C005",
+      "type": "research_claim",
+      "title": "朱熹：理、格物与德性修养",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C006",
+      "type": "research_claim",
+      "title": "王阳明：心即理、良知与知行合一",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C007",
+      "type": "research_claim",
+      "title": "笛卡尔：方法怀疑与认识的确定性",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C008",
+      "type": "research_claim",
+      "title": "康德：理论认识批判与实践理性自律",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C009",
+      "type": "research_claim",
+      "title": "亚里士多德：科学证明与伦理精度差别",
+      "evidence_level": "A*+B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C010",
+      "type": "research_claim",
+      "title": "斯多葛：物理、逻辑与伦理系统",
+      "evidence_level": "B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C011",
+      "type": "research_claim",
+      "title": "正理—胜论至新正理的知识与范畴分析",
+      "evidence_level": "B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C012",
+      "type": "research_claim",
+      "title": "阿维森纳：本质存在、必然可能与逻辑",
+      "evidence_level": "B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C013",
+      "type": "research_claim",
+      "title": "实用主义：探究、实践与可错知识",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C014",
+      "type": "research_claim",
+      "title": "女性主义认识论/批判理论：知识与公正",
+      "evidence_level": "B+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "O",
+      "target": "C001",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C002",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C007",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C011",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C012",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C001",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C003",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C007",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C009",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C011",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C013",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C014",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C001",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C002",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C003",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C009",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C013",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C014",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C002",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C003",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C004",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C005",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C006",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C007",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C008",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C009",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C010",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C011",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C012",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C013",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C014",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C005",
+      "target": "C006",
+      "relation": "historical_philosophical_dispute",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C007",
+      "target": "C008",
+      "relation": "later_critical_reconstruction",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C002",
+      "target": "C003",
+      "relation": "intra_tradition_tension",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C002",
+      "target": "C009",
+      "relation": "problem_analogy_not_influence",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C004",
+      "target": "C012",
+      "relation": "problem_analogy_not_influence",
+      "evidence_level": "B_or_H__further_evidence_required"
+    },
+    {
+      "source": "C013",
+      "target": "C014",
+      "relation": "possible_comparison_not_common_school",
+      "evidence_level": "B_or_H__further_evidence_required"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "PATH-O",
+      "title": "O pillar research",
+      "nodes": [
+        "O",
+        "C001",
+        "C004",
+        "C012"
+      ]
+    },
+    {
+      "id": "PATH-E",
+      "title": "E pillar research",
+      "nodes": [
+        "E",
+        "C003",
+        "C008",
+        "C013"
+      ]
+    },
+    {
+      "id": "PATH-V",
+      "title": "V pillar research",
+      "nodes": [
+        "V",
+        "C002",
+        "C004",
+        "C014"
+      ]
+    },
+    {
+      "id": "PATH-M",
+      "title": "M pillar research",
+      "nodes": [
+        "M",
+        "C009",
+        "C011",
+        "C013"
+      ]
+    }
+  ]
+}
