@@ -35,6 +35,8 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 | TOPIC-011 | [2026 中期选举至 2029：美国政策—财政—AI 投资—市场竞争性假说 #41](https://github.com/fweiger/AI_book/issues/41) | [研究框架 PR #51](https://github.com/fweiger/AI_book/pull/51) | `ISSUE + OPEN PR` |
 | TOPIC-012 | [太空算力：轨道光伏、发射、散热与全生命周期经济性 #60](https://github.com/fweiger/AI_book/issues/60) | [M0 研究总纲草稿 PR #61](https://github.com/fweiger/AI_book/pull/61) | `ISSUE + DRAFT PR` |
 
+| TOPIC-014 | [四论与哲学思想体系：本体论、认识论、价值论、方法论的关系及哲学史比较 #66](https://github.com/fweiger/AI_book/issues/66) | 专题研究总纲及 M1 概念辨析待开展 | `ISSUE · FRAMEWORK_PROPOSAL · NOT_IN_MAIN` |
+
 **TOPIC-009 编号保留，不列为在库研究。** 睡眠科学专题曾经合并至公开仓库，但已通过 [2026-11-14 迁出提交 37f5189](https://github.com/fweiger/AI_book/commit/37f518998fb3a86ed6a3a2ef9dda56e054bfb3f0) 从公开 `main` 删除；不要从历史 PR 复制内容来恢复，也不要重复使用该编号。
 
 ## 三、TOPIC-010｜殖民帝国比较与英国工业革命
