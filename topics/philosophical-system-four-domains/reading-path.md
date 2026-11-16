@@ -24,6 +24,12 @@
 
 **下一项唯一工作**：逐条核《朱子晚年定论》所录书信真实写作日期、上下文与未入选晚期反例；在此之前不得把朱熹晚年“彻底悔悟转向”认定为历史事实。
 
+## V0.9 逐封校勘与反向控制阅读路线
+
+[选文目录与年代准入账本](Zhuzi-Late-Selections-dating-ledger-v09.md) → [34/35 版本差异](Zhuzi-Late-Selections-dating-ledger-v09.md) → [原始《朱子文集》](https://zh.wikisource.org/wiki/晦庵先生朱文公文集_(四部叢刊本)/卷第四十) 与 [1196年《答孙敬甫》](https://zh.wikisource.org/wiki/晦菴集_(四庫全書本)/卷063) → [C020–C022](claims.md) → [ZW-R05 原理讨论](ZW-R05-strongest-objections-audit-v08.md)。
+
+**当前唯一工作**：查清维基文库可见34条和研究原本35则的差异，完成四封《答何叔京》原信逐字对应，再按同一标准扩展全体选文。
+
 ### 每轮的最小可核路径
 
 选择一个四论问题 → [arguments.md](arguments.md) 的前提和异议 → [traditions.md](traditions.md) 定位人物、文本、时期 → [sources.md](sources.md) 区分原典、译本与二手综述 → 核原文及最强反对意见 → 更新 [claims.md](claims.md)、[knowledge-map.md](knowledge-map.md) 与 [knowledge-graph.json](knowledge-graph.json) → [sessions](sessions/README.md) 留下真实阅读记录。
