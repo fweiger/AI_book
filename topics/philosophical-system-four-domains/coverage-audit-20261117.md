@@ -19,7 +19,7 @@
 | 内部 Markdown 链接 | 本轮按研究分支原 12 文件检查相对路径，**未发现指向同专题不存在文件的 Markdown 相对链接** | 本轮实际 PR 文件清单与各文件内容比对；不表示外部链接全量无误 |
 | main 正式知识 | 0 个本专题研究文件获合并；Issue 只在 [INDEX.md](https://github.com/fweiger/AI_book/blob/main/INDEX.md) 被列为 ISSUE/NOT IN MAIN | PR #67 未合并 |
 
-**注意**：本轮没有运行仓库 CI、GitHub Actions 或独立审稿；上表的“文件/链接存在”不构成原典结论正确的证明。
+**CI 追加核验（实际运行）**：PR #67 最新 HEAD `becd4cd57d4572cff05362c5e97a47a5fdd13e60` 对应 GitHub Actions `Knowledge-base integrity` run `43942047252`（结论 `success`）；其 `validate-knowledge` 作业和 `Validate book index, topic graph and links`、`Validate Discussion form YAML` 两步都显示 `success`。此为代码/文档结构验证，不构成古今中外哲学知识覆盖的学术正确性认证。**独立哲学史审稿尚未运行。**
 
 ## B. 四论各自的理论树没有真正形成
 
@@ -72,9 +72,9 @@
 | AC-03 三种竞争模型 | relations.md 写出存在先行、批判先行、交织式 | **模型已写，未证明其源于足够多真实哲学传统**；价值论的地位弱，论证链不完整 |
 | AC-04 来源分级 | sources.md + V0.4 审计 | **已有初步来源等级意识，但逐单元证据链缺漏** |
 | AC-05 可接续结构 | 有研究分支、Issue、文件互链、下一步 | **可部分接续，正式 claims/arguments/graph/session 缺失** |
-| AC-06 PR 审核/合并 | Draft PR #67 存在，未合并 | **PR 存在属实；未独立审核、未完成正式入库** |
+| AC-06 PR 审核/合并 | Draft PR #67 存在，结构 CI 成功但未合并 | **结构检查已获 GitHub Actions 实际成功证据；未独立哲学审稿、未完成正式入库** |
 
-**不将任何最终 AC 标记为 pass；仅记录文件存在和结构进展。** 未跑 CI 的项目保持 not_run。
+**不将任何最终 AC 标记为 pass；仅记录文件存在和结构进展。** 本次 PR HEAD 的结构 CI 已证实成功；文本学、哲学论证有效性、外部独立审稿均未验证。
 
 ## G. 纠正路线：主框架仍是四论，不增设替代框架
 
