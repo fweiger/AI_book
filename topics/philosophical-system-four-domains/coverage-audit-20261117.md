@@ -12,11 +12,11 @@
 | --- | --- | --- |
 | 唯一研究任务 | #66 open，Goal/Scope/AC 仍有效 | [Issue #66](https://github.com/fweiger/AI_book/issues/66) |
 | 草稿审查 | #67 open/draft/unmerged | [PR #67](https://github.com/fweiger/AI_book/pull/67) |
-| PR 文件清单 | **12 个**专题 Markdown 文件（从 GitHub PR changed filename 列表核得） | [PR #67 Files](https://github.com/fweiger/AI_book/pull/67/files) |
+| PR 文件清单 | **审计前为 12 个**专题 Markdown 文件（从 GitHub PR changed filename 列表核得）；本审计文件新增后为 13 个 | [PR #67 Files](https://github.com/fweiger/AI_book/pull/67/files) |
 | 四论候选矩阵 | T01–T14，**14 条**；各条目前均主要依据单条/少数二手综述 | [世界四论矩阵](world-four-pillar-matrix.md) |
 | 原典局部深化卡 | **2 条**：墨家 T02、亚里士多德 T04 | [T02](T02-mozi-four-pillars.md)、[T04](T04-aristotle-four-pillars.md) |
 | 关系审计 | [V0.4](source-argument-audit-v04.md) 是同一主体自审，非独立评审 | [V0.4](source-argument-audit-v04.md) |
-| 内部 Markdown 链接 | 本轮按研究分支 12 文件检查相对路径，**未发现指向同专题不存在文件的 Markdown 相对链接** | 本轮实际 PR 文件清单与各文件内容比对；不表示外部链接全量无误 |
+| 内部 Markdown 链接 | 本轮按研究分支原 12 文件检查相对路径，**未发现指向同专题不存在文件的 Markdown 相对链接** | 本轮实际 PR 文件清单与各文件内容比对；不表示外部链接全量无误 |
 | main 正式知识 | 0 个本专题研究文件获合并；Issue 只在 [INDEX.md](https://github.com/fweiger/AI_book/blob/main/INDEX.md) 被列为 ISSUE/NOT IN MAIN | PR #67 未合并 |
 
 **注意**：本轮没有运行仓库 CI、GitHub Actions 或独立审稿；上表的“文件/链接存在”不构成原典结论正确的证明。
