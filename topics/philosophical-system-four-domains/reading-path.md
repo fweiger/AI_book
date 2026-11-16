@@ -36,6 +36,12 @@
 
 **下一步骤**：保持稳定 ZWSEL-01–34 以及 ZWSEL-31A/B，逐条推进其他选文完整原信、年代、写作前后文及非选入同期材料的控制对照，不用一两封信替代全书或全部哲学史。
 
+## V1.1 31A原信、31B缺证与同题长答阅读路线
+
+[第31编辑单元](https://zh.wikisource.org/wiki/朱子晚年定論) → [朱子文集卷48首答/吕氏复书/相邻长答](https://zh.wikisource.org/wiki/晦菴集_(四庫全書本)/卷048) → [松山直藏旧史学定年疑说](https://ir.library.osaka-u.ac.jp/repo/ouka/all/90230/kaitoku_ex_11.pdf) → [V1.1四论原典对照](ZWSEL-31-Lv-Ziyue-original-correspondence-v11.md) → [C024–C026](claims.md)。
+
+**必须保留**：31B完整原信 U、1187纪年 S-猜测；卷48另一长答只是同题对照，不可被混写成31B全文。
+
 ### 每轮的最小可核路径
 
 选择一个四论问题 → [arguments.md](arguments.md) 的前提和异议 → [traditions.md](traditions.md) 定位人物、文本、时期 → [sources.md](sources.md) 区分原典、译本与二手综述 → 核原文及最强反对意见 → 更新 [claims.md](claims.md)、[knowledge-map.md](knowledge-map.md) 与 [knowledge-graph.json](knowledge-graph.json) → [sessions](sessions/README.md) 留下真实阅读记录。
