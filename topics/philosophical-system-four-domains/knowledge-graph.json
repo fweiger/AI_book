@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "topic_id": "TOPIC-014",
-  "topic_version": "0.6.0",
+  "topic_version": "0.7.0",
   "title": "四论世界哲学思想体系：古今中外论证与关系研究",
   "updated_at": "2026-11-17",
-  "source_level": "Draft P selected original texts and historical excerpts; S historical 1187 conjecture; H cross-text O/E/V/M comparison; U 31B complete Zhu Xi original and exact dating; independent peer review not_run",
+  "source_level": "Draft P directly matched 31B original passage in Zhu Xi collected works vol48; S later anthologies; H cross-pillar logic; U full discrete letter/date, complete selection datings and independent scholarly review",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -219,8 +219,8 @@
     {
       "id": "C024",
       "type": "research_claim",
-      "title": "选本31A原信及吕氏复书对应朱子文集卷48；31B仅有选本短答，无完整原信",
-      "evidence_level": "P_for_31A_and_Lv; P_selection_only_31B; U_full_31B",
+      "title": "31A及吕子约复书、朱熹31B短评和续评均见朱子文集卷48；仍未证独立封函和准确日期",
+      "evidence_level": "P_primary_31A_31R_31B; U_independent_letter_envelope_date",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     },
@@ -237,6 +237,14 @@
       "type": "research_claim",
       "title": "选本31通信疑在1187系近代考据推断而非朱熹原信直接日期",
       "evidence_level": "S_historical_conjecture; U_primary_date",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C027",
+      "type": "research_claim",
+      "title": "朱熹31B原文评价操存/放舍两句，局部赞同不能证明全面接受吕子约或后世王阳明心学",
+      "evidence_level": "P+H",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     }
@@ -967,6 +975,60 @@
       "target": "C022",
       "relation": "cross_period_study_and_cultivation_comparison",
       "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "O",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C027",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C024",
+      "target": "C027",
+      "relation": "31B_original_text_supports_limited_agreement",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C027",
+      "target": "C019",
+      "relation": "local_approval_not_wholesale_late_conversion",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C027",
+      "target": "C025",
+      "relation": "disagreement_revealed_in_adjacent_communications",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C024",
+      "target": "C026",
+      "relation": "exact_date_still_not_verified",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
+    },
+    {
+      "source": "C027",
+      "target": "C016",
+      "relation": "agreement_on_cultivation_not_full_doctrinal_identity",
+      "evidence_level": "primary_vol48_text_and_H_scope_limitation"
     }
   ],
   "reading_paths": [
@@ -1004,7 +1066,8 @@
         "C004",
         "C014",
         "C016",
-        "C019"
+        "C019",
+        "C027"
       ]
     },
     {
@@ -1018,7 +1081,8 @@
         "C016",
         "C019",
         "C022",
-        "C025"
+        "C025",
+        "C027"
       ]
     }
   ]
