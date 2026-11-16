@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "topic_id": "TOPIC-014",
-  "topic_version": "0.5.0",
+  "topic_version": "0.6.0",
   "title": "四论世界哲学思想体系：古今中外论证与关系研究",
   "updated_at": "2026-11-17",
-  "source_level": "Draft P primary passage; S 2023 journal p13 and 2009/2012 academic texts partially read; H interpreted O/E/V/M links; U dates of other selection letters and critical editions; scholarly peer review not_run",
+  "source_level": "Draft P selected original texts and historical excerpts; S historical 1187 conjecture; H cross-text O/E/V/M comparison; U 31B complete Zhu Xi original and exact dating; independent peer review not_run",
   "books": [],
   "related_books": [],
   "nodes": [
@@ -213,6 +213,30 @@
       "type": "research_claim",
       "title": "朱熹1166–1168早期书信已论本心未发存养；词项出现不足以推断晚年才心学化",
       "evidence_level": "P+S+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C024",
+      "type": "research_claim",
+      "title": "选本31A原信及吕氏复书对应朱子文集卷48；31B仅有选本短答，无完整原信",
+      "evidence_level": "P_for_31A_and_Lv; P_selection_only_31B; U_full_31B",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C025",
+      "type": "research_claim",
+      "title": "卷48另封吕子约长回信仍提向外博观众理、经书解释并反对静坐偏执",
+      "evidence_level": "P+H",
+      "status": "draft_candidate",
+      "claim_file": "claims.md"
+    },
+    {
+      "id": "C026",
+      "type": "research_claim",
+      "title": "选本31通信疑在1187系近代考据推断而非朱熹原信直接日期",
+      "evidence_level": "S_historical_conjecture; U_primary_date",
       "status": "draft_candidate",
       "claim_file": "claims.md"
     }
@@ -847,6 +871,102 @@
       "target": "C021",
       "relation": "selection_index_crosswalk",
       "evidence_level": "original_excerpt_and_source_review_with_interpretative_limits"
+    },
+    {
+      "source": "O",
+      "target": "C024",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C024",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C024",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "O",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "V",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C025",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "E",
+      "target": "C026",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "M",
+      "target": "C026",
+      "relation": "research_domain_tag",
+      "evidence_level": "classification_only"
+    },
+    {
+      "source": "C020",
+      "target": "C024",
+      "relation": "editorial_count_does_not_prove_complete_original_31B",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C024",
+      "target": "C019",
+      "relation": "selected_quote_not_complete_doctrinal_evidence",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C025",
+      "target": "C019",
+      "relation": "counterexample_to_total_abandonment_of_external_inquiry",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C026",
+      "target": "C019",
+      "relation": "dating_conjecture_limits_late_conversion",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C024",
+      "target": "C025",
+      "relation": "adjacent_but_not_identical_correspondence",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C024",
+      "target": "C026",
+      "relation": "only_indirect_year_conjecture",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
+    },
+    {
+      "source": "C025",
+      "target": "C022",
+      "relation": "cross_period_study_and_cultivation_comparison",
+      "evidence_level": "primary_text_plus_graduated_historical_inference"
     }
   ],
   "reading_paths": [
@@ -871,7 +991,8 @@
         "C013",
         "C016",
         "C019",
-        "C021"
+        "C021",
+        "C024"
       ]
     },
     {
@@ -896,7 +1017,8 @@
         "C013",
         "C016",
         "C019",
-        "C022"
+        "C022",
+        "C025"
       ]
     }
   ]
