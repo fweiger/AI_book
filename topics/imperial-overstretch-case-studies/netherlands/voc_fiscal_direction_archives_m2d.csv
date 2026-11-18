@@ -1,0 +1,7 @@
+collection,inventory,year_range,summary,fiscal_flow_direction,read_status,source_id,source_url
+NA_1.04.02,11046,1606,Zeeland grant resolution,STATE_TO_COMPANY,WORKING_PAPER_FOOTNOTE_ONLY,NLD-S28,https://repub.eur.nl/pub/32952/ERS-2012-007-FA.pdf
+NA_1.01.03,4841,1609-1610,States-General assistance petition and resolution,STATE_TO_COMPANY_TAX_RELIEF,WORKING_PAPER_FOOTNOTE_ONLY,NLD-S28,https://repub.eur.nl/pub/32952/ERS-2012-007-FA.pdf
+NA_1.04.02,11349,1606-1612,Zeeland accounts incl intra-company overdraft and commission sales,INTRA_COMPANY_AND_ACCOUNTING_SALES,WORKING_PAPER_RECONSTRUCTION,NLD-S28,https://repub.eur.nl/pub/32952/ERS-2012-007-FA.pdf
+NA_1.10.31,17,1602-1748,VOC payments to state for granting or renewing charter,COMPANY_TO_STATE,FINDING_AID_ONLY_NO_VALUES,NLD-S29,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NA_1.10.31,19,1602-1770,VOC distributions to shareholders,COMPANY_TO_SHAREHOLDERS,FINDING_AID_ONLY_NO_VALUES,NLD-S29,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
+NA_1.10.31,15,1640-1770,VOC all-chamber equipage and return proceeds,COMPANY_TRADE_EQUIPAGE,FINDING_AID_ONLY_NO_VALUES,NLD-S29,https://www.nationaalarchief.nl/onderzoeken/archief/1.10.31/download/pdf
