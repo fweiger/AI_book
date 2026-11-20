@@ -137,9 +137,15 @@
 | S39 | GRETIL《Nyāyasūtra》1.1.1–1.1.3 梵文罗马转写，页内文字明确注明 `The text is not proof-read` | https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_gautama-nyAyasUtra.htm | **A3-DIGITAL-SANSKRIT-UNPROOFREAD**；不可标原语校勘 PASS |
 | S40 | Ganganatha Jha 1915 英译《Nyāya-sūtra》1.1.1（十六类别及最高善）、1.1.2（苦/错误认识/解脱）与注释（多个论述层次不能混同） | https://www.wisdomlib.org/hinduism/book/nyaya-sutras-of-gautama-with-commentaries/d/doc1907012.html ; https://www.wisdomlib.org/hinduism/book/nyaya-sutras-of-gautama-with-commentaries/d/doc1907014.html | **A2-TRANSLATION-AND-COMMENTARY**；1915 指译本出版，不等于原经成书日期 |
 | S41 | SEP《Analytic Philosophy in Early Modern India》§1.1 的 diagnostic/essentialist 定义区分及早期正理派时间参考 | https://plato.stanford.edu/entries/early-modern-india/ | **B-READ_SPECIFIC**；后期思想不得未经桥接前推至早期作者；网页年代互异 `SOURCE_CONFLICT_OPEN` |
-| S42 | 《Vigrahavyāvartanī》第29偈 `pratijñā`，GRETIL 依 P.L. Vaidya 1960 的梵文数字文本，另与 DSBC 天城体对应编号对照 | https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa021_u.htm ; https://www.dsbcproject.org/canon-text/content/541/2533 | **A3-TWO-DIGITAL-SANSKRIT-PASSAGES**；仍需原语、异文及历史归属专业审查 |
+| S42 | 《Vigrahavyāvartanī》**Vv22/29/60** 数字梵文，GRETIL（据 P. L. Vaidya 1960 版转写）与 DSBC 天城体网页；数字输入来源关联，**不是两个独立校勘/手稿证人** | https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa021_u.htm ; https://www.dsbcproject.org/canon-text/content/541/2533 | **A3-RELATED-DIGITAL-TEXTS**；核到 22/29/60 偈，`pratijñā` 的语义与论战声部仍有争议，学者校勘 NOT_RUN |
 | S43 | Westerhoff 2009《The No-Thesis View》OUP 原书章节摘要；解释“无论题”与带本体论承诺的陈述之区分 | https://academic.oup.com/book/2343/chapter-abstract/142500873 | **B-ABSTRACT-ONLY**；未声称全文精读 |
 | S44 | Williams-Wyant 2017《Nāgārjuna's no-thesis view revisited》，`Asian Philosophy` 27(3):263–277，`pratijñā` 在论辩技术语境中的另解 | https://www.tandfonline.com/doi/full/10.1080/09552367.2017.1353210 | **B-ABSTRACT-ONLY**；期刊全文网页访问受限，不用摘要杜撰原文分析 |
 | S45 | SEP《The Theory of Two Truths in India》与《Logic in Classical Indian Philosophy》指定背景，检查中观／正理派内部思想多样性 | https://plato.stanford.edu/entries/twotruths-india/ ; https://plato.stanford.edu/entries/logic-India/ | **B-SELECTED-SECTIONS**；背景不能替代作者原典及审稿 |
 
 **定向风险**：正理派经文的网页年代线索与 SEP 参考年代存在明显不一致，不擅自裁决；“无论题”不能简化为“无理由”；两个印度案例是**有目的的反向选样**，不是印度哲学统计代表样本。外部原语和独立学者审查仍 `NOT_RUN`。
+
+### V0.8.1 证据来源依赖及 Vv29 上下文校正（限 S42）
+
+- GRETIL 的《回诤论》诗偈页注明以 1960 年版为底本、由 Sanskrit Buddhist Input Project 输入并获 DSBC 项目许可；DSBC 的另一个网页不应自动算作与前者完全独立的原始证人。**已核网页 ≠ 已核不同梵文手稿异文**。
+- 指定原典抽检扩至 **Vv22/Vv29/Vv60**：前者关联缘起与空性；中者出现“无 `pratijñā`”；后者涉及诸法空性已被论证及关于命题的责难。此为相同文本内部需解释的证据张力，不等于已经证明矛盾或已经解决其语义。
+- [Oxford University Press *The Dispeller of Disputes* Commentary 章节摘要](https://academic.oup.com/book/7445/chapter-abstract/152339703) 分列 1–4/21–29 与 60 的讨论组；仅阅读摘要，不标全文已读。结论限于**单偈不足以裁决整部论证**；专业原语与评论审读 `NOT_RUN`。
