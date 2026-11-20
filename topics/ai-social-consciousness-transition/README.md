@@ -13,6 +13,7 @@
 ## 当前入口
 
 - [首轮历史与 AI 命题核查](initial-claim-audit.md)：包含四条件逻辑、先秦/文艺复兴/宗教改革/新文化运动、两份 AI 实证及反对解释。
+- [生产力—生产关系的同期文明对照与因果核查](production-relations-comparative-evidence.md)：区分相关与主因，比较先秦/希腊/印度/波斯和意大利/明代/奥斯曼/印度的历史机制。
 - [唯一动态 GOAL_TRACKER](../../task-goals/issue-70/GOAL_TRACKER.md)：跨会话读取最新阶段与当前**一个**优先动作；目标/AC 始终以 Issue #70 为准。
 - [开放讨论 Issue #70](https://github.com/fweiger/AI_book/issues/70)：第三方可就 C01–C10 指出原始出处、反例和新研究；评论本身不是核验通过。
 
