@@ -59,3 +59,27 @@
 - 各经典的原语言版本校勘与文本归属/编纂史仍须专门审查，不能因网页原文可读就标为完整验收。
 - 更多**未按主题精选**的边界样本（科学、宗教、文学、AI）能暴露 H1 的定义宽窄问题；这是下一步的高价值主线。
 - 对比三对相似主题不构成对整个中西哲学传统的代表性抽样；跨文明总体结论应保持限定。
+
+## S21–S29｜第三轮四领域边界材料（2026-11-21）
+
+> 引用见 [boundary-stress-test.md](boundary-stress-test.md)。下列状态只代表**指定章节/段落阅读**；英语译本不等于德、俄、拉丁语原典校勘；科学/宗教/文学案例是哲学概念反例，不是经验因果实验。
+
+| SRC | 级别 | 阅读与判定 | URL | 状态 |
+| --- | --- | --- | --- | --- |
+| S21 | A2 | 爱因斯坦1905相对论论文 §1，对“同时性”“时间”的定义及物理钟测量（1923年英译） | https://gisinb.ch/gisin/physique/relativite/Paper_en1/Einstein.html | READ_SPECIFIC_PASS；**非德文版** |
+| S22 | B | SEP《Science and Pseudo-Science》§4.2–4.3，科学/伪科学划界与科学/哲学边界并不等同 | https://plato.stanford.edu/entries/pseudo-science/ | READ_SPECIFIC_PASS |
+| S23 | A2 | 阿奎那《Summa Theologiae》I Q1 Articles 1,8：理性哲学与启示神学、经院论证 | https://www.newadvent.org/summa/1001.htm | READ_SPECIFIC_PASS；**英译非拉丁文训诂** |
+| S24 | A2 | 陀思妥耶夫斯基《卡拉马佐夫兄弟》Book V Chapter 5 “大审判官” | https://en.wikisource.org/wiki/The_Brothers_Karamazov/Book_V/Chapter_5 | READ_SPECIFIC_PASS；**Garnett 英译非俄文版** |
+| S25 | B | SEP《Fiction》§3 Fiction and Knowledge，文学认知主义/非认知主义争议 | https://plato.stanford.edu/archives/fall2025/entries/fiction/ | READ_SPECIFIC_PASS |
+| S26 | A2 | 图灵1950年 “Computing Machinery and Intelligence”，模仿游戏与“机器思考”的概念重构 | https://abelard.org/turpap/turpap.php | READ_SPECIFIC_PASS（论文转载）；Oxford 原刊在线全文抓取错误，不能声称原刊直读 |
+| S27 | B | SEP《The Chinese Room Argument》§3–5，塞尔论证、systems reply、强弱AI区别 | https://plato.stanford.edu/entries/chinese-room/ | READ_SPECIFIC_PASS（学术二手） |
+| S28 | B | SEP《The Turing Test》，经验表现与心智概念判断区分 | https://plato.stanford.edu/archives/spr2021/entries/turing-test/ | READ_SPECIFIC_PASS |
+| S29 | A2+B | 晚期维特根斯坦《哲学研究》§§65–71 游戏/家族相似的原典节选及学术分析；**映射到“哲学”是本研究 R 级重构** | https://topologicalmedialab.net/xinwei/classes/readings/Wittgenstein/lw65-69c.htm ; https://plato.stanford.edu/entries/wittgenstein/ | 章节网页 READ；德文校勘 NOT_RUN；套用到“哲学” NOT_PROVEN |
+
+### 第三轮方法与异常记录
+
+1. **没有进行任何 AI 意识、主体性或理解能力的实验**；使用图灵/塞尔哲学论证作概念界限分析，不声称实验结果。
+2. **哲学领域可以重叠**：科学作品出现 R（根本反思）不严格等同“找到 R 且不是 P”的反例，不能宣称由此形式证明充分性失败。
+3. **翻译限制**：爱因斯坦德文、阿奎那拉丁文、陀思妥耶夫斯基俄文均未完成原语训诂；论文/章节仅核公开可阅读指定部分。
+4. **新定义 H2 属 PROVISIONAL**，历史学派 E1/E2/E3 的逻辑争议尚待独立学术复核，不能将“家族相似”宣传成跨文明哲学的公认结论。
+5. Oxford University Press 的图灵论文原刊页面可检索 DOI https://doi.org/10.1093/mind/LIX.236.433 ，但本轮网页展开失败；使用公开全文转载并标记差异。
