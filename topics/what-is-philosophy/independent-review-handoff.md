@@ -1,0 +1,149 @@
+# TOPIC-015｜独立审稿交接与高风险来源核验包 V0.6
+
+> **规范任务**：[AI_book #68](https://github.com/fweiger/AI_book/issues/68) · **研究 PR**：[Draft PR #69](https://github.com/fweiger/AI_book/pull/69) · **日期**：2026-11-21  
+> **审稿对象**：[《哲学是什么？》综合答卷 V0.5](answer-to-what-is-philosophy.md)；配套证据账本 [S01–S38](sources.md)，[三组中西原典](three-paired-text-readings.md)、[四领域边界](boundary-stress-test.md) 和 [E1/E2/E3](metaphilosophy-positions-review.md)。  
+> **V0.8 南亚反向案例**：[T07–T08 正理派/《回诤论》](review-v0.8-indian-countercases.md) 及 [V0.8 综合答卷](answer-to-what-is-philosophy.md) 补充 S39–S45，提出诊断式辨认与本质定义分离、`pratijñā` 词义争议；独立审核者应连同旧 J1–J6 反向检验。这是**后续研究交付，不是正式 Review 通过**。
+>
+> **后续增量提示**：本文件是针对 V0.5 的 **V0.6 历史交接快照**，不是新的审稿通过证明。后续的 [V0.7 逻辑修订及 T01–T06 六案例测试](review-revision-v0.7.md) 已修正 E1/E2/E3 层级关系与 H2 定位；审稿者须把该文件连同 [V0.7 综合答卷](answer-to-what-is-philosophy.md) 一并核对，J1–J6 均未被宣称正式 PASS。
+>
+> **状态**：本轮由同一研究执行者进行**定向网页来源抽检及逻辑结构自审**；**外部独立专家/第二审稿 Agent 尚未实际参与，INDEPENDENT_REVIEW_NOT_RUN**。此文件不是第三方验收报告，更不是已授权邀请审稿者的证明。
+
+## 0. 审稿任务的决策边界
+
+原始 Goal：“哲学是什么？有无跨时代、跨文明共同本质？若没有排他定义，怎样辨认、理解和评价哲学？” 不以四论替代此问题；[TOPIC-014 #66](https://github.com/fweiger/AI_book/issues/66) 是独立研究，未被修改。
+
+**审稿须判断**：是否能够从所引用的具体段落推出答卷中的有限结论？是否把“原典段落”“研究性归纳”“现代解释”“比较类比”混成一种证据？是否出现 \`R→P\` / \`P→R\` 必要充分条件的逻辑混淆？**不得通过多人投票或综合评分“宣布哲学本质”。**
+
+### 证据等级和状态代码
+
+- **A1**：古汉语传世原文网页指定段直读（**非古籍校勘**）；**A2**：希腊/拉丁/德文等文本的英译或英语论文指定段直读（**非原语校勘**）。
+- **B**：SEP/IEP、专门学术解释网页指定章节；**B-ABSTRACT-ONLY**：公开论文仅摘要；**C**：用户来源转写未经逐字校验；**R**：本研究提出的跨文本推论/形式分析，不冒充作者原意。
+- **SPOT_CHECK_PASS**：本轮仅核到相应文本/元数据且与限定性主张相符；**QUALIFIED**：可支持有限结论，不能支持强推论；**OPEN**：真值/归类有争议；**SOURCE_PENDING**：本轮未核或原始版本不可访问；**EXTERNAL_REVIEW_NOT_RUN**：无独立审稿记录。
+- **判定粒度**：每个 \`CLAIM-ID × SOURCE-ID × 版本/段落 × 推论范围\`，而不是给哲学整体打一个“通过”标签。
+
+## 1. 优先级最高的四个风险点（H01–H04）
+
+### H01｜C02 中西原典“同题”是否偷换“同法”？—审稿优先级 P0
+
+**已定向核到的可访问来源**：
+1. **S15** 柏拉图《申辩》21c–e，Harold North Fowler 英译（Perseus/Tufts）：https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0059.tlg002.perseus-eng2:21/ 。**SPOT_CHECK_PASS (A2)**：21d 中苏格拉底在与政治人物交谈后指出对方“认为自己知道”而其实并不知；讨论有神谕与审判辩护语境，不是孤立“谦虚箴言”。页面列 Fowler 译本信息为 1914；**不能把其他网页所载 Fowler 1966 标注自动混同为同一版次**。
+2. **S16** 《论语·为政》2.17、2.18 传世文与现代译文（2.17 称“由”/子路）：https://www.analects.net/analects/2-wei-zheng/2-you-hui/ ; https://confucius-analects.org/en/books/02/ 。**SPOT_CHECK_PASS (A1/translation)**：2.17 是子路的知与不知之教；2.18 是对子张慎言慎行等的另一段教诲，**相邻≠同一谈话或直接因果链**。
+3. **S17** 亚里士多德《形而上学》A.1 981a–981b、A.2 起关于因与原则（Perseus / MIT）：https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0086.tlg025.perseus-eng2/ ; https://classics.mit.edu/Aristotle/metaphysics.1.i.html 。**SPOT_CHECK_PASS (A2)**：经验知“事实如此”，技艺/更高知识知“为什么”；但单靠此段不能证明西方哲学的全部方法只问原因。
+4. **S18** SEP《Mohism》§3.4 三 \`fa\`（准则）：https://plato.stanford.edu/entries/mohism/ 。**SPOT_CHECK_PASS (B)**：古圣王先例、耳目经验及政治社会效用并列；《非命》上中下三篇有不同表述。**不应写成现代三重科学检验**。中文原文《墨子·非命上》版本比较仍 SOURCE_PENDING。
+5. **S19** SEP《Zhuangzi》有关“彼/是”“成心”的诠释：https://plato.stanford.edu/entries/zhuangzi/ 。**SPOT_CHECK_PASS (B)**：立场依赖及“道枢”存在多种解读，不能把它定为简单真理虚无主义。
+
+**核心限定**：苏格拉底/孔子可比“不要将不知冒充知”，但苏格拉底的公开诘问、孔子师徒教诲/学思修养有不同文本功能；亚里士多德原因追究与墨家三表判断标准是不同分析层次；庄子彼是反思与早期维特根斯坦命题逻辑澄清不等同。
+
+**最强反对意见**：跨文本共性可能仅是“任何思考者都有判断”，过度宽泛；六个经典文本是按主题挑选，不能证明跨文明普遍规律。若依译文选题导致误译，整个“同题”结论也需降级。
+
+**独立审稿者要做**：
+- J1：任选至少两处原文核对中英/古希腊含义，记录版次、页/章、不同译法与是否改变本稿对应的“认识谦逊”重构。
+- J2：核《墨子·非命上》的三表与其它两篇版本差异；对庄子“成心/是非”提出最强非相对主义解释；核《论语》2.17/2.18 是否错误当成同一对话。
+- 记录实际外部检查结果：\`reviewer identity/affiliation or role (without private data) + date + source edition + passage + finding + URL/comment\`；**目前均未收到，EXTERNAL_REVIEW_NOT_RUN**。
+
+### H02｜C03 “哲学”东亚译名史是否被过度推断？—审稿优先级 P0
+
+**出版社一手出版元数据**：桑兵《The Origin of “Chinese Philosophy”》，\`Frontiers of History in China\` **2019, Vol. 14, Issue 4, pp. 535–574**，DOI \`10.3868/s020-008-019-0026-8\`；官网 **Published Online 2020-01-17**。
+- https://journal.hep.com.cn/fhc/EN/10.3868/s020-008-019-0026-8
+- **SPOT_CHECK_PASS (publisher metadata + B-ABSTRACT-ONLY)**：可见摘要讨论 \`zhexue\` 与 Nishi Amane、西周对东西学问分类的理解，及近代日本学术中“东方哲学”的制度化；网页显示“登录浏览全文”，**未读取全文**。
+- **必须区别**：论文的刊期与上线时间不是同一口径；“哲学”一词的现代译介史 ≠ 先秦思想是否具有哲学价值的规范证明；“西周发明译名”是文章摘要的历史叙述，若要对起源作完全排他的第一出现断言，还需早期文献、译名竞争和概念史独立核对。
+
+**最强反对意见**：后来形成的学术术语仍可能准确标识古代一组真实问题；“近代才采用名词”不能推论此前没有相应思想实践。
+
+**独立审稿任务**：J3 概念史专家补桑兵全文及相关 Nishi Amane 原始材料或其它原始术语考证；核摘要是否与本文的概括一致；对网页上日期/期刊卷期保留不同元数据字段；**全文核验 SOURCE_PENDING、EXTERNAL_REVIEW_NOT_RUN**。
+
+### H03｜C05 晚期维特根斯坦家族相似论能直接推广至“哲学”吗？—审稿优先级 P0
+
+**学术二手+指定篇章**：
+- SEP《Ludwig Wittgenstein》§3.4：https://plato.stanford.edu/entries/wittgenstein/
+- 《Philosophical Investigations》§65–71 的论述/学术解析：https://wab.uib.no/ojs/index.php/agora-wab/article/view/2946/3613
+- **SPOT_CHECK_PASS (B)**：家族相似的主要文本例子是“游戏”“语言游戏/语言”的使用；有关 §65–67 的专业讨论也涉及数等概念。**它不是“哲学绝不可能有本质”的原典证明**。
+- **R 级跨域推论**：把“哲学”作为可能具有重叠关系而非单一本质的概念，是本稿 E2 的一种竞争性工作模型。
+
+**最强反对意见**：\`game\` 无固定充要条件，不推出 \`philosophy\` 也没有；即便“哲学”在日常用法中有家族相似，它在规范/学科意义上仍可能存在更严格核心。无限相似链也可能吞并科学与文学。
+
+**独立审稿任务**：J4 核 §65–71 对原始例子的准确范围；列出从“游戏”推广到“哲学”所需要、但现有材料没有证明的桥接前提；提出至少一个本质主义的最强反击，而不以“维特根斯坦说过”取代论证。**独立结论 NOT_RUN**。
+
+### H04｜C04 “根本反思不是哲学独占”与“没有充要定义”是否混同？—审稿优先级 P0
+
+令 \`R(x)\` 为活动具有根本性反思，\`P(x)\` 为活动属于哲学。
+
+| 欲证明结论 | 正确形式 | 实际应有证据 |
+| --- | --- | --- |
+| R 是哲学的**必要条件** | \`P(x) → R(x)\` | 反例需 \`P(x) ∧ ¬R(x)\` |
+| R 是哲学的**充分条件** | \`R(x) → P(x)\` | 反例需 \`R(x) ∧ ¬P(x)\` |
+| R 是**排他的**哲学标志 | \`P(x) ↔ R(x)\` 且不允许其它领域内有 R（互斥域假定） | 除形式双条件外，还需要明确 \`P\` 与科学/宗教等类别互斥的额外假定 |
+| 科学/文学/宗教亦可能具有 R | \`∃x [R(x)∧S(x)]\`（S 是其它领域） | **不能**由此得到 \`¬P(x)\`，因为可能 \`P(x)∧S(x)\` |
+
+**内部形式审查：PASS（上述推理结构正确）**；**哲学真实外延判定：OPEN**。爱因斯坦同时性概念反思、阿奎那神学论证、文学《大审判官》只说明有交叉，不能自动成为严格证伪哲学充要条件的反例。旧 H1 本身也从未断言严格 \`P↔R\`，所以对“旧 H1 已被证伪”应明确判为**未经支持的说法**。
+
+**最强反对意见**：从实践角度看，一个不能排他划界的“定义”可能仍是一条令人不满意的准则；但这是对定义**有用性**的批评，不是严格的形式逻辑反证。
+
+**独立审稿任务**：J5 由逻辑/分析哲学方向审查 P/N/S/R 的类型、活动粒度、是否存在语义模糊导致的量词错误；判别“不能排他”“未证明充分/必要”“不可能定义”三个强度不同的主张。**独立审稿 NOT_RUN**。
+
+## 2. C01–C08 全部主张的审稿交接矩阵
+
+| 主张 ID | 抽检关键来源 | 源级别 / 本轮结果 | 最大论证风险 | 审稿要做的动作（责任状态） |
+| --- | --- | --- | --- | --- |
+| **C01 爱智慧** | S02《会饮》204a–b；S15《申辩》21d；访谈 S12 | A2 主要来源继承此前核验；S15 指定段本轮重核；S12 C 未校对 | 把人物对话与词源当作者自述或必要充分定义 | 核 S02 原文对话角色、访谈逐字句；**UNASSIGNED/NOT_RUN** |
+| **C02 中西可比较但不等同** | S15–S20（原典与译本）；S18/19 SEP | **A1/A2 指定段 & B 定向抽检 PARTIAL PASS** | 原典节选+现代比较误作跨文明总体结论 | H01/J1/J2；**UNASSIGNED/NOT_RUN** |
+| **C03 哲学译名/学科史** | S33 桑兵官网及 S32 SEP | **S33 期刊元数据 PASS / 正文 B-ABSTRACT-ONLY** | 把刊期/上线日混淆，把近代命名当古代思想资格 | H02/J3；**UNASSIGNED/NOT_RUN** |
+| **C04 与相邻领域重叠** | S21 爱因斯坦英译；S23 阿奎那英译；S24 文学英译；S35 SEP | **继承既有 A2/B，逻辑定向审查 PASS** | 把非排他说成充要条件形式反证 | H04/J5；**UNASSIGNED/NOT_RUN** |
+| **C05 E1/E2/E3 竞争** | S30 IEP 元哲学；S31 SEP 维特根斯坦；S33 译名史 | **B 定向抽检 PASS（部分），E1/E2/E3 R 级重构** | 将三方案当作者自称的分类或多数共识 | H03/J4+J6；**UNASSIGNED/NOT_RUN** |
+| **C06 四论只是路径之一** | Issue #68、Issue #66、研究定义矩阵 | **规范目标和文件回读 PASS** | 用知识地图冒充本质定义，或复制第二 Issue 进度 | 对照 Issue #66 的 Goal/AC 是否未修改；**UNASSIGNED/NOT_RUN** |
+| **C07 H2 比较模型** | E1/E2/E3 文稿、H1 压力、S01–S38 账本 | **内部一致性审查 PARTIAL** | 四维框架过宽、过窄、无可反驳性 | 以未选案例反向检验 H2 并出具反例；**UNASSIGNED/NOT_RUN** |
+| **C08 跨文明终极共同本质仍开放** | E1/E2/E3 最强论证；比较哲学 SEP | **逻辑结论 QUALIFIED** | “尚无证据证明”误称“已经证明不存在” | 审查此结论是否保持 OPEN 并允许未来反证；**UNASSIGNED/NOT_RUN** |
+
+**矩阵中的 PARTIAL PASS/QUALIFIED 不等于相关 AC 已验收通过**。当前所有独立审稿指派为 UNASSIGNED，所有外部审稿结果 NOT_RUN。
+
+## 3. 对外审稿问题清单 J1–J6 与验收证据规范
+
+| 审稿问题 | 复核对象 | 需要提交的可审查证据 | 当前 |
+| --- | --- | --- | --- |
+| J1 古希腊/儒家“知与不知”是否过度同化？ | S15/S16 及上下文 | 版本、章节、原文/译文差异、调整建议 | NOT_RUN |
+| J2 墨家/庄子及原生语义解释是否准确？ | S18/S19 与古籍版本 | 原典、异文/注疏、受影响命题 | NOT_RUN |
+| J3 哲学译名史是否有史实/时间误读？ | S33 Nishi Amane 与桑兵论文 | 官方原始书目/原始译词证据、刊期及日期分栏 | NOT_RUN |
+| J4 家族相似从“游戏”到哲学的桥接是否成立？ | S29/S31 | PI 指定段、桥接前提、最强反例 | NOT_RUN |
+| J5 非排他性与充要反证逻辑是否严谨？ | C04/H1/H2 形式分析 | P/R 定义、量词、互斥域假设、反例核查 | NOT_RUN |
+| J6 全球/非中西传统的代表性是否不足？ | 当前已选原典及 H2 | 提出至少一个未精选的非中西原典及其反例功能（先定证据等级） | NOT_RUN |
+
+如实际独立审稿发生，记录至少：审稿者可公开角色或授权标识、审稿时间、核验来源 URL/文献版本/段落、评论或评审提交位置、结论 \`PASS/PARTIAL/FAIL\`、需要修改的 claim ID 与建议。**只列未来要求，不填虚构结果。**
+
+## 4. 失败/局限与可执行修订
+
+1. **本轮确已抽检**：Plato《申辩》21d（Perseus）；《论语·为政》2.17及相邻上下文；SEP《Mohism》三表版本及意义；SEP《Zhuangzi》“彼/是”；亚里士多德《形而上学》A.1；SEP《Wittgenstein》§3.4及 PI 学术注释；桑兵出版社官网摘要与刊期/在线日期。全部可定位，但其中多数**不是原语传本校勘**。
+2. **本轮未重核**：S01–S38 的全体 URLs；《会饮》204a–b 完整原语版本；相关中文古籍传本异文系统核对；桑兵论文正文；桑兵对西周论述的更早原始史料；印度/非洲原典代表性；教授访谈音频逐字校验。不能从本轮摘要或二手条目自称已完成这些。
+3. **修订要求**：若 J1/J2 证明原典语义失当，回到 [三组文本对照](three-paired-text-readings.md) 与 [主答卷](answer-to-what-is-philosophy.md) 的具体 claim；若 J3 发现译名史异议，分开改历史命名与规范哲学资格部分；若 J4/J5 有逻辑失败，优先修 H2 的必要/充分条件措辞，**不能暗改 Issue #68 批准 Goal/AC**。
+4. **本轮无需增加新子 Issue**：由同一 TOPIC-015 PR #69 的审稿评论和提交记录承载证据；别将审稿缺口擅自拆成新的长期任务。
+5. **当前对 PR 的建议**：保留 Draft/Unmerged。可继续做针对性来源修补，但**没有任何外部审稿者实际表示通过**，因此不得将“审稿包完成”写成“独立审稿通过”。
+
+## 5. 最终状态与审稿交接条件
+
+- **已产生可交付包**：本文件 + 主答卷 V0.5 + S01–S38 来源账本 + 三组原典/四领域边界/E1–E3 竞争评审。
+- **可核的内审状态**：四个 P0 风险已分解为可以检验的命题和外部审稿行动；指定公开来源/元数据已有定向抽检；独立审稿条件及证据模板已写明。
+- **仍 BLOCKED FOR FINAL ACCEPTANCE**：没有被授权/真实完成的独立专家审稿；若此 AC 的独立核验要求不可满足，最终验收保持 PARTIAL/REVIEW_NOT_RUN。来源全文及翻译学的未完成项继续独立记录，不伪造。
+- **是否值得继续**：准备工作已足够，下一步应先判断有没有可用的、真实的独立审稿者和审稿通道（用户授权是邀请外部人员的必要前提）。如没有，保持 Draft、不做假审稿、不机械开启新资料搜集循环。
+
+**目标保持**：回答上位“哲学是什么”；独立 [TOPIC-014 #66](https://github.com/fweiger/AI_book/issues/66) 是四论知识结构的另一路径，不能替代此题。
+
+## 6. PR 原生审稿通道的只读核实（2026-11-21）
+
+本轮通过 GitHub PR 原生读取动作针对 **Draft PR #69** 进行了三项不同口径的回读：
+
+- **正式 PR Review submissions**：`0` 条（GitHub list pull request reviews）。
+- **PR Conversation / inline review comments merged timeline**：`0` 条（GitHub fetch PR comments）。
+- **PR inline review threads**：`0` 条（GitHub list review threads）。
+
+**直接可见的结论**：在本轮读取时，PR #69 没有任何可回读的正式 review、评论或 inline 线程；因此不能将其标为已经经过独立审核。**不能从三个零反推已有人被邀请或无人能够审稿**：受邀审稿者的请求状态是另一个 API/权限维度，当前并未核实。未向任何人发送审稿邀请或修改 PR 的 Draft 状态。
+
+后续若出现审稿记录，应核查实际作者、时间、相关文件/段落、意见、解决证据，再修改 `EXTERNAL_REVIEW_NOT_RUN`。仅有 bot 欢迎评论、自动检查成功或同一研究执行者自我评价，也不等于独立哲学史审稿。
+
+## 7. 当前审稿路由的独立核验（M3-06 / 定向只读）
+
+- GitHub REST [PR #69 requested reviewers](https://api.github.com/repos/fweiger/AI_book/pulls/69/requested_reviewers) 的实际返回是 `users=[]`、`teams=[]`：这证明**本次查询时没有待处理的审稿请求**，不证明以前从未邀请或不存在任何潜在审稿人。
+- PR 原生 `Review=0 / inline threads=0 / conversation comments=0`，仍 `OPEN/DRAFT/UNMERGED`。仓库现有 [AGENTS.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/AGENTS.md) 与 [CONTRIBUTING.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/CONTRIBUTING.md) 提供**外部 AI/人类可以通过自己的 GitHub 身份在 Issue 或 Fork 提交证据与反论**的路线，但这不是已经指派的正式 Reviewer；未发现 Issue #68 中被授权的具体审稿人。
+- 按 [GitHub Draft PR 规范](https://docs.github.com/en/pull-requests/reference/pull-requests)，Draft 不会自动通知 CODEOWNERS 审稿；按 [GitHub PR 审批规则](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/approving-a-pull-request-with-required-reviews)，PR 作者不能批准自己发起的 PR。**因此用同一 `fweiger` 身份提交新的自我检查或“Approve”不能满足独立验收**。不能未经授权把 Draft 改 Ready、请求未授权人员、借用账号或合并。
+- 当前**可执行的交接路径**：由已获授权的另一 GitHub 身份或可回读、来源与签名明确的第二研究者提交真实反向审稿；如只是外部 AI 草稿由维护者代贴，必须注明代贴与实际作者/执行工具，不冒称身份独立或 GitHub 正式 Review。
+- **本轮新增原典审查点**：V0.8.1 已将《回诤论》Vv29 的单偈问题补充为 **Vv22/29/60 + 自注/论辩声部 + 数字来源并非独立校勘** 的完整证据问题。参见 [V0.8 本文](review-v0.8-indian-countercases.md) 与 S42；未完成学术专业审稿。
+
+**本节为定向审稿通道/证据 QA 的修正，不是第二份交接包，也不等于审稿者已就位。**
