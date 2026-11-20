@@ -1,6 +1,6 @@
 # TOPIC-015｜来源与原典核验账本 V0.1
 
-> 2026-11-21。区分：**A1 古典汉语原典网页指定段直读**；**A2 原典英文译本指定段直读**（非原语校勘）；**B 权威学术二手资料已阅读指定段**；**C 用户语音转写、未经逐字校对**；**PENDING 仍未核验**。A1/A2 都不能等同通读全书或校勘完成。页面可访问性随时间变化，保留实际成功/失败情况。
+> 2026-11-21（持续至 M3 综合答卷 V0.5）。证据分级：**A1 传世古汉语网页指定段直读**；**A2 原典公开英文译本/转载指定段直读**（不代表原语校勘）；**B 权威学术二手指定段直读**；**B-ABSTRACT-ONLY 仅学术摘要**；**C 访谈语音转写未校对**；**R 研究者的比较/论证重构**；**PENDING 未核验**。A1/A2 不等于通读全书或校勘通过。
 
 | SRC | 类型 | 具体段落与本轮核对内容 | URL | 状态/限制 |
 | --- | --- | --- | --- | --- |
@@ -93,7 +93,7 @@
 | S30 | IEP《Metaphilosophy》，分析、实用主义、欧陆哲学对哲学目的及方法有分歧 | https://iep.utm.edu/con-meta/ | B READ_SPECIFIC_PASS |
 | S31 | SEP《Ludwig Wittgenstein》§3.4，“游戏”与语言游戏家族相似，而非直接“哲学无本质”定理 | https://plato.stanford.edu/entries/wittgenstein/ | B READ_SPECIFIC_PASS，映射“哲学”属 R |
 | S32 | SEP《Comparative Philosophy: Chinese and Western》，跨传统同化、二分、不可通约等风险 | https://plato.stanford.edu/entries/comparphil-chiwes/ | B READ_SPECIFIC_PASS |
-| S33 | 桑兵《The Origin of “Chinese Philosophy”》2019 14(4):535–574，2020 在线，DOI 10.3868/s020-008-019-0026-8 | https://journal.hep.com.cn/fhc/EN/10.3868/s020-008-019-0026-8 | **B-ABSTRACT-ONLY**；正文需登录，不得称全文精读 |
+| S33 | 桑兵《The Origin of “Chinese Philosophy”》期刊 2019, 14(4):535–574；期刊官网 Issue Date 2020-01-17；DOI 10.3868/s020-008-019-0026-8 | https://journal.hep.com.cn/fhc/EN/10.3868/s020-008-019-0026-8 | **B-ABSTRACT-ONLY**；正文需登录，不得称全文精读 |
 | S34 | IEP《Pierre Hadot》，古代哲学是生活方式，与复杂理论论证并存 | https://iep.utm.edu/hadot/ | B READ_SPECIFIC_PASS |
 | S35 | SEP《Experimental Philosophy》，经验方法用于哲学且挑战科学/哲学的单纯方法区分 | https://plato.stanford.edu/entries/experimental-philosophy/ | B READ_SPECIFIC_PASS |
 | S36 | SEP《Translating and Interpreting Chinese Philosophy》，翻译/解释的实践差异及混合思想传统 | https://plato.stanford.edu/entries/chinese-translate-interpret/ | B READ_SPECIFIC_PASS |
@@ -101,3 +101,12 @@
 | S38 | 《A Daoist Critique of Effort in Pierre Hadot's Philosophy》，以庄子对“有意努力的自我操练”哲学观提出批评 | https://onlinelibrary.wiley.com/doi/10.1111/jore.12483 | **B-ABSTRACT-ONLY**，全文打开/DOI 跳转受限，具体论证未读 |
 
 **学术审核仍 NOT_RUN**；跨传统样本属于有目的理论比较，不得称为统计代表性样本；没有由八家观点投票确定本质结论。
+
+## M3 综合答卷的专项回读与来源审计（新增）
+
+- **主答卷**：[answer-to-what-is-philosophy.md](answer-to-what-is-philosophy.md)，C01–C08 的来源编号均在 S01–S38 中可找到，已经由 GitHub GET 对源文件与链接进行自动结构核验。
+- **S33 发行元数据**：原刊 2019, 14(4):535–574，出版社官网网页另列 Issue Date = **2020-01-17**，这是两种时间口径；[出版社摘要原页](https://academic.hep.com.cn/fhc/EN/10.3868/s020-008-019-0026-8) 已核。**仅使用摘要内容**。
+- **S31 释义风险**：SEP Wittgenstein §3.4 的“家族相似”指涉 PI 游戏/语言游戏；映射至“哲学”本身须标 R 级类比，绝非作者原文直接定论。
+- **S18 墨家层级**：《墨子·非命上》三表包含圣王先例/感官/效用，不称为现代科学的纯实验判准；SEP《Mohism》对 `fa` 的示例与理由继续保留为二手对照。
+- **内部脚本核对**：主答卷 A–K 共 11 个一级研究段，C01–C08 8 条主张，A-01–A-12 12 项审计，引用的本目录 Markdown 文件存在，所引用 S01–S38 有匹配编号。**该验证只证明仓库内结构与引用解析，并不等于逐一学术验证 38 个来源或形式逻辑证明**。
+- **剩余任务**：对关键高风险 CLAIM 的独立学术复核、必要原语/传本校勘与印度等未覆盖传统；外部独立审稿 NOT_RUN；最终 AC 不可标 PASS。
