@@ -83,3 +83,21 @@
 3. **翻译限制**：爱因斯坦德文、阿奎那拉丁文、陀思妥耶夫斯基俄文均未完成原语训诂；论文/章节仅核公开可阅读指定部分。
 4. **新定义 H2 属 PROVISIONAL**，历史学派 E1/E2/E3 的逻辑争议尚待独立学术复核，不能将“家族相似”宣传成跨文明哲学的公认结论。
 5. Oxford University Press 的图灵论文原刊页面可检索 DOI https://doi.org/10.1093/mind/LIX.236.433 ，但本轮网页展开失败；使用公开全文转载并标记差异。
+
+## S30–S38｜E1/E2/E3 元哲学竞争立场来源（2026-11-21）
+
+> 第四轮正式研究在 [metaphilosophy-positions-review.md](metaphilosophy-positions-review.md)。**B** = 权威学术二手网页指定章节阅读；**B-ABSTRACT-ONLY** = 仅摘要，未获取原文；**R** = 本研究跨传统/逻辑重构。网页学术文章不能被誊写成作者明确支持 E1/E2/E3 三分的证据。
+
+| 编号 | 来源、可核内容 | URL | 等级、核验限制 |
+| --- | --- | --- | --- |
+| S30 | IEP《Metaphilosophy》，分析、实用主义、欧陆哲学对哲学目的及方法有分歧 | https://iep.utm.edu/con-meta/ | B READ_SPECIFIC_PASS |
+| S31 | SEP《Ludwig Wittgenstein》§3.4，“游戏”与语言游戏家族相似，而非直接“哲学无本质”定理 | https://plato.stanford.edu/entries/wittgenstein/ | B READ_SPECIFIC_PASS，映射“哲学”属 R |
+| S32 | SEP《Comparative Philosophy: Chinese and Western》，跨传统同化、二分、不可通约等风险 | https://plato.stanford.edu/entries/comparphil-chiwes/ | B READ_SPECIFIC_PASS |
+| S33 | 桑兵《The Origin of “Chinese Philosophy”》2019 14(4):535–574，2020 在线，DOI 10.3868/s020-008-019-0026-8 | https://journal.hep.com.cn/fhc/EN/10.3868/s020-008-019-0026-8 | **B-ABSTRACT-ONLY**；正文需登录，不得称全文精读 |
+| S34 | IEP《Pierre Hadot》，古代哲学是生活方式，与复杂理论论证并存 | https://iep.utm.edu/hadot/ | B READ_SPECIFIC_PASS |
+| S35 | SEP《Experimental Philosophy》，经验方法用于哲学且挑战科学/哲学的单纯方法区分 | https://plato.stanford.edu/entries/experimental-philosophy/ | B READ_SPECIFIC_PASS |
+| S36 | SEP《Translating and Interpreting Chinese Philosophy》，翻译/解释的实践差异及混合思想传统 | https://plato.stanford.edu/entries/chinese-translate-interpret/ | B READ_SPECIFIC_PASS |
+| S37 | SEP《Epistemology in Chinese Philosophy》，古典“心/知”结构不能简单同构于西方理论 | https://plato.stanford.edu/entries/chinese-epistemology/ | B READ_SPECIFIC_PASS |
+| S38 | 《A Daoist Critique of Effort in Pierre Hadot's Philosophy》，以庄子对“有意努力的自我操练”哲学观提出批评 | https://onlinelibrary.wiley.com/doi/10.1111/jore.12483 | **B-ABSTRACT-ONLY**，全文打开/DOI 跳转受限，具体论证未读 |
+
+**学术审核仍 NOT_RUN**；跨传统样本属于有目的理论比较，不得称为统计代表性样本；没有由八家观点投票确定本质结论。
