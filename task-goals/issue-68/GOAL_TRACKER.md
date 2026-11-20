@@ -21,7 +21,7 @@
 - Tracker 当前 blob SHA：首次创建后由 GitHub 回读获取；不在文件内自引用
 - 目标偏差：D0（直接修正 AC-03 原文语境/来源独立性、AC-05 反论的论证强度及 AC-06 交接状态真实性，不扩大原目标）
 - 状态一致性：CONSISTENT（Issue #68 r0 Goal/Scope/AC 不变，V0.8.1 四份文件 GET 回读，PR Open/Draft/Unmerged、审稿请求当前为空，正式 Review 仍 NOT_RUN）
-- Issue 同步状态：ISSUE_SYNC_PENDING（M3-06 稳定事件键 CAS/Writer 声明后待 Issue 评论回读；并不称已同步）
+- Issue 同步状态：SYNCED（M3-06 事件 #7048358210 已回读，稳定事件键出现一次；GitHub 评论 API 无原子 exactly-once 保证）
 
 ## 1. 批准目标基线（原文摘录，批准来源是 Issue #68）
 
@@ -154,19 +154,21 @@
 
 | 2026-11-21 M3-05 | T07/T08 两个南亚文本与 S39–S45 定向核验；分析诊断性识别 vs 本质/排他性；主答卷 V0.8、README、handoff 增量回读 | AC-03/05/06 PARTIAL 增量；原语校勘及独立学术审稿 NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/review-v0.8-indian-countercases.md ; https://github.com/fweiger/AI_book/pull/69 | D0 / CONSISTENT / SYNCED；GRETIL Nyāya 明示未 proofread，学术争论为摘要级 | 在确认真实授权后启动针对 T01–T08 的独立反向审稿 |
 
-| 2026-11-21 M3-06 | V0.8.1 Vv22/29/60 定向语境与 S42 两数字 URL 非独立证人纠偏；GitHub reviewer requests API users=[]/teams=[] 与 Draft/作者限制核验 | AC-03/05/06 来源/逻辑和路由诊断增量，正式独立学术 Review 仍 NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/review-v0.8-indian-countercases.md ; https://github.com/fweiger/AI_book/pull/69 | D0 / CONSISTENT / ISSUE_SYNC_PENDING；不扩大作者/样本 | 等真实授权的不同身份/外部渠道对 T01–T08/J1–J6 做独立逆向审稿 |
+| 2026-11-21 M3-06 | V0.8.1 Vv22/29/60 定向语境与 S42 两数字 URL 非独立证人纠偏；GitHub reviewer requests API users=[]/teams=[] 与 Draft/作者限制核验 | AC-03/05/06 来源/逻辑和路由诊断增量，正式独立学术 Review 仍 NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/review-v0.8-indian-countercases.md ; https://github.com/fweiger/AI_book/pull/69 | D0 / CONSISTENT / SYNCED；不扩大作者/样本 | 等真实授权的不同身份/外部渠道对 T01–T08/J1–J6 做独立逆向审稿 |
 
 ## 10. 最近状态一致性检查（动态）
 
-- active_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__V081-VV-CONTEXT-ROUTE-20261121`
-- writer_owner: `ChatGPT-GPT6-TOPIC015-V081-BOUNDED-QA-20261121`（GitHub 认证用户 `fweiger`；不是独立学者）
-- write_state: CLAIMED（已以读到的 Tracker blob SHA 作 CAS 更新；事件发布前必须回读声明）
+- active_event_key: none（M3-06 完成）
+- writer_owner: none（M3-06 已发布、回读、释放声明；GitHub 登录仍是 PR 作者）
+- write_state: SYNCED（Issue 评论 #7048358210 已回读一次；不能称评论接口具原子 exactly-once）
 - tracker_sha_before_claim: `67279d519e25d4c4ec93e31babd4286e26210fa1`
 - pr_head_before_claim: `a2f5ab5e0c202cd0e1235506c1692117ea1395ce`
 - requirements_revision: `r0-20261121-user`
 - protocol_commit_locked: `f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
-- last_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__V08-INDIA-COUNTERCASES-20261121`
-- last_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7048153119
+- last_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__V081-VV-CONTEXT-ROUTE-20261121`
+- last_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7048358210
+- previous_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__V08-INDIA-COUNTERCASES-20261121`
+- previous_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7048153119
 - prior_writer: none（上一 Writer 已完成、同步、释放）
 
 | 核验 | 实际事实 | 状态 |
@@ -175,7 +177,7 @@
 | T08 上下文和版本 | Vv22/29/60 同书核查；两数字版不可当两独立证人 | SOURCE_SCOPE_CORRECTED |
 | PR 审稿请求 | users=[]/teams=[]，Formal Review=0 | BLOCKED_EXTERNAL_REVIEW |
 | 文件回读 | V0.8、sources、answer、handoff 四文件 GET | PASS_FILES |
-| 本轮进度事件 | CLAIMED，Issue 评论发布前须 GET 确认键不存在 | ISSUE_SYNC_PENDING |
+| 本轮进度事件 | #7048358210 已 GET 回读，本键一次，Writer 声明已释放 | SYNCED |
 | 唯一下一步 | 在真实已授权不同身份上开展独立反向审稿 | D0 |
 
 > Tracker：https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/task-goals/issue-68/GOAL_TRACKER.md
