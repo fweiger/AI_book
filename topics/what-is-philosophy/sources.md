@@ -127,3 +127,19 @@
 | C04 H1 逻辑结构 | `R∧Scientific` 不蕴含 `R∧¬Philosophical`，除非另加领域互斥前提 | INTERNAL_LOGIC_SPOT_CHECK_PASS；哲学真实充要定义仍 OPEN |
 
 **更正/提醒**：来源“已读”均只对具体可定位片段；不同网页的译本年份/归属不能未经核对直接合并；未开展任何跨文明人口统计、AI 主体实验或真正独立学术审查。**外部审稿者未分配/NOT_RUN**。
+
+## S39–S45｜V0.8 南亚反向案例与元哲学定义层级
+
+> 2026-11-21；主报告 [review-v0.8-indian-countercases.md](review-v0.8-indian-countercases.md)。本轮直接查指定公开段落并对照可访问的学术摘要，**不是**梵语专业校勘或独立审稿，**不把后期正理派的诊断定义归给《正理经》作者**。
+
+| SRC | 文本、精确位置及核验方法 | URL | 证据等级/边界 |
+| --- | --- | --- | --- |
+| S39 | GRETIL《Nyāyasūtra》1.1.1–1.1.3 梵文罗马转写，页内文字明确注明 `The text is not proof-read` | https://gretil.sub.uni-goettingen.de/gretil/corpustei/transformations/html/sa_gautama-nyAyasUtra.htm | **A3-DIGITAL-SANSKRIT-UNPROOFREAD**；不可标原语校勘 PASS |
+| S40 | Ganganatha Jha 1915 英译《Nyāya-sūtra》1.1.1（十六类别及最高善）、1.1.2（苦/错误认识/解脱）与注释（多个论述层次不能混同） | https://www.wisdomlib.org/hinduism/book/nyaya-sutras-of-gautama-with-commentaries/d/doc1907012.html ; https://www.wisdomlib.org/hinduism/book/nyaya-sutras-of-gautama-with-commentaries/d/doc1907014.html | **A2-TRANSLATION-AND-COMMENTARY**；1915 指译本出版，不等于原经成书日期 |
+| S41 | SEP《Analytic Philosophy in Early Modern India》§1.1 的 diagnostic/essentialist 定义区分及早期正理派时间参考 | https://plato.stanford.edu/entries/early-modern-india/ | **B-READ_SPECIFIC**；后期思想不得未经桥接前推至早期作者；网页年代互异 `SOURCE_CONFLICT_OPEN` |
+| S42 | 《Vigrahavyāvartanī》第29偈 `pratijñā`，GRETIL 依 P.L. Vaidya 1960 的梵文数字文本，另与 DSBC 天城体对应编号对照 | https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa021_u.htm ; https://www.dsbcproject.org/canon-text/content/541/2533 | **A3-TWO-DIGITAL-SANSKRIT-PASSAGES**；仍需原语、异文及历史归属专业审查 |
+| S43 | Westerhoff 2009《The No-Thesis View》OUP 原书章节摘要；解释“无论题”与带本体论承诺的陈述之区分 | https://academic.oup.com/book/2343/chapter-abstract/142500873 | **B-ABSTRACT-ONLY**；未声称全文精读 |
+| S44 | Williams-Wyant 2017《Nāgārjuna's no-thesis view revisited》，`Asian Philosophy` 27(3):263–277，`pratijñā` 在论辩技术语境中的另解 | https://www.tandfonline.com/doi/full/10.1080/09552367.2017.1353210 | **B-ABSTRACT-ONLY**；期刊全文网页访问受限，不用摘要杜撰原文分析 |
+| S45 | SEP《The Theory of Two Truths in India》与《Logic in Classical Indian Philosophy》指定背景，检查中观／正理派内部思想多样性 | https://plato.stanford.edu/entries/twotruths-india/ ; https://plato.stanford.edu/entries/logic-India/ | **B-SELECTED-SECTIONS**；背景不能替代作者原典及审稿 |
+
+**定向风险**：正理派经文的网页年代线索与 SEP 参考年代存在明显不一致，不擅自裁决；“无论题”不能简化为“无理由”；两个印度案例是**有目的的反向选样**，不是印度哲学统计代表样本。外部原语和独立学者审查仍 `NOT_RUN`。
