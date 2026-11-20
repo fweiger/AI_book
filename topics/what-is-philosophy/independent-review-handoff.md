@@ -2,6 +2,8 @@
 
 > **规范任务**：[AI_book #68](https://github.com/fweiger/AI_book/issues/68) · **研究 PR**：[Draft PR #69](https://github.com/fweiger/AI_book/pull/69) · **日期**：2026-11-21  
 > **审稿对象**：[《哲学是什么？》综合答卷 V0.5](answer-to-what-is-philosophy.md)；配套证据账本 [S01–S38](sources.md)，[三组中西原典](three-paired-text-readings.md)、[四领域边界](boundary-stress-test.md) 和 [E1/E2/E3](metaphilosophy-positions-review.md)。  
+> **后续增量提示**：本文件是针对 V0.5 的 **V0.6 历史交接快照**，不是新的审稿通过证明。后续的 [V0.7 逻辑修订及 T01–T06 六案例测试](review-revision-v0.7.md) 已修正 E1/E2/E3 层级关系与 H2 定位；审稿者须把该文件连同 [V0.7 综合答卷](answer-to-what-is-philosophy.md) 一并核对，J1–J6 均未被宣称正式 PASS。
+>
 > **状态**：本轮由同一研究执行者进行**定向网页来源抽检及逻辑结构自审**；**外部独立专家/第二审稿 Agent 尚未实际参与，INDEPENDENT_REVIEW_NOT_RUN**。此文件不是第三方验收报告，更不是已授权邀请审稿者的证明。
 
 ## 0. 审稿任务的决策边界
