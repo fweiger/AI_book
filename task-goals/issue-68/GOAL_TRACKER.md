@@ -10,18 +10,18 @@
 - 项目研究目录（规划，尚未创建）：`topics/what-is-philosophy/`
 - 唯一 Tracker：`task-goals/issue-68/GOAL_TRACKER.md`
 - Tracker 工作分支：`topic/TOPIC-015/what-is-philosophy-20261121`（不将未经审查研究内容合并至 main）
-- 当前阶段：M1 首轮文献/定义矩阵草稿完成，独立审核待启动；M2 深读尚未完成
+- 当前阶段：M1 定义矩阵已具初稿；M2 三组中西原典指定段落复核完成，综合定义及独立审稿尚未完成
 - 创建日期：2026-11-21
-- 最近更新：2026-11-21（M1 文献草稿与 Draft PR #69）
+- 最近更新：2026-11-21（M2 三对原典复核与 Draft PR #69 更新）
 - 批准需求修订号：`r0-20261121-user`
 - 协议导航：`fweiger/AI_tasks@experiment/task-center-v1.2.2-continue-goal-guard-20261119:task-center/v1.2.2/ENTRY.md`
 - **锁定执行协议 commit SHA**：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 最近观察分支 HEAD：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`（仅导航，不自动升级）
 - 最新 Issue 读取：2026-11-21，Issue #68 OPEN，已 GET 回读 Goal/Scope/AC；后续须重新核对
 - Tracker 当前 blob SHA：首次创建后由 GitHub 回读获取；不在文件内自引用
-- 目标偏差：D0（本轮八路径/中西比较直接回应 Issue #68 AC-01/02/03/04/05/06，无扩展至四论子目标或 AI 教育）
-- 状态一致性：CONSISTENT（Issue #68 原批准 Goal/AC 不变；M1 草稿和 Draft PR #69 与本 Tracker 的部分进展一致；待事件回读）
-- Issue 同步状态：SYNCED（本轮 M1 事件 #7046201012 仅出现一次、已 GET 回读；不等于哲学研究 AC 已验收）
+- 目标偏差：D0（新三对原典对照直接推进 AC-03/05；边界定义压力测试将推进 AC-01/02/05；未偏离“哲学是什么”）
+- 状态一致性：CONSISTENT（Issue #68 原批准 Goal/AC 不变；M2 文稿与 Draft PR #69 证据对齐；§10 旧 Writer 交接描述不一致已纠正）
+- Issue 同步状态：ISSUE_SYNC_PENDING（新 M2 事件先完成单 Writer CAS 声明；先前 M1 #7046201012 已 SYNCED）
 
 ## 1. 批准目标基线（原文摘录，批准来源是 Issue #68）
 
@@ -78,45 +78,47 @@
 
 | 阶段 | 交付 | AC | 证据与验证 | 状态 |
 | --- | --- | --- | --- | --- |
-| M0 建档 | Issue + Tracker 互链与 GET 回读 | 项目管理初始化 | Issue #68 与本路径 | complete |
-| M1 定义与边界 | 八条路径、四个边界案例、四条争议链、来源台账 | AC-01、AC-02、AC-05 | Draft PR #69 的四份研究文档已 GET 回读 | partial_review_pending |
-| M2 多路径跨传统 | 已初核西方古典/中国先秦若干段落；需三组深入核验 | AC-03、AC-04 | 原典段落记录于 sources.md；非全文校勘 | partial_preliminary |
-| M3 可审查发布 | 研究草稿 PR #69 已建，尚无独立审稿/合并 | AC-05、AC-06 | PR #69 open/draft/unmerged | partial_review_pending |
+| M0 建档 | Issue ↔ Tracker 双向 GET | 受理 | Issue #68 与 Tracker | complete |
+| M1 定义与边界 | 八条路径、四边界、四争议链、来源账本 | AC-01、AC-02、AC-05 | PR #69 / definition-matrix.md / boundary-and-arguments.md | partial_review_pending |
+| M2 多路径跨传统 | 六份原典的三组指定段落比较、最强异议、扩展来源账本 | AC-03、AC-04、AC-05 | PR #69 / three-paired-text-readings.md / sources.md 均 GET 回读 | partial_primary_pass_independent_review_not_run |
+| M3 可审查发布 | Draft PR #69 及文档，独立审核与完整验收尚无 | AC-05、AC-06 | PR #69 OPEN / DRAFT / UNMERGED | partial_review_pending |
 
 ## 4. 当前检查点
 
-- 最近完成的一轮：2026-11-21 TOPIC-015 M1 首轮竞争性定义及中西跨传统比较。
-- 本轮实际完成：完成 D01–D08 八条思想解释路径；B01–B04 四个边界案例；ARG-01–04 竞争论证及异议；S01–S14 来源账本；创建 4 份研究文档并逐文件 GET 回读；Draft PR #69 OPEN / UNMERGED。
-- 已经核验：柏拉图《申辩》21c–e /《会饮》204a–b，亚里士多德《形而上学》A.1（英译指定段），《论语·为政》2.12/2.15/2.17，《墨子·非命上》“三表”，《庄子·齐物论》“彼是”，《逻辑哲学论》4.111–4.112；斯多葛与杜威主要使用 SEP 二手文献。
-- 尚未验证/失败/未知：希腊原语及古典汉籍校勘；杜威/斯多葛原著对照；教授访谈说话人逐字核对；独立审稿；AC 最终 PASS；ctext 部分正文403。
-- 对原始目标的实际贡献：从“爱智慧”出发，发现至少八种竞争的哲学活动/定义路径与反例，保留四论为知识结构路线、不预设为哲学本质。
-- 当前阶段：M1 初稿已提交 Draft PR，待独立审稿；M2 原典深度对照部分起步。
-- 本轮 AC 对齐：AC-01 八定义/反例；AC-02 四层区分+四边界；AC-03 中西原典指定片段；AC-04 四论与非四论路径；AC-05 四条争议链；AC-06 四文件+Draft PR。
-- AC 当前状态：AC-01..AC-06 均 PARTIAL（研究材料已具备，**最终验收/独立审核尚未完成**）。
-- 目标漂移：D0（所有增量围绕“哲学是什么”的竞争性回答，未改变 Issue Goal/Scope）。
-- 状态一致性：CONSISTENT（研究文件+PR/Issue/Tracker 未见相互矛盾；Issue 事件发布仍待回读）。
+- 最近完成的一轮：2026-11-21 M2-01，六份原典/翻译文本的三对定向复核。
+- 本轮实际完成：创建并回读 `topics/what-is-philosophy/three-paired-text-readings.md`，逐组形成 TEXT→CONTEXT→LOGIC→COMMON→DIFFERENCE→OBJECTION→STATUS；更新 README 及 sources.md S15–S20、逐文件回读；仍在 Draft PR #69，未合并。
+- 可核证文本：Perseus/Fowler《申辩》21b–e、《论语·为政》2.15/2.17/2.18 及《论语注疏》；亚里士多德《形而上学》Α.1–2 原希腊/英译并列网页（以英文释义为主），《墨子·非命上》三表及 SEP Mohism；《庄子·齐物论》成心/彼是/道枢及 SEP Zhuangzi；《逻辑哲学论》4.111–4.112 英译。
+- 重要发现：知识谦逊不推出同一哲学方法；原因知识与三表判准不可混同；庄子的彼是反思与早期维特根斯坦的逻辑澄清不是同一种语言哲学。只得**可比较问题族**，不能从三个主题精选对照推断跨文明共同必要本质。
+- 对原始 Goal 的贡献：以六份文本对 H1“反思性根本问题”假说施加跨传统证据约束并记录反例，紧扣“哲学是什么”，不转向四论细节或 AI 教育。
+- 尚未验证：古籍传本校勘、古希腊/德语原语言训诂、未精选的边界样本、定义的必要充分条件、独立哲学史审稿和所有 AC 最终完成。
+- 状态：AC-01..AC-06 仍 PARTIAL；此轮 AC-03 原典指定段落和 AC-05 异议链有实质增量；D0 / CONSISTENT，M2 事件评论同步待执行。
+- 下一阶段：直接评估 H1 对科学、宗教、文学/艺术、AI 输出四个非典型边界样本的过宽/过窄问题（AC-01/02/05）。
 
 ## 5. 阻断与未受影响工作
 
-| 问题 | 影响 | 受影响 AC | 可继续工作 | 处理 |
+| 问题 | 影响范围 | 受影响 AC | 可继续工作 | 处理决定 |
 | --- | --- | --- | --- | --- |
-| 访谈为语音转写且部分识别含混 | 不可将其作为精准原典引语 | AC-03、AC-05 的具体引文 | 独立原典与定义检验 | 只作问题线索，不当学术原典 |
-| ctext 全页 403 / 希腊语校勘尚缺 | 仅限制部分原典信度，不阻断其余合格来源 | AC-03 深度验证 | 维基文库、Perseus/SEP 的已核片段 | 保留分级，下一轮定向核对 |
+| 访谈音频未经逐字校对 | 不能把教授口语转写当精确引语 | 引文来源级别 | 原典定义、反例分析 | 保留 C 级，不阻断主线 |
+| ctext 部分页 403；希腊/德文语文学与汉籍校勘未做 | 限制原语言训诂/版本比较结论，非全局阻断 | AC-03 的高等级最终验收 | 目前可读公开原典段落/二手学术资料、边界样本验证 | 文本分级，不冒充全文直读/校勘 |
+| 三组样本按相似话题选择 | 定义结论的选择偏差 | AC-01/02/05 | 在非精选样本上做 H1 压力测试 | 直接列为下一步，不再以扩大相似例证明普遍性 |
 
 ## 6. 执行路径调整记录
 
-暂无。不得擅自修改本问题的 Goal/Scope/AC；与 #66 的联系是相关研究路径而非对 #66 的协议迁移。
+| 时间 | 原路径 | 现路径 | 原因与证据 | 对 Goal/AC 的影响 | 是否改批准需求 |
+| --- | --- | --- | --- | --- | --- |
+| 2026-11-21 M2-01 | M1 后定向完成苏格拉底×孔子、墨家×亚里士多德、庄子×维特根斯坦 | 三对指定段复核已完成；下一步转换为 H1 边界反例压力测试 | [三对原典文档](https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/three-paired-text-readings.md) + sources.md 增量 | 进一步推进 AC-01/02/05，直接回答“哲学是什么” | 否 |
 
 ## 7. 下一步（唯一动态权威）
 
-- **唯一优先动作**：对三对“表面相似但哲学语境不同”的中西原典开展定向比较：①《申辩》21d 与《论语·为政》2.17 的“承认无知”；②《墨子·非命上》“三表”与亚里士多德《形而上学》A.1 的认识与证据；③《庄子·齐物论》的语言/观点局限与《逻辑哲学论》4.112 的概念澄清。
-- 对应未完成 AC：AC-03、AC-05（优先）；使 AC-01/02/04 的竞争定义得到文本层级的约束。
-- 为什么高价值：本轮跨传统矩阵已经形成，主要证据瓶颈是“看似相同”的概念是否可通约；直接提升“哲学是什么”的回答质量。
-- 预期交付/完成条件：每一组含双方原文可定位段落、语义差异、至少一项共同问题、最强反例与核验级别；不将只见英文译本写成“原希腊文校勘通过”。
-- 必要先读证据：Draft PR #69 / `sources.md`、本 Issue #68 批准 Goal/AC、同一 Tracker 最新 SHA/锁定协议。
-- 若单一古籍站点不可用：改用可公开读取且标明版本的原典资料继续另两组；不因局部 403 中断主线。
-- 优先级：高于扩展 AI 教育预测、四论详细分类或继续增加无文本根据的新哲学家名单。
-- 局部止损：同一个站点两轮仍不可读，记录 `PENDING` 后切换证据路径，不降低原典证据等级。
+- **唯一优先动作**：对现有 H1“哲学是反思性根本问题的探究实践”进行**非精选边界反例压力测试**，四类：基础科学、宗教实践、文学/艺术表达、AI 哲学文本。逐类检验：该特征是否为充分条件？是否为必要条件？有没有反例迫使 H1 修订？
+- 对应未完成 AC：AC-01、AC-02、AC-05；次级支持 AC-04（四论仅为知识地图）。
+- 为什么现在做：上一轮八定义 + 本轮三对原典已经覆盖有意选取的相似案例；继续堆“中西相似”将导致样本选择偏差，不能检验定义边界。边界案例比继续扩人物清单更接近原始 Goal。
+- 预期交付：`boundary-stress-test.md`，至少四种边界场景，每类给出必要/充分条件测试与一项严肃反论、明确是否修订 H1；复核来源等级；不必强求定义成单一形式。
+- 验证：区别“活动是否属于哲学”和“哲学成果是否由人生成”；区分科研技术问题与科学概念基础反思；宗教/文学的可质疑理由边界保持开放。
+- 先读证据：Issue #68 Goal/AC、Tracker 最新 SHA、Draft PR #69、`three-paired-text-readings.md`/ `boundary-and-arguments.md` 与锁定协议。
+- 若个别边界来源暂缺：标 PENDING，先完成其余可核场景与逻辑检验；不得补造原典。
+- 优先于其他候选：相比扩大“哲学家名单”或处理非必要网站 403，本动作更能裁决 H1 是否真的界定哲学并推进 AC。
+- 局部止损：不因个别 URL 不可用连续跑相同路径；两个有结果的局部调查轮次仍无 AC 增量时重评，不降低出处准入。
 
 ## 8. “继续”恢复检查
 
@@ -134,24 +136,25 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 M0 | 独立 Issue #68 与唯一 Tracker 创建且完成双向 GET 回读 | G0/G1 建档完成，研究 AC 未运行 | https://github.com/fweiger/AI_book/issues/68 | D0 / CONSISTENT / 初始化互链 SYNCED | M1 竞争性定义及边界对照 |
 | 2026-11-21 M1-01 | 八定义、四边界、四论证链、来源账本，四文件 GET 回读，Draft PR #69 创建 | AC-01..06 PARTIAL（独立审核 NOT_RUN） | https://github.com/fweiger/AI_book/pull/69 ; https://github.com/fweiger/AI_book/issues/68#issuecomment-7046201012 | D0 / CONSISTENT / SYNCED；ctext局部403不阻断其余原典 | 三对中西原典语义差异复核 |
+| 2026-11-21 M2-01 | 三对中西原典按 TEXT/CONTEXT/差异/异议复核，新增三对原典文稿及 S15–S20 来源记录，均 GET 回读 | AC-03、AC-05 实质增量；全项仍 PARTIAL / REVIEW_NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/three-paired-text-readings.md ; https://github.com/fweiger/AI_book/pull/69 | D0 / CONSISTENT；语文学/独立审稿未做 | H1 四类边界反例压力测试 |
 
 ## 10. 最近状态一致性检查（动态）
 
-- active_event_key: none（本轮事件 AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M1__EIGHT-VIEWS-20261121 已核验一次并结束）
-- writer_owner: none（本轮单 Writer 已完成 Issue 事件发布）
-- write_state: SYNCED（单次评论已回读；不保证 GitHub 评论接口的全局 exactly-once）
-- last_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M1__EIGHT-VIEWS-20261121`
-- last_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7046201012
-- last_claimed_tracker_sha: `27074f2e883654639f46d27514607e6914365954`
-- 失联 Writer 交接证据：不适用，当前 Writer 正在本轮执行；禁止未核验 fencing 的并行交接
+- active_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M2__THREE-PAIRS-20261121`
+- writer_owner: `ChatGPT-GPT6-TOPIC015-M2-20261121`（当前同一执行实例，禁止并发发布）
+- write_state: CLAIMED（本轮新事件等待 Tracker SHA/CAS 回读，随后仅此 Writer 发表 Issue 评论）
+- previous_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M1__EIGHT-VIEWS-20261121`
+- previous_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7046201012
+- 失联 Writer 交接证据：暂无失联 Writer；历史事件已 SYNCED/无 active writer；本次由单一当前执行实例声明，任何未知中止不授权下一实例自动抢占
 
-| 核对项 | 当前核对 | 结果 |
+| 核对项 | 最新证据 | 结果 |
 | --- | --- | --- |
-| Issue Goal/Scope/AC 与 §1 | 从 Issue #68 原文复制，待后续重新回读 | CONSISTENT |
-| 执行阶段与证据 | M1 首轮定义矩阵/四文件已 GET，Draft PR #69 已建立，研究 AC PARTIAL | CONSISTENT |
-| 阻断与未受影响工作 | 转写未核与 ctext 部分403已隔离，不影响其余原典核验 | CONSISTENT |
-| 唯一下一步与历史建议 | §7 三对原典深读；§9 历史建议仅供恢复重决策 | CONSISTENT |
-| Issue/Tracker/事件链接 | 初始互链已核，本轮评论 #7046201012 只出现一次，事件 SHA/协议与 Tracker 对应 | CONSISTENT / SYNCED |
-| 正式研究 AC | 六项均有首轮部分证据；独立审核尚未运行 | PARTIAL / REVIEW_NOT_RUN |
+| Issue Goal/Scope/AC 与 §1 | Issue #68，修订 r0 未变 | CONSISTENT |
+| §3/§4 与实际 PR 文档 | 6 个研究文档（含 Tracker）已 GET，Draft PR #69 OPEN / UNMERGED | CONSISTENT / PARTIAL |
+| §5 实际阻断范围 | 传本校勘与音频校对不阻断边界研究 | CONSISTENT |
+| §6 路径变更 ↔ §7 唯一步骤 | 三对原典完成 → H1 反例压力测试 | CONSISTENT |
+| §7 vs §9 历史建议 | §9 末行三对原典仅是历史建议；§7 已唯一更新为 H1 边界测试 | CONSISTENT |
+| 进度事件 | M1 先前事件已回读一次；M2 仅 CLAIMED/尚未发送 | ISSUE_SYNC_PENDING |
+| 研究验收 | AC-01～06 有草稿，独立复核缺失 | PARTIAL / REVIEW_NOT_RUN |
 
-> Tracker URL（本分支）：https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/task-goals/issue-68/GOAL_TRACKER.md
+> Tracker URL：https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/task-goals/issue-68/GOAL_TRACKER.md
