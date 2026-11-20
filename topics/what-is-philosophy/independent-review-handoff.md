@@ -137,3 +137,13 @@
 **直接可见的结论**：在本轮读取时，PR #69 没有任何可回读的正式 review、评论或 inline 线程；因此不能将其标为已经经过独立审核。**不能从三个零反推已有人被邀请或无人能够审稿**：受邀审稿者的请求状态是另一个 API/权限维度，当前并未核实。未向任何人发送审稿邀请或修改 PR 的 Draft 状态。
 
 后续若出现审稿记录，应核查实际作者、时间、相关文件/段落、意见、解决证据，再修改 `EXTERNAL_REVIEW_NOT_RUN`。仅有 bot 欢迎评论、自动检查成功或同一研究执行者自我评价，也不等于独立哲学史审稿。
+
+## 7. 当前审稿路由的独立核验（M3-06 / 定向只读）
+
+- GitHub REST [PR #69 requested reviewers](https://api.github.com/repos/fweiger/AI_book/pulls/69/requested_reviewers) 的实际返回是 `users=[]`、`teams=[]`：这证明**本次查询时没有待处理的审稿请求**，不证明以前从未邀请或不存在任何潜在审稿人。
+- PR 原生 `Review=0 / inline threads=0 / conversation comments=0`，仍 `OPEN/DRAFT/UNMERGED`。仓库现有 [AGENTS.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/AGENTS.md) 与 [CONTRIBUTING.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/CONTRIBUTING.md) 提供**外部 AI/人类可以通过自己的 GitHub 身份在 Issue 或 Fork 提交证据与反论**的路线，但这不是已经指派的正式 Reviewer；未发现 Issue #68 中被授权的具体审稿人。
+- 按 [GitHub Draft PR 规范](https://docs.github.com/en/pull-requests/reference/pull-requests)，Draft 不会自动通知 CODEOWNERS 审稿；按 [GitHub PR 审批规则](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/approving-a-pull-request-with-required-reviews)，PR 作者不能批准自己发起的 PR。**因此用同一 `fweiger` 身份提交新的自我检查或“Approve”不能满足独立验收**。不能未经授权把 Draft 改 Ready、请求未授权人员、借用账号或合并。
+- 当前**可执行的交接路径**：由已获授权的另一 GitHub 身份或可回读、来源与签名明确的第二研究者提交真实反向审稿；如只是外部 AI 草稿由维护者代贴，必须注明代贴与实际作者/执行工具，不冒称身份独立或 GitHub 正式 Review。
+- **本轮新增原典审查点**：V0.8.1 已将《回诤论》Vv29 的单偈问题补充为 **Vv22/29/60 + 自注/论辩声部 + 数字来源并非独立校勘** 的完整证据问题。参见 [V0.8 本文](review-v0.8-indian-countercases.md) 与 S42；未完成学术专业审稿。
+
+**本节为定向审稿通道/证据 QA 的修正，不是第二份交接包，也不等于审稿者已就位。**
