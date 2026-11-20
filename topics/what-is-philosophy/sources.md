@@ -19,6 +19,26 @@
 | S13 | PENDING 古典文本异文/希腊语审查 | 对 Plato/Aristotle/墨子/庄子经校勘本与可信注疏交叉复核 | 待选定可靠版本 | **NOT_RUN** |
 | S14 | PENDING 概念史 | `philosophia` 与近代东亚“哲学”译名、德里达相关言论实际语境 | 待获取原始著作或访谈原始记录 | **NOT_RUN** |
 
+## S15–S20｜2026-11-21 第二轮定向原典复核增量
+
+> 证据与结果详见 [three-paired-text-readings.md](three-paired-text-readings.md)；**本增量仅表示指定片段读到，不表示全书或原语专业校勘通过**。
+
+| SRC | 类型 | 增量核验 | URL | 状态 |
+| --- | --- | --- | --- | --- |
+| S15 | A2 | 《申辩》21b–e，神谕语境→检验公众人物→不以不知为知 | https://beta.perseus.tufts.edu/urn:cts:greekLit:tlg0059.tlg002.perseus-eng2:21/ | READ_SPECIFIC_PASS（Fowler 英译；《申辩》作者为柏拉图） |
+| S16 | A1+传统注疏 | 《论语·为政》2.15、2.17、2.18；“子路”教诲和“学/思/慎言行”的上下文 | https://ssjdd.snnu.edu.cn/sbw/info/1051/2359.htm | READ_SPECIFIC_PASS（传世《论语注疏》，非战国出土原简） |
+| S17 | A2+B | 《形而上学》Α.1–2，981a–982a，由经验到原因、智慧与原理；SEP 对 Aristotle 的解释 | https://aristotle.johnhboyer.com/Meta/book/1/ | READ_SPECIFIC_PASS（网页希腊/英译对照；以英译判断，不标希腊语校勘） |
+| S18 | A1+B | 《墨子·非命上》三表“本/原/用”及反宿命论论战语境；SEP 对三版本差异及冲突的评论 | https://zh.wikisource.org/zh-hans/墨子/非命上 | READ_SPECIFIC_PASS（古文网页；版本校勘 NOT_RUN） |
+| S19 | A1+B | 《庄子·齐物论》“成心”“彼出于是”“道枢”，SEP 对多种解释的争论 | https://zh.wikisource.org/wiki/莊子/齊物論 | READ_SPECIFIC_PASS（古文网页，异文/早期注疏仍待核） |
+| S20 | A2+B | 《逻辑哲学论》4.111–4.112 早期哲学不等于自然科学，工作为逻辑澄清 | https://wittgensteinproject.org/w/index.php/Tractatus_Logico-Philosophicus_(English) | READ_SPECIFIC_PASS（英文译本；非德文逐字校勘） |
+
+学术二手对照：
+- SEP《Confucius》：https://plato.stanford.edu/entries/confucius/
+- SEP《Aristotle's Metaphysics》：https://plato.stanford.edu/entries/aristotle-metaphysics/
+- SEP《Mohism》：https://plato.stanford.edu/entries/mohism/
+- SEP《Zhuangzi》：https://plato.stanford.edu/entries/zhuangzi/
+- SEP《Epistemology in Chinese Philosophy》：https://plato.stanford.edu/entries/chinese-epistemology/
+
 ## 阅读边界/异常日志
 
 1. `ctext.org` 的部分搜索结果可见指定短句，但完整页面打开报 403；故本轮对先秦原文转用维基文库及一个转载站，准确标明来源等级，**不宣称已完成古籍校勘**。
@@ -27,8 +47,15 @@
 4. SEP 作为学术二手来源支持文献地图与解释争议，不能替代古典原著直读。
 5. 此账本只记录首轮来源，**无独立审稿和交叉文本校验**；禁止标为完整原典研究 PASS。
 
-## 推荐下一轮集中复核的三处
+## 第一轮推荐核验的三处（历史记录，第二轮已完成指定片段直读）
 
 - 对照《申辩》21d 与《论语·为政》2.17，检查“承认不知”是否为相同伦理/认识概念。
 - 对照《墨子·非命上》的“三表”和亚里士多德知识/原因层级，区分证据性主张与权威性主张。
 - 对照《庄子·齐物论》与《逻辑哲学论》4.112，具体辨析二者对语言问题的目标和方法差异，避免浅层类比。
+
+
+## 第二轮之后剩余的高价值证据缺口
+
+- 各经典的原语言版本校勘与文本归属/编纂史仍须专门审查，不能因网页原文可读就标为完整验收。
+- 更多**未按主题精选**的边界样本（科学、宗教、文学、AI）能暴露 H1 的定义宽窄问题；这是下一步的高价值主线。
+- 对比三对相似主题不构成对整个中西哲学传统的代表性抽样；跨文明总体结论应保持限定。
