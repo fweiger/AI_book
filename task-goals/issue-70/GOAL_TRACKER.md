@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（#70 M1 当前状态、Tracker、PR 和资料相容；本轮事件同步中）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一轮事件已 SYNCED；本轮生产关系专项研究事件待唯一 Writer 提交与回读）
+- 状态一致性: `CONSISTENT`（#70 M1、Tracker、PR #71、研究资料与本轮实际进度事件相容，已 GET 回读）
+- Issue 同步状态: `SYNCED`（本轮唯一事件 #7053556474 已发布并 GET 回读，同键仅 1 条；此状态不代表学术验收）
 
 ## 1. 批准目标基线
 
@@ -55,7 +55,7 @@
 - 未验证: 先秦技术采用/单位产量与赋税/战争改革的精确先后、原始考古/制度文件、同口径跨文明数据和竞争解释因果排除；Cambridge 付费章节全文、程乐松原始影音、独立审稿仍 NOT_RUN。
 - 对原目标贡献: 直接推进 AC-01/02 的关键问题（不能把相关当作最大驱动力）；用两个同期窗口与替代机制对作者四条件进行实质压力测试，保持原 Goal 不变。
 - 目标漂移: `D0`——用户要求聚焦原目标的第一条机制链，新增同行学术背景/对照，不改 Goal/Scope/AC；其余四条件暂不展开以防漂移。
-- 状态一致性: 已 GET 核对 #70 M1 状态、研究文档、PR #71 与本 Tracker；当前研究增量事件正按单 Writer CLAIMED 流程同步。
+- 状态一致性: 已 GET 核对 #70 M1 状态、研究文档、PR #71 与本 Tracker；本轮事件 #7053556474 与稳定 event_key 一致且独立回读仅 1 条。
 
 ## 5. 阻断与未受影响工作
 
@@ -94,15 +94,15 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 / initial | 创建 #70；将首轮历史与 AI 来源审计写入专题草稿分支 | AC-01~03 PARTIAL | [Issue #70](https://github.com/fweiger/AI_book/issues/70) / [audit](../../topics/ai-social-consciousness-transition/initial-claim-audit.md) | D0；初次互链回读待核，局部原文未得 | 完成两历史案例的因果矩阵 |
 | 2026-11-21 / M1-audit-event | 已 GET 确认 #70/Tracker/PR、唯一 Writer 已在 Tracker CLAIMED 后发布唯一进度事件，并 GET 只发现 1 条同键评论 | AC-01~03 PARTIAL；G1 同步完成 | [event](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053356363)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121` | D0 / CONSISTENT；原史料/独立审稿未完成 | 下次重新判断当前 AC 优先级 |
-| 2026-11-21 / M1-production-relations | 依用户主线强调完成跨文明同期基线、四种竞争解释和权威学术来源核查；主因尚未识别 | AC-01/02 PARTIAL | [研究增量](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` | D0/CONSISTENT；付费正文与可比考古数据缺失；进度事件待核 | 下一轮锁定先秦 H1/H2/H3 的原始时序/制度机制 |
+| 2026-11-21 / M1-production-relations | 依用户主线强调完成跨文明同期基线、四种竞争解释和权威学术来源核查；主因尚未识别 | AC-01/02 PARTIAL | [研究增量](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` | D0/CONSISTENT；付费正文与可比考古数据缺失；本轮唯一事件已 GET 回读 | 下一轮锁定先秦 H1/H2/H3 的原始时序/制度机制 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121`（本轮待发布，必须回读唯一声明）
-- writer_owner: `chatgpt-topic016-production-relations-20261121`
-- write_state: `CLAIMED`（本轮研究事件待发布；上一事件已 SYNCED）
+- active_event_key: `none`（本轮事件已确认发布；历史 event_key 保留 §9 与最近事件项）
+- writer_owner: `none`（本轮写者已完成发布并释放待发布声明）
+- write_state: `SYNCED`（本轮 #7053556474 已 GET 回读且本键只出现 1 条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121` / [GitHub 评论 #7053356363](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053356363)。本次状态 `SYNCED` 仅指本轮 GitHub 写入核对，不代表研究 AC 学术验收通过。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` / [GitHub 评论 #7053556474](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474)。同步仅表示本轮 GitHub 写入可回读、事件键唯一；研究 AC-02 仍 PARTIAL，核心因果 UNKNOWN。前一事件参见 §9。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -111,4 +111,4 @@
 | §5 局部阻断 | 付费原典与同口径数据缺失仅阻断主因判定 | 新文档 §4 | PASS（影响边界对照） |
 | §6/7 | 只调整执行顺序，下一步为先秦生产/战争财政时序核查 | 本文件 | PASS（主线对照） |
 | §7 与 §9 | 历史为上轮建议；当前唯一动作已按用户聚焦重新裁决 | 本文件 | PASS（权威对照） |
-| Issue 与 PR/Tracker 回链 | 既有事件已 SYNCED；本轮资料与 #70 已关联，事件将由唯一 Writer 发布 | #70 / PR #71 / 本 Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 研究资料 / 当前事件均可回读，当前键只出现一次 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474) | `SYNCED` |
