@@ -43,7 +43,8 @@ V0.7 的 T01–T06 仍主要围绕中西经典及现代跨学科案例；H2 四�
 
 ### TEXT / SOURCE
 
-- 梵文原典数字文本见 [GRETIL，基于 P. L. Vaidya 1960 版本](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa021_u.htm) **Vv_29**（可用短语 `nāsti ca mama pratijñā` 定位），并与 [Digital Sanskrit Buddhist Canon 的梵文天城体文本](https://www.dsbcproject.org/canon-text/content/541/2533) 第 29 偈核对。已定位两处数字梵文本，不宣称专业梵文学/文献作者归属校勘通过。
+- 梵文原典数字文本见 [GRETIL，基于 P. L. Vaidya 1960 版本](https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa021_u.htm) **Vv_29**（可用短语 `nāsti ca mama pratijñā` 定位），并与 [Digital Sanskrit Buddhist Canon 的梵文天城体文本](https://www.dsbcproject.org/canon-text/content/541/2533) 第 29 偈核对。已定位两处数字梵文网页，但**不将两网址计为相互独立的手稿、版次或校勘证人**：GRETIL 页首说明其数字输入与 Digital Sanskrit Buddhist Canon 项目有关，来源可能重叠；不宣称专业梵文学/文献作者归属校勘通过。
+- **V0.8.1 定向上下文补查（与 Vv29 同一作品，不扩张选样）**：GRETIL 与 DSBC 均可定位 **Vv22**（将缘起与无自性/空性联系）、**Vv29**（“无 `pratijñā`”），及 **Vv60**（提到此前已论证诸法空性，同时涉及对论题的责难）。这三处文本并列，构成需要解释的**语义/论辩张力**；单凭其中任一偈不能推出“作者一切语境没有主张”，也不能草率断言文本自相矛盾。必须把辩论声部、何种 `pratijñā`、是否限定为有自性承诺的论题以及自注置于相同论证上下文。Vv60 对应梵文数字文本 https://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/bsa021_u.htm 与 DSBC https://www.dsbcproject.org/canon-text/content/541/2533；Oxford University Press 的 Westerhoff *The Dispeller of Disputes* [Commentary 目录摘要](https://academic.oup.com/book/7445/chapter-abstract/152339703) 将 Vv60 与“Extrinsic Substances”问题单列，进一步说明只读 Vv29 会遗漏论战结构。**未读取该评论全文，也未完成梵文学独立释义。**
 - **争议一（语义／本体论）**：[Jan Westerhoff 2009《The No-Thesis View》](https://academic.oup.com/book/2343/chapter-abstract/142500873) 的出版社**摘要**将“无论题”的合理解释与具有本体论承诺的断言、普通语义断言的区别联系起来。**B-ABSTRACT-ONLY**，未冒充读过该章全文。
 - **争议二（论辩技术）**：[Matthew D. Williams-Wyant 2017，*Asian Philosophy* 27(3):263–277](https://www.tandfonline.com/doi/full/10.1080/09552367.2017.1353210) 的公开**摘要**提出：第 29 偈的 `pratijñā` 可从正理派五支论证/辩难类型的具体技术语境理解，不能自动视为中观总体上“放弃一切论断”的宣言。**B-ABSTRACT-ONLY**；本轮网页正文 403/不可用。
 - [SEP《The Theory of Two Truths in India》](https://plato.stanford.edu/entries/twotruths-india/) 可作为二手背景，不代表对 VV29 的争议已有统一学术判决。
@@ -57,7 +58,7 @@ V0.7 的 T01–T06 仍主要围绕中西经典及现代跨学科案例；H2 四�
 | R | 对手论证的回击、反证或对本体论承诺的语义限定可能仍是**可审查的理由活动** | “没有自立的正论题=没有论证”是错误二分；具体技术解读未裁定 |
 | H | 前现代印度佛教论辩与后世中观诠释，不是西方式单篇学院论文 | 作者归属、译本、后来评注传统及历史处境仍须进一步原典校勘 |
 
-**独立的强反例**：若 E1 某版本要求“哲学必须先提出自身积极的独立理论命题”，T08 至少构成一个需要严肃回答的**潜在反例**。但 VV29 的 `pratijñā` 范围存在竞争解释，不能跳过这一争议，把其直接当作该强 E1 的严格形式证伪。T08 尤其表明：把哲学中的 `R` 维缩成“列出自己主张的前提—结论”可能过窄，而无限放宽成“任何解释”又可能丧失鉴别力。
+**需要严格核语境的潜在反例**：若 E1 某版本要求“哲学必须先提出自身积极的独立理论命题”，T08 至少构成一个需要严肃回答的**潜在反例**。但 VV29 的 `pratijñā` 范围存在竞争解释，且 Vv22/Vv60 要求读者处理缘起、空性与论题之间的关系；不能跳过这些语境，把 T08 直接当作该强 E1 的严格形式证伪。T08 尤其表明：把哲学中的 `R` 维缩成“列出自己主张的前提—结论”可能过窄，而无限放宽成“任何解释”又可能丧失鉴别力。
 
 ## 4. 与既有研究的实质关系
 
@@ -76,11 +77,11 @@ V0.7 的 T01–T06 仍主要围绕中西经典及现代跨学科案例；H2 四�
 - S39：GRETIL《Nyāyasūtra》1.1.1–1.1.3，**A3-SANSKRIT-DIGITAL-UNPROOFREAD**；数字文本在线指定段直读，不能称原语校勘 PASS。
 - S40：Jha 1915《Nyāya-sūtra》英译/释文，WisdomLib 1.1.1–1.1.2，**A2-TRANSLATION**；三经具体译义由两处来源配合审视。
 - S41：SEP《Analytic Philosophy in Early Modern India》§1.1，**B-READ_SECTION**；“diagnostic rather than essentialist”仅限后期文献解释，不能向前直接投射；年代冲突待核。
-- S42：GRETIL《Vigrahavyāvartanī》Vv_29（1960 底本）＋DSBC 梵文，**A3-TWO-DIGITAL-EDITION-PASSAGE-LOCATED**；非语文学专家独立校勘。
+- S42：GRETIL《Vigrahavyāvartanī》Vv22/29/60（1960 底本相关数字版）＋DSBC 关联梵文，**A3-TWO-RELATED-DIGITAL-WITNESSES-NOT-INDEPENDENT**；非语文学专家独立校勘。
 - S43：Westerhoff 2009（OUP），**B-ABSTRACT-ONLY**；不能据摘要重构全文的论证细节。
 - S44：Williams-Wyant 2017（*Asian Philosophy*），**B-ABSTRACT-ONLY**；替代读法，全文待核。
 - S45：SEP《The Theory of Two Truths in India》与《Logic in Classical Indian Philosophy》，**B-SELECTED-SECTIONS**，背景参考。
 
-**逻辑层面的明确进展**：识别标准与共同本质分离；T07/T08 对 H2-R 作南亚传统补充；独立专家审校、原语校勘及全球代表性仍 `NOT_RUN`。
+**逻辑层面的明确进展**：识别标准与共同本质分离；T07/T08 对 H2-R 作南亚传统补充；V0.8.1 补查 Vv22/29/60 并限定两网页非独立证人；独立专家审校、原语校勘及全球代表性仍 `NOT_RUN`。
 
 **当前唯一建议（需要真实授权，不擅自邀请）**：把 T01–T08、C04/C05/C07 与 S39–S45 提供给真正获授权的独立审稿者，让其优先检查《正理经》译本/定年冲突、VV29 `pratijñā` 的异解、是否不当先选正例。若无独立路由继续保持 `BLOCKED_EXTERNAL_REVIEW`，不以当前研究者补文自封通过。
