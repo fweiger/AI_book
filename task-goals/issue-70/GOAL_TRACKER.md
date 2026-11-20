@@ -15,11 +15,11 @@
 - 协议路径/分支: `task-center/v1.2.2/ENTRY.md` @ `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
 - **锁定协议 commit SHA**: `f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 首次观察分支 HEAD: `f0e5ccb90c54265dcd07abb9a975c903eb031ccf`（后续新 HEAD 不自动升级）
-- 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；发布后应再次 GET
+- 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（首轮核对直接支持 AC-01~03；后续需再次判断）
-- 状态一致性: `UNKNOWN`（首次初始化中，待 Issue/Tracker 双向回读）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（初次登记与研究文件已写，回链待验）
+- 状态一致性: `CONSISTENT`（#70/Tracker/研究文档已双向回读，初始事件正在同步）
+- Issue 同步状态: `ISSUE_SYNC_PENDING`（#70/Tracker/PR 已互链回读；首轮实质进度事件 CLAIMED 待发）
 
 ## 1. 批准目标基线
 
@@ -55,7 +55,7 @@
 - 未验证: 原始程乐松演讲影音；系统性比较/反例；各章完整史料精读；「集体意识革命」的测量定义；独立审稿。
 - 对原目标贡献: 直接推进 AC-01~03，预防历史年代错误外推至 AI。
 - 目标漂移: `D0`——动作与未完成 AC 直接关联，非围绕单例无限扩展。
-- 状态一致性: 首次初始化未全回读，暂 `UNKNOWN`，不自称同步。
+- 状态一致性: 已 GET 核对 Issue #70、Tracker、研究草稿及 Draft PR #71；初始基线一致，事件同步仍待完成。
 
 ## 5. 阻断与未受影响工作
 
@@ -95,16 +95,16 @@
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `none`（本次为首次 G1 登记，不是进度评论重试）
-- writer_owner: `none`
-- write_state: `NONE`
+- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121`（首轮唯一稳定事件键）
+- writer_owner: `chatgpt-topic016-initial-20261121`
+- write_state: `CLAIMED`（必须 GET 验证后才可由本 Writer 发事件）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
-| Issue 目标 vs §1 | 初始化时基线一致 | #70 | 待写后回读 |
-| §3/4 实证与阶段 | M1 PARTIAL | audit | 待写后回读 |
-| §5 局部阻断 | 不阻断其余历史核验 | audit | 待写后回读 |
-| §6/7 | 原始目标不变，唯一下一步是历史因果矩阵 | 本文件 | 待写后回读 |
-| §7 与 §9 | 历史建议与当前优先动作一致 | 本文件 | 待写后回读 |
-| Issue 与 PR/Tracker 回链 | 初始化阶段 | #70 | `ISSUE_SYNC_PENDING` |
+| Issue 目标 vs §1 | 批准目标/AC 一致 | #70 与 Tracker | PASS |
+| §3/4 实证与阶段 | M1 PARTIAL | audit | PASS（状态对照） |
+| §5 局部阻断 | 不阻断其余历史核验 | audit | PASS（边界对照） |
+| §6/7 | 原始目标不变，唯一下一步是历史因果矩阵 | 本文件 | PASS（状态对照） |
+| §7 与 §9 | 历史建议与当前优先动作一致 | 本文件 | PASS（状态对照） |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / Tracker 可回读；首轮事件 CLAIMED | GitHub GET | `ISSUE_SYNC_PENDING` |
