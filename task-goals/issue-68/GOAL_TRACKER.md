@@ -21,7 +21,7 @@
 - Tracker 当前 blob SHA：首次创建后由 GitHub 回读获取；不在文件内自引用
 - 目标偏差：D0（本轮八路径/中西比较直接回应 Issue #68 AC-01/02/03/04/05/06，无扩展至四论子目标或 AI 教育）
 - 状态一致性：CONSISTENT（Issue #68 原批准 Goal/AC 不变；M1 草稿和 Draft PR #69 与本 Tracker 的部分进展一致；待事件回读）
-- Issue 同步状态：ISSUE_SYNC_PENDING（本轮 M1 事件正在按单 Writer CAS 声明，尚未发布评论；初始化的双向链接仍有效）
+- Issue 同步状态：SYNCED（本轮 M1 事件 #7046201012 仅出现一次、已 GET 回读；不等于哲学研究 AC 已验收）
 
 ## 1. 批准目标基线（原文摘录，批准来源是 Issue #68）
 
@@ -133,13 +133,16 @@
 | 时间 | 真实结果 | AC 贡献 | 证据 | 状态 | 历史建议动作 |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 M0 | 独立 Issue #68 与唯一 Tracker 创建且完成双向 GET 回读 | G0/G1 建档完成，研究 AC 未运行 | https://github.com/fweiger/AI_book/issues/68 | D0 / CONSISTENT / 初始化互链 SYNCED | M1 竞争性定义及边界对照 |
-| 2026-11-21 M1-01 | 八定义、四边界、四论证链、来源账本，四文件 GET 回读，Draft PR #69 创建 | AC-01..06 PARTIAL（独立审核 NOT_RUN） | https://github.com/fweiger/AI_book/pull/69 | D0 / CONSISTENT；ctext局部403不阻断其余原典 | 三对中西原典语义差异复核 |
+| 2026-11-21 M1-01 | 八定义、四边界、四论证链、来源账本，四文件 GET 回读，Draft PR #69 创建 | AC-01..06 PARTIAL（独立审核 NOT_RUN） | https://github.com/fweiger/AI_book/pull/69 ; https://github.com/fweiger/AI_book/issues/68#issuecomment-7046201012 | D0 / CONSISTENT / SYNCED；ctext局部403不阻断其余原典 | 三对中西原典语义差异复核 |
 
 ## 10. 最近状态一致性检查（动态）
 
-- active_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M1__EIGHT-VIEWS-20261121`
-- writer_owner: `ChatGPT-GPT6-TOPIC015-M1-20261121`（当前工具执行者；声明等待独占确认）
-- write_state: CLAIMED（先 CAS 写 Tracker、GET 核验独占，再发送同键 Issue 事件）
+- active_event_key: none（本轮事件 AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M1__EIGHT-VIEWS-20261121 已核验一次并结束）
+- writer_owner: none（本轮单 Writer 已完成 Issue 事件发布）
+- write_state: SYNCED（单次评论已回读；不保证 GitHub 评论接口的全局 exactly-once）
+- last_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M1__EIGHT-VIEWS-20261121`
+- last_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7046201012
+- last_claimed_tracker_sha: `27074f2e883654639f46d27514607e6914365954`
 - 失联 Writer 交接证据：不适用，当前 Writer 正在本轮执行；禁止未核验 fencing 的并行交接
 
 | 核对项 | 当前核对 | 结果 |
@@ -148,7 +151,7 @@
 | 执行阶段与证据 | M1 首轮定义矩阵/四文件已 GET，Draft PR #69 已建立，研究 AC PARTIAL | CONSISTENT |
 | 阻断与未受影响工作 | 转写未核与 ctext 部分403已隔离，不影响其余原典核验 | CONSISTENT |
 | 唯一下一步与历史建议 | §7 三对原典深读；§9 历史建议仅供恢复重决策 | CONSISTENT |
-| Issue/Tracker 初始链接 | 初始互链已核；当前 M1 事件等待独占 Writer 发布 | ISSUE_SYNC_PENDING |
+| Issue/Tracker/事件链接 | 初始互链已核，本轮评论 #7046201012 只出现一次，事件 SHA/协议与 Tracker 对应 | CONSISTENT / SYNCED |
 | 正式研究 AC | 六项均有首轮部分证据；独立审核尚未运行 | PARTIAL / REVIEW_NOT_RUN |
 
 > Tracker URL（本分支）：https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/task-goals/issue-68/GOAL_TRACKER.md
