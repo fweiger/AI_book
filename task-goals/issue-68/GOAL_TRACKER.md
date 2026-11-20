@@ -10,7 +10,7 @@
 - 项目研究目录（规划，尚未创建）：`topics/what-is-philosophy/`
 - 唯一 Tracker：`task-goals/issue-68/GOAL_TRACKER.md`
 - Tracker 工作分支：`topic/TOPIC-015/what-is-philosophy-20261121`（不将未经审查研究内容合并至 main）
-- 当前阶段：M0 受理 / G1 初始化
+- 当前阶段：M0 初始化已完成 / M1 尚未启动
 - 创建日期：2026-11-21
 - 最近更新：2026-11-21
 - 批准需求修订号：`r0-20261121-user`
@@ -20,8 +20,8 @@
 - 最新 Issue 读取：2026-11-21，Issue #68 OPEN，已 GET 回读 Goal/Scope/AC；后续须重新核对
 - Tracker 当前 blob SHA：首次创建后由 GitHub 回读获取；不在文件内自引用
 - 目标偏差：D0（建档研究目标与批准 Issue 文本一致；研究活动尚未开始）
-- 状态一致性：UNKNOWN（待完成 Issue↔Tracker 回链及 GET 核验）
-- Issue 同步状态：ISSUE_SYNC_PENDING（初始化回链待验证；不代表研究事件已发送）
+- 状态一致性：CONSISTENT（Issue #68 ↔ Tracker 双向链接均已 GET 回读，目标与 AC 未发生冲突）
+- Issue 同步状态：SYNCED（仅指 G1 初始化双向链接已核验；未发送独立进度事件，研究 AC 仍 NOT_RUN）
 
 ## 1. 批准目标基线（原文摘录，批准来源是 Issue #68）
 
@@ -78,7 +78,7 @@
 
 | 阶段 | 交付 | AC | 证据与验证 | 状态 |
 | --- | --- | --- | --- | --- |
-| M0 建档 | Issue + Tracker 互链与 GET 回读 | 项目管理初始化 | Issue #68 与本路径 | in_progress |
+| M0 建档 | Issue + Tracker 互链与 GET 回读 | 项目管理初始化 | Issue #68 与本路径 | complete |
 | M1 定义与边界 | 四种定义、三个边界案例、来源和最强异议 | AC-01、AC-02、AC-05 | 概念对照表/来源账本 | todo |
 | M2 多路径跨传统 | 三传统原典、四论与至少两条其他路径对照 | AC-03、AC-04 | 译本/原典定位、矩阵 | todo |
 | M3 可审查发布 | 文档、PR、独立核验 | AC-05、AC-06 | 文件与 PR 回读、审核记录 | todo |
@@ -86,20 +86,20 @@
 ## 4. 当前检查点
 
 - 最近完成的一轮：2026-11-21 新题目首次受理（非研究完成）。
-- 本轮实际完成：识别上位哲学定义问题与原四论专题边界；创建 Issue #68，初始 Tracker 预计在本轮创建并回读。
+- 本轮实际完成：界定独立元哲学问题；创建并 GET 回读 Issue #68；在独立工作分支创建并 GET 回读唯一 Tracker；Issue 与 Tracker 相互链接。
 - 已经核验：Issue #68 存在并包含 Goal/Scope/AC；协议入口及锁定 commit 可读取；#66 不是相同 Goal。
-- 尚未验证：Tracker 文件及相互回链；任何哲学原典与研究 AC；独立审稿。
+- 尚未验证：哲学原典研究 AC 与独立审稿、后续研究草稿 PR；Tracker/Issue 已互链核验。
 - 对目标的贡献：使未来研究围绕定义问题展开，不误并入 #66。
-- 当前阶段：M0。
+- 当前阶段：M0 完成，M1 待启动。
 - 目标漂移：D0，尚未偏离独立研究 Goal。
-- 状态一致性：UNKNOWN，等待双向回链检查。
+- 状态一致性：CONSISTENT，已分别回读 Issue 与 Tracker 双向链接。
 
 ## 5. 阻断与未受影响工作
 
 | 问题 | 影响 | 受影响 AC | 可继续工作 | 处理 |
 | --- | --- | --- | --- | --- |
 | 访谈为语音转写且部分识别含混 | 不可将其作为精准原典引语 | AC-03、AC-05 的具体引文 | M1 定义对照与公开学术资料检索 | 转写只作为发现问题的线索，另行核验 |
-| Tracker 双向回链待核对 | 影响 G1 初始化完整性 | 管理初始化 | M1 只读资料检索 | 完成 Issue/Tracker URL 互链及 GET |
+| Tracker 双向回链已核对 | 无持续阻断 | 管理初始化 | M1 定义资料检索 | 2026-11-21 已 PASS |
 
 ## 6. 执行路径调整记录
 
@@ -130,7 +130,7 @@
 
 | 时间 | 真实结果 | AC 贡献 | 证据 | 状态 | 历史建议动作 |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-21 M0 | 独立 Issue #68 已创建；初始 Tracker 建档进行中 | G0/G1 建档，研究 AC 尚未执行 | https://github.com/fweiger/AI_book/issues/68 | D0，状态回链待核 | M1 竞争性定义及边界对照 |
+| 2026-11-21 M0 | 独立 Issue #68 与唯一 Tracker 创建且完成双向 GET 回读 | G0/G1 建档完成，研究 AC 未运行 | https://github.com/fweiger/AI_book/issues/68 | D0 / CONSISTENT / 初始化互链 SYNCED | M1 竞争性定义及边界对照 |
 
 ## 10. 最近状态一致性检查（动态）
 
@@ -145,7 +145,7 @@
 | 执行阶段与证据 | 仅建档，无原典研究 | CONSISTENT |
 | 阻断与未受影响工作 | 转写不影响独立研究定义 | CONSISTENT |
 | 唯一下一步与历史建议 | §7 M1，为初始化唯一实质下一步 | CONSISTENT |
-| Issue/Tracker 初始链接 | 待互链回读 | UNKNOWN |
+| Issue/Tracker 初始链接 | 已分别 GET 回读，URL 互相指向 | CONSISTENT |
 | 正式研究 AC | 尚无原典或独立审核 | NOT_RUN |
 
 > Tracker URL（本分支）：https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/task-goals/issue-68/GOAL_TRACKER.md
