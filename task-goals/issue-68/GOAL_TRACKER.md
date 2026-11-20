@@ -1,6 +1,6 @@
 # GOAL_TRACKER.md｜TOPIC-015「哲学是什么？」（唯一 L 级动态目标追踪）
 
-> 本文件按 AI_tasks V1.2.2 试点创建。规范 Issue #68 是已批准 Goal/Scope/AC 的权威来源；本文件仅维护执行路径、检查点与唯一下一步。**M1–M3 主答卷 V0.5 与外部审稿交接包 V0.6 已提交并完成定向来源抽检；真正独立审稿和最终验收仍未完成。**
+> 本文件按 AI_tasks V1.2.2 试点创建。规范 Issue #68 是已批准 Goal/Scope/AC 的权威来源；本文件仅维护执行路径、检查点与唯一下一步。**M3 V0.7 逻辑修订与 H2 六案例定性压力测试已写入 Draft PR #69，正式独立哲学史审稿和最终 AC 仍未完成。**
 
 ## 任务身份
 
@@ -10,18 +10,18 @@
 - 项目研究目录（已创建且内容 GET 回读）：`topics/what-is-philosophy/`
 - 唯一 Tracker：`task-goals/issue-68/GOAL_TRACKER.md`
 - Tracker 工作分支：`topic/TOPIC-015/what-is-philosophy-20261121`（不将未经审查研究内容合并至 main）
-- 当前阶段：M3 独立审稿交接包与四个 P0 来源/逻辑重点已完成；PR #69 尚无正式 Review/评论/线程，外部审稿阶段无实际结果，等待有授权的真实独立审稿渠道
+- 当前阶段：M3-04 V0.7 概念层次修订及六案例 H2 定性压力测试已提交并通过文件一致性核查；真正独立学术 Review 仍 NOT_RUN / 局部阻断
 - 创建日期：2026-11-21
-- 最近更新：2026-11-21（M3 V0.6 审稿交接包、高风险来源定向复核、PR 审稿计数核查）
+- 最近更新：2026-11-21（M3-04 V0.7 内容修订、六案例反论、来源和链接核查；正式独立审稿 0）
 - 批准需求修订号：`r0-20261121-user`
 - 协议导航：`fweiger/AI_tasks@experiment/task-center-v1.2.2-continue-goal-guard-20261119:task-center/v1.2.2/ENTRY.md`
 - **锁定执行协议 commit SHA**：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 最近核实的执行协议版本：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`（**此为协议锁定 SHA，不是 AI_book 工作分支 HEAD**；业务分支 HEAD 以最新 PR 读取为准）
 - 最新 Issue 读取：2026-11-21，Issue #68 OPEN，已 GET 回读 Goal/Scope/AC；后续须重新核对
 - Tracker 当前 blob SHA：首次创建后由 GitHub 回读获取；不在文件内自引用
-- 目标偏差：D0（围绕原 Goal 的 C01–C08 高风险证据与论证进行有界抽检和独立审稿交接；直接推进 AC-03/05/06）
-- 状态一致性：CONSISTENT（Issue #68 r0 Goal/Scope/AC 未变；V0.6/README/sources GET 回读；PR #69 OPEN/DRAFT/UNMERGED；正式 Reviews/评论/行内线程均为 0，与外部审稿 NOT_RUN 一致）
-- Issue 同步状态：SYNCED（本轮审稿交接事件 #7047445821 经 GET 回读唯一稳定事件键一次；此前历史事件均已 SYNCED；不代表独立审稿完成）
+- 目标偏差：D0（围绕上位哲学定义、必要/充分条件、六案例反论与如何辨认哲学推进 AC-01/02/05/06）
+- 状态一致性：CONSISTENT（Issue #68 的 r0 Goal/Scope/AC 保持原样；V0.7 主答卷与六案例文件已回读；PR #69 仍 Draft/Unmerged；独立审稿 NOT_RUN；本轮 Issue 事件待同步）
+- Issue 同步状态：ISSUE_SYNC_PENDING（正在以唯一 Writer 发布 M3-04 事件；不冒称已同步或正式独立审稿完成）
 
 ## 1. 批准目标基线（原文摘录，批准来源是 Issue #68）
 
@@ -83,18 +83,17 @@
 | M2 中西原典/四领域 | 六个指定原典/四边界 | AC-01–05 | three-paired-text-readings.md / boundary-stress-test.md | partial_review_pending |
 | M3 元哲学立场与主答卷 | E1/E2/E3 / 综合答卷 V0.5 | AC-01/02/05/06 | metaphilosophy-positions-review.md / answer-to-what-is-philosophy.md | partial_review_pending |
 | M3 独立审稿交接准备 | V0.6 四项 P0、C01–C08、J1–J6；定向来源/逻辑核验、PR 审稿通道只读核查 | AC-03/05/06 | independent-review-handoff.md、README、sources GET 回读，PR 目前 0 reviews / 0 comments / 0 threads | handoff_ready_review_not_run |
+| M3 V0.7 逻辑校准/六案例 | [review-revision-v0.7.md](../../topics/what-is-philosophy/review-revision-v0.7.md) 与主答卷 V0.7；E1/E2/E3 分层，T01–T06 反向审查 | AC-01/02/05/06 | 六个文件/链接回读，原典/二手对应核查；不报告分类准确率 | content_revision_complete_review_pending |
 | 独立审稿及最终验收 | 外部学术/哲学史与逻辑审查及目标验收 | AC-03/05/06 | **无实际独立审稿记录**，PR #69 DRAFT/UNMERGED | BLOCKED_EXTERNAL_REVIEW（局部阻断） |
 
 ## 4. 当前检查点
 
-- 最近完成：2026-11-21 M3-03，PR #69 的独立学术审稿交接 V0.6，四个 P0 高风险来源/逻辑定向抽检。
-- 真实交付：创建并回读 `topics/what-is-philosophy/independent-review-handoff.md`（H01–H04、C01–C08 八项审稿矩阵、J1–J6 六项审稿问题、真实反馈需提供何种证据）；README 索引与 sources.md 增加本轮 Spot Check 日志，均逐文件 GET 回读；保留同一 Draft PR #69，未合并。
-- 本轮实际抽检：柏拉图《申辩》21d Perseus/Fowler 英译页标 1914；《论语·为政》2.17 子路、2.18 子张不是同一场对话；亚里士多德《形而上学》A.1 理论/经验与因果；SEP 墨家三表及 35–37 版本差异；SEP 庄子彼是/道枢；SEP 晚期维特根斯坦 §3.4/PI65–71 游戏/语言家族相似不能直接证明“哲学无本质”；桑兵出版社 2019(14(4):535–574) vs 2020-01-17 在线日期，公开页面仅摘要。
-- 严格逻辑审查：有 `R∧Science` 而非 `R∧¬P`，领域重叠本身不能反证 `R→P`；“哲学无排他界限”与“哲学无法定义”亦不同。
-- PR 原生只读审稿核验：GitHub PR #69 正式 Review **0**，PR 合并讨论/行内评论 **0**，inline review threads **0**。以上只能证明**当前无可回读审稿记录**，并不能证明所有潜在审稿者是否已经被邀请。没有任何外部邀请或独立学者审稿实际执行。
-- 实际阻断：正式独立哲学史/逻辑审稿 NOT_RUN、外部授权/人员路径不明（ROUTE_REVIEW_UNKNOWN），故此阶段局部 BLOCKED；不能把内部检查说成独立验收。
-- 对 Goal/AC：定向来源与交接增量推进 AC-03/05/06 的**可审查性**；AC-01–06 保持 PARTIAL；D0、CONSISTENT，单 Writer Issue 进度事件本轮等待同步。
-- 不要扩散：不再无限重复审稿包、额外新增哲学家或猜测审稿身份；保持 OPEN Issue 与 DRAFT PR。
+- 最近完成：2026-11-21 M3-04，新增 [V0.7 审查回应及 H2 六案例](../../topics/what-is-philosophy/review-revision-v0.7.md)，同步修订综合答卷、README、三路历史稿、V0.6 交接文件及八路径名称。
+- 具体修正：L01 共通本质/必要性/充分性/排他性各自独立；L02 E1/E2 概念结构竞争与 E3-weak 历史约束、E3-strong 构成主张分层；L03 六案例含两个正例、两个构造性通常非哲学对照、两个跨界争议，H2 的独立归类能力未证明。
+- 证据：PR #69 head fba94c0793a31f2c1052279f29a7e3412ddf8c62（此为 M3-04 文稿已提交时的快照；后续 Tracker 写入将更新 HEAD），V0.7 与主答卷/README/历史文稿等六份相关文件均逐项 GET 内容回读；Markdown 本地相对链接检查没有发现失效。
+- 当前结论：AC-01/02/05/06 获有界实质进展，但仍 PARTIAL；AC-03 原语/文献版本校勘和印度/非洲代表性仍需外部审查；PR OPEN/DRAFT/UNMERGED；正式 PR Review=0，不得称已经完成独立同行审稿。
+- 独立性：GitHub 登录 `fweiger` 与 PR 作者相同；本轮 AI 复核与内容修订不是独立 GitHub 学者审稿、没有赋予新 reviewer，也没有修改批准目标或 #66。
+- 目标偏差 D0；状态一致性 CONSISTENT（Issue 原批准基线未改；进度事件本轮先 CAS 声明后同步）。
 
 ## 5. 阻断与未受影响工作
 
@@ -113,15 +112,14 @@
 | 2026-11-21 M3-01 | E1/E2/E3 钢人化 | 三路线交叉论证完成 | 单篇综合答卷 | 未改 |
 | 2026-11-21 M3-02 | 主答卷/来源映射/内审 | V0.5 主答卷、C01–C08、A-01–A-12 | V0.6 审稿交接包与 P0 高风险来源复核 | 未改 |
 | 2026-11-21 M3-03 | 独立审稿交接与定向源核验 | V0.6/README/sources GET，PR #69 0 submitted reviews/comments/threads | 审稿通道/授权状态确认 → 若可用才实际独立审核并回读；否则维持局部 BLOCKED | 未改 |
+| 2026-11-21 M3-04 | V0.7 概念与 H2 定性测试 | 新旧文本/PR 修改可回读 | 下一步转交获授权的独立反向审稿；不继续自行重复交接包 | 未改 |
 
 ## 7. 下一步（唯一动态权威）
 
-- **唯一优先动作**：核实 **PR #69 的真实独立审稿路由/人员与授权状态**（以 GitHub 只读 reviewer request/review evidence、现有任务固定分配或用户明确授权为准）；**若有已授权且真实独立的审稿者**，提供现有 `independent-review-handoff.md` / V0.5 主答卷及 J1–J6 核验清单并核对其实际审稿意见；**若无分配或无授权则标 `BLOCKED_EXTERNAL_REVIEW` 并暂停进一步重复文献自审**，只保留已完成的材料与复核缺口。**禁止擅自邀请陌生第三方、改变权限、合并 PR 或关闭 Issue**。
-- 直接关联未完成 AC：AC-03（高风险原文/解释独立核查）、AC-05（论证独立反驳）、AC-06（审稿完整交接），其余仍 PARTIAL。
-- 为什么：所有内部可交接材料已准备齐全，继续自己重复“再做一轮内部审稿”不会提供**独立性**，是最主要的验收依赖和目标保持节点。
-- 预期验收证据：真实 PR review/comment 或另一个独立研究者的可回读、带版本/段落/时间的独立核验记录，对应 H01–H04/J1–J6；若不可得，输出明确 BLOCKED 状态，不编造 REVIEW_PASS。
-- 输入来源：本 Issue #68 最新 Goal/Scope/AC、同一 Tracker 的最新 SHA、Draft PR #69、V0.6 审稿交接包/现有 README/sources、锁定 Task Center 协议。
-- 局部止损：若只有 PR Review=0 并且无获授权 reviewer，**不要连续多轮重做同类审稿包**；只有出现真实外部审稿证据或用户授予相应请求权限时才推进此依赖；本任务其他无依赖部分保持成果不回滚。
+- **唯一优先动作**：取得已有**真实授权的独立审稿渠道/人员**后，提交 **V0.7 的 T01–T06 六案例判别、E1/E2/E3 分层与 J1–J6 原典问题** 进行第二研究者的**反向复核**，记录 `CLAIM-ID × SRC-ID × 章/版本 × 最强反例` 及真实审稿记录，并逐条评估可否修订。当前无授权/人员证据时仅保持 `BLOCKED_EXTERNAL_REVIEW`，不发外部邀请，不伪装同作者编辑为独立通过，不反复制造自审文档。
+- 关联未完成 AC：AC-01/02（H2 不具备已证明的判别力）、AC-03（代表性/原文释义）、AC-05（强反例）、AC-06（独立可回读审核）。范围仅限同一 TOPIC-015，非新任务。
+- 为什么优于旧下一步：用户已要求独立批判性审查，现完成 V0.7 有内容的反论修订；继续自我提议无增量，实际独立审查是当前真实依赖。不得用 PR Draft 或评论数 0 替代审稿人权限判断。
+- 验收证据：与 PR/head 绑定的外部独立评审记录及对 T01–T06/J1–J6 的具体修订意见；没有则保持所有 AC 的最终验收 PARTIAL，下一动作仍等待可确认的独立渠道。
 
 ## 8. “继续”恢复检查
 
@@ -145,27 +143,27 @@
 | 2026-11-21 M3-02 | 综合研究答卷 V0.5：A–K 11段、C01–C08 8项主张—证据—反论、A-01–A-12 内审、J1–J6 独立审稿问题；README、来源账本更新及 GET 回读 | AC-05/06 实质增量；AC-01–06 均 PARTIAL、独立审稿 NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/answer-to-what-is-philosophy.md ; https://github.com/fweiger/AI_book/pull/69 ; https://github.com/fweiger/AI_book/issues/68#issuecomment-7047225995 | D0 / CONSISTENT；修正旧元数据描述；结构与来源编号内审 PASS | PR 级独立审稿交接包与高风险来源抽检 |
 | 2026-11-21 M3-03 | V0.6 独立审稿包（H01–H04/C01–C08/J1–J6），指定来源与逻辑 Spot Check；PR 正式 Review/评论/行内线程各 0，未邀请外部审稿者 | AC-03/05/06 可审查性实质增量；最终 AC PARTIAL、独立审稿 NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/independent-review-handoff.md ; https://github.com/fweiger/AI_book/pull/69 ; https://github.com/fweiger/AI_book/issues/68#issuecomment-7047445821 | D0 / CONSISTENT；独立审核部分 BLOCKED_EXTERNAL_REVIEW | 审稿授权/真实 reviewer 路由核验；无授权不得外邀 |
 
+| 2026-11-21 M3-04 | V0.7 三个逻辑修订及六案例 H2 定性压力测试，主答卷/README/旧稿提示/八路径矩阵回读 | AC-01/02/05/06 内容实质进展；整体 PARTIAL，外审 NOT_RUN | https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/topics/what-is-philosophy/review-revision-v0.7.md ; https://github.com/fweiger/AI_book/pull/69 ; Issue 事件待同步 | D0 / CONSISTENT / ISSUE_SYNC_PENDING；没有准确率或专家 PASS | 获授权独立审稿者复核 V0.7 的非循环识别与历史跨传统反例 |
+
 ## 10. 最近状态一致性检查（动态）
 
-- active_event_key: none（AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__REVIEW-HANDOFF-20261121 已回读并完成）
-- writer_owner: none（本轮提交、回读后已结束）
-- write_state: SYNCED（事件 #7047445821 仅出现一次，GitHub Issue 评论接口本身不提供 exactly-once 原子保证）
+- active_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__V07-LOGIC-H2-STRESS-20261121`
+- writer_owner: `ChatGPT-GPT6-TOPIC015-V07-REVIEW-20261121`（GitHub 认证用户 `fweiger`；本轮逻辑事件单 Writer，非正式独立学术 reviewer）
+- write_state: CLAIMED（事件发布前的 CAS 声明；GET 回读后才允许向 Issue 发布）
+- tracker_sha_before_claim: `f7bd01521800e74c1c88448c1fdc2c3a3df41d78`
+- pr_head_before_claim: `fba94c0793a31f2c1052279f29a7e3412ddf8c62`
+- requirements_revision: `r0-20261121-user`
+- protocol_commit_locked: `f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - last_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__REVIEW-HANDOFF-20261121`
 - last_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7047445821
-- last_claimed_tracker_sha: `2e7e161dc67c9f80c5420a2c5e370593c356f160`
-- previous_completed_event_key: `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__INTEGRATED-ANSWER-20261121`
-- previous_issue_event: https://github.com/fweiger/AI_book/issues/68#issuecomment-7047225995
-- 旧 Writer fencing：不适用，本轮与历史 Writer 均已 SYNCED 且无活动 Writer；未来若出现未知结果仍须证明原 Writer 停止才能接管。
 
 | 检查项目 | 实证 | 状态 |
 | --- | --- | --- |
-| 已批准 Goal/Scope/AC | Issue #68 r0 仍原文；#66 独立 | CONSISTENT |
-| §3/§4 与研究文稿 | handoff/README/sources 逐文件 GET，PR #69 OPEN/DRAFT/UNMERGED | CONSISTENT |
-| 外部审稿实际状态 | GitHub PR Review=0，合并评论=0，行内线程=0 | REVIEW_NOT_RUN |
-| §5 局部阻断与可继续工作 | 仅独立终审依赖阻断，不回滚研究稿 | CONSISTENT / BLOCKED_EXTERNAL_REVIEW |
-| §6 路径 → §7 唯一下一步 | handoff 已准备→核验真实授权/审稿渠道，不重复制作自评 | CONSISTENT |
-| §7 vs §9 历史 | 历史建议不覆盖唯一当前步骤 | CONSISTENT |
-| 本轮 Issue 进度事件 | #7047445821 已回读，单一稳定键，活动 Writer 已清理 | SYNCED |
-| 目标偏差 | 所有工作只服务“哲学是什么”的证据真实性与可审查性 | D0 |
+| 批准 Goal/Scope/AC | Issue #68 r0 不改；#66 不改 | CONSISTENT |
+| 研究材料 | V0.7 + 主答卷/README/历史稿逐文件 GET；PR 仍 Draft | PASS_FILES |
+| H2 六案例 | 两构造对照、两真实学科交叉；无盲评真值标签 | PARTIAL / NO_ACCURACY_CLAIM |
+| 独立正式审稿 | PR 正式 Review = 0，未邀请外部审稿者 | NOT_RUN |
+| 本轮进度事件 | `AI-BOOK-TOPIC-015-WHAT-IS-PHILOSOPHY__M3__V07-LOGIC-H2-STRESS-20261121` 正在 CLAIMED，Issue 尚未发布 | ISSUE_SYNC_PENDING |
+| 唯一下一步 | 等真实获授权独立复核 V0.7；不可自授审稿资格 | D0 / BLOCKED_EXTERNAL_REVIEW |
 
 > Tracker：https://github.com/fweiger/AI_book/blob/topic/TOPIC-015/what-is-philosophy-20261121/task-goals/issue-68/GOAL_TRACKER.md
