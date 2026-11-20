@@ -19,7 +19,7 @@
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（首轮核对直接支持 AC-01~03；后续需再次判断）
 - 状态一致性: `CONSISTENT`（#70/Tracker/研究文档已双向回读，初始事件正在同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（#70/Tracker/PR 已互链回读；首轮实质进度事件 CLAIMED 待发）
+- Issue 同步状态: `SYNCED`（规范 Issue 首轮事件已发布并 GET 回读 1 条、Tracker 单 Writer 有效）
 
 ## 1. 批准目标基线
 
@@ -92,13 +92,15 @@
 | 日期/批次 | 已完成 | AC 贡献 | 证据 | 偏差/一致性与阻断 | 当时建议下一步 |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-21 / initial | 创建 #70；将首轮历史与 AI 来源审计写入专题草稿分支 | AC-01~03 PARTIAL | [Issue #70](https://github.com/fweiger/AI_book/issues/70) / [audit](../../topics/ai-social-consciousness-transition/initial-claim-audit.md) | D0；初次互链回读待核，局部原文未得 | 完成两历史案例的因果矩阵 |
+| 2026-11-21 / M1-audit-event | 已 GET 确认 #70/Tracker/PR、唯一 Writer 已在 Tracker CLAIMED 后发布唯一进度事件，并 GET 只发现 1 条同键评论 | AC-01~03 PARTIAL；G1 同步完成 | [event](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053356363)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121` | D0 / CONSISTENT；原史料/独立审稿未完成 | 下次重新判断当前 AC 优先级 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121`（首轮唯一稳定事件键）
-- writer_owner: `chatgpt-topic016-initial-20261121`
-- write_state: `CLAIMED`（必须 GET 验证后才可由本 Writer 发事件）
+- active_event_key: `none`（上一事件已同步完成；历史键见本节下方与 §9）
+- writer_owner: `none`（当前无待发布事件声明）
+- write_state: `SYNCED`（首轮事件 #7053356363 已核对唯一出现）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121` / [GitHub 评论 #7053356363](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053356363)。本次状态 `SYNCED` 仅指本轮 GitHub 写入核对，不代表研究 AC 学术验收通过。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -107,4 +109,4 @@
 | §5 局部阻断 | 不阻断其余历史核验 | audit | PASS（边界对照） |
 | §6/7 | 原始目标不变，唯一下一步是历史因果矩阵 | 本文件 | PASS（状态对照） |
 | §7 与 §9 | 历史建议与当前优先动作一致 | 本文件 | PASS（状态对照） |
-| Issue 与 PR/Tracker 回链 | #70 / PR #71 / Tracker 可回读；首轮事件 CLAIMED | GitHub GET | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / Tracker 可回读；事件评论唯一匹配 | [#70 进度事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053356363) | `SYNCED` |
