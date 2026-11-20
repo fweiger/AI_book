@@ -121,3 +121,15 @@
 - **是否值得继续**：准备工作已足够，下一步应先判断有没有可用的、真实的独立审稿者和审稿通道（用户授权是邀请外部人员的必要前提）。如没有，保持 Draft、不做假审稿、不机械开启新资料搜集循环。
 
 **目标保持**：回答上位“哲学是什么”；独立 [TOPIC-014 #66](https://github.com/fweiger/AI_book/issues/66) 是四论知识结构的另一路径，不能替代此题。
+
+## 6. PR 原生审稿通道的只读核实（2026-11-21）
+
+本轮通过 GitHub PR 原生读取动作针对 **Draft PR #69** 进行了三项不同口径的回读：
+
+- **正式 PR Review submissions**：`0` 条（GitHub list pull request reviews）。
+- **PR Conversation / inline review comments merged timeline**：`0` 条（GitHub fetch PR comments）。
+- **PR inline review threads**：`0` 条（GitHub list review threads）。
+
+**直接可见的结论**：在本轮读取时，PR #69 没有任何可回读的正式 review、评论或 inline 线程；因此不能将其标为已经经过独立审核。**不能从三个零反推已有人被邀请或无人能够审稿**：受邀审稿者的请求状态是另一个 API/权限维度，当前并未核实。未向任何人发送审稿邀请或修改 PR 的 Draft 状态。
+
+后续若出现审稿记录，应核查实际作者、时间、相关文件/段落、意见、解决证据，再修改 `EXTERNAL_REVIEW_NOT_RUN`。仅有 bot 欢迎评论、自动检查成功或同一研究执行者自我评价，也不等于独立哲学史审稿。
