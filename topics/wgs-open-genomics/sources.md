@@ -12,7 +12,7 @@
 ## 家谱、古 DNA 与人群历史
 - [Y 染色体工具与谱系时钟：一手 README 对照和推断边界](y-chromosome-methods.md)。
 - [Poznik (2016) yhaplo 算法 bioRxiv 预印本 DOI 10.1101/088716](https://doi.org/10.1101/088716)；注意项目 README 的非商业使用许可。
-4. Ralf et al. (2018), *Yleaf: Software for Human Y-Chromosomal Haplogroup Inference from Next-Generation Sequencing Data*, [DOI 10.1093/molbev/msy080](https://doi.org/10.1093/molbev/msy080) — Y 染色体单倍群。
+4. Ralf et al. (2018), *Yleaf: Software for Human Y-Chromosomal Haplogroup Inference from Next-Generation Sequencing Data*, [原始论文 DOI 10.1093/molbev/msy032](https://doi.org/10.1093/molbev/msy032)，另有[2018 Erratum msy080](https://doi.org/10.1093/molbev/msy080) — Y 染色体单倍群；此前误把勘误 DOI 作为方法论文，已按[PubMed PMID 29518227](https://pubmed.ncbi.nlm.nih.gov/29518227/) 核实纠正。
 5. Chen et al. (2021), *Y-LineageTracker: a high-throughput analysis framework for Y-chromosomal next-generation sequencing data*, [DOI 10.1186/s12859-021-04057-z](https://doi.org/10.1186/s12859-021-04057-z) — Y-SNP/Y-STR。
 6. Haplogrep 3 (2023), *Nucleic Acids Research*, [PubMed 37070190](https://pubmed.ncbi.nlm.nih.gov/37070190/) — mtDNA 谱系。
 7. Ringbauer et al. (2024), *Accurate detection of identity-by-descent segments in human ancient DNA*, [DOI 10.1038/s41588-023-01582-w](https://doi.org/10.1038/s41588-023-01582-w) — 古 DNA IBD，必须区分古代样本实际年龄与 TMRCA。
