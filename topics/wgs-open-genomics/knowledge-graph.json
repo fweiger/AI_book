@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.1.1",
+  "topic_id": "TOPIC-017",
+  "title": "个人全基因组 WGS：开源工具、研究方向与可验证证据",
+  "source_level": "GitHub 仓库元数据/论文摘要/权威机构入口；实测 NOT_RUN",
+  "books": [],
+  "nodes": [
+    {
+      "id": "W01",
+      "type": "data",
+      "title": "个人 WGS 原始测序与参考版本",
+      "evidence_level": "技术定义"
+    },
+    {
+      "id": "W02",
+      "type": "method",
+      "title": "比对/质控/变异检测与基准",
+      "evidence_level": "方法标准"
+    },
+    {
+      "id": "W03",
+      "type": "research",
+      "title": "父系 Y 单倍群与家谱",
+      "evidence_level": "方法+待验证历史"
+    },
+    {
+      "id": "W04",
+      "type": "research",
+      "title": "母系 mtDNA 单倍群",
+      "evidence_level": "方法"
+    },
+    {
+      "id": "W05",
+      "type": "research",
+      "title": "常染色体 IBD 亲缘",
+      "evidence_level": "方法+受限人群数据"
+    },
+    {
+      "id": "W06",
+      "type": "research",
+      "title": "古 DNA 与人群迁徙",
+      "evidence_level": "群体模型+待验证"
+    },
+    {
+      "id": "W07",
+      "type": "research",
+      "title": "疾病变异注释与解释",
+      "evidence_level": "临床指南/须确认"
+    },
+    {
+      "id": "W08",
+      "type": "research",
+      "title": "药物基因组学",
+      "evidence_level": "CPIC/须确认"
+    },
+    {
+      "id": "W09",
+      "type": "research",
+      "title": "复杂疾病 PRS",
+      "evidence_level": "GWAS/需要祖源外推"
+    },
+    {
+      "id": "W10",
+      "type": "research",
+      "title": "睡眠饮食复杂性状",
+      "evidence_level": "统计关联而非因果处方"
+    },
+    {
+      "id": "W11",
+      "type": "research",
+      "title": "结构变异 CNV STR",
+      "evidence_level": "方法受短读长限制"
+    },
+    {
+      "id": "W12",
+      "type": "evidence",
+      "title": "外部论文/数据库/独立验证",
+      "evidence_level": "待逐篇深读"
+    }
+  ],
+  "edges": [
+    {
+      "source": "W01",
+      "target": "W02",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W03",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W04",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W05",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W07",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W08",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W09",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W02",
+      "target": "W11",
+      "relation": "输入依赖"
+    },
+    {
+      "source": "W03",
+      "target": "W06",
+      "relation": "待验证旁证"
+    },
+    {
+      "source": "W05",
+      "target": "W06",
+      "relation": "待验证旁证"
+    },
+    {
+      "source": "W09",
+      "target": "W10",
+      "relation": "研究延伸"
+    },
+    {
+      "source": "W12",
+      "target": "W06",
+      "relation": "证据约束"
+    },
+    {
+      "source": "W12",
+      "target": "W07",
+      "relation": "证据约束"
+    },
+    {
+      "source": "W12",
+      "target": "W08",
+      "relation": "证据约束"
+    },
+    {
+      "source": "W12",
+      "target": "W09",
+      "relation": "证据约束"
+    },
+    {
+      "source": "W12",
+      "target": "W10",
+      "relation": "证据约束"
+    },
+    {
+      "source": "W03",
+      "target": "W06",
+      "relation": "禁止直接推断"
+    },
+    {
+      "source": "W09",
+      "target": "W10",
+      "relation": "禁止直接推断"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "WGS 质量",
+      "nodes": [
+        "W01",
+        "W02",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "变异结构与基准",
+      "nodes": [
+        "W02",
+        "W11",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "父系",
+      "nodes": [
+        "W02",
+        "W03",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "母系",
+      "nodes": [
+        "W02",
+        "W04",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "亲缘",
+      "nodes": [
+        "W02",
+        "W05",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "古DNA与人口史",
+      "nodes": [
+        "W03",
+        "W05",
+        "W06",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q07",
+      "name": "遗传病",
+      "nodes": [
+        "W02",
+        "W07",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q08",
+      "name": "药物",
+      "nodes": [
+        "W08",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q09",
+      "name": "复杂疾病与睡眠",
+      "nodes": [
+        "W09",
+        "W10",
+        "W12"
+      ]
+    },
+    {
+      "id": "Q10",
+      "name": "技术盲区",
+      "nodes": [
+        "W01",
+        "W02",
+        "W11"
+      ]
+    }
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "reading-path.md",
+  "constraints": [
+    "仅个人 WGS 不可验证 GWAS 或寻亲网络",
+    "不上传任何私人 DNA 和医学隐私",
+    "研究报告不等于临床诊断"
+  ]
+}
