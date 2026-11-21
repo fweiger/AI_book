@@ -88,20 +88,22 @@
 | 2026-11-21/G4 | 完成六领域方法、许可与输入核查；补 StellarPGx/OptiType，25 论文/34 项 | 02/03/04 PARTIAL | [G4 事件 #7060387293](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060387293) | D0；已回读 | SV/mtDNA/携带者 |
 | 2026-11-21/G5 | 完成 D02/D04/D08 的原始证据与许可限制；36 论文/39 个源码候选 | 02/03/04 PARTIAL | [G5 事件 #7060680525](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060680525) | D0；已回读 | 现代 IBD、睡眠、运动 |
 | 2026-11-21/G6 | 深核 D05 相位 IBD、D11 睡眠 GWAS/PRS、D13 运动行为与训练反应模型，新增 P037–P041；41 论文/39 仓库 | 02/03/04 PARTIAL | [G6 审计](cross-domain-evidence-audit-g6.md)、[本轮日志](sessions/2026-11-21-ibd-sleep-exercise-paper-code-audit.md) | D0 ALIGNED，Issue G6 事件待同步；E2 NOT_RUN | 15 域证据/输入/许可一致性审计 |
+| 2026-11-21/G7 | 15 域/47 DOI/39 仓库交叉索引去重 PASS；D01 GIAB/ACMG/PCR-free 质量、D15 非直接组学边界、Gauchian 质疑/回应纠偏；原始文件验收合同 | AC-02/03/04 PARTIAL | [G7 审计](cross-domain-evidence-audit-g7.md)、[文件合同](wgs-data-acceptance-contract.md)、[证据日志](sessions/2026-11-21-wgs-quality-cross-evidence-audit.md) | D0/CONSISTENT（G7 同步待验证），E2 NOT_RUN | 公共 HG002 chr20 真实小变异 benchmark |
+
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：none（上一 G6 事件 AI_book#72:AC02-03-04:20261121-g6-ibd-sleep-exercise 已完成）
-- **当前 writer_owner**：none（上一 G6 Writer chatgpt-topic017-g6-20261121 已完成）
-- **当前 write_state**：SYNCED（[G6 唯一评论 #7060913003](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060913003) 已 GET 回读，匹配事件键仅 1 条；事件声明 Tracker blob SHA 5fb3131db55727aeeb7bfae16c775951e4448199）
+- **当前 active_event_key**：AI_book#72:AC02-03-04:20261121-g7-cross-domain-qc
+- **当前 writer_owner**：chatgpt-topic017-g7-20261121
+- **当前 write_state**：CLAIMED（G7 唯一事件待发；原 G6 #7060913003 已回读）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
 | 检查项 | 当前值 | 证据 | 结果 |
 |---|---|---|---|
 | Issue Goal/Scope/AC 与 §1 | 合同一致 | 初始 GET #72 | CONSISTENT（内容） |
-| §3/§4 与真实证据 | G6 三域新论文和源码方法证据，41 篇与 39 项可读；E2 NOT_RUN | G6 实际研究文件与唯一 Issue 评论 | PARTIAL |
+| §3/§4 与真实证据 | G7 47 篇不同 DOI、39 源码、15 域静态去重已核、原始文件合同及双方证据可读；E2 NOT_RUN | G7 文件与来源核对 | PARTIAL |
 | §5 局部阻断 | Docker/DNS 仅阻断局部实验；全部文献分析可推进 | PR 与环境约束 | CONSISTENT |
-| §6 与 §7 | D05/D11/D13 已审；下一步矩阵全域证据一致性核查 | G6 新文件和原 AC | CONSISTENT |
+| §6 与 §7 | G7 全域证据审计已完成；下一步公共 HG002 小范围 E2 | 现有 benchmark 与原 AC-05 | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G6 原始事件各有唯一 event_key，G6 评论 #7060913003 已回读 | G6 声明 Tracker blob SHA 5fb3131db55727aeeb7bfae16c775951e4448199 | SYNCED |
+| Issue 最新事件与 Tracker | G1–G6 各自唯一事件已回读；G7 尚未发布 | G7 event_key 和 Writer 声明 | ISSUE_SYNC_PENDING |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
