@@ -1,13 +1,15 @@
 # TOPIC-017｜从一份个人 WGS 到遗传学、医学、家族史与古 DNA
 > 来源与规范研究任务：[AI_book Issue #72](https://github.com/fweiger/AI_book/issues/72)  
-> 建立：2026-11-21；专题版本：`0.1.1`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
+> 建立：2026-11-21；专题版本：`0.1.2`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
 > **本仓库公开；严禁保存任何人的真实 FASTQ/BAM/CRAM/VCF、家谱身份、疾病信息或其他敏感数据。**
 
 ## 最初的问题
 当一位普通消费者取得 30–40× 短读长人类全基因组测序（WGS）数据后，能借助哪些开源研究方法、论文及参考数据库，可靠地探索什么？哪些领域只能生成候选假设，哪些需要亲属/人群样本、独立验证或临床确认？
 
 ## 核心框架
-**基因组原始数据 → 技术质量 → 遗传变异 → 外部证据 → 研究问题 → 可证伪结论。**
+**WGS 数据质量/可分析能力 → 原始论文与证据要求 → 全方向问题/研究深度 → 对应开源项目 → 公开数据复现。**
+
+**[先读全方向研究主矩阵：15 个研究维度 × 22 篇文献 × 32 个开源项目](evidence-capability-matrix.md)**。本主题采用广度优先、证据驱动的方法；父系 Q03 只是其中一个子方向。
 
 - **技术底座**：FASTQ（reads）→ BAM/CRAM（比对）→ VCF/gVCF（变异调用）；与 GRCh38/GRCh37/T2T 参考版本、chrY/mtDNA 区域、变异类型一起记录。
 - **遗传谱系**：Y 单倍群、mtDNA、常染色体 IBD、古 DNA、群体迁徙与亲缘网络。
@@ -16,6 +18,7 @@
 - **证据体系**：Github 项目存在 E0 → 原始论文可核 E1 → 公开样本真实复现 E2 → 跨工具/队列 E3 → 独立临床可行动 E4。
 
 ## 导航
+- **[全方向主矩阵：数据门槛 × 论文 × 研究深度 × GitHub](evidence-capability-matrix.md)** · [22 篇论文 P-ID 注册表](paper-register.md)
 - [研究问题 Q01–Q10](questions.md) · [研究方向与深度矩阵](research-matrix.md)
 - [32 项 GitHub 开源工具目录](open-source-projects.md)
 - [论文、原始标准与参考数据库](sources.md) · [按问题阅读路径](reading-path.md)
