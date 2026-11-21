@@ -7,13 +7,13 @@
 - 所属源仓库：`fweiger/AI_book`
 - 项目入口：`topics/wgs-open-genomics/README.md`
 - 唯一 Tracker：`topics/wgs-open-genomics/GOAL_TRACKER.md`（本文件）
-- 当前阶段：HG002 chr20 公开基准规范及脚本已提交；Q03 Y 工具方法核查已完成；真实分析 NOT_RUN
+- 当前阶段：15 方向 WGS 数据质量→论文→研究深度→GitHub 证据矩阵 v0.1 已提交；特定 WGS 实验仍 NOT_RUN
 - 选定协议：`fweiger/AI_tasks/task-center/v1.2.2/ENTRY.md`，原实验候选分支 `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
 - **锁定协议 commit SHA：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`**（续接仅从锁定版本读取，不自动跟随 HEAD）
 - 本轮观察的候选分支 HEAD（协议分支）：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 初始 Issue 验证：2026-11-21，GET #72 内容可读，`requirements_revision: 1`
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
-- 目标漂移：`D0 ALIGNED`（所做工作直接对应 AC-02/03/04/06，尚无局部目标挤占）
+- 目标漂移：`D0 ALIGNED`（本轮根据用户澄清从 Q03 局部分支回到所有研究域，推进 AC-02/03/04）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
 - Issue 同步：`SYNCED`（G1 #7059893177、G2 #7060020787 已按不同稳定事件键分别回读）
 
@@ -26,9 +26,9 @@
 | AC | 验收 | 验证方法 | 当前 | 证据 |
 |---|---|---|---|---|
 | AC-01 | 唯一 TOPIC-017 Issue 入口且合理查重 | GitHub 查询并回读 | PASS | [#72](https://github.com/fweiger/AI_book/issues/72) |
-| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（32 项存在性 PASS；适配运行 NOT_RUN） | [工具草稿](open-source-projects.md) |
-| AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（入口整理 PASS，全文未逐篇阅读） | [论文目录](sources.md) |
-| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（框架已入草稿，待独立审查） | [矩阵](research-matrix.md) |
+| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（32 项存在性 PASS；15 方向工具关联已建，实际运行 NOT_RUN） | [工具目录](open-source-projects.md) · [交叉矩阵](evidence-capability-matrix.md) |
+| AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（22 篇具体论文/指南题录与摘要级核验；逐篇全文审计未完成） | [论文注册表](paper-register.md) |
+| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（15 域质量/论文/方向/项目关联已提交；待独立证据审计） | [15 域主矩阵](evidence-capability-matrix.md) |
 | AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | PARTIAL（公开参考输入/命令/验收规范已提交；实际运行 NOT_RUN） | [HG002 实验规范](benchmark-hg002.md) |
 | AC-06 | 专题分支、唯一 Tracker、审核 PR 和回链 | GitHub 文件、PR、INDEX、CI 校验 | PARTIAL（Draft PR #73/结构 CI PASS，尚待审核合并） | [PR #73](https://github.com/fweiger/AI_book/pull/73) |
 
@@ -40,7 +40,7 @@
 ## 3. 当前执行路径
 | 阶段 | 预期结果 | 对应 AC | 证据 | 状态 | 依赖 |
 |---|---|---|---|---|---|
-| S1 | 研究框架、32 工具及论文矩阵进入专题 PR | 01–04/06 | [PR #73](https://github.com/fweiger/AI_book/pull/73)、GitHub Actions 结构 PASS | PARTIAL | 审核/论文及工具更深复核尚未完成 |
+| S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[论文注册表](paper-register.md)、[PR #73](https://github.com/fweiger/AI_book/pull/73) | PARTIAL（草稿已交；学术审计/合并待完成） | 方法证据与源码执行待核 |
 | S2 | 公开 GIAB 小范围 benchmark 的完整命令/资源设计 | 02/05 | [HG002 数据契约](benchmark-hg002.md) 与脚本 | PARTIAL | 本环境缺 Docker、公共数据 DNS；真实实验 NOT_RUN |
 | S3 | 选择典型父系与医学方向做模型/来源级复核 | 03–05 | [Q03 父系工具核查](y-chromosome-methods.md) | PARTIAL | 待公共 chrY 数据与方法复现 |
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
