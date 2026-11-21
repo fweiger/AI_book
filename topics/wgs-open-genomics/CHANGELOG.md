@@ -6,3 +6,5 @@
 - **2026-11-21，v0.1.1（Draft、同轮补充）**：Q03 一手 README 与方法论文核验后，增加 [Y 染色体研究方法对照](y-chromosome-methods.md)，明确 yhaplo GRCh37 坐标要求、Yleaf variants-only VCF 风险、Y-LineageTracker 的 SNP divergence time 和 Y-STR TMRCA 区别。无真实 chrY 计算，不提升到 E2。
 
 - **2026-11-21，v0.1.2（Draft）**：根据用户澄清，确立**数据质量→论文→研究维度/深度→开源项目**为全专题主线；新增 [15 方向主矩阵](evidence-capability-matrix.md) 与 [22 篇论文 P-ID 注册表](paper-register.md)，明确跨域去重、零证据缺口及营养随机试验阴性证据。父系/chr20 改作独立子案例，不改变原 Goal/Scope/AC；仍未跑真实个人/公开 WGS。
+
+- **2026-11-21，v0.1.3（Draft）**：完成 [跨领域六案例原始论文×源码输入审计](cross-domain-evidence-audit.md)：Exomiser、PharmCAT/StellarPGx、pgsc_calc、DIETFITS、ancIBD、OptiType；识别 pgsc_calc 不是直接 WGS variants-only VCF 计算器、PharmCAT CYP2D6 VCF-only 研究模式不适于临床，新增 [StellarPGx](https://github.com/SBIMB/StellarPGx) 与 [OptiType](https://github.com/FRED-2/OptiType) 两个专项项目及 3 篇对应论文。首轮登记 **15 域 / 25 篇论文 / 34 个 GitHub 项目**；仍未进行实际 WGS 运行，原 Goal/Scope/AC 保持。
