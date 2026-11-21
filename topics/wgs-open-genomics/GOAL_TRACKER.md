@@ -15,7 +15,7 @@
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
 - 目标漂移：`D0 ALIGNED`（G9 使用已有公开数据与轻量官方工具确实验收 AC-05，结束局部 Docker 阻断，重新回归 15 域论文×工具主线）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`SYNCED`（G1–G7 先前均已回读；G8 唯一事件 #7062335961 已按稳定事件键回读）
+- Issue 同步：`SYNCED`（G1–G8 事件均已回读，G9 唯一事件 #7062643687 按稳定键回读）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -50,7 +50,7 @@
 - **未按额外 QUAL cutoff 的结果**：SNP TP-baseline/TP-call=1430/1434、FP7/FN4，Precision 0.9951、Recall 0.9972、F1 0.9962；Indel TP-baseline/TP-call=216/213、FP12/FN17，0.9467/0.9270/0.9367；合计 0.9886/0.9874/0.9880。来自官方真值 BED 范围内真实 RTG ROC 末行，**不能推断全 WGS 或其他 assay、祖源、临床准确率**。
 - **源码已二次实测**：[独立最小命令脚本](scripts/run-hg002-chr20-bcftools-rtg.sh)，Git blob `819278d12b78cae97da8f27c4d49a93228b4942d` 下载一致；preflight 和真实 `run exit=0`，两次 callset 非 header 变异记录 SHA256 都是 `472eaed46a664cbb675dc2c09d224d7836c0680345f937100a0a48d6fad912b0`，RTG `summary.txt` SHA256 都是 `24dac88c2c4ad5738ffa6b2d65c3280eabf98eeda79d25a1067fe5308a515ba6`；非假造/模拟。
 - **AC/阻断边界**：AC-05 原始批准目标为至少一套公开可复现最小实验，G9 限界通过 **PASS**。旧 G2 固定 DeepVariant/hap.py 完整 chr20 方案仍 NOT_RUN，Docker 大镜像阻断仅此子方案，**不得把 G9 精度冒称 DeepVariant 性能**。其他 14 个研究域论文/算法未据此验证；未接触任何个人 DNA。
-- **目标与状态**：D0 ALIGNED，Issue 原 Goal/Scope/Non-goals/AC 保持；停止围绕同类 Docker 故障继续滚动排障，接下来向用户要求的 15 域研究深度回归。G9 唯一进度事件待写入、回读。
+- **目标与状态**：D0 ALIGNED，Issue 原 Goal/Scope/Non-goals/AC 保持；停止围绕同类 Docker 故障继续滚动排障，接下来向用户要求的 15 域研究深度回归。G9 唯一事件 [#7062643687](https://github.com/fweiger/AI_book/issues/72#issuecomment-7062643687) 已回读并同步。
 
 ## 5. 阻断与未受影响工作
 | 情况 | 真实影响 | AC | 主线剩余 | 定性 |
@@ -96,9 +96,9 @@
 | 2026-11-21/G9 | 真正完成公开 HG002 chr20 1Mb bcftools 变异调用+RTG 独立 GIAB/ROC SNP F1 0.9962、Indel F1 0.9367，脚本二次复现记录/汇总 SHA 一致；原 DeepVariant 尚未运行 | AC-05 PASS（1Mb 有界 E2），AC-03/04 仍 PARTIAL | [G9 实测和输入/输出哈希](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)、[可运行脚本](scripts/run-hg002-chr20-bcftools-rtg.sh) | D0 ALIGNED/CONSISTENT，Issue G9 事件待同步 | 审核 D01–D15 每域一个一手方法/数据/实现边界 |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：AI_book#72:AC05:20261121-g9-native-bcftools-rtg-e2
-- **当前 writer_owner**：chatgpt-topic017-g9-20261121
-- **当前 write_state**：CLAIMED（G9 单 Writer 准备发布唯一研究事件；G8 #7062335961 已完成回读）
+- **当前 active_event_key**：none（G9 event AI_book#72:AC05:20261121-g9-native-bcftools-rtg-e2 已完成）
+- **当前 writer_owner**：none（G9 Writer chatgpt-topic017-g9-20261121 已完成）
+- **当前 write_state**：SYNCED（[G9 唯一评论 #7062643687](https://github.com/fweiger/AI_book/issues/72#issuecomment-7062643687) 已 GET 回读且同 key 仅 1 条；事件声明 Tracker blob SHA fa8f8b4c161dc8a6c2fb4827ccfa00d0a7ff412f）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
@@ -109,6 +109,6 @@
 | §5 局部阻断 | DeepVariant/hap.py 尚未成功，仅原固定子方案；G9 原生 bcftools/RTG E2 已成功 | G8 镜像终态和 G9 独立实测 | CONSISTENT |
 | §6 与 §7 | G9 公开最小 E2 已通过；下一步回归 15 域每域一篇方法级论文/数据/代码审计 | G9 真实报告和未完成 AC-02/03/04 | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G8 唯一事件已回读；G9 单 Writer CLAIMED 等待发布回读 | G9 稳定 event_key 与当前 Tracker 声明 | ISSUE_SYNC_PENDING |
+| Issue 最新事件与 Tracker | G1–G9 已各自唯一回读，G9 评论 #7062643687 GET 确认为单条 | 事件声明 Tracker blob SHA fa8f8b4c161dc8a6c2fb4827ccfa00d0a7ff412f | SYNCED |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
