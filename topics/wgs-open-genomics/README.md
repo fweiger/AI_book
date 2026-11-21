@@ -1,6 +1,6 @@
 # TOPIC-017｜从一份个人 WGS 到遗传学、医学、家族史与古 DNA
 > 来源与规范研究任务：[AI_book Issue #72](https://github.com/fweiger/AI_book/issues/72)  
-> 建立：2026-11-21；专题版本：`0.1.0`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
+> 建立：2026-11-21；专题版本：`0.1.1`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
 > **本仓库公开；严禁保存任何人的真实 FASTQ/BAM/CRAM/VCF、家谱身份、疾病信息或其他敏感数据。**
 
 ## 最初的问题
@@ -20,7 +20,7 @@
 - [32 项 GitHub 开源工具目录](open-source-projects.md)
 - [论文、原始标准与参考数据库](sources.md) · [按问题阅读路径](reading-path.md)
 - [主张与证据 C-ID](claims.md) · [知识关系图](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
-- [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
+- [HG002 chr20 基准与可运行脚本](benchmark-hg002.md) · [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
 - [唯一 L 级目标跟踪器](GOAL_TRACKER.md)（动态状态，不取代规范 Issue）
 
 ## 研究深度的四个层级
