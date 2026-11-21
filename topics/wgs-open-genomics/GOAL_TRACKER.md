@@ -15,7 +15,7 @@
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
 - 目标漂移：`D0 ALIGNED`（G11 直接执行原 §7 四领域输入合同审计，不改变 Goal/Scope/AC）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`ISSUE_SYNC_PENDING`（G10 事件已同步，G11 等待唯一 Writer 发布并回读）
+- Issue 同步：`SYNCED`（G1–G11 历史事件已 GET 回读，G11 唯一进度事件 [#7068596093](https://github.com/fweiger/AI_book/issues/72#issuecomment-7068596093)，同 key 仅一条）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -107,17 +107,17 @@
 | 2026-11-22/G11 | 四个代表 GitHub 工具文件级输入合同和真实 LICENSE/测试入口；4/4 E0 PASS、E2 0/4 NOT_RUN | AC-02/03/04 PARTIAL | [G11 四领域合同](four-domain-wgs-input-contract-g11.md) | D0 ALIGNED/CONSISTENT；G11 Writer 待同步 | D04 官方公开 VCF 有界 CLI 功能复现 |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：`AI_book#72:AC02-03-04:20261122-g11-four-domain-input-contract`
-- **当前 writer_owner**：`chatgpt-topic017-g11-20261122`
-- **当前 write_state**：`CLAIMED`（G11 报告已提交，Tracker 已发起单 Writer 声明；Issue 评论尚未发布）
-- **Tracker 写前 blob**：`15399e84c39a9628593202d0358bb79b507ecb74`；**PR head G11 报告提交前**：`bb783e0d3f08231d221d3505c9270fb7892de297`；**报告提交 commit**：`1384291446765488e648868fe790cbeec795f7fe`。
-- **旧 Writer**：G10 已完成并清理（初次回读 none/SYNCED），没有遗留 CLAIMED 可抢占。
+- **当前 active_event_key**：none（G11 `AI_book#72:AC02-03-04:20261122-g11-four-domain-input-contract` 已完成）
+- **当前 writer_owner**：none（G11 Writer `chatgpt-topic017-g11-20261122` 已完成）
+- **当前 write_state**：`SYNCED`（[G11 唯一事件 #7068596093](https://github.com/fweiger/AI_book/issues/72#issuecomment-7068596093) GET 回读，同 `event_key` 仅 1 条；发布时 Tracker blob SHA `b95a568d230adf17093b0fafc3845901def75939`）
+- **单 Writer 交接**：本次有效 Writer 发布后主动清理；此前 G10 已同步并清理。无待处理 CLAIMED。
+- **证据路径**：[G11 4 域合同](four-domain-wgs-input-contract-g11.md)；源文件 SHA/许可证/公开测试入口均记录在报告中；GitHub 运行状态不是工具实际 E2。
 
-| 核查 | 最新事实 | 结论 |
-|---|---|---|
-| Issue/Goal/AC/协议 | 原 #72、requirements_revision 1 与锁定协议不变 | CONSISTENT |
-| 实际研究增量 | G11 [四领域报告](four-domain-wgs-input-contract-g11.md) 实际回读；四款 GitHub 工具 E0 4/4；无任何新 E2 | PARTIAL（E2 0/4） |
-| 当前下一步唯一性 | §7 D04 公共样本功能验收；§9 仅保留历史候选 | D0 ALIGNED |
-| 本轮事件 | 先以 Tracker blob SHA CAS 声明，后续再评论/回读/清理 | ISSUE_SYNC_PENDING |
+| 检查项 | 当前值 | 证据 | 结果 |
+|---|---|---|---|
+| 原 Issue Goal/Scope/AC / 协议 | #72 的 requirements_revision=1 和锁定 `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` 不变 | GET 原 Issue + 锁定 ENTRY | CONSISTENT |
+| G11 交付与真实测试 | D03/D04/D09/D10 四工具 E0 4/4 PASS；E1 论文方法 PARTIAL；四项 E2 均 NOT_RUN；G9 独立限定不变 | [G11](four-domain-wgs-input-contract-g11.md)、[G9](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) | PARTIAL（无新增 E2） |
+| 当前唯一下一步 | §7 D04 官方 VCF CLI 有界验证，§9 仅历史 | §7 / §9 | D0 ALIGNED |
+| G11 Tracker 与 Issue | G11 稳定 key 唯一 #7068596093，声明 Writer 与发布评论一致，最终清理 | [#7068596093](https://github.com/fweiger/AI_book/issues/72#issuecomment-7068596093) + 最新 Tracker | SYNCED |
 
-> 单 Writer 事件未发布且未双向 GET 回读前不称本轮 SYNCED。
+> PR #73 仍为 Draft，未合并；结构 CI 若运行成功仅证明知识库结构，不等于四个 WGS 工具 E2。
