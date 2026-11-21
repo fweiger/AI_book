@@ -5,7 +5,7 @@
 | 研究域 | 仅有一个人 WGS 能做 | 进一步深入需要什么 | 关键方法 / 项目 | 证据与失败边界 |
 |---|---|---|---|---|
 | 1. WGS 数据与技术质量 | 质量、覆盖、变异识别、chrY callable bases | GIAB HG002、另一技术平台 | Sarek / DeepVariant / GATK / hap.py | 无对照真值无法估算个人所有错误 |
-| 2. 父系 Y 染色体 | 单倍群定位、未知下游候选 SNP | 高覆盖 chrY、其他父系样本、完整树/家谱 | Yleaf / Y-LineageTracker / yhaplo | 共组年代有置信区间；不能仅凭单倍群确定人名 |
+| 2. 父系 Y 染色体 | 单倍群定位、未知下游候选 SNP | 高覆盖 chrY、其他父系样本、完整树/家谱 | [Yleaf / Y-LineageTracker / yhaplo 具体能力核查](y-chromosome-methods.md) | 共组年代有置信区间；不能仅凭单倍群确定人名 |
 | 3. 母系 mtDNA | 线粒体单倍群、部分杂合/异质性候选 | 高覆盖 mtDNA、母系亲属样本 | Haplogrep3 | 单一母系链不等于全部母系祖先 |
 | 4. 常染色体亲缘 | 预处理分型、相位与校验 | 已授权的亲属/群体样本 | PLINK2 / hap-IBD | 一个人无法推断与未入库者的 IBD |
 | 5. 古 DNA 与人口史 | 与公开古群体比较、可检验群体来源假说 | AADR/古样本质量、时空/参考队列 | nf-core/eager / ancIBD / ADMIXTOOLS2 | 样本偏差；古共祖≠墓主人直系祖先 |
