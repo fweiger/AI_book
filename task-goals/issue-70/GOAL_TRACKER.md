@@ -9,7 +9,7 @@
 - 所属源仓库: `fweiger/AI_book`
 - 研究入口: [首轮核查草稿](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)
 - 本文件路径: `task-goals/issue-70/GOAL_TRACKER.md`
-- 当前阶段: `M1_CAUSAL_HISTORY_PARTIAL`（AC-02 生产力—生产关系的历史因果核查，世界同期基线已形成）
+- 当前阶段: `M1_CAUSAL_HISTORY_PARTIAL`（AC-02 秦国中期铸铁证据与样本代表性纠偏；核心主因仍未知）
 - 创建/最近更新: 2026-11-21
 - 批准需求: `r0-20261121-user`
 - 协议路径/分支: `task-center/v1.2.2/ENTRY.md` @ `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（#70 目标与先秦研究增量相容；本轮评论已独立回读恰好一条同键事件）
-- Issue 同步状态: `SYNCED`（本轮事件 #7053724285 已发布并 GET 回读，同键恰好 1 条；不代表学术验收）
+- 状态一致性: `CONSISTENT`（新发现及动态下一步均服务未完成 AC-02，#70 批准目标不变；本轮事件待发布）
+- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一轮已同步，本轮 2025 年铸铁证据与样本偏差纠偏待评论回读）
 
 ## 1. 批准目标基线
 
@@ -50,13 +50,13 @@
 
 ## 4. 当前检查点
 
-- **最近完成的一轮**：2026-11-21 第二轮先秦中国 AC-02 时序审计。沿用同一 [生产力—关系证据文件](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) 增补 §5：鲁国前594年“初税亩”传世文献、秦前408年“初租禾”传世史料、**前344年上海博物馆商鞅方升实物**、**前309年青川田律出土木牍**、**前3世纪秦关中43件铁器金相/夹杂分析**；区分实物、文本、学术解释。
-- **已经核验**：方升铭文与考古秦简/木牍的确切年代来源；2023 同行评审冶金论文的样本与“秦早中战国铁器较少”的限制；Lander（2022/23）和 Pines（SEP）分别提供国家推动农业组织、农战制度的竞争机制；秦制度改革早于**最有直接实测支撑的秦成熟晚期铁业**，不等于早于所有铁器创新。
-- **尚未验证/失败/未知**：前408“初租禾”主要为后世传世史籍，具体政策施行程度未知；考古墓葬有保存与筛选偏差；前344前的秦农具普及率、亩产与赋税收益仍无可比量化数据。秦帝国出土税制账簿不能机械投射到商鞅年份；所有主因/贡献占比 UNKNOWN；独立审稿 NOT_RUN。
-- **对原目标贡献**：直接推进 AC-01/02；对“生产力必然先于生产关系变动”的强版假说提出时序压力检验和明确反驳标准，而非无界扩展史料。
-- **当前阶段**：M1_CAUSAL_HISTORY_PARTIAL，关键史实来源较上轮增加，因果主因仍 PARTIAL/UNKNOWN。
-- **目标漂移**：D0，围绕用户指定第一条生产力—生产关系主线，未扩大 Goal/Scope/AC。
-- **状态一致性**：CONSISTENT，已 GET 核对 #70、同一证据文件、唯一 Tracker、Draft PR #71 与本轮 Issue 评论 #7053724285；事件键唯一（回读恰好 1 条）。
+- **本轮实质完成（2026-11-21，AC-02）**：在原 [生产力—生产关系研究文档](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) §7 增加并核对 2025 年《Archaeological Research in Asia》徐良坡秦墓证据，**前4世纪中叶秦地铸铁和块炼铁并存**：5件出土、2件可分析，分别是块炼铁环和铸铁带扣。同步读取 Liu 2021 UCL 博士论文第3.2节与 Table 3.2，区分 **125分析样本 / 114件器物 / 9处样本群组 / 约前300—205年**；2023原论文则是 **43份新分析 + 36份既有发表样本**，两组不能直接相加或当作同一时间序列。
+- **已核的事实**：徐良坡可见论文指出过渡期已有铸铁，推翻“秦国铸铁最早只出现于战国晚期”的过强推断；2021论文写明铁器取样具有墓葬/葬俗、腐蚀与磁性预筛选偏差；2023论文选取关中战国晚期多处墓地，主要证明成熟成本控制体系**当时已存在**，不是制度革命发生时间的实验。
+- **未验证**：2023 配套 XLSX（626KB）未成功取得，43/36逐器物去重及2021/2023重复ID未知；2025论文付费全文未核逐器物图；未有同一秦地足够分期的农具普及、产出、税收与战争财政可比时间序列，因此“谁是最主要原因”依然 UNKNOWN。
+- **对原目标的贡献**：直接纠正历史因果时序及之前研究报告中的潜在过强结论，推进 AC-02、兼 AC-01；减少“因晚期样本更丰富就推断技术晚出现”的推论错误。
+- **当前阶段/状态**：M1_CAUSAL_HISTORY_PARTIAL；主要论点修正 PASS（可见文献范围内），史料完整性/样本可比性 PARTIAL，因果识别 UNKNOWN，学术审稿 NOT_RUN。
+- **目标漂移**：D0（原 Goal 不变；本轮有实质新资料、纠偏直接匹配 AC-02）。连续局部样本追查已达到可界定限制，下一轮**优先转向国家制度如何影响冶铁供给与农具获取**，避免长期停留在附件搜索。
+- **一致性**：CONSISTENT；Issue #70 / Tracker / Draft PR #71 仍为同一任务，研究文件已提交；本轮评论事件待按单 Writer CLAIMED → 发布 → GET 回读完成。
 
 ## 5. 阻断与未受影响工作
 
@@ -66,6 +66,7 @@
 | 部分历史著作仅浏览摘要 | AC-02 引用深度局部 | 已核验的文物铭文、开放全文铁器实测与制度史解读 | 不声称已全面阅读付费专著，优先实物与开放论文 |
 | 「集体意识」无可操作定义 | AC-04 | 历史事实与 AI 任务级数据 | 保持 H 假说，下一阶段处理 |
 | 跨文明古代产量/产权制度难以同口径比较 | AC-02 的主因识别环节 | 历史年代与个案内机制仍可核实 | 不编造权重、不把并列年代当因果证据 |
+| 2023论文补充XLSX无法获取与2025全文受限 | 43/36器物级去重及2025细节 / AC-02局部 | 已可回读 2021 thesis Table 3.2、2023接受稿、2025官方摘要 | 标 PARTIAL，避免同类附件反复追索，继续生产关系机制主线 |
 
 ## 6. 路径调整记录
 
@@ -73,13 +74,13 @@
 
 ## 7. 唯一当前下一步
 
-- **唯一优先动作**：用 Liu、Chen、Martinón-Torres 2023 原研究的附录/引用发掘报告核对秦国**前344年前—战国晚期**铁器样本的年代、地点、用途与选择偏差，验证“成熟秦铁业实物证据晚于商鞅标准器”的**观察稳健性**，而不是把缺失墓葬样本当作技术未出现。对该论文已有的36件历史样本与43件新样本分别定位；无可比性则在报告中明确标 UNKNOWN。
-- **对应 AC / 当前阶段**：AC-02 尚未完成的“主因时序、反例与可靠来源”；兼 AC-01；M1_CAUSAL_HISTORY_PARTIAL。
-- **为什么本动作优先**：本轮发现最关键的竞争性事实是“早期行政改革物证 vs 较晚的成熟铁业考古”；检查取样偏差决定是否可以利用它检验 H1，是现阶段比外推 AI 或继续扩张文明地图更直接的 AC 实质进展。
-- **预期交付与验证**：在现有证据文件新增分期样本表（至少前344与后344两段，若原报告无法细分如实标缺失），注明原论文的真实样本数、墓葬来源与筛选条件，并给出 H1/H2 可以被推翻的观察。绝不推算未测定的普及率与亩产。
-- **所需证据**：[现有证据文件](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) §5；[剑桥作者版原研究](https://www.repository.cam.ac.uk/items/54b68599-84e4-4579-a714-615ff42cc36b)；其所引用战国秦/东部诸侯冶铁发掘报告。
-- **若局部取样受阻**：保留已核实的前344、前309实物和国家土地管理机制，改为同期魏、楚**有限且可比**的制度/冶铁来源核查，不自行创设新任务；不因考古缺口冻结其他 AC-02 工作。
-- **边界**：一次定向样本/附录核实，若资料不可得即记录无法判定并重新裁决其他未完成 AC，拒绝无限补资料。
+- **唯一优先动作**：核对**秦国国家组织/生产关系 → 冶铁供给与农业生产力**这条制度机制：追溯2023研究引用的**秦铁官、采铁、冶铁、官营作坊及借贷农具**文书与 Tang（2019）、Dai（2012）专业解释，逐项标明文书形成时间、制度覆盖、原始条目和“商鞅前/后”的年代限度；必要时对照国家干预较弱或不同的诸侯国，但不新建话题。
+- **对应未完成 AC**：AC-02（至少三历史语境的史实/竞争因果/反例核查），兼 AC-01；M1。
+- **为何优先**：2025新证据已排除“秦中期无铸铁”的旧误判，继续追2023补充表难以直接回答“制度还是技术为主因”；更有效的是寻找国家如何改变供需/产权与工艺采用的可定位文书及传导链。
+- **预期交付与验收**：在同一研究文档新增制度机制证据表，至少核验一条实际秦行政简牍/考古文书的来源/年代、一份专业竞争解释、一条潜在反向因果路径；明确文书是否晚于前356/前350年，不把秦朝简牍当作当年商鞅改革现场证据。
+- **先查证据**：[本轮修订文件](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) §7；[2023原论文全文](https://api.repository.cam.ac.uk/server/api/core/bitstreams/30f266ec-ae0b-4f98-85cb-54323a033126/content)的“state-run”部分与引文 [Tang 2019] [Dai 2012]；出土文献官方研究/译释。
+- **若局部受阻**：可转为完成既有 AC-02 另一地区的可核反事实，而非无限追索 XLSX/单件金相；记录资料不可得和替代解释，禁止捏造主因权重。
+- **止损边界**：本轮已完成样本来源差异与新实证核查；若下轮行政史料不可查也不得连续无界排障，再次评估未完成 AC。
 
 ## 8. 每轮继续前核对
 
@@ -98,19 +99,21 @@
 | 2026-11-21 / M1-production-relations | 依用户主线强调完成跨文明同期基线、四种竞争解释和权威学术来源核查；主因尚未识别 | AC-01/02 PARTIAL | [研究增量](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` | D0/CONSISTENT；付费正文与可比考古数据缺失；本轮唯一事件已 GET 回读 | 下一轮锁定先秦 H1/H2/H3 的原始时序/制度机制 |
 | 2026-11-21 / M1-qin-primary-chronology | 在原证据文件中追加秦前408税制传世史料、前344商鞅方升、前309青川田律及前3世纪43件秦铁器实验的时序/地域/样本限制；H1强版受到质疑但未证否 | AC-01/02 PARTIAL | [同一研究文件 §5](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285)；event_key：AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121 | D0 / CONSISTENT；因果主因 UNKNOWN，考古普及率与地权仍不足 | 先核实冶铁样本前/后344年分期及选样偏差 |
 
+| 2026-11-21 / M1-qin-sample-correction | 取得2025徐良坡过渡期秦铸铁/块炼铁5件中2件分析的直接新证据；核对2021 UCL论文125分析样本/114器物9处遗址及2023论文43+36的不同口径；识别葬俗/腐蚀/磁性选择偏差、纠正“秦中期尚无铸铁”过强推断 | AC-01/02 PARTIAL / 证据纠偏 PASS | [同一研究文档 §7](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；稳定 event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121` | D0/CONSISTENT；主因 UNKNOWN，附件受限 | 核查秦铁官/官营生产/借贷农具的出土文书年代与制度机制 |
+
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `none`（本轮事件已发布并回读，稳定键保留在 §9 和最近事件）
-- writer_owner: `none`（当前无待发布事件）
-- write_state: `SYNCED`（事件 #7053724285 同键仅一条，已回读）
+- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121`（本轮稳定事件待发布）
+- writer_owner: `chatgpt-topic016-qinsample-2025-20261121`
+- write_state: `CLAIMED`（已由本轮唯一 Writer 申请声明，需 GET 确认后发评论）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
 - 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121` / [GitHub 评论 #7053724285](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285)，本轮回读同键仅出现 1 条；本次 SYNCED 只证明 GitHub 进度状态一致，不代表 AC-02 因果主因通过审核。此前事件见 §9。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
 | Issue 目标 vs §1 | 批准目标/AC 一致 | #70 与 Tracker | PASS |
-| §3/4 实证与阶段 | M1 先秦秦国制度/铁业时序已深化，主因未知 | 同一研究文件 §5 | PASS（事实/状态对照） |
-| §5 局部阻断 | 付费原典与同口径数据缺失仅阻断主因判定 | 新文档 §4 | PASS（影响边界对照） |
-| §6/7 | 原 Goal 不变，下一步为秦铁器分期/选样偏差复核 | 本文件 §7 | PASS（主线对照） |
-| §7 与 §9 | 本轮下一步经重决策为样本偏差复核，旧历史建议仅参考 | §7/§9 | PASS（唯一权威） |
-| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 同一研究文档及唯一进度评论均可回读 | [当前事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285) | `SYNCED` |
+| §3/4 实证与阶段 | M1 秦国中期铸铁证据纠偏及样本偏差完成，主因仍未知 | 同一研究文件 §7 | PASS（来源/状态） |
+| §5 局部阻断 | XLSX及2025全文受限仅影响逐样本去重，其他机制可继续 | 本文件 §5 | PASS（影响边界对照） |
+| §6/7 | 原 Goal 不变，样本审计完成，下一步转向铁官/行政机制 | 本文件 §7 | PASS（主线对照） |
+| §7 与 §9 | 最新§7是当前唯一动作，§9是不可改写的历史建议 | §7/§9 | PASS（唯一权威） |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 研究文档已回读，本轮待按 Writer 声明发评论 | #70 / PR #71 / 本Tracker | `ISSUE_SYNC_PENDING` |
