@@ -47,15 +47,15 @@
 |---|---|---|---|
 | D01 | P001 Sarek；P002 DRAGEN；**P042 GIAB CMRG 273 基因、P043 ACMG 2021 测序技术标准、P044 PCR-free 约40×原始技术比较** | nf-core/sarek、fastp、FastQC、MultiQC、BWA-MEM2、samtools、bcftools、mosdepth、DeepVariant、GATK、hap.py、dna-seq-benchmark | 先区分 raw Gb bases 与磁盘 GB，再核有效深度/≥10×/20× callable；GIAB + 对应 BED 仅代表有真值部分，难基因须 CMRG；商业 40× 非自动过关；DRAGEN 不列作自由源码 |
 | D02 | P002 DRAGEN；P003 Manta；**P026 GIAB SV、P027 Truvari、P028 ExpansionHunter** | samtools、bcftools、GATK、Manta、DELLY、CNVkit、ExpansionHunter（**PolyForm Strict**）、**Truvari（MIT；SV 比对而非 caller）** | GIAB 主要验证 ≥50 bp DEL/INS，不含全部 SV；重复扩增与复杂区受限，且部分源码限制修改/分发 |
-| D03 | P005 Yleaf；P006 Y-LineageTracker | samtools、bcftools、Yleaf、Y-LineageTracker、yhaplo | 分支树不证明具体历史人物 |
+| D03 | P005 **Yleaf 原文 msy032（旧 msy080 为勘误）**；P006 Y-LineageTracker | samtools、bcftools、Yleaf、Y-LineageTracker、yhaplo | 分支树不证明具体历史人物 |
 | D04 | P007 Haplogrep 3；**P029 MToolBox、P030 gnomAD mtDNA、P031 WGS vs targeted、P032 mtDNA callers benchmark** | samtools、bcftools、Haplogrep3、**MToolBox（GPL-3.0）、Mutserve（MIT）** | 需单独核查 mtDNA depth、NUMTs、污染和 heteroplasmy CI；Mutserve VCF 不含 indels；母系 haplogroup 不是疾病诊断 |
 | D05 | P008 hap-IBD | bcftools、hap-IBD（Apache-2.0）、PLINK2（GPLv3） | hap-IBD 输入为**无缺失、完整 phased GT 的多人 VCF 和相同构建的 cM map**；单人只可研究自身 HBD/ROH，不能发现陌生亲属 |
 | D06 | P009 ancIBD；P010 qpAdm；P011 2025 迁徙综述 | nf-core/eager、ancIBD、ADMIXTOOLS2、hap-IBD、PLINK2 | 需要参照群体；遗传相似不等于个体迁徙 |
 | D07 | P004 VEP；P012 ACMG；P013 ACMG SF；P021 Exomiser | bcftools、DeepVariant、GATK、VEP、Exomiser | 变异注释不是诊断 |
 | D08 | P012 ACMG；P013 ACMG SF；P021 Exomiser；**P033 ACMG Carrier 2021、P034 ACMG Lab 2024、P035 InterVar、P036 Gauchian 质疑、P045 Gauchian 开发者正式回应** | bcftools、VEP、Exomiser、**InterVar（非商用免费）、Gauchian（PolyForm Strict）** | 变异阴性仍有残余风险；Gauchian 的漏检研究与开发者的低覆盖/适用条件回应应并列核查；争议尚无本项目独立复现，不能单方盖棺定论 |
 | D09 | P014 PharmCAT；P015 PharmCAT 临床支持；**P024 StellarPGx** | bcftools、VEP、PharmCAT、**StellarPGx（WGS BAM/CRAM）** | CYP2D6 SV/CNV 不能仅从 PharmCAT 普通 VCF 研究模式直接可靠分型；先专项 caller，再解释；不得自行改药 |
-| D10 | P016 PRS-CSx；P017 跨人群；P018 eMERGE；P022 All of Us 2026；**P025 PGS Catalog Calculator** | PLINK2、PRS-CS、PRS-CSx、bigsnpr、pgsc_calc | **pgsc_calc 不原生支持普通 WGS variants-only VCF**，需要正确补全参考位点/符合官方数据准备；一人可在适配后计算，不能训练或校准预测准确率 |
-| D11 | P019 697828 人晨晚型 GWAS；P017 PRS 跨祖源综述；**P037 446118 人睡眠时长 GWAS；P038 芬兰 33493 人睡眠 PRS 可迁移性** | PLINK2、bigsnpr、pgsc_calc（Apache-2.0，**不原生支持 WGS variants-only VCF**） | 晨晚型、睡眠时长、失眠是不同 phenotype；25 分钟是晨晚型遗传评分两端人群的平均差异，不能预测具体个人睡觉钟点 |
+| D10 | P016 PRS-CSx；P017 跨人群；P018 eMERGE；P022 All of Us 2026；**P025 PGS Catalog Calculator** | PLINK2、PRS-CS、PRS-CSx、bigsnpr、pgsc_calc | **pgsc_calc 官方 README 当前明确不支持 WGS 数据直接输入**；需把 WGS 转成符合其文档的完整、可信、imputed/兼容基因型输入，不能仅将 variants-only VCF 改名；一人可在适配后计算，不能训练或校准预测准确率 |
+| D11 | P019 697828 人晨晚型 GWAS；P017 PRS 跨祖源综述；**P037 446118 人睡眠时长 GWAS；P038 芬兰 33493 人睡眠 PRS 可迁移性** | PLINK2、bigsnpr、pgsc_calc（Apache-2.0，**官方当前不支持直接以 WGS 数据作为目标输入**） | 晨晚型、睡眠时长、失眠是不同 phenotype；25 分钟是晨晚型遗传评分两端人群的平均差异，不能预测具体个人睡觉钟点 |
 | D12 | P020 DIETFITS 随机试验；P017 PRS 综述 | PLINK2、bigsnpr、pgsc_calc | **DIETFITS 未支持预设基因型能挑选较优减重饮食**，必须收录阴性证据 |
 | D13 | P017 PRS 综述；P022 All of Us 2026；**P039 活动行为 GWAS 703901 人；P040 HERITAGE VO₂max 训练 473 人；P041 Predict-HIIT n507** | PLINK2、bigsnpr、pgsc_calc | 活动/久坐行为 ≠ 身体素质 ≠ 训练反应；HERITAGE 21 SNP 样本内 49% 方差解释率**不是独立预测准确率**，不能生成个人训练处方 |
 | D14 | **P023 OptiType（HLA-I）** | samtools、bcftools、**OptiType** | 已找到 HLA-I 的直接 WGS 方法与代码；**不覆盖 HLA-II 或真实临床确证** |
@@ -87,7 +87,11 @@
 
 详见 [G7 全 15 域证据一致性审计与 D01/D15 详情](cross-domain-evidence-audit-g7.md)。重新定位 D01 的 GIAB/CMRG 变异真值和 G00–G07 质量门槛；**普通短读长 DNA WGS 不能直接测组织 RNA 表达/甲基化/肠道微生物群**，但原生 ONT 信号可直接测修饰、WGS 中非人 reads 仍可能提供非临床微生物线索，不能使用绝对化“一切 WGS 均不可测”的表述。Gauchian 2025 负证据已补开发者正式回应 P045。该审计仅 E1 文献/代码层级，WGS E2 `NOT_RUN`。
 
-## H. 用 4 个实例检验这套框架是否真正成立
+## H. G10：15 域代表论文的 assay、队列、源码与外推边界深度核验（2026-11-21）
+
+**[查看 G10 全 15 域代表论文方法审计](cross-domain-method-evidence-audit-g10.md)**。覆盖 D01–D15 每域≥1 篇已登记的一手 DOI/权威标准，并对应已有软件实际输入、单人 WGS 的可研究范围、额外队列/临床/其他 assay 前提与限制。**P005 Yleaf 原文 DOI 从误用的勘误 msy080 校正为 msy032**；PGS Catalog Calculator README 明示 WGS 目前不直接支持。15 域/47 P-ID/39 仓库数量不变；方法/E1 的真实性不等于源码 E2 全面运行，通过 G9 实测的仍只有 D01 chr20 1 Mb SNV/Indel。
+
+## I. 用 4 个实例检验这套框架是否真正成立
 
 **疾病**：高质量 SNV/Indel → [VEP 原文 P004](paper-register.md) 变异效应注释 → [ACMG P012](paper-register.md) 证据分级 → Exomiser 提出候选疾病基因 → 还需表型与临床确证。不是 `VCF → AI → 确诊`。
 
@@ -97,7 +101,7 @@
 
 **营养的反证**：[2018 DIETFITS 随机试验](https://doi.org/10.1001/jama.2018.0245) 609 名参与者的预设基因型模式**未显著改变**低脂/低碳饮食减重结果。不能只找支持营销报告的正向论文，负结果也应进入证据矩阵。
 
-## I. 最小数据模型与后续复现策略
+## J. 最小数据模型与后续复现策略
 
 对每个实际研究问题保留这几个字段即可，无须额外开发项目管理系统：
 
