@@ -12,3 +12,5 @@
 - **2026-11-21，v0.1.4（Draft）**：完成 [G5 D02/D04/D08 原始论文×源码×许可证审计](cross-domain-evidence-audit-g5.md)；新增 11 篇题录/标准 P026–P036 和五个源码项目 T35–T39，现有 **15 域 / 36 篇论文 / 39 个源码仓库候选**。修正 ExpansionHunter/Gauchian PolyForm Strict 与 InterVar 非商用免费限制；Truvari 为 SV VCF benchmark 非 caller，Mutserve VCF 不包含 indel；均未实际运行 WGS。
 
 - **2026-11-21，v0.1.5（Draft）**：完成 [G6 D05/D11/D13 文献×源码输入审计](cross-domain-evidence-audit-g6.md)；新增 P037–P041 5 篇论文，当前 **15 域 / 41 篇去重论文 / 39 个 GitHub 源码候选**。本轮重点确认 hap-IBD 必须使用完整 phased 多人 GT + genetic map 才能做人与人 IBD，单人仅可研究 HBD/ROH；睡眠 GWAS 和运动活动 GWAS 均不能直接转化成个体时间表或训练处方；HERITAGE 21-SNP 样本内方差解释率不能当样本外预测准确率。开源仓库无虚假新增，E2 WGS 实际运行仍 NOT_RUN。
+
+- **2026-11-21，v0.1.6（Draft）**：按 G6 唯一下一步完成 [G7 D01/D15 15 域一致性审计](cross-domain-evidence-audit-g7.md)，新增 [WGS 最小交付/采购数据质量合同](wgs-data-acceptance-contract.md)，核对 GIAB CMRG、ACMG 临床测序标准、PCR-free 库构建和跨模态 assay；补齐 Gauchian 2025 质疑与正式回应两方证据。新增 6 个确有用途的 DOI/标准 P042–P047；当前 **15 域 / 47 篇已登记论文 / 39 个 GitHub 源码候选**，未因统计而新增软件。结构检查与引用核对不能代表真实个人/公开 WGS E2，后者仍 NOT_RUN。
