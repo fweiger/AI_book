@@ -34,3 +34,11 @@
 在**已有全部公开数据已校验**的基础上，待 Docker 镜像 digest 真实取得，执行原 [HG002 chr20 单样本规范](../benchmark-hg002.md) 中的 `run` 阶段并读取 `hap.py` 的 SNP/Indel separate summary；若镜像不能取得，保留 `E2 BLOCKED/NOT_RUN`，不降级输入与精度门槛，不自建平台。**Goal/Scope/AC 均不变**。
 
 > 本文是公开数据研究运行证据，非个人基因检测报告。所有实际结果应继续用同一 Issue/Tracker 原 AC-05 记录，不为本轮新建 Issue。
+
+## 本轮最终执行终态（以终止的实际 Job 为证据）
+- 官方数据 **fetch job `wc_job_bYPmjEa39p--Gj2m` completed / exit=0**；8 项输入本地 `sha256sum -c` 全部 PASS；BAM 与 GCS 官方 MD5 PASS。官方 DNA 数据量约 5.3 GB（含解压参考）；文件未进公开 Git。
+- **DeepVariant DockerHub**：第一次拉取 `wc_job_Gb1z56DyQwJ9x3oE` 因执行时限 `timeout / exit=-1`；续拉 `wc_job_MqXMjkkaDPqi95lo` 若干 layer `Pull complete`，但**没有最终 image digest**，为防无界重试由本 Writer 主动 `stopped / exit=-1`。
+- **hap.py 镜像**：`wc_job_n4ZXIXU2lHQ3f57G` 同样未得到最终 image digest，经有界尝试后主动 `stopped / exit=-1`。两条止损操作均用 `observe_jobs` 回读 `terminal=true`。**没有放任 Job 在本轮结束后自动后台运行**。
+- **代码修复（同 PR）**：在原 `run-giab-hg002-chr20.sh` 只将下载 `curl` 增加 `--continue-at -` 参数，修改后的 Git blob `e74f5b29f5a1e62acc9be3827a2733cd9cd06435`；首次运行时旧 blob `fdb01d3f8ccd4996af23110678f713d777ceff07` 的事实保留。此修复源于真实 .part 断点续传已检验有效。
+- **严格分级**：`DATA_ADMISSION_PASS`；`CONTAINER_IMAGE_NOT_READY`；`VARIANT_CALLING_NOT_RUN`；`HAP_PY_BENCHMARK_NOT_RUN`。目前**没有真正的 TP/FP/FN/Precision/Recall/F1**。
+- **下一阶段主线裁决**：应优先从**现有公开 HG002 已校验文件**和更轻量的已发布基因工具/已有可用容器开始一个最小限界真实 benchmark，或在明确的镜像来源恢复后再跑固定 DeepVariant；**不要为拉 Docker 不断扩展镜像源、代理、额外环境或新平台**。这是 AC-05 的局部阻断，与全 15 域研究和 AC-03/04 不应绑死。
