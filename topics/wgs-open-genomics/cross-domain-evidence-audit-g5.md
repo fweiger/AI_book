@@ -54,7 +54,7 @@
 - **P033**：[Gregg et al. ACMG practice resource (2021), DOI 10.1038/s41436-021-01203-z](https://doi.org/10.1038/s41436-021-01203-z)：ACMG 提出统一面向孕前/妊娠阶段提供 **Tier 3 相关常染色体隐性/X 连锁携带者筛查**；指出阴性结果只能降低而不能完全消除残余风险，风险受人群携带频率和位点检测率影响。
 - **P034**：[ACMG laboratory technical standard (2024), DOI 10.1016/j.gim.2024.101137](https://doi.org/10.1016/j.gim.2024.101137)：**多种检测技术组合**才能覆盖不同变异类型/难以分型的基因；并非给一份 40× VCF 就能在所有基因上得到完整阴性结果。
 - **P035**：[Li & Wang InterVar, *AJHG* (2017), DOI 10.1016/j.ajhg.2017.01.004](https://doi.org/10.1016/j.ajhg.2017.01.004)：根据 ACMG/AMP 2015 证据提供候选变异自动化解释和**人工调整步骤**；不等于无需人工就自动给出临床携带者结论。
-- **P036**：[GBA1 caller 独立复审 (2025), DOI 10.1038/s42003-025-08059-y](https://doi.org/10.1038/s42003-025-08059-y)：对 [Gauchian](https://github.com/Illumina/Gauchian) 的**反证**，指出其在某些罕见/新发变异或参考版本条件下可漏报，**实际有人群与样本依赖性**；特别适合纠正“有专用 caller 就全覆盖”的想法。
+- **P036（争议中的负向报告）**：[Tayebi et al. 2025, DOI 10.1038/s42003-025-08059-y](https://doi.org/10.1038/s42003-025-08059-y)：在其测试样本/设置中报告 Gauchian 对部分罕见变异与复杂重组可能漏报；**P045 开发者正式回应**：[Toffoli et al. 2025, DOI 10.1038/s42003-025-08060-5](https://doi.org/10.1038/s42003-025-08060-5) 指出部分旧低覆盖（<10×）数据并不符合约 30× WGS 的预期适用条件。两份来源必须并列留存，尚无本项目独立充分覆盖样本的性能结论。
 
 ### 输入/源码与开源许可风险
 | 源码 | 输入 → 输出 | 实际许可证与限制 | 适用定位 |
@@ -62,7 +62,7 @@
 | [Ensembl/ensembl-vep](https://github.com/Ensembl/ensembl-vep)（原 T25） | 变异 VCF → 功能/转录本注释 | 本轮未重审 LICENSE | 编码和剪接位点的候选注释，不自动鉴定携带者 |
 | [exomiser/Exomiser](https://github.com/exomiser/Exomiser)（原 T26） | VCF+HPO 表型 → 可疑疾病变异排序 | AGPL-3.0；本轮沿用 G4 LICENSE 审计 | 对**已怀疑的表型诊断**有用，无症状携带者筛查不可直接复用其成功率 |
 | [WGLab/InterVar](https://github.com/WGLab/InterVar)（新增 T38） | VCF 或 ANNOVAR 格式 → ACMG 证据辅助评级 | **README 明确非商业使用免费、商业需作者授权；依赖 ANNOVAR/OMIM 另有许可**。源码可见，**不能列为无条件可商用开源** | 仅候选辅助评级，必须逐条人工核实、特别是 VUS/基因-疾病关联 |
-| [Illumina/Gauchian](https://github.com/Illumina/Gauchian)（新增 T39） | **标准约 30× 及以上** WGS BAM/CRAM + 参考 build → GBA1/GBAP1 复杂重组/拷贝数与已知变异候选 | **PolyForm Strict 1.0.0**，源码公开但**限制修改与分发**；不能当可自由迭代的 OSI 项目 | 针对假基因复杂区域的研究用对照工具；2025 独立论文发现漏检/参考版本敏感，**不能用于个人临床排除结论** |
+| [Illumina/Gauchian](https://github.com/Illumina/Gauchian)（新增 T39） | **标准约 30× 及以上** WGS BAM/CRAM + 参考 build → GBA1/GBAP1 复杂重组/拷贝数与已知变异候选 | **PolyForm Strict 1.0.0**，源码公开但**限制修改与分发**；不能当可自由迭代的 OSI 项目 | 针对假基因复杂区域的研究用对照工具；2025 独立论文报告漏检、开发者正式回应指出部分低覆盖测试不适用；**不能未经独立确认用于个人临床排除结论** |
 
 ### 携带者 WGS 准入与残余风险
 - 必须逐基因建立清单：**全部高可信编码区域覆盖、单核苷酸/小 Indel 的 callable status、CNV/SV、重复扩增、复杂假基因、性染色体、剪接/深内含子位点**。厂商说“40× WGS”不能替代逐基因可检测范围与质量确认。
