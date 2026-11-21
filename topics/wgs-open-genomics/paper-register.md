@@ -1,6 +1,6 @@
 # TOPIC-017｜文献注册表：已核查首轮论文与研究层级
 
-> 更新日期：2026-11-21；**收录 41 篇不重复的具体论文/指南/综述**，为主动策展样本，绝不代表该领域全部论文数。各条至少依据 DOI 或期刊/学会/官方项目页面核对题录、摘要或研究方法；**未逐篇完成全文系统评价**。
+> 更新日期：2026-11-21；**收录 47 篇不重复的具体论文/指南/综述**，为主动策展样本，绝不代表该领域全部论文数。各条至少依据 DOI 或期刊/学会/官方项目页面核对题录、摘要或研究方法；**未逐篇完成全文系统评价**。
 > 论文 P-ID 在其他维度可被多次引用；统计总篇数时必须按 DOI 去重。来源类型分为工具方法、临床指南、群体研究、综述、随机试验、技术评测，不能把它们视作同等证据。
 
 | 文献 ID | 研究方向 | 一手论文或标准 | 年份 | DOI | 与个人 WGS 的关系/警示 |
@@ -46,8 +46,16 @@
 | P039 | 身体活动 GWAS | Genome-wide physical activity and sedentary behavior loci | 2022 | [10.1038/s41588-022-01165-1](https://doi.org/10.1038/s41588-022-01165-1) | 最多 703901/51 项研究/99 loci；身体活动行为非训练表现或运动处方 |
 | P040 | 训练反应人群研究 | HERITAGE maximal oxygen uptake response genetics | 2011 | [10.1152/japplphysiol.00973.2010](https://doi.org/10.1152/japplphysiol.00973.2010) | 473 名久坐白人/20 周/21 SNP 在研究样本内解释 49% VO2max 反应方差；外推未知 |
 | P041 | 运动反应独立研究 | Predict-HIIT exercise-response GWAS | 2021 | [10.1186/s12929-021-00733-7](https://doi.org/10.1186/s12929-021-00733-7) | 多中心 n507；模型和验证结果仍不足支持个人运动处方 |
+| P042 | 困难医学基因 GIAB 基准 | CMRG: Curated variation benchmarks for challenging medically relevant autosomal genes | 2022 | [10.1038/s41587-021-01158-1](https://doi.org/10.1038/s41587-021-01158-1) | NIST/GIAB HG002 273 个医学复杂基因单独 benchmark；普通全基因组常规 BED 不等于全部困难基因可判读 |
+| P043 | 临床 NGS 技术标准 | ACMG Next-generation sequencing for constitutional variants technical standard | 2021 | [10.1038/s41436-021-01139-4](https://doi.org/10.1038/s41436-021-01139-4) | 临床检测需按样本类型/变异类别评估覆盖和限制；≥10× 不保证所有变异全可检出 |
+| P044 | PCR-free WGS QC | Performance characterization of PCR-free whole genome sequencing for clinical diagnosis | 2022 | [10.1097/MD.0000000000028972](https://doi.org/10.1097/MD.0000000000028972) | NA12878 PCR vs PCR-free、MGISEQ-2000、约 40× 下采样；文库/深度影响 SNV/Indel/基因覆盖，非消费者平台统一保证 |
+| P045 | 方法争议/开发者正式回应 | Reply to: Is Gauchian genotyping of GBA1 variants reliable? | 2025 | [10.1038/s42003-025-08060-5](https://doi.org/10.1038/s42003-025-08060-5) | 对 P036 的正式回应，指出部分旧数据低于软件预期的约 30× WGS 覆盖；争议需分条件记录，不采单方断言 |
+| P046 | 非直接组学/甲基化技术比较 | A comparison of methods for detecting DNA methylation from long-read sequencing of human genomes | 2024 | [10.1186/s13059-024-03207-9](https://doi.org/10.1186/s13059-024-03207-9) | 原生长读长可从信号检测某些碱基修饰；普通短读长 DNA FASTQ 并无可逆的甲基化直接测量 |
+| P047 | 非直接组学/微生物群 | Metagenomics: a path to understanding the gut microbiome | 2021 | [10.1007/s00335-021-09889-x](https://doi.org/10.1007/s00335-021-09889-x) | 宏基因组需恰当样本/host reads 去除/污染阴性控制；普通人类血液 WGS 非人 reads 不能自动解释为完整菌群 |
 
 ## 本轮重点审计
+
+- [G7 15 域一致性/D01 技术质量/D15 组学边界/Gauchian 正反证据](cross-domain-evidence-audit-g7.md)：P042–P047（CMRG/ACMG/PCR-free/Gauchian reply/native methylation/metagenomics）六个直接相关的原始来源。
 
 - [G6 D05/D11/D13：现代 IBD、睡眠 GWAS/PRS、运动 GWAS/训练反应](cross-domain-evidence-audit-g6.md)：五篇新题录 P037–P041，特别保留群体行为与个人运动处方的证据差异。
 
@@ -61,7 +69,7 @@
 - **临床指南**：指向临床实验室确认、专业解读和风险沟通；并非消费者报告即能作诊断。
 - **干预型研究**：随机对照试验优先于单纯 SNP 相关用于评估“按基因制定饮食/睡眠干预是否有效”；P020 是应被保留的负结果。
 
-## 数据库/技术标准（以下**不计入 41 篇论文**）
+## 数据库/技术标准（以下**不计入 47 篇论文**）
 - [NIST GIAB](https://www.nist.gov/programs-projects/genome-bottle) 标准样本与 v4.2.1/v5.0q（HG002 需记录明确的版本、BED、GRCh38 reference）。
 - [EBI GWAS Catalog](https://www.ebi.ac.uk/gwas/) 论文关联、祖源、样本数、summary stats；查询结果按 study accession 去重。
 - [PGS Catalog](https://www.pgscatalog.org/) 评分模型版本、目标性状、开发/验证人群；不是 PRS 临床证据保证。
