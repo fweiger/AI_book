@@ -1,12 +1,14 @@
 # TOPIC-017｜研究导航（唯一动态下一步见 Tracker）
 
-> **唯一执行状态及下一步**以 [GOAL_TRACKER.md](GOAL_TRACKER.md) §7 为准；本页仅说明研究目录，不维护第二套任务进度。
+> **唯一动态状态与下一动作**仅以 [GOAL_TRACKER.md](GOAL_TRACKER.md) §7 为准。本页列出研究证据，不复制第二套进度状态。
 
-已完成三轮不同类别的横向代表性证据审计：
-- [G4 医学、药物、PRS、营养反证、古 DNA、HLA-I](cross-domain-evidence-audit.md)
-- [G5 结构变异、母系线粒体、遗传病携带者及许可证](cross-domain-evidence-audit-g5.md)
-- [G6 IBD/亲缘、睡眠 GWAS/PRS、运动行为/训练反应](cross-domain-evidence-audit-g6.md)
+专题沿着个人 **WGS 数据质量 → 学术论文真实数据与证据 → 15 域研究深度 → 已有源码工具与限制** 推进，当前可用目录：
 
-当前 [15 域主矩阵](evidence-capability-matrix.md)、[41 篇论文](paper-register.md)、[39 项 GitHub 源码/许可候选](open-source-projects.md)均为研究范围内的去重策展数，不是全球总数。完整实际运行 E2 仍 `NOT_RUN`。研究目标是先评价某种 WGS 数据在什么论文条件下能解释到何种深度，再据此复用适配开源代码；不以工具数量为成功标准。
+- [15 域证据主矩阵](evidence-capability-matrix.md) · [47 篇去重论文/指南](paper-register.md) · [39 个 GitHub 源码候选与许可](open-source-projects.md)（仅指已收录且经存在性核查，非全球总量/可运行总量）
+- [G4 医学、药物、PRS、古 DNA、营养阴性研究、HLA](cross-domain-evidence-audit.md)
+- [G5 结构变异、母系 mtDNA、生殖携带者和使用许可](cross-domain-evidence-audit-g5.md)
+- [G6 常染色体 IBD、睡眠与运动复杂性状](cross-domain-evidence-audit-g6.md)
+- [G7 15 域证据一致性、D01 质量与 D15 模态边界](cross-domain-evidence-audit-g7.md)
+- **[个人 WGS 原始文件交付与质量验收清单](wgs-data-acceptance-contract.md)**：FASTQ/BAM/CRAM/gVCF、质量报告、数据权利及具体研究降级条件。
 
-G6 后建议优先做 **15 域 E1 覆盖与论文/源码映射的一致性审计，重点补 D01 技术质量、D15 多组学边界**，避免继续无边界横向扩充。若有高质量合法公开多样本数据，再推进同一研究目标中的小范围 E2 复现；不得擅自依赖或上传私人 DNA。
+**尚未完成**：任何真实 DNA/E2 软件运行、完整 47 篇逐篇全文评审、全部 39 项许可证/依赖验收、真实厂商产品文件 QC、Draft PR 合并；不能将 CI 文档结构测试当生物信息学 benchmark。后续执行优先选择**公共 HG002 最小可运行核验与样本验收指标**，局部 Docker/DNS 阻断不应无界升级为系统建设。
