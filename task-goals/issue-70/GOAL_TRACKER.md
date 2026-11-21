@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（#70 Goal/Scope/AC未变；跨案例因果裁决与下一步AC-04竞争性机制核查相容，当前事件待同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上轮已SYNCED；本轮三案例比较审计及档案定位纠偏事件待唯一Writer发文、回读）
+- 状态一致性: `CONSISTENT`（#70 Goal/Scope/AC未变，§12三案例因果审计与AC-04下一步相容，本轮唯一评论已GET核实）
+- Issue 同步状态: `SYNCED`（本轮三案例事件 #7056875253 已提交并GET回读，同event_key仅1条；学术验收仍PARTIAL）
 
 ## 1. 批准目标基线
 
@@ -54,7 +54,7 @@
 - **资料核验**：前344年秦商鞅方升及前309青川田律为制度物证，不是生产率实测；1423乌菲齐《三王来朝》署名/委托、1427佛罗伦萨税籍和商人财产为具体个案，1427晚于1423；1915/1918《青年杂志》《新青年》原刊出版与编辑规则可核，不是印刷劳动生产率数据。对这些史料的推论均按直接可证与推断分层。
 - **新增实质纠偏（原始档案定位）**：直接核对 Sergio Tognetti 论文 **p.78表19**与**p.88注152**。1427财富表引用 **Catasto 76 cc.169v–202v**，但 1427-07-12 **原始 portata申报**原为 Catasto 45 cc.493r–559v，后移入 **Carte Strozziane III n.129 cc.23r–89v**。报告§10已纠正之前将二者混作一份原始税籍的口径；本轮实际目验的是论文表格和脚注，不是税籍手写原件。Brown估值差异仍CONFLICT。
 - **研究结论状态**：三历史案例的原物/文本与制度/文化产物的存在证据 PASS（有边界）；个案机制 PARTIAL；F→R→Y1的充分/必要/主要原因 **NOT_ESTABLISHED/UNKNOWN**；不存在可信的因果贡献比例。独立学术审稿仍 NOT_RUN，Draft PR #71未合并。
-- **原Goal贡献与漂移**：直接满足既有 AC-01/02 的“多案例比较与反例”研究步骤（不代表历史因果验收完成），为 AC-04 对四条件整体竞争性解释提供可读证据。D0：不扩建旁支、不把假说写成事实；状态 CONSISTENT，本轮 GitHub event 单Writer待同步。
+- **原Goal贡献与漂移**：直接满足既有 AC-01/02 的“多案例比较与反例”研究步骤（不代表历史因果验收完成），为 AC-04 对四条件整体竞争性解释提供可读证据。D0：不扩建旁支、不把假说写成事实；状态 CONSISTENT，本轮 GitHub event #7056875253 已回读同键唯一。
 
 ## 5. 阻断与未受影响工作
 
@@ -117,15 +117,15 @@
 
 | 2026-11-21 / M1-new-youth-originals | 直接目验1915《青年杂志》首期影印封面/《社告》/广告/目录及1918《新青年》4卷3号封面/《本志编辑部启事》，同群益书社而编辑由欢迎外稿转为同人主责“不另购稿”；鲁迅1918-01-04信有“不能广行”的出版困境，当年经费200元来源仅后出回忆 | AC-01/02 PARTIAL；期刊内容/编辑规则PASS；主因UNKNOWN | [同一研究文档 §11](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056595252)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:new-youth-originals-1915-1918-20261121` | D0 / CONSISTENT；无发行成本/印数或直接生产率数据，事件待同步 | 三个历史语境的因果必要性/充分性/主因证据矩阵 |
 
-| 2026-11-21 / M1-three-case-causal-matrix | 完成先秦/佛罗伦萨/新文化运动三历史语境的原物/制度/文化产物统一矩阵，F/R/Y0/Y1分离，分别审“共现、先后、机制、必要充分、主因”；表明生产力主因无直接识别但不能说已证伪；Tognetti p78表19与p88注152纠正1427 Catasto76汇总引用、portata原卷Catasto45转存CS III129 | AC-01/02 PARTIAL（比较交付形成）；来源与档案修正 PASS，宏观主因 UNKNOWN | [同一研究报告 §10/§12](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:three-case-causal-matrix-20261121` | D0 / CONSISTENT，原始税籍未逐字目验、学术审稿NOT_RUN；事件待同步 | 对原视频四条件进行AC-04竞争性机制/反例审计 |
+| 2026-11-21 / M1-three-case-causal-matrix | 完成先秦/佛罗伦萨/新文化运动三历史语境的原物/制度/文化产物统一矩阵，F/R/Y0/Y1分离，分别审“共现、先后、机制、必要充分、主因”；表明生产力主因无直接识别但不能说已证伪；Tognetti p78表19与p88注152纠正1427 Catasto76汇总引用、portata原卷Catasto45转存CS III129 | AC-01/02 PARTIAL（比较交付形成）；来源与档案修正 PASS，宏观主因 UNKNOWN | [同一研究报告 §10/§12](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056875253)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:three-case-causal-matrix-20261121` | D0 / CONSISTENT，原始税籍未逐字目验、学术审稿NOT_RUN；事件待同步 | 对原视频四条件进行AC-04竞争性机制/反例审计 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:three-case-causal-matrix-20261121`（本轮唯一事件的CLAIMED声明）
-- writer_owner: `chatgpt-topic016-three-case-20261121`
-- write_state: `CLAIMED`（必须回读声明并查无同键评论，才可单Writer发布）
+- active_event_key: `none`（本轮事件已同步，稳定键保留于§9和最近事件项）
+- writer_owner: `none`（当前没有待发布事件）
+- write_state: `SYNCED`（本轮事件 #7056875253 已GET回读，同键仅1条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:new-youth-originals-1915-1918-20261121` / [Issue评论 #7056595252](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056595252)；本次同键唯一回读。SYNCED 仅证明事件/Tracker状态一致，不代表历史因果主因通过验收。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:three-case-causal-matrix-20261121` / [Issue评论 #7056875253](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056875253)；同键唯一回读。SYNCED 仅是GitHub状态一致，不能把未证的历史因果主因升级为学术PASS。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -134,4 +134,4 @@
 | §5 局部阻断 | 原始税册/产量与意识Y1数据缺失仅阻断相应宏观主因AC，AC-04可继续 | 本文件§5 | PASS（影响边界对照） |
 | §6/7 | 原Goal/AC不变，§12三案例完成，§7下一步AC-04竞争性四要素压力测试 | 本文件§6/7 | PASS（优先级重裁决） |
 | §7 与 §9 | 当前权威§7只有AC-04四要素压力审查，§9历史动作不是指令 | §7/§9 | PASS（唯一动作） |
-| Issue 与 PR/Tracker 回链 | #70/PR#71/研究§12已回读；本轮进度事件 CLAIMED 待发布 | #70 / PR#71 / 当前Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70/PR#71/同一研究报告§12与唯一评论已回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056875253) | `SYNCED` |
