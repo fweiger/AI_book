@@ -4,10 +4,10 @@
 
 ## 1. 实际来源、数据质量和可重复执行
 
-- 直接复用 [G8 已下载并以本地 SHA-256、官方 BAM MD5 校验的 HG002 参考资料](sessions/2026-11-21-hg002-public-data-admission-g8.md)：HG002 / NA24385，NovaSeq PCR-free 35× 已比对 chr20 BAM/BAI，GRCh38 no-alt 参考 FASTA/FAI，NIST GIAB **v4.2.1 GRCh38** benchmark VCF/TBI 与 confident BED。**没有重下 G8 公共数据**。
+- 直接复用 [G8 已下载并以本地 SHA-256、官方 BAM MD5 校验的 HG002 参考资料](2026-11-21-hg002-public-data-admission-g8.md)：HG002 / NA24385，NovaSeq PCR-free 35× 已比对 chr20 BAM/BAI，GRCh38 no-alt 参考 FASTA/FAI，NIST GIAB **v4.2.1 GRCh38** benchmark VCF/TBI 与 confident BED。**没有重下 G8 公共数据**。
 - 计算环境：31.5 Ubuntu 24.04，16 CPU、可用内存约 24 GiB（检查时），所有实际运行只使用 4 threads。官方 Ubuntu noble 包 **bcftools 1.19 / htslib 1.19** 与二进制依赖 `libhts3t64/libhtscodecs2` 仅 `apt download` 并 `dpkg-deb -x` 到 **非公开 Git 工作区的临时目录**，未全局安装。实际动态链接及 `bcftools --version` PASS。
 - 独立比较器：[RTG Tools 官方 3.13 发布版](https://github.com/RealTimeGenomics/rtg-tools/releases/tag/3.13)，下载官方 `rtg-tools-3.13-nojre.zip`（9,048,648 bytes），本地 SHA-256 `bc5c6badb07d7e20d1c5c557bd6d571a022bbd9f58fa1e3840bcff9431a18f96`；Java 21；RTG 3.13 / Core `c27844a5bb`。官方 [README](https://github.com/RealTimeGenomics/rtg-tools) 描述 vcfeval 为 **haplotype-aware** comparator；与简单坐标交集不同。
-- 独立脚本：**[scripts/run-hg002-chr20-bcftools-rtg.sh](scripts/run-hg002-chr20-bcftools-rtg.sh)**，Git blob `819278d12b78cae97da8f27c4d49a93228b4942d`。脚本不下载公开数据、不安装工具、不处理个人基因；用环境变量传递已有 G8 文件路径、bcftools/RTG 执行路径、单独输出目录；`preflight` 与 `run`，运行前 `sha256sum -c`，拒绝覆盖已有输出。
+- 独立脚本：**[scripts/run-hg002-chr20-bcftools-rtg.sh](../scripts/run-hg002-chr20-bcftools-rtg.sh)**，Git blob `819278d12b78cae97da8f27c4d49a93228b4942d`。脚本不下载公开数据、不安装工具、不处理个人基因；用环境变量传递已有 G8 文件路径、bcftools/RTG 执行路径、单独输出目录；`preflight` 与 `run`，运行前 `sha256sum -c`，拒绝覆盖已有输出。
 - 第一次手动命令和脚本化第二次运行的变异记录正文 **SHA-256 均为 `472eaed46a664cbb675dc2c09d224d7836c0680345f937100a0a48d6fad912b0`**（剔除 VCF 元信息行后，`bcftools view -H | sha256sum`），且 RTG **`summary.txt` SHA-256 均为 `24dac88c2c4ad5738ffa6b2d65c3280eabf98eeda79d25a1067fe5308a515ba6`**；原始压缩 VCF 二进制 SHA 不同（header/压缩可能含非位点元信息），所以以实际变异记录正文与评分摘要进行一致性验证。
 - 真实运行 Job `wc_job_f-esO0u5Wkjsu8r2` **`completed/exit=0`**。手动首次 bcftools calling **4.31s**，脚本复现 **4.09s**（`/usr/bin/time` 进程耗时，非全链路耗时）。RTG vcfeval 首次 **1.49s**；不从局部小区间推断全 WGS 时长。
 
