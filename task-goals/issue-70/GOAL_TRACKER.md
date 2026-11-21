@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（原 Issue Goal/Scope/AC 未改，新1915/1918原刊资料及下一步均推进 AC-01/02，本轮事件待同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一轮已完成；当前原刊审计事件待唯一 Writer 发布、GET 回读）
+- 状态一致性: `CONSISTENT`（#70原批准Goal/AC与新原刊事实、三案例唯一下一步、事件一致；同键评论已GET回读）
+- Issue 同步状态: `SYNCED`（原刊审计事件 #7056595252 已发布且独立GET仅一条同键，研究学术验收仍PARTIAL）
 
 ## 1. 批准目标基线
 
@@ -112,15 +112,15 @@
 
 | 2026-11-21 / M1-palla-identification | 核实 Palla Strozzi 1427税籍 ASF Catasto 76 169v–202v、1423 Uffizi《三王来朝》原物题款与同人委托、1423家族官方现金账簿档号286；发现 101421 vs 103306 和付款150总价/尾款解释冲突 | AC-02 身份链 PASS、原账逐字/因果 PARTIAL | [同一研究报告 §10](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056338367)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:palla-catasto-commission-20261121` | D0 / CONSISTENT；归档原件未目验，净值冲突及主因 UNKNOWN | 按第三历史语境检查1915原刊与出版资金/知识生产关系 |
 
-| 2026-11-21 / M1-new-youth-originals | 直接目验1915《青年杂志》首期影印封面/《社告》/广告/目录及1918《新青年》4卷3号封面/《本志编辑部启事》，同群益书社而编辑由欢迎外稿转为同人主责“不另购稿”；鲁迅1918-01-04信有“不能广行”的出版困境，当年经费200元来源仅后出回忆 | AC-01/02 PARTIAL；期刊内容/编辑规则PASS；主因UNKNOWN | [同一研究文档 §11](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:new-youth-originals-1915-1918-20261121` | D0 / CONSISTENT；无发行成本/印数或直接生产率数据，事件待同步 | 三个历史语境的因果必要性/充分性/主因证据矩阵 |
+| 2026-11-21 / M1-new-youth-originals | 直接目验1915《青年杂志》首期影印封面/《社告》/广告/目录及1918《新青年》4卷3号封面/《本志编辑部启事》，同群益书社而编辑由欢迎外稿转为同人主责“不另购稿”；鲁迅1918-01-04信有“不能广行”的出版困境，当年经费200元来源仅后出回忆 | AC-01/02 PARTIAL；期刊内容/编辑规则PASS；主因UNKNOWN | [同一研究文档 §11](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056595252)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:new-youth-originals-1915-1918-20261121` | D0 / CONSISTENT；无发行成本/印数或直接生产率数据，事件待同步 | 三个历史语境的因果必要性/充分性/主因证据矩阵 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:new-youth-originals-1915-1918-20261121`（本轮事件待发布）
-- writer_owner: `chatgpt-topic016-new-youth-20261121`
-- write_state: `CLAIMED`（必须确认 Tracker 单Writer声明后才能发布）
+- active_event_key: `none`（本轮稳定键已发布，历史见§9）
+- writer_owner: `none`（本次写入完成，无待发布事件）
+- write_state: `SYNCED`（本轮#7056595252已GET回读，同键仅1条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:palla-catasto-commission-20261121` / [Issue评论 #7056338367](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056338367)；该键评论已唯一回读。SYNCED 只证明GitHub事件同步，不证明生产力与文化变革的最大主因。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:new-youth-originals-1915-1918-20261121` / [Issue评论 #7056595252](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056595252)；本次同键唯一回读。SYNCED 仅证明事件/Tracker状态一致，不代表历史因果主因通过验收。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -129,4 +129,4 @@
 | §5 局部阻断 | 印数/稿费实际原账缺失仅影响具体量化，不阻断三案例比对 | 本文件 §5 | PASS（范围边界） |
 | §6/7 | 原 Goal 不变，下一步三案例因果矩阵 | 本文件 §6/7 | PASS（路径对齐） |
 | §7 与 §9 | §7唯一当前动作三案例对比，§9只存历史 | 本文件 | PASS（一致性） |
-| Issue 与 PR/Tracker 回链 | #70/PR #71/研究文档§11已回读，当前事件待唯一Writer同步 | #70 / PR#71 / Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70/PR #71/报告§11与本轮唯一评论均已回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056595252) | `SYNCED` |
