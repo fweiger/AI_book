@@ -1,6 +1,6 @@
 # TOPIC-017｜从一份个人 WGS 到遗传学、医学、家族史与古 DNA
 > 来源与规范研究任务：[AI_book Issue #72](https://github.com/fweiger/AI_book/issues/72)  
-> 建立：2026-11-21；专题版本：`0.1.5`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
+> 建立：2026-11-21；专题版本：`0.1.6`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
 > **本仓库公开；严禁保存任何人的真实 FASTQ/BAM/CRAM/VCF、家谱身份、疾病信息或其他敏感数据。**
 
 ## 最初的问题
@@ -9,7 +9,7 @@
 ## 核心框架
 **WGS 数据质量/可分析能力 → 原始论文与证据要求 → 全方向问题/研究深度 → 对应开源项目 → 公开数据复现。**
 
-**[先读全方向研究主矩阵：15 个研究维度 × 41 篇文献 × 39 个 GitHub 源码候选](evidence-capability-matrix.md)**。本主题采用广度优先、证据驱动的方法；父系 Q03 只是其中一个子方向。
+**[先读全方向研究主矩阵：15 个研究维度 × 47 篇文献 × 39 个 GitHub 源码候选](evidence-capability-matrix.md)**。本主题采用广度优先、证据驱动的方法；父系 Q03 只是其中一个子方向。
 
 - **技术底座**：FASTQ（reads）→ BAM/CRAM（比对）→ VCF/gVCF（变异调用）；与 GRCh38/GRCh37/T2T 参考版本、chrY/mtDNA 区域、变异类型一起记录。
 - **遗传谱系**：Y 单倍群、mtDNA、常染色体 IBD、古 DNA、群体迁徙与亲缘网络。
@@ -18,12 +18,14 @@
 - **证据体系**：Github 项目存在 E0 → 原始论文可核 E1 → 公开样本真实复现 E2 → 跨工具/队列 E3 → 独立临床可行动 E4。
 
 ## 导航
-- **[全方向主矩阵：数据门槛 × 论文 × 研究深度 × GitHub](evidence-capability-matrix.md)** · [41 篇论文 P-ID 注册表](paper-register.md)
+- **[全方向主矩阵：数据门槛 × 论文 × 研究深度 × GitHub](evidence-capability-matrix.md)** · [47 篇论文 P-ID 注册表](paper-register.md)
 - [研究问题 Q01–Q10](questions.md) · [研究方向与深度矩阵](research-matrix.md)
 - [39 项 GitHub 源码与许可证审计目录](open-source-projects.md)
 - **[G4 六类代表论文与真实软件输入/许可证审计](cross-domain-evidence-audit.md)**
 - **[G5 D02/D04/D08：结构变异、母系 mtDNA、携带者及复用许可](cross-domain-evidence-audit-g5.md)**
 - **[G6 D05/D11/D13：IBD、睡眠与运动遗传学论文×源码证据](cross-domain-evidence-audit-g6.md)**
+- **[G7 全 15 域一致性审计：D01 测序 QC、D15 多组学边界、Gauchian 争议](cross-domain-evidence-audit-g7.md)**
+- **[WGS 采购与原始文件最小交付验收清单](wgs-data-acceptance-contract.md)**
 - [论文、原始标准与参考数据库](sources.md) · [按问题阅读路径](reading-path.md)
 - [主张与证据 C-ID](claims.md) · [知识关系图](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
 - [HG002 chr20 基准与可运行脚本](benchmark-hg002.md) · [Q03 父系 Y 工具方法深度核查](y-chromosome-methods.md) · [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
