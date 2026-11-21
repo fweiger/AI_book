@@ -7,15 +7,15 @@
 - 所属源仓库：`fweiger/AI_book`
 - 项目入口：`topics/wgs-open-genomics/README.md`
 - 唯一 Tracker：`topics/wgs-open-genomics/GOAL_TRACKER.md`（本文件）
-- 当前阶段：G10 完成 D01–D15 每域代表一手论文的方法/assay/队列/数据输入/GitHub 适配与外推边界审计，纠正 P005 Yleaf 原文 DOI；15 域/47 去重 DOI/39 源码保持；G9 仅 D01 1Mb 公共 E2 PASS
+- 当前阶段：G11 已完成 D03/D04/D09/D10 四款代表源码的真实输入格式、质量条件、输出、许可证与公开测试入口 E0 核查；4/4 E0 PASS、E1 方法 PARTIAL、四工具 E2 NOT_RUN；继承 G10 15 域/47 DOI/39 源码和 G9 D01 chr20 1Mb 公开 E2 PASS
 - 选定协议：`fweiger/AI_tasks/task-center/v1.2.2/ENTRY.md`，原实验候选分支 `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
 - **锁定协议 commit SHA：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`**（续接仅从锁定版本读取，不自动跟随 HEAD）
 - 本轮观察的候选分支 HEAD（协议分支）：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 初始 Issue 验证：2026-11-21，GET #72 内容可读，`requirements_revision: 1`
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
-- 目标漂移：`D0 ALIGNED`（G10 直接执行上一 §7 的 15 域代表原文方法级审计，推进未完成 AC-02/03/04，未延伸 D01 局部容器工程）
+- 目标漂移：`D0 ALIGNED`（G11 直接执行原 §7 四领域输入合同审计，不改变 Goal/Scope/AC）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`SYNCED`（G1–G9 事件先前均已回读，G10 唯一事件 #7064791856 已按稳定键回读）
+- Issue 同步：`ISSUE_SYNC_PENDING`（G10 事件已同步，G11 等待唯一 Writer 发布并回读）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -26,9 +26,9 @@
 | AC | 验收 | 验证方法 | 当前 | 证据 |
 |---|---|---|---|---|
 | AC-01 | 唯一 TOPIC-017 Issue 入口且合理查重 | GitHub 查询并回读 | PASS | [#72](https://github.com/fweiger/AI_book/issues/72) |
-| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项不同源码候选存在性 PASS；G10 复核代表工具 GitHub README/实际输入与部分既有许可；全部 39 项的许可证/实际算法仍未验收，部分并非 OSI 开源） | [G10 方法×源码输入审计](cross-domain-method-evidence-audit-g10.md) · [39 项代码目录](open-source-projects.md) |
+| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项不同源码候选存在性 PASS；G10 复核代表工具 GitHub README/实际输入与部分既有许可；G11 四款源码许可证与输入已核，其余未全量审计，部分并非 OSI 开源） | [G10 方法×源码输入审计](cross-domain-method-evidence-audit-g10.md) · [39 项代码目录](open-source-projects.md) |
 | AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（47 个 DOI/指南已登记；G10 从中为 15 域各抽 1 篇一手方法/摘要/部分正文并核正 P005 原文 DOI；完整 47 篇全文/附录仍未系统审计） | [G10 15 域方法核查](cross-domain-method-evidence-audit-g10.md) · [论文注册表](paper-register.md) |
-| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（G10 已为 15/15 域建立代表一手 DOI×assay×外部队列×WGS 数据质量×GitHub 输入×科学结论边界；各域实际效果仅 D01 G9 1Mb E2） | [G10 全域代表方法审计](cross-domain-method-evidence-audit-g10.md) · [主矩阵](evidence-capability-matrix.md) |
+| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（G10 已为 15/15 域建立代表一手 DOI×assay×外部队列×WGS 数据质量×GitHub 输入×科学结论边界；G11 四域 E0 输入已核；各域实际效果仅 D01 G9 1Mb E2） | [G10 全域代表方法审计](cross-domain-method-evidence-audit-g10.md) · [主矩阵](evidence-capability-matrix.md) |
 | AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | **PASS（范围受限）：**真实 HG002 chr20 1Mb bcftools1.19/RTG3.13 独立 GIAB v4.2.1 BED 指标和二次运行日志、变异记录/摘要哈希一致；原 DeepVariant/hap.py 单独方案仍 NOT_RUN | [G9 原始结果与复现](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) · [G9 实际可运行源码](scripts/run-hg002-chr20-bcftools-rtg.sh) |
 | AC-06 | 专题分支、唯一 Tracker、审核 PR 和回链 | GitHub 文件、PR、INDEX、CI 校验 | PARTIAL（Draft PR #73/结构 CI PASS，尚待审核合并） | [PR #73](https://github.com/fweiger/AI_book/pull/73) |
 
@@ -42,7 +42,7 @@
 |---|---|---|---|---|---|
 | S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[47 个 P-ID](paper-register.md)、[G10 15 域方法对应](cross-domain-method-evidence-audit-g10.md) | PARTIAL（15/15 代表方法 E1 对齐 PASS；剩余 32 篇全文/数据库及各域实际执行待审） | 需完成更深一手论文和实际软件的输入兼容性核验 |
 | S2 | HG002 公开数据准入 → 最小 chr20 SNP/Indel E2 | 02/05 | [G8 官方数据/哈希](sessions/2026-11-21-hg002-public-data-admission-g8.md)、[G9 实测和二次复现](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) | **PASS（仅 G9 chr20 1Mb bcftools/RTG）**，原 DeepVariant/hap.py 未测试 | 与其他 14 研究域的结论真实性独立，下一步恢复论文×源码全域研究 |
-| S3 | 15 域论文×WGS 输入×代码/研究结论及许可证可靠性 | 02–04 | [主矩阵](evidence-capability-matrix.md)、[G10 逐域一手方法](cross-domain-method-evidence-audit-g10.md) | PARTIAL（G10 15/15 域代表论文/源码方法输入已核；剩余 32 篇、全部 39 项完整许可与 E2 尚待审） | 优先核对单人可用领域的输入数据契约和科研上限 |
+| S3 | 15 域论文×WGS 输入×代码/研究结论及许可证可靠性 | 02–04 | [主矩阵](evidence-capability-matrix.md)、[G10 逐域一手方法](cross-domain-method-evidence-audit-g10.md) | PARTIAL（G10 15/15 域代表论文/源码方法输入已核；G11 四工具 E0 合同已核；其余论文、许可证与 E2 尚待审） | 以 D04 官方公开 VCF 例样本做一次有界功能复现 |
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
 
 ## 4. 当前检查点
@@ -52,11 +52,13 @@
 - **质量门禁和统计**：实际文件回读/解析 **D01–D15 15 个唯一领域、47 个不同 P-ID/DOI、39 个不同 GitHub 仓库、15/15 抽审 P-ID 均在注册表内**：结构 PASS。部分论文仅按原始摘要/已展示方法段核，**E1/PARTIAL**，所有 D02–D15 源码运行 E2 NOT_RUN。G9 D01 chr20 1Mb bcftools/RTG E2 PASS 保留，原 DeepVariant/hap.py NOT_RUN。
 - **现有阻断与目标状态**：不处理个人 DNA；没有对 47 篇全文/39 仓库全部依赖/许可证做系统性审计，不假报“全球全部工具或论文”。D0 ALIGNED、与原 Issue Goal/Scope/AC CONSISTENT；G10 唯一进度事件 [#7064791856](https://github.com/fweiger/AI_book/issues/72#issuecomment-7064791856) 已回读并同步。
 
+- **G11 真实新增**：[D03/D04/D09/D10 四领域 WGS 输入合同](four-domain-wgs-input-contract-g11.md) 已在同一 PR 提交。Yleaf、Haplogrep3、StellarPGx、pgsc_calc 四款工具实际 README/源码/许可证/公开测试入口已查；E0 4/4 PASS，E1 论文已初审但方法深度 PARTIAL，E2 0/4 NOT_RUN。发现 StellarPGx README SIM001 与当前 test.config HG03130 不同，不能直接当单一复现实验。未新增论文/工具/个人基因数据。
+
 ## 5. 阻断与未受影响工作
 | 问题 | 影响范围 | 对应 AC | 继续可以推进的部分 | 状态 |
 |---|---|---|---|---|
 | 既有 47 项中剩余 32 项未逐篇全文系统审计、实际医学/统计外推边界不统一 | AC-03/04 的全面证据完整性 | 03/04 | 15 域代表方法已有，可优先审最影响决策的负证据和缺口 | PARTIAL |
-| 39 个现有 GitHub 软件许可证/复杂输入及跨祖源模型仍未完成全量运行/审查 | 软件可复用性与输入质量 | 02/04 | 已读取一批 README；对重点 D03/D04/D09/D10 现成方法做有界输入核验 | PARTIAL |
+| 39 个现有 GitHub 软件许可证/复杂输入及跨祖源模型仍未完成全量运行/审查 | 软件可复用性与输入质量 | 02/04 | 已完成 D03/D04/D09/D10 四工具输入与许可证静态核验；可尝试 D04 公开示例真实运行 | PARTIAL |
 | Docker DeepVariant/hap.py 固定早期路径仍未完整 | 仅其指定的额外对照实验 | 05 部分额外研究 | G9 原生 bcftools/RTG 最小 E2 已 PASS | 局部 NOT_RUN，非本轮研究阻断 |
 | 用户私人商业 WGS 文件不在本项目 Scope 中 | 个人质量/医疗/亲缘实测 | Non-goals | 公开标准、数据准入与学术方法 | 不请求/不公开 |
 
@@ -69,11 +71,13 @@
 | **2026-11-21/G9** | 现有 HG002 数据与有界原生工具 | bcftools1.19/RTG3.13 公开 HG002 chr20 1Mb 独立 GIAB/true E2，二次代码实跑变异正文/摘要 SHA 一致；不再修 Docker 大镜像 | [G9 报告](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)、[源码](scripts/run-hg002-chr20-bcftools-rtg.sh) | **05 PASS（限界）** | 否 |
 | **2026-11-21/G10** | G9 E2 后回归 15 域代表方法审计 | 逐域核 15 篇一手论文真实 assay、祖源/队列、单人 WGS 输入、GitHub 兼容性与外推边界；P005 原文/勘误 DOI 修正 | [G10 报告](cross-domain-method-evidence-audit-g10.md)、[日志](sessions/2026-11-21-15domain-primary-methods-audit-g10.md) | 02/03/04 PARTIAL（方法结构 15/15 PASS） | 否 |
 
+| **2026-11-22/G11** | G10 四个代表方向静态数据合同 | Yleaf/Haplogrep3/StellarPGx/pgsc_calc 实际输入/参考/许可/测试核验；澄清官方测试不等于独立准确率，Stellar 文档/配置不一致 | [G11 四域合同](four-domain-wgs-input-contract-g11.md) | 02/03/04 PARTIAL（四工具 E0 PASS，E2 NOT_RUN） | 否 |
+
 ## 7. 下一步
-- **唯一优先动作**：以 [G10 15 域方法证据清单](cross-domain-method-evidence-audit-g10.md) 中的原有 D03（父系 Y）、D04（mtDNA）、D09（PGx）、D10（PGS/PRS）四个在单份短读长 WGS 上**最可能给研究性个体结果但数据条件不同**的领域为代表，核准**原始文件级输入质量合同与分析深度排序**：每域选择 1 个既有 GitHub 工具，分别写出 `minimum_input/expected_output/callable-quality/external-reference/evidence-grade/license/known-limit` 及 1 份可用公开基准或合法样本是否实际存在的证据；不用个人 DNA，暂不安装运行 4 个完整平台。
-- **为何优先及验收**：G10 的 15 域代表性论文已完成方法 E1 横向初审，最大下一步缺口是“实际买到一份 30–40× WGS 能否用现成工具达到该论文的分析层级”。四个领域覆盖 Y/mtDNA/复杂药物基因型/外部统计模型四类完全不同的技术门槛，能形成可用于其余域的统一输入审计模板。必须每域给出处链接和是否可执行的 `PASS/PARTIAL/NOT_RUN/BLOCKED`，不虚构 E2 或承诺个人临床结论。
-- **关联未完成 AC**：AC-02 真实软件输入及法律许可，AC-03 原文/方法/反证完整性，AC-04 研究边界和 WGS 质量迁移；AC-06 Draft PR #73 仍未合并。G10 未全审的 32 篇仍排队，不因本轮四域重点失去 15 域总框架。
-- **限制**：若原有仓库 README 已能排除输入兼容性，就以静态证据结论止步，不无界部署软件或再建平台；无足够可用公共样本则 E2 NOT_RUN，保留原 Goal/Scope/AC，不上传个人 DNA。
+- **唯一优先动作**：选择已在 [G11](four-domain-wgs-input-contract-g11.md) 静态验收的 **D04 Haplogrep3 官方公开 VCF 示例**，做一次有界、版本固定的本地 CLI 功能复现：核对实际样本、树版本/参考、变异范围、haplogroup top hit、分类 quality/warnings、完整运行命令与输出哈希。若样本缺独立真值，只报告执行功能，不冒充 mtDNA caller precision 或临床效力。
+- **优先理由/验收**：G11 已完成四种源码输入 E0 合同，最大剩余证据缺口是能否从合法公开输入真实产生可回读研究结果。D04 测试规模小，不需个人 DNA、下载全 WGS 或搭建平台。成功留 E2 执行日志；失败有界报告并返回未阻断的研究主线。
+- **关联 AC**：AC-02/03/04 PARTIAL，AC-05 仅 G9 D01 小范围 E2 PASS，AC-06 Draft PR #73 仍未合并；剩余 11 个 D 域、32 篇未全审论文、其余源码都保留主目标。
+- **限制**：不以测试样本替代独立准确率 benchmark；不变更原 Goal/Scope/AC/协议；不使用私人序列或新平台。
 
 ## 8. 每轮恢复核对
 - [ ] 用锁定 `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` 获取 Task Center V1.2.2 入口与续接协议，核对 Sticky Assignment；不自动改协议。
@@ -100,20 +104,20 @@
 
 | 2026-11-21/G10 | 从 47 个 P-ID 中审 D01–D15 各 1 篇一手方法/assay/祖源/结论及软件输入；更正 P005 原始 DOI msy032（msy080 实为勘误）；官方 pgsc_calc README 明示不直接支持 WGS | AC-02/03/04 PARTIAL；方法结构 15/15 PASS | [G10 15 域方法报告](cross-domain-method-evidence-audit-g10.md)、[G10 来源日志](sessions/2026-11-21-15domain-primary-methods-audit-g10.md) | D0 ALIGNED；G10 事件同步待核验 | D03/D04/D09/D10 单份 WGS 输入质量及可研究深度核验 |
 
+| 2026-11-22/G11 | 四个代表 GitHub 工具文件级输入合同和真实 LICENSE/测试入口；4/4 E0 PASS、E2 0/4 NOT_RUN | AC-02/03/04 PARTIAL | [G11 四领域合同](four-domain-wgs-input-contract-g11.md) | D0 ALIGNED/CONSISTENT；G11 Writer 待同步 | D04 官方公开 VCF 有界 CLI 功能复现 |
+
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：none（G10 事件 AI_book#72:AC02-03-04:20261121-g10-15domain-methods 已完成）
-- **当前 writer_owner**：none（G10 Writer chatgpt-topic017-g10-20261121 已完成）
-- **当前 write_state**：SYNCED（[G10 唯一事件 #7064791856](https://github.com/fweiger/AI_book/issues/72#issuecomment-7064791856) 已 GET 回读，同 key 仅 1 条；评论声明 Tracker blob SHA bc28e3a8e903ccfeec3be34f65cf1b979ba97455）
-- **旧 Writer 停止/隔离**：不适用；首次写入者。
-- **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
+- **当前 active_event_key**：`AI_book#72:AC02-03-04:20261122-g11-four-domain-input-contract`
+- **当前 writer_owner**：`chatgpt-topic017-g11-20261122`
+- **当前 write_state**：`CLAIMED`（G11 报告已提交，Tracker 已发起单 Writer 声明；Issue 评论尚未发布）
+- **Tracker 写前 blob**：`15399e84c39a9628593202d0358bb79b507ecb74`；**PR head G11 报告提交前**：`bb783e0d3f08231d221d3505c9270fb7892de297`；**报告提交 commit**：`1384291446765488e648868fe790cbeec795f7fe`。
+- **旧 Writer**：G10 已完成并清理（初次回读 none/SYNCED），没有遗留 CLAIMED 可抢占。
 
-| 检查项 | 当前值 | 证据 | 结果 |
-|---|---|---|---|
-| Issue Goal/Scope/AC 与 §1 | 合同一致 | 初始 GET #72 | CONSISTENT（内容） |
-| §3/§4 与真实证据 | G10 15/15 域代表 P-ID/真实方法和源码输入审计、P005 DOI 修复且 47 DOI/39 repo 去重核对；G9 1Mb E2 保持 | G10 报告/注册表/工具目录与 G9 真实结果 | PARTIAL（15 域方法结构 PASS，其余 E2 NOT_RUN） |
-| §5 局部阻断 | 47 篇未全部全文、39 项未全做输入/许可/运行实证；旧 DeepVariant 局部未运行 | G10 15 域代表审计、G9 实测和原 Non-goals | CONSISTENT |
-| §6 与 §7 | G10 15 域代表论文/数据/代码审计已完成；下一步 4 种互补个人 WGS 数据契约方法级对照 | G10 一手来源、现有工具和未完成 AC-02/03/04 | CONSISTENT |
-| §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G10 唯一 event_key 均已回读，G10 #7064791856 为唯一该键评论 | G10 声明 Tracker blob SHA bc28e3a8e903ccfeec3be34f65cf1b979ba97455 | SYNCED |
+| 核查 | 最新事实 | 结论 |
+|---|---|---|
+| Issue/Goal/AC/协议 | 原 #72、requirements_revision 1 与锁定协议不变 | CONSISTENT |
+| 实际研究增量 | G11 [四领域报告](four-domain-wgs-input-contract-g11.md) 实际回读；四款 GitHub 工具 E0 4/4；无任何新 E2 | PARTIAL（E2 0/4） |
+| 当前下一步唯一性 | §7 D04 公共样本功能验收；§9 仅保留历史候选 | D0 ALIGNED |
+| 本轮事件 | 先以 Tracker blob SHA CAS 声明，后续再评论/回读/清理 | ISSUE_SYNC_PENDING |
 
-> 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
+> 单 Writer 事件未发布且未双向 GET 回读前不称本轮 SYNCED。
