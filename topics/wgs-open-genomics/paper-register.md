@@ -56,6 +56,7 @@
 ## 本轮重点审计
 
 - [G7 15 域一致性/D01 技术质量/D15 组学边界/Gauchian 正反证据](cross-domain-evidence-audit-g7.md)：P042–P047（CMRG/ACMG/PCR-free/Gauchian reply/native methylation/metagenomics）六个直接相关的原始来源。
+- [G10 15 域代表性一手方法/数据来源/GitHub 输入核验](cross-domain-method-evidence-audit-g10.md)：**不新增 P-ID**，逐领域审查研究设计，纠正 P005 原始方法 DOI 与勘误混淆；其余 46 篇也未被宣称全文系统复核。
 
 - [G6 D05/D11/D13：现代 IBD、睡眠 GWAS/PRS、运动 GWAS/训练反应](cross-domain-evidence-audit-g6.md)：五篇新题录 P037–P041，特别保留群体行为与个人运动处方的证据差异。
 
