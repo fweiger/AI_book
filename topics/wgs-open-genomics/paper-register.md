@@ -9,7 +9,7 @@
 | P002 | WGS 多种变异 | DRAGEN genome-wide calling | 2025 | [10.1038/s41587-024-02382-1](https://doi.org/10.1038/s41587-024-02382-1) | 技术比较基线；DRAGEN 不等于本目录全部开放源码 |
 | P003 | SV/Indel | Manta detection | 2016 | [10.1093/bioinformatics/btv710](https://doi.org/10.1093/bioinformatics/btv710) | 工具论文；Manta 仓库已归档 |
 | P004 | 功能注释 | Ensembl VEP | 2016 | [10.1186/s13059-016-0974-4](https://doi.org/10.1186/s13059-016-0974-4) | 变异效应预测≠临床致病 |
-| P005 | Y 父系 | Yleaf | 2018 | [10.1093/molbev/msy080](https://doi.org/10.1093/molbev/msy080) | 单倍群分类方法 |
+| P005 | Y 父系 | Yleaf 原始研究（Ralf et al. 2018） | 2018 | [10.1093/molbev/msy032](https://doi.org/10.1093/molbev/msy032) | **原文 DOI 已纠正**；旧 DOI 10.1093/molbev/msy080 是原文的 2018 勘误（Erratum），不可单独当算法论文。Y NRY 高质量数据+公开树做 haplogroup 分类，不能凭此找具体祖先 |
 | P006 | Y 父系 | Y-LineageTracker | 2021 | [10.1186/s12859-021-04057-z](https://doi.org/10.1186/s12859-021-04057-z) | Y SNP/STR 和时间方法分开 |
 | P007 | mtDNA | Haplogrep 3 | 2023 | [10.1093/nar/gkad284](https://doi.org/10.1093/nar/gkad284) | 单一母系谱系 |
 | P008 | 常染色体亲缘 | hap-IBD | 2020 | [10.1016/j.ajhg.2020.02.010](https://doi.org/10.1016/j.ajhg.2020.02.010) | 需要两个以上样本的相位基因型 |
