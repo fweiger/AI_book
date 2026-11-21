@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.1.0",
+  "topic_version": "0.1.1",
   "topic_id": "TOPIC-017",
   "title": "个人全基因组 WGS：开源工具、研究方向与可验证证据",
   "source_level": "GitHub 仓库元数据/论文摘要/权威机构入口；实测 NOT_RUN",
