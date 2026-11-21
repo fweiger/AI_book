@@ -2,7 +2,7 @@
 
 > **核心逻辑：先审 WGS 能力，再审学术研究的输入条件及可达到的解释深度，最后匹配可复用的 GitHub 项目。** 父系 Y 只是研究域 D03，不是全专题总主线。
 >
-> **收录口径（2026-11-21）：15 个研究域、25 篇已登记的具体论文/指南/综述、34 个已核 GitHub 项目。** 本表中各方向的论文/工具数量是**当前登记且有关联的条目数**，不是全球全部论文/项目；同一篇论文和项目可跨域复用，不能把各行数字相加。论文原始题录见 [P-ID 注册表](paper-register.md)，项目详情见 [32 个 GitHub 目录](open-source-projects.md)。论文中使用芯片、古 DNA、人群统计或临床数据的结果**不能因消费者拥有一份 40× WGS 就自动复现**。
+> **收录口径（2026-11-21）：15 个研究域、36 篇已登记的具体论文/指南/综述、39 个已核存在 GitHub 源码仓库（**不全具标准开源许可证**）。** 本表中各方向的论文/工具数量是**当前登记且有关联的条目数**，不是全球全部论文/项目；同一篇论文和项目可跨域复用，不能把各行数字相加。论文原始题录见 [P-ID 注册表](paper-register.md)，项目详情见 [39 个 GitHub 源码候选及许可目录](open-source-projects.md)。论文中使用芯片、古 DNA、人群统计或临床数据的结果**不能因消费者拥有一份 40× WGS 就自动复现**。
 
 ## A. WGS 数据质量准入层
 
@@ -26,13 +26,13 @@
 | ID / 研究维度 | 本项目已收录论文 | 已关联 GitHub（其中专项） | 数据合格时能研究到哪一步 | 继续深入必需资料 |
 |---|---:|---:|---|---|
 | **D01 原始 WGS/小变异与 QC** | 2 | 12（约 7） | 标准 SNV/Indel 调用、技术真值 benchmark | GIAB、匹配参考、有效深度 |
-| **D02 SV/CNV/STR** | 2 | 7（4） | 结构变异与部分重复区候选 | 复杂区真值/长读长 |
+| **D02 SV/CNV/STR** | 5 | 8（4+1 个 SV 比较工具） | 部分 DEL/INS/CNV/STR 候选；Truvari 可评价但不是 caller | 按 SV class 的真值/复杂区/长读长，许可限制 |
 | **D03 父系 Y** | 2 | 5（3） | 单倍群、末端分支、private SNP 候选 | 多个父系样本/校准/家谱 |
-| **D04 母系 mtDNA** | 1 | 3（1） | 线粒体单倍群 | mtDNA QC、母系对照 |
+| **D04 母系 mtDNA** | 5 | 5（3 个 mtDNA 专项） | 单倍群 + 同质/异质变异候选；NUMTs/污染要过滤 | mtDNA 实际深度、独立 caller、靶向验证 |
 | **D05 常染色体 IBD/亲缘** | 1 | 3（1） | 共享 DNA 片段与亲缘统计 | 至少两位授权样本/相位 |
 | **D06 古 DNA/群体与迁徙** | 3 | 5（3） | 古今群体模型、IBD 与祖源假说 | AADR、时空样本与竞争模型 |
 | **D07 罕见病/致病变异** | 4 | 5（2） | 功能注释及候选致病排序 | ClinVar/ACMG、表型和确证 |
-| **D08 隐性遗传病携带/生殖风险** | 3 | 3（2） | 已知隐性病携带候选 | 伴侣检测/遗传咨询/补检 |
+| **D08 隐性遗传病携带/生殖风险** | 7 | 5（含 2 个有使用限制的专项候选） | 候选致病变异及部分复杂假基因位点；阴性无法排除携带 | ACMG 2021/2024、残余风险、正交验证、配偶筛查 |
 | **D09 药物基因组学** | 3 | 4（2） | 部分代谢基因型和用药指南关联 | 复杂基因分型、药史/临床 |
 | **D10 复杂疾病 PRS** | 5 | 5（4） | 应用外部模型计算个人分数 | 祖源匹配、独立队列校准 |
 | **D11 睡眠/晨晚型** | 2 | 3（0 个已验证睡眠专项） | 统计性晨晚倾向，非精确作息预测 | 有效 PGS、睡眠日志 |
@@ -46,13 +46,13 @@
 | 维度 | 已验证题录的原始来源（P-ID，见注册表） | 对应现有 GitHub 工具（项目名称） | 不能越过的科学界限 |
 |---|---|---|---|
 | D01 | P001 Sarek；P002 DRAGEN | nf-core/sarek、fastp、FastQC、MultiQC、BWA-MEM2、samtools、bcftools、mosdepth、DeepVariant、GATK、hap.py、dna-seq-benchmark | 需要 GIAB 真值；DRAGEN 是技术比较基准，**不算在 32 个开放项目中** |
-| D02 | P002 DRAGEN；P003 Manta | samtools、bcftools、GATK、Manta、DELLY、CNVkit、ExpansionHunter | Manta 仓库已归档；短读长重复区受限 |
+| D02 | P002 DRAGEN；P003 Manta；**P026 GIAB SV、P027 Truvari、P028 ExpansionHunter** | samtools、bcftools、GATK、Manta、DELLY、CNVkit、ExpansionHunter（**PolyForm Strict**）、**Truvari（MIT；SV 比对而非 caller）** | GIAB 主要验证 ≥50 bp DEL/INS，不含全部 SV；重复扩增与复杂区受限，且部分源码限制修改/分发 |
 | D03 | P005 Yleaf；P006 Y-LineageTracker | samtools、bcftools、Yleaf、Y-LineageTracker、yhaplo | 分支树不证明具体历史人物 |
-| D04 | P007 Haplogrep 3 | samtools、bcftools、Haplogrep3 | 仅直接母系；非全部母系族谱 |
+| D04 | P007 Haplogrep 3；**P029 MToolBox、P030 gnomAD mtDNA、P031 WGS vs targeted、P032 mtDNA callers benchmark** | samtools、bcftools、Haplogrep3、**MToolBox（GPL-3.0）、Mutserve（MIT）** | 需单独核查 mtDNA depth、NUMTs、污染和 heteroplasmy CI；Mutserve VCF 不含 indels；母系 haplogroup 不是疾病诊断 |
 | D05 | P008 hap-IBD | bcftools、hap-IBD、PLINK2 | 单人不能判断未知第二人 IBD |
 | D06 | P009 ancIBD；P010 qpAdm；P011 2025 迁徙综述 | nf-core/eager、ancIBD、ADMIXTOOLS2、hap-IBD、PLINK2 | 需要参照群体；遗传相似不等于个体迁徙 |
 | D07 | P004 VEP；P012 ACMG；P013 ACMG SF；P021 Exomiser | bcftools、DeepVariant、GATK、VEP、Exomiser | 变异注释不是诊断 |
-| D08 | P012 ACMG；P013 ACMG SF；P021 Exomiser | bcftools、VEP、Exomiser | 检测阴性仍可能有残余风险 |
+| D08 | P012 ACMG；P013 ACMG SF；P021 Exomiser；**P033 ACMG Carrier 2021、P034 ACMG Lab 2024、P035 InterVar、P036 Gauchian 2025 反证** | bcftools、VEP、Exomiser、**InterVar（非商用免费、需另授权）、Gauchian（PolyForm Strict）** | 隐性病必须逐基因报告检测范围、残余风险与复杂区域；Gauchian 独立研究有漏检证据；阴性不等于零风险 |
 | D09 | P014 PharmCAT；P015 PharmCAT 临床支持；**P024 StellarPGx** | bcftools、VEP、PharmCAT、**StellarPGx（WGS BAM/CRAM）** | CYP2D6 SV/CNV 不能仅从 PharmCAT 普通 VCF 研究模式直接可靠分型；先专项 caller，再解释；不得自行改药 |
 | D10 | P016 PRS-CSx；P017 跨人群；P018 eMERGE；P022 All of Us 2026；**P025 PGS Catalog Calculator** | PLINK2、PRS-CS、PRS-CSx、bigsnpr、pgsc_calc | **pgsc_calc 不原生支持普通 WGS variants-only VCF**，需要正确补全参考位点/符合官方数据准备；一人可在适配后计算，不能训练或校准预测准确率 |
 | D11 | P019 697828 人昼夜节律 GWAS；P017 PRS 外推综述 | PLINK2、bigsnpr、pgsc_calc | 目前三个都是通用评分底座，不是临床验证睡眠处方器 |
@@ -69,7 +69,17 @@
 1. `pgsc_calc` 的官方 README 显示 **WGS 的 variants-only VCF 不是原生合格输入**，需要依官方方法准备完整基因型（涵盖纯合参考位点并核验匹配率），不是通常所说“给一个 VCF 就能算 PRS”。
 2. CYP2D6 的可靠分型涉及 SV/CNV，保留 BAM/CRAM 使 StellarPGx 等专项工具有用；PharmCAT VCF-only CYP2D6 模式属研究尝试，不能供临床决策。HLA-I 有真实专项 OptiType 软件及论文，HLA-II 能力待补。
 
-## E. 用 4 个实例检验这套框架是否真正成立
+## E. G5 横向证据核查（D02/D04/D08）
+
+详见 [G5 SV/STR、母系 mtDNA、隐性携带者原始论文×开源代码×许可证审计](cross-domain-evidence-audit-g5.md)：
+
+- **D02**：NIST/GIAB 19 种方法整合的 12,745 个 ≥50 bp 高可信插入缺失，不是全人类全部 SV；Truvari 是 SV VCF 比对工具而非检测器；ExpansionHunter 实际为 **PolyForm Strict** 许可，不应直接作为可自由迭代商业开源底座。
+- **D04**：MToolBox/Mutserve 对原始 WGS BAM/CRAM 有互补价值；56,434 人 gnomAD 研究表明 mtDNA NUMTs、污染、覆盖率和低异质性误报需要特别处理。
+- **D08**：2021/2024 ACMG 指南明确 WGS 的阴性残余风险和复杂病原位点补检；InterVar 仅非商业使用免费，Gauchian 不允许自由修改/分发，且独立 2025 研究有漏检反证。
+
+**许可分类重大修订**：GitHub 仓库存在性目前 39/39，但其中至少 T16/T39（PolyForm Strict）及 T38（非商用免费/需额外授权）不是可自由商用/再分发的普通开源许可证。因此“39 个可直接复用开源项目”这一表述不成立，所有候选必须先以 LICENSE 审计分组。真实程序运行仍 NOT_RUN。
+
+## F. 用 4 个实例检验这套框架是否真正成立
 
 **疾病**：高质量 SNV/Indel → [VEP 原文 P004](paper-register.md) 变异效应注释 → [ACMG P012](paper-register.md) 证据分级 → Exomiser 提出候选疾病基因 → 还需表型与临床确证。不是 `VCF → AI → 确诊`。
 
@@ -79,12 +89,12 @@
 
 **营养的反证**：[2018 DIETFITS 随机试验](https://doi.org/10.1001/jama.2018.0245) 609 名参与者的预设基因型模式**未显著改变**低脂/低碳饮食减重结果。不能只找支持营销报告的正向论文，负结果也应进入证据矩阵。
 
-## F. 最小数据模型与后续复现策略
+## G. 最小数据模型与后续复现策略
 
 对每个实际研究问题保留这几个字段即可，无须额外开发项目管理系统：
 
 `domain_id | question_id | gate_id | data_type/build/coverage | P-ID/DOI | paper_study_type/N/ancestry | required_reference_data | tools_and_commits | input/output | validation_method | evidence_grade | negative_evidence | claim_limit`
 
-**不是**做 15×32 个任务笛卡尔积。只有真实论文、开源 README、代码支持某个用途时才建立关联；允许零项目、零论文，后续补齐。最优先补的是各个维度的**论文条件和可研究深度**，再为已经成立的研究问题复用工具。
+**不是**做 15×39 个任务笛卡尔积。只有真实论文、开源 README、代码支持某个用途时才建立关联；允许零项目、零论文，后续补齐。最优先补的是各个维度的**论文条件和可研究深度**，再为已经成立的研究问题复用工具。
 
 已存在的 [HG002 技术基准](benchmark-hg002.md) 仍然有效，但它只验证 D01 的 chr20 小变异，不应因这一条实验阻断而把全部其他维度停下来。下一轮应按 D01–D15 的覆盖缺口，优先挑选代表性高证据论文与开源实现做跨领域核验，保证研究不偏向父系单个子题。
