@@ -26,9 +26,9 @@
 | AC | 验收 | 验证方法 | 当前 | 证据 |
 |---|---|---|---|---|
 | AC-01 | 唯一 TOPIC-017 Issue 入口且合理查重 | GitHub 查询并回读 | PASS | [#72](https://github.com/fweiger/AI_book/issues/72) |
-| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项不同源码候选存在性 PASS；G10 复核代表工具 GitHub README/实际输入与部分既有许可；G11 四款源码许可证与输入已核，其余未全量审计，部分并非 OSI 开源） | [G10 方法×源码输入审计](cross-domain-method-evidence-audit-g10.md) · [39 项代码目录](open-source-projects.md) |
+| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项不同源码候选存在性 PASS；G10 复核代表工具 GitHub README/实际输入与部分既有许可；G11 四款源码许可证与输入已核；G12 Haplogrep3 v3.3.2 官方 H100 VCF CLI 功能回归与 expected 输出逐字节匹配 PASS；其余工具/许可证仍未全量审计） | [G10 方法×源码输入审计](cross-domain-method-evidence-audit-g10.md) · [39 项代码目录](open-source-projects.md) |
 | AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（47 个 DOI/指南已登记；G10 从中为 15 域各抽 1 篇一手方法/摘要/部分正文并核正 P005 原文 DOI；完整 47 篇全文/附录仍未系统审计） | [G10 15 域方法核查](cross-domain-method-evidence-audit-g10.md) · [论文注册表](paper-register.md) |
-| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（G10 已为 15/15 域建立代表一手 DOI×assay×外部队列×WGS 数据质量×GitHub 输入×科学结论边界；G11 四域 E0 输入已核；各域实际效果仅 D01 G9 1Mb E2） | [G10 全域代表方法审计](cross-domain-method-evidence-audit-g10.md) · [主矩阵](evidence-capability-matrix.md) |
+| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（G10 已为 15/15 域建立代表一手 DOI×assay×外部队列×WGS 数据质量×GitHub 输入×科学结论边界；G11 四域 E0 输入已核；G12 D04 VCF→haplogroup CLI 功能回归 PASS，但独立准确率 E2 NOT_RUN；各域独立基准仍仅 D01 G9 1Mb E2） | [G10 全域代表方法审计](cross-domain-method-evidence-audit-g10.md) · [主矩阵](evidence-capability-matrix.md) |
 | AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | **PASS（范围受限）：**真实 HG002 chr20 1Mb bcftools1.19/RTG3.13 独立 GIAB v4.2.1 BED 指标和二次运行日志、变异记录/摘要哈希一致；原 DeepVariant/hap.py 单独方案仍 NOT_RUN | [G9 原始结果与复现](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) · [G9 实际可运行源码](scripts/run-hg002-chr20-bcftools-rtg.sh) |
 | AC-06 | 专题分支、唯一 Tracker、审核 PR 和回链 | GitHub 文件、PR、INDEX、CI 校验 | PARTIAL（Draft PR #73/结构 CI PASS，尚待审核合并） | [PR #73](https://github.com/fweiger/AI_book/pull/73) |
 
@@ -42,7 +42,7 @@
 |---|---|---|---|---|---|
 | S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[47 个 P-ID](paper-register.md)、[G10 15 域方法对应](cross-domain-method-evidence-audit-g10.md) | PARTIAL（15/15 代表方法 E1 对齐 PASS；剩余 32 篇全文/数据库及各域实际执行待审） | 需完成更深一手论文和实际软件的输入兼容性核验 |
 | S2 | HG002 公开数据准入 → 最小 chr20 SNP/Indel E2 | 02/05 | [G8 官方数据/哈希](sessions/2026-11-21-hg002-public-data-admission-g8.md)、[G9 实测和二次复现](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) | **PASS（仅 G9 chr20 1Mb bcftools/RTG）**，原 DeepVariant/hap.py 未测试 | 与其他 14 研究域的结论真实性独立，下一步恢复论文×源码全域研究 |
-| S3 | 15 域论文×WGS 输入×代码/研究结论及许可证可靠性 | 02–04 | [主矩阵](evidence-capability-matrix.md)、[G10 逐域一手方法](cross-domain-method-evidence-audit-g10.md) | PARTIAL（G10 15/15 域代表论文/源码方法输入已核；G11 四工具 E0 合同已核；其余论文、许可证与 E2 尚待审） | 以 D04 官方公开 VCF 例样本做一次有界功能复现 |
+| S3 | 15 域论文×WGS 输入×代码/研究结论及许可证可靠性 | 02–04 | [主矩阵](evidence-capability-matrix.md)、[G10 逐域一手方法](cross-domain-method-evidence-audit-g10.md) | PARTIAL（G10 15/15 域代表论文/源码方法输入已核；G11 四工具 E0 合同已核；G12 D04 Haplogrep3 v3.3.2 官方 H100 CLI 功能回归 PASS，独立准确率 E2 NOT_RUN；其余论文、许可证与 E2 尚待审） | 评估并有界复现 D04 上游 Mutserve v2.0.3 官方 CRAM 回归输入；若缺少索引且不能在临时目录解决则停止，不做系统安装 |
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
 
 ## 4. 当前检查点
@@ -53,12 +53,13 @@
 - **现有阻断与目标状态**：不处理个人 DNA；没有对 47 篇全文/39 仓库全部依赖/许可证做系统性审计，不假报“全球全部工具或论文”。D0 ALIGNED、与原 Issue Goal/Scope/AC CONSISTENT；G10 唯一进度事件 [#7064791856](https://github.com/fweiger/AI_book/issues/72#issuecomment-7064791856) 已回读并同步。
 
 - **G11 真实新增**：[D03/D04/D09/D10 四领域 WGS 输入合同](four-domain-wgs-input-contract-g11.md) 已在同一 PR 提交。Yleaf、Haplogrep3、StellarPGx、pgsc_calc 四款工具实际 README/源码/许可证/公开测试入口已查；E0 4/4 PASS，E1 论文已初审但方法深度 PARTIAL，E2 0/4 NOT_RUN。发现 StellarPGx README SIM001 与当前 test.config HG03130 不同，不能直接当单一复现实验。未新增论文/工具/个人基因数据。
+- **G12 真实新增**：[Haplogrep3 v3.3.2 H100 官方 VCF CLI 复现](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md)：31.5 Ubuntu/Java21，固定 release SHA、H100.vcf、PhyloTree FU rCRS 1.3 package digest；CLI exit=0，主输出与 QC 输出均与同 tag expected **逐字节一致**。标准 rCRS 17.0 与 FU rCRS 1.3 的 Quality 分别 0.8351/0.8356，已定位树版本影响。该 fixture 仅 14 条已调用 MT 变异，不含 read depth；QC 0.84 低于 0.9 阈值；官方 expected 不是独立真值，故 CLI 功能 PASS、独立准确率 E2 NOT_RUN。
 
 ## 5. 阻断与未受影响工作
 | 问题 | 影响范围 | 对应 AC | 继续可以推进的部分 | 状态 |
 |---|---|---|---|---|
 | 既有 47 项中剩余 32 项未逐篇全文系统审计、实际医学/统计外推边界不统一 | AC-03/04 的全面证据完整性 | 03/04 | 15 域代表方法已有，可优先审最影响决策的负证据和缺口 | PARTIAL |
-| 39 个现有 GitHub 软件许可证/复杂输入及跨祖源模型仍未完成全量运行/审查 | 软件可复用性与输入质量 | 02/04 | 已完成 D03/D04/D09/D10 四工具输入与许可证静态核验；可尝试 D04 公开示例真实运行 | PARTIAL |
+| 39 个现有 GitHub 软件许可证/复杂输入及跨祖源模型仍未完成全量运行/审查 | 软件可复用性与输入质量 | 02/04 | G12 已完成 D04 VCF→haplogroup 功能回归；下一缺口为上游 BAM/CRAM→VCF caller，拟有界核验 Mutserve v2.0.3 公共 CRAM 测试；其余 35 项工具与独立 accuracy 仍待审 | PARTIAL |
 | Docker DeepVariant/hap.py 固定早期路径仍未完整 | 仅其指定的额外对照实验 | 05 部分额外研究 | G9 原生 bcftools/RTG 最小 E2 已 PASS | 局部 NOT_RUN，非本轮研究阻断 |
 | 用户私人商业 WGS 文件不在本项目 Scope 中 | 个人质量/医疗/亲缘实测 | Non-goals | 公开标准、数据准入与学术方法 | 不请求/不公开 |
 
@@ -72,12 +73,14 @@
 | **2026-11-21/G10** | G9 E2 后回归 15 域代表方法审计 | 逐域核 15 篇一手论文真实 assay、祖源/队列、单人 WGS 输入、GitHub 兼容性与外推边界；P005 原文/勘误 DOI 修正 | [G10 报告](cross-domain-method-evidence-audit-g10.md)、[日志](sessions/2026-11-21-15domain-primary-methods-audit-g10.md) | 02/03/04 PARTIAL（方法结构 15/15 PASS） | 否 |
 
 | **2026-11-22/G11** | G10 四个代表方向静态数据合同 | Yleaf/Haplogrep3/StellarPGx/pgsc_calc 实际输入/参考/许可/测试核验；澄清官方测试不等于独立准确率，Stellar 文档/配置不一致 | [G11 四域合同](four-domain-wgs-input-contract-g11.md) | 02/03/04 PARTIAL（四工具 E0 PASS，E2 NOT_RUN） | 否 |
+| **2026-11-22/G12** | D04 Haplogrep3 官方 VCF 分类功能复现 | v3.3.2 + H100 VCF + phylotree-fu-rcrs@1.3；主输出与 QC 均与官方 expected SHA256 完全一致；标准 rCRS17.0 与 FU1.3 的质量分数不同，确认树版本敏感；独立准确率未验证 | [G12 CLI 功能复现日志](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md) | AC-02/04 PARTIAL；功能回归 PASS；准确率 E2 NOT_RUN | 否 |
 
 ## 7. 下一步
-- **唯一优先动作**：选择已在 [G11](four-domain-wgs-input-contract-g11.md) 静态验收的 **D04 Haplogrep3 官方公开 VCF 示例**，做一次有界、版本固定的本地 CLI 功能复现：核对实际样本、树版本/参考、变异范围、haplogroup top hit、分类 quality/warnings、完整运行命令与输出哈希。若样本缺独立真值，只报告执行功能，不冒充 mtDNA caller precision 或临床效力。
-- **优先理由/验收**：G11 已完成四种源码输入 E0 合同，最大剩余证据缺口是能否从合法公开输入真实产生可回读研究结果。D04 测试规模小，不需个人 DNA、下载全 WGS 或搭建平台。成功留 E2 执行日志；失败有界报告并返回未阻断的研究主线。
-- **关联 AC**：AC-02/03/04 PARTIAL，AC-05 仅 G9 D01 小范围 E2 PASS，AC-06 Draft PR #73 仍未合并；剩余 11 个 D 域、32 篇未全审论文、其余源码都保留主目标。
-- **限制**：不以测试样本替代独立准确率 benchmark；不变更原 Goal/Scope/AC/协议；不使用私人序列或新平台。
+- **唯一优先动作（G13）**：对 D04 上游 **Mutserve v2.0.3** 做一次有界官方公开 CRAM 功能回归：固定 GitHub release/tag，使用官方 `test.cram` / `test1.cram`、rCRS reference 和同版本 `test-data/mtdna/cram/output/variants.txt` / `variants.vcf`，先验证文件哈希和输入索引条件，再运行 `mutserve call` 并比较输出。不得将同仓库 expected 文件称为独立准确率真值。
+- **为什么选它**：G12 已验证 Haplogrep3 的 VCF→haplogroup/QC 阶段；真正缺口是上游从 read-level mtDNA CRAM/BAM 产生变异。Mutserve 官方仓库已提供公开 CRAM 和同仓库 expected 结果，适合用一个小范围测试确认实际输入和输出。该动作推进 AC-02/04，不再重复安装/扩展 Haplogrep 平台。
+- **边界与停止条件**：Mutserve README 明确其 VCF 输出**不包含 indels**，主要覆盖 SNV/异质位点；本轮只能验 SNV/heteroplasmy 功能，不能宣称 mtDNA 全变异类型完成。README 要求 sorted/indexed CRAM/BAM，而仓库 CRAM 输入目录未见 CRAI、31.5 当前 PATH 未发现 samtools；若必须建索引且无法在临时目录使用已存在的独立工具完成，则报告 BLOCKED，不做系统级安装、不搭平台。
+- **跨域防止目标锁定**：G11/G12 已分别推进四域静态输入和 D04 下游功能；G13 仅允许这一项上游依赖验证。完成或受阻后重新比较 D09 StellarPGx（有公开 HG03130/SIM001 BAM 和 reference）、D10 PGS WGS 兼容性及其余 11 域/32 篇论文，避免连续把研究范围锁在 D04。
+- **关联 AC**：AC-02/03/04 PARTIAL；AC-05 仅 G9 D01 HG002 chr20 1Mb 独立 GIAB E2 PASS；AC-06 Draft PR #73 未合并。原 Goal/Scope/Non-goals/AC 不变。
 
 ## 8. 每轮恢复核对
 - [ ] 用锁定 `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` 获取 Task Center V1.2.2 入口与续接协议，核对 Sticky Assignment；不自动改协议。
@@ -106,18 +109,21 @@
 
 | 2026-11-22/G11 | 四个代表 GitHub 工具文件级输入合同和真实 LICENSE/测试入口；4/4 E0 PASS、E2 0/4 NOT_RUN | AC-02/03/04 PARTIAL | [G11 四领域合同](four-domain-wgs-input-contract-g11.md) | D0 ALIGNED/CONSISTENT；G11 Writer 待同步 | D04 官方公开 VCF 有界 CLI 功能复现 |
 
+| 2026-11-22/G12 | D04 Haplogrep3 v3.3.2 官方 H100 VCF CLI 功能回归；固定 FU rCRS 1.3 后主输出/QC 与官方 expected 逐字节匹配；树版本改变质量分数；独立准确率 E2 NOT_RUN | AC-02/04 PARTIAL（功能回归 PASS） | [G12 运行日志](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md) | D0 ALIGNED/CONSISTENT，G12 事件待同步 | D04 上游 Mutserve v2.0.3 官方 CRAM 有界功能回归 |
+
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：none（G11 `AI_book#72:AC02-03-04:20261122-g11-four-domain-input-contract` 已完成）
-- **当前 writer_owner**：none（G11 Writer `chatgpt-topic017-g11-20261122` 已完成）
-- **当前 write_state**：`SYNCED`（[G11 唯一事件 #7068596093](https://github.com/fweiger/AI_book/issues/72#issuecomment-7068596093) GET 回读，同 `event_key` 仅 1 条；发布时 Tracker blob SHA `b95a568d230adf17093b0fafc3845901def75939`）
-- **单 Writer 交接**：本次有效 Writer 发布后主动清理；此前 G10 已同步并清理。无待处理 CLAIMED。
-- **证据路径**：[G11 4 域合同](four-domain-wgs-input-contract-g11.md)；源文件 SHA/许可证/公开测试入口均记录在报告中；GitHub 运行状态不是工具实际 E2。
+- **当前 active_event_key**：`AI_book#72:AC02-03-04:20261122-g12-haplogrep3-h100-cli-functional`
+- **当前 writer_owner**：`chatgpt-topic017-g12-20261122`
+- **当前 write_state**：`CLAIMED`（G12 报告已提交，Tracker 声明待发布唯一 Issue 事件并回读）
+- **Tracker 写前 blob SHA**：`b4a183e51bfbf5af5567dadc6b7c651e6953602e`；**PR head 写前**：`8cee164c166c6aa892836dd4afb7d12371a4a631`；G12 报告 commit：`8cee164c166c6aa892836dd4afb7d12371a4a631`。
+- **旧 Writer**：G11 已完成并清理；本轮写前 GET 为 none/SYNCED，无未决 CLAIMED。
+- **研究状态**：D0 ALIGNED；原 Issue Goal/Scope/Non-goals/AC 和 requirements_revision=1 未变；G12 CLI 功能 PASS 不升级独立准确率 E2。
 
 | 检查项 | 当前值 | 证据 | 结果 |
 |---|---|---|---|
-| 原 Issue Goal/Scope/AC / 协议 | #72 的 requirements_revision=1 和锁定 `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` 不变 | GET 原 Issue + 锁定 ENTRY | CONSISTENT |
-| G11 交付与真实测试 | D03/D04/D09/D10 四工具 E0 4/4 PASS；E1 论文方法 PARTIAL；四项 E2 均 NOT_RUN；G9 独立限定不变 | [G11](four-domain-wgs-input-contract-g11.md)、[G9](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) | PARTIAL（无新增 E2） |
-| 当前唯一下一步 | §7 D04 官方 VCF CLI 有界验证，§9 仅历史 | §7 / §9 | D0 ALIGNED |
-| G11 Tracker 与 Issue | G11 稳定 key 唯一 #7068596093，声明 Writer 与发布评论一致，最终清理 | [#7068596093](https://github.com/fweiger/AI_book/issues/72#issuecomment-7068596093) + 最新 Tracker | SYNCED |
+| 原 Issue/Goal/AC/协议 | #72 requirements_revision=1；锁定 V1.2.2 commit `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` | GET Issue + 锁定 ENTRY/CONTINUE | CONSISTENT |
+| G12 真实增量 | Haplogrep3 v3.3.2 H100 官方 VCF CLI exit=0；main/QC 输出逐字节匹配 expected；tree digest 已核；独立 accuracy E2 NOT_RUN | [G12 报告](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md) | FUNCTIONAL PASS / E2 NOT_RUN |
+| 当前唯一下一步 | §7 Mutserve v2.0.3 官方 CRAM 功能回归，有索引停止条件；完成后回到跨域优先级 | §7 / §9 | D0 ALIGNED |
+| G12 Issue 同步 | 新 event_key 声明，评论待发布/回读 | 本次 CAS claim | ISSUE_SYNC_PENDING |
 
-> PR #73 仍为 Draft，未合并；结构 CI 若运行成功仅证明知识库结构，不等于四个 WGS 工具 E2。
+> 未完成 Issue 唯一事件回读和 Tracker 清理前，不称本轮 SYNCED。
