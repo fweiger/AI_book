@@ -50,7 +50,7 @@ fetch_one() {
   local url="$1" dest="$2"
   if [[ -s "$dest" ]]; then printf 'EXISTS %s\n' "$dest"; return 0; fi
   printf 'FETCH %s\n' "$url"
-  curl --fail --location --retry 3 --retry-delay 3 --connect-timeout 30 --output "${dest}.part" "$url"
+  curl --fail --location --retry 3 --retry-delay 3 --connect-timeout 30 --continue-at - --output "${dest}.part" "$url"
   [[ -s "${dest}.part" ]] || { echo "ERROR: empty download: $dest" >&2; exit 3; }
   mv "${dest}.part" "$dest"
 }
