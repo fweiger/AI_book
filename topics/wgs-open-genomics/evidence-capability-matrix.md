@@ -2,7 +2,7 @@
 
 > **核心逻辑：先审 WGS 能力，再审学术研究的输入条件及可达到的解释深度，最后匹配可复用的 GitHub 项目。** 父系 Y 只是研究域 D03，不是全专题总主线。
 >
-> **收录口径（2026-11-21）：15 个研究域、22 篇已登记的具体论文/指南/综述、32 个已核 GitHub 项目。** 本表中各方向的论文/工具数量是**当前登记且有关联的条目数**，不是全球全部论文/项目；同一篇论文和项目可跨域复用，不能把各行数字相加。论文原始题录见 [P-ID 注册表](paper-register.md)，项目详情见 [32 个 GitHub 目录](open-source-projects.md)。论文中使用芯片、古 DNA、人群统计或临床数据的结果**不能因消费者拥有一份 40× WGS 就自动复现**。
+> **收录口径（2026-11-21）：15 个研究域、25 篇已登记的具体论文/指南/综述、34 个已核 GitHub 项目。** 本表中各方向的论文/工具数量是**当前登记且有关联的条目数**，不是全球全部论文/项目；同一篇论文和项目可跨域复用，不能把各行数字相加。论文原始题录见 [P-ID 注册表](paper-register.md)，项目详情见 [32 个 GitHub 目录](open-source-projects.md)。论文中使用芯片、古 DNA、人群统计或临床数据的结果**不能因消费者拥有一份 40× WGS 就自动复现**。
 
 ## A. WGS 数据质量准入层
 
@@ -33,12 +33,12 @@
 | **D06 古 DNA/群体与迁徙** | 3 | 5（3） | 古今群体模型、IBD 与祖源假说 | AADR、时空样本与竞争模型 |
 | **D07 罕见病/致病变异** | 4 | 5（2） | 功能注释及候选致病排序 | ClinVar/ACMG、表型和确证 |
 | **D08 隐性遗传病携带/生殖风险** | 3 | 3（2） | 已知隐性病携带候选 | 伴侣检测/遗传咨询/补检 |
-| **D09 药物基因组学** | 2 | 3（1） | 部分代谢基因型和用药指南关联 | 复杂基因分型、药史/临床 |
-| **D10 复杂疾病 PRS** | 4 | 5（4） | 应用外部模型计算个人分数 | 祖源匹配、独立队列校准 |
+| **D09 药物基因组学** | 3 | 4（2） | 部分代谢基因型和用药指南关联 | 复杂基因分型、药史/临床 |
+| **D10 复杂疾病 PRS** | 5 | 5（4） | 应用外部模型计算个人分数 | 祖源匹配、独立队列校准 |
 | **D11 睡眠/晨晚型** | 2 | 3（0 个已验证睡眠专项） | 统计性晨晚倾向，非精确作息预测 | 有效 PGS、睡眠日志 |
 | **D12 营养/饮食/代谢** | 2 | 3（0 个已验证饮食处方专项） | 部分代谢位点及群体关联 | 表型与随机对照试验 |
 | **D13 运动/体质等复杂性状** | 2 | 3（0 个已验证运动处方专项） | 有条件的已有 PGS 倾向评分 | 长期表型和群体验证 |
-| **D14 HLA/免疫复杂基因区** | 0 | 2（0 个专项） | 目前仅可做通用位点 QC | 专项 HLA caller、论文与真值 |
+| **D14 HLA/免疫复杂基因区** | 1 | 3（1 个 HLA-I 专项） | OptiType 可进行 HLA-I 候选分型；HLA-II 仍缺专项证明 | HLA 区域质量、临床真值；HLA-II 需另找工具/论文 |
 | **D15 甲基化/转录组/微生物组** | 0 | 0 | **普通短读长 WGS 无直接测量能力** | 必须增加其他检测技术 |
 
 ## C. 论文 → 工具 → 可研究程度：首轮真实对应
@@ -53,15 +53,23 @@
 | D06 | P009 ancIBD；P010 qpAdm；P011 2025 迁徙综述 | nf-core/eager、ancIBD、ADMIXTOOLS2、hap-IBD、PLINK2 | 需要参照群体；遗传相似不等于个体迁徙 |
 | D07 | P004 VEP；P012 ACMG；P013 ACMG SF；P021 Exomiser | bcftools、DeepVariant、GATK、VEP、Exomiser | 变异注释不是诊断 |
 | D08 | P012 ACMG；P013 ACMG SF；P021 Exomiser | bcftools、VEP、Exomiser | 检测阴性仍可能有残余风险 |
-| D09 | P014 PharmCAT；P015 PharmCAT 临床支持 | bcftools、VEP、PharmCAT | 不自行改药，复杂 star alleles 需确认 |
-| D10 | P016 PRS-CSx；P017 跨人群；P018 eMERGE；P022 All of Us 2026 | PLINK2、PRS-CS、PRS-CSx、bigsnpr、pgsc_calc | 一人可计算但不能训练或校准预测准确率 |
+| D09 | P014 PharmCAT；P015 PharmCAT 临床支持；**P024 StellarPGx** | bcftools、VEP、PharmCAT、**StellarPGx（WGS BAM/CRAM）** | CYP2D6 SV/CNV 不能仅从 PharmCAT 普通 VCF 研究模式直接可靠分型；先专项 caller，再解释；不得自行改药 |
+| D10 | P016 PRS-CSx；P017 跨人群；P018 eMERGE；P022 All of Us 2026；**P025 PGS Catalog Calculator** | PLINK2、PRS-CS、PRS-CSx、bigsnpr、pgsc_calc | **pgsc_calc 不原生支持普通 WGS variants-only VCF**，需要正确补全参考位点/符合官方数据准备；一人可在适配后计算，不能训练或校准预测准确率 |
 | D11 | P019 697828 人昼夜节律 GWAS；P017 PRS 外推综述 | PLINK2、bigsnpr、pgsc_calc | 目前三个都是通用评分底座，不是临床验证睡眠处方器 |
 | D12 | P020 DIETFITS 随机试验；P017 PRS 综述 | PLINK2、bigsnpr、pgsc_calc | **DIETFITS 未支持预设基因型能挑选较优减重饮食**，必须收录阴性证据 |
 | D13 | P017 PRS 综述；P022 All of Us 2026 | PLINK2、bigsnpr、pgsc_calc | 多基因评分不决定个人运动天赋或训练计划 |
-| D14 | **专项论文缺口：0** | samtools、bcftools（仅通用底座） | 暂不以通用工具充当 HLA 分型 |
+| D14 | **P023 OptiType（HLA-I）** | samtools、bcftools、**OptiType** | 已找到 HLA-I 的直接 WGS 方法与代码；**不覆盖 HLA-II 或真实临床确证** |
 | D15 | **直接测量证据缺口：0** | **普通 WGS 本身不够** | 不伪造甲基化/表达或微生物测量 |
 
-## D. 用 4 个实例检验这套框架是否真正成立
+## D. 新增一手证据核查（2026-11-21）
+
+已完成 [G4 六领域论文×原始 WGS 输入×代码真实契约审计](cross-domain-evidence-audit.md)。该审计核对 **Exomiser（临床 HPO）、PharmCAT + StellarPGx（CYP2D6 BAM/CRAM）、pgsc_calc（WGS VCF 不原生支持）、DIETFITS 2018 阴性 RCT、ancIBD（古 DNA 已相位填补）及 OptiType（HLA-I）**；记录源码版本、许可证和论文原始样本设计；**没有实际运行个人/公共 WGS**。
+
+**对原计划的两项技术修正**：
+1. `pgsc_calc` 的官方 README 显示 **WGS 的 variants-only VCF 不是原生合格输入**，需要依官方方法准备完整基因型（涵盖纯合参考位点并核验匹配率），不是通常所说“给一个 VCF 就能算 PRS”。
+2. CYP2D6 的可靠分型涉及 SV/CNV，保留 BAM/CRAM 使 StellarPGx 等专项工具有用；PharmCAT VCF-only CYP2D6 模式属研究尝试，不能供临床决策。HLA-I 有真实专项 OptiType 软件及论文，HLA-II 能力待补。
+
+## E. 用 4 个实例检验这套框架是否真正成立
 
 **疾病**：高质量 SNV/Indel → [VEP 原文 P004](paper-register.md) 变异效应注释 → [ACMG P012](paper-register.md) 证据分级 → Exomiser 提出候选疾病基因 → 还需表型与临床确证。不是 `VCF → AI → 确诊`。
 
@@ -71,7 +79,7 @@
 
 **营养的反证**：[2018 DIETFITS 随机试验](https://doi.org/10.1001/jama.2018.0245) 609 名参与者的预设基因型模式**未显著改变**低脂/低碳饮食减重结果。不能只找支持营销报告的正向论文，负结果也应进入证据矩阵。
 
-## E. 最小数据模型与后续复现策略
+## F. 最小数据模型与后续复现策略
 
 对每个实际研究问题保留这几个字段即可，无须额外开发项目管理系统：
 
