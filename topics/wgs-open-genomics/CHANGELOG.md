@@ -8,3 +8,5 @@
 - **2026-11-21，v0.1.2（Draft）**：根据用户澄清，确立**数据质量→论文→研究维度/深度→开源项目**为全专题主线；新增 [15 方向主矩阵](evidence-capability-matrix.md) 与 [22 篇论文 P-ID 注册表](paper-register.md)，明确跨域去重、零证据缺口及营养随机试验阴性证据。父系/chr20 改作独立子案例，不改变原 Goal/Scope/AC；仍未跑真实个人/公开 WGS。
 
 - **2026-11-21，v0.1.3（Draft）**：完成 [跨领域六案例原始论文×源码输入审计](cross-domain-evidence-audit.md)：Exomiser、PharmCAT/StellarPGx、pgsc_calc、DIETFITS、ancIBD、OptiType；识别 pgsc_calc 不是直接 WGS variants-only VCF 计算器、PharmCAT CYP2D6 VCF-only 研究模式不适于临床，新增 [StellarPGx](https://github.com/SBIMB/StellarPGx) 与 [OptiType](https://github.com/FRED-2/OptiType) 两个专项项目及 3 篇对应论文。首轮登记 **15 域 / 25 篇论文 / 34 个 GitHub 项目**；仍未进行实际 WGS 运行，原 Goal/Scope/AC 保持。
+
+- **2026-11-21，v0.1.4（Draft）**：完成 [G5 D02/D04/D08 原始论文×源码×许可证审计](cross-domain-evidence-audit-g5.md)；新增 11 篇题录/标准 P026–P036 和五个源码项目 T35–T39，现有 **15 域 / 36 篇论文 / 39 个源码仓库候选**。修正 ExpansionHunter/Gauchian PolyForm Strict 与 InterVar 非商用免费限制；Truvari 为 SV VCF benchmark 非 caller，Mutserve VCF 不包含 indel；均未实际运行 WGS。
