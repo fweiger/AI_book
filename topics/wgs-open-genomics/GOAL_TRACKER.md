@@ -7,13 +7,13 @@
 - 所属源仓库：`fweiger/AI_book`
 - 项目入口：`topics/wgs-open-genomics/README.md`
 - 唯一 Tracker：`topics/wgs-open-genomics/GOAL_TRACKER.md`（本文件）
-- 当前阶段：G8 在 31.5 实际完成 HG002 chr20 官方公开 BAM/参考/真值 8 文件下载、全部 SHA-256 复核和 BAM 官方 GCS MD5 对照；DeepVariant/hap.py 镜像未成功，实际变异评分 E2 NOT_RUN
+- 当前阶段：G9 31.5 公开 HG002 chr20 2–3Mb bcftools 1.19 + RTG 3.13 实测 E2 PASS 且独立源码二次复现；G8 数据校验保持 PASS，原 DeepVariant/hap.py 方案仍 NOT_RUN；15 域/47 来源/39 工具仍待科研深审
 - 选定协议：`fweiger/AI_tasks/task-center/v1.2.2/ENTRY.md`，原实验候选分支 `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
 - **锁定协议 commit SHA：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`**（续接仅从锁定版本读取，不自动跟随 HEAD）
 - 本轮观察的候选分支 HEAD（协议分支）：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 初始 Issue 验证：2026-11-21，GET #72 内容可读，`requirements_revision: 1`
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
-- 目标漂移：`D0 ALIGNED`（G8 执行原 AC-05 公共 HG002 真实数据准入，限定镜像下载尝试并停止重复排障）
+- 目标漂移：`D0 ALIGNED`（G9 使用已有公开数据与轻量官方工具确实验收 AC-05，结束局部 Docker 阻断，重新回归 15 域论文×工具主线）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
 - Issue 同步：`SYNCED`（G1–G7 先前均已回读；G8 唯一事件 #7062335961 已按稳定事件键回读）
 
@@ -29,7 +29,7 @@
 | AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项 GitHub 源码存在性 PASS；许可证分层已有证据，全部运行 NOT_RUN；部分源码并非 OSI 自由开放） | [源码/许可目录](open-source-projects.md) · [G5 审计](cross-domain-evidence-audit-g5.md) |
 | AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（47 篇去重 DOI/指南；G7 补 6 篇与论文争议回复；完整全文审计未完成） | [论文注册表](paper-register.md) · [G7 审计](cross-domain-evidence-audit-g7.md) |
 | AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（15/15 域/47 篇/39 仓库静态去重 PASS；真实科学/临床复现仍 NOT_RUN） | [15 域主矩阵](evidence-capability-matrix.md) · [G7 审计](cross-domain-evidence-audit-g7.md) |
-| AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | PARTIAL（8 项真实公开文件下载、本地 SHA256 全通过、官方 BAM MD5 对照 PASS；镜像拉取未完成，变异调用及 Precision/Recall NOT_RUN） | [G8 真实数据准入证据](sessions/2026-11-21-hg002-public-data-admission-g8.md) · [实验规范](benchmark-hg002.md) |
+| AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | **PASS（范围受限）：**真实 HG002 chr20 1Mb bcftools1.19/RTG3.13 独立 GIAB v4.2.1 BED 指标和二次运行日志、变异记录/摘要哈希一致；原 DeepVariant/hap.py 单独方案仍 NOT_RUN | [G9 原始结果与复现](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) · [G9 实际可运行源码](scripts/run-hg002-chr20-bcftools-rtg.sh) |
 | AC-06 | 专题分支、唯一 Tracker、审核 PR 和回链 | GitHub 文件、PR、INDEX、CI 校验 | PARTIAL（Draft PR #73/结构 CI PASS，尚待审核合并） | [PR #73](https://github.com/fweiger/AI_book/pull/73) |
 
 ## 2. 对上级目标的贡献
@@ -41,37 +41,37 @@
 | 阶段 | 预期结果 | 对应 AC | 证据 | 状态 | 依赖 |
 |---|---|---|---|---|---|
 | S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[47 篇论文注册表](paper-register.md)、[G4](cross-domain-evidence-audit.md)/[G5](cross-domain-evidence-audit-g5.md)/[G6](cross-domain-evidence-audit-g6.md) | PARTIAL（跨域输入证据扩展；全部程序实际运算/全文系统审计待完成） | 一致性审计及少量公共样本核验 |
-| S2 | HG002 公开数据准入 → 最小 chr20 SNP/Indel E2 | 02/05 | [G8 下载/哈希实证](sessions/2026-11-21-hg002-public-data-admission-g8.md)、[规范与脚本](benchmark-hg002.md) | PARTIAL（输入真实 PASS；Docker 镜像未就绪；E2 NOT_RUN） | 31.5 Docker/DNS 已可用，新的局部阻断仅为镜像下载完成与精度实跑 |
-| S3 | 跨不同方向论文与 WGS 输入/许可证审计 | 02–04 | [G4](cross-domain-evidence-audit.md) + [G5](cross-domain-evidence-audit-g5.md) + [G6](cross-domain-evidence-audit-g6.md) | PARTIAL（D05/D11/D13 已补；需核查 15 域完整映射的可靠性） | 真实 E2 和学术结论证据仍待审 |
+| S2 | HG002 公开数据准入 → 最小 chr20 SNP/Indel E2 | 02/05 | [G8 官方数据/哈希](sessions/2026-11-21-hg002-public-data-admission-g8.md)、[G9 实测和二次复现](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) | **PASS（仅 G9 chr20 1Mb bcftools/RTG）**，原 DeepVariant/hap.py 未测试 | 与其他 14 研究域的结论真实性独立，下一步恢复论文×源码全域研究 |
+| S3 | 15 域论文×WGS 输入×代码/研究结论及许可证可靠性 | 02–04 | [15 域矩阵](evidence-capability-matrix.md)、[G7 全域一致性](cross-domain-evidence-audit-g7.md) | PARTIAL（主矩阵存在；尚缺 15 域各一份方法级证据抽审与外推边界） | G9 公共 E2 与其他领域的理论可行性必须区分，避免只研究 D01 |
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
 
 ## 4. 当前检查点
-- **G8 实质成果**：[31.5 真实公共 HG002 数据下载/字节校验记录](sessions/2026-11-21-hg002-public-data-admission-g8.md) 已提交。按原锁定脚本数据清单下载 8 项公开文件，`fetch exit=0`、`sha256sum -c` 全 PASS、压缩文件 `gzip -t` PASS；Google 官方 GCS BAM MD5 与本地完全一致。未上传任何 DNA 至公开 GitHub。
-- **脚本真实性**：运行前获取的原脚本 Git blob SHA `fdb01d3f8ccd4996af23110678f713d777ceff07` 与仓库一致，preflight/b​ash-n PASS；原脚本真实下载中发现续传缺口后，临时复制增加 curl resume，真实 .part 从 422596608 bytes 续传成功；已将一个 `--continue-at -` 参数最小修复到同一 PR 脚本，修后 blob `e74f5b29f5a1e62acc9be3827a2733cd9cd06435`。
-- **运行限制**：31.5 Docker 29.1.3、16 CPU、磁盘和公开 GCS/NCBI 连通；前轮报告的**此容器无 Docker/DNS 不再是全局或 31.5 阻断**。`google/deepvariant:1.10.0` 第一次镜像拉取超时，有限续拉及 hap.py 镜像拉取均未取得最终 digest；本轮明确停止，并复核全部 Job terminal，不能宣称镜像 ready/基准成功。
-- **科研级别**：`DATA_ADMISSION_PASS`；`CONTAINER_IMAGE_BLOCKED`；`DEEPVARIANT_NOT_RUN`；`HAP_PY_NOT_RUN`；无 TP/FP/FN、Precision/Recall/F1；AC-05 仍 PARTIAL/NOT_RUN（算法部分）。15 域/47 论文/39 源码目录不变。
-- **目标与状态**：D0 ALIGNED，按原 Goal 完成 AC-05 的必要真实数据进展；唯一规范 Issue 原 Goal/Scope/AC 不变，E2 阻断只影响实际 benchmark。G8 新单 Writer 事件待发布。
+- **G9 核心实测**：[公开 HG002 真实 bcftools/RTG 原始方法、TP/FP/FN、ROC 和 SHA 证据](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)：31.5 Ubuntu 使用 G8 官方验证数据，在 chr20 2–3Mb 1Mb 上运行 bcftools 1.19/htslib1.19 `mpileup | call` 得到 1899 个变异 VCF 记录，NIST v4.2.1 confident BED 166 段、965991 bp；RTG Tools 3.13 独立 `vcfeval` 成功。
+- **未按额外 QUAL cutoff 的结果**：SNP TP-baseline/TP-call=1430/1434、FP7/FN4，Precision 0.9951、Recall 0.9972、F1 0.9962；Indel TP-baseline/TP-call=216/213、FP12/FN17，0.9467/0.9270/0.9367；合计 0.9886/0.9874/0.9880。来自官方真值 BED 范围内真实 RTG ROC 末行，**不能推断全 WGS 或其他 assay、祖源、临床准确率**。
+- **源码已二次实测**：[独立最小命令脚本](scripts/run-hg002-chr20-bcftools-rtg.sh)，Git blob `819278d12b78cae97da8f27c4d49a93228b4942d` 下载一致；preflight 和真实 `run exit=0`，两次 callset 非 header 变异记录 SHA256 都是 `472eaed46a664cbb675dc2c09d224d7836c0680345f937100a0a48d6fad912b0`，RTG `summary.txt` SHA256 都是 `24dac88c2c4ad5738ffa6b2d65c3280eabf98eeda79d25a1067fe5308a515ba6`；非假造/模拟。
+- **AC/阻断边界**：AC-05 原始批准目标为至少一套公开可复现最小实验，G9 限界通过 **PASS**。旧 G2 固定 DeepVariant/hap.py 完整 chr20 方案仍 NOT_RUN，Docker 大镜像阻断仅此子方案，**不得把 G9 精度冒称 DeepVariant 性能**。其他 14 个研究域论文/算法未据此验证；未接触任何个人 DNA。
+- **目标与状态**：D0 ALIGNED，Issue 原 Goal/Scope/Non-goals/AC 保持；停止围绕同类 Docker 故障继续滚动排障，接下来向用户要求的 15 域研究深度回归。G9 唯一进度事件待写入、回读。
 
 ## 5. 阻断与未受影响工作
-| 问题 | 影响范围 | AC | 不受影响工作 | 本轮判断 |
+| 情况 | 真实影响 | AC | 主线剩余 | 定性 |
 |---|---|---|---|---|
-| DockerHub 镜像层多次有进度但均未取得最终 digest，拉取进程已停止 | DeepVariant/hap.py 实际 chr20 E2 | AC-05 真实 caller/benchmark | HG002 已在 31.5 完整、可复算 hash；其余 15 域研究 | **局部 BLOCKED**；禁止继续无界 Docker 镜像/代理排障 |
-| 某些环境无 Docker 或 DNS | 限该环境可执行性 | 不影响 31.5 数据接入 PASS | 已授权 31.5 与公共学术研究 | 旧范围限定，不得继续声称全系统无法联网 |
-| 个人商业 WGS 尚无 | 个人位点和医学判断 | 本轮 Non-goals | 公开 HG002 和论文/算法准入研究 | 不采集、不公开个人 DNA |
-
+| DeepVariant/hap.py 大镜像之前仍未完整拉取 | 仅 G2 原指定 DeepVariant 对照实验，不影响 G9 原生 bcftools/RTG | AC-05 的**其他方案** | G9 公开 E2 PASS 已满足最小 AC；不重复拉大镜像 | 局部 BLOCKED/NOT_RUN，非整任务阻断 |
+| 47 来源没有逐域方法级全文审计，39 项源码实际兼容性/许可证仍待复核 | 跨域科学解释与商业可用性 | AC-02/03/04 | 以现有目录做每域定向证据核查，非盲目增加数量 | PARTIAL，当前优先主线 |
+| 个人商业 WGS 文件尚未取得、且按 Non-goals 不进入公开 AI_book | 个人实际数据质量、临床/亲缘分析 | 本轮不进行私人实验 | 统一数据标准及合规公共样本 | NON-GOAL，不触碰个人敏感数据 |
 ## 6. 执行路径调整记录
 | 时间 | 旧候选 | 实际动作/调整 | 证据 | 关联 AC | 范围改变 |
 |---|---|---|---|---|---|
 | G1–G3 | 初始目录与父系局部 | 确立全域 WGS 质量→论文→工具研究 | 规范 Issue G1–G3 | 01–06 | 否 |
 | G4–G7 | 横向论文和源码方法审计 | 完成 15 域研究图谱和原始数据验收合同 | G4–G7 证据文件 | 02/03/04 | 否 |
 | **2026-11-21/G8** | 公开 HG002 E2 实验 | 实际完成 HG002 文件 download/hash 官方 BAM MD5；Docker image 两次有界尝试未就绪，止损后不扩建平台 | [G8 真实日志/哈希](sessions/2026-11-21-hg002-public-data-admission-g8.md) | **05 PARTIAL** | 否 |
+| **2026-11-21/G9** | 现有 HG002 数据与有界原生工具 | bcftools1.19/RTG3.13 公开 HG002 chr20 1Mb 独立 GIAB/true E2，二次代码实跑变异正文/摘要 SHA 一致；不再修 Docker 大镜像 | [G9 报告](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)、[源码](scripts/run-hg002-chr20-bcftools-rtg.sh) | **05 PASS（限界）** | 否 |
 
 ## 7. 下一步
-- **唯一优先动作**：利用已存 31.5 且经官方 BAM MD5/本地 SHA256 核验的 HG002 chr20 数据，做**一次有界的现有轻量开源变异调用和 GIAB v4.2.1 区域基准执行路径核验**：优先寻找机器现有可直接用的已授权原生工具或小镜像（不得重拉刚才失败的大镜像、不得安装常驻平台）；若能跑通，记录软件版本、输入、命令与按 SNP/INDEL 区分的真实 TP/FP/FN/Precision/Recall/F1；若不可行，明确 `E2 BLOCKED`，将主线切回未完成 AC-03 论文方法级审查。
-- **对应 AC**：AC-05 公共真实 E2 执行和失败证据；AC-02 输入/许可证实操；AC-03 体系论文核查为局部 E2 无法推进的替代未阻断主线。
-- **成功标准**：至少一个**非模拟**小变异 query callset、与官方 GIAB v4.2.1 truth+confident BED 对齐的独立 caller/benchmark 输出及完整日志；不能用 GIAB truth 自己对自己评分、不能填论文结果、不能以 preflight/镜像层校验冒充真实科学精度。
-- **结束条件**：如果环境缺少轻量现成方法或数据兼容性不足，只将阻断写到 AC-05，不再追求更多镜像代理、服务器或者重复启动不受控异步任务。
-- **权限/边界**：只用公开合法样本和原既有 Issue/Tracker/PR，私有 DNA 不公开；不改用户原 Goal/Scope/AC。
+- **唯一优先动作**：从已有 [15 域证据主矩阵](evidence-capability-matrix.md) 和 [47 项原文来源](paper-register.md)、[39 项源码候选](open-source-projects.md) 中，对 **D01–D15 每域至少 1 篇最能定义方法/结论上限的一手论文/权威标准**进行**方法级抽审**，为每域补 `assay+样本/祖源+质量门槛+分析能推断什么/不能推断什么+源码真实输入/许可证+原文 DOI+证据等级`，公开形成一份 15 行可查清单；不将全部 47 篇逐字阅读说成已完成，不机械新增工具或制造新的任务中心。
+- **对应未完成 AC**：AC-03 论文方法/反证的证据深度，AC-04 15 域研究深度和失败边界，AC-02 真实工具输入和许可；AC-06 Draft PR #73 审核与合并仍独立待办。
+- **验收**：15/15 域有一手 DOI/标准来源与具体输入条件、统计/医学/祖源外推限制、关联既有真实 GitHub 项目（不适用时明确 NONE/OTHER_ASSAY）及不确定性标记；区分 GitHub 文档能读/E0、方法来源/E1、真实公开运行/E2（目前仅 G9 D01 小区间）。
+- **为何重新排序**：G9 已取得 AC-05 真实 E2，继续围绕同一 D01/GIAB 的局部 Docker/系统开发会偏离用户最初提出的**全部方向×论文×开源工具深度图谱**；因此回归横向科学证据审计更直接推进未完成 AC。
+- **不改授权**：继续同一个 Issue #72、同一个唯一 Tracker 与 Draft PR #73，不涉及个人 DNA、临床诊断，不更改原 Goal/Scope/AC。
 ## 8. 每轮恢复核对
 - [ ] 用锁定 `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` 获取 Task Center V1.2.2 入口与续接协议，核对 Sticky Assignment；不自动改协议。
 - [ ] 回读规范 [Issue #72](https://github.com/fweiger/AI_book/issues/72) Goal/Scope/AC，最新评论、PR 和本 Tracker SHA。
@@ -93,20 +93,22 @@
 
 | 2026-11-21/G8 | 31.5 真实 HG002 chr20 8 文件下载/本地 SHA256 全 PASS、官方 GCS BAM MD5 匹配；原脚本续传最小修复；两镜像受限拉取均受控停止，E2 NOT_RUN | AC-05 PARTIAL | [G8 真实公共数据准入证据](sessions/2026-11-21-hg002-public-data-admission-g8.md)、[脚本](scripts/run-giab-hg002-chr20.sh) | D0/CONSISTENT，需同步唯一事件 | 一次有界轻量原生/小镜像 E2；不成功则 AC03 文献方法审计 |
 
+| 2026-11-21/G9 | 真正完成公开 HG002 chr20 1Mb bcftools 变异调用+RTG 独立 GIAB/ROC SNP F1 0.9962、Indel F1 0.9367，脚本二次复现记录/汇总 SHA 一致；原 DeepVariant 尚未运行 | AC-05 PASS（1Mb 有界 E2），AC-03/04 仍 PARTIAL | [G9 实测和输入/输出哈希](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)、[可运行脚本](scripts/run-hg002-chr20-bcftools-rtg.sh) | D0 ALIGNED/CONSISTENT，Issue G9 事件待同步 | 审核 D01–D15 每域一个一手方法/数据/实现边界 |
+
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：none（G8 event AI_book#72:AC05:20261121-g8-hg002-data-admission 已完成）
-- **当前 writer_owner**：none（G8 Writer chatgpt-topic017-g8-20261121 已完成）
-- **当前 write_state**：SYNCED（[G8 唯一评论 #7062335961](https://github.com/fweiger/AI_book/issues/72#issuecomment-7062335961) 已回读且同键仅 1 条；事件声明 Tracker blob SHA c457727836285a1986f8b4fd07b9e3012df1ea11）
+- **当前 active_event_key**：AI_book#72:AC05:20261121-g9-native-bcftools-rtg-e2
+- **当前 writer_owner**：chatgpt-topic017-g9-20261121
+- **当前 write_state**：CLAIMED（G9 单 Writer 准备发布唯一研究事件；G8 #7062335961 已完成回读）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
 | 检查项 | 当前值 | 证据 | 结果 |
 |---|---|---|---|
 | Issue Goal/Scope/AC 与 §1 | 合同一致 | 初始 GET #72 | CONSISTENT（内容） |
-| §3/§4 与真实证据 | G8 公开 HG002 8 输入下载/哈希及官方 MD5 PASS，DeepVariant/hap.py E2 NOT_RUN | 本轮 31.5 实际运行证据与 G8 日志 | PARTIAL |
-| §5 局部阻断 | 31.5 数据端解除旧 DNS/Docker 阻断；镜像未取得 digest 只阻断调用/评分 | 实测 31.5 环境、Job 终态 | CONSISTENT |
-| §6 与 §7 | G8 数据下载成功；下一步优先有界轻量公开基准而非 Docker 无限重试 | G8 日志与原 AC-05 | CONSISTENT |
+| §3/§4 与真实证据 | G9 bcftools1.19/RTG3.13 真实 1Mb 独立 benchmark 与脚本二次复现，SNP/Indel metrics 和两个 SHA 一致 | G9 真实计算源代码、日志和结果报告 | PASS（仅 AC-05 公开 E2）；其余 PARTIAL |
+| §5 局部阻断 | DeepVariant/hap.py 尚未成功，仅原固定子方案；G9 原生 bcftools/RTG E2 已成功 | G8 镜像终态和 G9 独立实测 | CONSISTENT |
+| §6 与 §7 | G9 公开最小 E2 已通过；下一步回归 15 域每域一篇方法级论文/数据/代码审计 | G9 真实报告和未完成 AC-02/03/04 | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G8 事件各自唯一回读，G8 #7062335961 | G8 事件声明 Tracker blob SHA c457727836285a1986f8b4fd07b9e3012df1ea11 | SYNCED |
+| Issue 最新事件与 Tracker | G1–G8 唯一事件已回读；G9 单 Writer CLAIMED 等待发布回读 | G9 稳定 event_key 与当前 Tracker 声明 | ISSUE_SYNC_PENDING |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
