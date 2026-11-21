@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮严格围绕批准的四条件历史解释/AC-04，原Goal/Scope/AC未变）
-- 状态一致性: `CONSISTENT`（#70与新§13四条件矩阵、独立研究PR及AC-04下一步保持一致，本轮事件正在同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（前次事件已SYNCED；本轮四条件研究事件尚待按CLAIMED流程回读）
+- 状态一致性: `CONSISTENT`（#70原Goal/Scope/AC、同一报告§13、唯一Tracker和新评论均GET核对，本轮事件键恰好1条）
+- Issue 同步状态: `SYNCED`（本轮四条件研究事件 #7056940762已发且GET核对同键1条；研究主因/独立学术审核仍未完成）
 
 ## 1. 批准目标基线
 
@@ -54,7 +54,7 @@
 - **本轮新核源**：剑桥 Rollo-Koster《The Great Western Schism》Introduction公开PDF**首页/次页已截图核对**：1378最初两位竞争教皇、1409起第三系、1417年恢复统一。Fordham大学1912英译转载的**1415年康斯坦茨公会议Sacrosancta原始决议文本**明确主张大公会议就分裂/教会改革事项对包括教皇在内者有约束力；乌菲齐实物1423年画作仍服务宗教礼拜，表明同一时期宗教内部争议与传统文化实践并存。美国国会图书馆保存**约1455年古腾堡印刷圣经原物**，晚于1415决议/1423画作——只能否定古腾堡印刷技术直接导致此前两件事件的强版顺序，不能否定其他旧媒介/后续印刷效果。
 - **另两时代边界**：秦前344度量衡与前309田律可直接核制度，SEP总结世袭等级与军功爵之争属后世学术重建，《商君书》层次与具体文本年代不统一；秦竹木文书存在不证明早期书写媒介成本下降。1915原刊有对传统政治/教育观念的作者批判，1915欢迎外部投稿/读者通信，而1918同群益书社出版的启事明确将稿件工作改为编辑同人主责且不再购稿；**直接证明知识组织规则变了，不证明出版技术更新或全民自主性增加**。
 - **本轮四项真正压力测试**：①权威内部争议≠传统文化实践全部消失/民众已觉醒；②1415/1423早于1455，不允许用晚印刷技术解释早期艺术或会议争论；③1915欢迎外稿与1918同人责任制度变更并不直接测得公众解释权分散；④三场景缺同口径生产率/群体意识数据，**不能识别任何“最主要因素”**。注意1420穹顶/1427税制倒置不是视频原命题，未拿它冒充对原作者的反驳。
-- **研究状态/边界**：直接材料的身份/日期与对应文本PASS（限定来源范围），四条件的因果机制对照PARTIAL；A→Y1“旧权威瓦解导致普遍独立判断”**NOT_ESTABLISHED**；F先行/必要/充分/最大主因**UNKNOWN**，独立学术QA **NOT_RUN**。原批准Goal/Scope/AC一致；D0 / CONSISTENT；Issue增量事件待唯一Writer发布核验。
+- **研究状态/边界**：直接材料的身份/日期与对应文本PASS（限定来源范围），四条件的因果机制对照PARTIAL；A→Y1“旧权威瓦解导致普遍独立判断”**NOT_ESTABLISHED**；F先行/必要/充分/最大主因**UNKNOWN**，独立学术QA **NOT_RUN**。原批准Goal/Scope/AC一致；D0 / CONSISTENT；Issue事件 #7056940762 已GET回读同键仅1条。
 - **下一步重裁决**：AC-04的历史四条件与替代解释矩阵初稿已形成；剩余高价值是核对**“祛魅≠觉醒”概念与AI时代独立判断**的原典及实证证据，而不是继续扩大史例或统计无数据的主因占比。
 
 ## 5. 阻断与未受影响工作
@@ -120,15 +120,15 @@
 
 | 2026-11-21 / M1-three-case-causal-matrix | 完成先秦/佛罗伦萨/新文化运动三历史语境的原物/制度/文化产物统一矩阵，F/R/Y0/Y1分离，分别审“共现、先后、机制、必要充分、主因”；表明生产力主因无直接识别但不能说已证伪；Tognetti p78表19与p88注152纠正1427 Catasto76汇总引用、portata原卷Catasto45转存CS III129 | AC-01/02 PARTIAL（比较交付形成）；来源与档案修正 PASS，宏观主因 UNKNOWN | [同一研究报告 §10/§12](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056875253)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:three-case-causal-matrix-20261121` | D0 / CONSISTENT，原始税籍未逐字目验、学术审稿NOT_RUN；事件待同步 | 对原视频四条件进行AC-04竞争性机制/反例审计 |
 
-| 2026-11-21 / M2-four-conditions | 对三个已核历史案例新增F/A/M/P四要素证据矩阵、H1–H4竞争模型和四项真正针对作者原解释的压力测试；新核1415康斯坦茨决议英译、剑桥西方教会大分裂公开引言、1423乌菲齐宗教画原物、约1455国会图书馆古腾堡圣经；区别权威争议与大众觉醒、媒体技术先后/传播组织调整 | AC-04 PARTIAL（四条件史料争议已有交付；祛魅/觉醒原典尚未核），兼AC-01 | [同一报告 §13](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:four-conditions-evidence-20261121` | D0/CONSISTENT；Y1与主因UNKNOWN，独立审稿NOT_RUN，事件待同步 | 概念原典“祛魅≠觉醒”+两篇AI研究方法边界 |
+| 2026-11-21 / M2-four-conditions | 对三个已核历史案例新增F/A/M/P四要素证据矩阵、H1–H4竞争模型和四项真正针对作者原解释的压力测试；新核1415康斯坦茨决议英译、剑桥西方教会大分裂公开引言、1423乌菲齐宗教画原物、约1455国会图书馆古腾堡圣经；区别权威争议与大众觉醒、媒体技术先后/传播组织调整 | AC-04 PARTIAL（四条件史料争议已有交付；祛魅/觉醒原典尚未核），兼AC-01 | [同一报告 §13](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056940762)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:four-conditions-evidence-20261121` | D0/CONSISTENT；Y1与主因UNKNOWN，独立审稿NOT_RUN，事件待同步 | 概念原典“祛魅≠觉醒”+两篇AI研究方法边界 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:four-conditions-evidence-20261121`（本轮进度事件正在CLAIMED声明，未发布）
-- writer_owner: `chatgpt-topic016-four-conditions-20261121`
-- write_state: `CLAIMED`（须GET核对此SHA和同键评论0条，再发布）
+- active_event_key: `none`（本轮事件已核对唯一，稳定键保留§9和最近事件）
+- writer_owner: `none`（本轮事件已发布且无待写入）
+- write_state: `SYNCED`（已GET回读 #7056940762 同event_key仅1条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:three-case-causal-matrix-20261121` / [Issue评论 #7056875253](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056875253)；同键唯一回读。SYNCED 仅是GitHub状态一致，不能把未证的历史因果主因升级为学术PASS。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:four-conditions-evidence-20261121` / [GitHub Issue评论 #7056940762](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056940762)；本事件已GET回读唯一。SYNCED只表示GitHub进度/文件一致，不等于因果结论得到学术验收。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -137,4 +137,4 @@
 | §5 局部阻断 | 缺社会意识Y1测量仅阻断宏观因果结论，AC-04的哲学概念仍可核 | 本文件§5 | PASS（局部影响） |
 | §6/7 | 原目标不变，历史四条件压力审查完成初版，下轮康德/韦伯及AI实证概念 | 本文件§6/7 | PASS（目标对齐） |
 | §7 与 §9 | §7是唯一当前的祛魅/觉醒原典核查，历史表只作建议 | 本文件 | PASS（唯一权威） |
-| Issue 与 PR/Tracker 回链 | #70/PR#71/报告§13已回读，本轮Issue进度待唯一Writer发布 | #70 / PR#71 / Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70/PR#71/§13文档及本轮唯一Issue评论均可回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056940762) | `SYNCED` |
