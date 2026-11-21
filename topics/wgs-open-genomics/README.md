@@ -1,6 +1,6 @@
 # TOPIC-017｜从一份个人 WGS 到遗传学、医学、家族史与古 DNA
 > 来源与规范研究任务：[AI_book Issue #72](https://github.com/fweiger/AI_book/issues/72)  
-> 建立：2026-11-21；专题版本：`0.1.6`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
+> 建立：2026-11-21；专题版本：`0.1.7`；状态：**OPEN_RESEARCH / CATALOG_SEEDED**，不是科研复现或临床认证。  
 > **本仓库公开；严禁保存任何人的真实 FASTQ/BAM/CRAM/VCF、家谱身份、疾病信息或其他敏感数据。**
 
 ## 最初的问题
@@ -28,6 +28,7 @@
 - **[WGS 采购与原始文件最小交付验收清单](wgs-data-acceptance-contract.md)**
 - **[G8 公开 HG002 真正下载与哈希验收、镜像阻断及终态](sessions/2026-11-21-hg002-public-data-admission-g8.md)**
 - **[G9 HG002 1Mb 真正变异调用 + 独立 RTG SNP/Indel 基准、二次复现哈希](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)**（AC-05 公开最小 E2 PASS，DeepVariant 方案仍 NOT_RUN）
+- **[G10 跨 15 研究域各一篇代表性一手论文方法审计：assay/样本/可研究深度/GitHub 输入](cross-domain-method-evidence-audit-g10.md)**（修复 Yleaf 原文 DOI 与勘误混淆，明确 pgsc_calc WGS 非原生兼容；仍非 47/47 全文系统审阅）
 - [论文、原始标准与参考数据库](sources.md) · [按问题阅读路径](reading-path.md)
 - [主张与证据 C-ID](claims.md) · [知识关系图](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
 - [HG002 chr20 基准与可运行脚本](benchmark-hg002.md) · [Q03 父系 Y 工具方法深度核查](y-chromosome-methods.md) · [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
