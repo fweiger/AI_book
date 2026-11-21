@@ -7,13 +7,13 @@
 - 所属源仓库：`fweiger/AI_book`
 - 项目入口：`topics/wgs-open-genomics/README.md`
 - 唯一 Tracker：`topics/wgs-open-genomics/GOAL_TRACKER.md`（本文件）
-- 当前阶段：G6 完成 D05 现代 IBD、D11 睡眠和 D13 运动行为/训练反应三域研究；15 域、41 篇注册论文、39 个 GitHub 源码候选；E2 真正 WGS 运算 NOT_RUN
+- 当前阶段：G7 完成 15 域证据/统计/源码一致性审计及 WGS 文件验收契约；15 域、47 篇论文/指南、39 个 GitHub 源码候选；真实 E2 NOT_RUN
 - 选定协议：`fweiger/AI_tasks/task-center/v1.2.2/ENTRY.md`，原实验候选分支 `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
 - **锁定协议 commit SHA：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`**（续接仅从锁定版本读取，不自动跟随 HEAD）
 - 本轮观察的候选分支 HEAD（协议分支）：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 初始 Issue 验证：2026-11-21，GET #72 内容可读，`requirements_revision: 1`
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
-- 目标漂移：`D0 ALIGNED`（G6 继续按用户原目标横向审计 D05/D11/D13 的论文与开源输入/证据限制）
+- 目标漂移：`D0 ALIGNED`（G7 按原唯一下一步完成全域一致性、D01/D15 质量边界与反证审查，推进 AC-02/03/04）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
 - Issue 同步：`SYNCED`（G1–G5 之前均已回读，G6 #7060913003 以唯一稳定事件键回读）
 
@@ -27,8 +27,8 @@
 |---|---|---|---|---|
 | AC-01 | 唯一 TOPIC-017 Issue 入口且合理查重 | GitHub 查询并回读 | PASS | [#72](https://github.com/fweiger/AI_book/issues/72) |
 | AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项 GitHub 源码存在性 PASS；许可证分层已有证据，全部运行 NOT_RUN；部分源码并非 OSI 自由开放） | [源码/许可目录](open-source-projects.md) · [G5 审计](cross-domain-evidence-audit-g5.md) |
-| AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（41 篇去重原文入口，G6 新增睡眠/运动 5 篇；仍未逐篇系统评价全文） | [论文注册表](paper-register.md) · [G6 审计](cross-domain-evidence-audit-g6.md) |
-| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（15 域质量/论文/方向/项目关联已提交；待独立证据审计） | [15 域主矩阵](evidence-capability-matrix.md) |
+| AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（47 篇去重 DOI/指南；G7 补 6 篇与论文争议回复；完整全文审计未完成） | [论文注册表](paper-register.md) · [G7 审计](cross-domain-evidence-audit-g7.md) |
+| AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（15/15 域/47 篇/39 仓库静态去重 PASS；真实科学/临床复现仍 NOT_RUN） | [15 域主矩阵](evidence-capability-matrix.md) · [G7 审计](cross-domain-evidence-audit-g7.md) |
 | AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | PARTIAL（公开参考输入/命令/验收规范已提交；实际运行 NOT_RUN） | [HG002 实验规范](benchmark-hg002.md) |
 | AC-06 | 专题分支、唯一 Tracker、审核 PR 和回链 | GitHub 文件、PR、INDEX、CI 校验 | PARTIAL（Draft PR #73/结构 CI PASS，尚待审核合并） | [PR #73](https://github.com/fweiger/AI_book/pull/73) |
 
@@ -40,7 +40,7 @@
 ## 3. 当前执行路径
 | 阶段 | 预期结果 | 对应 AC | 证据 | 状态 | 依赖 |
 |---|---|---|---|---|---|
-| S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[41 篇论文注册表](paper-register.md)、[G4](cross-domain-evidence-audit.md)/[G5](cross-domain-evidence-audit-g5.md)/[G6](cross-domain-evidence-audit-g6.md) | PARTIAL（跨域输入证据扩展；全部程序实际运算/全文系统审计待完成） | 一致性审计及少量公共样本核验 |
+| S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[47 篇论文注册表](paper-register.md)、[G4](cross-domain-evidence-audit.md)/[G5](cross-domain-evidence-audit-g5.md)/[G6](cross-domain-evidence-audit-g6.md) | PARTIAL（跨域输入证据扩展；全部程序实际运算/全文系统审计待完成） | 一致性审计及少量公共样本核验 |
 | S2 | 公开 GIAB 小范围 benchmark 的完整命令/资源设计 | 02/05 | [HG002 数据契约](benchmark-hg002.md) 与脚本 | PARTIAL | 本环境缺 Docker、公共数据 DNS；真实实验 NOT_RUN |
 | S3 | 跨不同方向论文与 WGS 输入/许可证审计 | 02–04 | [G4](cross-domain-evidence-audit.md) + [G5](cross-domain-evidence-audit-g5.md) + [G6](cross-domain-evidence-audit-g6.md) | PARTIAL（D05/D11/D13 已补；需核查 15 域完整映射的可靠性） | 真实 E2 和学术结论证据仍待审 |
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
