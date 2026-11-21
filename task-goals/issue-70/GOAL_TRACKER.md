@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（原 Issue Goal/AC 未改，佛罗伦萨—明初历史原件审计支撑 AC-02，事件单 Writer 声明待发布）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一轮事件已 SYNCED；本轮佛罗伦萨—明初证据事件待发布与回读）
+- 状态一致性: `CONSISTENT`（Issue Goal/AC 与研究文档、同一 Tracker 和本轮唯一进度事件相容，已回读）
+- Issue 同步状态: `SYNCED`（本轮事件 #7056114083 已发布、GET回读，同键仅1条；因果验收仍PARTIAL）
 
 ## 1. 批准目标基线
 
@@ -54,7 +54,7 @@
 - **可以直接核定的事实**：1371户帖实物证明明朝到该年已有面向具体家庭的官府登记；1427原始Catasto已保存、卷册及变量可定位，说明佛罗伦萨政府财产/职业/租佃登记；1485合同明确委托单位是育婴医院负责人、工料/期限/条件性115弗罗林付款条款；**1420穹顶开工早于1427税制改革，直接排除“1427税制引发1420工程启动”的特定倒因果**。以上不能证明文艺复兴的全局主要原因。
 - **仍未核到**：1427单户手写税册的逐页原件释读、1485合同手稿、明初全部黄册原册、同口径生产率/财富分配与思想变迁连贯时间数据、艺术委托所有资金来源。不能把一张宗教医院合同外推为全部非商人资金；也不能把同时存在税册推成“认知革命”。
 - **贡献/目标对齐**：直接推进 AC-01/02，新增真实档案/馆藏实物和一条反向时间排除，严格区分研究对象的“财政登记”“艺术劳动合同”“文化结果”。**D0**；批准 Goal/Scope/AC 未变，历史机制审计仍 PARTIAL，核心驱动 UNKNOWN，独立审稿 NOT_RUN。
-- **状态一致性**：CONSISTENT，本轮研究已在 PR #71 原分支同一源文件提交；当前单写者事件处于 CLAIMED 待发布状态，不据此声称已完成同步。
+- **状态一致性**：CONSISTENT，本轮研究已在 PR #71 原分支同一源文件提交；已核对 #70 唯一评论 #7056114083 与 event_key 一致，只有一条。
 
 ## 5. 阻断与未受影响工作
 
@@ -105,15 +105,15 @@
 
 | 2026-11-21 / M1-qin-iron-offices | 中研院史语所出土秦律转录定位《厩苑律》15、工律102—107、金布律借公器、秦律杂抄采铁；汤超2019与Liu2023对照官营/私营及齐燕反例，确认墓埋前217不能直接证明商鞅前356条文存在，制度≠结果 | AC-01/02 PARTIAL | [同一研究文件 §8](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7054203913)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-administration-law-20261121` | D0 / CONSISTENT；秦供给规则有文献支撑、产出及最初执行年代仍 UNKNOWN；事件待同步 | 转向佛罗伦萨—元明同期证据矩阵 |
 
-| 2026-11-21 / M1-florence-ming-primary | 已核实1371明《江寿户帖》实物、1427佛罗伦萨Catasto原档目录及数据库、1456作坊学徒合同、1485宗教医院委托合同英译；1420穹顶早于1427新税制，排除这一特定时间倒因果；1587《大明会典》非1381原件 | AC-01/02 PARTIAL / 资料身份与特定时序 PASS | [同一证据文档 §9](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:florence-ming-primary-20261121` | D0 / CONSISTENT；核心主因 UNKNOWN，原始影像逐字未完成 | 下一步单户Catasto—具体赞助合同身份匹配 |
+| 2026-11-21 / M1-florence-ming-primary | 已核实1371明《江寿户帖》实物、1427佛罗伦萨Catasto原档目录及数据库、1456作坊学徒合同、1485宗教医院委托合同英译；1420穹顶早于1427新税制，排除这一特定时间倒因果；1587《大明会典》非1381原件 | AC-01/02 PARTIAL / 资料身份与特定时序 PASS | [同一证据文档 §9](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056114083)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:florence-ming-primary-20261121` | D0 / CONSISTENT；核心主因 UNKNOWN，原始影像逐字未完成 | 下一步单户Catasto—具体赞助合同身份匹配 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:florence-ming-primary-20261121`（本轮主张同步待发布）
-- writer_owner: `chatgpt-topic016-florence-ming-20261121`
-- write_state: `CLAIMED`（需重新 GET Tracker 确认本Writer独占后才可发布）
+- active_event_key: `none`（本轮事件已核实发布并完成同步，历史键见 §9）
+- writer_owner: `none`（本轮事件写入完成，当前无待发布 Writer）
+- write_state: `SYNCED`（Issue事件 #7056114083 已GET核对，同键恰好一条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-administration-law-20261121` / [Issue 评论 #7054203913](https://github.com/fweiger/AI_book/issues/70#issuecomment-7054203913)；同键回读仅 1 条。SYNCED 只表示 GitHub 进度同步而非学术因果审核通过。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:florence-ming-primary-20261121` / [Issue评论 #7056114083](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056114083)；已唯一回读。SYNCED 只证明本轮 GitHub 状态一致，不代表生产力与思想因果主因得到证明。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -122,4 +122,4 @@
 | §5 局部阻断 | 个体原稿/合同原件不可读，仅阻断具体身份关联；其他史实不受影响 | 本文件 §5 | PASS（影响边界） |
 | §6/7 | Goal不变，现阶段唯一动作为1427单户税簿—具体委托对照 | 本文件 §6/7 | PASS（未完成AC贡献） |
 | §7 与 §9 | §7当前唯一动作是单户匹配，§9本轮历史建议是相同候选但不构成命令 | §7/§9 | PASS（权威一致） |
-| Issue 与 PR/Tracker 回链 | #70/PR#71/研究文档已回读，本轮证据事件待发布 | #70 / PR #71 / 本Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 研究文档与本轮唯一评论均回读 | [事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056114083) | `SYNCED` |
