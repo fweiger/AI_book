@@ -2,7 +2,7 @@
 
 > **核心逻辑：先审 WGS 能力，再审学术研究的输入条件及可达到的解释深度，最后匹配可复用的 GitHub 项目。** 父系 Y 只是研究域 D03，不是全专题总主线。
 >
-> **收录口径（2026-11-21）：15 个研究域、36 篇已登记的具体论文/指南/综述、39 个已核存在 GitHub 源码仓库（**不全具标准开源许可证**）。** 本表中各方向的论文/工具数量是**当前登记且有关联的条目数**，不是全球全部论文/项目；同一篇论文和项目可跨域复用，不能把各行数字相加。论文原始题录见 [P-ID 注册表](paper-register.md)，项目详情见 [39 个 GitHub 源码候选及许可目录](open-source-projects.md)。论文中使用芯片、古 DNA、人群统计或临床数据的结果**不能因消费者拥有一份 40× WGS 就自动复现**。
+> **收录口径（2026-11-21）：15 个研究域、41 篇已登记的具体论文/指南/综述、39 个已核存在 GitHub 源码仓库（其中部分不具标准开源许可证）。** 本表中各方向的论文/工具数量是**当前登记且有关联的条目数**，不是全球全部论文/项目；同一篇论文和项目可跨域复用，不能把各行数字相加。论文原始题录见 [P-ID 注册表](paper-register.md)，项目详情见 [39 个 GitHub 源码候选及许可目录](open-source-projects.md)。论文中使用芯片、古 DNA、人群统计或临床数据的结果**不能因消费者拥有一份 40× WGS 就自动复现**。
 
 ## A. WGS 数据质量准入层
 
@@ -29,15 +29,15 @@
 | **D02 SV/CNV/STR** | 5 | 8（4+1 个 SV 比较工具） | 部分 DEL/INS/CNV/STR 候选；Truvari 可评价但不是 caller | 按 SV class 的真值/复杂区/长读长，许可限制 |
 | **D03 父系 Y** | 2 | 5（3） | 单倍群、末端分支、private SNP 候选 | 多个父系样本/校准/家谱 |
 | **D04 母系 mtDNA** | 5 | 5（3 个 mtDNA 专项） | 单倍群 + 同质/异质变异候选；NUMTs/污染要过滤 | mtDNA 实际深度、独立 caller、靶向验证 |
-| **D05 常染色体 IBD/亲缘** | 1 | 3（1） | 共享 DNA 片段与亲缘统计 | 至少两位授权样本/相位 |
+| **D05 常染色体 IBD/亲缘** | 1 | 3（1） | 单人可研究部分 HBD/ROH；人际 IBD 需其他样本 | 授权多人 phased GT、无缺失等位及匹配 cM 遗传图谱 |
 | **D06 古 DNA/群体与迁徙** | 3 | 5（3） | 古今群体模型、IBD 与祖源假说 | AADR、时空样本与竞争模型 |
 | **D07 罕见病/致病变异** | 4 | 5（2） | 功能注释及候选致病排序 | ClinVar/ACMG、表型和确证 |
 | **D08 隐性遗传病携带/生殖风险** | 7 | 5（含 2 个有使用限制的专项候选） | 候选致病变异及部分复杂假基因位点；阴性无法排除携带 | ACMG 2021/2024、残余风险、正交验证、配偶筛查 |
 | **D09 药物基因组学** | 3 | 4（2） | 部分代谢基因型和用药指南关联 | 复杂基因分型、药史/临床 |
 | **D10 复杂疾病 PRS** | 5 | 5（4） | 应用外部模型计算个人分数 | 祖源匹配、独立队列校准 |
-| **D11 睡眠/晨晚型** | 2 | 3（0 个已验证睡眠专项） | 统计性晨晚倾向，非精确作息预测 | 有效 PGS、睡眠日志 |
+| **D11 睡眠/晨晚型** | 4 | 3（0 个已验证睡眠处方专项） | 已发表评分的晨晚型/时长/失眠遗传倾向；不预测个人入睡钟点 | 有效祖源匹配 PGS、位点 match rate、睡眠日志/可穿戴表型 |
 | **D12 营养/饮食/代谢** | 2 | 3（0 个已验证饮食处方专项） | 部分代谢位点及群体关联 | 表型与随机对照试验 |
-| **D13 运动/体质等复杂性状** | 2 | 3（0 个已验证运动处方专项） | 有条件的已有 PGS 倾向评分 | 长期表型和群体验证 |
+| **D13 运动/体质等复杂性状** | 5 | 3（0 个已验证运动处方专项） | 身体活动行为 GWAS/已有 PGS；VO2max 训练反应需要独立训练队列复现 | 真实活动/训练前后表型、外部祖源验证 |
 | **D14 HLA/免疫复杂基因区** | 1 | 3（1 个 HLA-I 专项） | OptiType 可进行 HLA-I 候选分型；HLA-II 仍缺专项证明 | HLA 区域质量、临床真值；HLA-II 需另找工具/论文 |
 | **D15 甲基化/转录组/微生物组** | 0 | 0 | **普通短读长 WGS 无直接测量能力** | 必须增加其他检测技术 |
 
@@ -49,15 +49,15 @@
 | D02 | P002 DRAGEN；P003 Manta；**P026 GIAB SV、P027 Truvari、P028 ExpansionHunter** | samtools、bcftools、GATK、Manta、DELLY、CNVkit、ExpansionHunter（**PolyForm Strict**）、**Truvari（MIT；SV 比对而非 caller）** | GIAB 主要验证 ≥50 bp DEL/INS，不含全部 SV；重复扩增与复杂区受限，且部分源码限制修改/分发 |
 | D03 | P005 Yleaf；P006 Y-LineageTracker | samtools、bcftools、Yleaf、Y-LineageTracker、yhaplo | 分支树不证明具体历史人物 |
 | D04 | P007 Haplogrep 3；**P029 MToolBox、P030 gnomAD mtDNA、P031 WGS vs targeted、P032 mtDNA callers benchmark** | samtools、bcftools、Haplogrep3、**MToolBox（GPL-3.0）、Mutserve（MIT）** | 需单独核查 mtDNA depth、NUMTs、污染和 heteroplasmy CI；Mutserve VCF 不含 indels；母系 haplogroup 不是疾病诊断 |
-| D05 | P008 hap-IBD | bcftools、hap-IBD、PLINK2 | 单人不能判断未知第二人 IBD |
+| D05 | P008 hap-IBD | bcftools、hap-IBD（Apache-2.0）、PLINK2（GPLv3） | hap-IBD 输入为**无缺失、完整 phased GT 的多人 VCF 和相同构建的 cM map**；单人只可研究自身 HBD/ROH，不能发现陌生亲属 |
 | D06 | P009 ancIBD；P010 qpAdm；P011 2025 迁徙综述 | nf-core/eager、ancIBD、ADMIXTOOLS2、hap-IBD、PLINK2 | 需要参照群体；遗传相似不等于个体迁徙 |
 | D07 | P004 VEP；P012 ACMG；P013 ACMG SF；P021 Exomiser | bcftools、DeepVariant、GATK、VEP、Exomiser | 变异注释不是诊断 |
 | D08 | P012 ACMG；P013 ACMG SF；P021 Exomiser；**P033 ACMG Carrier 2021、P034 ACMG Lab 2024、P035 InterVar、P036 Gauchian 2025 反证** | bcftools、VEP、Exomiser、**InterVar（非商用免费、需另授权）、Gauchian（PolyForm Strict）** | 隐性病必须逐基因报告检测范围、残余风险与复杂区域；Gauchian 独立研究有漏检证据；阴性不等于零风险 |
 | D09 | P014 PharmCAT；P015 PharmCAT 临床支持；**P024 StellarPGx** | bcftools、VEP、PharmCAT、**StellarPGx（WGS BAM/CRAM）** | CYP2D6 SV/CNV 不能仅从 PharmCAT 普通 VCF 研究模式直接可靠分型；先专项 caller，再解释；不得自行改药 |
 | D10 | P016 PRS-CSx；P017 跨人群；P018 eMERGE；P022 All of Us 2026；**P025 PGS Catalog Calculator** | PLINK2、PRS-CS、PRS-CSx、bigsnpr、pgsc_calc | **pgsc_calc 不原生支持普通 WGS variants-only VCF**，需要正确补全参考位点/符合官方数据准备；一人可在适配后计算，不能训练或校准预测准确率 |
-| D11 | P019 697828 人昼夜节律 GWAS；P017 PRS 外推综述 | PLINK2、bigsnpr、pgsc_calc | 目前三个都是通用评分底座，不是临床验证睡眠处方器 |
+| D11 | P019 697828 人晨晚型 GWAS；P017 PRS 跨祖源综述；**P037 446118 人睡眠时长 GWAS；P038 芬兰 33493 人睡眠 PRS 可迁移性** | PLINK2、bigsnpr、pgsc_calc（Apache-2.0，**不原生支持 WGS variants-only VCF**） | 晨晚型、睡眠时长、失眠是不同 phenotype；25 分钟是晨晚型遗传评分两端人群的平均差异，不能预测具体个人睡觉钟点 |
 | D12 | P020 DIETFITS 随机试验；P017 PRS 综述 | PLINK2、bigsnpr、pgsc_calc | **DIETFITS 未支持预设基因型能挑选较优减重饮食**，必须收录阴性证据 |
-| D13 | P017 PRS 综述；P022 All of Us 2026 | PLINK2、bigsnpr、pgsc_calc | 多基因评分不决定个人运动天赋或训练计划 |
+| D13 | P017 PRS 综述；P022 All of Us 2026；**P039 活动行为 GWAS 703901 人；P040 HERITAGE VO₂max 训练 473 人；P041 Predict-HIIT n507** | PLINK2、bigsnpr、pgsc_calc | 活动/久坐行为 ≠ 身体素质 ≠ 训练反应；HERITAGE 21 SNP 样本内 49% 方差解释率**不是独立预测准确率**，不能生成个人训练处方 |
 | D14 | **P023 OptiType（HLA-I）** | samtools、bcftools、**OptiType** | 已找到 HLA-I 的直接 WGS 方法与代码；**不覆盖 HLA-II 或真实临床确证** |
 | D15 | **直接测量证据缺口：0** | **普通 WGS 本身不够** | 不伪造甲基化/表达或微生物测量 |
 
@@ -79,7 +79,11 @@
 
 **许可分类重大修订**：GitHub 仓库存在性目前 39/39，但其中至少 T16/T39（PolyForm Strict）及 T38（非商用免费/需额外授权）不是可自由商用/再分发的普通开源许可证。因此“39 个可直接复用开源项目”这一表述不成立，所有候选必须先以 LICENSE 审计分组。真实程序运行仍 NOT_RUN。
 
-## F. 用 4 个实例检验这套框架是否真正成立
+## F. G6 现代 IBD/睡眠/运动论文—源码适配核查
+
+新增 [G6 三方向完整审计](cross-domain-evidence-audit-g6.md)。与此前 G4/G5 不同，本轮**未增加 GitHub 仓库数量**，而是对 hap-IBD、PLINK2、pgsc_calc 的真实输入/许可证及现有论文可迁移性进行核查。新增 5 篇文献 P037–P041，使收录论文 41 篇、工具仍 39 个。D05 的人际 IBD 需要多人授权及相位基因型，单人 HBD 不等于发现近亲；D11 需区分晨晚型与睡眠时长；D13 活动习惯 GWAS 不能解释具体训练方案反应。
+
+## G. 用 4 个实例检验这套框架是否真正成立
 
 **疾病**：高质量 SNV/Indel → [VEP 原文 P004](paper-register.md) 变异效应注释 → [ACMG P012](paper-register.md) 证据分级 → Exomiser 提出候选疾病基因 → 还需表型与临床确证。不是 `VCF → AI → 确诊`。
 
@@ -89,7 +93,7 @@
 
 **营养的反证**：[2018 DIETFITS 随机试验](https://doi.org/10.1001/jama.2018.0245) 609 名参与者的预设基因型模式**未显著改变**低脂/低碳饮食减重结果。不能只找支持营销报告的正向论文，负结果也应进入证据矩阵。
 
-## G. 最小数据模型与后续复现策略
+## H. 最小数据模型与后续复现策略
 
 对每个实际研究问题保留这几个字段即可，无须额外开发项目管理系统：
 
