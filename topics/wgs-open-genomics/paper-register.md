@@ -1,6 +1,6 @@
 # TOPIC-017｜文献注册表：已核查首轮论文与研究层级
 
-> 更新日期：2026-11-21；**收录 25 篇不重复的具体论文/指南/综述**，为主动策展样本，绝不代表该领域全部论文数。各条至少依据 DOI 或期刊/学会/官方项目页面核对题录、摘要或研究方法；**未逐篇完成全文系统评价**。
+> 更新日期：2026-11-21；**收录 36 篇不重复的具体论文/指南/综述**，为主动策展样本，绝不代表该领域全部论文数。各条至少依据 DOI 或期刊/学会/官方项目页面核对题录、摘要或研究方法；**未逐篇完成全文系统评价**。
 > 论文 P-ID 在其他维度可被多次引用；统计总篇数时必须按 DOI 去重。来源类型分为工具方法、临床指南、群体研究、综述、随机试验、技术评测，不能把它们视作同等证据。
 
 | 文献 ID | 研究方向 | 一手论文或标准 | 年份 | DOI | 与个人 WGS 的关系/警示 |
@@ -30,8 +30,21 @@
 | P023 | HLA-I 分型 / WGS | OptiType: precision HLA typing from next-generation sequencing data | 2014 | [10.1093/bioinformatics/btu548](https://doi.org/10.1093/bioinformatics/btu548) | HLA Class-I 的 NGS WGS/WES/RNA 方法；非 HLA-II 或临床确证 |
 | P024 | 复杂药物基因 WGS | StellarPGx: A Nextflow Pipeline for Calling Star Alleles in Cytochrome P450 Genes | 2021 | [10.1002/cpt.2173](https://doi.org/10.1002/cpt.2173) | 109 份 GeT-RM WGS、CYP2D6 一致性试验；需 BAM/CRAM 及 CNV/SV |
 | P025 | PRS 计算与祖源归一化 | Enhancing the Polygenic Score Catalog with tools for score calculation and ancestry normalization | 2024 | [10.1038/s41588-024-01937-x](https://doi.org/10.1038/s41588-024-01937-x) | pgsc_calc 官方方法；普通 WGS variants-only VCF 当前不能直接输入且需修复参考位点 |
+| P026 | SV benchmark | NIST GIAB germline large DEL/INS benchmark | 2020 | [10.1038/s41587-020-0538-8](https://doi.org/10.1038/s41587-020-0538-8) | 19 类方法整合，12,745 ≥50 bp DEL/INS；不能代表所有 SV 类别 |
+| P027 | SV representation | Truvari structural variant comparison | 2022 | [10.1186/s13059-022-02840-6](https://doi.org/10.1186/s13059-022-02840-6) | 比较/合并 SV VCF，过度合并损失独立等位信息 |
+| P028 | STR repeat expansions | ExpansionHunter graph-based repeat genotyping | 2019 | [10.1093/bioinformatics/btz431](https://doi.org/10.1093/bioinformatics/btz431) | 已定义 STR 位点的短读长检测；受 read length、catalog 约束 |
+| P029 | mtDNA heteroplasmy | MToolBox mtDNA heteroplasmy pipeline | 2014 | [10.1093/bioinformatics/btu483](https://doi.org/10.1093/bioinformatics/btu483) | WGS/WES mtDNA，NUMTs、异质性比例及 CI；旧参考/依赖风险 |
+| P030 | mtDNA population | gnomAD mitochondrial DNA variation in 56,434 | 2022 | [10.1101/gr.276013.121](https://doi.org/10.1101/gr.276013.121) | 56,434 WGS；NUMTs/污染/低 heteroplasmy 假阳性及组织限制 |
+| P031 | mtDNA WGS sensitivity | WGS vs mitochondrial targeted-seq comparison | 2021 | [10.1016/j.mito.2021.01.006](https://doi.org/10.1016/j.mito.2021.01.006) | 1,499 样本，WGS 对靶向 mtDNA 技术的条件性比较 |
+| P032 | mtDNA caller benchmark | Benchmarking multiple mtDNA variant callers | 2022 | [10.3389/fgene.2022.692257](https://doi.org/10.3389/fgene.2022.692257) | 合成已知 heteroplasmy 真值比较；caller/阈值真实差异 |
+| P033 | reproductive carrier practice | ACMG carrier screening tier-based practice resource | 2021 | [10.1038/s41436-021-01203-z](https://doi.org/10.1038/s41436-021-01203-z) | Tier3、阴性残余风险、夫妻/伴侣检测及临床咨询 |
+| P034 | carrier lab standards | ACMG prenatal/preconception carrier laboratory standard | 2024 | [10.1016/j.gim.2024.101137](https://doi.org/10.1016/j.gim.2024.101137) | 多种检测方法/技术标准；不能以一份 WGS VCF 替代所有位点 |
+| P035 | variant rule interpretation | InterVar clinical variant evidence assistance | 2017 | [10.1016/j.ajhg.2017.01.004](https://doi.org/10.1016/j.ajhg.2017.01.004) | ACMG 2015 规则自动/人工调整；源码非商业使用限制 |
+| P036 | carrier complex locus negative evidence | Independent Gauchian GBA1 genotyping critique | 2025 | [10.1038/s42003-025-08059-y](https://doi.org/10.1038/s42003-025-08059-y) | 对罕见及重组变异漏检的真实反证；参考版本与列表依赖 |
 
 ## 本轮重点审计
+
+- [G5 D02/D04/D08：11 篇新增论文与指南、5 个源码仓库许可及 WGS 数据准入核查](cross-domain-evidence-audit-g5.md)。
 
 - [G4 代表领域原始论文 × 真实源码输入与许可核查](cross-domain-evidence-audit.md)：Exomiser、PharmCAT + StellarPGx、pgsc_calc、DIETFITS、ancIBD 与 OptiType；区分论文队列数据与消费者 WGS 是否可直接迁移。
 
@@ -41,7 +54,7 @@
 - **临床指南**：指向临床实验室确认、专业解读和风险沟通；并非消费者报告即能作诊断。
 - **干预型研究**：随机对照试验优先于单纯 SNP 相关用于评估“按基因制定饮食/睡眠干预是否有效”；P020 是应被保留的负结果。
 
-## 数据库/技术标准（以下**不计入 25 篇论文**）
+## 数据库/技术标准（以下**不计入 36 篇论文**）
 - [NIST GIAB](https://www.nist.gov/programs-projects/genome-bottle) 标准样本与 v4.2.1/v5.0q（HG002 需记录明确的版本、BED、GRCh38 reference）。
 - [EBI GWAS Catalog](https://www.ebi.ac.uk/gwas/) 论文关联、祖源、样本数、summary stats；查询结果按 study accession 去重。
 - [PGS Catalog](https://www.pgscatalog.org/) 评分模型版本、目标性状、开发/验证人群；不是 PRS 临床证据保证。
