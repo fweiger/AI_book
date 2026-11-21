@@ -16,3 +16,5 @@
 - **2026-11-21，v0.1.6（Draft）**：按 G6 唯一下一步完成 [G7 D01/D15 15 域一致性审计](cross-domain-evidence-audit-g7.md)，新增 [WGS 最小交付/采购数据质量合同](wgs-data-acceptance-contract.md)，核对 GIAB CMRG、ACMG 临床测序标准、PCR-free 库构建和跨模态 assay；补齐 Gauchian 2025 质疑与正式回应两方证据。新增 6 个确有用途的 DOI/标准 P042–P047；当前 **15 域 / 47 篇已登记论文 / 39 个 GitHub 源码候选**，未因统计而新增软件。结构检查与引用核对不能代表真实个人/公开 WGS E2，后者仍 NOT_RUN。
 
 - **2026-11-21，G8 / Draft**：31.5 有真实 Docker 与 GCS/NCBI 访问，原 HG002 chr20 8 项公开数据全部下载完成，本地 SHA-256 `-c` 全通过且 BAM GCS 官方 MD5 一致。基于真实失败改进脚本 `curl --continue-at -`。DeepVariant/hap.py 容器拉取两次有限尝试未最终完成，相关 Jobs 均已终止；`DATA_ADMISSION_PASS`，**实际算法基准 `NOT_RUN`**。依据 [G8 运行证据](sessions/2026-11-21-hg002-public-data-admission-g8.md) 而不是复述早期环境阻断。
+
+- **2026-11-21，G9 / Draft**：G8 公开 HG002 8 文件及 MD5/SHA 数据不重复下载；31.5 在系统外临时目录使用 bcftools 1.19/htslib 1.19，下载 RTG 官方轻量版 3.13，真实执行 chr20 2–3 Mb `mpileup | call` 和 GIAB v4.2.1 confident BED 内 `vcfeval`：SNP F1 **0.9962**、Indel F1 **0.9367**、总 F1 **0.9880**（无额外后验 QUAL cutoff，非全 WGS）。原始真实调用 1,899 变异，二次通过新 PR 版本脚本生成相同变异记录正文 SHA/评分摘要 SHA，AC-05 最小公开 E2 **PASS**；DeepVariant/hap.py 仍 NOT_RUN，不以此替代或转化成临床结论。详见 [G9 真正实验与源码复现证据](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)。
