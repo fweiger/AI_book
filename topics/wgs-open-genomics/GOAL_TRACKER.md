@@ -15,7 +15,7 @@
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
 - 目标漂移：`D0 ALIGNED`（G11 直接执行原 §7 四领域输入合同审计，不改变 Goal/Scope/AC）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`SYNCED`（G1–G11 历史事件已 GET 回读，G11 唯一进度事件 [#7068596093](https://github.com/fweiger/AI_book/issues/72#issuecomment-7068596093)，同 key 仅一条）
+- Issue 同步：`SYNCED`（G1–G12 事件已回读；G12 唯一事件 [#7069462498](https://github.com/fweiger/AI_book/issues/72#issuecomment-7069462498)，同 key 仅 1 条）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -112,18 +112,17 @@
 | 2026-11-22/G12 | D04 Haplogrep3 v3.3.2 官方 H100 VCF CLI 功能回归；固定 FU rCRS 1.3 后主输出/QC 与官方 expected 逐字节匹配；树版本改变质量分数；独立准确率 E2 NOT_RUN | AC-02/04 PARTIAL（功能回归 PASS） | [G12 运行日志](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md) | D0 ALIGNED/CONSISTENT，G12 事件待同步 | D04 上游 Mutserve v2.0.3 官方 CRAM 有界功能回归 |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：`AI_book#72:AC02-03-04:20261122-g12-haplogrep3-h100-cli-functional`
-- **当前 writer_owner**：`chatgpt-topic017-g12-20261122`
-- **当前 write_state**：`CLAIMED`（G12 报告已提交，Tracker 声明待发布唯一 Issue 事件并回读）
-- **Tracker 写前 blob SHA**：`b4a183e51bfbf5af5567dadc6b7c651e6953602e`；**PR head 写前**：`8cee164c166c6aa892836dd4afb7d12371a4a631`；G12 报告 commit：`8cee164c166c6aa892836dd4afb7d12371a4a631`。
-- **旧 Writer**：G11 已完成并清理；本轮写前 GET 为 none/SYNCED，无未决 CLAIMED。
-- **研究状态**：D0 ALIGNED；原 Issue Goal/Scope/Non-goals/AC 和 requirements_revision=1 未变；G12 CLI 功能 PASS 不升级独立准确率 E2。
+- **当前 active_event_key**：none（G12 `AI_book#72:AC02-03-04:20261122-g12-haplogrep3-h100-cli-functional` 已完成）
+- **当前 writer_owner**：none（G12 Writer `chatgpt-topic017-g12-20261122` 已完成）
+- **当前 write_state**：`SYNCED`（[G12 唯一事件 #7069462498](https://github.com/fweiger/AI_book/issues/72#issuecomment-7069462498) GET 回读，同 `event_key` 仅 1 条；发布前 Tracker blob SHA `2f2a1a43afc3b8bb041df748aa69e3ea1cad4c10`）
+- **单 Writer 交接**：G12 唯一 Writer 发布后清理；G11/G10 均已完成并清理；无未决 CLAIMED。
+- **证据路径**：[G12 Haplogrep3 H100 CLI 功能复现](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md)；原始 GitHub release/test/tree SHA、实际命令、exit code、输出 SHA、expected 比对和失败边界均记录。
 
 | 检查项 | 当前值 | 证据 | 结果 |
 |---|---|---|---|
-| 原 Issue/Goal/AC/协议 | #72 requirements_revision=1；锁定 V1.2.2 commit `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` | GET Issue + 锁定 ENTRY/CONTINUE | CONSISTENT |
-| G12 真实增量 | Haplogrep3 v3.3.2 H100 官方 VCF CLI exit=0；main/QC 输出逐字节匹配 expected；tree digest 已核；独立 accuracy E2 NOT_RUN | [G12 报告](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md) | FUNCTIONAL PASS / E2 NOT_RUN |
-| 当前唯一下一步 | §7 Mutserve v2.0.3 官方 CRAM 功能回归，有索引停止条件；完成后回到跨域优先级 | §7 / §9 | D0 ALIGNED |
-| G12 Issue 同步 | 新 event_key 声明，评论待发布/回读 | 本次 CAS claim | ISSUE_SYNC_PENDING |
+| 原 Issue Goal/Scope/AC / 协议 | #72 requirements_revision=1；V1.2.2 锁定 commit `f0e5ccb90c54265dcd07abb9a975c903eb031ccf` 不变 | GET Issue + 锁定 ENTRY/CONTINUE | CONSISTENT |
+| G12 真实增量 | Haplogrep3 v3.3.2 官方 H100 VCF CLI exit=0；FU rCRS 1.3；主/QC 输出逐字节匹配；独立准确率 E2 NOT_RUN | [G12 报告](sessions/2026-11-22-haplogrep3-h100-cli-functional-g12.md) | FUNCTIONAL PASS / E2 NOT_RUN |
+| 当前唯一下一步 | §7 Mutserve v2.0.3 官方 CRAM 上游功能回归，有索引/indel停止条件；完成后回到跨域优先级 | §7 / §9 | D0 ALIGNED |
+| G12 Tracker 与 Issue | 稳定 key 唯一 #7069462498，Writer 声明与发布评论一致，最终清理 | [#7069462498](https://github.com/fweiger/AI_book/issues/72#issuecomment-7069462498) + 最新 Tracker | SYNCED |
 
-> 未完成 Issue 唯一事件回读和 Tracker 清理前，不称本轮 SYNCED。
+> PR #73 仍为 Draft，未合并；GitHub 结构 CI 不等于 Haplogrep3 科学准确率验证。
