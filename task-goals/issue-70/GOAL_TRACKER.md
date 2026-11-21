@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮聚焦原AC-04祛魅/自主论证与原AC-03 AI论文方法学，批准Goal/Scope/AC不变）
-- 状态一致性: `CONSISTENT`（已将Issue首页旧M1阶段修复为与Tracker一致的M2，实际§14/初轮资料与批准Goal/AC相容；本轮事件待同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上轮四条件事件已同步，本轮哲学原典/AI实证增量将按单Writer发Issue评论并回读）
+- 状态一致性: `CONSISTENT`（Issue首页阶段已修复M2并回读，§14/初审§7/本轮唯一Issue事件/Tracker一致）
+- Issue 同步状态: `SYNCED`（本轮康德/韦伯+QJE/CHI事件 #7057018089 已发布、GET回读同键仅1条，学术审稿仍NOT_RUN）
 
 ## 1. 批准目标基线
 
@@ -54,7 +54,7 @@
 - **AI原始实证复核**：[QJE 2025《Generative AI at Work》](https://doi.org/10.1093/qje/qjae044)正式同行评议全文，**5172客服、约300.6万次对话、分批部署的DiD估计+0.301问题/小时、约15.2%**，并非5172人完整随机实验；早期约50人RCT试点控制组原始信息不足。**测任务生产效率，不测自主认知**。[CHI 2025《Impact of GenAI on Critical Thinking》](https://doi.org/10.1145/3706598.3713778)与Microsoft Research官方摘要：Prolific **319位知识工作者/936个清洗后自报任务例**，**555/936自报进行过某种批判性思考**；对AI任务信心较高与较少自报思考投入相关，对自我任务信心较高与较多思考投入相关；**非随机因果实验、不直接测长期独立判断能力**。
 - **正反论证具体结论**：工具/信息提高知识获取和任务绩效有局部实证，**“AI使人独立判断能力提高/降低”的净因果不成立为既定事实**。AI被信任与更少自报思考投入的相关性支持“新依赖风险值得研究”；但认知负担降低也可能是效率/任务重分工，不足以证明能力退化。康德书籍/专家代替思考的警惕只是**哲学原典的论证**，不能拿来冒充当代实验。
 - **风险与未完成**：社会主体性变化Y1没有统一操作定义或群体追踪基线；CHI自报偏差/同人多任务依赖；QJE DiD的平行趋势/经理选择上线时机等识别假设，不能外推所有行业。宏观“AI集体意识革命”、解释权已分散、历史生产力最大驱动均**UNKNOWN**。独立学术QA/审稿**NOT_RUN**，Draft PR#71**未合并**。
-- **状态修复**：原 Issue #70首页仍写M1而Tracker早已为M2；已依据新旧GitHub事实将Issue状态行更正为 **OPEN / M2_COMPETING_CAUSAL_MODELS_PARTIAL**，保留原批准Goal/Scope/AC不变；本轮声明D0/CONSISTENT，当前GitHub进度事件尚待唯一Writer同步。
+- **状态修复**：原 Issue #70首页旧M1与Tracker M2存在进度不一致；已将Issue状态行更正为 **OPEN / M2_COMPETING_CAUSAL_MODELS_PARTIAL**并GET确认，Goal/Scope/AC未改；本轮事件 #7057018089 已独立GET回读同键恰好1条，D0/CONSISTENT。
 
 ## 5. 阻断与未受影响工作
 
@@ -123,15 +123,15 @@
 
 | 2026-11-21 / M2-four-conditions | 对三个已核历史案例新增F/A/M/P四要素证据矩阵、H1–H4竞争模型和四项真正针对作者原解释的压力测试；新核1415康斯坦茨决议英译、剑桥西方教会大分裂公开引言、1423乌菲齐宗教画原物、约1455国会图书馆古腾堡圣经；区别权威争议与大众觉醒、媒体技术先后/传播组织调整 | AC-04 PARTIAL（四条件史料争议已有交付；祛魅/觉醒原典尚未核），兼AC-01 | [同一报告 §13](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056940762)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:four-conditions-evidence-20261121` | D0/CONSISTENT；Y1与主因UNKNOWN，独立审稿NOT_RUN，事件待同步 | 概念原典“祛魅≠觉醒”+两篇AI研究方法边界 |
 
-| 2026-11-21 / M2-kant-weber-ai-originals | 直接读康德1784德文、韦伯1919初版德文相关段，区分启蒙/祛魅/社会自主；QJE2025最终论文5172人客服、约300.6万对话、DiD+0.301/小时15.2%非大样本RCT；CHI2025 Prolific319人936任务、555自报思考，AI信任与较少自报投入相关非因果；正反论证支持“提高任务绩效≠自动提高独立判断”；修复Issue首页M1↔TrackerM2阶段冲突 | AC-03/04 PARTIAL（实证/概念来源核验PASS，独立审稿NOT_RUN），AC-05 QA待做 | [比较报告§14](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) / [初轮审计§7](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:kant-weber-ai-empirical-20261121` | D0 / CONSISTENT（状态已纠正）；宏观Y1改变UNKNOWN；事件待同步 | AC-05来源/因果论断QA，独立审核仍NOT_RUN |
+| 2026-11-21 / M2-kant-weber-ai-originals | 直接读康德1784德文、韦伯1919初版德文相关段，区分启蒙/祛魅/社会自主；QJE2025最终论文5172人客服、约300.6万对话、DiD+0.301/小时15.2%非大样本RCT；CHI2025 Prolific319人936任务、555自报思考，AI信任与较少自报投入相关非因果；正反论证支持“提高任务绩效≠自动提高独立判断”；修复Issue首页M1↔TrackerM2阶段冲突 | AC-03/04 PARTIAL（实证/概念来源核验PASS，独立审稿NOT_RUN），AC-05 QA待做 | [比较报告§14](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) / [初轮审计§7](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057018089)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:kant-weber-ai-empirical-20261121` | D0 / CONSISTENT（状态已纠正）；宏观Y1改变UNKNOWN；事件待同步 | AC-05来源/因果论断QA，独立审核仍NOT_RUN |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:kant-weber-ai-empirical-20261121`（本轮逻辑增量的CLAIMED进度键）
-- writer_owner: `chatgpt-topic016-kant-weber-20261121`
-- write_state: `CLAIMED`（须GET确认唯一Writer和同键评论0条再发布）
+- active_event_key: `none`（本轮逻辑事件已发布回读，历史键见§9和最新事件）
+- writer_owner: `none`（本轮Writer发布完毕，无待发事件）
+- write_state: `SYNCED`（#7057018089 已GET核对同event_key仅1条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:four-conditions-evidence-20261121` / [GitHub Issue评论 #7056940762](https://github.com/fweiger/AI_book/issues/70#issuecomment-7056940762)；本事件已GET回读唯一。SYNCED只表示GitHub进度/文件一致，不等于因果结论得到学术验收。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:kant-weber-ai-empirical-20261121` / [GitHub Issue评论 #7057018089](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057018089)；该事件已GET回读同键恰好1条。SYNCED只表示文件和评论进度一致，不等于研究已获独立学术验收。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -140,4 +140,4 @@
 | §5 局部阻断 | AI任务级论文不能代表群体觉醒，独立评审无证据仅阻断学术验收 | 本文件§5及§14 | PASS（影响边界） |
 | §6/7 | Goal/AC不变，§14已完成原典方法学核对，唯一下一步AC-05来源及推论QA | §6/7 | PASS（主线重裁决） |
 | §7 与 §9 | 当前唯一下一步AC-05来源/逻辑QA，§9为不可改写历史 | 本文件 | PASS（权威一致） |
-| Issue 与 PR/Tracker 回链 | Issue首页阶段M1已纠为M2；§14与初审§7已回读，本轮事件待发布 | #70 / PR#71 / Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | Issue首页已M2、§14与初审§7、PR#71及唯一Issue评论均可回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057018089) | `SYNCED` |
