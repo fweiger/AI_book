@@ -1,6 +1,6 @@
-# TOPIC-017｜34 个已核实 GitHub 开源项目：问题、文件、输出和局限
+# TOPIC-017｜39 个 GitHub 源码仓库候选：功能、数据格式、许可证与研究限制
 
-> 2026-11-21 使用已连接 GitHub 仓库元数据逐一核实存在，**原始 32/32 与 G4 新增 2/2 的仓库存在性 PASS**；**运行测试、许可证适配、性能基准仍 NOT_RUN**。本目录只是经过确认的候选池，不是 GitHub 全量统计。高质量 WGS 的投入应放在原始数据质量和分析复现，不要仅按 stars 排序。
+> 2026-11-21 使用已连接 GitHub 仓库元数据逐一核实存在，**原始 32/32、G4 新增 2/2、G5 新增 5/5 的仓库存在性 PASS**；**实际 WGS 运行与性能基准仍 NOT_RUN**。**存在 ≠ 全部是 OSI 开源或可商用/修改**：部分已核出 PolyForm Strict 或非商业使用限制，具体请见 G5 许可审计。本目录只是经过确认的候选池，不是 GitHub 全量统计。高质量 WGS 的投入应放在原始数据质量和分析复现，不要仅按 stars 排序。
 
 ## 基础流程/质控/基准（12）
 
@@ -26,7 +26,7 @@
 | 13 | [Illumina/manta](https://github.com/Illumina/manta) | WGS mapped reads | SV/Indel calling | 仓库已归档；维护/兼容风险 |
 | 14 | [dellytools/delly](https://github.com/dellytools/delly) | BAM/CRAM | SV 调用 | 短读长复杂区域受限 |
 | 15 | [etal/cnvkit](https://github.com/etal/cnvkit) | BAM/read coverage | CNV 分析 | 须确认 WGS 模式和归一化参考 |
-| 16 | [Illumina/ExpansionHunter](https://github.com/Illumina/ExpansionHunter) | WGS reads | 目标重复位点检测 | 短读长扩增大小可能不准确 |
+| 16 | [Illumina/ExpansionHunter](https://github.com/Illumina/ExpansionHunter) | BAM/CRAM + 目标 repeat catalog | 已知重复扩增位点检测 | **PolyForm Strict 1.0.0：源码可见但分发/修改受到限制，不是常见的自由开源许可证**；短读长扩增大小可能不准 |
 
 ## 父系与母系（4）
 
@@ -73,13 +73,25 @@
 
 > 分组说明：T33 同属药物 D09，T34 属于 HLA-I D14；新增原因是发现对个人 WGS 有实质意义的原先功能缺口，而非追求工具数。6 个旧类别 32 项不变，34 项总数为 32+2。**软件实际执行仍 NOT_RUN。**
 
+## G5 新核验：SV/mtDNA/隐性遗传病（5）
+
+| # | GitHub 项目 | WGS 实际输入 | 研究能力（与论文关联） | 实际许可证 / 最重要限制 |
+|---:|---|---|---|---|
+| 35 | [ACEnglish/truvari](https://github.com/ACEnglish/truvari) | SV VCF.gz + 匹配 reference FASTA | SV 比较、基准验证、合并；[P027](https://doi.org/10.1186/s13059-022-02840-6) | **MIT**；**SV 比较工具，不是 BAM→SV caller** |
+| 36 | [mitoNGS/MToolBox](https://github.com/mitoNGS/MToolBox) | WGS/WES reads + mtDNA/核参考 | mtDNA 变异、异质性比例与 CI、单倍群；[P029](https://doi.org/10.1093/bioinformatics/btu483) | **GPL-3.0**；旧版核参考、NUMTs/依赖需严格审查 |
+| 37 | [seppinho/mutserve](https://github.com/seppinho/mutserve) | **已排序且索引 BAM/CRAM** | 线粒体同质/异质变异→VCF/txt；[P032 比较论文](https://doi.org/10.3389/fgene.2022.692257) | **MIT**；官方说明 VCF **暂不包含 indel**；`--level 0.01` 不是 1% 准确率 |
+| 38 | [WGLab/InterVar](https://github.com/WGLab/InterVar) | VCF/ANNOVAR 格式及注释库 | ACMG/AMP 2015 证据辅助评级 + 手动复核；[P035](https://doi.org/10.1016/j.ajhg.2017.01.004) | **仅明确非商业使用免费，商用需另授权**；ANNOVAR/OMIM 依赖另受许可约束 |
+| 39 | [Illumina/Gauchian](https://github.com/Illumina/Gauchian) | **30×+ WGS BAM/CRAM** + genome build | GBA1/GBAP1 特殊假基因区域 CNV/重组研究；[P036 独立负证据](https://doi.org/10.1038/s42003-025-08059-y) | **PolyForm Strict 1.0.0**，修改/分发限制；独立论文发现漏检，不可将阴性结果等同零携带风险 |
+
+> **许可证审计门槛**：严格区分代码公开可查的 `SOURCE_AVAILABLE` 与可自由修改/再分发的 `OPEN_SOURCE_LICENSE_VERIFIED`。T16 ExpansionHunter、T39 Gauchian 属于 PolyForm Strict；T38 InterVar 非商业使用免费。这些项目可以作为科研方法参考，但**不能不经许可直接复制进自研商业软件**。其他仓库未经 LICENSE 核查不得自动标为可无条件复用。详见 [G5 实质审计](cross-domain-evidence-audit-g5.md)。
+
 ## 不同研究需求的最小组合
 - **先看 WGS 实测质量**：FASTQ → fastp/FastQC → BWA-MEM2 → samtools/mosdepth → MultiQC；必要时以 nf-core/sarek 执行。
 - **标准 SNV/Indel**：DeepVariant / GATK → bcftools norm → GIAB/hap.py 对照。
 - **父系**：从 Y 染色体 callable regions 出发 → Yleaf、Y-LineageTracker/yhaplo 交叉核对，非计算工具自动证明历史名人。
-- **母系**：mtDNA reads/variants → Haplogrep3；警惕 NUMTs 和异质性。
+- **母系**：mtDNA reads/variants → Mutserve/MToolBox（异质性 calling，分程序输出）→ Haplogrep3（单倍群）；核查 NUMTs、参考版本、末端 indel 以及异质性检出阈值。
 - **古 DNA**：nf-core/eager 专门处理古样本，不应给现代个人样本机械套用；群体 qpAdm / ancIBD 需公共样本矩阵。
-- **健康**：Ensembl VEP/Exomiser/PharmCAT 生成候选，依 ClinVar/ClinGen、ACMG/CPIC 指南与临床专业复核。
+- **健康及携带者**：Ensembl VEP/Exomiser/PharmCAT/InterVar 提供不同目标的辅助证据；**InterVar 不保证自由商业复用且需临床人工判读**；隐性携带者阴性结果还需考虑复杂基因、补充技术和残余风险。
 - **PRS 与睡眠**：PGS Catalog 与合适的 GWAS/LD/祖源数据；**pgsc_calc 当前不能原生读取普通 WGS variants-only VCF**，需要生成模型可匹配、保留纯合参考位点的基因型输入，再评估位点 match rate；强调模型校准与外部验证。
 
 ## 未来逐仓深度核查字段
