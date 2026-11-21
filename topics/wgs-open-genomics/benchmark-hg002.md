@@ -65,3 +65,14 @@ bash scripts/run-giab-hg002-chr20.sh run
 - 原脚本的 `curl` 已修补为 `--continue-at -`，一次真实中断和恢复测试证明不会重下已写入的 .part 文件；不更改 HG002、reference、callset 或标准版本。
 - **新局部阻断**：DeepVariant `google/deepvariant:1.10.0` 与 hap.py `jmcdani20/hap.py:v0.3.12` Docker 拉取有限尝试后没有最终 digest，已手动停止并 GET 观察终态；当前 `FETCH/INPUT_QC PASS`，`DEEPVARIANT/HAP.PY REAL_BENCHMARK NOT_RUN`。
 - 严禁用论文结果/他人仓库 scoreboard 或 `bash -n` 宣称本项目 SNP/INDEL 精度。后续避免无界 Docker/代理排障；在现成授权环境尝试低风险替代 E2 入口或先完善医学证据体系。
+
+## G9 独立原生工具 E2 实测：AC-05 最小样本已通过（2026-11-21）
+
+**注意本文件 G2/G8 先前“DeepVariant/hap.py 未运行”仍为真实历史事实；G9 是独立的新测试方案，不能替代 DeepVariant 精度。**
+
+- [G9 原始日志、方法、基准统计和复现哈希](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md) · [GitHub 可复现脚本](scripts/run-hg002-chr20-bcftools-rtg.sh)
+- 31.5 Linux 使用前次经官方 BAM MD5 及全部 SHA256 认证的 HG002 35× chr20 BAM；仅提取 `chr20:2000000-3000000`，NIST v4.2.1 高可信 BED 覆盖 **965,991 bp**（166 intervals）。
+- **bcftools 1.19 + htslib 1.19** 对真实 BAM 直接 mpileup/call 得到 **1,899** 记录；**RTG Tools 3.13 vcfeval** 独立 haplotype-aware 评分，全部分项来自真实 `snp_roc.tsv.gz`/`indel_roc.tsv.gz` 的完整输入末行。
+- 没有额外 post-hoc 质量分数筛选：**SNP Precision/Recall/F1 = 0.9951/0.9972/0.9962**，**Indel = 0.9467/0.9270/0.9367**，总计 **0.9886/0.9874/0.9880**。只能在此公开 1Mb 参考设置内解释。
+- **第二次从 PR 下载源码并验证 Git blob** 后，独立重新运行 Exit 0、生成完整日志与 SHA，**变异记录正文 hash 和 RTG summary.txt SHA 与首次一致**，不是模拟执行、缓存 scoreboard 或引用别人的实验结论。
+- **验收**：AC-05 公共数据最小可复现 E2 实验 **PASS（G9 局限）**；初始 DeepVariant/hap.py 方案仍 `NOT_RUN`，全 WGS、chrY、药物基因、SV、临床准确率 `NOT_TESTED`。下一阶段回到跨 15 域论文/工具/数据准入体系，不再扩建局部容器排障。
