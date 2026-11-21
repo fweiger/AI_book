@@ -9,7 +9,7 @@
 - 所属源仓库: `fweiger/AI_book`
 - 研究入口: [首轮核查草稿](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)
 - 本文件路径: `task-goals/issue-70/GOAL_TRACKER.md`
-- 当前阶段: `M2_COMPETING_CAUSAL_MODELS_PARTIAL`（PR#71的AC-05独立审稿交接包已准备；授权独立审阅者仍未确认，正式Review未运行）
+- 当前阶段: `M2_COMPETING_CAUSAL_MODELS_PARTIAL`（AC03新增两项撤去AI后的随机对照证据，AC05独立审稿人仍未确认）
 - 创建/最近更新: 2026-11-21
 - 批准需求: `r0-20261121-user`
 - 协议路径/分支: `task-center/v1.2.2/ENTRY.md` @ `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
@@ -17,9 +17,9 @@
 - 首次观察分支 HEAD: `f0e5ccb90c54265dcd07abb9a975c903eb031ccf`（后续新 HEAD 不自动升级）
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
-- 目标漂移: `D0`（本轮只核审稿路由并修复PR过时说明，直接推进原AC-05，不修改目标/权限）
-- 状态一致性: `CONSISTENT`（PR正文旧下一步已修、当前Issue/Tracker均M2，独立审核交接材料与唯一GitHub事件已回读）
-- Issue 同步状态: `SYNCED`（AC-05审稿交接事件 #7057240119 已GET核对，同event_key仅1条；实际独立审稿仍NOT_RUN）
+- 目标漂移: `D0`（审稿门槛无新路由后，界定局部阻断并直接补原AC03的客观无AI测试证据；未改Goal/Scope/AC）
+- 状态一致性: `CONSISTENT`（Issue/Tracker维持M2，PR新补§16审稿要点与报告一致；AC05独立审核仍NOT_RUN，当前事件待发布）
+- Issue 同步状态: `ISSUE_SYNC_PENDING`（上轮审稿路由事件已SYNCED；当前AC03两原始随机实验研究增量等待单Writer发布和回读）
 
 ## 1. 批准目标基线
 
@@ -32,7 +32,7 @@
 | --- | --- | --- | --- | --- |
 | AC-01 | 忠实重建四条件与逻辑箭头 | 论点-机制-来源表 | PARTIAL | 首轮 audit §1 |
 | AC-02 | 不少于三组历史对照/时间/反例 | 逐案例来源核对 | PARTIAL | audit §2 |
-| AC-03 | 不少于两份 AI 实证及外推边界 | 原研究样本/方法对照 | PARTIAL（QJE正式出版版与CHI设计/数据已复核；需来源QA及独立审稿） | audit §7 + 报告 §14 |
+| AC-03 | 不少于两份 AI 实证及外推边界 | 原研究样本/方法对照 | PARTIAL（新增2026 Frontiers随机三臂/无AI近迁移，IZA随机AI访问/一周无AI知识复测；来源已读，外推/独立QA未通过） | audit §7 + 报告 §14/§16 |
 | AC-04 | 至少两种替代解释与概念争论 | 反证与反对意见 | PARTIAL（康德/韦伯原典、AI提高自主/形成依赖/任务重分工三竞争论证已形成；独立审核NOT_RUN） | audit §7 + 报告 §13–14 |
 | AC-05 | 草稿+来源账本可回读、PR 审查 | GitHub GET+独立复核 | PARTIAL（内部QA §15完成且错误修正已提交；正式Review=0、独立审核NOT_RUN、PR仍Draft） | 报告 §15 / 初审 §8 / GitHub PR #71 |
 
@@ -45,15 +45,16 @@
 | 阶段 | 预期结果与 AC | 验证 | 状态 |
 | --- | --- | --- | --- |
 | M0 建题 | #70 / AC-05 入口 | GitHub Issue GET | PASS |
-| M1 逐点查证 | 三历史语境原物核查、F/R/Y0/Y1区分、先行/充分/必要/主因条件审计 / AC-01~03 | 同一证据报告§12；原始资料定位及局限清单 | PARTIAL（来源矩阵形成，因果主因未识别） |
+| M1 逐点查证 | 三历史语境资料、AI任务表现/认知观测及新增短期客观无AI结果 / AC-01~03 | 同一报告§12/§14/§16；原始论文设计和效应界限 | PARTIAL（原文可核，宏观意识Y1未知） |
 | M2 讨论与审阅 | 四条件史例/原典及AI研究已形成；AC-05内部QA已修错、独立审核缺口明确 | §13–15与初审§8可读；PR #71正式Review=0、审查线程=0 | PARTIAL（内部QA已做，独立审核NOT_RUN） |
 
 ## 4. 当前检查点
 
-- **本轮实证检查（2026-11-21/AC-05）**：已GET确认[PR#71](https://github.com/fweiger/AI_book/pull/71)作者fweiger、Open/Draft/未合并、正式Review=0、inline review thread=0、requested_reviewers/teams均null；[Issue#70](https://github.com/fweiger/AI_book/issues/70)执行与独立审阅人“未指定”。对PR基分支main及当前研究分支的3个CODEOWNERS位置（.github/、根、docs/）均GET 404，未发现可自动请求审阅的CODEOWNERS。
-- **直接已完成的AC-05交接产物**：读[仓库CONTRIBUTING.md](../../CONTRIBUTING.md)确认外部AI/人类可通过自身GitHub身份提交证据/反对意见，但普通评论不是正式Review。原PR正文仍停留在早期C01–C03“下一步”，与唯一Tracker冲突；已更新同一个PR正文为[§15内部QA审稿交接说明](https://github.com/fweiger/AI_book/pull/71)，列出C05错引、QJE/CHI数据、康德/韦伯与三历史案例核对项，及所需的PASS/PARTIAL/FAIL/UNKNOWN反馈结构，已GET确认旧下一步不再存在且PR仍Draft。
-- **明确阻断**：目前既无已指定的独立审阅者，也无CODEOWNERS自动路由；**不能据此认定不存在任何外部审稿人**，只能标WAITING_AUTHORIZED_REVIEWER / REVIEW_NOT_RUN。未经用户或任务维护者授权不直接指派陌生GitHub用户、不更改Draft、不合并。内部QA§15仍可阅读，但不构成正式独立学术验收。
-- **目标与状态**：原Goal/Scope/AC不变，D0 / CONSISTENT；PR说明修复、阶段M2且AC-05仍PARTIAL。Issue进度 #7057240119 已GET核实只有一条同键事件；独立审核未开始。
+- **本轮实际完成（2026-11-21，AC03）**：按原协议检查[Issue#70](https://github.com/fweiger/AI_book/issues/70)及[PR#71](https://github.com/fweiger/AI_book/pull/71)后，仍无获授权的不同审阅者（PR Open/Draft，正式Review0/threads0、请求审稿人null），保持AC05`WAITING_AUTHORIZED_REVIEWER/NOT_RUN`，**未重复搜索陌生人、未无结果刷评论**。该依赖仅阻断独立审稿/发布，不阻断原AC03中“AI是否影响自身不依赖工具的能力”的研究。
+- **新的真实证据**：在[同一研究报告 §16](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)读2026-09-14同行评议研究[Liu等随机工作流实验](https://pmc.ncbi.nlm.nih.gov/articles/PMC13616768/)（900分组三臂，主分析659：先写再核AI/直接采纳AI/无AI）并查Table2/§3.4/Table4：直接采纳AI组在15–20分钟后的无AI作文推理评分比无AI组低**−0.38/7分（95%CI−0.59~−0.18，p=0.0002）**；无AI对照与先写后用AI组差异在多重比较修正后未显著。**900→659排除241例，三组排除率不均(20.1/23.5/35.4%)，工作流同时改变撰写努力，不能归因于单一心理因素，也不代表长期技能退化**。
+- **独立对照的另一方向**：[Contractor & Reyes IZA工作论文 18792（2026-07）](https://docs.iza.org/dp18792.pdf)已读原PDF及第15、20印刷页截图：一所大学**256报名/211首轮/204次轮**随机允许AI用于学习（测试均不得用AI）。首次独立知识测验估计**+6.7pp≈+0.27SD（p=0.034）**，约1周后**+5.1pp≈+0.27SD（p=0.027）**。**只限单校短期学习、工作论文未同行评议、违规使用辅助的潜在影响**；事后将AI用户分“增强/自动化”并非两种使用模式随机分配。
+- **对原目标的新贡献**：相对之前QJE客服任务生产率和CHI自报问卷，两份随机研究**直接测撤去AI后的实际表现**，有可核因果差异，但研究设计不同、不能合并“AI一定促进/损害自主性”的普遍结论，更不能从近迁移或一周测试推导“觉醒”。历史主因/宏观Y1仍UNKNOWN。所有内容只在同一报告§16新增，PR正文独立审阅清单补了两项必要复核，无新Issue、数据平台或实验项目。
+- **目标偏差/同步**：D0（原AC03实质证据研究，与Goal的“AI是否形成解释依赖或自主判断”一致）、状态CONSISTENT；内部核读PASS（可读论文范围内）、原始AI能力净因果结论PARTIAL，独立审稿NOT_RUN。当前单Writer进度事件仍待GitHub回读。
 
 ## 5. 阻断与未受影响工作
 
@@ -70,7 +71,8 @@
 | 三案例无生产力F前后同口径指标与群体意识Y1独立测量 | AC-02主因/必要充分判断 | AC-04已有哲学原典与任务级AI资料的来源支撑 | 保留UNKNOWN，不把未被证明误作已经证伪 |
 | AI研究估计设计被误读：QJE大样本非随机上线；CHI自报非因果与同人重复任务 | AC-03/04实验效力及外推 | 原论文正文/官方研究页、方法和数据清洗口径可直接复查 | 已修正C06/C07与§14/§15，仍需独立人员复核回归数值和模型界限 |
 | CHI原论文957-11-11=935而正文保留936，剔除项目重叠/笔误未证 | AC-05来源统计一致性局部 | 319人/936描述与930回归仍可按论文明确标注 | SOURCE_ARITHMETIC_UNKNOWN，不能猜一例重叠或手改论文 |
-| PR#71独立Reviewer未明确，正式Review=0、线程=0、Draft；base main三处CODEOWNERS均不存在 | AC-05独立审稿与合并门槛 | §15内部QA及PR正文交接包已GET确认可供独立审核 | WAITING_AUTHORIZED_REVIEWER / NOT_RUN；未获明确审阅者身份/授权前不变Draft/权限/Review |
+| PR#71独立Reviewer未明确，正式Review=0、线程=0、Draft；base main三处CODEOWNERS均不存在 | AC-05独立审稿与合并门槛 | §15内部QA及含新增§16两实验的PR交接包可供独立审核 | WAITING_AUTHORIZED_REVIEWER / NOT_RUN；无授权身份不改变Draft/权限/Review |
+| 2026随机AI认知实验的样本选择、任务混合与作弊风险 | AC03短期无AI任务效果的外推 | §16已获取论文原文、样本与ITT/近迁移数据，其他原AC不阻断 | Frontiers 659/900分组差异、IZA单校211/204且工作论文，审稿时逐项核实；禁推长期普遍变化 |
 | 《青年杂志》1915每月200元经费属事后回忆、原始发行/印刷成本数据未得 | AC-02 出版财务与主要因果判定 | 1915/1918原刊影印有实页、编辑规则及出版商直接核验 | 只标 RETROSPECTIVE/PARTIAL，不能用后出回忆估算实际印数/成本 |
 
 ## 6. 路径调整记录
@@ -86,10 +88,11 @@
 2026-11-21：§15 AC-05内部QA及C05/C06/C07明确错引、统计/变量混淆已修正且回读，Issue #70也改正旧错引；正式Review与线程均0，PR仍Draft，未获得已核实的独立审稿人。下一步唯一动作聚焦**对PR #71取得合规独立审阅路由并由不同审阅人核§15重点分歧**，不重复扩充报告、不自称已被学术评审。
 
 2026-11-21：PR正文旧“下一步C01–C03”与Tracker当前AC-05冲突已修；main/研究分支三处CODEOWNERS均不存在，CONTRIBUTING仅说明外部投稿机制而非指派审稿人。已将§15交接包直接写入PR正文并回读；当前唯一下一步收束为取得可回读且获授权的不同主体独立审稿者身份，未更改批准Goal/Scope/AC。
+2026-11-21：复核Review仍0且无合法已授权身份，对该局部审稿阻断**止损**，在非依赖的原AC03有限补两项随机分配、撤掉AI后的客观能力实验，报告§16和同一PR交接已更新。最大未完成的外部门槛仍为AC05独立审稿路由，故当前唯一动态下一步继续等待授权身份，不另设第二个权威动作。
 
 ## 7. 唯一当前下一步
 
-- **唯一优先动作**：取得用户或任务维护者明确确认的、**不同于PR作者fweiger和当前AI写作者**的独立审阅者身份/授权路由（可追溯GitHub账号或被批准的外部审稿渠道）；随后由该独立主体按[PR#71正文审稿清单](https://github.com/fweiger/AI_book/pull/71)与[报告§15](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)复核C05、QJE 12,295/15.2%、CHI 936/930及任务信心/总体信任、CHI源论文清洗数量疑点、康德/韦伯和三历史案例。没有具体身份/授权证据时不请求Review、不将Draft改Ready。
+- **唯一优先动作**：取得用户或任务维护者明确确认的、**不同于PR作者fweiger和当前AI写作者**的独立审阅者身份/授权路由；之后由该主体按[PR#71正文审稿交接清单](https://github.com/fweiger/AI_book/pull/71)和[研究报告§15–16](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)复核原 C05/QJE/CHI/哲学史料及**新增两项无AI后测随机研究**（Frontiers 659/900及不等排除率、IZA211/204工作论文与学术诚信问题）。没有已确认身份/授权就**不请求Review、不改Draft、不合并、不把作者自查算独立审核**。
 - **AC/未满足验收**：AC-05独立审核仍NOT_RUN；内部QA与交接包完成，未能证明获得独立Reviewer。M2_COMPETING_CAUSAL_MODELS_PARTIAL；原Goal/Scope/AC不变。
 - **预期交付与验证**：可回读的审阅者姓名/身份及权限/授权、其独立意见（Claim ID、原文页码、证据、PASS/PARTIAL/FAIL/UNKNOWN与修改意见），必要修正提交与回读；只有真实不同审阅者的结果才提升独立审核状态。普通Issue/PR评论仍需明确来源，不自动视为正式GitHub Review。
 - **当前阻断证据**：Issue审稿人未指定，PR作者fweiger、Open/Draft、Review/threads均0、requested_reviewers null；base main三处CODEOWNERS均缺；无具体已授权候选账号。不能用无名称/无授权的搜索结果擅自指派。
@@ -132,19 +135,21 @@
 
 | 2026-11-21 / M2-ac05-reviewroute-handoff | 确认PR#71 Open/Draft、作者fweiger、Review与线程0，main/研究分支均无三处CODEOWNERS；CONTRIBUTING外部自有身份投稿可用但非固定Reviewer；已修正PR正文旧“下一步核C01–03”，补§15审稿交接包并GET回读 | AC-05 Reviewer交接资料已准备，正式独立审核NOT_RUN | [PR#71](https://github.com/fweiger/AI_book/pull/71) / [CONTRIBUTING](../../CONTRIBUTING.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057240119)；event_key: AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC05:review-route-handoff-20261121 | D0/CONSISTENT；WAITING_AUTHORIZED_REVIEWER，授权审阅者身份未获确认 | 只取得明确获授权的独立审阅者并核其实质评审 |
 
+| 2026-11-21 / M2-ac03-rct-unaided | 审稿人身份仍未指定、Review0；避免审稿路由局部死循环，完成Frontiers2026随机三臂900/659（直接采纳AI后15–20min无AI推理−0.38/7,p=.0002，排除不均且努力混杂）与IZA2026随机AI学习权限单校211/204（即时/一周无AI知识测验+0.27SD、+0.27SD，工作论文并有违规辅助问题）原始来源核读，区分近迁移/知识学习/长期自主、相反方向不作总体结论；同PR描述审稿包已补§16 | AC03实证增量PASS（来源读取），因果外推PARTIAL，AC05独立审核NOT_RUN | [同报告§16](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[PR#71](https://github.com/fweiger/AI_book/pull/71)；event_key: AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC03:unaided-randomized-20261121 | D0/CONSISTENT；无可靠长期觉醒测量，Reviewer仍WAITING_AUTHORIZED_REVIEWER | 唯一下一步取得已授权独立Reviewer并审§15–16 |
+
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: none（本轮已提交并回读，事件键见§9）
-- writer_owner: none（当前无待发布Writer）
-- write_state: SYNCED（#7057240119已GET回读，同键恰好1条）
+- active_event_key: AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC03:unaided-randomized-20261121（本轮CLAIMED逻辑事件）
+- writer_owner: chatgpt-topic016-rct-20261121
+- write_state: CLAIMED（需GET声明且同键评论0才可发）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
 - 最近一次已同步事件：AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC05:review-route-handoff-20261121 / [Issue评论 #7057240119](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057240119)；已GET回读同键仅1条。SYNCED表示本轮GitHub同步，不代表找到授权审阅者或独立审核通过。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
 | Issue 目标 vs §1 | 批准目标/AC 一致 | #70 与 Tracker | PASS |
-| §3/4 实证与阶段 | AC-05已备PR独立审稿交接，正式审核未运行 | PR#71 / §15 | PASS（状态核实） |
-| §5 局部阻断 | 已确认的Reviewer身份缺失只阻断独立审核与合并 | Tracker§5 / PR#71 | PASS（界限明确） |
-| §6/7 | 唯一当前下一步为取得真实授权的独立Reviewer；其他研究不扩展 | Tracker§6/7 | PASS |
-| §7 与 §9 | §7是唯一当前动作，§9保留审计历史 | Tracker§7/9 | PASS |
-| Issue 与 PR/Tracker 回链 | Issue#70、PR#71新审稿交接说明、Tracker与唯一评论均已回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057240119) | SYNCED |
+| §3/4 实证与阶段 | 新§16两份随机研究已核、原AC03 PARTIAL；AC05独立审稿仍未开始 | §16 / PR#71 | PASS（事实/状态对照） |
+| §5 局部阻断 | 独立Reviewer门槛不影响AC03原论文研究；两RCT单次/一周外推受限 | §5/§16 | PASS（局部阻断不扩展） |
+| §6/7 | 新AC03数据已按原Goal补强，当前唯一审稿路由动作保持未变 | §6/7 | PASS（目标对齐） |
+| §7 与 §9 | §7仍是唯一有效的授权独立Reviewer路由，§9新增事实检查点仅历史 | §7/9 | PASS |
+| Issue 与 PR/Tracker 回链 | #70原Goal不变，报告§16/PR交接新证据可读，本轮事件CLAIMED待发布 | #70 / PR#71 / 本Tracker | ISSUE_SYNC_PENDING |
