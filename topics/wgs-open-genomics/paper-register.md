@@ -1,6 +1,6 @@
 # TOPIC-017｜文献注册表：已核查首轮论文与研究层级
 
-> 更新日期：2026-11-21；**收录 36 篇不重复的具体论文/指南/综述**，为主动策展样本，绝不代表该领域全部论文数。各条至少依据 DOI 或期刊/学会/官方项目页面核对题录、摘要或研究方法；**未逐篇完成全文系统评价**。
+> 更新日期：2026-11-21；**收录 41 篇不重复的具体论文/指南/综述**，为主动策展样本，绝不代表该领域全部论文数。各条至少依据 DOI 或期刊/学会/官方项目页面核对题录、摘要或研究方法；**未逐篇完成全文系统评价**。
 > 论文 P-ID 在其他维度可被多次引用；统计总篇数时必须按 DOI 去重。来源类型分为工具方法、临床指南、群体研究、综述、随机试验、技术评测，不能把它们视作同等证据。
 
 | 文献 ID | 研究方向 | 一手论文或标准 | 年份 | DOI | 与个人 WGS 的关系/警示 |
@@ -41,8 +41,15 @@
 | P034 | carrier lab standards | ACMG prenatal/preconception carrier laboratory standard | 2024 | [10.1016/j.gim.2024.101137](https://doi.org/10.1016/j.gim.2024.101137) | 多种检测方法/技术标准；不能以一份 WGS VCF 替代所有位点 |
 | P035 | variant rule interpretation | InterVar clinical variant evidence assistance | 2017 | [10.1016/j.ajhg.2017.01.004](https://doi.org/10.1016/j.ajhg.2017.01.004) | ACMG 2015 规则自动/人工调整；源码非商业使用限制 |
 | P036 | carrier complex locus negative evidence | Independent Gauchian GBA1 genotyping critique | 2025 | [10.1038/s42003-025-08059-y](https://doi.org/10.1038/s42003-025-08059-y) | 对罕见及重组变异漏检的真实反证；参考版本与列表依赖 |
+| P037 | 睡眠时长 GWAS | Sleep duration GWAS supported by accelerometry | 2019 | [10.1038/s41467-019-08917-4](https://doi.org/10.1038/s41467-019-08917-4) | UKB 446118 欧洲祖源/78 loci；CHARGE 47180 外部信号检验；不是个人睡眠时长处方 |
+| P038 | 睡眠 PRS 可迁移性 | Portability of PRS for Sleep Duration Insomnia Chronotype in 33493 | 2023 | [10.3390/clockssleep5010002](https://doi.org/10.3390/clockssleep5010002) | 芬兰 FINRISK 26229 + Health 2000/2011 7264；跨芬兰队列不等于东亚祖源临床校准 |
+| P039 | 身体活动 GWAS | Genome-wide physical activity and sedentary behavior loci | 2022 | [10.1038/s41588-022-01165-1](https://doi.org/10.1038/s41588-022-01165-1) | 最多 703901/51 项研究/99 loci；身体活动行为非训练表现或运动处方 |
+| P040 | 训练反应人群研究 | HERITAGE maximal oxygen uptake response genetics | 2011 | [10.1152/japplphysiol.00973.2010](https://doi.org/10.1152/japplphysiol.00973.2010) | 473 名久坐白人/20 周/21 SNP 在研究样本内解释 49% VO2max 反应方差；外推未知 |
+| P041 | 运动反应独立研究 | Predict-HIIT exercise-response GWAS | 2021 | [10.1186/s12929-021-00733-7](https://doi.org/10.1186/s12929-021-00733-7) | 多中心 n507；模型和验证结果仍不足支持个人运动处方 |
 
 ## 本轮重点审计
+
+- [G6 D05/D11/D13：现代 IBD、睡眠 GWAS/PRS、运动 GWAS/训练反应](cross-domain-evidence-audit-g6.md)：五篇新题录 P037–P041，特别保留群体行为与个人运动处方的证据差异。
 
 - [G5 D02/D04/D08：11 篇新增论文与指南、5 个源码仓库许可及 WGS 数据准入核查](cross-domain-evidence-audit-g5.md)。
 
@@ -54,7 +61,7 @@
 - **临床指南**：指向临床实验室确认、专业解读和风险沟通；并非消费者报告即能作诊断。
 - **干预型研究**：随机对照试验优先于单纯 SNP 相关用于评估“按基因制定饮食/睡眠干预是否有效”；P020 是应被保留的负结果。
 
-## 数据库/技术标准（以下**不计入 36 篇论文**）
+## 数据库/技术标准（以下**不计入 41 篇论文**）
 - [NIST GIAB](https://www.nist.gov/programs-projects/genome-bottle) 标准样本与 v4.2.1/v5.0q（HG002 需记录明确的版本、BED、GRCh38 reference）。
 - [EBI GWAS Catalog](https://www.ebi.ac.uk/gwas/) 论文关联、祖源、样本数、summary stats；查询结果按 study accession 去重。
 - [PGS Catalog](https://www.pgscatalog.org/) 评分模型版本、目标性状、开发/验证人群；不是 PRS 临床证据保证。
