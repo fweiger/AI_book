@@ -17,7 +17,7 @@
 | 11. 单细胞、转录、甲基化、微生物 | 标准 WGS 只能提供间接线索 | RNA-seq、甲基化组、单细胞组学等 | 其他技术，不可冒称 WGS 已测 | 不从 DNA 序列推断实时表达/衰老时钟/菌群 |
 
 ## 技术实验（仅公共/合成样本）
-**优先最小实验**：NIST GIAB HG002 标准样本选 chr20/规定 benchmark subset → fastp/FastQC QC → 比对/或已有 BAM/CRAM → DeepVariant 或 GATK → hap.py → recall/precision/误差分层。仅在公有参考数据下载许可和计算资源确认后运行，**本轮 NOT_RUN**。
+**优先最小实验规范已形成**：[HG002 chr20 实验契约](benchmark-hg002.md)；使用 Google 官方已比对的公开 35× HG002 chr20 BAM（故不进行 FASTQ 质控/原始比对）→ DeepVariant 单样本 WGS → hap.py 与 NIST v4.2.1 GRCh38 标准真值在规定 BED 上计算 SNP/INDEL Precision、Recall、F1、UNK。**本轮下载与实际变异计算 NOT_RUN；不能视作全基因组/chrY 基准。**
 
 **记录**：公开 accession + 数据授权、BAM/CRAM/FASTQ hash、参考 GRCh38 FASTA hash、软件 image digest、CPU/RAM/硬盘预算、实际运行命令/错误及精度。不能用小染色体或合成数据的成功代替完整 30× WGS 验收。
 
