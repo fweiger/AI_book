@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（新发现及动态下一步均服务未完成 AC-02，#70 批准目标不变；本轮事件待发布）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一轮已同步，本轮 2025 年铸铁证据与样本偏差纠偏待评论回读）
+- 状态一致性: `CONSISTENT`（新研究文档与原 Goal/AC、单一下一步和历史检查点一致；本轮 Issue 事件已唯一回读）
+- Issue 同步状态: `SYNCED`（本轮事件 #7053908318 已发且独立 GET 回读同键仅 1 条；学术验收仍 PARTIAL）
 
 ## 1. 批准目标基线
 
@@ -56,7 +56,7 @@
 - **对原目标的贡献**：直接纠正历史因果时序及之前研究报告中的潜在过强结论，推进 AC-02、兼 AC-01；减少“因晚期样本更丰富就推断技术晚出现”的推论错误。
 - **当前阶段/状态**：M1_CAUSAL_HISTORY_PARTIAL；主要论点修正 PASS（可见文献范围内），史料完整性/样本可比性 PARTIAL，因果识别 UNKNOWN，学术审稿 NOT_RUN。
 - **目标漂移**：D0（原 Goal 不变；本轮有实质新资料、纠偏直接匹配 AC-02）。连续局部样本追查已达到可界定限制，下一轮**优先转向国家制度如何影响冶铁供给与农具获取**，避免长期停留在附件搜索。
-- **一致性**：CONSISTENT；Issue #70 / Tracker / Draft PR #71 仍为同一任务，研究文件已提交；本轮评论事件待按单 Writer CLAIMED → 发布 → GET 回读完成。
+- **一致性**：CONSISTENT；Issue #70、Tracker、Draft PR #71 与新增§7相容，本轮唯一评论 #7053908318 已回读 1 条；学术结论仍按来源边界标记。
 
 ## 5. 阻断与未受影响工作
 
@@ -99,15 +99,15 @@
 | 2026-11-21 / M1-production-relations | 依用户主线强调完成跨文明同期基线、四种竞争解释和权威学术来源核查；主因尚未识别 | AC-01/02 PARTIAL | [研究增量](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` | D0/CONSISTENT；付费正文与可比考古数据缺失；本轮唯一事件已 GET 回读 | 下一轮锁定先秦 H1/H2/H3 的原始时序/制度机制 |
 | 2026-11-21 / M1-qin-primary-chronology | 在原证据文件中追加秦前408税制传世史料、前344商鞅方升、前309青川田律及前3世纪43件秦铁器实验的时序/地域/样本限制；H1强版受到质疑但未证否 | AC-01/02 PARTIAL | [同一研究文件 §5](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285)；event_key：AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121 | D0 / CONSISTENT；因果主因 UNKNOWN，考古普及率与地权仍不足 | 先核实冶铁样本前/后344年分期及选样偏差 |
 
-| 2026-11-21 / M1-qin-sample-correction | 取得2025徐良坡过渡期秦铸铁/块炼铁5件中2件分析的直接新证据；核对2021 UCL论文125分析样本/114器物9处遗址及2023论文43+36的不同口径；识别葬俗/腐蚀/磁性选择偏差、纠正“秦中期尚无铸铁”过强推断 | AC-01/02 PARTIAL / 证据纠偏 PASS | [同一研究文档 §7](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；稳定 event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121` | D0/CONSISTENT；主因 UNKNOWN，附件受限 | 核查秦铁官/官营生产/借贷农具的出土文书年代与制度机制 |
+| 2026-11-21 / M1-qin-sample-correction | 取得2025徐良坡过渡期秦铸铁/块炼铁5件中2件分析的直接新证据；核对2021 UCL论文125分析样本/114器物9处遗址及2023论文43+36的不同口径；识别葬俗/腐蚀/磁性选择偏差、纠正“秦中期尚无铸铁”过强推断 | AC-01/02 PARTIAL / 证据纠偏 PASS | [同一研究文档 §7](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053908318)；稳定 event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121` | D0/CONSISTENT；主因 UNKNOWN，附件受限 | 核查秦铁官/官营生产/借贷农具的出土文书年代与制度机制 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121`（本轮稳定事件待发布）
-- writer_owner: `chatgpt-topic016-qinsample-2025-20261121`
-- write_state: `CLAIMED`（已由本轮唯一 Writer 申请声明，需 GET 确认后发评论）
+- active_event_key: `none`（本轮评论已回读，本键只作为历史事件保留）
+- writer_owner: `none`（本轮已完成，不存在待发布 Writer）
+- write_state: `SYNCED`（#7053908318 已 GET 回读，同键恰好 1 条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121` / [GitHub 评论 #7053724285](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285)，本轮回读同键仅出现 1 条；本次 SYNCED 只证明 GitHub 进度状态一致，不代表 AC-02 因果主因通过审核。此前事件见 §9。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121` / [Issue评论 #7053908318](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053908318)；该键已回读唯一评论。SYNCED 仅说明本轮变更与GitHub进度同步，不代表历史因果主因通过审稿。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -116,4 +116,4 @@
 | §5 局部阻断 | XLSX及2025全文受限仅影响逐样本去重，其他机制可继续 | 本文件 §5 | PASS（影响边界对照） |
 | §6/7 | 原 Goal 不变，样本审计完成，下一步转向铁官/行政机制 | 本文件 §7 | PASS（主线对照） |
 | §7 与 §9 | 最新§7是当前唯一动作，§9是不可改写的历史建议 | §7/§9 | PASS（唯一权威） |
-| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 研究文档已回读，本轮待按 Writer 声明发评论 | #70 / PR #71 / 本Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 研究文档与唯一评论 #7053908318 均已回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053908318) | `SYNCED` |
