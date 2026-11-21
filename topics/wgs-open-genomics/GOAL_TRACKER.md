@@ -85,19 +85,19 @@
 | 2026-11-21/G1 | Issue #72 已创建回读；确认 32 个 GitHub 项目存在；15 个文件 Draft PR #73 与结构 CI PASS；Issue 已补 PR/Tracker 链接；不含个人数据 | 01–04/06 初步 | [#72](https://github.com/fweiger/AI_book/issues/72)，专题草稿 | D0；初始化待同步 | GIAB HG002 公开基准规范（PR 待审不阻断独立研究） |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：none（上一 G2 事件 AI_book#72:AC05-Q03:20261121-hg002-spec-ymethod 已完成）
-- **当前 writer_owner**：none（G2 Writer 已完成：chatgpt-topic017-continue-20261121）
-- **当前 write_state**：SYNCED（[G2 唯一评论 #7060020787](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060020787) 已回读；事件声明 Tracker SHA a1369b6b0cb9db08cde5212df7c436b4cfedc2b9）
+- **当前 active_event_key**：AI_book#72:AC02-03-04:20261121-cross-domain-matrix
+- **当前 writer_owner**：chatgpt-topic017-cross-domain-20261121
+- **当前 write_state**：CLAIMED（G3 新事件待发布；G1/G2 已回读）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
 | 检查项 | 当前值 | 证据 | 结果 |
 |---|---|---|---|
 | Issue Goal/Scope/AC 与 §1 | 合同一致 | 初始 GET #72 | CONSISTENT（内容） |
-| §3/§4 与真实证据 | HG002 规范与 Q03 Y 工具证据存在，实际 E2 NOT_RUN | 本次文件与本地预检 | PARTIAL |
-| §5 局部阻断 | 当前容器 Docker/DNS 仅阻断此处 E2，Q03 可继续 | 环境实测与资料 | CONSISTENT |
-| §6 与 §7 | HG002 设计已成，下一步公开父系 chrY 输入契约 | 本文件 | CONSISTENT |
+| §3/§4 与真实证据 | 15 域主矩阵/22 篇注册表已进入 PR；E2 仍 NOT_RUN | 本次新源文件 | PARTIAL |
+| §5 局部阻断 | Docker/DNS 仅阻断局部实验；全部文献分析可推进 | PR 与环境约束 | CONSISTENT |
+| §6 与 §7 | 以跨域真实论文和代码关联审计为唯一下一步 | 用户最新澄清/Issue/本 Tracker | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1/G2 事件分别唯一回读 | G2 事件声明 Tracker SHA a1369b6b0cb9db08cde5212df7c436b4cfedc2b9 | SYNCED |
+| Issue 最新事件与 Tracker | G1/G2 事件已回读；G3 本轮正在 CLAIMED | G3 当前事件键与 Writer | ISSUE_SYNC_PENDING |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
