@@ -81,7 +81,7 @@
 | 36 | [mitoNGS/MToolBox](https://github.com/mitoNGS/MToolBox) | WGS/WES reads + mtDNA/核参考 | mtDNA 变异、异质性比例与 CI、单倍群；[P029](https://doi.org/10.1093/bioinformatics/btu483) | **GPL-3.0**；旧版核参考、NUMTs/依赖需严格审查 |
 | 37 | [seppinho/mutserve](https://github.com/seppinho/mutserve) | **已排序且索引 BAM/CRAM** | 线粒体同质/异质变异→VCF/txt；[P032 比较论文](https://doi.org/10.3389/fgene.2022.692257) | **MIT**；官方说明 VCF **暂不包含 indel**；`--level 0.01` 不是 1% 准确率 |
 | 38 | [WGLab/InterVar](https://github.com/WGLab/InterVar) | VCF/ANNOVAR 格式及注释库 | ACMG/AMP 2015 证据辅助评级 + 手动复核；[P035](https://doi.org/10.1016/j.ajhg.2017.01.004) | **仅明确非商业使用免费，商用需另授权**；ANNOVAR/OMIM 依赖另受许可约束 |
-| 39 | [Illumina/Gauchian](https://github.com/Illumina/Gauchian) | **30×+ WGS BAM/CRAM** + genome build | GBA1/GBAP1 特殊假基因区域 CNV/重组研究；[P036 独立负证据](https://doi.org/10.1038/s42003-025-08059-y) | **PolyForm Strict 1.0.0**，修改/分发限制；独立论文发现漏检，不可将阴性结果等同零携带风险 |
+| 39 | [Illumina/Gauchian](https://github.com/Illumina/Gauchian) | **30×+ WGS BAM/CRAM** + genome build | GBA1/GBAP1 特殊假基因区域 CNV/重组研究；[P036 负面报告](https://doi.org/10.1038/s42003-025-08059-y)与[P045 开发者回应](https://doi.org/10.1038/s42003-025-08060-5) | **PolyForm Strict 1.0.0**，修改/分发限制；论文报告漏检但开发者回应质疑测试的低覆盖条件；性能争议待独立复核，阴性结果不等于零携带风险 |
 
 > **许可证审计门槛**：严格区分代码公开可查的 `SOURCE_AVAILABLE` 与可自由修改/再分发的 `OPEN_SOURCE_LICENSE_VERIFIED`。T16 ExpansionHunter、T39 Gauchian 属于 PolyForm Strict；T38 InterVar 非商业使用免费。这些项目可以作为科研方法参考，但**不能不经许可直接复制进自研商业软件**。其他仓库未经 LICENSE 核查不得自动标为可无条件复用。详见 [G5 实质审计](cross-domain-evidence-audit-g5.md)。
 
