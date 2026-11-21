@@ -58,3 +58,10 @@ bash scripts/run-giab-hg002-chr20.sh run
 - **NOT_RUN**：正式数据下载、DeepVariant 真实调用、hap.py 评分、真实性能与资源评估。
 - **不受影响**：已完成的学术/软件目录、下一步的父系与临床来源研究；不允许把当前环境问题当成整个 TOPIC-017 的阻断。
 - **下一轮建议**：在具备 Docker/公网数据访问的合法环境运行同一脚本并回传仅公共样本的 QC/摘要；若未具备，改为优先审查 Q03 父系树的公开方法输入、参考谱系树及统计分叉年代，不无限排障。
+
+## G8 补充：31.5 公开 HG002 数据实测与 Docker 镜像局部阻断（2026-11-21）
+- [真实运行与 SHA-256/官方 BAM MD5 来源证据](sessions/2026-11-21-hg002-public-data-admission-g8.md) 已入 Draft PR #73；不同于本文件早期单独容器的 Docker/DNS 阻断，**31.5 Linux 实测 Docker 与公开 GCS/NCBI 通信成功**。
+- 8 项指定参考/真值/BAM/索引真实下载完成并本地 `sha256sum -c` PASS，BAM 官方 GCS MD5 也确切一致；数据仅存非 Git 研究工作区。
+- 原脚本的 `curl` 已修补为 `--continue-at -`，一次真实中断和恢复测试证明不会重下已写入的 .part 文件；不更改 HG002、reference、callset 或标准版本。
+- **新局部阻断**：DeepVariant `google/deepvariant:1.10.0` 与 hap.py `jmcdani20/hap.py:v0.3.12` Docker 拉取有限尝试后没有最终 digest，已手动停止并 GET 观察终态；当前 `FETCH/INPUT_QC PASS`，`DEEPVARIANT/HAP.PY REAL_BENCHMARK NOT_RUN`。
+- 严禁用论文结果/他人仓库 scoreboard 或 `bash -n` 宣称本项目 SNP/INDEL 精度。后续避免无界 Docker/代理排障；在现成授权环境尝试低风险替代 E2 入口或先完善医学证据体系。
