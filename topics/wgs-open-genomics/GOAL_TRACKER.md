@@ -15,7 +15,7 @@
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
 - 目标漂移：`D0 ALIGNED`（G10 直接执行上一 §7 的 15 域代表原文方法级审计，推进未完成 AC-02/03/04，未延伸 D01 局部容器工程）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`SYNCED`（G1–G8 事件均已回读，G9 唯一事件 #7062643687 按稳定键回读）
+- Issue 同步：`SYNCED`（G1–G9 事件先前均已回读，G10 唯一事件 #7064791856 已按稳定键回读）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -50,7 +50,7 @@
 - **重要纠错**：P005 Yleaf 方法原文 DOI 为 `10.1093/molbev/msy032`（PubMed PMID 29518227）；旧 `10.1093/molbev/msy080` 是 Erratum，不得当方法论文。已更新原 P-ID 注册表、sources 和主矩阵，P-ID/DOI 仍 47 个且无重复。
 - **代码与个人 WGS 准入纠错**：本轮实际读取 bcftools、Truvari、Yleaf、Mutserve、hap-IBD、ADMIXTOOLS2、VEP、InterVar、StellarPGx、pgsc_calc、OptiType、PRS-CSx、PLINK2 的 GitHub README/仓库信息；pgsc_calc 官方明确当前不直接支持 WGS genotype 输入；样本单人并不满足 hap-IBD 多人相位/遗传图谱、qpAdm 群体参照、营养干预/运动训练/睡眠表型的论文研究合同。
 - **质量门禁和统计**：实际文件回读/解析 **D01–D15 15 个唯一领域、47 个不同 P-ID/DOI、39 个不同 GitHub 仓库、15/15 抽审 P-ID 均在注册表内**：结构 PASS。部分论文仅按原始摘要/已展示方法段核，**E1/PARTIAL**，所有 D02–D15 源码运行 E2 NOT_RUN。G9 D01 chr20 1Mb bcftools/RTG E2 PASS 保留，原 DeepVariant/hap.py NOT_RUN。
-- **现有阻断与目标状态**：不处理个人 DNA；没有对 47 篇全文/39 仓库全部依赖/许可证做系统性审计，不假报“全球全部工具或论文”。D0 ALIGNED、与原 Issue Goal/Scope/AC CONSISTENT；G10 唯一进度事件待同步。
+- **现有阻断与目标状态**：不处理个人 DNA；没有对 47 篇全文/39 仓库全部依赖/许可证做系统性审计，不假报“全球全部工具或论文”。D0 ALIGNED、与原 Issue Goal/Scope/AC CONSISTENT；G10 唯一进度事件 [#7064791856](https://github.com/fweiger/AI_book/issues/72#issuecomment-7064791856) 已回读并同步。
 
 ## 5. 阻断与未受影响工作
 | 问题 | 影响范围 | 对应 AC | 继续可以推进的部分 | 状态 |
@@ -101,9 +101,9 @@
 | 2026-11-21/G10 | 从 47 个 P-ID 中审 D01–D15 各 1 篇一手方法/assay/祖源/结论及软件输入；更正 P005 原始 DOI msy032（msy080 实为勘误）；官方 pgsc_calc README 明示不直接支持 WGS | AC-02/03/04 PARTIAL；方法结构 15/15 PASS | [G10 15 域方法报告](cross-domain-method-evidence-audit-g10.md)、[G10 来源日志](sessions/2026-11-21-15domain-primary-methods-audit-g10.md) | D0 ALIGNED；G10 事件同步待核验 | D03/D04/D09/D10 单份 WGS 输入质量及可研究深度核验 |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：AI_book#72:AC02-03-04:20261121-g10-15domain-methods
-- **当前 writer_owner**：chatgpt-topic017-g10-20261121
-- **当前 write_state**：CLAIMED（G10 当前单 Writer 准备唯一 Issue 事件，前 G9 #7062643687 已回读）
+- **当前 active_event_key**：none（G10 事件 AI_book#72:AC02-03-04:20261121-g10-15domain-methods 已完成）
+- **当前 writer_owner**：none（G10 Writer chatgpt-topic017-g10-20261121 已完成）
+- **当前 write_state**：SYNCED（[G10 唯一事件 #7064791856](https://github.com/fweiger/AI_book/issues/72#issuecomment-7064791856) 已 GET 回读，同 key 仅 1 条；评论声明 Tracker blob SHA bc28e3a8e903ccfeec3be34f65cf1b979ba97455）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
@@ -114,6 +114,6 @@
 | §5 局部阻断 | 47 篇未全部全文、39 项未全做输入/许可/运行实证；旧 DeepVariant 局部未运行 | G10 15 域代表审计、G9 实测和原 Non-goals | CONSISTENT |
 | §6 与 §7 | G10 15 域代表论文/数据/代码审计已完成；下一步 4 种互补个人 WGS 数据契约方法级对照 | G10 一手来源、现有工具和未完成 AC-02/03/04 | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G9 原始事件已回读；G10 新事件 CLAIMED 尚待评论回读 | G10 稳定 event_key + 单 Writer 声明 | ISSUE_SYNC_PENDING |
+| Issue 最新事件与 Tracker | G1–G10 唯一 event_key 均已回读，G10 #7064791856 为唯一该键评论 | G10 声明 Tracker blob SHA bc28e3a8e903ccfeec3be34f65cf1b979ba97455 | SYNCED |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
