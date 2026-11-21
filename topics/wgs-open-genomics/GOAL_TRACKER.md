@@ -83,24 +83,28 @@
 - [ ] 不公开个人 WGS、基因型、家族身份和医疗信息。
 
 ## 9. 检查点历史（追加，不覆盖）
-| 时间/批次 | 实际工作结果 | AC 贡献 | 证据 | 漂移与状态 | 本轮建议下一步 |
+| 时间/批次 | 实际工作结果 | AC 贡献 | 原始证据 | 漂移/状态 | 当轮候选下一步 |
 |---|---|---|---|---|---|
-| 2026-11-21/G1 | Issue #72 已创建回读；确认 32 个 GitHub 项目存在；15 个文件 Draft PR #73 与结构 CI PASS；Issue 已补 PR/Tracker 链接；不含个人数据 | 01–04/06 初步 | [#72](https://github.com/fweiger/AI_book/issues/72)，专题草稿 | D0；初始化待同步 | GIAB HG002 公开基准规范（PR 待审不阻断独立研究） |
-
+| 2026-11-21/G1 | 首轮创建 AI_book Issue #72 与 Draft PR #73，收录最初 32 个仓库和研究框架 | 01/02/03/04/06 PARTIAL | [Issue #72](https://github.com/fweiger/AI_book/issues/72)；[G1 事件 #7059893177](https://github.com/fweiger/AI_book/issues/72#issuecomment-7059893177) | D0；已回读 | 公开 HG002 最小基准 |
+| 2026-11-21/G2 | HG002 chr20 公开基准规范+脚本；Yleaf、Y-LineageTracker、yhaplo 方法核查；真实实验未运行 | 02/03/05 PARTIAL | [G2 事件 #7060020787](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060020787) | D0；已回读 | 父系公开样本输入 |
+| 2026-11-21/G3 | 用户明确横向研究目标，建立 15 域数据质量×论文×GitHub 主矩阵；22 论文/32 项工具 | 02/03/04 PARTIAL | [G3 事件 #7060148978](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060148978) | D0；已回读 | 跨领域论文与源码审计 |
+| 2026-11-21/G4 | 完成六领域方法、许可与输入核查；补 StellarPGx/OptiType，25 论文/34 项 | 02/03/04 PARTIAL | [G4 事件 #7060387293](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060387293) | D0；已回读 | SV/mtDNA/携带者 |
+| 2026-11-21/G5 | 完成 D02/D04/D08 的原始证据与许可限制；36 论文/39 个源码候选 | 02/03/04 PARTIAL | [G5 事件 #7060680525](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060680525) | D0；已回读 | 现代 IBD、睡眠、运动 |
+| 2026-11-21/G6 | 深核 D05 相位 IBD、D11 睡眠 GWAS/PRS、D13 运动行为与训练反应模型，新增 P037–P041；41 论文/39 仓库 | 02/03/04 PARTIAL | [G6 审计](cross-domain-evidence-audit-g6.md)、[本轮日志](sessions/2026-11-21-ibd-sleep-exercise-paper-code-audit.md) | D0 ALIGNED，Issue G6 事件待同步；E2 NOT_RUN | 15 域证据/输入/许可一致性审计 |
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：none（最新 G5 event AI_book#72:AC02-03-04:20261121-g5-sv-mtdna-carrier 已完成）
-- **当前 writer_owner**：none（G5 Writer chatgpt-topic017-g5-20261121 已完成）
-- **当前 write_state**：SYNCED（[G5 唯一 Issue 评论 #7060680525](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060680525) GET 回读且仅一条；事件声明 Tracker blob SHA ef42ee7ec660fbac58dc140e4742c845e8154e71）
+- **当前 active_event_key**：AI_book#72:AC02-03-04:20261121-g6-ibd-sleep-exercise
+- **当前 writer_owner**：chatgpt-topic017-g6-20261121
+- **当前 write_state**：CLAIMED（G6 新事件待唯一 Issue 评论及回读；G1–G5 已同期回读）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
 | 检查项 | 当前值 | 证据 | 结果 |
 |---|---|---|---|
 | Issue Goal/Scope/AC 与 §1 | 合同一致 | 初始 GET #72 | CONSISTENT（内容） |
-| §3/§4 与真实证据 | G5 三域审计/36 篇论文/39 源码仓库可读；真实 E2 NOT_RUN | G5 源文件和 LICENSE | PARTIAL |
+| §3/§4 与真实证据 | G6 三域新论文和源码方法证据，41 篇与 39 项可读；E2 NOT_RUN | G6 实际研究文件 | PARTIAL |
 | §5 局部阻断 | Docker/DNS 仅阻断局部实验；全部文献分析可推进 | PR 与环境约束 | CONSISTENT |
-| §6 与 §7 | G5 D02/D04/D08 已审，后续 D05/D11/D13 | G5 文档与未完成 AC | CONSISTENT |
+| §6 与 §7 | D05/D11/D13 已审；下一步矩阵全域证据一致性核查 | G6 新文件和原 AC | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G5 事件分别具有唯一 key；G2–G4 §9 历史缺口依 Issue 原始事件补回 | G5 事件声明 Tracker blob SHA ef42ee7ec660fbac58dc140e4742c845e8154e71 | SYNCED |
+| Issue 最新事件与 Tracker | G1–G5 原始事件均已回读并按原链接在 §9 记录；G6 仍 CLAIMED 待评论回读 | 本轮唯一事件键待同步 | ISSUE_SYNC_PENDING |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
