@@ -40,7 +40,7 @@
 | P033 | reproductive carrier practice | ACMG carrier screening tier-based practice resource | 2021 | [10.1038/s41436-021-01203-z](https://doi.org/10.1038/s41436-021-01203-z) | Tier3、阴性残余风险、夫妻/伴侣检测及临床咨询 |
 | P034 | carrier lab standards | ACMG prenatal/preconception carrier laboratory standard | 2024 | [10.1016/j.gim.2024.101137](https://doi.org/10.1016/j.gim.2024.101137) | 多种检测方法/技术标准；不能以一份 WGS VCF 替代所有位点 |
 | P035 | variant rule interpretation | InterVar clinical variant evidence assistance | 2017 | [10.1016/j.ajhg.2017.01.004](https://doi.org/10.1016/j.ajhg.2017.01.004) | ACMG 2015 规则自动/人工调整；源码非商业使用限制 |
-| P036 | carrier complex locus negative evidence | Independent Gauchian GBA1 genotyping critique | 2025 | [10.1038/s42003-025-08059-y](https://doi.org/10.1038/s42003-025-08059-y) | 对罕见及重组变异漏检的真实反证；参考版本与列表依赖 |
+| P036 | carrier complex locus negative evidence | Independent Gauchian GBA1 genotyping critique | 2025 | [10.1038/s42003-025-08059-y](https://doi.org/10.1038/s42003-025-08059-y) | 独立研究在其测试样本中报告罕见/重组变异漏检；必须同时参考 P045 开发者对旧低覆盖测试条件的正式回应，不得当作所有 30× WGS 的已定论结论 |
 | P037 | 睡眠时长 GWAS | Sleep duration GWAS supported by accelerometry | 2019 | [10.1038/s41467-019-08917-4](https://doi.org/10.1038/s41467-019-08917-4) | UKB 446118 欧洲祖源/78 loci；CHARGE 47180 外部信号检验；不是个人睡眠时长处方 |
 | P038 | 睡眠 PRS 可迁移性 | Portability of PRS for Sleep Duration Insomnia Chronotype in 33493 | 2023 | [10.3390/clockssleep5010002](https://doi.org/10.3390/clockssleep5010002) | 芬兰 FINRISK 26229 + Health 2000/2011 7264；跨芬兰队列不等于东亚祖源临床校准 |
 | P039 | 身体活动 GWAS | Genome-wide physical activity and sedentary behavior loci | 2022 | [10.1038/s41588-022-01165-1](https://doi.org/10.1038/s41588-022-01165-1) | 最多 703901/51 项研究/99 loci；身体活动行为非训练表现或运动处方 |
