@@ -8,6 +8,8 @@
 3. [NIST Genome in a Bottle](https://www.nist.gov/programs-projects/genome-bottle) — HG002 等真值与 benchmark；不是所有序列区域都有真值。
 
 ## 家谱、古 DNA 与人群历史
+- [Y 染色体工具与谱系时钟：一手 README 对照和推断边界](y-chromosome-methods.md)。
+- [Poznik (2016) yhaplo 算法 bioRxiv 预印本 DOI 10.1101/088716](https://doi.org/10.1101/088716)；注意项目 README 的非商业使用许可。
 4. Ralf et al. (2018), *Yleaf: Software for Human Y-Chromosomal Haplogroup Inference from Next-Generation Sequencing Data*, [DOI 10.1093/molbev/msy080](https://doi.org/10.1093/molbev/msy080) — Y 染色体单倍群。
 5. Chen et al. (2021), *Y-LineageTracker: a high-throughput analysis framework for Y-chromosomal next-generation sequencing data*, [DOI 10.1186/s12859-021-04057-z](https://doi.org/10.1186/s12859-021-04057-z) — Y-SNP/Y-STR。
 6. Haplogrep 3 (2023), *Nucleic Acids Research*, [PubMed 37070190](https://pubmed.ncbi.nlm.nih.gov/37070190/) — mtDNA 谱系。
