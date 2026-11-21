@@ -36,6 +36,7 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 | TOPIC-012 | [太空算力：轨道光伏、发射、散热与全生命周期经济性 #60](https://github.com/fweiger/AI_book/issues/60) | [M0 研究总纲草稿 PR #61](https://github.com/fweiger/AI_book/pull/61) | `ISSUE + DRAFT PR` |
 
 | TOPIC-014 | [四论与哲学思想体系：本体论、认识论、价值论、方法论的关系及哲学史比较 #66](https://github.com/fweiger/AI_book/issues/66) | [V1.2 草稿 PR #67](https://github.com/fweiger/AI_book/pull/67)：朱熹31B短评已在《晦菴集》卷48获原著回证，局部赞同不证明全论转向；27候选主张、31节点/130关系，署期及独立学术复核未完成 | `ISSUE + DRAFT PR · NOT_IN_MAIN` |
+| TOPIC-017 | [个人全基因组 WGS：开源工具、基因组研究、古 DNA 与医学证据 #72](https://github.com/fweiger/AI_book/issues/72) | [研究目录（Draft）](topics/wgs-open-genomics/README.md) · [32 开源项目](topics/wgs-open-genomics/open-source-projects.md) · [论文与权威来源](topics/wgs-open-genomics/sources.md) | `ISSUE + DRAFT PR · NOT_IN_MAIN` |
 
 **TOPIC-009 编号保留，不列为在库研究。** 睡眠科学专题曾经合并至公开仓库，但已通过 [2026-11-14 迁出提交 37f5189](https://github.com/fweiger/AI_book/commit/37f518998fb3a86ed6a3a2ef9dda56e054bfb3f0) 从公开 `main` 删除；不要从历史 PR 复制内容来恢复，也不要重复使用该编号。
 
