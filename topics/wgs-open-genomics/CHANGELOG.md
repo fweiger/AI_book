@@ -10,3 +10,5 @@
 - **2026-11-21，v0.1.3（Draft）**：完成 [跨领域六案例原始论文×源码输入审计](cross-domain-evidence-audit.md)：Exomiser、PharmCAT/StellarPGx、pgsc_calc、DIETFITS、ancIBD、OptiType；识别 pgsc_calc 不是直接 WGS variants-only VCF 计算器、PharmCAT CYP2D6 VCF-only 研究模式不适于临床，新增 [StellarPGx](https://github.com/SBIMB/StellarPGx) 与 [OptiType](https://github.com/FRED-2/OptiType) 两个专项项目及 3 篇对应论文。首轮登记 **15 域 / 25 篇论文 / 34 个 GitHub 项目**；仍未进行实际 WGS 运行，原 Goal/Scope/AC 保持。
 
 - **2026-11-21，v0.1.4（Draft）**：完成 [G5 D02/D04/D08 原始论文×源码×许可证审计](cross-domain-evidence-audit-g5.md)；新增 11 篇题录/标准 P026–P036 和五个源码项目 T35–T39，现有 **15 域 / 36 篇论文 / 39 个源码仓库候选**。修正 ExpansionHunter/Gauchian PolyForm Strict 与 InterVar 非商用免费限制；Truvari 为 SV VCF benchmark 非 caller，Mutserve VCF 不包含 indel；均未实际运行 WGS。
+
+- **2026-11-21，v0.1.5（Draft）**：完成 [G6 D05/D11/D13 文献×源码输入审计](cross-domain-evidence-audit-g6.md)；新增 P037–P041 5 篇论文，当前 **15 域 / 41 篇去重论文 / 39 个 GitHub 源码候选**。本轮重点确认 hap-IBD 必须使用完整 phased 多人 GT + genetic map 才能做人与人 IBD，单人仅可研究 HBD/ROH；睡眠 GWAS 和运动活动 GWAS 均不能直接转化成个体时间表或训练处方；HERITAGE 21-SNP 样本内方差解释率不能当样本外预测准确率。开源仓库无虚假新增，E2 WGS 实际运行仍 NOT_RUN。
