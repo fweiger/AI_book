@@ -27,6 +27,7 @@
 - **[G7 全 15 域一致性审计：D01 测序 QC、D15 多组学边界、Gauchian 争议](cross-domain-evidence-audit-g7.md)**
 - **[WGS 采购与原始文件最小交付验收清单](wgs-data-acceptance-contract.md)**
 - **[G8 公开 HG002 真正下载与哈希验收、镜像阻断及终态](sessions/2026-11-21-hg002-public-data-admission-g8.md)**
+- **[G9 HG002 1Mb 真正变异调用 + 独立 RTG SNP/Indel 基准、二次复现哈希](sessions/2026-11-21-hg002-native-bcftools-rtg-e2-g9.md)**（AC-05 公开最小 E2 PASS，DeepVariant 方案仍 NOT_RUN）
 - [论文、原始标准与参考数据库](sources.md) · [按问题阅读路径](reading-path.md)
 - [主张与证据 C-ID](claims.md) · [知识关系图](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
 - [HG002 chr20 基准与可运行脚本](benchmark-hg002.md) · [Q03 父系 Y 工具方法深度核查](y-chromosome-methods.md) · [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
