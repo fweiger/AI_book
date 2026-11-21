@@ -62,7 +62,7 @@
 | 29 | [getian107/PRScs](https://github.com/getian107/PRScs) | GWAS summary + LD | 贝叶斯 PRS 权重 | 祖源匹配影响校准 |
 | 30 | [getian107/PRScsx](https://github.com/getian107/PRScsx) | 跨祖源 GWAS | 跨祖源 PRS 模型 | 外部验证仍必要 |
 | 31 | [privefl/bigsnpr](https://github.com/privefl/bigsnpr) | 大规模基因型 + 参考 | LDpred2/高效基因型计算 | 需人群与合适 LD |
-| 32 | [PGScatalog/pgsc_calc](https://github.com/PGScatalog/pgsc_calc) | PGS 模型+基因型 | PGS Catalog 评分计算 | 不能直接诊断/必然发病 |
+| 32 | [PGScatalog/pgsc_calc](https://github.com/PGScatalog/pgsc_calc) | PGS 模型+基因型 | PGS Catalog 评分计算 | **官方 README 明确：WGS 数据目前不直接支持目标输入**；需要符合要求的 imputed/PLINK/VCF 基因型及 build、祖源核验；不能用 variants-only WGS VCF 原样评分；PGS 本身不等于诊断或必然发病 |
 
 ## G4 新核验：药物复杂基因与 HLA-I 专项（2）
 
