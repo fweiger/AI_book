@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（原 Goal/AC 未改，秦国官府供给文书增量已核；当前事件处于单 Writer 待同步阶段）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一事件已 SYNCED；当前“秦律/铁官机制核查”新事件待发布并回读）
+- 状态一致性: `CONSISTENT`（原 Goal/AC 未改，本轮秦律机制研究与跨时期唯一下一步相容；评论已回读 1 条同键事件）
+- Issue 同步状态: `SYNCED`（秦律/铁官机制事件 #7054203913 已发布并 GET 回读，同键仅 1 条；研究因果结论未验收）
 
 ## 1. 批准目标基线
 
@@ -55,7 +55,7 @@
 - **证据上限**：睡虎地11号墓约前217埋藏，不可将相关条文直接定在商鞅前356/前350年；简牍律文属于规范，不能当作实际普及率/执行统计。Daniel Sou学位论文称其查见范围内未发现秦农具标记实物（其他文物仍可能发现），需区别“法律要求”与“实际执行”。Dai2012论文此次仅经2023文献表定位，**未取得正文**。
 - **对原目标贡献**：将 H2“国家/生产关系→技术/生产力”的关键环节推进到有编号的秦律释文；从与齐/燕官营作坊并存的事实引入否证必要/充分条件，仍不推断 H2 因果效应或最大主因。
 - **尚未完成**：具体官府农具借出名册/覆盖与效益、前356时期的精确法令、齐/燕实际制度匹配、秦地亩产与生产率；因果主因 **UNKNOWN**，学术独立审核 **NOT_RUN**。
-- **状态**：AC-01/02有实质进展但总体 PARTIAL；D0（没有目标漂移），CONSISTENT（原 Goal/Scope/AC 保持，现有单文件 §8 可回读），Issue 进度事件按本轮唯一 Writer 待发布。
+- **状态**：AC-01/02 有实质进展但仍 PARTIAL；D0（没有目标漂移），CONSISTENT（原 Goal/Scope/AC 保持，单文件 §8 可回读），Issue 进度事件 #7054203913 已 GET 回读仅 1 条同键评论。
 - **优先级重决策**：连续多轮秦国内部局部取样/制度核查已有证据基础；下一轮转回原 AC-02 的**另一历史时代佛罗伦萨及同期中国**，检验视频四条件的第一环能否跨时段成立，不再无限追秦简单条款。
 
 ## 5. 阻断与未受影响工作
@@ -103,15 +103,15 @@
 
 | 2026-11-21 / M1-qin-sample-correction | 取得2025徐良坡过渡期秦铸铁/块炼铁5件中2件分析的直接新证据；核对2021 UCL论文125分析样本/114器物9处遗址及2023论文43+36的不同口径；识别葬俗/腐蚀/磁性选择偏差、纠正“秦中期尚无铸铁”过强推断 | AC-01/02 PARTIAL / 证据纠偏 PASS | [同一研究文档 §7](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053908318)；稳定 event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121` | D0/CONSISTENT；主因 UNKNOWN，附件受限 | 核查秦铁官/官营生产/借贷农具的出土文书年代与制度机制 |
 
-| 2026-11-21 / M1-qin-iron-offices | 中研院史语所出土秦律转录定位《厩苑律》15、工律102—107、金布律借公器、秦律杂抄采铁；汤超2019与Liu2023对照官营/私营及齐燕反例，确认墓埋前217不能直接证明商鞅前356条文存在，制度≠结果 | AC-01/02 PARTIAL | [同一研究文件 §8](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-administration-law-20261121` | D0 / CONSISTENT；秦供给规则有文献支撑、产出及最初执行年代仍 UNKNOWN；事件待同步 | 转向佛罗伦萨—元明同期证据矩阵 |
+| 2026-11-21 / M1-qin-iron-offices | 中研院史语所出土秦律转录定位《厩苑律》15、工律102—107、金布律借公器、秦律杂抄采铁；汤超2019与Liu2023对照官营/私营及齐燕反例，确认墓埋前217不能直接证明商鞅前356条文存在，制度≠结果 | AC-01/02 PARTIAL | [同一研究文件 §8](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7054203913)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-administration-law-20261121` | D0 / CONSISTENT；秦供给规则有文献支撑、产出及最初执行年代仍 UNKNOWN；事件待同步 | 转向佛罗伦萨—元明同期证据矩阵 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-administration-law-20261121`（本轮待同步稳定事件）
-- writer_owner: `chatgpt-topic016-qin-institutions-20261121`（仅本次同步）
-- write_state: `CLAIMED`（本轮先以 Tracker CAS 声明唯一 Writer，必须回读再发评论）
+- active_event_key: `none`（本轮评论已回读，本键留于 §9 与最近事件）
+- writer_owner: `none`（当前没有待发布 Writer）
+- write_state: `SYNCED`（#7054203913 已回读，唯一 event_key 只出现 1 次）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qinsample-2025-correction-20261121` / [Issue评论 #7053908318](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053908318)；该键已回读唯一评论。SYNCED 仅说明本轮变更与GitHub进度同步，不代表历史因果主因通过审稿。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-administration-law-20261121` / [Issue 评论 #7054203913](https://github.com/fweiger/AI_book/issues/70#issuecomment-7054203913)；同键回读仅 1 条。SYNCED 只表示 GitHub 进度同步而非学术因果审核通过。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -120,4 +120,4 @@
 | §5 局部阻断 | 秦律起源与执行范围未知，仅局部影响H2、可继续其他时代 | 本文件 §5 | PASS（影响边界对照） |
 | §6/7 | 原 Goal 不变，秦铁官审查完成，下一步跨时期比较 | 本文件 §6/7 | PASS（主线对照） |
 | §7 与 §9 | §7 当前动作是佛罗伦萨/元明，§9仅保留历史建议 | §7/§9 | PASS（唯一权威） |
-| Issue 与 PR/Tracker 回链 | #70/PR#71/研究文档可读，本轮铁官事件待发布 | #70/PR#71/Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70/PR#71/研究文档可读，#7054203913 评论唯一可回读 | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7054203913) | `SYNCED` |
