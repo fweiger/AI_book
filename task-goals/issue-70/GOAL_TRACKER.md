@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮逐条来源与逻辑QA、修错源及读回，直接推进原AC-05；Goal/Scope/AC未变）
-- 状态一致性: `CONSISTENT`（Issue #70 M2、已修改的原审计和§15、Draft PR #71及本Tracker相容；本轮新增进度事件待同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上轮已SYNCED；本轮AC-05内部QA纠错与独立评审阻断事件待唯一Writer发布/回读）
+- 状态一致性: `CONSISTENT`（Issue #70 M2、已修正初审与§15、PR #71、Tracker及本轮唯一Issue进度事件均已GET核实）
+- Issue 同步状态: `SYNCED`（AC-05内部QA事件 #7057166650已发布、GET回读同event_key仅1条；独立评审仍NOT_RUN）
 
 ## 1. 批准目标基线
 
@@ -55,7 +55,7 @@
 - **未解决的原文及数据问题**：CHI原文957个初始案例，声称两类各剔除11个但保留936，纯算式若不重叠为935，是否交叉或笔误不明（SOURCE_ARITHMETIC_UNKNOWN）；Strozzi原始税籍净额不同整理口径仍CONFLICT，手稿未目验；部分付费历史章节及程乐松演讲原音视频未核，均为局部未完成，不能伪称完整PASS。
 - **原目标因果边界**：康德/韦伯原典文字可核，QJE是岗位绩效DiD而非社会意识，CHI是调查相关性而非AI使长期思考能力下降的因果试验；历史生产力“最大原因”、AI“集体觉醒”依然NOT_ESTABLISHED/UNKNOWN。当前AC-05内部资料质量修复有实质成果，学术验收仍PARTIAL。
 - **审稿实际读取**：已调用GitHub正式review及review thread列表：**Review 0、行内审查线程0**，PR #71仍 OPEN/DRAFT/未合并；当前Issue没有已指定审稿人，PR请求审稿人字段为null，**不能据此绝对断定其他非GitHub审稿路由不存在**，但确实没有核实的独立审稿记录。
-- **偏差与状态**：D0，CONSISTENT，原 Goal/Scope/AC 保持，Issue #70当前M2。该轮Issue进度事件待单Writer同步后才称GitHub SYNCED。
+- **偏差与状态**：D0 / CONSISTENT；Issue #70 Goal/Scope/AC 保持，当前M2。该轮Issue评论 #7057166650 已GET回读同键恰好1条，GitHub同步SYNCED；内部QA不等于独立审稿。
 
 ## 5. 阻断与未受影响工作
 
@@ -129,15 +129,15 @@
 
 | 2026-11-21 / M2-kant-weber-ai-originals | 直接读康德1784德文、韦伯1919初版德文相关段，区分启蒙/祛魅/社会自主；QJE2025最终论文5172人客服、约300.6万对话、DiD+0.301/小时15.2%非大样本RCT；CHI2025 Prolific319人936任务、555自报思考，AI信任与较少自报投入相关非因果；正反论证支持“提高任务绩效≠自动提高独立判断”；修复Issue首页M1↔TrackerM2阶段冲突 | AC-03/04 PARTIAL（实证/概念来源核验PASS，独立审稿NOT_RUN），AC-05 QA待做 | [比较报告§14](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md) / [初轮审计§7](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057018089)；event_key `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:kant-weber-ai-empirical-20261121` | D0 / CONSISTENT（状态已纠正）；宏观Y1改变UNKNOWN；事件待同步 | AC-05来源/因果论断QA，独立审核仍NOT_RUN |
 
-| 2026-11-21 / M2-ac05-internal-qa | 同一报告新增§15 QA01–08及C01–10覆盖；纠C05错误北大网页来源、QJE整体5172与TableII(3) 12295员工月份、CHI936/930与555/551、任务AI信心显著而总体信任不显著；CHI957-11-11与936未解释；同时修初审§8和Issue书目错引，核PR正式review及行内线程0、PR仍Draft | AC-05 INTERNAL_QA实质修复PARTIAL；独立审核NOT_RUN | [同一报告§15](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[初审§8](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)；event_key: AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC05:source-qa-corrections-20261121 | D0/CONSISTENT；论文内部剔除算式未核实，未指定独立Reviewer，事件待同步 | 唯一下一步核定合法独立审稿路由并复核QA清单 |
+| 2026-11-21 / M2-ac05-internal-qa | 同一报告新增§15 QA01–08及C01–10覆盖；纠C05错误北大网页来源、QJE整体5172与TableII(3) 12295员工月份、CHI936/930与555/551、任务AI信心显著而总体信任不显著；CHI957-11-11与936未解释；同时修初审§8和Issue书目错引，核PR正式review及行内线程0、PR仍Draft | AC-05 INTERNAL_QA实质修复PARTIAL；独立审核NOT_RUN | [同一报告§15](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[初审§8](../../topics/ai-social-consciousness-transition/initial-claim-audit.md)；[本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057166650)；event_key: AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC05:source-qa-corrections-20261121 | D0/CONSISTENT；论文内部剔除算式未核实，未指定独立Reviewer，事件待同步 | 唯一下一步核定合法独立审稿路由并复核QA清单 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC05:source-qa-corrections-20261121（本轮稳定事件CLAIMED待发布）
-- writer_owner: chatgpt-topic016-ac05-internalqa-20261121
-- write_state: CLAIMED（必须回读确认CAS Writer与同键评论0条后方可发布）
+- active_event_key: none（本轮事件已同步，稳定键保留§9/最近事件）
+- writer_owner: none（当前无待发布事件）
+- write_state: SYNCED（本轮#7057166650已GET核实同event_key1条）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC04:kant-weber-ai-empirical-20261121` / [GitHub Issue评论 #7057018089](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057018089)；该事件已GET回读同键恰好1条。SYNCED只表示文件和评论进度一致，不等于研究已获独立学术验收。
+- 最近一次已同步事件：AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC05:source-qa-corrections-20261121 / [Issue评论 #7057166650](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057166650)；已GET回读且同键仅1条。SYNCED证明GitHub文件/事件状态一致，不代表独立学术审核通过。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -146,4 +146,4 @@
 | §5 局部阻断 | CHI源论文计数疑点/独立Reviewer未确认仅阻断对应统计澄清及AC-05最终验收 | 本文件§5 | PASS（局部影响） |
 | §6/7 | 仅重决策下一步为合法独立Reviewer路由/QA复核，未修改Goal/Scope/AC | 本文件§6/7 | PASS（主线贡献） |
 | §7 与 §9 | §7独立审核是唯一当前动作，§9保留审计历史建议 | 本文件§7/9 | PASS（一致性） |
-| Issue 与 PR/Tracker 回链 | Issue已改正书目统计描述、报告§15与初审§8可回读，本轮独立QA事件待发布 | #70 / PR#71 / 本Tracker | ISSUE_SYNC_PENDING |
+| Issue 与 PR/Tracker 回链 | Issue书目/数值更正、报告§15、初审§8和本轮唯一评论均回读，PR仍Draft | [本轮事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7057166650) | SYNCED |
