@@ -20,7 +20,7 @@
 - [32 项 GitHub 开源工具目录](open-source-projects.md)
 - [论文、原始标准与参考数据库](sources.md) · [按问题阅读路径](reading-path.md)
 - [主张与证据 C-ID](claims.md) · [知识关系图](knowledge-map.md) · [JSON 图谱](knowledge-graph.json)
-- [HG002 chr20 基准与可运行脚本](benchmark-hg002.md) · [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
+- [HG002 chr20 基准与可运行脚本](benchmark-hg002.md) · [Q03 父系 Y 工具方法深度核查](y-chromosome-methods.md) · [下一步](NEXT.md) · [里程碑变更](CHANGELOG.md) · [会话日志](sessions/README.md)
 - [唯一 L 级目标跟踪器](GOAL_TRACKER.md)（动态状态，不取代规范 Issue）
 
 ## 研究深度的四个层级
