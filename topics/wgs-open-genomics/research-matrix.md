@@ -1,6 +1,6 @@
 # TOPIC-017｜研究方向 × 技术深度 × 科学边界
 
-[G4 六案例实质证据核查](cross-domain-evidence-audit.md)补充了 WGS VCF/药物复杂基因输入的真实兼容性限制；[G5 结构变异、母系及携带者](cross-domain-evidence-audit-g5.md)进一步补足 NIST SV 真值边界、NUMTs/异质性与 ACMG 阴性残余风险。
+[G4 六案例实质证据核查](cross-domain-evidence-audit.md)补充了 WGS VCF/药物复杂基因输入的真实兼容性限制；[G5 结构变异、母系及携带者](cross-domain-evidence-audit-g5.md)进一步补足 NIST SV 真值边界、NUMTs/异质性与 ACMG 阴性残余风险；[G6 IBD、睡眠、运动](cross-domain-evidence-audit-g6.md)则区分单人 HBD/多人 IBD、欧洲祖源 GWAS 的外推限制与运动习惯/训练反应。
 
 > 本表保留原 11 项问题的研究深度草图；**优先阅读新的 [15 方向数据—论文—工具交叉主矩阵](evidence-capability-matrix.md)**。其中“深度”是可拓展研究层级，非已运行/验收结果。
 
