@@ -18,8 +18,8 @@
 - 最新 Issue 读取时间及修订: 2026-11-21 / `r0-20261121-user`；已 GET 回读 #70 双向链接
 - Tracker 当前 blob SHA: 以 GitHub `fetch_file` 实际返回为准；不可在文件中自引用生成 SHA
 - 目标漂移: `D0`（本轮同步年代、竞争性原因和史学资料直接推进未完成 AC-01/02；未扩展 Goal/AC）
-- 状态一致性: `CONSISTENT`（#70 批准目标与本轮先秦证据核查一致；本轮进度事件待同步）
-- Issue 同步状态: `ISSUE_SYNC_PENDING`（上一事件 #7053556474 已 SYNCED；本轮新实质证据事件待回读）
+- 状态一致性: `CONSISTENT`（#70 目标与先秦研究增量相容；本轮评论已独立回读恰好一条同键事件）
+- Issue 同步状态: `SYNCED`（本轮事件 #7053724285 已发布并 GET 回读，同键恰好 1 条；不代表学术验收）
 
 ## 1. 批准目标基线
 
@@ -56,7 +56,7 @@
 - **对原目标贡献**：直接推进 AC-01/02；对“生产力必然先于生产关系变动”的强版假说提出时序压力检验和明确反驳标准，而非无界扩展史料。
 - **当前阶段**：M1_CAUSAL_HISTORY_PARTIAL，关键史实来源较上轮增加，因果主因仍 PARTIAL/UNKNOWN。
 - **目标漂移**：D0，围绕用户指定第一条生产力—生产关系主线，未扩大 Goal/Scope/AC。
-- **状态一致性**：CONSISTENT，已 GET 核对 #70、同一证据文件、唯一 Tracker 与 Draft PR #71；本轮单 Writer CLAIMED 后方发 Issue 事件。
+- **状态一致性**：CONSISTENT，已 GET 核对 #70、同一证据文件、唯一 Tracker、Draft PR #71 与本轮 Issue 评论 #7053724285；事件键唯一（回读恰好 1 条）。
 
 ## 5. 阻断与未受影响工作
 
@@ -96,15 +96,15 @@
 | 2026-11-21 / initial | 创建 #70；将首轮历史与 AI 来源审计写入专题草稿分支 | AC-01~03 PARTIAL | [Issue #70](https://github.com/fweiger/AI_book/issues/70) / [audit](../../topics/ai-social-consciousness-transition/initial-claim-audit.md) | D0；初次互链回读待核，局部原文未得 | 完成两历史案例的因果矩阵 |
 | 2026-11-21 / M1-audit-event | 已 GET 确认 #70/Tracker/PR、唯一 Writer 已在 Tracker CLAIMED 后发布唯一进度事件，并 GET 只发现 1 条同键评论 | AC-01~03 PARTIAL；G1 同步完成 | [event](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053356363)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:M1:initial-evidence-20261121` | D0 / CONSISTENT；原史料/独立审稿未完成 | 下次重新判断当前 AC 优先级 |
 | 2026-11-21 / M1-production-relations | 依用户主线强调完成跨文明同期基线、四种竞争解释和权威学术来源核查；主因尚未识别 | AC-01/02 PARTIAL | [研究增量](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474)；event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` | D0/CONSISTENT；付费正文与可比考古数据缺失；本轮唯一事件已 GET 回读 | 下一轮锁定先秦 H1/H2/H3 的原始时序/制度机制 |
-| 2026-11-21 / M1-qin-primary-chronology | 在原证据文件中追加秦前408税制传世史料、前344商鞅方升、前309青川田律及前3世纪43件秦铁器实验的时序/地域/样本限制；H1强版受到质疑但未证否 | AC-01/02 PARTIAL | [同一研究文件 §5](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；event_key：AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121 | D0 / CONSISTENT；因果主因 UNKNOWN，考古普及率与地权仍不足 | 先核实冶铁样本前/后344年分期及选样偏差 |
+| 2026-11-21 / M1-qin-primary-chronology | 在原证据文件中追加秦前408税制传世史料、前344商鞅方升、前309青川田律及前3世纪43件秦铁器实验的时序/地域/样本限制；H1强版受到质疑但未证否 | AC-01/02 PARTIAL | [同一研究文件 §5](../../topics/ai-social-consciousness-transition/production-relations-comparative-evidence.md)；[事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285)；event_key：AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121 | D0 / CONSISTENT；因果主因 UNKNOWN，考古普及率与地权仍不足 | 先核实冶铁样本前/后344年分期及选样偏差 |
 
 ## 10. 最近一次状态一致性摘要
 
-- active_event_key: `AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121`（本轮首发声明）
-- writer_owner: `chatgpt-topic016-qin-primary-20261121`
-- write_state: `CLAIMED`（本轮尚待发布/回读；上一事件已 SYNCED）
+- active_event_key: `none`（本轮事件已发布并回读，稳定键保留在 §9 和最近事件）
+- writer_owner: `none`（当前无待发布事件）
+- write_state: `SYNCED`（事件 #7053724285 同键仅一条，已回读）
 - 旧 Writer fencing: 不适用；未来若出现已 CLAIMED 且失联，遵守 V1.2.2 禁止未证明停用的抢占规则。
-- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:production-relations-parallel-20261121` / [GitHub 评论 #7053556474](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053556474)。同步仅表示本轮 GitHub 写入可回读、事件键唯一；研究 AC-02 仍 PARTIAL，核心因果 UNKNOWN。前一事件参见 §9。
+- 最近一次已同步事件：`AI-BOOK-TOPIC-016-AI-SOCIAL-CONSCIOUSNESS:AC02:qin-primary-sequence-20261121` / [GitHub 评论 #7053724285](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285)，本轮回读同键仅出现 1 条；本次 SYNCED 只证明 GitHub 进度状态一致，不代表 AC-02 因果主因通过审核。此前事件见 §9。
 
 | 项目 | 核对值 | 证据 | 结果 |
 | --- | --- | --- | --- |
@@ -113,4 +113,4 @@
 | §5 局部阻断 | 付费原典与同口径数据缺失仅阻断主因判定 | 新文档 §4 | PASS（影响边界对照） |
 | §6/7 | 原 Goal 不变，下一步为秦铁器分期/选样偏差复核 | 本文件 §7 | PASS（主线对照） |
 | §7 与 §9 | 本轮下一步经重决策为样本偏差复核，旧历史建议仅参考 | §7/§9 | PASS（唯一权威） |
-| Issue 与 PR/Tracker 回链 | 上轮 #7053556474 已同步，本轮研究文档已提交，事件待发布 | #70 / PR #71 / Tracker | `ISSUE_SYNC_PENDING` |
+| Issue 与 PR/Tracker 回链 | #70 / PR #71 / 同一研究文档及唯一进度评论均可回读 | [当前事件](https://github.com/fweiger/AI_book/issues/70#issuecomment-7053724285) | `SYNCED` |
