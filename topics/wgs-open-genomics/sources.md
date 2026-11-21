@@ -2,7 +2,7 @@
 
 > 来源层级：DOI/官方项目为直接来源入口；本轮核对题名、摘要或机构项目说明，**不声称已逐篇阅读全文，也不伪造实验结果**。下列证据的适用范围需逐篇展开。
 >
-> **目前以 [41 篇不重复论文 P-ID 注册表](paper-register.md) 为论文计数源、以 [15 方向主矩阵](evidence-capability-matrix.md) 与 [G4 实质审计](cross-domain-evidence-audit.md)、[G5 D02/D04/D08 审计](cross-domain-evidence-audit-g5.md)、[G6 D05/D11/D13 审计](cross-domain-evidence-audit-g6.md) 为论文—工具关系源。** 本文件为阅读入口/补充来源，不应与 P-ID 注册表相加宣称论文总数。
+> **目前以 [47 篇不重复论文 P-ID 注册表](paper-register.md) 为论文计数源、以 [15 方向主矩阵](evidence-capability-matrix.md) 与 [G4 实质审计](cross-domain-evidence-audit.md)、[G5 D02/D04/D08 审计](cross-domain-evidence-audit-g5.md)、[G6 D05/D11/D13 审计](cross-domain-evidence-audit-g6.md)、[G7 15 域一致性/D01/D15 核查](cross-domain-evidence-audit-g7.md) 为论文—工具关系源。** 本文件为阅读入口/补充来源，不应与 P-ID 注册表相加宣称论文总数。
 
 ## 技术与基准
 1. Hanssen et al. (2024), *Scalable and efficient DNA sequencing analysis on different compute infrastructures aiding variant discovery*, [DOI 10.1093/nargab/lqae031](https://doi.org/10.1093/nargab/lqae031) — Sarek：大规模可复现 variant workflow。
