@@ -15,7 +15,7 @@
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
 - 目标漂移：`D0 ALIGNED`（本轮根据用户澄清从 Q03 局部分支回到所有研究域，推进 AC-02/03/04）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`SYNCED`（G1 #7059893177、G2 #7060020787 已按不同稳定事件键分别回读）
+- Issue 同步：`SYNCED`（G1 #7059893177、G2 #7060020787、G3 #7060148978 均以独立事件键回读）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -85,9 +85,9 @@
 | 2026-11-21/G1 | Issue #72 已创建回读；确认 32 个 GitHub 项目存在；15 个文件 Draft PR #73 与结构 CI PASS；Issue 已补 PR/Tracker 链接；不含个人数据 | 01–04/06 初步 | [#72](https://github.com/fweiger/AI_book/issues/72)，专题草稿 | D0；初始化待同步 | GIAB HG002 公开基准规范（PR 待审不阻断独立研究） |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：AI_book#72:AC02-03-04:20261121-cross-domain-matrix
-- **当前 writer_owner**：chatgpt-topic017-cross-domain-20261121
-- **当前 write_state**：CLAIMED（G3 新事件待发布；G1/G2 已回读）
+- **当前 active_event_key**：none（上一事件 AI_book#72:AC02-03-04:20261121-cross-domain-matrix 已完成）
+- **当前 writer_owner**：none（G3 Writer chatgpt-topic017-cross-domain-20261121 已完成）
+- **当前 write_state**：SYNCED（[G3 唯一评论 #7060148978](https://github.com/fweiger/AI_book/issues/72#issuecomment-7060148978) 已回读；事件声明 Tracker blob SHA f7c57c4b585a96c8856c75f437b14eebc0a190fd）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
@@ -98,6 +98,6 @@
 | §5 局部阻断 | Docker/DNS 仅阻断局部实验；全部文献分析可推进 | PR 与环境约束 | CONSISTENT |
 | §6 与 §7 | 以跨域真实论文和代码关联审计为唯一下一步 | 用户最新澄清/Issue/本 Tracker | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1/G2 事件已回读；G3 本轮正在 CLAIMED | G3 当前事件键与 Writer | ISSUE_SYNC_PENDING |
+| Issue 最新事件与 Tracker | G1/G2/G3 的不同事件键均已分别回读，G3 事件键仅一条 | G3 事件声明 Tracker SHA f7c57c4b585a96c8856c75f437b14eebc0a190fd | SYNCED |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
