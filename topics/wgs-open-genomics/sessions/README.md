@@ -7,5 +7,6 @@
 - [2026-11-21：G3 WGS 质量→论文→研究维度→GitHub 主矩阵与研究目标回归](2026-11-21-cross-domain-evidence-matrix.md)
 
 - [2026-11-21：G4 六领域原始论文、GitHub 输入/许可证与实际 WGS 兼容性审计](2026-11-21-cross-domain-paper-code-audit.md)
+- [2026-11-21：G5 SV/STR、母系 mtDNA、隐性携带者与 GitHub 许可证核查](2026-11-21-sv-mtdna-carrier-source-audit.md)
 
 每次实质研究需记录问题 Q-ID、原始来源是否全文读取、GitHub commit/release、实际代码运行/未运行、结论与反证、C-ID 变化、PR/Issue 链接。不得把二手摘要称为原文已核查。
