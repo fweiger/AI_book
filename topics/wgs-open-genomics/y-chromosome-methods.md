@@ -13,7 +13,7 @@
 |---|---|---|---|---|
 | [genid/Yleaf](https://github.com/genid/Yleaf) | BAM、CRAM、FASTQ、VCF（具体要看版本），支持 hg19/hg38/T2T；可以选 yfull/ftdna/isogg 树 | 从序列/分型判定 Y 单倍群；部分版本支持树图、private SNP | 单独证明某姓起源/古人直系身份；不确保商业私有库匹配 | [官方 README](https://github.com/genid/Yleaf/blob/master/README.md)，[2018 论文](https://doi.org/10.1093/molbev/msy080) |
 | [Shuhua-Group/Y-LineageTracker](https://github.com/Shuhua-Group/Y-LineageTracker) | BAM/VCF 等，明确输入参考基因组 build；Y-SNP 与 Y-STR | `classify`、`phylo`、`time` (NRY 分支分化时间)、`tmrca` (Y-STR 单倍型共祖时间)、`genostr` | 无多个样本的情况下不能凭一人计算近亲家谱分支或对照组 TMRCA | [官方 README](https://github.com/Shuhua-Group/Y-LineageTracker/blob/main/README.md)，[2021 论文](https://pubmed.ncbi.nlm.nih.gov/33750289/) |
-| [23andMe/yhaplo](https://github.com/23andMe/yhaplo) | 项目文档说明 ISOGG 定位预期为 **hg19/GRCh37**；支持索引 VCF/BCF、样本主导基因型文件 | 批量或单人 Y 单倍群分类 | **不能把 GRCh38 chrY 坐标直接塞进 GRCh37 模型而不转换**；文档警告仅变异位点 VCF 与低 Y 覆盖可能造成错误判断 | [官方 README](https://github.com/23andMe/yhaplo/blob/master/README.md)、[2016 方法论文](https://doi.org/10.1038/ng.3592) |
+| [23andMe/yhaplo](https://github.com/23andMe/yhaplo) | 项目文档说明 ISOGG 定位预期为 **hg19/GRCh37**；支持索引 VCF/BCF、样本主导基因型文件 | 批量或单人 Y 单倍群分类 | **不能把 GRCh38 chrY 坐标直接塞进 GRCh37 模型而不转换**；文档警告仅变异位点 VCF 与低 Y 覆盖可能造成错误判断 | [官方 README](https://github.com/23andMe/yhaplo/blob/master/README.md)、[2016 bioRxiv 方法预印本](https://doi.org/10.1101/088716) |
 
 **特别重要的兼容问题**：对比工具时必须固定 `reference_build / contig_style / tree_source / tree_revision / SNP table version / callable bases / min_read_depth / alt/ancestral logic`。不同数据库对同一谱系节点可能命名不同；只有共有的实际遗传位点才可严格对照。不能将旧版 yhaplo 的 hg19 坐标与 Yleaf 的 hg38 判定直接比较。
 
