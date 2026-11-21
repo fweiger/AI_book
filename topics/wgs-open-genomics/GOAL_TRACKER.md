@@ -15,7 +15,7 @@
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
 - 目标漂移：`D0 ALIGNED`（G7 按原唯一下一步完成全域一致性、D01/D15 质量边界与反证审查，推进 AC-02/03/04）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
-- Issue 同步：`SYNCED`（G1–G5 之前均已回读，G6 #7060913003 以唯一稳定事件键回读）
+- Issue 同步：`SYNCED`（G1–G6 先前均已回读；G7 唯一事件 #7061902307 已按稳定事件键回读）
 
 ## 1. 批准目标基线
 - **Goal**：建立个人 WGS 开源技术、学术论文、祖源/家谱/古 DNA、健康与复杂性状科研用途的长期可验证知识框架，明确可研究的深度和科学/临床边界。
@@ -91,9 +91,9 @@
 | 2026-11-21/G7 | 15 域/47 DOI/39 仓库交叉索引去重 PASS；D01 GIAB/ACMG/PCR-free 质量、D15 非直接组学边界、Gauchian 质疑/回应纠偏；原始文件验收合同 | AC-02/03/04 PARTIAL | [G7 审计](cross-domain-evidence-audit-g7.md)、[文件合同](wgs-data-acceptance-contract.md)、[证据日志](sessions/2026-11-21-wgs-quality-cross-evidence-audit.md) | D0/CONSISTENT（G7 同步待验证），E2 NOT_RUN | 公共 HG002 chr20 真实小变异 benchmark |
 
 ## 10. 最近一次状态一致性回读
-- **当前 active_event_key**：AI_book#72:AC02-03-04:20261121-g7-cross-domain-qc
-- **当前 writer_owner**：chatgpt-topic017-g7-20261121
-- **当前 write_state**：CLAIMED（G7 唯一事件待发；原 G6 #7060913003 已回读）
+- **当前 active_event_key**：none（上一 G7 事件 AI_book#72:AC02-03-04:20261121-g7-cross-domain-qc 已完成）
+- **当前 writer_owner**：none（G7 Writer chatgpt-topic017-g7-20261121 已完成）
+- **当前 write_state**：SYNCED（[G7 唯一事件 #7061902307](https://github.com/fweiger/AI_book/issues/72#issuecomment-7061902307) 已 GET 回读，匹配事件键仅 1 条；事件声明 Tracker blob SHA 3e81cf4cdd456aeea4e42421734c7d3f5237a35a）
 - **旧 Writer 停止/隔离**：不适用；首次写入者。
 - **无 fencing 不允许第二 Writer 抢占未决 CLAIMED 事件。**
 
@@ -104,6 +104,6 @@
 | §5 局部阻断 | Docker/DNS 仅阻断局部实验；全部文献分析可推进 | PR 与环境约束 | CONSISTENT |
 | §6 与 §7 | G7 全域证据审计已完成；下一步公共 HG002 小范围 E2 | 现有 benchmark 与原 AC-05 | CONSISTENT |
 | §7 vs §9 历史建议 | 当前下一步唯一 | 本文件 | CONSISTENT |
-| Issue 最新事件与 Tracker | G1–G6 各自唯一事件已回读；G7 尚未发布 | G7 event_key 和 Writer 声明 | ISSUE_SYNC_PENDING |
+| Issue 最新事件与 Tracker | G1–G7 事件键各唯一，G7 #7061902307 已回读；历史事件依据原评论保留 | G7 声明 Tracker blob SHA 3e81cf4cdd456aeea4e42421734c7d3f5237a35a | SYNCED |
 
 > 只有未来发生**实质进展或状态纠偏**才按协议持久化新检查点和一条事件。写入遵循 `tracker sha/CAS → CLAIMED 单 Writer → Issue 唯一评论 → 回读 → Tracker SYNCED`；不能事后称本次已完成该完整链。
