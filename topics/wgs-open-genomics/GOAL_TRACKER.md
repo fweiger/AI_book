@@ -7,13 +7,13 @@
 - 所属源仓库：`fweiger/AI_book`
 - 项目入口：`topics/wgs-open-genomics/README.md`
 - 唯一 Tracker：`topics/wgs-open-genomics/GOAL_TRACKER.md`（本文件）
-- 当前阶段：完成六领域原始论文/源码输入契约审计；15 域、25 篇注册论文、34 个开源仓库；WGS 真实复现 NOT_RUN
+- 当前阶段：G5 完成 D02/D04/D08 跨领域文献×源码×许可证审计；15 域、36 篇注册论文、39 个 GitHub 源码候选（并非全部开放许可）；真实 WGS E2 NOT_RUN
 - 选定协议：`fweiger/AI_tasks/task-center/v1.2.2/ENTRY.md`，原实验候选分支 `experiment/task-center-v1.2.2-continue-goal-guard-20261119`
 - **锁定协议 commit SHA：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`**（续接仅从锁定版本读取，不自动跟随 HEAD）
 - 本轮观察的候选分支 HEAD（协议分支）：`f0e5ccb90c54265dcd07abb9a975c903eb031ccf`
 - 初始 Issue 验证：2026-11-21，GET #72 内容可读，`requirements_revision: 1`
 - 当前 Tracker blob SHA：首次创建后从 GitHub 读取；本文件不自引用当前 SHA
-- 目标漂移：`D0 ALIGNED`（本轮根据用户澄清从 Q03 局部分支回到所有研究域，推进 AC-02/03/04）
+- 目标漂移：`D0 ALIGNED`（G5 横向覆盖此前未深审的 D02/D04/D08，直接推进 AC-02/03/04）
 - 状态一致性：`CONSISTENT`（Issue #72、PR #73 和 Tracker 合同目标已回读）
 - Issue 同步：`SYNCED`（G1 #7059893177、G2 #7060020787、G3 #7060148978、G4 #7060387293 分别按稳定事件键回读）
 
@@ -26,8 +26,8 @@
 | AC | 验收 | 验证方法 | 当前 | 证据 |
 |---|---|---|---|---|
 | AC-01 | 唯一 TOPIC-017 Issue 入口且合理查重 | GitHub 查询并回读 | PASS | [#72](https://github.com/fweiger/AI_book/issues/72) |
-| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（34 项存在性 PASS；其中六领域源码输入和许可证核查，真实运行 NOT_RUN） | [工具目录](open-source-projects.md) · [G4 审计](cross-domain-evidence-audit.md) |
-| AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（25 篇具体论文/指南登记；六领域原始方法/部分全文核验，全部全文系统审计未完成） | [论文注册表](paper-register.md) · [G4 审计](cross-domain-evidence-audit.md) |
+| AC-02 | ≥25 个真实 GitHub 工具及清晰分类、输入用途限制 | 逐仓库 GitHub 元数据；文件回读 | PARTIAL（39 项 GitHub 源码存在性 PASS；许可证分层已有证据，全部运行 NOT_RUN；部分源码并非 OSI 自由开放） | [源码/许可目录](open-source-projects.md) · [G5 审计](cross-domain-evidence-audit-g5.md) |
+| AC-03 | ≥10 条原始论文/标准，主题相联 | DOI/原始来源交叉核查；全文审计 | PARTIAL（36 篇去重原始论文/指南入口，D02/D04/D08 新增 11 篇；逐篇全面系统审计未完成） | [论文注册表](paper-register.md) · [G5 审计](cross-domain-evidence-audit-g5.md) |
 | AC-04 | ≥8 研究方向及数据/深度/失败边界 | Q-ID 与矩阵逐项核对 | PARTIAL（15 域质量/论文/方向/项目关联已提交；待独立证据审计） | [15 域主矩阵](evidence-capability-matrix.md) |
 | AC-05 | 公共参考基因组最小可复现实验和证据 | GIAB HG002 + 版本化命令与 QC | PARTIAL（公开参考输入/命令/验收规范已提交；实际运行 NOT_RUN） | [HG002 实验规范](benchmark-hg002.md) |
 | AC-06 | 专题分支、唯一 Tracker、审核 PR 和回链 | GitHub 文件、PR、INDEX、CI 校验 | PARTIAL（Draft PR #73/结构 CI PASS，尚待审核合并） | [PR #73](https://github.com/fweiger/AI_book/pull/73) |
@@ -40,25 +40,25 @@
 ## 3. 当前执行路径
 | 阶段 | 预期结果 | 对应 AC | 证据 | 状态 | 依赖 |
 |---|---|---|---|---|---|
-| S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[25 篇论文注册表](paper-register.md)、[六领域深度审计](cross-domain-evidence-audit.md)、[PR #73](https://github.com/fweiger/AI_book/pull/73) | PARTIAL（六领域方法/许可已核，其他方向及代码实测待审） | 来源可靠性和 WGS 实际运行待核 |
+| S1 | 15 域质量→论文→研究深度→GitHub 横向矩阵并入 Draft PR | 01–04/06 | [主矩阵](evidence-capability-matrix.md)、[36 篇论文注册表](paper-register.md)、[G4 审计](cross-domain-evidence-audit.md) 与 [G5 审计](cross-domain-evidence-audit-g5.md) | PARTIAL（9 个代表领域已有方法审计，WGS 真实 E2/全文系统审计待做） | 代码真实运行和较弱领域来源待核 |
 | S2 | 公开 GIAB 小范围 benchmark 的完整命令/资源设计 | 02/05 | [HG002 数据契约](benchmark-hg002.md) 与脚本 | PARTIAL | 本环境缺 Docker、公共数据 DNS；真实实验 NOT_RUN |
-| S3 | 跨医学/PGx/PRS/营养/古 DNA/HLA 样例审计 | 02–04 | [G4 六领域审计](cross-domain-evidence-audit.md)，父系保留独立材料 | PARTIAL（六领域论文及源码输入契约已核） | 软件真实运行和领域其余案例仍待核 |
+| S3 | 跨不同方向论文与 WGS 输入/许可证审计 | 02–04 | [G4](cross-domain-evidence-audit.md) + [G5](cross-domain-evidence-audit-g5.md) | PARTIAL（D02/D04/D08 纳入，高优先剩余 D05/D11/D13） | 待全领域证据密度和源码实际效果检验 |
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
 
 ## 4. 当前检查点
-- 本轮实际成果：增加 [六领域原始论文×软件数据契约审计](cross-domain-evidence-audit.md)；Exomiser/PharmCAT+StellarPGx/pgsc_calc/DIETFITS/ancIBD/OptiType。论文注册表更新至 25 篇，已核 GitHub 仓库至 34 项；修复 D09/D10/D14 的输入能力错误假设。
-- 重要实证边界：Exomiser GS Top-10 优化 49.7→85.5% 仅为作者已确诊病例队列的候选排序；DIETFITS 的预设饮食-基因型交互不显著；ancIBD 需要已填补/相位处理的古代群体数据。
-- 技术修正：pgsc_calc 当前不原生兼容普通 WGS variants-only VCF；PharmCAT 的 CYP2D6 VCF-only 模式不适合临床，需要考虑 BAM/CRAM 中的 SV/CNV；OptiType 是 HLA-I 专项而非全 HLA。
-- 已核：六个代表工具 README/许可证及相应 release 或当前源码、具体直接原文方法与部分全文；不是全 25 篇系统性全文审计。
-- 未完成：软件真实运行 E2、GIAB/HLA/PGx 独立 benchmark、其余领域深度审计、PR 合并。原 Goal/Scope/AC/版本未修改，AI_book 没有个人基因组数据。
-- 目标偏差 D0 ALIGNED：覆盖不同领域的关键输入/论文/代码/风险；状态一致性需按本轮进度事件回读确认。
+- 本轮研究实质：新增 [G5 SV/STR、母系 mtDNA、隐性携带者论文×源码审计](cross-domain-evidence-audit-g5.md)，新核 11 篇论文/指南 P026–P036 和 5 个 GitHub 源码候选 T35–T39，合计**36 篇、39 个仓库、15 域**；并非全世界总量或全部具开源许可。
+- 关键方法判断：GIAB SV 12,745 ≥50bp DEL/INS 真值不涵盖全部复杂结构；Mutserve 的 mtDNA VCF 暂不输出 indel，低异质性需防 NUMTs/污染；2021/2024 ACMG 指南要求报告阴性残余风险，假基因复杂位点需补检。
+- 关键许可纠偏：原 T16 ExpansionHunter 和 T39 Gauchian 为 **PolyForm Strict**；T38 InterVar README 明确仅非商业免费；T35 Truvari MIT、T36 MToolBox GPL-3.0、T37 Mutserve MIT。**源码在 GitHub 可见 ≠ 所有项目均允许自由修改分发/商用。**
+- 本轮来源：NIST、ACMG、PubMed/期刊公开论文；5 个新 GitHub 仓库的 README/许可文件已读；总计 36 篇不意味着全文全部审核完。
+- 仍未完成：任何 WGS 真实运行、GIAB SV/mtDNA heteroplasmy/carrier 独立基准、所有工具发行版兼容性和临床验证；Draft PR 尚未合并；没有获取个人 DNA。
+- 目标 D0 ALIGNED，状态证据与 Issue Goal/Scope/AC 一致，单 Writer G5 事件待发布回读。
 
 ## 5. 阻断与未受影响工作
-| 风险 | 影响范围 | AC | 不受影响主线 | 当前决定 |
+| 风险 | 实际影响范围 | AC | 不受影响主线 | 当前决定 |
 |---|---|---|---|---|
-| 当前环境缺 Docker/外部数据 DNS | GIAB HG002 真实 E2 benchmark | AC-05 | 全领域论文和软件输入审计 | 局部 BLOCKED，不做重复运维扩张 |
-| 未取得私人 WGS | 个人基因型实际推断 | 不影响目录/论文研究 | 公开案例与标准样本 | 不索取或上传私人序列 |
-| 25 篇尚未全面全文核验/部分工具未实际运行 | 科学有效性和代码表现 | AC-02/03/04 | 逐研究域审计/公开版本化准备 | PARTIAL/NOT_RUN，不能冒充真实临床准确率 |
+| 当前环境缺 Docker/公网数据 DNS | GIAB/HG002 E2 真实运行 | AC-05 的真实计算 | 论文/开源许可/研究上限审计 | 局部 BLOCKED，不能升级全局 |
+| 没有私人 WGS | 个人基因型推断 | 不影响研究资料整理 | 合法公开论文和数据 | 不采集私人 DNA |
+| 核心位点不可判读、公开源码有非 OSI 许可 | 工具复用与医学可行动性 | AC-02/03/04 | 独立选择兼容和有授权实现 | 记录候选限制，必要时替代软件；不做临床报告 |
 ## 6. 执行路径调整记录
 | 日期/轮次 | 旧候选优先 | 新动作或状态 | 真实依据 | AC | 是否改用户目标 |
 |---|---|---|---|---|---|
