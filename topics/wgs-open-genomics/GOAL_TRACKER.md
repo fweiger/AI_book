@@ -46,19 +46,18 @@
 | S4 | 跨工具/人群的结果比较、反证和下一版图谱 | 02–05 | 真实运行与来源日志 | TODO | 前期质量基线 |
 
 ## 4. 当前检查点
-- 本轮研究实质：新增 [G5 SV/STR、母系 mtDNA、隐性携带者论文×源码审计](cross-domain-evidence-audit-g5.md)，新核 11 篇论文/指南 P026–P036 和 5 个 GitHub 源码候选 T35–T39，合计**36 篇、39 个仓库、15 域**；并非全世界总量或全部具开源许可。
-- 关键方法判断：GIAB SV 12,745 ≥50bp DEL/INS 真值不涵盖全部复杂结构；Mutserve 的 mtDNA VCF 暂不输出 indel，低异质性需防 NUMTs/污染；2021/2024 ACMG 指南要求报告阴性残余风险，假基因复杂位点需补检。
-- 关键许可纠偏：原 T16 ExpansionHunter 和 T39 Gauchian 为 **PolyForm Strict**；T38 InterVar README 明确仅非商业免费；T35 Truvari MIT、T36 MToolBox GPL-3.0、T37 Mutserve MIT。**源码在 GitHub 可见 ≠ 所有项目均允许自由修改分发/商用。**
-- 本轮来源：NIST、ACMG、PubMed/期刊公开论文；5 个新 GitHub 仓库的 README/许可文件已读；总计 36 篇不意味着全文全部审核完。
-- 仍未完成：任何 WGS 真实运行、GIAB SV/mtDNA heteroplasmy/carrier 独立基准、所有工具发行版兼容性和临床验证；Draft PR 尚未合并；没有获取个人 DNA。
-- 目标 D0 ALIGNED，状态证据与 Issue Goal/Scope/AC 一致，单 Writer G5 事件待发布回读。
+- **实际完成**：新增 [G6 常染色体 IBD、睡眠与运动遗传学论文×源码审计](cross-domain-evidence-audit-g6.md)；新增 P037–P041 五篇可追溯 DOI，现总计 **41 篇去重研究论文/规范、39 个 GitHub 源码候选、15 域**。本轮没有为凑数量新增软件。
+- **关键输入核验**：hap-IBD 要求无缺失的 phased GT VCF + genome-build 匹配 cM map；人际 IBD 需要其他授权样本，单人 HBD/ROH 不能认亲。hap-IBD Apache-2.0、PLINK2 GPLv3、pgsc_calc Apache-2.0 均按官方 README 查核；后者不原生支持普通 WGS variants-only VCF。
+- **关键科研证据**：2019 晨晚型 697828 人及活动设备 85760 人差异 25min 是群体结果；睡眠时长 446118 人/78 loci 与前者性状不同；运动活动 GWAS 至多 703901 人、99 loci 不代表 VO2max 训练反应；HERITAGE 21 SNP 49% 是该样本拟合方差，未提供单人样本外准确率。
+- **实际未完成**：所有 WGS 实时算法执行 E2 NOT_RUN；新增论文全文系统评价 PARTIAL；第三方祖源可迁移/测序质量未实证；当前 PR 未合并到 main。无个人 DNA 或医疗/亲属样本写入公开仓库。
+- **目标/状态**：D0 ALIGNED（推进 AC-02/03/04 的横向真实输入/方法/反证）；Issue Goal/Scope/AC 保持，单 Writer 进度事件将在本轮同步回读。
 
 ## 5. 阻断与未受影响工作
-| 风险 | 实际影响范围 | AC | 不受影响主线 | 当前决定 |
+| 问题 | 实际影响 | 对应 AC | 仍可推进 | 决定 |
 |---|---|---|---|---|
-| 当前环境缺 Docker/公网数据 DNS | GIAB/HG002 E2 真实运行 | AC-05 的真实计算 | 论文/开源许可/研究上限审计 | 局部 BLOCKED，不能升级全局 |
-| 没有私人 WGS | 个人基因型推断 | 不影响研究资料整理 | 合法公开论文和数据 | 不采集私人 DNA |
-| 核心位点不可判读、公开源码有非 OSI 许可 | 工具复用与医学可行动性 | AC-02/03/04 | 独立选择兼容和有授权实现 | 记录候选限制，必要时替代软件；不做临床报告 |
+| 当前执行环境无 Docker/公共基准数据 DNS 受限 | HG002 公开基准真实计算 | AC-05 E2 | 跨 15 域论文和源码核查 | 局部 BLOCKED，避免无限运维绕路 |
+| 尚无合法第二人/群体基因型 | 多人 IBD/PR​​S 祖源校准真实复现 | AC-02/04 部分实际验证 | 方法输入、论文与公共数据准入 | E2 NOT_RUN，不虚构寻亲样本 |
+| 无个人 WGS | 私人个体分析 | 当前非 Scope 的真实个人推断 | 公开参考研究 | 不索取/公开私人数据 |
 ## 6. 执行路径调整记录
 | 日期/轮次 | 旧候选优先 | 本轮动作 | 真实依据 | 相关 AC | 是否改 Goal/AC |
 |---|---|---|---|---|---|
