@@ -283,7 +283,7 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 
 ## M0.6｜PIT / No-Lookahead 最小 Lean 规格原型（2026-11-22）
 
-> 代码位置：[examples/pit-no-lookahead](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead)。独立 Lean 4.35.0 package，无 Mathlib 依赖；专用 GitHub Actions workflow 已加入，等待本轮 PR CI 结果。
+> 代码位置：[examples/pit-no-lookahead](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead)。独立 Lean 4.35.0 package，无 Mathlib 依赖；专用 GitHub Actions workflow 已执行并通过：Run #15，job build success。
 
 ### 数据语义
 
@@ -302,7 +302,7 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 
 ### 当前证据边界
 
-- 源码、Lean toolchain、Lake package 和独立 Actions workflow 已建立；本轮尚未取得该 workflow 的完成结果，因此 build 状态暂记 NOT_RUN。
-- 这是 eligibility filter safety theorem，不是完整 as-of join；尚未证明 latest eligible revision 选择、输入排序、重复版本优先级、空值处理。
+- 源码、Lean toolchain、Lake package 和独立 Actions workflow 已建立；Run #15 的 `lake build` 成功，job log 显示两个定理均由 Lean 编译。
+- `#print axioms` 对两个定理均输出 `[propext]`，没有 `sorryAx`、`Classical.choice` 或用户自定义 axiom。该标准公理依赖已在 job log 实际回读。\n- 这是 eligibility filter safety theorem，不是完整 as-of join；尚未证明 latest eligible revision 选择、输入排序、重复版本优先级、空值处理。
 - 定理假设 availableAt 时间戳本身可信；它不证明数据供应商时间戳真实，也不证明任何因子有效或策略盈利。
 - 该原型位于 AI_book 专题分支，不修改 AI_Trader #488。
