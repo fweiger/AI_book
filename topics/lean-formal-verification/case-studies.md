@@ -248,7 +248,7 @@ README 报告 906 项文献结果：866 `full`、18 `library_wrapper`、22 `redu
 在损失 (L=mu+sigma Z)、(sigma>0)、(Phi(z)=alpha<1) 的 Gaussian 模型下，证明
 [
 operatorname{CVaR}_alpha(L)
-=min_cleft(c+rac{mathbb E[(L-c)^+]}{1-alpha}ight),
+=min_cleft(c+fracrac{mathbb E[(L-c)^+]}{1-alpha}ight),
 ]
 最小值在 (c=operatorname{VaR}_alpha(L)) 取得。
 
@@ -264,7 +264,7 @@ Sigma w=lambda_1mathbf 1+lambda_2mu,
 
 **C. CRR 二叉树到 Black–Scholes 的收敛**
 
-先把单步风险中性收益的特征函数写成 cos/sin 形式，证明 (n(arphi_n-1)) 收敛到 Gaussian 指数，再用复数幂极限和 Lévy 连续性定理得到 n 步对数收益的分布收敛；随后用有界 Put payoff 与 Put-Call Parity 得到 Call 价格收敛。源码：[CRRCharFun.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean)、[CRRClosedForm.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRClosedForm.lean)。benchmark 状态为 `full`、Axioms-clean。
+先把单步风险中性收益的特征函数写成 cos/sin 形式，证明 (n(phiarphi_n-1)) 收敛到 Gaussian 指数，再用复数幂极限和 Lévy 连续性定理得到 n 步对数收益的分布收敛；随后用有界 Put payoff 与 Put-Call Parity 得到 Call 价格收敛。源码：[CRRCharFun.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean)、[CRRClosedForm.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRClosedForm.lean)。benchmark 状态为 `full`、Axioms-clean。
 
 **额外的形式化质量案例：排除 vacuous theorem。** CRR Call 收敛定理曾把 no-arbitrage 假设量化到 n=0；但 n=0 时 u=d=1，no-arbitrage 条件不可能成立，因此原定理假设不可满足，证明会空洞成立。项目在 2026-08-20 修正为只要求 n≥1，并给出 `binomialNoArb_crr`，在 (|r|sqrt T<sigma) 时证明该条件可满足。该修正记录在 [binomial benchmark](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/binomial.json)。这说明形式化审查不仅要看 proof term，还要检查前提是否可满足。
 
