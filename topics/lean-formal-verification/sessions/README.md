@@ -14,3 +14,5 @@
 - [2026-11-22：Rust→Lean 的 Hax-FRI 与 ADC 子项目方法审查](2026-11-22-rust-to-lean-case-audit.md)
 
 - [2026-11-22：Hax / Aeneas 同源 FRI 对照与 Hax ADC 上游修复审计](2026-11-22-hax-aeneas-fri-comparison.md)
+
+- [2026-11-22：Hax ADC 历史问题上游修复与版本漂移审查](2026-11-22-hax-upstream-fix-and-version-drift.md)
