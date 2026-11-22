@@ -14,12 +14,12 @@
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
-- 本轮 Tracker 写入前观察到的最新已验证 PR head：b56c96dcd97c3ea22d817ddff3d6067a25885622
+- 本轮递归叶节点规则更新提交：a148f13c53fd0c8658d053d38b1efe536bccf7aa；PR #75 当前仍为 Draft
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：STATE_CONFLICT（§10 的核验表仍引用旧 PR head f7a2c55/Run #1289/#58，而真实当前 PR head 为 b56c96d；本轮正在修复 Tracker 并同步新的递归下钻决策）
-- Issue 同步状态：ISSUE_SYNC_PENDING（用户本轮明确的递归下钻范围尚未写入 Issue #74；本 Writer 已声明）
+- 状态一致性：CONSISTENT（递归叶节点规则已更新至地图文件，Issue #74 回执 comment #7084291199 已 GET 回读；提交 a148f13 的 Knowledge-base integrity Run #1300 与 Lean PIT Run #69 均 success；批准 Goal/Scope/AC 未变）
+- Issue 同步状态：SYNCED（递归叶节点停止条件与 GitHub 项目落点要求已写入 Issue #74 并回读唯一匹配，comment #7084291199）
 
 ## 1. 批准目标基线
 
@@ -84,7 +84,7 @@
 - **当前阶段判断：** M2 行业应用框架 v0.1 已建立，但只有一级行业和概括性二级领域，尚未达到用户要求的最小研究单元。下一步必须对 12 个行业递归下钻到具体业务问题，并逐叶映射原始论文和真实 GitHub 项目。既有 22 项矩阵与项目资源索引作为起始证据；源码审计和最小原型留待用户后续审查/选定。
 - **本轮 AC 与目标对齐证据：** AC-03 新增行业应用框架 v0.1、12 个一级行业、12 类横向问题和机会卡模板，仍 PARTIAL（尚未完成各行业二级业务场景与证据覆盖）；AC-05 Batch A 三项目审计完成但总量仍 PARTIAL，按具体方向需要触发；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（尚未接入或验证 AI_Trader #488）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；行业应用框架文件已提交，本轮开始前实际 PR head b56c96d 的 Knowledge-base integrity Run #1294 与 Lean PIT Run #63 均 success；但 Tracker §10 的旧核验表尚引用 f7a2c55/Run #1289/#58，构成需修复的状态冲突。Issue #74 已有框架 v0.1 回执 comment #7083743179；本轮递归下钻范围待同步。批准 Goal/Scope/AC v1.0 未变。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；行业应用框架文件已提交，本轮开始前实际 PR head a148f13 的 Knowledge-base integrity Run #1300 与 Lean PIT Run #69 均 success；但 Tracker §10 的旧核验表尚引用 f7a2c55/Run #1289/#58，构成需修复的状态冲突。Issue #74 已有框架 v0.1 回执 comment #7084291199；本轮递归下钻范围待同步。批准 Goal/Scope/AC v1.0 未变。
 
 ## 5. 阻断与未受影响工作
 
@@ -106,10 +106,10 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 将 12 个一级行业按变量深度递归下钻，逐条形成“行业→二级领域→三级细分→具体场景→具体问题→形式化对象/目标性质→论文→GitHub 项目”的最小研究单元清单；不能停在二级或三级。每条终端分支必须有实际 GitHub 项目作为落点。
+- **唯一优先动作：** 将 12 个一级行业按变量深度递归下钻，逐条形成“行业→二级领域→三级细分→具体场景→具体问题→形式化对象/目标性质→论文→GitHub 项目”的最小研究单元清单；不能停在二级或三级。每条终端分支必须有实际 GitHub 仓库作为落点；60 只是首轮起点，不是固定上限。
 - **对应未完成 AC 与当前阶段：** AC-03（跨学科证据地图尚未覆盖至具体问题和论文/项目叶节点）；AC-07（Lean 适配边界与金融关联仍需按具体方向明确）；M2。
 - **为什么它推进原始目标：** 原 Goal 要求识别 Lean 在不同学科和工程领域的真实应用、具体方法、论文和成熟项目。仅有行业名称或抽象场景不能回答“实际在哪个具体问题使用什么项目”；递归下钻和项目映射是 AC-03 的必要内容。
-- **预期实质交付物与完成条件/验证方法：** ① 可变深度行业树；② 每个叶节点包含具体问题、业务对象/使用者、形式化对象、目标性质、Lean 适配与边界；③ 对应原始论文/标准/技术报告；④ 至少一个实际 GitHub 仓库，注明 owner/repo、URL、项目与问题的关系（DIRECT_LEAN_IMPLEMENTATION / DIRECT_LEAN_RESEARCH / LEAN_INFRASTRUCTURE / ADJACENT_FORMAL_TOOL / INDUSTRY_REFERENCE_IMPLEMENTATION）、论文关联和证据等级；⑤ 汇总无直接 Lean 项目、仅有相邻工具或未找到项目的真实空白。GitHub 项目链接必须可回读，不能用仓库搜索结果的猜测或只列项目名代替。
+- **预期实质交付物与完成条件/验证方法：** ① 可变深度行业树；② 每个叶节点包含具体问题、业务对象/使用者、形式化对象、目标性质、Lean 适配与边界；③ 对应原始论文/标准/技术报告；④ 至少一个实际 GitHub 仓库，注明 owner/repo、URL、项目与问题的关系（DIRECT_LEAN_IMPLEMENTATION / DIRECT_LEAN_RESEARCH / LEAN_INFRASTRUCTURE / ADJACENT_FORMAL_TOOL / INDUSTRY_REFERENCE_IMPLEMENTATION）、论文关联和证据等级；⑤ 汇总无直接 Lean 项目、仅有相邻工具或未找到项目的真实空白。GitHub 项目链接必须可回读，不能用仓库搜索结果的猜测或只列项目名代替；Issue、论文网页和目录页不能充当项目仓库。
 - **需要先读取或检查的证据：** 已有 field-evidence-matrix、field-map、case-studies、bibliography 和首批行业机会地图；再补各行业官方标准、行业技术文档、原始论文和 GitHub 项目 README/项目页。优先复用已有 22 个方向级映射，不重复造清单。
 - **若受阻，下一项不受影响的工作：** 对已存在 Lean 项目的方向继续下钻其业务问题和论文关系；对 Lean 项目缺失的方向，寻找相邻形式化方法项目或该业务问题的实际 GitHub 参考实现，并明确证据缺口。
 - **为什么本动作优于其他候选动作：** 当前瓶颈是地图粒度与项目映射覆盖，不是项目内部质量。先完成最小研究单元和项目落点，才能让用户按方向挑选需要审计或做原型的项目。
@@ -144,10 +144,10 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|RECURSIVE-INDUSTRY-LEAF-MAP-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-recursive-industry-leaf-map
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|INDUSTRY-APPLICATION-FRAMEWORK-V1-20261123
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|RECURSIVE-LEAF-CLOSURE-RULE-20261123
 - **旧 Writer 已停止/隔离证据：** 上一框架事件 comment #7083743179 已回读唯一匹配，前一 Writer 声明已清理；本轮单一会话顺序执行，写入前确认 active claim 为 NONE。
 - **若无法 fencing：** 不适用
 
