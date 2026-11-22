@@ -90,3 +90,14 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23 CI 回归复验
 
 本轮新增方向矩阵后，首次知识库完整性检查发现 sessions 索引中的一个失效链接；已修复并重新验证。PR head `c45e6d94e30a45bb797019f201baac20d4c17eb8` 的 [Knowledge-base integrity Run #1268](https://github.com/fweiger/AI_book/actions/runs/45043057448) 与 [Lean PIT Run #37](https://github.com/fweiger/AI_book/actions/runs/45043057469) 均 success。PIT 两个 theorem 的 axiom 输出仍为 `[propext]`。外部项目构建未运行。
+
+
+## 2026-11-23｜代表项目审计批次 A
+
+已对三个与论文直接关联的项目固定 commit 并审计源码、许可证、toolchain、manifest、核心 theorem 和构建证据：
+
+- [Rate-Distortion](https://github.com/fubinyan/rate_distortion_lean4)：旧 commit 有 3161-job build log，但当前 source 在 2026-10-13 大改；当前 build NOT_RUN，license 未找到，CI workflow 与 README 声明不一致。
+- [AI4SLT](https://github.com/YuanheZ/lean-stat-learning-theory)：v4.32.0 release 报告 Lean 4.32.0 build PASS 与 SLT/ no-placeholder scan；当前 main 仅比 release 多 README 更新。
+- [Veil](https://github.com/verse-lab/veil)：main 固定 commit 的 [Run #442](https://github.com/verse-lab/veil/actions/runs/45014566842) 在 Linux/macOS build/test PASS；TrustAudit 的 7 条 shipped route 和 positive control 均 PASS；可信 SMT 与 sorryAx 边界已记录。
+
+本轮新增 M-19/M-20、C018-061—068 和三张项目审计卡。AC-05 仍 PARTIAL：Rate-Distortion 当前版本未 build；外部项目没有本专题独立构建。
