@@ -61,3 +61,15 @@
 28. [Hax-FRI Phase 2 Report](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/PHASE2_REPORT.md) — Hax extraction、FRI 局部定理与后端缺口报告。
 29. [Aeneas FRI fold-arity README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/README.md) — 同源 Rust 函数的 MIR/LLBC→Lean 证明案例。
 30. [Hax ADC historical PoC](https://github.com/runtimeverification/hax-annotations-adc-verification) — 32-bit limb addition with carry 的原始示例；README 中的 Issue 清单为历史记录，需结合上游 PR 状态阅读。
+
+## 数学金融与量化形式化新增来源
+
+31. [formal-mathfin repository](https://github.com/formal-applied-math/formal-mathfin) — Lean 4 数学金融库、README corpus summary、使用和贡献说明。
+32. [Coelho et al., arXiv:2606.01356](https://arxiv.org/abs/2606.01356) — MathFin 论文。
+33. [MathFin formalization status](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/docs/coverage.md) — full/library_wrapper/reduced_core/placeholder 分类。
+34. [MathFin axiom audit generator](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/AxiomAuditGen.lean) — benchmark-cited declaration 的公理闭包审计。
+35. [Rockafellar–Uryasev Gaussian CVaR](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean) — pointwise certificate proof。
+36. [Markowitz Lagrangian FOC](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Choice/Portfolio/MarkowitzLagrangian.lean) — KKT sufficiency。
+37. [CRR characteristic-function convergence](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean) — characteristic functions and Lévy continuity。
+38. [Gaussian risk report example](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFinExamples/Applications/GaussianRiskReport.lean) — worked portfolio risk report with explicit model limitations。
+39. [MathFin build workflow](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/.github/workflows/build.yml) — Python gates, lake build and axiom audit。
