@@ -14,7 +14,7 @@
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
-- 本轮 Tracker 写入前观察到的最新 PR head：f83f40314dfe67729e8ea4a9bd0e83b1b97f5dd0
+- 本轮 Tracker 写入前观察到的最新 PR head：9bfd789375d03f21c1d903813b3fc491e34b293e
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮写入前 Tracker blob SHA：ebfc2460821ac5bfdc4fdeba9ea52cfb541c84b4；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（Hax/Aeneas、MathFin 和 PIT 原型均直接推进 AC-03/04/05/06；没有接管 AI_Trader #488）
@@ -137,11 +137,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** none
-- **当前 writer_owner：** none
-- **当前 write_state：** SYNCED
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|CROSS-DOMAIN-EVIDENCE-MAP-20261122
+- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
+- **当前 write_state：** CLAIMED
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|MATHFIN-PIT-PROTOTYPE-20261122
-- **旧 Writer 已停止/隔离证据：** not_applicable（本轮无并发 Writer）
+- **旧 Writer 已停止/隔离证据：** 同一会话继续，未发现并发 Writer；本轮新 event claim 已在 Tracker 写入前检查
 - **若无法 fencing：** 不适用
 
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
