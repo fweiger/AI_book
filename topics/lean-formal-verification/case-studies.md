@@ -285,3 +285,29 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 - 数据供应商时间戳、历史修订、缺失数据与市场机制事实仍需独立数据证据，Lean 不能凭空证明这些外部事实为真。
 
 本专题只建立这种方法映射，不接管 AI_Trader #488 的实证实验，也不声称已经实现 PIT Lean proof。
+
+## M0.6｜PIT / No-Lookahead 最小 Lean 规格原型（2026-11-22）
+
+> 代码位置：[examples/pit-no-lookahead](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead)。独立 Lean 4.35.0 package，无 Mathlib 依赖；专用 GitHub Actions workflow 已加入，等待本轮 PR CI 结果。
+
+### 数据语义
+
+`Observation` 将两个经常被混淆的时间分开：
+- `eventTime`：市场事件实际发生的时间；
+- `availableAt`：策略能够获得该记录的最早时间；
+- `decisionTime`：策略作出决策的时点。
+
+`eligibleRows` 只根据 `availableAt ≤ decisionTime` 过滤，不以 eventTime 代替数据可得时间。
+
+### 已写入的定理
+
+- `eligibleRows_no_lookahead`：任何进入 eligibleRows 的记录，其 availableAt 不晚于 decisionTime。
+- `late_available_revision_excluded`：如果一条记录的 availableAt 晚于决策时点，即使 eventTime 较早，也不能进入当时的输入集合。
+- 具体反例：eventTime=1、availableAt=3、decisionTime=2 的修订记录会被排除。
+
+### 当前证据边界
+
+- 源码、Lean toolchain、Lake package 和独立 Actions workflow 已建立；本轮尚未取得该 workflow 的完成结果，因此 build 状态暂记 NOT_RUN。
+- 这是 eligibility filter safety theorem，不是完整 as-of join；尚未证明 latest eligible revision 选择、输入排序、重复版本优先级、空值处理。
+- 定理假设 availableAt 时间戳本身可信；它不证明数据供应商时间戳真实，也不证明任何因子有效或策略盈利。
+- 该原型位于 AI_book 专题分支，不修改 AI_Trader #488。
