@@ -87,9 +87,9 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **领域/问题**：密码学实现中的定宽整数运算，例如 32-bit limb addition with carry。
 - **输入/输出**：Rust 函数 adc_u32(a,b,carry) 输出 sum 与 carry_out。
 - **规格**：carry、carry_out 属于 {0,1}；在更宽的 u64 语义下验证 a+b+carry = sum+2^32×carry_out。
-- **步骤**：在 Rust 源码中写 pre/post 函数和 Hax annotations；通过 Hax 抽取到 Lean；用 hax_lib::lean::after 注入 theorem；对 bit-vector 运算尝试 hax_bv_decide bit-blasting。
+- **步骤**：优先参考 Hax 官方 ADC 示例：在 Rust 源码用 `#[hax_lib::lean::after]` 注入 Hoare triple；将前后置条件表达为纯 Lean propositions；设置 `hax_mvcgen.specset "bv"`；使用 `hax_mvcgen` 生成纯验证条件，再用 `bv_decide` bit-blasting。
 - **工程技巧**：把 adc_pre 与 adc_post 拆成独立函数，降低 Lean 中展开和推理复杂度。
-- **失败边界**：当前 README 记录了 cast、shift、tuple projection、monadic binds 和 BitVec fragment 支持问题；抽取/编译失败时不得报告 theorem PASS。
+- **失败边界**：早期 PoC 的 cast、shift、tuple projection 和 BitVec fragment 问题已有部分上游修复；旧 README 是历史问题清单。仍须锁定 Hax 版本、使用正确 specset，并在实际 build 后才报告 theorem PASS。
 - **来源**：[README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/README.md) · [Rust 源码](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/src/lib.rs)。
 - **状态**：E1；未独立运行 Hax/Lean。
 
@@ -110,3 +110,51 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **失败边界**：只记录 Lean 版本或 lakefile 声明，不足以重建完全相同的依赖树。
 - **来源**：本专题 M0 的 8 个 Lake manifest 审计快照。
 - **状态**：E1；构建复现待做。
+
+
+### M-01 修订｜采用 Hax 官方 ADC 方法，而不是停留在历史 PoC
+
+- **推荐流程**：[Hax 官方 lean_adc 示例](https://github.com/cryspen/hax/blob/c5482e5a4c5713d3fb496435517d70d15c1b1393/examples/lean_adc/src/lib.rs)。
+- **规格建模**：将 carry 范围和 64-bit arithmetic identity 写成纯 Lean proposition；不要让 BitVec 决策过程直接处理未经规范化的 RustM 规格。
+- **证明步骤**：在 Rust 中用 \`#[hax_lib::lean::after]\` 注入 Hoare triple；设定 \`hax_mvcgen.specset "bv"\`；使用 \`hax_mvcgen [function]\` 生成纯 verification conditions；最后 \`bv_decide\`。
+- **tuple 处理**：优先在 Hoare triple 中模式匹配 \`⟨sum, carry_out⟩\`；不要依赖旧 PoC 中的 \`r.fst/r.snd\`。
+- **证据边界**：上游 PR #1959 已合并并加入官方 examples；本专题未独立运行 \`make\` / \`lake build\`。
+
+### M-04｜多语义规格集：数学整数与位向量分开证明
+
+- **问题**：同一个定宽整数运算既可能需要按数学整数推理，也可能需要按机器位宽和溢出语义推理；一个 simp/spec 集合难以同时服务两种目标。
+- **方法**：在库层分别标注 \`@[specset int]\` 与 \`@[specset bv]\`；按证明目标设置 \`hax_mvcgen.specset\`；用 \`hax_mvcgen\` 生成对应 VC。
+- **bit-vector 路线**：\`set_option hax_mvcgen.specset "bv"\` → \`hax_mvcgen [f]\` → \`bv_decide\`。
+- **整数路线**：选择 \`int\` specset，再配合 \`grind\` / \`omega\` 等适合数学整数目标的 tactic。
+- **失败边界**：specset 选择错误时，tactic 可能无法把目标归一化到支持的 BitVec fragment；不能把 tactic 不支持误判为程序性质为假。
+- **来源**：[Hax PR #1933](https://github.com/cryspen/hax/pull/1933) · [Hax PR #1959](https://github.com/cryspen/hax/pull/1959)。
+- **状态**：E1 / 上游 PR 与示例源码已读；本专题未构建。
+
+### M-05｜同源 Rust 输入下比较 Hax 与 Aeneas
+
+- **问题**：避免仅凭工具介绍比较 Rust→Lean extraction 工具。
+- **步骤**：固定同一个 Rust source blob；分别记录 Rust HIR/MIR 路线、生成的 Lean 语义类型、Option/Result/Monad 表达、算术模型、proof scripts、sorry/axiom、依赖锁和构建日志。
+- **本案例**：同一 \`compute_log_arity_for_round\` 源码；Hax 输出 \`RustM\`，Aeneas 输出 \`Result\`。
+- **观察指标**：源代码覆盖、生成表示复杂度、局部 theorem 完成度、proof friction、跨库桥接成本、build reproducibility。
+- **失败边界**：一个函数的比较不能推断全语言支持率、性能或工具普遍优劣；必须扩展到多类 Rust 结构和更大程序。
+- **来源**：[Hax pipeline](https://github.com/Verified-zkEVM/rust-lean/tree/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI) · [Aeneas pipeline](https://github.com/Verified-zkEVM/rust-lean/tree/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean)。
+- **状态**：E1 / 同源文件和证明源码已读；构建 NOT_RUN。
+
+### M-06｜跨库桥接：显式管理 axioms、opaque 和 sorry
+
+- **问题**：不同 Lean 库因同名定义、实例或版本冲突无法直接导入，研究者可能把已证明的性质先抽象成 axiom，再继续使用领域库。
+- **方法**：把源程序性质、抽象模型、跨库映射和领域定理拆开；每个 bridge 记录 statement、source theorem、映射函数、假设和 proof status；对每个 axiom/opaque 建立责任清单；优先用可证明的 refinement lemma 替代公理。
+- **审计**：静态搜索 \`sorry/admit/axiom/opaque\`；随后在锁定环境运行 \`lake build\` 和 \`#print axioms theoremName\`，确认 theorem 的传递依赖。
+- **本案例**：Aeneas BasicProofs 源码无显式 sorry/axiom；ArkLib target 为处理 \`BitVec.toNat_pow\` 冲突而声明 3 个 axioms 和 1 个 opaque。
+- **失败边界**：axiom 并非自动错误，但它把证明义务移出当前 Lean theorem；不能把使用该 axiom 的定理宣传成完全由 Kernel 从程序实现推导出的结果。
+- **来源**：[Aeneas FoldingCorrectness.lean](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/FoldArityVerif/FoldingCorrectness.lean)。
+- **状态**：E1 / 源码依赖边界已读；未运行 \`#print axioms\`。
+
+### M-07｜把成功返回与前置条件写进定理
+
+- **问题**：Rust 的 \`usize\` subtraction 可能在无效输入下 panic；只证明成功返回值的性质，不等于证明函数对所有输入总能正常返回。
+- **方法**：明确列出原 Rust 的 debug_assert / precondition；在 Lean theorem 中同时写明输入不等式、函数成功返回等式（例如 \`h_result : f args = .ok result\`）和待证后置性质。
+- **本案例**：FRI arity 的 target-distance 与 next-input-distance 定理依赖高度不等式；结论只对成功返回路径成立。
+- **失败边界**：若要证明 panic-freedom/total correctness，还需单独证明输入条件足以保证所有 checked subtraction 和分支成功。
+- **来源**：[Hax FoldingCorrectness](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/lean/P3FriProofs/Proofs/FoldingCorrectness.lean) · [Aeneas BasicProofs](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/FoldArityVerif/BasicProofs.lean)。
+- **状态**：E1 / 源码方法已读；未构建。
