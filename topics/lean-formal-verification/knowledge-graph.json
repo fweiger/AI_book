@@ -157,18 +157,6 @@
       "evidence_level": "E1"
     },
     {
-      "id": "L21",
-      "type": "method",
-      "title": "Hax dual specification sets: integer and bit-vector",
-      "evidence_level": "E1"
-    },
-    {
-      "id": "L22",
-      "type": "governance",
-      "title": "Hax version compatibility and generated Lean package migration",
-      "evidence_level": "E1"
-    },
-    {
       "id": "L26",
       "type": "case_study",
       "title": "MathFin：金融数学形式化库",
@@ -214,6 +202,12 @@
       "id": "L33",
       "type": "concept",
       "title": "eventTime 与 availableAt 的语义区分",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L34",
+      "type": "method",
+      "title": "Hax 版本兼容与生成 Lean package 迁移",
       "evidence_level": "E1"
     }
   ],
@@ -457,6 +451,16 @@
       "source": "L32",
       "target": "L22",
       "relation": "程序级不变量与形式化验证方法"
+    },
+    {
+      "source": "L34",
+      "target": "L17",
+      "relation": "版本和依赖锁定"
+    },
+    {
+      "source": "L34",
+      "target": "L22",
+      "relation": "迁移时保留同源工具对照"
     }
   ],
   "reading_paths": [
@@ -546,7 +550,7 @@
       ]
     },
     {
-      "id": "Q07",
+      "id": "Q11",
       "name": "Hax版本迁移与双规格验证",
       "nodes": [
         "L19",
