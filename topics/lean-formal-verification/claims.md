@@ -38,3 +38,9 @@
 | C-ID | 主张 | 来源 | 状态 | 最强限制/反例 |
 |---|---|---|---|---|
 | C018-015 | 8 个已审查的 Lean 4 项目均通过 Lake manifest 将 Mathlib/其他依赖固定到具体 Git revision；工具链版本号不足以单独复现项目 | [M0 Lake manifest 审计表](case-studies.md) | E1 / 8 个固定 manifest 已解析 | manifest 存在不代表当前环境构建通过；还需锁定项目 commit、toolchain、外部依赖可用性并执行构建 |
+
+
+| C-ID | 主张 | 来源 | 状态 | 最强限制/反例 |
+|---|---|---|---|---|
+| C018-016 | Hax ADC 示例将 Rust 函数的前后置条件抽取为 Lean theorem，并尝试使用 hax_bv_decide 对 32-bit carry arithmetic 做 bit-blasting | [README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/README.md)；[Rust source](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/src/lib.rs) | E1 / 源码已读 | README 记录抽取编译和 BitVec 支持问题；本轮未独立运行，不能标端到端证明通过 |
+| C018-017 | Hax-FRI 将 Plonky3 的 Rust FRI folding 抽取到 Lean 并连接 ArkLib 规格；基础 proof 文件据 README 可构建，但 FoldingCorrectness 仍待证明 | [Hax-FRI README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/README.md)；[toolchain](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/lean/P3FriProofs/lean-toolchain) | E1 / 固定源码与配置已读 | 作者 README 的 build 报告尚未独立复现；端到端 FRI 正确性未完成 |
