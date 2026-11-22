@@ -342,3 +342,34 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 - 后续 Tracker-only commit 未修改 PIT proof/package。该结果仍只证明 eligibility filter safety，不是完整 latest-revision as-of join。
 
 **本轮外部项目状态：** 未对上述外部 Lean 仓库执行独立 clean build；均按 README/论文/配置证据分级，不标 E3。
+
+
+## M0.8｜跨学科论文—项目映射的源码时点核验（2026-11-23）
+
+### 本轮直接读取的代表项目
+
+| 项目 | 本轮读取文件/结果 | 版本与边界 |
+|---|---|---|
+| MathFin | 当前 main README、CITATION.cff、docs/coverage.md、lean-toolchain | README 906 corpus results（866 full / 18 library wrappers / 22 reduced cores）；CITATION 2.0.0（2026-11-11）为 833 delivery-ready；coverage 中 806 是 2026-11-08 检查点；Lean 4.35.0。数字属于不同日期/口径 |
+| LeanInfoTheory | master README、lean-toolchain | v0.2.0（2026-11-05），811 declarations、57 modules，Lean 4.33.1；官网仍有 v0.1.0 / 601 declarations 旧页面 |
+| rate_distortion_lean4 | README、MainResults.lean、lean-toolchain | Lean 4.28.0；有限字母表 rate-distortion direct/converse/boundary theorem；主结果文件有显式 axiom print 与 allowlist gate |
+| AI4SLT | PMLR ICML 2026 官方论文页、GitHub README、lean-toolchain | Lean 4.32.0；论文覆盖 empirical processes/Gaussian concentration/Dudley/least-squares；当前 repo README 另列论文后的高维概率扩展 |
+| TorchLean | main README、lean-toolchain | Lean 4.36.0；同一 Lean model 定义用于训练、图转换、证书检查和证明；CUDA 注册 native operators 使用 LibTorch ATen，须单独审计 backend 边界 |
+| DynamicalSystems | main README、lean-toolchain | Lean 4.36.0-rc2；论文对应控制理论库；未独立 build |
+| Veil / IFP | Veil main README/toolchain；IFP main README | Veil 2.0 / Lean 4.35.0；IFP 103 invariants 中 93 verified、10 pending；Phase 1 明确限于两个固定参与者、单 epoch |
+
+### 论文与项目的一一对应关系
+
+- AI4SLT 论文 ↔ YuanheZ/lean-stat-learning-theory；论文后的 repo 扩展必须分开归因。
+- Rate-Distortion 论文 ↔ fubinyan/rate_distortion_lean4；主结果文件提供 axiom audit 入口，但本轮没有运行构建。
+- Doll–Shames 控制理论论文 ↔ mcdoll/DynamicalSystems；当前 toolchain 是 Lean 4.36.0-rc2，需注意 RC。
+- TorchLean 论文 ↔ lean-dojo/TorchLean；同一模型定义跨训练/图变换/验证/证明，但 CPU Lean rules 与 CUDA LibTorch native operator 是不同执行路径。
+- HepLean CPC 论文 ↔ HEPLean/HepLean；论文明确使用 Lean 4 数字化高能物理内容。
+- Veil CAV 2025 论文 ↔ verse-lab/veil；IFP 是使用 Veil 的应用案例，而不是 Veil 框架本身。
+
+### 当前验收边界
+
+- 论文原始页/官方项目 README/关键文件已读取，证据为 E1/E2。
+- 本轮未对这些外部项目执行 clean clone、依赖下载、lake build 或独立 theorem/axiom 输出，均为 NOT_RUN。
+- README 的 theorem 数量、no-sorry 声明、CI badge 不替代实际 CI job log。
+- MathFin 的 906 / 833 / 806 / 804 分别属于当前 README、软件 release、历史 coverage audit、论文快照；不可混为一个数字。
