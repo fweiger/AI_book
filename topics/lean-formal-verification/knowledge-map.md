@@ -35,3 +35,18 @@
 - Kernel 检查通过 → 原始自然语言命题翻译无误。
 - 模型定理通过 → 实际程序符合模型。
 - 形式化金融数学 → 市场数据正确或策略有收益。
+
+## 2026-11-22｜跨领域证据图新增连接
+
+领域节点不再只连接一个项目名称，而是按以下关系展开：
+
+**领域 → 研究方向 → 原始理论论文/形式化论文 → Lean 项目 → 相邻证明助手/验证工具 → 证明范围与缺口。**
+
+新增的重要连接：
+- 分布式系统：CSLib/时序逻辑 → Veil/Lentil → IFP BFT safety case；Resonate 和 btc-verified 作为不同类型的状态机/协议组件案例。
+- 统计学习：AI4SLT → 经验过程/集中不等式/泛化界 → 量化模型复杂度与过拟合理论；StatWhy 作为统计程序前提检查的非 Lean 对照。
+- 信息论：LeanInfoTheory 通用 API → infotheorylib 教材映射 → rate-distortion 具体定理。
+- 控制：DynamicalSystems/LeanForControl → Lyapunov/LaSalle/small-gain → TorchLean neural controller verification。
+- 金融：MathFin/BrownianMotion → 风险/定价/组合；PIT prototype → 时间可得性 filter safety。经验回测、数据源真实性和策略盈利仍在 Lean 形式化边界之外。
+
+完整节点、关系和阅读路径见 [knowledge-graph.json](knowledge-graph.json) 与 [field-evidence-matrix.md](field-evidence-matrix.md)。
