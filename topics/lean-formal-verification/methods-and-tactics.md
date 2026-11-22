@@ -274,3 +274,27 @@ PIT 最小 package 的 GitHub Actions [Run #24](https://github.com/fweiger/AI_bo
 - **失败边界**：GitHub 搜索命中不等于论文 companion；README theorem 数量不等于全部 theorem 已独立复现；第三方搜索缓存可能滞后于当前 GitHub 源码。
 - **本轮例子**：MathFin README 906 corpus results、CITATION release 833 delivery-ready、coverage 历史检查点 806、论文 v4 804；LeanInfoTheory master README v0.2.0/811 declarations 与旧官网 v0.1.0/601 declarations。
 - **状态**：E2 / 官方源文件已读取；尚未对外部项目执行 clean build。
+
+
+### M-19｜固定源码版本与构建证据时点对齐
+
+- **问题**：项目 README、release build log、GitHub Actions 和当前 main 往往不是同一个 commit；旧日志容易被误当作当前版本构建证据。
+- **步骤**：固定 repo + commit SHA；记录 lean-toolchain、lake-manifest、LICENSE；读取 build-verification.log 的提交时间和对应 source blob；查询文件路径的 commit history；比较 build-log commit 与当前 commit 的 source diff；检查 .github/workflows 是否真实存在；读取 Actions run 的 head_sha、event、branch、job conclusion；仅当运行 commit 与审计 commit 一致时将其标记为该版本的 CI PASS。
+- **失败边界**：README 声称有 CI 不等于 workflow 文件存在；release tag 构建记录不等于当前 main 构建；PR head CI 不自动覆盖 base SHA；manifest 版本正确也不等于实际构建成功。
+- **本轮案例**：Rate-Distortion 的 2026-09-22 build log 早于 2026-10-13 RateDistortion.lean 大改；AI4SLT v4.32.0 release 与当前 main 仅 README 不同；Veil Run #442 的 head SHA 与被审计 main SHA 精确一致。
+- **状态**：E2 / 上游构建时点核验已完成；本专题没有独立构建外部项目。
+
+### M-20｜Lean 定理、公理、模型假设与不安全实现的信任边界审计
+
+- **问题**：print axioms 只报告定理依赖的公理，不能独自证明实际执行路径没有 unsafe 或 implemented_by；模型假设也不应被误报为全局公理。
+- **步骤**：
+  1. 对 theorem endpoint 使用 print axioms / Lean.collectAxioms，明确允许标准公理和额外 axioms。
+  2. 将 sorryAx、顶层 axiom、class/structure 字段、定理参数假设分别登记。
+  3. 对自动验证器读取 solver trust option、proof reconstruction、certificate output、kernelChecked 和 offenders。
+  4. 沿 shipped theorem/command route 的 type 与 value 递归检查可达常量，识别项目自定义 unsafe / implemented_by；加入正向控制以防审计 vacuous。
+  5. 将 abstract model assumptions 与 concrete model instance 对接；逐条确认 contract 字段由具体证明提供。
+  6. 将 safety 与 liveness 分别作为独立验收对象。
+- **失败边界**：没有额外 axiom 不代表 runtime implementation 与 theorem 一致；没有 unsafe 不代表模型假设真实；证明 safety 不自动证明 eventual termination；可信 SMT fallback 可能产生 sorryAx，必须显式报告。
+- **本轮案例**：Rate-Distortion 的 MainResults allowlist；Veil CertificateResult.kernelChecked；Veil TrustAudit 对 7 条 shipped route + 1 条 positive control 的检查；SCP Background 字段与 one_such_Background。
+- **量化迁移**：将数据真实性/时点可得性与 Lean theorem 分开；对订单状态机同时检查 safety invariants 和 eventual terminal-state liveness；禁止把测试通过当成实现精化证明。
+- **状态**：E2 / 固定 commit 源码与上游 CI/Release evidence 已读取；未独立复现外部项目。
