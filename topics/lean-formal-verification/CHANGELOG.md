@@ -7,3 +7,6 @@
 
 
 - **2026-11-22，v0.2.1（Draft）**：补充 8 个 Lean 4 项目的 Lake manifest 解析结果，记录 Mathlib 与关键传递依赖的精确 commit revision；新增 C018-015。进一步确认可复现性至少需要项目 commit + lean-toolchain + lake-manifest 三者，单独记录 Lean 版本不足。所有项目实际构建仍 NOT_RUN。
+
+
+- **2026-11-22，v0.3.0（Draft）**：深入审查 rust-lean 的 Hax-FRI 与 Hax ADC 子项目；记录 Rust→Lean 抽取、Hax annotations、hax_bv_decide bit-blasting、ArkLib 规格连接和实际抽取障碍；新增 C018-016/017 与 M-01/M-02/M-03 方法卡。新增知识图谱节点区分局部算术证明与协议级正确性；所有案例仍为 E1，未独立构建。
