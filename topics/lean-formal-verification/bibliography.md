@@ -179,3 +179,5 @@
 - [HepLean: Digitalising high energy physics](https://doi.org/10.1016/j.cpc.2024.109457)；[PhysLib current project](https://github.com/leanprover-community/physlib)。
 - [MoveIt Task Constructor for Task-Level Motion Planning, ICRA 2019](https://doi.org/10.1109/ICRA.2019.8793898)。
 - [Large-eddy simulations with ClimateMachine v0.2.0](https://doi.org/10.5194/gmd-15-6259-2022)；ClimateMachine.jl README 标记旧仓库不再维护，后续资源转向 ClimaCore/ClimaAtmos/ClimaCoupler。
+
+- [Hax: high-assurance translation of Rust into Lean/F*/Rocq](https://github.com/pereq-dev/hax)；README identifies Lean as one supported backend.
