@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.5.0",
+  "topic_version": "0.6.0",
   "topic_id": "TOPIC-018",
   "title": "Lean 形式化证明与跨学科可验证系统",
   "source_level": "官方文档、公开项目页面和论文初筛；项目构建与独立复现尚未完成",
@@ -202,6 +202,18 @@
       "id": "L31",
       "type": "method",
       "title": "Markowitz Lagrangian FOC 的 KKT 充分性",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L32",
+      "type": "method",
+      "title": "PIT/no-lookahead：availableAt ≤ decisionTime",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L33",
+      "type": "concept",
+      "title": "eventTime 与 availableAt 的语义区分",
       "evidence_level": "E1"
     }
   ],
@@ -425,6 +437,26 @@
       "source": "L30",
       "target": "L08",
       "relation": "形式化 CRR 定价收敛"
+    },
+    {
+      "source": "L26",
+      "target": "L32",
+      "relation": "金融数据时间语义的形式化应用"
+    },
+    {
+      "source": "L32",
+      "target": "L33",
+      "relation": "区分事件时间与可得时间"
+    },
+    {
+      "source": "L33",
+      "target": "L16",
+      "relation": "显式记录模型假设和时间边界"
+    },
+    {
+      "source": "L32",
+      "target": "L22",
+      "relation": "程序级不变量与形式化验证方法"
     }
   ],
   "reading_paths": [
@@ -535,6 +567,16 @@
         "L31",
         "L30"
       ]
+    },
+    {
+      "id": "Q10",
+      "name": "PIT/no-lookahead 最小 Lean 原型",
+      "nodes": [
+        "L26",
+        "L32",
+        "L33",
+        "L16"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -553,6 +595,7 @@
     "上游修复已合并不代表目标项目固定依赖已包含修复；旧版复现和新版迁移必须分开验收",
     "MathFin 的金融数学 theorem 不等同于真实市场数据、因子有效性或策略盈利证明",
     "CRR 等 theorem 必须检查假设非空性，避免 vacuous theorem",
-    "PIT/no-lookahead formalization 仍是候选研究设计，尚未在 AI_Trader 或生产代码验证"
+    "PIT/no-lookahead formalization 仍是候选研究设计，尚未在 AI_Trader 或生产代码验证",
+    "当前 PIT prototype 只证明 eligibility filter safety，不等同于 latest-revision as-of join 或真实数据源时间戳验证"
   ]
 }
