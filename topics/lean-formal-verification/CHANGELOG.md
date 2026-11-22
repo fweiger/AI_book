@@ -22,3 +22,5 @@
 - **2026-11-22，v0.6.1（Draft）**：去重方法卡与 claims ID，合并重复的 Hax specset 节点/路径；补齐 C018-026 至 C018-033 的 MathFin 证据行，并将 Hax 版本迁移方法单列为 M-15。修复 MathFin 方法卡中的数学符号转义问题。
 
 - **2026-11-22，v0.6.2（Draft）**：PIT/no-lookahead 独立 Lean 4.35.0 package 的 GitHub Actions Run #15 成功；job log 确认 `lake build` completed successfully。两个 theorem 的 `#print axioms` 均为 `[propext]`。AC-06 的最小可复现流程由配置推进到实际 Kernel build PASS；完整 as-of join 仍未完成。
+
+- **2026-11-22，v0.6.3（Draft）**：在 PR head `1e700ff89fbce8fa3106c99b93ebe45b03cc6557` 上复跑 PIT Lean workflow Run #19，job success；`lake build` completed successfully，两个 theorem 的 axiom 输出均为 `[propext]`。更新 case study、method card、claims、README 和 session evidence，确认 AC-06 最小可复现流程 PASS。
