@@ -37,3 +37,12 @@
 
 ## 当前唯一下一步
 按每个领域选 1–2 个代表项目做项目级审计：固定 commit、LICENSE、toolchain、manifest、关键 theorem、sorry/axiom/opaque、CI 和 build log。优先 Mathlib/BrownianMotion/MathFin、LeanInfoTheory/rate_distortion/AI4SLT、Veil/Loom/CertifyingDatalog、TorchLean/DynamicalSystems。外部项目不能一次性全量构建；每个项目必须有明确验收边界。
+
+
+## CI 回归与链接修复（2026-11-23）
+
+- 首次对本轮矩阵 head 执行知识库完整性检查时失败：`sessions/README.md` 指向不存在的 `2026-11-22-cross-domain-evidence-map.md`。
+- 已将链接修正为本轮真实文件 `2026-11-23-cross-domain-direction-paper-project-map.md`。
+- 修复后 PR head `c45e6d94e30a45bb797019f201baac20d4c17eb8` 的 Knowledge-base integrity Run #1268 成功。
+- 同一 head 的 Lean PIT no-lookahead Run #37 成功：Lean 4.35.0 `lake build` 完成；两个 theorem 均编译，axiom 输出均为 `[propext]`。
+- 这是本专题 PIT 示例的持续 CI 复验，不代表外部 MathFin/AI4SLT/Veil 等项目已构建；外部项目 build 仍 NOT_RUN。
