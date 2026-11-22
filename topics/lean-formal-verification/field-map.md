@@ -56,3 +56,8 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 - EconCSLib 的稳定库接口与 OpenProblem 实验接口分离；Blueprint 记录了尚未实现的数学目标。必须分别记录 stable theorem、stated target 和 open problem。
 - Aeneas 的 Lean backend 位于 backends/lean 子目录，不能仅检查仓库根目录来判断 Lean 工具链和构建入口。
 - rust-lean 是多子项目集合；正确的审计单位应下沉到具体 Hax/Aeneas 子项目，而不是将仓库根目录当成单一 Lean 包。
+
+
+### 版本锁定的进一步发现
+
+8 个 Lean 4 项目的 Lake manifest 已确认存在并解析。Mathlib、Formal Conjectures、Aeneas、ArkLib、MathEconLib、EconCSLib、MathFin 和 physicslib4 均将依赖固定到具体 Git commit。Mathlib revision 在这些项目之间并不相同；因此只复制 lean-toolchain 不足以复现，必须同时保存项目 commit 和 lake-manifest.json。
