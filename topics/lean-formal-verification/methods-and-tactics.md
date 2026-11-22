@@ -265,3 +265,12 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 ### M-14｜PIT/no-lookahead 构建状态更新
 
 PIT 最小 package 的 GitHub Actions [Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832) 在证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 上通过 Lean 4.35.0 lake build；两个 theorem 的 print axioms 均为 [propext]。当前证据升级为 E2 / CI PASS，仍不是独立 E3，也不是完整 as-of join。
+
+
+### M-16｜论文—项目 companion code 追踪与版本快照对齐
+
+- **问题**：跨学科形式化论文、GitHub 项目、软件 release 和动态官网经常在不同时间更新；同名项目或论文后的代码扩展容易被错误归因。
+- **步骤**：从论文/会议出版页确认题名、作者、年份、形式化对象和 companion code；从论文 repository URL 或项目 CITATION/README 追踪仓库；区分直接 companion、同领域 Lean 项目和相邻证明助手；读取 README、release、lean-toolchain、manifest、LICENSE、关键 theorem 和 CI；分别记录论文版本、软件 release、当前 main 与官网统计；将论文声称、源码可见、CI 运行成功、本专题独立 build 分层标记 E1/E2/E3。
+- **失败边界**：GitHub 搜索命中不等于论文 companion；README theorem 数量不等于全部 theorem 已独立复现；第三方搜索缓存可能滞后于当前 GitHub 源码。
+- **本轮例子**：MathFin README 906 corpus results、CITATION release 833 delivery-ready、coverage 历史检查点 806、论文 v4 804；LeanInfoTheory master README v0.2.0/811 declarations 与旧官网 v0.1.0/601 declarations。
+- **状态**：E2 / 官方源文件已读取；尚未对外部项目执行 clean build。
