@@ -73,3 +73,9 @@
 37. [CRR characteristic-function convergence](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean) — characteristic functions and Lévy continuity。
 38. [Gaussian risk report example](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFinExamples/Applications/GaussianRiskReport.lean) — worked portfolio risk report with explicit model limitations。
 39. [MathFin build workflow](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/.github/workflows/build.yml) — Python gates, lake build and axiom audit。
+
+## PIT / No-Lookahead 形式化原型
+
+40. [PITNoLookahead.lean](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) — eventTime / availableAt / decisionTime 的最小时间可得性规格。
+41. [PIT proof README](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/README.md) — 定理范围和明确限制。
+42. [PIT proof GitHub Actions](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/.github/workflows/lean-pit-no-lookahead.yml) — Lean 4.35.0 独立构建工作流。
