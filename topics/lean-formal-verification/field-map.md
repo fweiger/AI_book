@@ -61,3 +61,10 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 ### 版本锁定的进一步发现
 
 8 个 Lean 4 项目的 Lake manifest 已确认存在并解析。Mathlib、Formal Conjectures、Aeneas、ArkLib、MathEconLib、EconCSLib、MathFin 和 physicslib4 均将依赖固定到具体 Git commit。Mathlib revision 在这些项目之间并不相同；因此只复制 lean-toolchain 不足以复现，必须同时保存项目 commit 和 lake-manifest.json。
+
+
+### 密码学与软件验证：两个可迁移的 Rust→Lean 实践
+
+- **Hax-FRI**：把 Plonky3 的 Rust FRI folding 函数抽取到 Lean，再连接 ArkLib 的协议规格。源码 README 报告部分基础证明已构建，但最终 FoldingCorrectness 定理仍为 TODO。
+- **Hax ADC**：把 32-bit limb addition with carry 的 pre/post 条件写在 Rust 注解中，抽取后用 hax_bv_decide 做 bit-blasting。案例同时暴露了 cast、shift、tuple projection、monadic representation 和 BitVec fragment 支持问题。
+- 这两类案例的关键技巧是先把目标缩小到可验证的函数和明确的前后置条件，再逐层建立从抽取代码到协议规格的 refinement。自动化 tactic 的支持范围本身必须纳入验收。
