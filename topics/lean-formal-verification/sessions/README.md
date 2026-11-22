@@ -18,3 +18,5 @@
 - [2026-11-22：Hax ADC 历史问题上游修复与版本漂移审查](2026-11-22-hax-upstream-fix-and-version-drift.md)
 
 - [2026-11-22：MathFin 数学金融库与量化形式化方法审查](2026-11-22-mathfin-finance-audit.md)
+
+- [2026-11-22：PIT / No-Lookahead 最小 Lean 规格原型](2026-11-22-pit-no-lookahead-prototype.md)
