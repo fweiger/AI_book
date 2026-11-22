@@ -14,12 +14,12 @@
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
-- 本轮 Tracker 写入前观察到的最新 PR head：2cbece7184815f8d17bf09130f66dd024630e51c
+- 本轮 Tracker 写入前观察到的最新 PR head：f83f40314dfe67729e8ea4a9bd0e83b1b97f5dd0
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮写入前 Tracker blob SHA：ebfc2460821ac5bfdc4fdeba9ea52cfb541c84b4；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（Hax/Aeneas、MathFin 和 PIT 原型均直接推进 AC-03/04/05/06；没有接管 AI_Trader #488）
-- 状态一致性：STATE_CONFLICT（专题文件已推进至 v0.6.1，但 Tracker/Issue 仍停留在 Hax 上游审计事件；本轮同步后再回读裁决）
-- Issue 同步状态：ISSUE_SYNC_PENDING（本轮 MathFin + PIT prototype 事件待写入 Issue 并 GET 回读）
+- 状态一致性：CONSISTENT（MathFin/PIT 原型与 Lean Run #24 的结果已写入 Tracker 和规范 Issue #74，评论回读确认；当前唯一下一步统一转为跨领域证据地图）
+- Issue 同步状态：SYNCED（MathFin + PIT prototype 事件已写入 Issue #74 并 GET 回读，见 comment #7080453306）
 
 ## 1. 批准目标基线
 
@@ -84,7 +84,7 @@
 - **当前阶段判断：** M0/M1/M2/M3 并行进行；M1 纯数学案例仍需补足；M2 需要从已有样本升级为逐领域的“方向—论文—项目”系统映射；M4 独立 QA 尚未完成。
 - **本轮 AC 与目标对齐证据：** AC-03/04/05 有实质推进；AC-06 对 PIT 最小工作流 PASS；AC-07 仍为 PARTIAL（边界定义和示例完成，但未接入或验证 AI_Trader #488）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；全部动作仍围绕 Lean 数学/跨学科方法、源码审计与金融 PIT 形式化边界，没有修改 #488 或转入实证策略开发。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** 当前 Tracker 正在同步本轮 MathFin/PIT 事件；同步完成并回读前暂记 STATE_CONFLICT，之后重新裁决。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；规范 Issue #74 Goal/Scope/AC 未改变，Tracker 当前阶段、唯一下一步与已回读的 MathFin/PIT 事件相符；Lean Run #24 对应的证明提交与后续仅更新 Tracker 的提交关系已明确记录。
 
 ## 5. 阻断与未受影响工作
 
@@ -132,24 +132,24 @@
 | 2026-11-22 / CI-STRUCTURE | 对 PR head commit e57491d00728fdfba2f5a26cf7df00fd41d27f63 运行仓库完整性 workflow；validate-knowledge 与 Discussion YAML 检查均 PASS。未运行 Lean 构建。 | 结构/链接/YAML 校验 PASS；AC-01/03/05 仍仅 PARTIAL，AC-02/04/06/08 NOT_RUN。 | [Workflow run #1201](https://github.com/fweiger/AI_book/actions/runs/45007709196) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；CI 仅为知识库结构校验，不提升学术证据等级。 | M0 版本化项目准入矩阵。 |
 | 2026-11-22 / M0-MANIFEST | 对 10 个固定仓库 commit 读取 README/toolchain/许可证/Lake 配置；8 个 Lean 4 项目 Lake manifest 成功解析并记录依赖 revision。未运行项目 build。 | AC-05 PARTIAL；AC-02/04/06/08 NOT_RUN。 | [case-studies.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/case-studies.md) · [manifest audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-lake-manifest-audit.md) | D0 / CONSISTENT；项目构建 NOT_RUN。 | 补齐非标准项目边界。 |
 | 2026-11-22 / HAX-UPSTREAM | 核对 Hax issues/PR；确认 #1925/#1927/#1933/#2142 merged，识别 Hax-FRI 固定 commit 早于关键修复，Hax 0.5.0 已升至 Lean 4.35。未运行构建。 | AC-04 方法卡增补；AC-05 PARTIAL；AC-06 NOT_RUN。 | [Hax audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-hax-upstream-fix-and-version-drift.md) · [PR #1925](https://github.com/pereq-dev/hax/pull/1925) · [PR #1933](https://github.com/pereq-dev/hax/pull/1933) · [PR #2142](https://github.com/pereq-dev/hax/pull/2142) | D0 / CONSISTENT；上游修复与目标项目采用状态分开。 | 继续核验 MathFin 与 PIT 原型。 |
-| 2026-11-22 / PIT-BUILD-PASS | 对当前 PR head `2cbece7184815f8d17bf09130f66dd024630e51c` 重新读取 GitHub Actions Run #24 与 job log：Lean 4.35.0 `lake build` 成功；两个 theorem 均编译，`#print axioms` 均为 `[propext]`；知识库完整性 Run #1255 同一 head PASS。 | AC-06 最小 PIT workflow PASS；AC-03/05 转为本轮主线。 | [Lean Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832) · [Integrity Run #1255](https://github.com/fweiger/AI_book/actions/runs/45031763864) · [PIT source](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) | D0 / STATE_CONFLICT pending Issue sync；只证明 eligibility filter safety，不等于 latest-revision as-of join。 | 按用户要求完成逐领域“方向—论文—Lean/相邻开源项目”证据矩阵。 |
+| 2026-11-22 / PIT-BUILD-PASS | 对当前 PR head `2cbece7184815f8d17bf09130f66dd024630e51c` 重新读取 GitHub Actions Run #24 与 job log：Lean 4.35.0 `lake build` 成功；两个 theorem 均编译，`#print axioms` 均为 `[propext]`；知识库完整性 Run #1255 同一 head PASS。 | AC-06 最小 PIT workflow PASS；AC-03/05 转为本轮主线。 | [Lean Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832) · [Integrity Run #1255](https://github.com/fweiger/AI_book/actions/runs/45031763864) · [PIT source](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) | D0 / CONSISTENT after Issue sync；只证明 eligibility filter safety，不等于 latest-revision as-of join。 | 按用户要求完成逐领域“方向—论文—Lean/相邻开源项目”证据矩阵。 |
 | 2026-11-22 / MATHFIN-PIT | 深审 MathFin 的 CVaR/Markowitz/CRR、formalization fidelity 和 axiom audit；建立 Lean 4.35 PIT filter safety prototype 与专用 workflow；整理 M-01—M-15、claims 和图谱。 | AC-03/04/05 PARTIAL；AC-06 PARTIAL（workflow 配置已建，build NOT_RUN）；AC-07 PARTIAL。 | [MathFin session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-mathfin-finance-audit.md) · [PIT session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-pit-no-lookahead-prototype.md) · [PIT proof](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) | D0 / STATE_CONFLICT pending sync；MathFin corpus 只独立抽查 156 项，PIT build 未运行。 | 对 PIT Lean 4.35 package 执行 lake build。 |
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|MATHFIN-PIT-PROTOTYPE-20261122
-- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|HAX-UPSTREAM-FIX-AUDIT-20261122
+- **当前 active_event_key：** none
+- **当前 writer_owner：** none
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|MATHFIN-PIT-PROTOTYPE-20261122
 - **旧 Writer 已停止/隔离证据：** not_applicable（本轮无并发 Writer）
 - **若无法 fencing：** 不适用
 
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | M0/M1/M2/M3 进行中；PIT 4.35.0 build PASS，其他项目构建仍逐项记录 | Run #24 / PR head 2cbece7 | PASS / PARTIAL |
+| §3/§4当前阶段与实际证据 | M0/M1/M2/M3 进行中；PIT 4.35.0 build PASS，其他项目构建仍逐项记录 | Run #24 / proof source commit 2cbece7 / current PR head f83f403 | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 由 hosted Actions 验收；其他项目构建仍待环境 | §5 / Run #24 | CONSISTENT |
 | §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向逐领域研究方向—论文—项目证据矩阵 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 本轮事件尚待写入 Issue 并 GET 回读 | Issue #74 · Draft PR #75 · 当前 event key | ISSUE_SYNC_PENDING |
+| 最新 Issue 进度事件与本文件版本 | MathFin/PIT 事件已写入 Issue #74，评论列表 GET 回读确认；Tracker 本次同步状态回读完成 | [Issue comment #7080453306](https://github.com/fweiger/AI_book/issues/74#issuecomment-7080453306) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
 
