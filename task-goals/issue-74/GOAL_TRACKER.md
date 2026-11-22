@@ -153,7 +153,7 @@
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致；未修改 Goal/Scope/Non-goals/AC | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | 行业应用框架 v0.1 已提交；PR head f7a2c55 的 validate-knowledge Run #1290 与 Lean build Run #53 均 success；项目审计未新增 | [主框架](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-application-framework.md) / [行业机会地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-opportunity-map.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
+| §3/§4当前阶段与实际证据 | 行业应用框架 v0.1 已提交；PR head f7a2c55 的 validate-knowledge Run #1289 与 Lean PIT Run #58 均 success；项目审计未新增 | [主框架](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-application-framework.md) / [行业机会地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-opportunity-map.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 均已调整为先建立行业应用框架；项目审计改为具体方向选定后的按需工作 | §7/§9 | PASS |
