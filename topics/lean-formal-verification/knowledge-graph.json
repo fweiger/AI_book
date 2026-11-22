@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.3.0",
+  "topic_version": "0.4.0",
   "topic_id": "TOPIC-018",
   "title": "Lean 形式化证明与跨学科可验证系统",
   "source_level": "官方文档、公开项目页面和论文初筛；项目构建与独立复现尚未完成",
@@ -124,6 +124,36 @@
       "id": "L20",
       "type": "method",
       "title": "Hax annotations 与 BitVec bit-blasting",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L21",
+      "type": "method",
+      "title": "多语义规格集：整数与位向量分离",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L22",
+      "type": "comparison",
+      "title": "同源 Rust 输入下的 Hax / Aeneas 对照",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L23",
+      "type": "governance",
+      "title": "跨库桥接的 axiom / opaque / sorry 审计",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L24",
+      "type": "cryptography",
+      "title": "FRI folding arity 的局部性质证明",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L25",
+      "type": "case_study",
+      "title": "Hax 官方 ADC bit-blasting 示例",
       "evidence_level": "E1"
     }
   ],
@@ -252,6 +282,41 @@
       "source": "L19",
       "target": "L16",
       "relation": "区分抽取编译与端到端正确性"
+    },
+    {
+      "source": "L19",
+      "target": "L22",
+      "relation": "同源程序的不同抽取路线"
+    },
+    {
+      "source": "L22",
+      "target": "L24",
+      "relation": "验证单轮 FRI arity 选择"
+    },
+    {
+      "source": "L22",
+      "target": "L23",
+      "relation": "跨库接口与证明依赖"
+    },
+    {
+      "source": "L23",
+      "target": "L16",
+      "relation": "区分完整证明与公理桥接"
+    },
+    {
+      "source": "L21",
+      "target": "L25",
+      "relation": "选择位向量规格"
+    },
+    {
+      "source": "L25",
+      "target": "L08",
+      "relation": "密码学定宽算术验证"
+    },
+    {
+      "source": "L17",
+      "target": "L22",
+      "relation": "锁定工具链与依赖"
     }
   ],
   "reading_paths": [
@@ -317,6 +382,28 @@
         "L08",
         "L16"
       ]
+    },
+    {
+      "id": "Q07",
+      "name": "Hax / Aeneas 同源 FRI 比较",
+      "nodes": [
+        "L07",
+        "L19",
+        "L22",
+        "L24",
+        "L23",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q08",
+      "name": "Hax ADC 位向量证明",
+      "nodes": [
+        "L08",
+        "L21",
+        "L25",
+        "L20"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -328,6 +415,9 @@
     "金融数学定理不能证明策略盈利或原始数据时点真实",
     "E0/E1 项目发现不能冒充实际构建或独立复现",
     "Lean 3 与 Lean 4 项目不可混为同一工具链；按项目固定 toolchain 和依赖版本",
-    "抽取代码可编译、局部算术 theorem 通过和协议级 correctness theorem 完成是不同状态"
+    "抽取代码可编译、局部算术 theorem 通过和协议级 correctness theorem 完成是不同状态",
+    "同一 Rust 函数上的单个对照样本不能推出 Hax/Aeneas 的普遍优劣",
+    "源码中无 sorry 不等于已由 Lean Kernel 独立构建验收；必须记录实际 build",
+    "跨库 bridge 中的 axiom/opaque 会把证明义务移出当前 theorem，必须单独审计"
   ]
 }
