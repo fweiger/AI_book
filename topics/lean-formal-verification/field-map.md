@@ -133,3 +133,14 @@ MathFin 是数学金融的形式化库，而不是量化策略回测系统。它
 跨学科方向已从学科级初筛推进到逐方向映射，详见 [field-evidence-matrix.md](field-evidence-matrix.md) §7–§8。当前覆盖数学、CS/软件验证、密码学、分布式系统、经济学、金融数学、AI/统计学习、物理/量子、信息论、控制理论十个领域；每条方向分别标记 Lean 项目、相邻证明助手和普通实现。
 
 当前高价值方向包括：MathFin/BrownianMotion 的数学金融；AI4SLT 的统计学习；LeanInfoTheory 与 rate-distortion 的信息论；Doll–Shames 的控制理论；TorchLean 的神经网络统一语义；Veil/IFP 的 BFT safety。以上为 E1/E2 证据，不代表外部项目均已独立构建。A 股 Level-2、因子统计和真实回测仍未发现成熟 Lean 端到端项目。
+
+
+## I. 代表项目审计与可迁移方法（2026-11-23）
+
+第一批固定源码审计完成三个项目：Rate-Distortion、AI4SLT、Veil。结论不是“项目都已验证”，而是三种不同证据模式：
+
+- **Rate-Distortion**：当前源代码有明确的 collectAxioms allowlist，但唯一完整 build log 属于 2026-09-22 旧 commit；当前 RateDistortion.lean 在 2026-10-13 大改，当前 main 未 build；仓库 license 和 Actions workflow 均未在固定 tree 找到。
+- **AI4SLT**：v4.32.0 release 记录 Lean 4.32.0 lake build 成功与 SLT/ 无 sorry/admit/axiom/native_decide 扫描；当前 main 相对 release 只改 README，代码仍对应已报告构建版本；但没有持续 GitHub Actions workflow。
+- **Veil**：当前 main commit 有同 SHA 的 Linux/macOS CI；TrustAudit 检查 7 条 shipped verification routes，并用 positive control 证明它能发现 implemented_by；同时必须保留 trusted SMT / sorryAx fallback 的边界。
+
+对量化的候选映射：Rate-Distortion 可研究 L2 数据压缩与特征量化的失真边界；AI4SLT 可帮助形式化泛化假设和统计学习不等式；Veil 可用于订单/持仓状态机的 safety/liveness。三者都不能替代真实数据时点验证、交易成本、样本外统计和实现精化。
