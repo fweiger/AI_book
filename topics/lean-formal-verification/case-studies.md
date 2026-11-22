@@ -126,3 +126,75 @@ Liquid Tensor 的旧 Lean 3 项目和 rust-lean 多子项目集合未在根目�
 2. **协议级正确性**：Rust 算法抽取 → Lean 函数模型 → ArkLib 规格 → 证明实现与协议规格一致。
 
 它们的验收状态不能混为一谈：一个算术子性质可被自动化证明，不代表完整 FRI 算法已经正确；抽取文件可编译，也不代表 ArkLib 集成正确性定理已完成。
+
+
+## M0.4｜Hax / Aeneas 同源 FRI 代码比较与证明状态审计（2026-11-22）
+
+> 固定审查源：[Verified-zkEVM/rust-lean](https://github.com/Verified-zkEVM/rust-lean/tree/49a83d2a231c24f8a26a694ca2badaa36fb3914d)，commit \`49a83d2a231c24f8a26a694ca2badaa36fb3914d\`。本节只对源码、配置和证明依赖作静态审查；没有本地运行 Lean/Lake 构建。
+
+### 1. 同源 Rust 输入：可做受控工具比较
+
+Hax 与 Aeneas 两个目录中的 Rust 源文件 \`compute_log_arity_for_round\` 内容相同，Git blob SHA 均为：
+
+\`80cb7baefc6bfc7d41a507fc6dc10d4d4181f468\`
+
+- [Hax Rust source](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/rust/p3_fri_kernel/src/lib.rs)
+- [Aeneas Rust source](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity/src/lib.rs)
+
+函数选择单轮 FRI folding 的 log-arity：先计算当前高度到最终高度/下一输入高度的距离，再取约束距离与 \`max_log_arity\` 的较小值。源码注释要求 \`log_current_height > log_final_height\`；当 next input 为 Some 时，还要求 \`log_current_height > next_log_height\`。Lean 定理以这些不等式和“函数成功返回”作为前提，因此证明是**条件正确性**，不等于对所有输入的无条件 panic-freedom。
+
+### 2. Hax 路线：Rust HIR / 注解 / RustM
+
+- Hax 项目：\`hax-FRI\`；Lean toolchain = \`leanprover/lean4:v4.26.0\`。
+- Hax 固定 commit：[1332b8f](https://github.com/cryspen/hax/commit/1332b8fa19967234232473d0d3ec88e4d8ce8424)，提交时间 2026-01-20，标题为升级 Lean 4.26.0。
+- Hax Lake manifest 将 Hax 锁定到该 commit；同时固定 ArkLib commit \`e1275712d22a7e2bf39ebd37d8657c1032761e9b\`、CompPoly \`0a1de482a4e8ae279c3a06030adb213e3a229ce9\`、Mathlib \`2df2f0150c275ad53cb3c90f7c98ec15a56a1a67\` 等。
+- [Hax extracted Lean function](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/rust/p3_fri_kernel/proofs/lean/extraction/p3_fri_kernel.lean) 没有显式 \`sorry/admit/axiom/opaque\`；函数表示为自定义 \`RustM\`，使用 \`-?\` checked subtraction、\`Core_models.Option.Option\` 和 \`Machine_int.lt\`。
+- [Hax BasicProofs](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/rust/p3_fri_kernel/proofs/lean/extraction/BasicProofs.lean)：6 个 theorem + 3 个 example，静态计数 **9 个 \`sorry\`**，没有显式 \`axiom\`。
+- [Hax ArkLib FoldingCorrectness](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/lean/P3FriProofs/Proofs/FoldingCorrectness.lean)：\`arity_respects_target_distance\` 和 \`arity_respects_max_bound\` 两个实质性边界定理已有证明；\`arity_respects_next_input\`、\`folding_respects_final_height\`、\`round_consistency_preserved\` 和一个 concrete example 仍有 **4 个 \`sorry\`**。该文件没有显式 \`axiom/admit\`。
+- [PHASE2_REPORT.md](https://github.com/Verified-zkVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/PHASE2_REPORT.md) 报告了两个已证明的核心定理，与当前源码相符。较早的 Hax-FRI README 中 TODO 标记不能代表该固定 commit 的完整状态。
+
+### 3. Aeneas 路线：Rust MIR / Charon LLBC / Result
+
+- Aeneas 项目：\`aeneas-FRI/fold_arity_lean\`；Lean toolchain = \`leanprover/lean4:v4.28.0\`。
+- [Aeneas generated Lean function](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/FoldArity.lean) 没有显式 \`sorry/admit/axiom/opaque\`；函数表示为纯函数式 \`Result\`，使用标准 \`Option\`。
+- [Aeneas BasicProofs](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/FoldArityVerif/BasicProofs.lean)：6 个 theorem + 3 个 example；本轮静态扫描 **0 个 \`sorry\`、0 个 \`admit\`、0 个显式 \`axiom\` 或 \`opaque\`**。证明主要使用 \`generalize\`、\`cases\`、\`bind_tc_ok\`、\`Std.Usize.sub_spec\`、\`simp\` 和 \`omega\`。
+- [Aeneas README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/README.md) 将上述六项列为 Proved；这仍是仓库文档/源码证据，不是本轮独立构建。
+- [Aeneas Lake manifest](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/lake-manifest.json) 已解析：19 个依赖包；Aeneas commit \`c23de9324fbe4d3630fc532e5216a0568b9beb5c\`、ArkLib \`27ff62470e9947f72ddd978db458ee622f8bdcd1\`、Mathlib \`8f9d9cff6bd728b17a24e163c9402775d9e6a365\` 等均有固定 revision。
+- [Aeneas ArkLib FoldingCorrectness](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/FoldArityVerif/FoldingCorrectness.lean) 为避开 Aeneas 与 Batteries/Mathlib 同时导入时的 \`BitVec.toNat_pow\` 名称冲突，拆成单独 Lake target；该文件包含 **3 个显式 axiom、1 个 opaque 和 4 个 sorry**。其中 axiom 将 BasicProofs 中的 Aeneas 结果性质桥接到 Nat 层规格；它们没有在同一 Lean target 内由 Aeneas 源码直接推导。多项式 degree、domain step 和 multi-round consistency 仍未证明。
+
+### 4. 同源对照结论
+
+| 维度 | Hax | Aeneas |
+|---|---|---|
+| 输入路线 | Rust HIR + Hax annotations | Rust MIR → Charon LLBC |
+| Lean 程序语义 | 自定义 \`RustM\` | \`Result\`（ok/fail/div） |
+| Option | \`Core_models.Option.Option\` | 标准 \`Option\` |
+| 条件分支 | 部分生成 \`Bool.casesOn\` | 标准 \`if/then/else\` |
+| 算术 | \`-?\` 等 checked operators，需要额外引理 | \`UScalar.sub\` / \`Std.Usize.sub_spec\` |
+| BasicProofs 源码状态 | 9 个 sorry | 0 个 sorry/axiom/opaque |
+| ArkLib 桥接 | 两个实质边界 theorem 已证明，另有 4 个 sorry | 3 个 axioms + 1 opaque + 4 个 sorry |
+
+**受控样本结论：** 对这一段纯控制流/整数边界函数，Aeneas 的函数表示和局部证明结构更直接，BasicProofs 源码完成度更高；不能据此推断 Aeneas 对任意 Rust 程序普遍优于 Hax。两条路线均未完成 FRI 多轮协议、实际多项式折叠和完整 prover/verifier 的形式化证明。
+
+### 5. Hax 上游修复与 ADC 方法更新
+
+原始 PoC：[runtimeverification/hax-annotations-adc-verification](https://github.com/runtimeverification/hax-annotations-adc-verification)，其 README 更新 commit 为 \`79b95fe\`（2026-02-03）；Cargo.toml 依赖 \`hax-lib\` Git version \`0.3.6\`，本轮未找到 Cargo.lock。README 中列出的 Issue 是历史问题清单，不应当作当前未解决缺陷。
+
+已交叉核验的上游状态：
+
+- [Hax PR #1925](https://github.com/cryspen/hax/pull/1925)（2026-02-09 merged）：为 \`cast_op\` 添加显式类型标注，修复 #1911/#1912。
+- [Hax PR #1927](https://github.com/cryspen/hax/pull/1927)（2026-02-11 merged）：保留 Rust crate/module 小写命名，修复 #1914。
+- [Hax PR #1933](https://github.com/cryspen/hax/pull/1933)（2026-02-11 merged）：加入 \`specset int\` / \`specset bv\` 与 \`hax_mvcgen\`，让数学整数规格和 bit-vector 规格分开。
+- [Hax PR #1938](https://github.com/cryspen/hax/pull/1938)（2026-02-12 merged）：加入默认证明策略和 \`hax_lib::lean::proof_method\`。
+- [Hax PR #1959](https://github.com/cryspen/hax/pull/1959)（2026-02-19 merged）：把 ADC 示例加入 Hax 官方 examples，使用 \`set_option hax_mvcgen.specset "bv"\`、\`hax_mvcgen\` 和 \`bv_decide\`。
+- #1913 的维护者讨论建议用 \`x.1/x.2\`，因为 Tuple2…Tuple10 不适合统一命名为 fst/snd；对应 PR #1917 已关闭但未合并。
+- #1915 关闭为 #1894 的重复问题；#1933 提供多规格集机制。#1916 被维护者解释为预期的 RustM 表示，建议通过 \`mvcgen\` 与 \`@[spec]\` 规格归一化，而不是要求抽取器无条件改写所有单子表达式。
+
+更可复用的 ADC 实例是 [Hax 官方 examples/lean_adc/src/lib.rs（PR #1959 merge commit）](https://github.com/cryspen/hax/blob/c5482e5a4c5713d3fb496435517d70d15c1b1393/examples/lean_adc/src/lib.rs)：它将前后置条件写成纯 Lean 命题，先由 \`hax_mvcgen\` 生成纯验证条件，再用 \`bv_decide\` 完成 bit-blasting。该例固定 Lean 4.28.0-rc1，并有 Lake 配置、manifest 与 Makefile。比原始 PoC 中直接使用旧版 \`hax_bv_decide\` 和 \`r.fst/r.snd\` 更适合作为当前方法卡。
+
+### 6. 版本和构建边界
+
+- Hax-FRI 固定在 2026-01-20 的 Hax commit 1332b8f；commit graph 显示它不包含 2026-02-09/#1925 与 2026-02-11/#1933 的 merge commits。因此，不能把后续 Hax 修复直接算作该 Hax-FRI 固定版本已经拥有的能力。
+- 当前 Hax main（2026-11-16 commit \`0d2f66ed697c46d7c0f5038150b7c9679e4d954b\`）Cargo workspace version 为 0.5.0，Lean library toolchain 为 4.35.0，默认 hax-lean-lib 为 v0.3.42；PR #2064 已重命名 Lean backends，PR #2142 已使 \`cargo hax into lean\` 默认生成完整 Lean package。不可直接用当前 main 替换旧 FRI 项目依赖而不迁移 Lean/Mathlib/ArkLib 版本。
+- 对 rust-lean 固定 commit 查询 workflow runs 和 combined status 均未返回记录；本轮本地环境也没有 Lean/Lake/Elan/Rust/Cargo 可执行文件。故 Hax/Aeneas build 均为 **NOT_RUN**，不是 PASS，也不能由 README 的历史 build 说明替代。
+
