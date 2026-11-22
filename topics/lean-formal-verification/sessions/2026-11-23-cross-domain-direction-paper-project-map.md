@@ -5,7 +5,7 @@
 
 ## 本轮实际完成
 1. 审核现有 field-evidence-matrix：已覆盖数学及 9 个非数学领域，确认主线是逐方向论文与项目关联，而不是继续围绕 Hax 单点排障。
-2. 新增 20 个方向级映射项，覆盖数学、程序验证、Datalog、LTL、密码学、ZK、Rust refinement、BFT、trace conformance、经济学、金融、AI/统计学习、神经网络、HEP、量子信息、Shannon 信息论、rate-distortion、控制和 hybrid systems。
+2. 新增 22 个方向级映射项，覆盖数学、程序验证、Datalog、LTL、密码学、ZK、Rust refinement、BFT、trace conformance、经济学、金融、AI/统计学习、神经网络、HEP、量子信息、Shannon 信息论、rate-distortion、控制和 hybrid systems。
 3. 通过 GitHub 连接器直接读取 MathFin、LeanInfoTheory、rate_distortion_lean4、AI4SLT、TorchLean、DynamicalSystems、Veil/IFP 的 README、关键文件和 toolchain。
 4. 通过公开学术来源交叉核验 AI4SLT、MathFin、EconCSLib、Veil、Datalog、LeanLTL、HepLean、Quantum Stein、rate-distortion、Doll–Shames control papers。
 5. 新增 C018-023 至 C018-029，M-16；更新 field-evidence-matrix、field-map、bibliography、case-studies、methods、claims、README、CHANGELOG。
