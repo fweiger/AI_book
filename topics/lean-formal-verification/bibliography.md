@@ -51,31 +51,72 @@
 
 ## Rust→Lean / Hax / Aeneas 新增来源
 
-21. [Hax PR #1925](https://github.com/cryspen/hax/pull/1925) — 为 \`cast_op\` 添加显式类型标注，关闭整数转换与 shift 的类型推断问题。
-22. [Hax PR #1927](https://github.com/cryspen/hax/pull/1927) — 保留 Rust crate/module 小写命名。
-23. [Hax PR #1933](https://github.com/cryspen/hax/pull/1933) — \`specset int/bv\` 与 \`hax_mvcgen\`，分离数学整数规格与位向量规格。
-24. [Hax PR #1938](https://github.com/cryspen/hax/pull/1938) — Lean backend 默认 proof 和 proof method attribute。
-25. [Hax PR #1959](https://github.com/cryspen/hax/pull/1959) — 官方 ADC example，展示 \`hax_mvcgen\`、\`specset bv\` 与 \`bv_decide\`。
-26. [Hax PR #2064](https://github.com/cryspen/hax/pull/2064) — Lean backend 名称调整。
-27. [Hax PR #2142](https://github.com/cryspen/hax/pull/2142) — \`cargo hax into lean\` 默认生成完整 Lean package。
-28. [Hax-FRI Phase 2 Report](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/PHASE2_REPORT.md) — Hax extraction、FRI 局部定理与后端缺口报告。
-29. [Aeneas FRI fold-arity README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/README.md) — 同源 Rust 函数的 MIR/LLBC→Lean 证明案例。
-30. [Hax ADC historical PoC](https://github.com/runtimeverification/hax-annotations-adc-verification) — 32-bit limb addition with carry 的原始示例；README 中的 Issue 清单为历史记录，需结合上游 PR 状态阅读。
+25. [Hax PR #1925](https://github.com/cryspen/hax/pull/1925) — 为 \`cast_op\` 添加显式类型标注，关闭整数转换与 shift 的类型推断问题。
+26. [Hax PR #1927](https://github.com/cryspen/hax/pull/1927) — 保留 Rust crate/module 小写命名。
+27. [Hax PR #1933](https://github.com/cryspen/hax/pull/1933) — \`specset int/bv\` 与 \`hax_mvcgen\`，分离数学整数规格与位向量规格。
+28. [Hax PR #1938](https://github.com/cryspen/hax/pull/1938) — Lean backend 默认 proof 和 proof method attribute。
+29. [Hax PR #1959](https://github.com/cryspen/hax/pull/1959) — 官方 ADC example，展示 \`hax_mvcgen\`、\`specset bv\` 与 \`bv_decide\`。
+30. [Hax PR #2064](https://github.com/cryspen/hax/pull/2064) — Lean backend 名称调整。
+31. [Hax PR #2142](https://github.com/cryspen/hax/pull/2142) — \`cargo hax into lean\` 默认生成完整 Lean package。
+32. [Hax-FRI Phase 2 Report](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/PHASE2_REPORT.md) — Hax extraction、FRI 局部定理与后端缺口报告。
+33. [Aeneas FRI fold-arity README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/README.md) — 同源 Rust 函数的 MIR/LLBC→Lean 证明案例。
+34. [Hax ADC historical PoC](https://github.com/runtimeverification/hax-annotations-adc-verification) — 32-bit limb addition with carry 的原始示例；README 中的 Issue 清单为历史记录，需结合上游 PR 状态阅读。
 
 ## 数学金融与量化形式化新增来源
 
-31. [formal-mathfin repository](https://github.com/formal-applied-math/formal-mathfin) — Lean 4 数学金融库、README corpus summary、使用和贡献说明。
-32. [Coelho et al., arXiv:2606.01356](https://arxiv.org/abs/2606.01356) — MathFin 论文。
-33. [MathFin formalization status](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/docs/coverage.md) — full/library_wrapper/reduced_core/placeholder 分类。
-34. [MathFin axiom audit generator](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/AxiomAuditGen.lean) — benchmark-cited declaration 的公理闭包审计。
-35. [Rockafellar–Uryasev Gaussian CVaR](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean) — pointwise certificate proof。
-36. [Markowitz Lagrangian FOC](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Choice/Portfolio/MarkowitzLagrangian.lean) — KKT sufficiency。
-37. [CRR characteristic-function convergence](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean) — characteristic functions and Lévy continuity。
-38. [Gaussian risk report example](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFinExamples/Applications/GaussianRiskReport.lean) — worked portfolio risk report with explicit model limitations。
-39. [MathFin build workflow](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/.github/workflows/build.yml) — Python gates, lake build and axiom audit。
+35. [formal-mathfin repository](https://github.com/formal-applied-math/formal-mathfin) — Lean 4 数学金融库、README corpus summary、使用和贡献说明。
+36. [Coelho et al., arXiv:2606.01356](https://arxiv.org/abs/2606.01356) — MathFin 论文。
+37. [MathFin formalization status](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/docs/coverage.md) — full/library_wrapper/reduced_core/placeholder 分类。
+38. [MathFin axiom audit generator](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/AxiomAuditGen.lean) — benchmark-cited declaration 的公理闭包审计。
+39. [Rockafellar–Uryasev Gaussian CVaR](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean) — pointwise certificate proof。
+40. [Markowitz Lagrangian FOC](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Choice/Portfolio/MarkowitzLagrangian.lean) — KKT sufficiency。
+41. [CRR characteristic-function convergence](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean) — characteristic functions and Lévy continuity。
+42. [Gaussian risk report example](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFinExamples/Applications/GaussianRiskReport.lean) — worked portfolio risk report with explicit model limitations。
+43. [MathFin build workflow](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/.github/workflows/build.yml) — Python gates, lake build and axiom audit。
 
 ## PIT / No-Lookahead 形式化原型
 
-40. [PITNoLookahead.lean](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) — eventTime / availableAt / decisionTime 的最小时间可得性规格。
-41. [PIT proof README](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/README.md) — 定理范围和明确限制。
-42. [PIT proof GitHub Actions](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/.github/workflows/lean-pit-no-lookahead.yml) — Lean 4.35.0 独立构建工作流。
+44. [PITNoLookahead.lean](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) — eventTime / availableAt / decisionTime 的最小时间可得性规格。
+45. [PIT proof README](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/README.md) — 定理范围和明确限制。
+46. [PIT proof GitHub Actions](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/.github/workflows/lean-pit-no-lookahead.yml) — Lean 4.35.0 独立构建工作流。
+
+
+## 本轮新增的领域论文与项目来源（2026-11-22）
+
+47. [CSLib: The Lean Computer Science Library](https://arxiv.org/abs/2602.04846) — Lean 计算机科学基础库的论文与项目说明。
+48. [Verifying Datalog Reasoning with Lean](https://doi.org/10.4230/LIPIcs.ITP.2025.36) — ITP 2025，Datalog 证明证书的 Lean checker。
+49. [LeanLTL: A Unifying Framework for Linear Temporal Logics in Lean](https://doi.org/10.4230/LIPIcs.ITP.2025.37) — ITP 2025，有限/无限 trace 的时序逻辑框架。
+50. [Veil: A Framework for Automated and Interactive Verification of Transition Systems](https://doi.org/10.1007/978-3-031-98682-6_2) — CAV 2025，Lean transition-system verifier。
+51. [Foundational Multi-Modal Program Verifiers](https://doi.org/10.1145/3776719) — POPL 2026，Lean 中的多模态程序验证器及 soundness 证明。
+52. [Verdi: A Framework for Formally Verifying Distributed System Implementations](https://doi.org/10.1145/2737924.2737958) — PLDI 2015，Coq 分布式系统验证。
+53. [IronFleet: Proving Practical Distributed Systems Correct](https://doi.org/10.1145/2815400.2815428) — SOSP 2015，Dafny/TLA 风格分布式系统验证。
+54. [Raft: In Search of an Understandable Consensus Algorithm](https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro) — USENIX ATC 2014，Raft 原始论文。
+55. [VCVio: Verified Cryptography in Lean via Oracle Effects and Handlers](https://eprint.iacr.org/2026/899) — IACR ePrint 2026/899，Lean 密码学形式化。
+56. [Aligning Information Theory and Formal Verification: A Lean Formalization of Rate-Distortion Theory](https://arxiv.org/abs/2610.22404) — 有限字母表 rate-distortion 的 Lean formalization。
+57. [LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) — v0.2.0 README 声明 811 declarations / 57 modules；toolchain v4.33.1。
+58. [infotheorylib](https://github.com/matteonerini/infotheorylib) — 按 Cover–Thomas、El Gamal–Kim、Yeung 三套教材组织的信息论 Lean library。
+59. [Statistical Learning Theory in Lean 4: Empirical Processes from Scratch](https://arxiv.org/abs/2602.02285) — ICML 2026，经验过程与泛化理论形式化。
+60. [TorchLean: Formalizing Neural Networks in Lean](https://arxiv.org/abs/2602.22631) — 张量、神经网络执行、图变换与验证的 Lean 统一框架。
+61. [LeanDojo-v2](https://arxiv.org/abs/2611.09048) — Lean 4 AI theorem-proving 的 repo tracing、训练、检索和推理框架。
+62. [StatWhy: Formal Verification Tool for Statistical Hypothesis Testing Programs](https://doi.org/10.1007/978-3-031-98679-6_10) — CAV 2025，非 Lean 的统计程序前提/规格检查工具。
+63. [StarV: A Qualitative and Quantitative Verification Tool for Learning-enabled Systems](https://github.com/V2A2/StarV) — CAV 2025，Python 神经网络与学习型 CPS 验证工具。
+64. [Marabou](https://github.com/NeuralNetworkVerification/Marabou) — SMT-based 神经网络性质验证工具。
+65. [α,β-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN) — GPU 加速神经网络验证与鲁棒性证书。
+66. [HepLean: Digitalising high energy physics](https://doi.org/10.1016/j.cpc.2024.109457) — Computer Physics Communications 2025。
+67. [A Formalization of the Generalized Quantum Stein's Lemma in Lean](https://arxiv.org/abs/2510.08672) — 量子假设检验与相对熵的 Lean 形式化。
+68. [Foundations of Machine-Checked Control Theory in Lean](https://arxiv.org/abs/2607.19727) — Lyapunov stability、LaSalle 和 small-gain 的 Lean 形式化。
+69. [Elements of Information Theory](https://doi.org/10.1002/047174882X) — Cover & Thomas，信息论经典教材。
+70. [Lecture Notes on Network Information Theory](https://arxiv.org/abs/1001.3404) — El Gamal & Kim，网络信息论教材。
+71. [Portfolio Selection](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x) — Markowitz 1952，均值—方差组合理论。
+72. [Optimization of Conditional Value-at-Risk](https://doi.org/10.21314/JOR.2000.038) — Rockafellar & Uryasev 2000，CVaR 优化。
+73. [Option Pricing: A Simplified Approach](https://doi.org/10.1016/0304-405X(79)90015-1) — Cox, Ross & Rubinstein 1979，二项式期权定价。
+74. [Mathlib Papers](https://mathlib.org/papers.html) — Mathlib 官方形式化论文索引。
+75. [Resonate Specification](https://github.com/resonatehq/resonate-specification) — Lean abstract machine、服务 trace checker 与 TLA+ 对照模型。
+76. [Interaction Finality Protocol](https://github.com/sarvalabs/ifp) — Veil/Lean 的 BFT safety case；README 声明的证明数量仅对应受限 Phase 1。
+77. [btc-verified](https://github.com/ProofOfKeags/btc-verified) — Bitcoin 协议组件的 Lean 形式化项目；完整 fork-choice/consensus 仍需单独审计。
+78. [LeanForControl](https://github.com/AnandGokhale/LeanForControl) — 独立控制理论 Lean 项目，toolchain v4.30.0-rc2。
+79. [DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) — Doll–Shames 控制理论论文对应 Lean 库，toolchain v4.36.0-rc2。
+80. [MathEconLib](https://github.com/matheconlib/matheconlib) — 经济学共享形式化基础，当前重点微观理论。
+81. [Econlib](https://github.com/danlyng/Econlib) — 经济学/政治理论 Lean 4 library；本轮仅完成 README/toolchain 审查。
+82. [Physlib](https://github.com/leanprover-community/physlib) — 物理学数字化社区项目，包含 Physlib、PhyslibAlpha 与 QuantumInfo。
+83. [KTAIT](https://github.com/giulioruffini/KTAIT) — Kolmogorov/algorithmic information theory 的 Lean 项目。
