@@ -21,4 +21,4 @@
 
 - [2026-11-22：PIT / No-Lookahead 最小 Lean 规格原型](2026-11-22-pit-no-lookahead-prototype.md)
 
-- [2026-11-22：跨学科研究方向、论文与 Lean/相邻开源项目证据地图](2026-11-22-cross-domain-evidence-map.md)
+- [2026-11-23：跨学科研究方向—论文—项目映射与源码复核](2026-11-23-cross-domain-direction-paper-project-map.md)
