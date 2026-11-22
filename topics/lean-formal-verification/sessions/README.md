@@ -9,3 +9,6 @@
 
 
 - [2026-11-22：8 个 Lean 4 项目 Lake manifest 与依赖 revision 审查](2026-11-22-lake-manifest-audit.md)
+
+
+- [2026-11-22：Rust→Lean 的 Hax-FRI 与 ADC 子项目方法审查](2026-11-22-rust-to-lean-case-audit.md)
