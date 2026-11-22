@@ -87,7 +87,7 @@
 |---|---|---|---|---|---|
 | IND06-01 | 工业控制 → PLC → IEC 61131-3 梯形图/结构化文本 | PLC 扫描周期、定时器/计数器状态、互斥、响应和安全不变量 | [ESBMC-PLC+](https://arxiv.org/abs/2606.23870)；[PLC 基准集](https://arxiv.org/abs/2609.18994) | [IS2Lab/esbmc-plcplus](https://github.com/IS2Lab/esbmc-plcplus)；[PLC benchmark suite](https://github.com/pierredantas/esbmc-plc-benchmark-suite)；[OpenPLC](https://github.com/thiagoralves/OpenPLC_v3) | ADJACENT_FORMAL_TOOL / DOMAIN_REFERENCE_IMPLEMENTATION / E1 |
 | IND06-02 | 智能制造 → CPS 控制模块 → 状态机到控制实现 | UML 状态机、控制模块状态、时序逻辑性质、验证模型与 FPGA 实现一致性 | [Formal Verification of Control Modules in CPS](https://doi.org/10.3390/s20185154) | [OpenModelica](https://github.com/OpenModelica/OpenModelica)；[ModelicaStandardLibrary](https://github.com/Modelica/ModelicaStandardLibrary) | ADJACENT_FORMAL_TOOL / DOMAIN_REFERENCE_IMPLEMENTATION / E1 |
-| IND06-03 | 机器人 → 运动规划 → 机械臂轨迹与碰撞约束 | 运动学、动力学、轨迹约束、碰撞自由与控制器稳定性 | [MoveIt Task Constructor / ICRA 2019](https://github.com/moveit/moveit_task_constructor)；[Lean 控制理论](https://arxiv.org/abs/2607.19727) | [moveit/moveit2](https://github.com/moveit/moveit2)；[LeanForControl](https://github.com/AnandGokhale/LeanForControl)；[DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | DOMAIN_REFERENCE_IMPLEMENTATION / DIRECT_LEAN_RESEARCH / E1 |
+| IND06-03 | 机器人 → 运动规划 → 机械臂轨迹与碰撞约束 | 运动学、动力学、轨迹约束、碰撞自由与控制器稳定性 | [MoveIt Task Constructor / ICRA 2019](https://doi.org/10.1109/ICRA.2019.8793898)；[Lean 控制理论](https://arxiv.org/abs/2607.19727) | [moveit/moveit2](https://github.com/moveit/moveit2)；[LeanForControl](https://github.com/AnandGokhale/LeanForControl)；[DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | DOMAIN_REFERENCE_IMPLEMENTATION / DIRECT_LEAN_RESEARCH / E1 |
 | IND06-04 | 电力能源 → 电网运行 → 潮流/拓扑/调度安全 | 电网拓扑、潮流方程、操作约束、可行动作和安全状态 | [pandapower 论文](https://doi.org/10.1109/TPWRS.2018.2829021)；[Grid2Op 项目资料](https://github.com/Grid2op/Grid2Op) | [Grid2Op](https://github.com/Grid2op/Grid2Op)；[pandapower](https://github.com/e2nIEE/pandapower) | DOMAIN_REFERENCE_IMPLEMENTATION / E1；未找到直接 Lean 电网项目 |
 | IND06-05 | 过程工业 → 化工/热工装置 → 物理过程与控制逻辑 | 物理模型、单位/量纲、ODE、控制状态、边界条件与误差界 | [Formal Verification of Control Modules in CPS](https://doi.org/10.3390/s20185154)；[Lean 化学物理形式化](https://doi.org/10.1039/d3dd00077j) | [OpenModelica](https://github.com/OpenModelica/OpenModelica)；[ModelicaStandardLibrary](https://github.com/Modelica/ModelicaStandardLibrary)；[LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories) | DIRECT_LEAN_RESEARCH / DOMAIN_REFERENCE_IMPLEMENTATION / E1；化学项目为 Lean 3 历史版本 |
 
@@ -95,7 +95,7 @@
 
 | ID | 递归路径（L2 → L3 → 场景） | 最小问题 / 形式化对象 | 论文、标准或原始依据 | GitHub 项目 | 关系与证据 |
 |---|---|---|---|---|---|
-| IND07-01 | 医疗器械 → 设备软件 → 治疗设备安全状态 | 设备状态机、报警/联锁、剂量边界、故障模式与软件安全性质 | [Medical software formal methods review](https://doi.org/10.1002/smr.1943)；[Hemodialysis device ASM method](https://doi.org/10.1016/j.scico.2017.07.003) | [KeYmaeraX](https://github.com/LS-Lab/KeYmaeraX-release)；[openmrs/openmrs-core](https://github.com/openmrs/openmrs-core) | ADJACENT_FORMAL_TOOL / DOMAIN_REFERENCE_IMPLEMENTATION / E1；未找到 Lean 医疗器械专属项目 |
+| IND07-01 | 医疗器械 → 设备软件 → 治疗设备安全状态 | 设备状态机、报警/联锁、剂量边界、故障模式与软件安全性质 | [Medical software formal methods review](https://doi.org/10.1002/smr.1943)；[Hemodialysis device ASM method](https://doi.org/10.1016/j.scico.2017.07.003) | [KeYmaeraX](https://github.com/LS-Lab/KeYmaeraX-release)；[openaps/oref0](https://github.com/openaps/oref0) | ADJACENT_FORMAL_TOOL / DOMAIN_REFERENCE_IMPLEMENTATION / E1；未找到 Lean 医疗器械专属项目 |
 | IND07-02 | 医疗信息化 → EHR/FHIR → 患者记录与资源引用一致性 | FHIR resource schema、引用完整性、工作流状态、版本兼容与数据约束 | [ISO/PAS 24305:2025](https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/07/83/78390.html)；医疗软件形式化方法综述 | [HL7/fhir](https://github.com/HL7/fhir)；[openmrs/openmrs-core](https://github.com/openmrs/openmrs-core) | DOMAIN_REFERENCE_IMPLEMENTATION / E0；Lean 适配仍为机会假设 |
 | IND07-03 | 糖尿病管理 → 自动胰岛素输注 → 控制算法与泵/CGM状态 | 输入数据时点、预测状态、剂量上限、控制状态机与安全约束 | [Open-source automated insulin delivery RCT](https://doi.org/10.1056/NEJMoa2203913)；[Open-source AID consensus](https://pmc.ncbi.nlm.nih.gov/articles/PMC8720075/) | [openaps/oref0](https://github.com/openaps/oref0)；[OpenAPS documentation](https://openaps.readthedocs.io/en/latest/) | DOMAIN_REFERENCE_IMPLEMENTATION / E1；不是 Lean 证明或医疗建议 |
 | IND07-04 | 生命科学 → 系统生物学 → SBML反应网络与动力学模型 | 反应网络、物种/参数、ODE、模型语义、单位与仿真可复现性 | [Systems Biology standards and best practices](https://pmc.ncbi.nlm.nih.gov/articles/PMC10435326/) | [sbmlteam/libsbml](https://github.com/sbmlteam/libsbml)；[sys-bio/tellurium](https://github.com/sys-bio/tellurium) | DOMAIN_REFERENCE_IMPLEMENTATION / E1；Lean 专属生物模型库待发现 |
@@ -124,12 +124,12 @@
 
 | ID | 递归路径（L2 → L3 → 场景） | 最小问题 / 形式化对象 | 论文、标准或原始依据 | GitHub 项目 | 关系与证据 |
 |---|---|---|---|---|---|
-| IND10-01 | 高能物理 → 场论/粒子物理 → 物理数学结果数字化 | 物理定义、指标约定、代数恒等式、推导链和定理依赖 | [PhysLib 项目资料](https://github.com/leanprover-community/physlib) | [leanprover-community/physlib](https://github.com/leanprover-community/physlib) | DIRECT_LEAN_RESEARCH / E1 |
+| IND10-01 | 高能物理 → 场论/粒子物理 → 物理数学结果数字化 | 物理定义、指标约定、代数恒等式、推导链和定理依赖 | [HepLean: Digitalising high energy physics](https://doi.org/10.1016/j.cpc.2024.109457) | [HEPLean/HepLean](https://github.com/HEPLean/HepLean)；[leanprover-community/physlib](https://github.com/leanprover-community/physlib) | DIRECT_LEAN_RESEARCH / E1 |
 | IND10-02 | 理论物理 → QFT/AQFT → 场论定义与推导 | 算子代数、场论公理、对称性、扰动展开与数学结构 | [FormalQFT research](https://arxiv.org/abs/2603.15770) | [physicslib/physicslib4](https://github.com/physicslib/physicslib4)；[PhysLib](https://github.com/leanprover-community/physlib) | DIRECT_LEAN_RESEARCH / E1；具体 QFT 定理覆盖需核对 |
 | IND10-03 | 量子科学 → 量子信息 → 量子态/信道/信息不等式 | 量子态、密度矩阵、量子信道、熵与信息论性质 | [Quantum Stein lemma formalization](https://arxiv.org/abs/2510.08672) | [PhysLib](https://github.com/leanprover-community/physlib)；[Lean-QuantumInfo](https://github.com/Timeroot/Lean-QuantumInfo) | DIRECT_LEAN_RESEARCH / E1；旧项目与 PhysLib 迁移关系待确认 |
 | IND10-04 | 工程计算 → ODE/PDE/优化 → 数值算法与动力系统 | 微分方程、解的存在唯一性、稳定性、误差界、优化条件 | [Lean control theory research](https://arxiv.org/abs/2607.19727)；SciLean 项目说明 | [SciLean](https://github.com/lecopivo/SciLean)；[DynamicalSystems](https://github.com/mcdoll/DynamicalSystems)；[LeanForControl](https://github.com/AnandGokhale/LeanForControl) | DIRECT_LEAN_RESEARCH / E1；SciLean 定位为早期 proof-of-concept |
 | IND10-05 | 化学与材料 → 化学物理 → 吸附/热力学/运动学推导 | Langmuir/BET 模型、热力学关系、量纲和推导假设 | [Formalizing Chemical Physics Using Lean](https://doi.org/10.1039/d3dd00077j) | [ATOMSLab/LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories)；[RDKit](https://github.com/rdkit/rdkit) | DIRECT_LEAN_RESEARCH / DOMAIN_REFERENCE_IMPLEMENTATION / E1；论文代码为 Lean 3 历史版本 |
-| IND10-06 | 地球科学 → 气候/地球系统模型 → 数值模型与守恒约束 | PDE/ODE 离散、守恒量、边界条件、数值稳定性和参数约束 | [ClimateMachine 项目与科学计算资料](https://github.com/CliMA/ClimateMachine.jl)；科学模型可复现性综述 | [CliMA/ClimateMachine.jl](https://github.com/CliMA/ClimateMachine.jl)；[SciLean](https://github.com/lecopivo/SciLean) | DOMAIN_REFERENCE_IMPLEMENTATION / DIRECT_LEAN_RESEARCH / E1；未找到 ClimateMachine 的 Lean 专属应用 |
+| IND10-06 | 地球科学 → 气候/地球系统模型 → 数值模型与守恒约束 | PDE/ODE 离散、守恒量、边界条件、数值稳定性和参数约束 | [Large-eddy simulations with ClimateMachine v0.2.0](https://doi.org/10.5194/gmd-15-6259-2022) | [CliMA/ClimaCore.jl](https://github.com/CliMA/ClimaCore.jl)；[CliMA/ClimaAtmos.jl](https://github.com/CliMA/ClimaAtmos.jl)；[CliMA/ClimaCoupler.jl](https://github.com/CliMA/ClimaCoupler.jl)；[SciLean](https://github.com/lecopivo/SciLean) | DOMAIN_REFERENCE_IMPLEMENTATION / DIRECT_LEAN_RESEARCH / E1；旧 ClimateMachine.jl 仓库 README 明确标记不再维护，已改列当前 successor repos；未找到 Lean 专属气候应用 |
 
 ### IND-11｜政府、法律、合规与公共基础设施
 
@@ -174,7 +174,7 @@
 2. Lean 项目和相邻项目严格区分。铁路、汽车、医疗、PLC、P4、选举等案例多数使用 SPIN/TLA+/Coq/F*/SMT 或行业参考实现。
 3. 部分 Lean 仓库是历史/早期项目：LeanChemicalTheories 对应论文代码是 Lean 3；RISC-V codegen thesis repo 已归档；LeanDojo 原仓库 README 标记 deprecated；SciLean README 定位为早期 proof-of-concept。
 4. 医疗与生命科学当前以行业参考实现为主，未确认 Lean 在这些具体工作流中采用。
-5. 气候、电网、交通、采购等方向虽有项目，但 Lean 的增量价值仍待验证。
+5. 气候、电网、交通、采购等方向虽有项目，但 Lean 的增量价值仍待验证；ClimateMachine.jl 旧仓库已标记不再维护，当前映射转向 ClimaCore/ClimaAtmos/ClimaCoupler。
 6. 部分论文是行业/方法证据，不是项目的直接 companion paper；后续要继续核对每条论文—项目关系，不能把相关性写成同一研究团队或同一实现。
 
 ## 6. 本阶段完成定义与下一步

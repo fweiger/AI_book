@@ -175,3 +175,7 @@
 - [LeanDojo](https://arxiv.org/abs/2306.15626)；[LeanCopilot](https://arxiv.org/abs/2404.12534)；[Mathlib paper](https://doi.org/10.1145/3372885.3373824)；[Formal Conjectures](https://arxiv.org/abs/2605.13171)。
 
 **证据规则：** 上述来源并非都与 GitHub 项目一一对应的 companion paper。叶节点会分别标记直接论文、行业证据、标准、项目文档及尚未闭合的关系，不将一般形式化方法研究说成 Lean 采用。
+
+- [HepLean: Digitalising high energy physics](https://doi.org/10.1016/j.cpc.2024.109457)；[PhysLib current project](https://github.com/leanprover-community/physlib)。
+- [MoveIt Task Constructor for Task-Level Motion Planning, ICRA 2019](https://doi.org/10.1109/ICRA.2019.8793898)。
+- [Large-eddy simulations with ClimateMachine v0.2.0](https://doi.org/10.5194/gmd-15-6259-2022)；ClimateMachine.jl README 标记旧仓库不再维护，后续资源转向 ClimaCore/ClimaAtmos/ClimaCoupler。
