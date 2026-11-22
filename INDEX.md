@@ -107,6 +107,6 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 | TOPIC-015 | [哲学是什么？——本质、活动、气质、边界及多路径解释 #68](https://github.com/fweiger/AI_book/issues/68) | [Draft PR #69](https://github.com/fweiger/AI_book/pull/69) · `topic/TOPIC-015/what-is-philosophy-20261121` | `ISSUE + DRAFT PR` |
 | TOPIC-016 | [AI 与社会意识转型：生产力、旧权威、媒介与人的主体性 #70](https://github.com/fweiger/AI_book/issues/70) | [Draft PR #71](https://github.com/fweiger/AI_book/pull/71) · `topic/TOPIC-016/ai-social-consciousness-20261121` | `ISSUE + DRAFT PR` |
 | TOPIC-017 | [个人 WGS：数据质量 × 权威论文 × 跨领域研究深度 × GitHub 复现 #72](https://github.com/fweiger/AI_book/issues/72) | [Draft PR #73](https://github.com/fweiger/AI_book/pull/73) · `topic/TOPIC-017/2026-11-21-wgs-landscape` | `ISSUE + DRAFT PR` |
-| TOPIC-018 | [Lean 形式化证明与跨学科可验证系统 #74](https://github.com/fweiger/AI_book/issues/74) | [专题分支](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122) · Draft PR 待创建 | `ISSUE + INITIAL DRAFT` |
+| TOPIC-018 | [Lean 形式化证明与跨学科可验证系统 #74](https://github.com/fweiger/AI_book/issues/74) | [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) · [专题分支](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122) | `ISSUE + DRAFT PR` |
 
 **编号说明**：本轮已核对 TOPIC-015、016、017 分别由 #68、#70、#72 使用；新专题使用 TOPIC-018。TOPIC-004 冲突和 TOPIC-009 迁出规则保持不变。
