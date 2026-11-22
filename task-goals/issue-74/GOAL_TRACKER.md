@@ -19,7 +19,7 @@
 - 当前 Tracker GitHub blob SHA：创建后 GET 回读填写
 - 目标漂移状态：D0（当前动作推进 AC-01/AC-05 的来源准入；后续每轮重新判断）
 - 状态一致性：CONSISTENT（Issue 合同与本 Tracker 基线一致；待全部文件和 Issue 回链写后回读）
-- Issue 同步状态：ISSUE_SYNC_PENDING（等待将 Tracker/PR 链接写入 Issue 并回读）
+- Issue 同步状态：SYNCED（Issue #74 已回链 Tracker、专题分支和 Draft PR #75；更新后 GET 回读确认）
 
 ## 1. 批准目标基线
 
@@ -59,7 +59,7 @@
 ## 4. 当前检查点
 
 - **最近完成的一轮：** 2026-11-22 任务登记、专题骨架与首轮来源地图。
-- **本轮实际完成：** 检查 AI_book 现有专题编号及 Issue；确认 TOPIC-015/#68、TOPIC-016/#70、TOPIC-017/#72 已占用；检索 Lean 官方参考、Mathlib、Aeneas、Rust-to-Lean、经济学/金融数学、TorchLean 和 physicslib4 等来源；建立 Issue #74 与专题草案。
+- **本轮实际完成：** 检查 AI_book 现有专题编号及 Issue；确认 TOPIC-015/#68、TOPIC-016/#70、TOPIC-017/#72 已占用；检索 Lean 官方参考、Mathlib、Aeneas、Rust-to-Lean、经济学/金融数学、TorchLean 和 physicslib4 等来源；建立 Issue #74、专题文件、唯一 Tracker 和 Draft PR #75。
 - **已经核验的结果：** Lean 官方参考说明 Kernel 检查 proof terms；官方安装手册将 Elan 定义为 version manager；Aeneas 官方页说明 Lean backend 及 safe sequential Rust 范围；MathFin、MathEconLib、TorchLean、physicslib4 均有可回读项目/论文来源。
 - **尚未验证/失败/未知：** 所有代表仓库逐项固定 commit、许可证和构建；全部数学案例 proof status；Mathlib/MathFin 的逐定理 faithfulness；分布式协议和信息论候选的源码深审；独立 QA。
 - **对原始目标的实际贡献：** 形成初步跨学科方向和可复用方法分类；尚未完成系统性文献/源码审计。
@@ -107,7 +107,7 @@
 
 | 时间/批次 | 实际工作与结果 | AC 贡献 | 证据链接 | 偏差/一致性、阻断或路线调整 | 本轮建议下一步 |
 |---|---|---|---|---|---|
-| 2026-11-22 / INIT | 查重专题编号和既有 Issue；创建 AI_book #74；建立初始专题文件与来源地图。未运行 Lean 构建、未逐项目核验所有许可证和源码。 | AC-01/03 框架与来源初筛 PARTIAL；AC-02/04/05/06/08 NOT_RUN；AC-07 边界已定义但未验收。 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | D0 / CONSISTENT；项目深审与 Issue/PR 回链待完成。 | M0 版本化项目准入矩阵。 |
+| 2026-11-22 / INIT | 查重专题编号和既有 Issue；创建 AI_book #74；建立专题文件、唯一 Tracker、索引导航和 Draft PR #75。未运行 Lean 构建、未逐项目核验所有许可证和源码。 | AC-01/03 框架与来源初筛 PARTIAL；AC-02/04/05/06/08 NOT_RUN；AC-07 边界已定义但未验收。 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；Issue 已回链 Tracker 与 PR 并 GET 回读。 | M0 版本化项目准入矩阵。 |
 
 ## 10. 最近一次状态一致性回读
 
@@ -124,4 +124,4 @@
 | §5阻断与未受影响工作 | 项目深审尚未完成；其他领域可继续 | §5 | CONSISTENT |
 | §6路径变更与第7节裁决 | 先做项目准入，避免堆砌未经核实案例 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向 M0 版本化项目准入 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | Issue 已创建；Tracker/PR 回链待更新 | Issue #74 | ISSUE_SYNC_PENDING |
+| 最新 Issue 进度事件与本文件版本 | Issue #74 已回链 Tracker/PR，GET 回读确认 | Issue #74 · PR #75 | SYNCED |
