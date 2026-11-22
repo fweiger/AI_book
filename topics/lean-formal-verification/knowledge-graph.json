@@ -155,6 +155,18 @@
       "type": "case_study",
       "title": "Hax 官方 ADC bit-blasting 示例",
       "evidence_level": "E1"
+    },
+    {
+      "id": "L21",
+      "type": "method",
+      "title": "Hax dual specification sets: integer and bit-vector",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L22",
+      "type": "governance",
+      "title": "Hax version compatibility and generated Lean package migration",
+      "evidence_level": "E1"
     }
   ],
   "edges": [
@@ -317,6 +329,21 @@
       "source": "L17",
       "target": "L22",
       "relation": "锁定工具链与依赖"
+    },
+    {
+      "source": "L20",
+      "target": "L21",
+      "relation": "分离数学整数与位级规格"
+    },
+    {
+      "source": "L19",
+      "target": "L22",
+      "relation": "锁定Hax与Lean工具链版本"
+    },
+    {
+      "source": "L22",
+      "target": "L16",
+      "relation": "控制升级后构建与证明状态验收"
     }
   ],
   "reading_paths": [
@@ -404,6 +431,17 @@
         "L25",
         "L20"
       ]
+    },
+    {
+      "id": "Q07",
+      "name": "Hax版本迁移与双规格验证",
+      "nodes": [
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L16"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -418,6 +456,7 @@
     "抽取代码可编译、局部算术 theorem 通过和协议级 correctness theorem 完成是不同状态",
     "同一 Rust 函数上的单个对照样本不能推出 Hax/Aeneas 的普遍优劣",
     "源码中无 sorry 不等于已由 Lean Kernel 独立构建验收；必须记录实际 build",
-    "跨库 bridge 中的 axiom/opaque 会把证明义务移出当前 theorem，必须单独审计"
+    "跨库 bridge 中的 axiom/opaque 会把证明义务移出当前 theorem，必须单独审计",
+    "上游修复已合并不代表目标项目固定依赖已包含修复；旧版复现和新版迁移必须分开验收"
   ]
 }
