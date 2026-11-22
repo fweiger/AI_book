@@ -229,3 +229,14 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **失败边界**：一个 witness 只证明假设非空，不证明模型假设符合真实市场；需要把数学可满足性与数据/经济真实性分开。
 - **来源**：[binomial benchmark correction](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/binomial.json)。
 - **状态**：E1 / 历史修正记录与 theorem 条件已读。
+
+### M-14｜用 availableAt 而不是 eventTime 证明 PIT/no-lookahead
+
+- **领域/问题**：防止历史修订、晚到数据和延迟发布信息进入过去的交易决策。
+- **数据类型**：将 observation 分成 `eventTime`（事件发生时间）、`availableAt`（策略可获得时间）和 `decisionTime`（决策时间）。
+- **最小定义**：`eligibleRows t rows := rows.filter (fun row => decide (row.availableAt ≤ t)))。
+- **核心证明**：对 `List.mem_filter` 展开，得到每个输出元素满足 availableAt ≤ t；再证明 late revision 在 availableAt > t 时被排除，即使 eventTime ≤ t。
+- **工程技巧**：把时间语义编码在结构体字段和函数签名中，避免依赖调用者记住“发布日期”和“事件日期”不同。
+- **失败边界**：该定理只证明 filter safety；未证明 latest-version selection、排序、revision tie-break、source timestamp authenticity、标签窗口隔离或生产代码实现。
+- **来源**：[PITNoLookahead.lean](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) · [dedicated workflow](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/.github/workflows/lean-pit-no-lookahead.yml)。
+- **状态**：E1 / Lean 源码和 package 已提交；GitHub Actions build 结果待回读。
