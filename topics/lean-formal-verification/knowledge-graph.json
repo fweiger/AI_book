@@ -251,6 +251,27 @@
       "type": "framework",
       "title": "Veil 2.0：状态转换系统多模态验证",
       "evidence_level": "E2"
+    },
+    {
+      "id": "L42",
+      "type": "case_study",
+      "title": "Rate-Distortion：当前源码与历史构建时点审计",
+      "evidence_level": "E1",
+      "status": "PARTIAL_CURRENT_BUILD_NOT_RUN"
+    },
+    {
+      "id": "L43",
+      "type": "case_study",
+      "title": "AI4SLT：release build 与统计学习 theorem 审计",
+      "evidence_level": "E2",
+      "status": "RELEASE_BUILD_PASS_NO_CONTINUOUS_CI"
+    },
+    {
+      "id": "L44",
+      "type": "framework",
+      "title": "Veil：TrustAudit、SMT trust 与 certificate kernel boundary",
+      "evidence_level": "E2",
+      "status": "UPSTREAM_CI_PASS"
     }
   ],
   "edges": [
@@ -548,6 +569,26 @@
       "source": "L41",
       "target": "L16",
       "relation": "区分模型检查、自动证明和交互式证明证据"
+    },
+    {
+      "source": "L36",
+      "target": "L42",
+      "relation": "rate-distortion current-source audit"
+    },
+    {
+      "source": "L37",
+      "target": "L43",
+      "relation": "ICML companion release-build audit"
+    },
+    {
+      "source": "L41",
+      "target": "L44",
+      "relation": "framework trust-boundary and CI audit"
+    },
+    {
+      "source": "L44",
+      "target": "L16",
+      "relation": "separate theorem axioms, model assumptions, sorryAx and unsafe runtime paths"
     }
   ],
   "reading_paths": [
@@ -707,6 +748,19 @@
         "L41",
         "L16"
       ]
+    },
+    {
+      "id": "Q16",
+      "name": "三种项目构建与信任边界模式",
+      "nodes": [
+        "L36",
+        "L42",
+        "L37",
+        "L43",
+        "L41",
+        "L44",
+        "L16"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -727,6 +781,7 @@
     "CRR 等 theorem 必须检查假设非空性，避免 vacuous theorem",
     "PIT/no-lookahead formalization 仍是候选研究设计，尚未在 AI_Trader 或生产代码验证",
     "当前 PIT prototype 只证明 eligibility filter safety，不等同于 latest-revision as-of join 或真实数据源时间戳验证",
-    "论文、仓库 README、软件 release、CI 和独立 build 是不同证据层级；项目统计必须记录日期、版本和口径"
+    "论文、仓库 README、软件 release、CI 和独立 build 是不同证据层级；项目统计必须记录日期、版本和口径",
+    "构建证据必须绑定到实际源码 commit；历史 build log 不覆盖后续变更；CI run 的 head_sha 必须与被审计 commit 完全一致"
   ]
 }
