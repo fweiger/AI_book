@@ -34,3 +34,5 @@
 - `#print axioms PITNoLookahead.late_available_revision_excluded` → `[propext]`.
 - The proof uses the standard propositional extensionality axiom only; no `sorryAx`, no user-declared axiom, and no `Classical.choice` were reported.
 - This is E2 for the minimal eligibility filter proof. It does not promote the full as-of join or any external data timestamp to verified status.
+
+- 最新回归确认：[Run #19](https://github.com/fweiger/AI_book/actions/runs/45031617398)，对应 PR head `1e700ff89fbce8fa3106c99b93ebe45b03cc6557)，workflow conclusion = success；`lake build` 成功，两个 theorem 的 `#print axioms` 均为 `[propext]`。
