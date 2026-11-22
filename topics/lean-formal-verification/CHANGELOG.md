@@ -10,3 +10,5 @@
 
 
 - **2026-11-22，v0.3.0（Draft）**：深入审查 rust-lean 的 Hax-FRI 与 Hax ADC 子项目；记录 Rust→Lean 抽取、Hax annotations、hax_bv_decide bit-blasting、ArkLib 规格连接和实际抽取障碍；新增 C018-016/017 与 M-01/M-02/M-03 方法卡。新增知识图谱节点区分局部算术证明与协议级正确性；所有案例仍为 E1，未独立构建。
+
+- **2026-11-22，v0.4.0（Draft）**：修正 Hax ADC 历史 issue 状态，核对 #1925/#1927/#1933/#1938/#1959/#2064/#2142 上游 PR；以 Hax 官方 lean_adc 示例更新 M-01，新增 M-04 至 M-07。对同一 Rust blob 的 Hax/Aeneas FRI pipeline 做源码对照：Aeneas BasicProofs 6 theorem + 3 example 静态无 sorry/axiom；ArkLib bridge 仍含 3 axioms、1 opaque、4 sorry；Hax FRI 有 2 个实质性边界定理证明，另有 4+9 个 sorry。新增 C018-018 至 C018-025、Q07/Q08 和独立会话记录。所有 Lean build 与独立 QA 仍 NOT_RUN。
