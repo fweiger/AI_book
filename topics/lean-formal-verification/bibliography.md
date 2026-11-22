@@ -140,3 +140,38 @@
 95. Pîrlea, Gladshtein, Kinsbruner, Zhao & Sergey, [Veil: A Framework for Automated and Interactive Verification of Transition Systems](https://doi.org/10.1007/978-3-031-98682-6_2), CAV 2025, LNCS 15933 — framework paper and [Veil repository](https://github.com/verse-lab/veil)。
 96. Losa & Dodds, [On the Formal Verification of the Stellar Consensus Protocol](https://doi.org/10.4230/OASIcs.FMBC.2020.9), FMBC 2020 — original Ivy + Isabelle/HOL safety/liveness methodology; not the same as the narrower Veil Lean SCP example.
 97. [stellar/scp-proofs](https://github.com/stellar/scp-proofs) — original SCP proof/model repository, Ivy + Isabelle/HOL; README distinguishes current Ivy 1.7 version from old commit 803b345 containing full liveness proof.
+
+
+## 2026-11-23｜递归行业叶节点新增来源
+
+### 硬件、编译器、GPU 与软件基础设施
+- [RISC-V ISA Manual](https://github.com/riscv/riscv-isa-manual)；[Sail RISC-V Lean](https://github.com/opencompl/sail-riscv-lean)；[OpenVM-FV](https://github.com/openvm-org/openvm-fv)。
+- [xv6iris formal verification](https://arxiv.org/abs/2609.04043)；[Formal Methods in Industry](https://doi.org/10.1145/3689374)。
+- [TorchLean](https://arxiv.org/abs/2602.22631)。
+- [AWS Cedar verification-guided development](https://aws.amazon.com/blogs/opensource/lean-into-verified-software-development/)；[Lean official Cedar case](https://lean-lang.org/use-cases/cedar/)。
+- [Aeneas/Rust-to-Lean](https://arxiv.org/abs/2605.30106)；[Certifying Datalog, ITP 2025](https://doi.org/10.4230/LIPIcs.ITP.2025.36)；[LeanLTL, ITP 2025](https://doi.org/10.4230/LIPIcs.ITP.2025.37)；[Veil, CAV 2025](https://doi.org/10.1007/978-3-031-98682-6_2)。
+
+### 密码学、金融与经济学
+- [VCVio, IACR ePrint 2026/899](https://eprint.iacr.org/2026/899)；[MathFin research](https://arxiv.org/abs/2606.01356)。
+- [Markowitz, Portfolio Selection (1952)](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x)；[Rockafellar–Uryasev CVaR](https://doi.org/10.21314/JOR.2000.038)。
+- [Probability of Backtest Overfitting](https://doi.org/10.21314/JCF.2016.322)；[The Seven Sins of Quantitative Investing](https://doi.org/10.3905/jpm.2019.1.069)。
+- [EconCSLib research](https://arxiv.org/abs/2606.16144)；[economic mechanism formalization](https://arxiv.org/abs/2606.13306)。
+
+### 交通、工业、医疗、能源与通信
+- [SPIN railway control validation](https://doi.org/10.1109/ICDSN.2000.857524)；[ETCS interlocking verification](https://doi.org/10.1016/j.scico.2016.05.010)。
+- [KeYmaera hybrid systems safety tutorial](https://doi.org/10.1007/s10009-015-0367-0)；[Code-Level Safety Verification for Automated Driving](https://doi.org/10.1007/978-3-031-71177-0_22)。
+- [ESBMC-PLC+](https://arxiv.org/abs/2606.23870)；[PLC benchmark suite](https://arxiv.org/abs/2609.18994)；[Formal Verification of Control Modules in CPS](https://doi.org/10.3390/s20185154)。
+- [Medical software formal methods review](https://doi.org/10.1002/smr.1943)；[ASM medical-device development](https://doi.org/10.1016/j.scico.2017.07.003)；[Open-source automated insulin delivery RCT](https://doi.org/10.1056/NEJMoa2203913)。
+- [Systems Biology standards and best practices](https://pmc.ncbi.nlm.nih.gov/articles/PMC10435326/)。
+- [P4 stateful packet processing verification](https://www.cs.princeton.edu/~appel/papers/FoundationalVerificationP4.pdf)；[P4 verification dissertation](https://doi.org/10.7298/a0dy-4f33)。
+- [pandapower](https://doi.org/10.1109/TPWRS.2018.2829021)；[Grid2Op](https://github.com/Grid2op/Grid2op)。
+
+### 科学、法律、选举与教育
+- [Formalizing Chemical Physics Using Lean](https://doi.org/10.1039/d3dd00077j)；[LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories)。
+- [Lean control theory](https://arxiv.org/abs/2607.19727)；[FormalQFT](https://arxiv.org/abs/2603.15770)；[Quantum Stein lemma](https://arxiv.org/abs/2510.08672)。
+- [Catala: a Programming Language for the Law](https://doi.org/10.1145/3473582)；[LegalLean project](https://github.com/edu-ap/legal-lean)。
+- [ElectionGuard: A Cryptographic Toolkit to Enable Verifiable Elections](https://www.usenix.org/conference/usenixsecurity24/presentation/benaloh)；[ElectionGuard specification](https://electionguard.vote/spec/)。
+- [Learning about Proof with Lean](https://doi.org/10.1007/s40753-021-00140-1)；[Teaching Mathematics with Lean](https://doi.org/10.1090/noti3184)；[Natural Number Game learning study](https://doi.org/10.1007/s40751-025-00193-w)。
+- [LeanDojo](https://arxiv.org/abs/2306.15626)；[LeanCopilot](https://arxiv.org/abs/2404.12534)；[Mathlib paper](https://doi.org/10.1145/3372885.3373824)；[Formal Conjectures](https://arxiv.org/abs/2605.13171)。
+
+**证据规则：** 上述来源并非都与 GitHub 项目一一对应的 companion paper。叶节点会分别标记直接论文、行业证据、标准、项目文档及尚未闭合的关系，不将一般形式化方法研究说成 Lean 采用。

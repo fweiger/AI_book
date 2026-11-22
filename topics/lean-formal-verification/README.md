@@ -29,6 +29,7 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 
 - [Lean 跨行业应用研究框架（主框架）](industry-application-framework.md)
 - [行业应用机会地图](industry-opportunity-map.md)
+- [递归下钻与 GitHub 项目叶节点地图（12 行业 / 60 单元）](industry-leaf-project-map.md)
 - [应用机会卡模板](application-opportunity-card-template.md)
 - [已有领域证据与论文—项目资源索引（支撑层）](field-map.md)
 - [代表案例与项目审计台账](case-studies.md)
@@ -111,3 +112,8 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 用户明确要求先搭建 Lean 跨行业应用框架，而不是继续进入具体项目审计。当前主线为行业分类、业务领域、具体场景、可形式化问题、Lean 能力、适配边界和价值路径；随后才从具体机会映射论文与 GitHub 项目。已有项目矩阵、案例和 Batch A 审计作为证据资产保留，项目审计仅在选定具体方向并确有复用/原型需要时进行。
 
 详见 [主框架](industry-application-framework.md)、[首版行业机会地图](industry-opportunity-map.md) 和 [应用机会卡模板](application-opportunity-card-template.md)。
+
+
+## 2026-11-23｜递归下钻至 GitHub 项目叶节点
+
+用户明确要求所有行业分支按业务复杂度递归下钻，不能停在二级/三级；每条研究叶节点必须挂接对应论文/标准和实际 GitHub 项目。当前已形成 [60 个最小研究单元地图](industry-leaf-project-map.md)，覆盖 12 个一级行业。项目审计与最小原型留待用户选定方向后进行。

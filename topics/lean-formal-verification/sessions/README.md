@@ -24,3 +24,5 @@
 - [2026-11-23：跨学科研究方向—论文—项目映射与源码复核](2026-11-23-cross-domain-direction-paper-project-map.md)
 
 - [2026-11-23：项目审计批次 A——Rate-Distortion、AI4SLT、Veil](2026-11-23-project-audit-batch-a.md)
+
+- [2026-11-23：行业递归下钻至 GitHub 项目叶节点 v0.2](2026-11-23-recursive-industry-leaf-project-map.md)

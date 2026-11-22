@@ -142,3 +142,8 @@ MathFin 是数学金融的形式化库，而不是量化策略回测系统。它
 - **Veil**：当前 main commit 有同 SHA 的 Linux/macOS CI；TrustAudit 检查 7 条 shipped verification routes，并用 positive control 证明它能发现 implemented_by；同时必须保留 trusted SMT / sorryAx fallback 的边界。
 
 对量化的候选映射：Rate-Distortion 可研究 L2 数据压缩与特征量化的失真边界；AI4SLT 可帮助形式化泛化假设和统计学习不等式；Veil 可用于订单/持仓状态机的 safety/liveness。三者都不能替代真实数据时点验证、交易成本、样本外统计和实现精化。
+
+
+## 2026-11-23｜行业树与资源索引分工
+
+本文件仍是跨领域论文/项目证据索引，不是行业树主入口。行业递归层级、最小问题、论文和 GitHub 叶节点的对应关系，以 [industry-leaf-project-map.md](industry-leaf-project-map.md) 为准。原有方向级条目作为下钻起始证据，不替代行业覆盖。

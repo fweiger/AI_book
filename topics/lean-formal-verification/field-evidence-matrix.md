@@ -495,3 +495,8 @@
 - print axioms 不能发现 implemented_by/unsafe 对运行语义的影响；需要对 shipped route 的可达常量做单独审计，并用正向控制证明审计器确实能发现问题。
 - 模型字段名 axiom_0 不自动等于 Lean 全局 axiom；必须检查它是 class/structure field、参数假设还是顶层 axiom，并查看具体 instance 是否提供证明。
 - safety theorem 不蕴含 liveness；某个原始协议的 Ivy/Isabelle 完整证明，也不能传递给 Veil 中一个范围更窄的 Lean 示例。
+
+
+## 2026-11-23｜行业叶节点映射入口
+
+本矩阵保留原有方向级证据行。全行业递归树和论文—项目叶节点见 [industry-leaf-project-map.md](industry-leaf-project-map.md)。本矩阵维护领域证据与方法状态；行业叶节点地图维护行业路径、具体问题及 GitHub 项目终点。
