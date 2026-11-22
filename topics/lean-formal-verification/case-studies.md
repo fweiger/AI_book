@@ -245,14 +245,9 @@ README 报告 906 项文献结果：866 `full`、18 `library_wrapper`、22 `redu
 
 **A. Gaussian CVaR 的 Rockafellar–Uryasev 变分刻画**
 
-在损失 (L=mu+sigma Z)、(sigma>0)、(Phi(z)=alpha<1) 的 Gaussian 模型下，证明
-[
-operatorname{CVaR}_alpha(L)
-=min_cleft(c+fracrac{mathbb E[(L-c)^+]}{1-alpha}ight),
-]
-最小值在 (c=operatorname{VaR}_alpha(L)) 取得。
+在 Gaussian 损失模型 L = μ + σZ、σ>0、Φ(z)=α<1 下，证明 CVaRα(L) 等于 Rockafellar–Uryasev 目标函数 g(c) = c + E[(L-c)^+]/(1−α) 在所有阈值 c 上的最小值，且最小值在 c = VaRα(L) 取得。
 
-证明不是只整理闭式公式，而是构造点态证书 ((L-c)^+ge (L-c)mathbf 1_{Z>z})，积分后得到任意阈值 c 的下界，再证明 VaR 处取等。源码：[RockafellarUryasev.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean)。benchmark 状态为 `full`、Axioms-clean。限制：Gaussian 损失与参数化假设，不是对真实 A 股收益分布的经验验证。
+证明不是只整理闭式公式，而是构造点态尾部证书：shortfall positive-part 至少覆盖尾部事件上的线性损失项；积分后得到任意阈值 c 的下界，再证明 VaR 处取等。源码：[RockafellarUryasev.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean)。benchmark 状态为 `full`、Axioms-clean。限制：Gaussian 损失与参数化假设，不是对真实 A 股收益分布的经验验证。
 
 **B. Markowitz Lagrangian FOC 的充分性**
 
