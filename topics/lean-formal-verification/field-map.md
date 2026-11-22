@@ -105,3 +105,24 @@ MathFin 是数学金融的形式化库，而不是量化策略回测系统。它
 ### PIT/no-lookahead 的第一份可执行规格原型
 
 已在 AI_book 专题分支建立独立 Lean 4.35.0 package，区分 eventTime 与 availableAt，并证明 eligibleRows 的所有输出均满足 availableAt ≤ decisionTime；一个“事件已发生但修订尚未发布”的例子被正确排除。当前仍是 filter safety，不是完整 as-of join；GitHub Actions Run #19（PR head 1e700ff）的 `lake build` 已 PASS，两个 theorem 的 `#print axioms` 均为 `[propext]`。它是 AI_Trader #488 可采用的形式化接口样例，不是对 #488 现有代码的验证。
+
+## H. 逐领域研究方向—论文—项目证据矩阵（2026-11-22）
+
+本专题已建立独立的 [field-evidence-matrix.md](field-evidence-matrix.md)，将原有领域分类进一步拆成具体研究方向，并逐项连接原始论文、Lean 项目、相邻证明助手/验证工具和当前缺口。首轮覆盖数学及 9 个非数学领域：计算机科学/软件验证、密码学、分布式系统、经济学、金融数学、AI/ML/统计、物理学、信息论和控制理论。
+
+本轮新增的高信号方向：
+- **分布式系统**：Veil（CAV 2025）提供 Lean 状态转换系统验证；IFP 是其 BFT safety 案例，但当前只覆盖受限 Phase 1，不能写成完整协议已证明。
+- **统计学习理论**：AI4SLT 形式化经验过程、集中不等式和泛化界；对量化模型过拟合/泛化研究有理论参考，但不直接证明 alpha。
+- **统计程序验证**：StatWhy（CAV 2025）是非 Lean 的假设检验程序规格检查工具，可作为统计研究流程的相邻方案。
+- **信息论**：LeanInfoTheory、infotheorylib 和 rate_distortion_lean4 已分别覆盖通用 Shannon API、教材驱动形式化和 rate-distortion 定理。
+- **控制理论**：Doll–Shames 的 Lean 控制理论论文与 DynamicalSystems 项目已明确 Lyapunov、LaSalle、small-gain 等研究入口。
+
+### 本轮纠正与限制
+- IFP 从早期候选升级为已读取项目 README 的 Lean/Veil BFT safety 案例；其 93/103 数字是 README 声明，且仅对应两参与者、单 epoch 的受限阶段。
+- Resonate 是 durable execution 服务的 Lean abstract machine/trace checker，不是共识算法；btc-verified 当前组件证明不等于完整 Bitcoin fork-choice/consensus 已证明。
+- EconCSLib 有两个同名但独立的仓库：gametheoryinlean（基础设施优先）与 nikhgarg（逐篇论文形式化优先）。
+- MathFin 论文 v4 的 804 条 benchmark 与当前 README 的 906 条统计需要按固定 commit/release 对齐。
+- LeanInfoTheory README v0.2.0 的 811 declarations 与部分旧网页 v0.1.0 的 601 declarations 不一致，应以固定 release 为准。
+- 本轮未发现可确认的完整 Lean Raft/Paxos 证明，也未发现直接形式化 A 股 Level-2 因子回测的成熟 Lean 项目。
+
+**证据边界：** 外部项目本轮主要完成论文/README/toolchain/配置审查；没有把 README 声明升级为独立 build。PIT 最小 Lean package 的 GitHub Actions Run #24 已 PASS，但只证明 eligibility filter safety。
