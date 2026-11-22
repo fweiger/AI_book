@@ -20,3 +20,5 @@
 - [2026-11-22：MathFin 数学金融库与量化形式化方法审查](2026-11-22-mathfin-finance-audit.md)
 
 - [2026-11-22：PIT / No-Lookahead 最小 Lean 规格原型](2026-11-22-pit-no-lookahead-prototype.md)
+
+- [2026-11-22：跨学科研究方向、论文与 Lean/相邻开源项目证据地图](2026-11-22-cross-domain-evidence-map.md)
