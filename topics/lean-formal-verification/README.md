@@ -66,3 +66,15 @@ MathFin 提供了可复用的数学金融证明样例，但它不替代行情数
 ## PIT/no-lookahead 最小原型
 
 已建立独立 Lean 4.35.0 示例：[PITNoLookahead.lean](examples/pit-no-lookahead/PITNoLookahead.lean)。它区分 eventTime 与 availableAt，证明过滤后的每条记录都不晚于 decisionTime。该示例的 Lean 4.35.0 `lake build` 已由 GitHub Actions Run #19 验证通过；两个 theorem 的 `#print axioms` 均为 `[propext]`。它仍没有实现 latest-revision as-of join。
+
+## 跨学科论文与开源项目地图（2026-11-22）
+
+新增 [field-evidence-matrix.md](field-evidence-matrix.md)：按 10 个领域逐项列出具体研究方向、原始论文/形式化论文、Lean 项目、相邻证明助手/验证工具、项目版本线索和研究空白。首轮已覆盖数学及 9 个非数学领域。
+
+本轮新确认的高价值方向包括：Veil/IFP 的 Lean BFT safety、AI4SLT 的统计学习理论、LeanInfoTheory/率失真形式化、Doll–Shames 的 Lean 控制理论，以及 StatWhy/StarV 等非 Lean 相邻验证工具。
+
+**证据限制：** 外部项目大多为论文/README/toolchain/配置审查，尚未独立 build；项目 README 中的 theorem 数量和 no-sorry 声明不自动升级为本专题 E3。EconCSLib 存在两个同名独立项目；MathFin 和 LeanInfoTheory 的论文/官网/当前 README 有版本统计差异，详见矩阵。
+
+## PIT/no-lookahead 最新构建结果（2026-11-22）
+
+PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已通过 [Lean Actions Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832)：Lean 4.35.0 lake build success，两个 theorem 均编译，print axioms 均为 [propext]。知识库完整性 [Run #1255](https://github.com/fweiger/AI_book/actions/runs/45031763864) 同样 success。该 proof 仍只覆盖 eligibility filter safety，不是完整 as-of join 或真实数据源验证。
