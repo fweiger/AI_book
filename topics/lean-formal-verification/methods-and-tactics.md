@@ -177,3 +177,55 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **失败边界**：只升级 Lean 或 Hax CLI，不同步迁移 proof library、Aeneas/Charon 和 manifest，会形成不可复现混合环境。
 - **来源**：[Hax PR #2142](https://github.com/pereq-dev/hax/pull/2142) · [Hax CHANGELOG](https://github.com/pereq-dev/hax/blob/main/CHANGELOG.md)。
 - **状态**：E1；迁移和构建未执行。
+
+### M-08｜用形式化保真度等级约束研究结论
+
+- **问题**：一个 Lean 文件可以编译，但它可能只是结构投影、假设已包含结论，或只证明了命名定理的一个缩减版本。
+- **方法**：每项文献结果登记 statement、hypotheses、formalization_scope、proof status；区分 `full`、`library_wrapper`、`reduced_core`、`placeholder`；交付数量只统计 full + library_wrapper。
+- **审计重点**：假设是否可满足；结论是否真的从假设推导；是否把 textbook conclusion 放进结构字段；是否存在未披露的 axiom/sorry。
+- **来源**：[MathFin glossary](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/docs/glossary.md) · [coverage policy](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/docs/coverage.md)。
+- **状态**：E1 / 项目方法和 benchmark schema 已读。
+
+### M-09｜生成式公理审计与 CI soundness floor
+
+- **问题**：单独人工查看少量 theorem 的 `#print axioms`，无法覆盖大型库中 benchmark 实际依赖的全部常量。
+- **方法**：建立 curated `AxiomAudit.lean`；从 benchmark 引用索引生成 `AxiomAuditGen.lean`；对每个被引用常量固定 `#print axioms` 的输出；通过 `#guard_msgs` 把变化变成 build failure；再用 Python gate 检查生成文件 freshness、sorry 和 ledger 状态。
+- **本案例**：MathFin 生成审计覆盖 1,115 个 MathFin 常量与 29 个上游常量；默认 CI 包含 Python gates + `lake build` + declaration index/ratchet。
+- **失败边界**：这是 benchmark 引用闭包，不等于所有未被 benchmark 使用的声明都已审计；本专题没有运行 MathFin build。
+- **来源**：[AxiomAuditGen.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/AxiomAuditGen.lean) · [build.yml](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/.github/workflows/build.yml)。
+- **状态**：E1 / 构建治理源码已读；build NOT_RUN。
+
+### M-10｜用点态证书证明风险度量的最优性
+
+- **领域/问题**：证明 Gaussian CVaR 是 Rockafellar–Uryasev 目标函数的最小值。
+- **步骤**：先确定尾部事件 (Z>z)；构造 ((L-c)^+ ge (L-c)mathbf 1_{Z>z})；对两边积分；利用 Gaussian tail mass 和 truncated first moment 化简；在 (c=VaR_alpha) 处证明取等。
+- **技巧**：将最优性证明转化为一个可积分的 pointwise certificate，避免直接求导或引入额外凸分析 machinery。
+- **失败边界**：该案例在 Gaussian loss、(sigma>0)、(Phi(z)=alpha<1) 条件下成立；不能直接推到任意经验分布或厚尾收益。
+- **来源**：[RockafellarUryasev.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean)。
+- **状态**：E1 / theorem 与 proof 源码已读。
+
+### M-11｜用特征函数与 Lévy 连续性定理证明离散模型收敛
+
+- **领域/问题**：证明 CRR n-step risk-neutral log-return 收敛到 Black-Scholes Gaussian law。
+- **步骤**：精确计算单步特征函数；将其写成 cos/sin；证明 (n(arphi_n-1)) 收敛到 Gaussian 指数；应用复数幂极限；再用 Lévy continuity theorem 从特征函数收敛推出弱收敛。
+- **价格层**：先对有界 Put payoff 使用弱收敛，再通过 Put-Call Parity 推出 Call 价格极限，避免直接处理无界 Call payoff 的 uniform-integrability/Vitali 步骤。
+- **失败边界**：CRR 每步风险中性概率必须满足概率约束；Call 收敛还依赖 no-arbitrage 假设。必须先证明这些假设可满足。
+- **来源**：[CRRCharFun.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean) · [CRR benchmark](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/binomial.json)。
+- **状态**：E1 / full benchmark entry 与源码已读。
+
+### M-12｜从 Lagrangian FOC 与可行扰动推出全局最优性
+
+- **领域/问题**：证明满足预算、目标收益约束及一阶条件的组合具有最小方差。
+- **步骤**：定义 admissible perturbation (delta w)，要求它与预算约束和目标收益约束的法向量正交；把 (Sigma w=lambda_1mathbf 1+lambda_2mu) 代入方向导数；利用两个正交条件消去乘子项；再结合 (Sigma) 半正定和 KKT sufficiency 得到全局最优性。
+- **失败边界**：当前证明 FOC 是充分条件；没有证明所有最优解必然满足 FOC，也没有单独推出所有约束下的闭式有效前沿。
+- **来源**：[MarkowitzLagrangian.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Choice/Portfolio/MarkowitzLagrangian.lean) · [portfolio benchmark](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/portfolio_and_performance.json)。
+- **状态**：E1 / full benchmark entry 与源码已读。
+
+### M-13｜证明前提可满足，避免 vacuous theorem
+
+- **问题**：Lean theorem 即使有 proof term，也可能因为假设不可能成立而空洞为真。
+- **方法**：对关键 theorem 的假设单独构造 witness；或证明在一组明确参数条件下假设可满足；对边界值（如 n=0）单独分析。
+- **本案例**：CRR Call 收敛定理曾对所有 n 包括 n=0 要求 no-arbitrage；n=0 时 u=d=1，条件不可能成立。项目修正为 n≥1，并证明 (|r|sqrt T<sigma) 足以保证 no-arbitrage。
+- **失败边界**：一个 witness 只证明假设非空，不证明模型假设符合真实市场；需要把数学可满足性与数据/经济真实性分开。
+- **来源**：[binomial benchmark correction](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/binomial.json)。
+- **状态**：E1 / 历史修正记录与 theorem 条件已读。
