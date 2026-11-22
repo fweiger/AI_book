@@ -209,6 +209,48 @@
       "type": "method",
       "title": "Hax 版本兼容与生成 Lean package 迁移",
       "evidence_level": "E1"
+    },
+    {
+      "id": "L35",
+      "type": "domain_method",
+      "title": "LeanInfoTheory：有限离散熵、信道与 Markov 信息论",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L36",
+      "type": "case_study",
+      "title": "Rate-distortion：有限字母表 direct/converse formalization",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L37",
+      "type": "domain_method",
+      "title": "AI4SLT：经验过程与统计学习理论",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L38",
+      "type": "framework",
+      "title": "TorchLean：统一神经网络执行、训练与验证语义",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L39",
+      "type": "domain_method",
+      "title": "DynamicalSystems：Lyapunov 与 small-gain 控制理论",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L40",
+      "type": "case_study",
+      "title": "HepLean：高能物理结果数字化",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L41",
+      "type": "framework",
+      "title": "Veil 2.0：状态转换系统多模态验证",
+      "evidence_level": "E2"
     }
   ],
   "edges": [
@@ -461,6 +503,51 @@
       "source": "L34",
       "target": "L22",
       "relation": "迁移时保留同源工具对照"
+    },
+    {
+      "source": "L14",
+      "target": "L35",
+      "relation": "有限离散信息论基础库"
+    },
+    {
+      "source": "L35",
+      "target": "L36",
+      "relation": "为率失真与编码理论提供信息量基础"
+    },
+    {
+      "source": "L14",
+      "target": "L36",
+      "relation": "率失真 direct/converse 形式化"
+    },
+    {
+      "source": "L12",
+      "target": "L37",
+      "relation": "统计学习理论的形式化"
+    },
+    {
+      "source": "L12",
+      "target": "L38",
+      "relation": "神经网络执行与验证框架"
+    },
+    {
+      "source": "L13",
+      "target": "L40",
+      "relation": "高能物理结果数字化"
+    },
+    {
+      "source": "L13",
+      "target": "L39",
+      "relation": "动力系统与控制稳定性形式化"
+    },
+    {
+      "source": "L09",
+      "target": "L41",
+      "relation": "状态转换系统与分布式协议验证"
+    },
+    {
+      "source": "L41",
+      "target": "L16",
+      "relation": "区分模型检查、自动证明和交互式证明证据"
     }
   ],
   "reading_paths": [
@@ -581,6 +668,45 @@
         "L33",
         "L16"
       ]
+    },
+    {
+      "id": "Q12",
+      "name": "信息论基础到率失真编码",
+      "nodes": [
+        "L14",
+        "L35",
+        "L36",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q13",
+      "name": "统计学习与神经网络形式化",
+      "nodes": [
+        "L12",
+        "L37",
+        "L38",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q14",
+      "name": "物理与控制理论",
+      "nodes": [
+        "L13",
+        "L40",
+        "L39",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q15",
+      "name": "BFT与状态转换系统验证",
+      "nodes": [
+        "L09",
+        "L41",
+        "L16"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -600,6 +726,7 @@
     "MathFin 的金融数学 theorem 不等同于真实市场数据、因子有效性或策略盈利证明",
     "CRR 等 theorem 必须检查假设非空性，避免 vacuous theorem",
     "PIT/no-lookahead formalization 仍是候选研究设计，尚未在 AI_Trader 或生产代码验证",
-    "当前 PIT prototype 只证明 eligibility filter safety，不等同于 latest-revision as-of join 或真实数据源时间戳验证"
+    "当前 PIT prototype 只证明 eligibility filter safety，不等同于 latest-revision as-of join 或真实数据源时间戳验证",
+    "论文、仓库 README、软件 release、CI 和独立 build 是不同证据层级；项目统计必须记录日期、版本和口径"
   ]
 }
