@@ -2,7 +2,7 @@
 
 > 规范研究任务：[AI_book Issue #74](https://github.com/fweiger/AI_book/issues/74)  
 > Task ID：AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION  
-> 建立：2026-11-22；专题版本：0.6.0（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有金融与密码学源码证据。静态源码审计不代表项目已独立构建或完整证明。
+> 建立：2026-11-22；专题版本：0.6.1（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有金融与密码学源码证据。静态源码审计不代表项目已独立构建或完整证明。
 
 ## 最初的问题
 
