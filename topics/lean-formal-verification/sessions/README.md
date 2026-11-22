@@ -6,3 +6,6 @@
 
 
 - [2026-11-22：首批 10 个项目版本、许可证与构建入口审查](2026-11-22-project-admission-audit.md)
+
+
+- [2026-11-22：8 个 Lean 4 项目 Lake manifest 与依赖 revision 审查](2026-11-22-lake-manifest-audit.md)
