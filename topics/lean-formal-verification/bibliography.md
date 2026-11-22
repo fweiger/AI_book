@@ -133,3 +133,10 @@
 90. [Veil 2.0](https://github.com/verse-lab/veil) 与 [IFP proof case](https://github.com/sarvalabs/ifp) — Veil 是 Lean transition-system verification framework；IFP README 明确 Phase 1 受限于两固定参与者、单 epoch。
 91. [rate_distortion_lean4 MainResults.lean](https://github.com/fubinyan/rate_distortion_lean4/blob/main/MainResults.lean) — 主定理的 print axioms 和 Lean.collectAxioms allowlist 审计入口。
 92. [MathFin current README](https://github.com/formal-applied-math/formal-mathfin/blob/main/README.md)、[CITATION.cff](https://github.com/formal-applied-math/formal-mathfin/blob/main/CITATION.cff)、[coverage.md](https://github.com/formal-applied-math/formal-mathfin/blob/main/docs/coverage.md) — 当前 corpus、软件 release、历史 coverage audit 的不同快照，禁止混为同一统计。
+
+
+93. Yan, Dong, Shi, Wang & Shum, [Aligning Information Theory and Formal Verification: A Lean Formalization of Rate-Distortion Theory](https://arxiv.org/abs/2610.22404), arXiv:2610.22404, 2026 — rate-distortion finite-alphabet Lean formalization；companion [rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4)。
+94. Zhang, Lee & Liu, [AI4SLT: Empirical Processes in Lean 4 for Formal Statistical Learning Theory](https://proceedings.mlr.press/v306/zhang26cd.html), ICML 2026 / PMLR 306:156234–156262 — official proceedings page directly links [lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory)。
+95. Pîrlea, Gladshtein, Kinsbruner, Zhao & Sergey, [Veil: A Framework for Automated and Interactive Verification of Transition Systems](https://doi.org/10.1007/978-3-031-98682-6_2), CAV 2025, LNCS 15933 — framework paper and [Veil repository](https://github.com/verse-lab/veil)。
+96. Losa & Dodds, [On the Formal Verification of the Stellar Consensus Protocol](https://doi.org/10.4230/OASIcs.FMBC.2020.9), FMBC 2020 — original Ivy + Isabelle/HOL safety/liveness methodology; not the same as the narrower Veil Lean SCP example.
+97. [stellar/scp-proofs](https://github.com/stellar/scp-proofs) — original SCP proof/model repository, Ivy + Isabelle/HOL; README distinguishes current Ivy 1.7 version from old commit 803b345 containing full liveness proof.
