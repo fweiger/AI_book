@@ -52,13 +52,13 @@
 |---|---|---|---|---|---|
 | M0 技术与资源准入 | Lean 技术组件、来源、论文和项目资源索引 | AC-01/03/05 | 官方文档、论文、仓库元数据 | in_progress | 首批资源已登记；具体仓库审计改为应用方向选定后的按需动作 |
 | M1 数学与形式化能力基础 | 数学分支案例、Mathlib 复用和可迁移证明方法 | AC-02/04 | 原始论文、数学定义、Lean 形式化对象 | todo | 先由应用框架识别哪些数学能力是跨行业基础，不先做大批项目审计 |
-| M2 行业应用框架与机会地图 | 行业→业务领域→问题→形式化对象→Lean能力的全景框架 | AC-03/07 | 行业分类、业务场景矩阵、Lean 官方案例、形式化方法行业研究 | in_progress | 当前唯一主线；先建立全局框架，再逐方向补论文和项目；未选定方向不做项目审计 |
+| M2 行业应用框架与机会地图 | 行业→业务领域→问题→形式化对象→Lean能力的全景框架 | AC-03/07 | 主框架、行业机会地图、机会卡模板、行业研究来源 | in_progress | v0.1 已建立；下一步从一级行业扩展到二级业务场景和可评估机会卡；未选定方向不做项目审计 |
 | M3 应用方法与技术映射 | 将业务问题映射到 Lean 形式化方法、相邻工具与集成路线 | AC-04/06 | 方法卡、架构图、最小可复现工作流 | in_progress | 已有 15 个方法 ID 和 PIT 最小证明；后续按框架中的实际需求组织 |
 | M4 代表方向验证与独立 QA | 对选定方向做论文/项目深审、原型和独立复核 | AC-05/08 | 方向选定记录、论文—项目映射、固定版本审计、独立 QA | todo | 具体方向选定且需要复用项目时，才启动对应仓库审计 |
 
 ## 4. 当前检查点
 
-- **最近完成的一轮：** 2026-11-23 Batch A 三个代表项目的来源/源码/版本/构建证据审查；当前按用户明确的研究顺序，转为先搭建行业应用框架。
+- **最近完成的一轮：** 2026-11-23 Lean 跨行业应用框架 v0.1 搭建；Batch A 三个代表项目审计仅作为既有证据资产保留。
 - **本轮实际完成：**
   1. 对 rust-lean 固定 commit 的 Hax/Aeneas 两条 pipeline 做同源比较；两边使用相同 blob SHA 的 compute_log_arity_for_round Rust 源码。
   2. 审计 Hax issues/PR，确认 cast/specset/ADC 等后续上游修复；识别 Hax-FRI 固定 Hax commit 早于关键修复。
@@ -75,16 +75,16 @@
   - 历史 GitHub Actions run #1201 只验证旧 commit 的知识库结构/链接/YAML，不是 Lean build。
 - **尚未验证/失败/未知：**
   - 当前本地执行环境仍没有 Lean/Lake/Elan，但 PIT 最小项目已由 GitHub-hosted Actions 实际构建；Hax/Aeneas/MathFin 等外部项目仍未在本轮独立 build。
-  - 当前 PR head `d987f59d21a273c3f7f5c96d992a7411e40629c3` 的 Lean Run #45 与知识库完整性 Run #1276 均 success；PR #75 仍为 Draft、未合并。
+  - 当前 PR head `f7a2c55dca048d8c2e4c513528ab05096a27aa8d` 的 Lean PIT build 与 knowledge integrity 两项检查均 success；PR #75 仍为 Draft、未合并。
   - 未独立复现 MathFin 完整 corpus、Hax 官方 ADC example、Hax-FRI 或 Aeneas FRI build。
   - 本轮未运行外部 MathFin、Hax-FRI、Aeneas、AI4SLT、Rate-Distortion、Veil 等项目的独立 build；各自仍按 NOT_RUN 记录。
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
   - 非主要研究者独立 QA 尚未执行。
-- **对原始目标的实际贡献：** 从项目名录推进到固定源码/依赖/证明状态审计；形成密码学、软件验证和金融数学案例；15 张方法卡；建立第一份面向 PIT/no-lookahead 的可执行 Lean 规格原型。
-- **当前阶段判断：** M2 行业应用框架为唯一主线；M0 项目/论文资源索引和既有 22 项矩阵作为支撑材料。先完成行业、业务领域、问题类型、形式化对象、Lean 能力和价值路径的分层框架；只有具体方向被选定并需要实现/复用时，才对该方向论文和 GitHub 项目做深审。M1 数学案例、M3 方法映射和 M4 独立 QA 后续按框架推进。
-- **本轮 AC 与目标对齐证据：** AC-03 现有首轮矩阵覆盖数学及 9 个非数学领域、22 个方向级映射项，但缺少以行业和业务机会为起点的统一框架，仍 PARTIAL；AC-05 已完成 Batch A 三项目审计，但距离至少 10 个代表项目仍 PARTIAL，且不作为当前主线；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（尚未接入或验证 AI_Trader #488）。
+- **对原始目标的实际贡献：** 已建立以行业需求为入口的研究架构：12 个一级行业、12 类跨行业问题、Lean 能力与适配性判断、证据成熟度、行业机会地图和统一机会卡；论文与项目明确降为下游证据/实现资源。
+- **当前阶段判断：** M2 行业应用框架 v0.1 已建立，仍需从一级行业下钻到二级业务领域和具体机会。M0 的项目/论文资源索引、既有 22 项矩阵和 Batch A 审计作为支撑材料。后续按机会优先级补行业需求证据；只有具体方向被选定并需要实现/复用时，才对对应论文和 GitHub 项目做深审。
+- **本轮 AC 与目标对齐证据：** AC-03 新增行业应用框架 v0.1、12 个一级行业、12 类横向问题和机会卡模板，仍 PARTIAL（尚未完成各行业二级业务场景与证据覆盖）；AC-05 Batch A 三项目审计完成但总量仍 PARTIAL，按具体方向需要触发；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（尚未接入或验证 AI_Trader #488）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；Batch A 完成事件 #7083593912 已回读唯一匹配；§7 与 §9 均指向先建立行业应用框架；批准 Goal/Scope/AC v1.0 未变。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** STATE_CONFLICT pending 本轮框架交付事件同步；框架文件已提交并通过两项 CI，等待 Issue #74 回执写入/回读；批准 Goal/Scope/AC v1.0 未变。
 
 ## 5. 阻断与未受影响工作
 
@@ -105,14 +105,15 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 建立 TOPIC-018 的 Lean 跨行业应用框架 v1：以行业（Industry）为纵向入口，向下拆分业务领域/价值链环节、具体业务场景、待解决问题、可形式化对象、目标性质、Lean 可提供的能力与价值；随后建立跨行业问题类型和能力映射。当前不继续横向审计 Mathlib、MathFin、ArkLib 或其他仓库。
-- **对应未完成 AC 与当前阶段：** AC-03（跨学科证据地图，当前缺行业/业务场景层次的统一框架）和 AC-07（应用边界）；M2。后续为 AC-02/04 提供组织基础。
-- **为什么它推进原始目标：** 原始 Goal 是理解 Lean 在数学及其他领域的真实应用、方法和边界。若先按项目名录展开，会把“已有 Lean 项目”误当作行业机会本身，遗漏尚无 Lean 项目但具有形式化需求的行业。行业问题框架先确定机会，再查论文与项目，能保持研究以应用为中心。
-- **预期实质交付物与完成条件/验证方法：** ① 主框架文档，定义行业→业务领域→场景→问题→形式化对象→Lean 能力→价值/边界的层级；② 首版行业机会地图，覆盖主要产业部门并标注 Lean 直接证据、一般形式化方法证据和待验证假设；③ 统一应用机会卡模板；④ README/知识图谱导航调整。检查行业分类是否可覆盖、层级是否能落到具体问题、证据等级是否区分 Lean 与一般形式化方法。
-- **需要先读取或检查的证据：** Lean 官方 Use Cases；《Formal Methods in Industry》（2024/2025）；NASA 2025 Formal Methods 报告；DARPA Formal Methods 案例；已有 field-map 与 field-evidence-matrix 仅作为资源证据层，不作为主框架。
-- **若受阻，下一项不受影响的工作：** 先完善跨行业问题类型（规格/规则、状态机、安全性、程序精化、数值计算、概率统计、优化控制、数据时序、隐私安全、科学模型）与 Lean 能力映射；不因某一行业缺少 Lean 项目而停止建图。
-- **为什么本动作优于其他候选动作：** 用户明确要求先建立整体框架；项目审计只有在某个应用方向被选中、且需要验证项目能否复用或构建原型时才有价值。先搭行业框架的覆盖面和决策价值高于继续增加项目审计卡。
-- **局部调查边界/止损条件：** 本轮只做框架、行业分类和机会卡结构；不进行大批 GitHub 项目审计、不执行外部项目构建、不修改 AI_Trader #488、不改生产数据或交易策略。论文与项目先记录候选映射，不把候选当成已验证应用。
+- **唯一优先动作：** 将 v0.1 行业机会地图从一级行业下钻为二级业务领域与候选场景：对 12 个行业逐一补充关键价值链环节、主要参与者、具体业务流程、常见失败模式和可形式化对象，形成第一批应用机会卡草案。仍不启动 GitHub 项目审计。
+- **对应未完成 AC 与当前阶段：** AC-03（跨学科证据地图仍需从行业名称下钻到可判断的业务场景）与 AC-07（Lean 与其他验证方法的边界）；M2。
+- **为什么它推进原始目标：** v0.1 已建立分类和方法骨架，但一级行业名还不足以决定 Lean 的落地位置。需要把每个行业拆到业务环节和可形式化问题，才能判断哪些方向值得查论文、找项目或做原型。
+- **预期实质交付物与完成条件/验证方法：** ① 12 个行业的二级领域/场景覆盖矩阵；② 每个场景至少包含业务主体、痛点、形式化对象、目标性质、Lean 角色、适配边界和证据标签；③ 首批应用机会卡草案；④ 记录分类重叠、缺失行业和暂时无法形式化的场景。通过交叉检查行业覆盖、场景粒度和证据分级验收。
+- **需要先读取或检查的证据：** 行业协会/监管机构标准、产业技术报告、正式综述和企业工程案例；Lean 官方案例仅用于说明 Lean 能力，不用来替代行业需求证据。
+- **若受阻，下一项不受影响的工作：** 先完善跨行业问题类型与 Lean 能力映射，并记录“当前不适合 Lean”的场景；不因某行业暂时找不到 Lean 项目而停止。
+- **为什么本动作优于其他候选动作：** 当前缺口在业务场景层，不在项目数量。二级场景和机会卡可以确定真正值得检索的论文和项目，避免继续从仓库名录反推应用。
+- **局部调查边界/止损条件：** 本轮只完善行业/业务场景框架与机会卡，不进行大批论文综述、GitHub 项目审计或外部 build；不修改 AI_Trader #488，不接入生产或交易系统。具体论文和项目映射等机会被选定后再做。
+
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -128,6 +129,7 @@
 
 | 时间/批次 | 实际工作与结果 | AC 贡献 | 证据链接 | 偏差/一致性、阻断或路线调整 | 本轮建议下一步 |
 |---|---|---|---|---|---|
+| 2026-11-23 / INDUSTRY-APPLICATION-FRAMEWORK-V1 | 新建主框架（行业→业务领域→场景→问题→形式化对象→Lean 能力→论文/项目→按需审计）；建立 12 个一级行业、12 类跨行业问题、Lean 适配性/工具选择/证据成熟度；新建行业机会地图与机会卡模板；更新 README、field-map 支撑层定位和 knowledge-map。未开展新的项目审计。 | AC-03 PARTIAL（框架 v0.1 已交付，二级场景仍待扩展）；AC-07 PARTIAL；不提升 AC-05。 | [主框架](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-application-framework.md) · [行业机会地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-opportunity-map.md) · [机会卡模板](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/application-opportunity-card-template.md) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | D0；按用户明确要求以行业需求为研究入口；Lean 专属证据与一般形式化方法证据分开。PR head f7a2c55 的 validate-knowledge 与 build 均 success。 | 将 12 个一级行业下钻到二级业务领域和具体场景，形成第一批机会卡草案。 |
 | 2026-11-23 / BATCH-A-COMPLETE-AND-APPLICATION-FRAMEWORK-RESET | 完成 Batch A 三个项目审计卡：Rate-Distortion 当前源码/旧 build 时点不匹配，结论 PARTIAL；AI4SLT 有固定 release build 证据，结论 PASS/E2；Veil 固定 main SHA 的 Linux/macOS CI 与 TrustAudit 通过，结论 PASS/E2；SCP 示例仅覆盖 safety，不等于原始完整 safety+liveness 证明。用户明确研究顺序：先搭建行业/领域应用框架，再从框架映射论文和项目；项目审计仅在具体方向需要时启动。 | AC-03/05 PARTIAL；完成一批代表项目样本，但主线改为推进 AC-03 的行业应用框架。 | [Batch A 审计记录](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-project-audit-batch-a.md) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | D0；用户澄清的是执行顺序，不修改批准 Goal/Scope/AC。当前 PR head 03bd4bc 的 knowledge integrity 与 Lean PIT 两项检查均 success。 | 建立行业→业务领域→场景→问题→形式化对象→Lean 能力→价值/边界的主框架。 |
 | 2026-11-22 / INIT | 查重专题编号和既有 Issue；创建 AI_book #74；建立专题文件、唯一 Tracker、索引导航和 Draft PR #75。未运行 Lean 构建、未逐项目核验所有许可证和源码。 | AC-01/03/05 PARTIAL；AC-02/04/06/08 NOT_RUN；AC-07 边界已定义但未验收。 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；Issue 已回链 Tracker 与 PR 并 GET 回读。 | M0 版本化项目准入矩阵。 |
 | 2026-11-22 / CI-STRUCTURE | 对 PR head commit e57491d00728fdfba2f5a26cf7df00fd41d27f63 运行仓库完整性 workflow；validate-knowledge 与 Discussion YAML 检查均 PASS。未运行 Lean 构建。 | 结构/链接/YAML 校验 PASS；AC-01/03/05 仍仅 PARTIAL，AC-02/04/06/08 NOT_RUN。 | [Workflow run #1201](https://github.com/fweiger/AI_book/actions/runs/45007709196) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；CI 仅为知识库结构校验，不提升学术证据等级。 | M0 版本化项目准入矩阵。 |
@@ -151,9 +153,9 @@
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致；未修改 Goal/Scope/Non-goals/AC | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | M2 行业应用框架为当前主线；Batch A 三项目审计记录已存在；PR head 5a8863 是 Tracker 状态同步提交，当前尚无该 SHA 的新 check run | [Batch A](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-project-audit-batch-a.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PARTIAL / NOT_RUN |
+| §3/§4当前阶段与实际证据 | 行业应用框架 v0.1 已提交；PR head f7a2c55 的 validate-knowledge Run #1290 与 Lean build Run #53 均 success；项目审计未新增 | [主框架](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-application-framework.md) / [行业机会地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-opportunity-map.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 均已调整为先建立行业应用框架；项目审计改为具体方向选定后的按需工作 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | Batch A 完成与研究顺序纠偏事件已写入 Issue #74，GET 回读确认唯一匹配 1 条；下一事件已由同一 Writer 声明 | [Issue comment #7083593912](https://github.com/fweiger/AI_book/issues/74#issuecomment-7083593912) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED / CLAIMED |
+| 最新 Issue 进度事件与本文件版本 | Batch A 完成事件已同步；本轮框架事件尚待发布，当前 Writer 声明有效 | [Issue comment #7083593912](https://github.com/fweiger/AI_book/issues/74#issuecomment-7083593912) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING / CLAIMED |
 
