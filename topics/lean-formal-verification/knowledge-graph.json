@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.2.0",
+  "topic_version": "0.3.0",
   "topic_id": "TOPIC-018",
   "title": "Lean 形式化证明与跨学科可验证系统",
   "source_level": "官方文档、公开项目页面和论文初筛；项目构建与独立复现尚未完成",
@@ -113,6 +113,18 @@
       "type": "history",
       "title": "Lean 3 legacy 与 Lean 4 生态边界",
       "evidence_level": "E1"
+    },
+    {
+      "id": "L19",
+      "type": "method",
+      "title": "Rust → Hax/Aeneas → Lean → protocol specification",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L20",
+      "type": "method",
+      "title": "Hax annotations 与 BitVec bit-blasting",
+      "evidence_level": "E1"
     }
   ],
   "edges": [
@@ -220,6 +232,26 @@
       "source": "L17",
       "target": "L11",
       "relation": "约束金融数学项目复现"
+    },
+    {
+      "source": "L07",
+      "target": "L19",
+      "relation": "源程序抽取"
+    },
+    {
+      "source": "L19",
+      "target": "L08",
+      "relation": "连接密码学协议规格"
+    },
+    {
+      "source": "L20",
+      "target": "L08",
+      "relation": "验证定宽算术原语"
+    },
+    {
+      "source": "L19",
+      "target": "L16",
+      "relation": "区分抽取编译与端到端正确性"
     }
   ],
   "reading_paths": [
@@ -274,6 +306,17 @@
         "L18",
         "L03"
       ]
+    },
+    {
+      "id": "Q06",
+      "name": "Rust 到 Lean 的密码学验证",
+      "nodes": [
+        "L07",
+        "L19",
+        "L20",
+        "L08",
+        "L16"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -284,6 +327,7 @@
     "程序测试不能冒充实现精化证明",
     "金融数学定理不能证明策略盈利或原始数据时点真实",
     "E0/E1 项目发现不能冒充实际构建或独立复现",
-    "Lean 3 与 Lean 4 项目不可混为同一工具链；按项目固定 toolchain 和依赖版本"
+    "Lean 3 与 Lean 4 项目不可混为同一工具链；按项目固定 toolchain 和依赖版本",
+    "抽取代码可编译、局部算术 theorem 通过和协议级 correctness theorem 完成是不同状态"
   ]
 }
