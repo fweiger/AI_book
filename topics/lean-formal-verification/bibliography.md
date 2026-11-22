@@ -47,3 +47,17 @@
 - GitHub 项目存在、README 介绍、论文摘要、源码 theorem、CI 构建、独立复现是不同证据级别。
 - 对预印本注明 preprint；对动态网站数字注明访问日期。
 - 不能从项目名称或摘要推断其完整功能、成熟度、许可或实际可构建性。
+
+
+## Rust→Lean / Hax / Aeneas 新增来源
+
+21. [Hax PR #1925](https://github.com/cryspen/hax/pull/1925) — 为 \`cast_op\` 添加显式类型标注，关闭整数转换与 shift 的类型推断问题。
+22. [Hax PR #1927](https://github.com/cryspen/hax/pull/1927) — 保留 Rust crate/module 小写命名。
+23. [Hax PR #1933](https://github.com/cryspen/hax/pull/1933) — \`specset int/bv\` 与 \`hax_mvcgen\`，分离数学整数规格与位向量规格。
+24. [Hax PR #1938](https://github.com/cryspen/hax/pull/1938) — Lean backend 默认 proof 和 proof method attribute。
+25. [Hax PR #1959](https://github.com/cryspen/hax/pull/1959) — 官方 ADC example，展示 \`hax_mvcgen\`、\`specset bv\` 与 \`bv_decide\`。
+26. [Hax PR #2064](https://github.com/cryspen/hax/pull/2064) — Lean backend 名称调整。
+27. [Hax PR #2142](https://github.com/cryspen/hax/pull/2142) — \`cargo hax into lean\` 默认生成完整 Lean package。
+28. [Hax-FRI Phase 2 Report](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/PHASE2_REPORT.md) — Hax extraction、FRI 局部定理与后端缺口报告。
+29. [Aeneas FRI fold-arity README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/README.md) — 同源 Rust 函数的 MIR/LLBC→Lean 证明案例。
+30. [Hax ADC historical PoC](https://github.com/runtimeverification/hax-annotations-adc-verification) — 32-bit limb addition with carry 的原始示例；README 中的 Issue 清单为历史记录，需结合上游 PR 状态阅读。
