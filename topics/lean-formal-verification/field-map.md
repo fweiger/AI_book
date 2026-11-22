@@ -101,3 +101,7 @@ MathFin 是数学金融的形式化库，而不是量化策略回测系统。它
 这些是可 formalize 的候选不变量，不是已经验证的 AI_Trader 生产代码。完整 as-of join 还需要证明排序、重复版本优先级、空值与修订策略；一个简单 filter safety theorem 只证明不泄漏，不证明选中了最新可用记录。
 
 **边界：** Lean 可以证明程序在给定输入/时间戳语义下满足不变量；不能证明数据源时间戳真实、市场制度假设完整、样本外收益显著或策略盈利。统计结论仍需 Python/真实数据/样本外检验。
+
+### PIT/no-lookahead 的第一份可执行规格原型
+
+已在 AI_book 专题分支建立独立 Lean 4.35.0 package，区分 eventTime 与 availableAt，并证明 eligibleRows 的所有输出均满足 availableAt ≤ decisionTime；一个“事件已发生但修订尚未发布”的例子被正确排除。当前仍是 filter safety，不是完整 as-of join；GitHub Actions build 结果待回读。它是 AI_Trader #488 可采用的形式化接口样例，不是对 #488 现有代码的验证。
