@@ -78,3 +78,35 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - 适用范围与不适用场景
 - 原始来源、源码 commit、证据等级
 - 可迁移领域及需要重新验证的部分
+
+
+## 8. 已有源码案例的方法卡
+
+### M-01｜Hax annotations + bit-blasting 验证定宽算术
+
+- **领域/问题**：密码学实现中的定宽整数运算，例如 32-bit limb addition with carry。
+- **输入/输出**：Rust 函数 adc_u32(a,b,carry) 输出 sum 与 carry_out。
+- **规格**：carry、carry_out 属于 {0,1}；在更宽的 u64 语义下验证 a+b+carry = sum+2^32×carry_out。
+- **步骤**：在 Rust 源码中写 pre/post 函数和 Hax annotations；通过 Hax 抽取到 Lean；用 hax_lib::lean::after 注入 theorem；对 bit-vector 运算尝试 hax_bv_decide bit-blasting。
+- **工程技巧**：把 adc_pre 与 adc_post 拆成独立函数，降低 Lean 中展开和推理复杂度。
+- **失败边界**：当前 README 记录了 cast、shift、tuple projection、monadic binds 和 BitVec fragment 支持问题；抽取/编译失败时不得报告 theorem PASS。
+- **来源**：[README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/README.md) · [Rust 源码](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/src/lib.rs)。
+- **状态**：E1；未独立运行 Hax/Lean。
+
+### M-02｜Rust extraction → Lean model → protocol specification
+
+- **领域/问题**：把真实密码学/零知识证明 Rust 组件与协议级数学规格关联。
+- **步骤**：选择小而纯的 Rust 函数 → Hax/Aeneas 抽取 Lean 表示 → 复用 ArkLib/CompPoly 规格 → 证明抽取实现满足规格。
+- **案例**：Plonky3 单轮 FRI folding；Hax-FRI README 报告基础 proof 文件可构建，但 FoldingCorrectness 仍待证明。
+- **工程技巧**：先建立稳定的 Lean import surface；只导入需要的 ArkLib 模块，避免 Hax 与 ArkLib 名称冲突；同时固定 Hax、ArkLib、Mathlib 的依赖 commit。
+- **失败边界**：抽取代码编译、基础引理通过和协议正确性证明是三个不同验收层次。
+- **来源**：[Hax-FRI README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/README.md)。
+- **状态**：E1；本轮未独立构建。
+
+### M-03｜项目版本 + manifest 双锁定
+
+- **领域/问题**：跨机器、跨 Agent 复现 Lean 项目。
+- **步骤**：固定项目 commit；读取 lean-toolchain；读取 lakefile；解析 lake-manifest 中的所有依赖 revision；保留 build log 和 CI。
+- **失败边界**：只记录 Lean 版本或 lakefile 声明，不足以重建完全相同的依赖树。
+- **来源**：本专题 M0 的 8 个 Lake manifest 审计快照。
+- **状态**：E1；构建复现待做。
