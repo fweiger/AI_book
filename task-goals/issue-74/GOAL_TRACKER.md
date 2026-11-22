@@ -138,9 +138,9 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** none
-- **当前 writer_owner：** none
-- **当前 write_state：** SYNCED
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|DIRECTION-MAP-CI-RECHECK-20261123
+- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
+- **当前 write_state：** CLAIMED
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|CROSS-DOMAIN-EVIDENCE-MAP-20261122
 - **旧 Writer 已停止/隔离证据：** 同一会话继续，未发现并发 Writer；本轮新 event claim 已在 Tracker 写入前检查
 - **若无法 fencing：** 不适用
@@ -148,7 +148,7 @@
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | M0/M1/M2/M3 进行中；10 个领域方向级矩阵已补充；PIT 4.35.0 build PASS；外部项目 clean build NOT_RUN | [方向矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/field-evidence-matrix.md) / Run #24 / current PR head 536d933 | PASS / PARTIAL |
+| §3/§4当前阶段与实际证据 | M0/M1/M2/M3 进行中；10 个领域方向级矩阵已补充；PIT Lean 4.35.0 Run #37 PASS；知识库完整性 Run #1268 PASS；外部项目 clean build NOT_RUN | [方向矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/field-evidence-matrix.md) / [Lean Run #37](https://github.com/fweiger/AI_book/actions/runs/45043057469) / [Integrity Run #1268](https://github.com/fweiger/AI_book/actions/runs/45043057448) / PR head c45e6d9 | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 由 hosted Actions 验收；其他项目构建仍待环境 | §5 / Run #24 | CONSISTENT |
 | §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向逐领域研究方向—论文—项目证据矩阵 | §7/§9 | PASS |
