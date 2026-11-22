@@ -58,13 +58,13 @@
 
 ## 4. 当前检查点
 
-- **最近完成的一轮：** 2026-11-22 M0/M2/M3 证据审计：Hax/Aeneas 同源 FRI 比较、Hax 上游修复追踪、MathFin 金融数学审计、PIT/no-lookahead 最小 Lean package。
+- **最近完成的一轮：** 2026-11-23 跨学科方向—论文—项目矩阵扩展与源码时点复核；此前完成 Hax/Aeneas、MathFin 与 PIT 最小 Lean package。
 - **本轮实际完成：**
   1. 对 rust-lean 固定 commit 的 Hax/Aeneas 两条 pipeline 做同源比较；两边使用相同 blob SHA 的 compute_log_arity_for_round Rust 源码。
   2. 审计 Hax issues/PR，确认 cast/specset/ADC 等后续上游修复；识别 Hax-FRI 固定 Hax commit 早于关键修复。
   3. 深审 MathFin，读取 coverage taxonomy、AxiomAuditGen、build workflow、CVaR、Markowitz、CRR 等；解析三个 benchmark JSON 共 156 项。
   4. 建立独立 Lean 4.35.0 PIT/no-lookahead package，加入 availableAt/decisionTime filter theorem、late-revision 示例和专用 GitHub Actions workflow。
-  5. 专题更新至 v0.6.1；方法库有 15 个唯一方法 ID；图谱 34 个节点、11 条阅读路径；Draft PR #75 保持未合并。
+  5. 专题已扩展至 v0.7.0 Draft；本轮新增 20 个方向级映射项、M-16 和 C018-023 至 C018-029；知识图谱新增信息论、率失真、AI4SLT、TorchLean、DynamicalSystems、HepLean、Veil 等节点和阅读路径；Draft PR #75 保持未合并。
 - **已经核验的结果：**
   - PIT/no-lookahead 最小 package 已在当前 PR head `2cbece7184815f8d17bf09130f66dd024630e51c` 由 GitHub Actions Run #24 完成 Lean 4.35.0 `lake build`；`eligibleRows_no_lookahead` 和 `late_available_revision_excluded` 均编译成功，`#print axioms` 均为 `[propext]`。知识库完整性 Run #1255 同一 head PASS。
   - Hax-FRI 的 FoldingCorrectness 有两个实质性边界定理源码证明；该文件仍有 4 个 sorry，BasicProofs 有 9 个 sorry。
@@ -81,8 +81,8 @@
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
   - 非主要研究者独立 QA 尚未执行。
 - **对原始目标的实际贡献：** 从项目名录推进到固定源码/依赖/证明状态审计；形成密码学、软件验证和金融数学案例；15 张方法卡；建立第一份面向 PIT/no-lookahead 的可执行 Lean 规格原型。
-- **当前阶段判断：** M0/M1/M2/M3 并行进行；M1 纯数学案例仍需补足；M2 需要从已有样本升级为逐领域的“方向—论文—项目”系统映射；M4 独立 QA 尚未完成。
-- **本轮 AC 与目标对齐证据：** AC-03/04/05 有实质推进；AC-06 对 PIT 最小工作流 PASS；AC-07 仍为 PARTIAL（边界定义和示例完成，但未接入或验证 AI_Trader #488）。
+- **当前阶段判断：** M0/M1/M2/M3 并行进行；逐领域“方向—论文—项目”首轮矩阵已形成，M1 纯数学案例和 M2 外部项目级审计仍需补足；M4 独立 QA 尚未完成。
+- **本轮 AC 与目标对齐证据：** AC-03 首轮覆盖数学及 9 个非数学领域，并新增 20 个方向级映射项，仍为 PARTIAL（尚非穷尽综述）；AC-04 新增 M-16；AC-05 对 7 个代表项目补充源码/toolchain 核对但外部 build NOT_RUN，仍 PARTIAL；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（未接入或验证 AI_Trader #488）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；全部动作仍围绕 Lean 数学/跨学科方法、源码审计与金融 PIT 形式化边界，没有修改 #488 或转入实证策略开发。
 - **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；规范 Issue #74 Goal/Scope/AC 未改变，Tracker 当前阶段、唯一下一步与已回读的 MathFin/PIT 事件相符；Lean Run #24 对应的证明提交与后续仅更新 Tracker 的提交关系已明确记录。
 
@@ -105,13 +105,13 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 回到 AC-03/AC-05 主线，建立逐领域的“研究方向 → 原始论文/学术资料 → Lean 形式化对象与项目 → 相邻开源实现 → 版本/证明/构建证据 → 研究空白”矩阵；覆盖数学及至少 6 个非数学领域，优先补齐分布式系统、信息论、控制、AI/ML、物理、经济学/金融与软件/密码学的具体方向。每一条记录都要区分 Lean 项目、其他证明助手项目和普通实现；没有 Lean 项目时明确记录证据缺口，不强行填充。
+- **唯一优先动作：** 对每个领域选择 1–2 个与代表论文直接对应的项目，完成固定 commit、LICENSE、toolchain、manifest、关键 theorem、sorry/axiom/opaque、CI 和 build evidence 项目卡；优先 Mathlib/BrownianMotion/MathFin、LeanInfoTheory/rate_distortion_lean4/AI4SLT、Veil/Loom/CertifyingDatalog、TorchLean/DynamicalSystems，再补 HepLean/Physlib、MathEconLib/EconCSLib、ArkLib/VCVio。
 - **对应未完成 AC 与当前阶段：** AC-03/AC-05（并带动 AC-02）；M1/M2。
 - **为什么它推进原始目标：** PIT 最小证明已获得真实 Kernel build 与 axiom 输出，局部工作达到当前验收点；原始 Goal 的主要剩余工作是跨学科覆盖。逐项建立论文和开源实现的可追溯关系，直接推进 AC-03/05，避免继续陷在单一 Hax/PIT 案例。
-- **预期实质交付物与完成条件/验证方法：** 更新 `field-map.md`、`bibliography.md`、`case-studies.md` 和 `knowledge-graph.json`；每个领域至少拆分具体方向，附原始论文 DOI/arXiv/官方出版页、对应 Lean repo 或相邻开源 repo、被形式化/实现的对象、项目状态与边界；为无 Lean 项目的领域明确标记 `NO_LEAN_PROJECT_FOUND_IN_THIS_PASS` 或 `ADJACENT_TOOL_ONLY`。
+- **预期实质交付物与完成条件/验证方法：** 每个代表项目形成固定版本项目卡，包含原始论文—companion repo 关系、commit、LICENSE、Lean toolchain、manifest、关键 theorem、证明缺口和 CI/build 记录；独立运行项目 build 或明确标记 NOT_RUN/BLOCKED。
 - **需要先读取或检查的证据：** 当前 PR #75 最新 head、已有 field-map/case-studies/bibliography、各领域原始论文与 GitHub 源码；对关键项目固定 commit、toolchain、LICENSE、CI 和 theorem status。
 - **若受阻，下一项不受影响的工作：** 继续已能读取的数学/物理/信息论/经济学原始论文和项目源码；不因个别仓库权限或论文付费而停止整个领域地图。
-- **为什么本动作优于其他候选动作：** 当前 PIT build 已 PASS；纯数学案例与跨领域证据地图仍未达到 AC，系统化映射比再做一个局部工程排障更直接推进核心目标。
+- **为什么本动作优于其他候选动作：** 首轮领域矩阵已建立，继续添加项目名称的边际价值低于对代表项目做源码/版本/定理审计；这会直接提高 AC-05 证据质量并暴露真正可复现的研究路线。
 - **局部调查边界/止损条件：** 本轮只做研究资源图谱，不把相关项目统统拉取/构建；每个领域先做有限、来源优先的证据映射，再按成熟度选少量代表项目深入审计；不修改 AI_Trader #488，不改生产数据/策略。
 
 ## 8. 每次“继续”前的恢复核对
@@ -134,6 +134,7 @@
 | 2026-11-22 / HAX-UPSTREAM | 核对 Hax issues/PR；确认 #1925/#1927/#1933/#2142 merged，识别 Hax-FRI 固定 commit 早于关键修复，Hax 0.5.0 已升至 Lean 4.35。未运行构建。 | AC-04 方法卡增补；AC-05 PARTIAL；AC-06 NOT_RUN。 | [Hax audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-hax-upstream-fix-and-version-drift.md) · [PR #1925](https://github.com/pereq-dev/hax/pull/1925) · [PR #1933](https://github.com/pereq-dev/hax/pull/1933) · [PR #2142](https://github.com/pereq-dev/hax/pull/2142) | D0 / CONSISTENT；上游修复与目标项目采用状态分开。 | 继续核验 MathFin 与 PIT 原型。 |
 | 2026-11-22 / PIT-BUILD-PASS | 对当前 PR head `2cbece7184815f8d17bf09130f66dd024630e51c` 重新读取 GitHub Actions Run #24 与 job log：Lean 4.35.0 `lake build` 成功；两个 theorem 均编译，`#print axioms` 均为 `[propext]`；知识库完整性 Run #1255 同一 head PASS。 | AC-06 最小 PIT workflow PASS；AC-03/05 转为本轮主线。 | [Lean Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832) · [Integrity Run #1255](https://github.com/fweiger/AI_book/actions/runs/45031763864) · [PIT source](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) | D0 / CONSISTENT after Issue sync；只证明 eligibility filter safety，不等于 latest-revision as-of join。 | 按用户要求完成逐领域“方向—论文—Lean/相邻开源项目”证据矩阵。 |
 | 2026-11-22 / MATHFIN-PIT | 深审 MathFin 的 CVaR/Markowitz/CRR、formalization fidelity 和 axiom audit；建立 Lean 4.35 PIT filter safety prototype 与专用 workflow；整理 M-01—M-15、claims 和图谱。 | AC-03/04/05 PARTIAL；AC-06 PARTIAL（workflow 配置已建，build NOT_RUN）；AC-07 PARTIAL。 | [MathFin session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-mathfin-finance-audit.md) · [PIT session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-pit-no-lookahead-prototype.md) · [PIT proof](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) | D0 / STATE_CONFLICT pending sync；MathFin corpus 只独立抽查 156 项，PIT build 未运行。 | 对 PIT Lean 4.35 package 执行 lake build。 |
+| 2026-11-23 / CROSS-DOMAIN-MAP | 将 10 个领域细化为 20 个方向级“问题—论文—Lean项目—相邻工具—研究空白”映射；直接读取 MathFin、LeanInfoTheory、rate_distortion_lean4、AI4SLT、TorchLean、DynamicalSystems、Veil/IFP 的 README、toolchain 或关键 theorem 文件；新增 M-16、C018-023—029 和图谱节点。外部项目 clean build 未运行。 | AC-03 首轮方向地图 PARTIAL；AC-04 方法库增补；AC-05 代表项目源文件审计 PARTIAL；AC-06 PIT 最小包 PASS。 | [方向—论文—项目矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/field-evidence-matrix.md) · [本轮记录](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-cross-domain-direction-paper-project-map.md) | D0 / CONSISTENT；主线已回到跨领域证据与项目审计；Hax 单点问题暂停为非阻断局部工作。 | 每领域选 1–2 个代表项目，固定版本并审计 theorem/axiom/CI/build。 |
 
 ## 10. 最近一次状态一致性回读
 
