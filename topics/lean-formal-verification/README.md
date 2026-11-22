@@ -78,3 +78,10 @@ MathFin 提供了可复用的数学金融证明样例，但它不替代行情数
 ## PIT/no-lookahead 最新构建结果（2026-11-22）
 
 PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已通过 [Lean Actions Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832)：Lean 4.35.0 lake build success，两个 theorem 均编译，print axioms 均为 [propext]。知识库完整性 [Run #1255](https://github.com/fweiger/AI_book/actions/runs/45031763864) 同样 success。该 proof 仍只覆盖 eligibility filter safety，不是完整 as-of join 或真实数据源验证。
+
+
+## 研究方向—论文—项目矩阵更新（2026-11-23）
+
+[跨学科证据矩阵](field-evidence-matrix.md) 已扩展为逐研究方向的对应表：每条记录包含研究对象、原始论文/形式化论文、直接 Lean 项目、相邻证明助手或普通实现，以及当前验证边界。覆盖十个领域，不把相邻项目冒充 Lean 项目。
+
+本轮对 MathFin、LeanInfoTheory、rate_distortion_lean4、AI4SLT、TorchLean、DynamicalSystems、Veil/IFP 做了 GitHub 源码与版本线索复核。外部项目构建状态仍为 NOT_RUN；论文、README、源码和 build evidence 分开记载。
