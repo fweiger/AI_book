@@ -84,14 +84,14 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 完成 M0 的非标准仓库边界审计：为 Lean 3 legacy 的 Liquid Tensor 确认其旧版构建入口，为 rust-lean 选择一个具体 Hax/Aeneas 子项目并锁定其 toolchain、LICENSE、Lake 配置和 manifest；不得将多项目根仓库算作已完整审计的单一 Lean 包。
+- **唯一优先动作：** 对 Hax-FRI 做版本化复现对照：先保留其 Hax commit 1332b8fa / Lean 4.26.0 的原始锁定基线，再在独立分支评估 Hax 0.5.0 / Lean 4.35.0 迁移，重点验证 PR #1925 的 cast/shift、PR #1933 的 specset int/bv、Hax package scaffold，以及 BasicProofs 与 FoldingCorrectness 的实际状态；不得覆盖原始快照。
 - **对应未完成 AC 与当前阶段：** AC-05；M0。
-- **为什么它推进原始目标：** 当前最大风险已从项目发现转为非标准仓库的审计边界：Liquid Tensor 是 Lean 3，rust-lean 是多子项目集合。把它们误当成普通 Lean 4 根包会造成版本、许可和构建结论失真。
-- **预期实质交付物与完成条件/验证方法：** 更新 case-studies.md，补齐 Liquid Tensor 旧版构建入口和 rust-lean 具体子项目的版本/许可/依赖配置；所有缺失字段明确标注 NOT_FOUND/UNKNOWN，不推断无许可或不可构建。
+- **为什么它推进原始目标：** 当前最重要的风险是版本错配：Hax-FRI 固定的 Hax commit 早于 cast/specset 修复，而 Hax 0.5.0 已切换 Lean 4.35 并包含 breaking changes。直接升级或沿用旧 README 都会导致错误判断。
+- **预期实质交付物与完成条件/验证方法：** 形成旧版与新版两套可核验的 Hax-FRI 环境指纹及构建日志；分别报告 extraction、build、基础定理和 FoldingCorrectness，不把上游 PR merged 当作项目 PASS。
 - **需要先读取或检查的证据：** 每个项目的 GitHub repo metadata、README、LICENSE、lean-toolchain、lakefile、lake-manifest.json、CI 和 blueprint/theorem files。
 - **若受阻，下一项不受影响的工作：** 对 Lean 官方语言参考、Elan、Lake 和 Mathlib 文档继续做精确组件职责审查；不转入 A 股策略实验。
 - **为什么本动作优于其他候选动作：** 直接扩写教程或收集更多项目名会增加未经核实的信息；准入审查同时推进 AC-01 和 AC-05，并为 M1/M2 建立可靠基线。
-- **局部调查边界/止损条件：** 每个非标准仓库最多沿 README 明确指向的子项目审查必要配置；若路径不存在或权限受阻，记录原因后转向已具备完整元数据的 Lean 4 项目，不递归扫描无关目录。
+- **局部调查边界/止损条件：** 只审查 Hax-FRI 及其直接依赖，不扩展到其他 rust-lean 子项目；旧环境复现后再尝试新版本迁移，任一阶段阻断都保留证据并报告。
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -109,13 +109,14 @@
 |---|---|---|---|---|---|
 | 2026-11-22 / INIT | 查重专题编号和既有 Issue；创建 AI_book #74；建立专题文件、唯一 Tracker、索引导航和 Draft PR #75。未运行 Lean 构建、未逐项目核验所有许可证和源码。 | AC-01/03/05 PARTIAL；AC-02/04/06/08 NOT_RUN；AC-07 边界已定义但未验收。 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；Issue 已回链 Tracker 与 PR 并 GET 回读。 | M0 版本化项目准入矩阵。 |
 | 2026-11-22 / CI-STRUCTURE | 对 PR head commit e57491d00728fdfba2f5a26cf7df00fd41d27f63 运行仓库完整性 workflow；validate-knowledge 与 Discussion YAML 检查均 PASS。未运行 Lean 构建。 | 结构/链接/YAML 校验 PASS；AC-01/03/05 仍仅 PARTIAL，AC-02/04/06/08 NOT_RUN。 | [Workflow run #1201](https://github.com/fweiger/AI_book/actions/runs/45007709196) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；CI 仅为知识库结构校验，不提升学术证据等级。 | M0 版本化项目准入矩阵。 |
-| 2026-11-22 / M0-MANIFEST | 对 10 个固定仓库 commit 读取 README/toolchain/许可证/Lake 配置；8 个 Lean 4 项目 Lake manifest 成功解析并记录 Mathlib 与外部依赖 revision。未运行项目 build。 | AC-05 PARTIAL；项目来源/版本边界更清楚；AC-02/04/06/08 NOT_RUN。 | [case-studies.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/case-studies.md) · [manifest audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-lake-manifest-audit.md) | D0 / CONSISTENT；Lean 3 legacy、嵌套 backend、多子项目边界需单独审查。 | 补齐 Liquid Tensor 与 rust-lean 的项目级构建边界。 |
+| 2026-11-22 / M0-MANIFEST | 对 10 个固定仓库 commit 读取 README/toolchain/许可证/Lake 配置；8 个 Lean 4 项目 Lake manifest 成功解析并记录依赖 revision。未运行项目 build。 | AC-05 PARTIAL；AC-02/04/06/08 NOT_RUN。 | [case-studies.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/case-studies.md) · [manifest audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-lake-manifest-audit.md) | D0 / CONSISTENT；项目构建 NOT_RUN。 | 补齐非标准项目边界。 |
+| 2026-11-22 / HAX-UPSTREAM | 核对 Hax issues/PR；确认 #1925/#1927/#1933/#2142 merged，识别 Hax-FRI 固定 commit 早于关键修复，Hax 0.5.0 已升至 Lean 4.35。未运行构建。 | AC-04 方法卡 M-04/M-05 增补；AC-05 仍 PARTIAL；AC-06 NOT_RUN。 | [Hax audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-hax-upstream-fix-and-version-drift.md) · [PR #1925](https://github.com/pereq-dev/hax/pull/1925) · [PR #1933](https://github.com/pereq-dev/hax/pull/1933) · [PR #2142](https://github.com/pereq-dev/hax/pull/2142) | D0 / CONSISTENT；上游修复与目标项目采用状态分开。 | 旧版 Hax-FRI 复现，再独立尝试 Hax 0.5.0 迁移。 |
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** none
-- **当前 writer_owner：** none
-- **当前 write_state：** SYNCED
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|HAX-UPSTREAM-FIX-AUDIT-20261122
+- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
+- **当前 write_state：** CLAIMED
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|LAKE-MANIFEST-AUDIT-20261122
 - **旧 Writer 已停止/隔离证据：** not_applicable（初始化无并发事件写入）
 - **若无法 fencing：** 不适用
@@ -127,4 +128,4 @@
 | §5阻断与未受影响工作 | 项目深审尚未完成；其他领域可继续 | §5 | CONSISTENT |
 | §6路径变更与第7节裁决 | 先做项目准入，避免堆砌未经核实案例 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向 M0 版本化项目准入 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | Lake manifest 审计事件已写入 Issue #74，评论列表 GET 回读确认 | [Issue comment #7077332549](https://github.com/fweiger/AI_book/issues/74#issuecomment-7077332549) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
+| 最新 Issue 进度事件与本文件版本 | Lake manifest 审计事件已同步；Hax 上游修复审计事件待写入 | [Issue comment #7077332549](https://github.com/fweiger/AI_book/issues/74#issuecomment-7077332549) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING |
