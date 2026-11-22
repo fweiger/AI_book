@@ -139,10 +139,10 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|DIRECTION-MAP-CI-RECHECK-20261123
-- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|CROSS-DOMAIN-EVIDENCE-MAP-20261122
+- **当前 active_event_key：** none
+- **当前 writer_owner：** none
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|DIRECTION-MAP-CI-RECHECK-20261123
 - **旧 Writer 已停止/隔离证据：** 同一会话继续，未发现并发 Writer；本轮新 event claim 已在 Tracker 写入前检查
 - **若无法 fencing：** 不适用
 
@@ -153,5 +153,5 @@
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 由 hosted Actions 验收；其他项目构建仍待环境 | §5 / Run #24 | CONSISTENT |
 | §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向逐领域研究方向—论文—项目证据矩阵 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 跨学科方向—论文—项目矩阵事件已写入 Issue #74，评论列表 GET 回读确认 | [Issue comment #7081950838](https://github.com/fweiger/AI_book/issues/74#issuecomment-7081950838) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
+| 最新 Issue 进度事件与本文件版本 | 方向矩阵 CI 修复/复验事件已写入 Issue #74，评论列表 GET 回读确认 | [Issue comment #7082003510](https://github.com/fweiger/AI_book/issues/74#issuecomment-7082003510) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
 
