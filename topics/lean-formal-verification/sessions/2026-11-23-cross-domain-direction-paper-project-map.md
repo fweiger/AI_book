@@ -46,3 +46,6 @@
 - 修复后 PR head `c45e6d94e30a45bb797019f201baac20d4c17eb8` 的 Knowledge-base integrity Run #1268 成功。
 - 同一 head 的 Lean PIT no-lookahead Run #37 成功：Lean 4.35.0 `lake build` 完成；两个 theorem 均编译，axiom 输出均为 `[propext]`。
 - 这是本专题 PIT 示例的持续 CI 复验，不代表外部 MathFin/AI4SLT/Veil 等项目已构建；外部项目 build 仍 NOT_RUN。
+
+
+- 后续更新到最新 PR head `5f84a4ade251cf5ef769e561edfd0ef5c218973f` 后，再次通过 [Knowledge-base integrity Run #1271](https://github.com/fweiger/AI_book/actions/runs/45043181807) 与 [Lean PIT Run #40](https://github.com/fweiger/AI_book/actions/runs/45043181814)。Lean 4.35.0 build completed successfully (3 jobs)，两个 theorem 的 axioms 均为 `[propext]`。因此最新 head 的文档完整性与 PIT workflow 均 PASS。
