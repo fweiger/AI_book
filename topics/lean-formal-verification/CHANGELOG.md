@@ -14,3 +14,5 @@
 - **2026-11-22，v0.4.0（Draft）**：修正 Hax ADC 历史 issue 状态，核对 #1925/#1927/#1933/#1938/#1959/#2064/#2142 上游 PR；以 Hax 官方 lean_adc 示例更新 M-01，新增 M-04 至 M-07。对同一 Rust blob 的 Hax/Aeneas FRI pipeline 做源码对照：Aeneas BasicProofs 6 theorem + 3 example 静态无 sorry/axiom；ArkLib bridge 仍含 3 axioms、1 opaque、4 sorry；Hax FRI 有 2 个实质性边界定理证明，另有 4+9 个 sorry。新增 C018-018 至 C018-025、Q07/Q08 和独立会话记录。所有 Lean build 与独立 QA 仍 NOT_RUN。
 
 - **2026-11-22，v0.4.0（Draft）**：追踪 Hax ADC 历史障碍的上游解决状态；确认 PR #1925、#1927、#1933、#2142 已合并；识别 Hax-FRI 固定 commit 早于 #1925/#1933，而 Hax 0.5.0 已升级至 Lean 4.35.0 并包含 breaking changes。新增 C018-018 至 C018-022、M-04/M-05。下一步从“追踪旧障碍”转为“旧版基线复现 + 新版迁移对照”。
+
+- **2026-11-22，v0.5.0（Draft）**：深审 MathFin 固定 commit，读取 4.35.0 toolchain、Mathlib/BrownianMotion manifest、coverage taxonomy、AxiomAudit/AxiomAuditGen、build workflow、Gaussian CVaR、Markowitz KKT、CRR convergence 与 Gaussian risk report；解析 risk/portfolio/binomial 三个 benchmark JSON 共 156 项且均为 full。新增 M-08 至 M-13、C018-026 至 C018-033、Q09；强调 MathFin 是数学金融证明库，不是实证回测系统。未运行 MathFin build。
