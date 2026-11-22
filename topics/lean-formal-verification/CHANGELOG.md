@@ -20,3 +20,5 @@
 - **2026-11-22，v0.6.0（Draft）**：建立独立 Lean 4.35.0 PIT/no-lookahead 最小 package 与专用 GitHub Actions build workflow；区分 eventTime/availableAt/decisionTime，加入 eligibleRows_no_lookahead、late_available_revision_excluded 和 late correction 示例；新增 M-14、C018-034 至 C018-037、Q10。当前只完成源码和工作流配置，build 等待 CI 回读。
 
 - **2026-11-22，v0.6.1（Draft）**：去重方法卡与 claims ID，合并重复的 Hax specset 节点/路径；补齐 C018-026 至 C018-033 的 MathFin 证据行，并将 Hax 版本迁移方法单列为 M-15。修复 MathFin 方法卡中的数学符号转义问题。
+
+- **2026-11-22，v0.6.2（Draft）**：PIT/no-lookahead 独立 Lean 4.35.0 package 的 GitHub Actions Run #15 成功；job log 确认 `lake build` completed successfully。两个 theorem 的 `#print axioms` 均为 `[propext]`。AC-06 的最小可复现流程由配置推进到实际 Kernel build PASS；完整 as-of join 仍未完成。
