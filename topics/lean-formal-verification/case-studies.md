@@ -381,3 +381,56 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 - 修复后 PR head `c45e6d94e30a45bb797019f201baac20d4c17eb8`：Knowledge-base integrity Run #1268 PASS；Lean PIT Run #37 PASS。
 - Lean Run #37 使用 Lean 4.35.0，lake build 成功；eligibleRows_no_lookahead 与 late_available_revision_excluded 编译通过，print axioms 均为 [propext]。
 - 外部项目 clean build 仍 NOT_RUN；此 CI 只复验专题自己的 PIT 最小包和知识库完整性。
+
+
+## M1.0｜项目审计批次 A：信息论、统计学习与分布式验证（2026-11-23）
+
+本轮固定三个上游 commit，逐项核对论文—代码关系、许可证、toolchain/manifest、核心 theorem、占位证明/公理边界和实际构建证据。证据等级按本专题定义：E1 为源码/官方文档已读，E2 为固定版本有可回读的上游构建/CI 证据；本专题未独立 clean build，不能记 E3。
+
+### A1. Rate-Distortion：当前源码审计完成，当前构建证据不闭合
+
+- **论文**：[Aligning Information Theory and Formal Verification: A Lean Formalization of Rate-Distortion Theory](https://arxiv.org/abs/2610.22404)，arXiv:2610.22404，2026-10-14。
+- **直接项目**：[fubinyan/rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4)。
+- **固定版本**：main commit [6ebee5bca945015ec2964ea94148e6de3857959d](https://github.com/fubinyan/rate_distortion_lean4/commit/6ebee5bca945015ec2964ea94148e6de3857959d)；RateDistortion.lean blob 7719dbbe76a95a9020b2ec177dafe9d3dc2380da；MainResults.lean blob d426b605eddfb7c3d9a3d2f9212cf17c06fc244d。
+- **许可**：GitHub metadata 的 license 为 null；固定 commit 的 tree 未找到根 LICENSE/COPYING。记为 LICENSE_NOT_FOUND_IN_AUDITED_TREE，不推断作者放弃版权。
+- **环境**：Lean 4.28.0；Mathlib v4.28.0；lakefile.toml、lake-manifest.json 均存在，manifest 固定 Mathlib revision。
+- **形式化对象**：有限字母表、有限 PMF、有限非负 distortion、确定性 encoder/decoder、blocklength 序列和 nats 口径；核心结果覆盖 direct/converse、boundary achievability、achievable iff、最优 test channel attained 和 rate-distortion right-continuity。不是连续信源、任意随机码或无限字母表的一般定理。
+- **源码审查**：固定 commit 的 4 个 Lean 文件均未发现 sorry、顶层 axiom 或 opaque 声明。MainResults.lean 对五个核心 endpoint 运行 print axioms，并通过 Lean.collectAxioms 将允许集合限定为 propext、Classical.choice、Quot.sound；当前源码存在这套审计入口，但本轮没有运行当前版本。
+- **构建证据时点问题**：仓库的 [build-verification.log](https://github.com/fubinyan/rate_distortion_lean4/blob/7b9bfcaa42cc0365e7f8d4c1094b8309b61ef269/build-verification.log) 是 commit 7b9bfcaa42cc0365e7f8d4c1094b8309b61ef269（2026-09-22）加入，记录 Lean 4.28.0、3161 jobs 成功及五个 endpoint 的 axioms。可是当前 RateDistortion.lean 在 2026-10-13 的 commit 6ebee5b 又有 6393 additions / 6132 deletions；docs/verification.md 仍引用旧的 abe3000 source snapshot。故旧 log 不能证明当前 main 构建通过。
+- **CI/文档不一致**：当前固定 tree 没有 .github/workflows/ 文件，Actions API 没有对应运行；README/verification 文档却声称有面向 push/PR 的 GitHub Actions workflow。应先修正文档或恢复 workflow，再对当前 commit clean build。
+- **审计结论**：PARTIAL。数学源码结构和 axiom gate 值得复用；当前 main 的构建未验证，许可证未找到，CI 声明与仓库现状不一致。
+
+### A2. AI4SLT：release build 与 core no-placeholder audit 有上游证据
+
+- **论文**：[AI4SLT: Empirical Processes in Lean 4 for Formal Statistical Learning Theory](https://proceedings.mlr.press/v306/zhang26cd.html)，ICML 2026 / PMLR 306:156234–156262；arXiv [2602.02285](https://arxiv.org/abs/2602.02285)。
+- **直接 companion**：[YuanheZ/lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory)，PMLR 官方论文页直接列出该代码仓库。
+- **固定版本**：当前 main commit [d0f506f0a695018265dccb33bcb05e2f5ca1c876](https://github.com/YuanheZ/lean-stat-learning-theory/commit/d0f506f0a695018265dccb33bcb05e2f5ca1c876)；release tag v4.32.0 指向 commit 482a1a56daf792b33afe8cf7f07f127dc0af8640。两者比较仅有 README 的 2 个提交，Lean 源码未变化。
+- **许可/环境**：Apache-2.0；Lean 4.32.0、Mathlib v4.32.0；manifest 将 Mathlib 固定到 81a5d257c8e410db227a6665ed08f64fea08e997；仓库共 68 个 Lean 文件。
+- **论文原始形式化范围**：Gaussian Lipschitz concentration、sub-Gaussian processes 的 Dudley entropy integral、least-squares/sparse regression sharp rate。当前仓库 README 还包含论文之后扩展的 Hanson–Wright、random matrix、matrix Bernstein 等内容；不能将这些后续扩展倒归为原论文贡献。
+- **关键源码入口**：[GaussianLipConcen.lean](https://github.com/YuanheZ/lean-stat-learning-theory/blob/d0f506f0a695018265dccb33bcb05e2f5ca1c876/SLT/GaussianLipConcen.lean) 中 gaussian_lipschitz_concentration / one-sided theorem；[Dudley.lean](https://github.com/YuanheZ/lean-stat-learning-theory/blob/d0f506f0a695018265dccb33bcb05e2f5ca1c876/SLT/Dudley.lean) 中 dudley_chaining_bound_countable / dudley；[BasicInequality.lean](https://github.com/YuanheZ/lean-stat-learning-theory/blob/d0f506f0a695018265dccb33bcb05e2f5ca1c876/SLT/LeastSquares/BasicInequality.lean) 中 basic_inequality。
+- **证明状态**：v4.32.0 release notes 明确记录 LEAN_NUM_THREADS=$(nproc) lake build 成功，并扫描 SLT/ 未发现 sorry、admit、axiom、native_decide。 本轮对三个代表 theorem 文件做源码检查，未发现显式占位或顶层自定义 axiom。该证据来自上游 release 声明，不是本专题独立 build。
+- **CI 边界**：固定 tree 没有 .github/workflows/，Actions API 未发现 workflow run；应记为 RELEASE_BUILD_EVIDENCE，不能写成 GitHub Actions CI PASS。
+- **审计结论**：PASS / E2（release build evidence）。当前 main 的 Lean 源码与已验证 release 相同；无持续 CI 仍是工程维护风险。
+
+### A3. Veil：多模态验证器的 CI 与信任边界可回读
+
+- **论文**：[Veil: A Framework for Automated and Interactive Verification of Transition Systems](https://doi.org/10.1007/978-3-031-98682-6_2)，CAV 2025。
+- **直接项目**：[verse-lab/veil](https://github.com/verse-lab/veil)。
+- **固定版本**：main commit [5a525eeca8cee37b2da8c010552db9b1aae968c2](https://github.com/verse-lab/veil/commit/5a525eeca8cee37b2da8c010552db9b1aae968c2)；Apache-2.0；Lean 4.35.0；Lake package manifest 版本 1.3.0。
+- **依赖锁定**：lean-smt b8633e75...、Loom dc269f28...、VerifiedHAMT 244601f8...、Lasso 74515461...、Lentil 61e533f...，以及 Batteries/Aesop v4.35.0、ProofWidgets 固定 commit。
+- **实际 CI**：[Run #442](https://github.com/verse-lab/veil/actions/runs/45014566842) 精确对应上述 main commit；Linux-x86_64 和 macOS-aarch64 两个 job 均通过 Build Veil、VeilTest、LSP/Widgets、VS Code Extension 和 Examples。
+- **TrustAudit 实际输出**：CI job log 编译 VeilTest.TrustAudit 并报告七条 shipped route（fair、prune、patOnly、crossing、dijkstra、ndfs、interned）均 clean；positive control 刻意加入一条带 implemented_by 的 control route，检测器成功发现 1 个实现替换并最终 PASS。该审计递归检查指定 route 可达常量的 type/value，检查项目自定义 unsafe 与 implemented_by；不是全仓库所有模块均无 unsafe 的声明。
+- **SMT/Kernel 边界**：CertificateResult 使用 collectAxioms，记录 kernelChecked 和 offenders；标准 axiom 集为 propext、Classical.choice、Quot.sound。veil.synthesizer.trust 默认 false。若 solver step 无法重放或 Kernel 拒绝，trusted fallback 会发出警告并使 theorem 依赖 sorryAx。因此 print axioms 不是完整的运行路径审计，必须同时检查 unsafe/implemented_by、solver mode 和 certificate result。
+- **SCP 示例范围**：[SCP.lean](https://github.com/verse-lab/veil/blob/5a525eeca8cee37b2da8c010552db9b1aae968c2/Examples/StellarConsensus/SCP.lean) 明确说明当前 Veil 示例不证明 liveness，只证明 intertwined_safe safety property。Background 的 axiom_0、axiom_1、qi_intertwined 是抽象模型的 typeclass contract 字段，不是 Lean 顶层全局 axiom；one_such_Background 给出一个由具体 FBA.System、intact/intertwined 集及包含关系构造的 Background 实例。该实例仍以这些模型条件为前提。
+- **不可混淆的原始基线**：Losa & Dodds 的 [FMBC 2020 SCP formal verification paper](https://doi.org/10.4230/OASIcs.FMBC.2020.9) 使用 Ivy + Isabelle/HOL，在 eventual synchrony 下对任意但固定配置证明 safety 与 liveness；Veil 的 Lean SCP 示例不是该完整证明的等价替代。
+- **审计结论**：PASS / E2（固定 main commit 上游 CI + TrustAudit）；SCP safety case 为 PARTIAL，不得宣称 liveness 已由 Veil Lean 示例证明。
+
+### 批次 A 的横向结论与量化迁移候选
+
+| 项目 | 形式化/验证层 | 可迁移到量化研究的候选 | 不能推出 |
+|---|---|---|---|
+| Rate-Distortion | 信息量、编码率、失真和渐近可达性定理 | L2/分钟数据压缩、特征量化、信号压缩误差与信息率约束 | 不能证明压缩特征仍有 alpha；当前 main 也未 build |
+| AI4SLT | 概率集中、经验过程、泛化界、稀疏回归不等式 | 因子模型复杂度、样本外泛化假设、过拟合边界的理论规格 | 不证明市场分布满足假设、不证明因子收益显著或盈利 |
+| Veil | 状态转换系统、Safety/Liveness、SMT+Kernel certificate、trust audit | 订单/持仓状态机、现金守恒、重复成交禁止、仓位上限、订单终态与风控不变量 | 不证明行情输入真实、撮合系统实现符合模型或策略有收益 |
+
+**AC-05 当前进度口径**：本批新增 3 张项目审计卡，其中 AI4SLT 与 Veil 有当前代码对应的上游 build/CI 证据；Rate-Distortion 只有旧 commit 的 build log，当前 main 未验证且许可证未找到。加上首批 10 项准入中 Mathlib 的 bors success，目前有 3 个项目具备可回读 build/CI 证据，AC-05 仍为 PARTIAL；不能把 10 个 metadata snapshot 当成 10 个项目已通过审计。
