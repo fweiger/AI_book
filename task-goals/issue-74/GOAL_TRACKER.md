@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（Hax/Aeneas、MathFin 和 PIT 原型均直接推进 AC-03/04/05/06；没有接管 AI_Trader #488）
-- 状态一致性：STATE_CONFLICT（恢复时发现 §3/§4/§10 仍引用 PIT NOT_RUN、PR head 5f84a4a/Run #40，而真实最新 head 为 d987f59、Run #45/Run #1276；§7 当前动作已是项目审计，§9/§10 对该动作的描述仍称矩阵构建。当前执行状态纠偏，未修改批准目标/AC）
-- Issue 同步状态：ISSUE_SYNC_PENDING（本轮状态纠偏已在 Tracker 声明，待向规范 Issue #74 写入同键治理事件并回读）
+- 状态一致性：CONSISTENT（已将 §3/§4/§10 的 PIT build、最新 PR head 与 CI 统一到 d987f59 / Run #45 / Run #1276；§7 当前项目审计动作与 §9/§10 最新历史相符；规范 Issue #74 批准基线未改变）
+- Issue 同步状态：SYNCED（状态纠偏事件已写入规范 Issue #74 并回读唯一匹配，见 comment #7082188858）
 
 ## 1. 批准目标基线
 
@@ -84,7 +84,7 @@
 - **当前阶段判断：** M0/M1/M2/M3 并行进行；逐领域“方向—论文—项目”首轮矩阵已形成，M1 纯数学案例和 M2 外部项目级审计仍需补足；M4 独立 QA 尚未完成。
 - **本轮 AC 与目标对齐证据：** AC-03 首轮覆盖数学及 9 个非数学领域，并新增 22 个方向级映射项，仍为 PARTIAL（尚非穷尽综述）；AC-04 新增 M-16；AC-05 对 7 个代表项目补充源码/toolchain 核对但外部 build NOT_RUN，仍 PARTIAL；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（未接入或验证 AI_Trader #488）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；全部动作仍围绕 Lean 数学/跨学科方法、源码审计与金融 PIT 形式化边界，没有修改 #488 或转入实证策略开发。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** STATE_CONFLICT（本轮恢复时识别到 §3 M3 build 状态、§4 最近 PR head/运行号、§10 最新核验表均落后于最新 PR head；§7 唯一动作与 §9/§10 的下一步描述也不一致）。批准 Goal/Scope/AC 未改变，偏差属于 Tracker 动态状态陈旧，现正按证据纠偏。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（§3 M3 已改为 PIT build PASS；§4/§10 已统一至 PR head d987f59、Lean Run #45、Integrity Run #1276；§7 第一批项目审计与 §9 最新检查点一致；状态纠偏 Issue 事件已回读唯一匹配。批准 Goal/Scope/AC v1.0 未变）。
 
 ## 5. 阻断与未受影响工作
 
@@ -140,10 +140,10 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|TRACKER-STATE-RECONCILIATION-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-topic018-continue
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|DIRECTION-COUNT-CORRECTION-20261123
+- **当前 active_event_key：** none
+- **当前 writer_owner：** none
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M1|TRACKER-STATE-RECONCILIATION-20261123
 - **旧 Writer 已停止/隔离证据：** 同一会话继续，未发现并发 Writer；本轮新 event claim 已在 Tracker 写入前检查
 - **若无法 fencing：** 不适用
 
@@ -151,8 +151,8 @@
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
 | §3/§4当前阶段与实际证据 | M0/M1/M2/M3 进行中；22 个方向级矩阵已补充；最新 PR head d987f59 的 PIT Lean 4.35.0 Run #45 PASS、知识库完整性 Run #1276 PASS；外部项目 clean build NOT_RUN | [方向矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/field-evidence-matrix.md) / [Lean Run #45](https://github.com/fweiger/AI_book/actions/runs/45043563533) / [Integrity Run #1276](https://github.com/fweiger/AI_book/actions/runs/45043563539) / PR head d987f59 | PASS / PARTIAL |
-| §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 由 hosted Actions 验收；其他项目构建仍待环境 | §5 / Run #24 | CONSISTENT |
+| §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 已裁决第一批项目审计；§9 最近一条为状态纠偏并将同一项目审计列为下一步；二者一致 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 方向矩阵数量修正事件已写入 Issue #74，评论列表 GET 回读确认 | [Issue comment #7082031858](https://github.com/fweiger/AI_book/issues/74#issuecomment-7082031858) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
+| 最新 Issue 进度事件与本文件版本 | Tracker 状态纠偏事件已写入 Issue #74，评论列表 GET 回读确认，唯一匹配 1 条 | [Issue comment #7082188858](https://github.com/fweiger/AI_book/issues/74#issuecomment-7082188858) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
 
