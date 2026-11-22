@@ -85,3 +85,8 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 [跨学科证据矩阵](field-evidence-matrix.md) 已扩展为逐研究方向的对应表：每条记录包含研究对象、原始论文/形式化论文、直接 Lean 项目、相邻证明助手或普通实现，以及当前验证边界。覆盖十个领域，不把相邻项目冒充 Lean 项目。
 
 本轮对 MathFin、LeanInfoTheory、rate_distortion_lean4、AI4SLT、TorchLean、DynamicalSystems、Veil/IFP 做了 GitHub 源码与版本线索复核。外部项目构建状态仍为 NOT_RUN；论文、README、源码和 build evidence 分开记载。
+
+
+## 2026-11-23 CI 回归复验
+
+本轮新增方向矩阵后，首次知识库完整性检查发现 sessions 索引中的一个失效链接；已修复并重新验证。PR head `c45e6d94e30a45bb797019f201baac20d4c17eb8` 的 [Knowledge-base integrity Run #1268](https://github.com/fweiger/AI_book/actions/runs/45043057448) 与 [Lean PIT Run #37](https://github.com/fweiger/AI_book/actions/runs/45043057469) 均 success。PIT 两个 theorem 的 axiom 输出仍为 `[propext]`。外部项目构建未运行。
