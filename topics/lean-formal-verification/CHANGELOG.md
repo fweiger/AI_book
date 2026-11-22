@@ -24,3 +24,5 @@
 - **2026-11-22，v0.6.2（Draft）**：PIT/no-lookahead 独立 Lean 4.35.0 package 的 GitHub Actions Run #15 成功；job log 确认 `lake build` completed successfully。两个 theorem 的 `#print axioms` 均为 `[propext]`。AC-06 的最小可复现流程由配置推进到实际 Kernel build PASS；完整 as-of join 仍未完成。
 
 - **2026-11-22，v0.6.3（Draft）**：在 PR head `1e700ff89fbce8fa3106c99b93ebe45b03cc6557` 上复跑 PIT Lean workflow Run #19，job success；`lake build` completed successfully，两个 theorem 的 axiom 输出均为 `[propext]`。更新 case study、method card、claims、README 和 session evidence，确认 AC-06 最小可复现流程 PASS。
+
+- **2026-11-22，v0.7.0（Draft）**：完成 10 个领域的首轮“研究方向—原始论文/形式化论文—Lean 项目—相邻开源验证项目—研究缺口”映射；新增 field-evidence-matrix.md；核实 Veil/IFP、信息论、AI4SLT、控制理论、Physlib、StatWhy/StarV 等方向；纠正 EconCSLib 同名项目、MathFin/LeanInfoTheory 版本统计和分布式项目范围；新增 C018-038 至 C018-060、Q11–Q13、M-16 至 M-18。PIT proof 的 Run #24 / integrity Run #1255 均 PASS；外部项目仍未独立 build。
