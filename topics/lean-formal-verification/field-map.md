@@ -126,3 +126,10 @@ MathFin 是数学金融的形式化库，而不是量化策略回测系统。它
 - 本轮未发现可确认的完整 Lean Raft/Paxos 证明，也未发现直接形式化 A 股 Level-2 因子回测的成熟 Lean 项目。
 
 **证据边界：** 外部项目本轮主要完成论文/README/toolchain/配置审查；没有把 README 声明升级为独立 build。PIT 最小 Lean package 的 GitHub Actions Run #24 已 PASS，但只证明 eligibility filter safety。
+
+
+## 2026-11-23 领域地图更新
+
+跨学科方向已从学科级初筛推进到逐方向映射，详见 [field-evidence-matrix.md](field-evidence-matrix.md) §7–§8。当前覆盖数学、CS/软件验证、密码学、分布式系统、经济学、金融数学、AI/统计学习、物理/量子、信息论、控制理论十个领域；每条方向分别标记 Lean 项目、相邻证明助手和普通实现。
+
+当前高价值方向包括：MathFin/BrownianMotion 的数学金融；AI4SLT 的统计学习；LeanInfoTheory 与 rate-distortion 的信息论；Doll–Shames 的控制理论；TorchLean 的神经网络统一语义；Veil/IFP 的 BFT safety。以上为 E1/E2 证据，不代表外部项目均已独立构建。A 股 Level-2、因子统计和真实回测仍未发现成熟 Lean 端到端项目。
