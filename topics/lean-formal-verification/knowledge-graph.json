@@ -196,7 +196,7 @@
       "id": "L32",
       "type": "method",
       "title": "PIT/no-lookahead：availableAt ≤ decisionTime",
-      "evidence_level": "E1"
+      "evidence_level": "E2"
     },
     {
       "id": "L33",
