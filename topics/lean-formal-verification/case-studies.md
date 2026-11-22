@@ -373,3 +373,11 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 - 本轮未对这些外部项目执行 clean clone、依赖下载、lake build 或独立 theorem/axiom 输出，均为 NOT_RUN。
 - README 的 theorem 数量、no-sorry 声明、CI badge 不替代实际 CI job log。
 - MathFin 的 906 / 833 / 806 / 804 分别属于当前 README、软件 release、历史 coverage audit、论文快照；不可混为一个数字。
+
+
+## M0.9｜方向矩阵提交后的 CI 回归复验（2026-11-23）
+
+- 首次完整性检查失败原因：sessions/README.md 引用了不存在的跨学科 session 文件；不是论文、项目或图谱 schema 错误。
+- 修复后 PR head `c45e6d94e30a45bb797019f201baac20d4c17eb8`：Knowledge-base integrity Run #1268 PASS；Lean PIT Run #37 PASS。
+- Lean Run #37 使用 Lean 4.35.0，lake build 成功；eligibleRows_no_lookahead 与 late_available_revision_excluded 编译通过，print axioms 均为 [propext]。
+- 外部项目 clean build 仍 NOT_RUN；此 CI 只复验专题自己的 PIT 最小包和知识库完整性。
