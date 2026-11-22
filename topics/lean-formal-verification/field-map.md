@@ -68,3 +68,15 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 - **Hax-FRI**：把 Plonky3 的 Rust FRI folding 函数抽取到 Lean，再连接 ArkLib 的协议规格。源码 README 报告部分基础证明已构建，但最终 FoldingCorrectness 定理仍为 TODO。
 - **Hax ADC**：把 32-bit limb addition with carry 的 pre/post 条件写在 Rust 注解中，抽取后用 hax_bv_decide 做 bit-blasting。案例同时暴露了 cast、shift、tuple projection、monadic representation 和 BitVec fragment 支持问题。
 - 这两类案例的关键技巧是先把目标缩小到可验证的函数和明确的前后置条件，再逐层建立从抽取代码到协议规格的 refinement。自动化 tactic 的支持范围本身必须纳入验收。
+
+
+## F. 密码学 / 软件验证：同源 FRI 代码的 Hax 与 Aeneas 对照
+
+2026-11-22 在 \`Verified-zkEVM/rust-lean\` 固定 commit 上，确认 Hax 与 Aeneas 两条 pipeline 使用相同 Git blob SHA 的 \`compute_log_arity_for_round\` Rust 源文件，形成可控的工具对照：
+
+- Hax：Rust HIR + annotations → 自定义 \`RustM\` → Lean；两个核心输出边界定理已有证明，但 Hax BasicProofs 有 9 个 sorry，ArkLib 集成文件另有 4 个 sorry。
+- Aeneas：Rust MIR → Charon LLBC → 函数式 \`Result\` → Lean；BasicProofs 六个 theorem 和三个 example 的源码没有显式 sorry/axiom；但 ArkLib 集成 target 为处理 \`BitVec.toNat_pow\` 冲突，使用 3 个 axioms、1 个 opaque 和 4 个 sorry。
+- 这个样本显示 Aeneas 在局部算术/分支性质上更易于直接证明；不代表工具整体优劣。两者都没有完成完整 FRI 多轮协议和多项式折叠证明。
+- Hax ADC 的历史 PoC 问题已由上游多项 PR 迭代；官方 ADC example 采用 \`specset bv\` + \`hax_mvcgen\` + \`bv_decide\`，更适合作为可迁移的方法。
+
+**研究边界：** 本轮是固定 commit 的源码与依赖审计；没有运行 Lean build，也没有独立复现上游报告。不能把源码中无 sorry 等同于 Kernel 已接受，也不能把 axiomatized bridge 视为实现精化证明。
