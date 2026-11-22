@@ -86,3 +86,18 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 Hax ADC README 记录的是早期开发阶段的失败列表。后续 Hax 上游已合并 cast 类型标注（#1925）、规格集分离（#1933）、模块命名修复（#1927）和完整 Lean package scaffold（#2142）。研究问题应从“功能是否缺失”转为“目标项目锁定的 Hax 版本是否包含修复，以及升级后能否完成抽取、构建和正确性证明”。
 
 Hax-FRI 固定的 Hax commit 是 2026-01-20 的 Lean 4.26.0 升级提交，早于 #1925/#1933；Hax 0.5.0（2026-11-09）要求 Lean 4.35.0 并包含 breaking changes。应保留旧版可复现基线，再单独建立新版迁移分支。
+
+## G. 金融数学与量化研究：MathFin 的可迁移边界
+
+MathFin 是数学金融的形式化库，而不是量化策略回测系统。它已覆盖 Gaussian VaR/CVaR、coherent risk、Markowitz、Black-Litterman、FTAP、Black-Scholes、CRR 收敛、Itô/Girsanov 等理论结果。其重要价值不只在 theorem 数量，还在于把 `full`、`library_wrapper`、`reduced_core` 分开记录，并将 benchmark 引用到的常量纳入生成式公理审计。
+
+对 A 股量化工作，建议把 Lean 放在 Python 研究流程的**逻辑正确性层**，而不是替代统计计算：
+1. 时间可得性：每条输入记录携带 `eventTime` 与 `availableAt`，决策时点为 (t)，仅允许 `availableAt ≤ t) 的记录进入特征计算。
+2. 历史修订：同一 eventTime 的晚到修订必须按 availableAt 控制，不得因 eventTime 早于决策时点就被误认为当时已知。
+3. 股票池：成员资格按决策时点的上市/退市状态与当时可用的指数/行业成分快照判断。
+4. 标签与特征：证明训练/回测的 feature window、label window 和 decision time 满足时序隔离。
+5. 执行与风控：证明订单状态机、现金/持仓守恒、仓位上限、止损与可交易状态约束。
+
+这些是可 formalize 的候选不变量，不是已经验证的 AI_Trader 生产代码。完整 as-of join 还需要证明排序、重复版本优先级、空值与修订策略；一个简单 filter safety theorem 只证明不泄漏，不证明选中了最新可用记录。
+
+**边界：** Lean 可以证明程序在给定输入/时间戳语义下满足不变量；不能证明数据源时间戳真实、市场制度假设完整、样本外收益显著或策略盈利。统计结论仍需 Python/真实数据/样本外检验。
