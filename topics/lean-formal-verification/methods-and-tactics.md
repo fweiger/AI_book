@@ -230,4 +230,4 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **工程技巧**：把时间语义编码在结构体字段和函数签名中，避免依赖调用者记住“发布日期”和“事件日期”不同。
 - **失败边界**：该定理只证明 filter safety；未证明 latest-version selection、排序、revision tie-break、source timestamp authenticity、标签窗口隔离或生产代码实现。
 - **来源**：[PITNoLookahead.lean](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) · [dedicated workflow](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/.github/workflows/lean-pit-no-lookahead.yml)。
-- **状态**：E1 / Lean 源码和 package 已提交；GitHub Actions build 结果待回读。
+- **状态**：E2 / Lean 4.35.0 `lake build` PASS；两个 theorem 的 `#print axioms` 均为 `[propext]`。
