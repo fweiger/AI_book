@@ -1,0 +1,49 @@
+# TOPIC-018｜Lean 形式化证明与跨学科可验证系统
+
+> 规范研究任务：[AI_book Issue #74](https://github.com/fweiger/AI_book/issues/74)  
+> Task ID：AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION  
+> 建立：2026-11-22；专题版本：0.1.0；状态：OPEN_RESEARCH / INITIAL_MAP。此版是研究框架与初始来源地图，不代表全部案例已完成审计或复现。
+
+## 最初的问题
+
+Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化对象？除数学以外，软件工程、密码学、分布式系统、经济学、金融、AI、物理学等领域如何实际使用 Lean？研究者具体采用哪些证明策略、工具、工程流程和 AI 协作技巧？
+
+## 核心研究框架
+
+**问题/猜想 → 数学定义与假设 → Lean 形式化陈述 → 证明分解与定理复用 → Kernel 检查 →（如涉及程序）实现精化/差分验证 → 独立审查与可复现归档。**
+
+本专题不是 Lean 语法手册，也不只围绕某个著名猜想。核心资产是可复用的跨学科案例、方法卡、证据和边界。
+
+## 术语边界
+
+- **Lean 4**：基于依赖类型理论的交互式定理证明器，同时也是函数式编程语言。
+- **Lean Kernel**：检查证明项的可信核心；tactic 生成的证明项仍由 Kernel 检查。
+- **Mathlib**：社区维护的 Lean 数学库，提供定义、定理、结构层级和自动化工具。
+- **Elan**：Lean 工具链/版本管理器，不是证明器或证明内核。
+- **Lake**：Lean 项目的构建与依赖管理工具。
+- **Blueprint**：大型形式化项目的数学文档、定理依赖和 Lean 声明之间的可追踪组织方式。
+
+任何项目都应锁定自身 lean-toolchain、依赖版本和 commit；不能把某个项目在特定版本下的构建结果推广到其他版本。
+
+## 导航
+
+- [数学与跨学科应用全景](field-map.md)
+- [代表案例与项目审计台账](case-studies.md)
+- [方法与技巧库](methods-and-tactics.md)
+- [形式化研究工作流](formalization-playbook.md)
+- [研究问题](questions.md) · [核心主张](claims.md)
+- [知识关系图](knowledge-map.md) · [机器可读图谱](knowledge-graph.json)
+- [论文、官方文档和项目来源](bibliography.md)
+- [唯一目标跟踪器](../../task-goals/issue-74/GOAL_TRACKER.md)
+- [研究会话记录](sessions/README.md) · [变更记录](CHANGELOG.md)
+
+## 初始证据边界
+
+本轮已读取 Lean 官方语言参考、Lean 社区项目目录、Aeneas 官方项目页、MathFin、MathEconLib、TorchLean 论文和 physicslib4 教程等来源。当前为**来源级初筛**：未逐一克隆项目、锁定所有 release/commit、检查全部许可证或执行完整构建。详见 field-map.md 与 case-studies.md。
+
+## 重要限制
+
+- Kernel 检查的是形式化陈述及其证明，不会替研究者保证陈述忠实表达自然语言猜想。
+- 定理只在其定义、假设和依赖下成立；模型假设与现实世界的符合性需要独立证据。
+- 证明一个规范正确，不自动证明某个 Python/Rust/C++ 实现符合规范；需要精化证明或明确分级的测试证据。
+- 形式化金融数学不证明策略有超额收益，也不自动证明原始市场数据的时点真实性。
