@@ -2,7 +2,7 @@
 
 > 规范研究任务：[AI_book Issue #74](https://github.com/fweiger/AI_book/issues/74)  
 > Task ID：AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION  
-> 建立：2026-11-22；专题版本：0.1.0；状态：OPEN_RESEARCH / INITIAL_MAP。此版是研究框架与初始来源地图，不代表全部案例已完成审计或复现。
+> 建立：2026-11-22；专题版本：0.4.0（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有局部源码证据。静态源码审计不代表项目已独立构建或完整证明。
 
 ## 最初的问题
 
@@ -47,3 +47,12 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 - 定理只在其定义、假设和依赖下成立；模型假设与现实世界的符合性需要独立证据。
 - 证明一个规范正确，不自动证明某个 Python/Rust/C++ 实现符合规范；需要精化证明或明确分级的测试证据。
 - 形式化金融数学不证明策略有超额收益，也不自动证明原始市场数据的时点真实性。
+
+
+## 最新研究进展（2026-11-22）
+
+- 首批 10 个仓库完成固定 commit / README / toolchain / LICENSE / Lake 配置入口级初审；8 个 Lean 4 项目的 Lake manifest 已解析。
+- Hax/Aeneas 使用同一份 Rust FRI arity 选择函数源码，已建立同源对照；Aeneas BasicProofs 的源码证明项比 Hax 版本更完整，但 ArkLib bridge 仍有显式 axioms/sorry。
+- Hax ADC 从早期 PoC 发展为官方 \`lean_adc\` 示例：\`specset bv\` + \`hax_mvcgen\` + \`bv_decide\`。
+- 本轮所有 Lean build 均 NOT_RUN；没有把静态源码检查升级为 Kernel 构建验收。
+- 详细证据见 [case-studies.md](case-studies.md)、[methods-and-tactics.md](methods-and-tactics.md) 和 [claims.md](claims.md)。
