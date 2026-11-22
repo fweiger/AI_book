@@ -94,3 +94,35 @@
 **发现：** 即使两个项目使用相同的 Lean/Mathlib 版本字符串，它们也可能锁定不同的 Mathlib commit 和不同的传递依赖。可复现单位应至少包括项目 commit、lean-toolchain、lake-manifest.json，而不是只记录 Lean 版本。
 
 Liquid Tensor 的旧 Lean 3 项目和 rust-lean 多子项目集合未在根目录发现对应 Lake manifest；这两者应按各自真实子项目继续审查，不能把根路径 NOT_FOUND 写成不存在。
+
+
+## M0.3｜Rust → Lean 密码学子项目审查（2026-11-22）
+
+### Hax-FRI：从 Plonky3 Rust 代码到 ArkLib 形式化规格
+
+- 上游集合仓库：[Verified-zkEVM/rust-lean](https://github.com/Verified-zkEVM/rust-lean)，固定 commit [49a83d2](https://github.com/Verified-zkEVM/rust-lean/commit/49a83d2a231c24f8a26a694ca2badaa36fb3914d)。
+- 子项目：[hax-FRI README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/README.md)。
+- Lean package：hax-FRI/lean/P3FriProofs；toolchain = Lean 4.26.0；lakefile.toml 与 lake-manifest.json 均已读取。
+- manifest 固定 Hax commit 1332b8fa、ArkLib commit e1275712、Mathlib commit 2df2f015 等依赖。
+- 目标是将 Plonky3 的单轮 FRI folding 函数从 Rust 经 Hax 抽取为 Lean，再连接 ArkLib 的 FRI 形式化规格。
+- README 报告：抽取代码可编译；BasicProofs.lean 包含 6 个 theorem 和 3 个 examples，作者称其构建成功；但 ArkLib 集成的 FoldingCorrectness.lean 仍标注 TODO prove。
+- **证据状态：E1（固定源码/配置与 README 已读）；独立构建 NOT_RUN；端到端正确性证明 NOT_VERIFIED。**
+
+### Hax annotations ADC：位宽算术与 bit-blasting
+
+- 子项目：[hax-annotations-adc README](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/README.md)；[src/lib.rs](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-annotations-adc/src/lib.rs)。
+- 对象：32-bit limb addition with carry，函数 adc_u32(a,b,carry) → (sum, carry_out)。
+- 前置条件：carry ∈ {0,1}。
+- 后置条件：carry_out ∈ {0,1}，且在 u64 中满足 a + b + carry = sum + 2^32 × carry_out。
+- 方法：在 Rust 中用 Hax annotations 写规格和 Lean theorem；将 adc_pre/adc_post 拆成独立函数以便 Lean unfold；用 hax_lib::lean::after 将 theorem 插入抽取后的 Lean 文件；用 hax_bv_decide 做 bit-blasting。
+- README 同时记录了真实工程障碍：u32→u64 cast 后的加法实例、不同位宽的 shift/cast、抽取产生 monadic binds、tuple projection、命名规则，以及 hax_bv_decide 对当前 BitVec fragment 的支持问题；对应 Hax issues/PR 仍需逐条核实最新状态。
+- **证据状态：E1（README 与 Rust 源码已读）；不能标成 end-to-end PASS。README 明确记录抽取编译和 tactic 支持问题；本轮未运行 Hax/Lean。**
+
+### 对该领域的意义
+
+这两个案例展示了两条不同但可组合的路线：
+
+1. **局部算术性质**：Rust 注解 → Hax 抽取 → Lean theorem → bit-blasting 自动证明。
+2. **协议级正确性**：Rust 算法抽取 → Lean 函数模型 → ArkLib 规格 → 证明实现与协议规格一致。
+
+它们的验收状态不能混为一谈：一个算术子性质可被自动化证明，不代表完整 FRI 算法已经正确；抽取文件可编译，也不代表 ArkLib 集成正确性定理已完成。
