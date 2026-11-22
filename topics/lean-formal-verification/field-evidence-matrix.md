@@ -476,3 +476,22 @@
 5. 物理/经济/密码学：HepLean/Physlib、MathEconLib/EconCSLib、ArkLib/VCVio。
 
 按每个项目的直接论文关系优先，不能把同领域相邻工具当成论文 companion。
+
+
+## 9. 代表项目审计结果（2026-11-23｜Batch A）
+
+| 研究方向 | 原始论文 | 直接 companion 项目 / 固定 commit | 许可 / Lean / manifest | 核心 theorem 或验证对象 | 构建/CI 证据 | 当前结论 |
+|---|---|---|---|---|---|---|
+| 信息论 / 率失真 | [arXiv:2610.22404](https://arxiv.org/abs/2610.22404) | [rate_distortion_lean4 @ 6ebee5b](https://github.com/fubinyan/rate_distortion_lean4/tree/6ebee5bca945015ec2964ea94148e6de3857959d) | LICENSE 未找到；Lean 4.28.0；Mathlib 4.28.0；manifest 存在 | direct/converse、boundary achievability、achievable iff、attainment、right-continuity；MainResults axiom allowlist | 旧 build log @ 7b9bfc（2026-09-22）3161 jobs PASS；当前 RateDistortion.lean 在 2026-10-13 大改，当前 main NOT_RUN；无 workflow 文件 | PARTIAL |
+| AI / 统计学习 | [ICML 2026 / PMLR 306](https://proceedings.mlr.press/v306/zhang26cd.html) | [lean-stat-learning-theory @ d0f506f](https://github.com/YuanheZ/lean-stat-learning-theory/tree/d0f506f0a695018265dccb33bcb05e2f5ca1c876)；release v4.32.0 @ 482a1a5 | Apache-2.0；Lean 4.32.0；Mathlib commit 81a5d257...；manifest 存在 | Gaussian Lipschitz concentration、Dudley chaining、least-squares basic inequality | release notes 报告 lake build PASS 和 SLT/ no-placeholder scan；main 相对 release 仅 README 变更；无 Actions workflow | PASS / E2 release evidence |
+| 分布式系统 / transition systems | [CAV 2025 Veil](https://doi.org/10.1007/978-3-031-98682-6_2) | [Veil @ 5a525ee](https://github.com/verse-lab/veil/tree/5a525eeca8cee37b2da8c010552db9b1aae968c2) | Apache-2.0；Lean 4.35.0；manifest 1.3.0；关键依赖 commit 固定 | transition-system safety/liveness framework；TrustAudit；SCP intertwined_safe | [CI Run #442](https://github.com/verse-lab/veil/actions/runs/45014566842) 同一 main SHA，Linux/macOS build + tests + examples PASS | PASS / E2 upstream CI |
+| 分布式系统 / SCP case | [FMBC 2020](https://doi.org/10.4230/OASIcs.FMBC.2020.9) | [Veil SCP example](https://github.com/verse-lab/veil/blob/5a525eeca8cee37b2da8c010552db9b1aae968c2/Examples/StellarConsensus/SCP.lean)；原始证明项目 [stellar/scp-proofs](https://github.com/stellar/scp-proofs) | Veil Lean 4.35.0；原始证明使用 Ivy + Isabelle/HOL | Veil example 只证明 safety；原始论文覆盖 safety + liveness under eventual synchrony | Veil Run #442 编译 examples；未将其误认为原始 SCP 全证明的复现 | PARTIAL / scope boundary |
+
+### 9.1 项目证据分级的本轮修正
+
+- build-verification.log 必须绑定到它实际加入的 commit；若被审计源码在该 commit 之后变化，历史 build 不能升级当前 main 的状态。
+- GitHub Release notes 报告的 lake build 可以作为上游 release build evidence，但必须标记为 RELEASE_BUILD_EVIDENCE；没有 workflow/run id 就不能写成 CI PASS。
+- CI PASS 必须核对 head_sha 与固定项目 commit 完全一致；PR head 的 PASS 不得移植到 base/main commit。
+- print axioms 不能发现 implemented_by/unsafe 对运行语义的影响；需要对 shipped route 的可达常量做单独审计，并用正向控制证明审计器确实能发现问题。
+- 模型字段名 axiom_0 不自动等于 Lean 全局 axiom；必须检查它是 class/structure field、参数假设还是顶层 axiom，并查看具体 instance 是否提供证明。
+- safety theorem 不蕴含 liveness；某个原始协议的 Ivy/Isabelle 完整证明，也不能传递给 Veil 中一个范围更窄的 Lean 示例。
