@@ -104,4 +104,4 @@ MathFin 是数学金融的形式化库，而不是量化策略回测系统。它
 
 ### PIT/no-lookahead 的第一份可执行规格原型
 
-已在 AI_book 专题分支建立独立 Lean 4.35.0 package，区分 eventTime 与 availableAt，并证明 eligibleRows 的所有输出均满足 availableAt ≤ decisionTime；一个“事件已发生但修订尚未发布”的例子被正确排除。当前仍是 filter safety，不是完整 as-of join；GitHub Actions build 结果待回读。它是 AI_Trader #488 可采用的形式化接口样例，不是对 #488 现有代码的验证。
+已在 AI_book 专题分支建立独立 Lean 4.35.0 package，区分 eventTime 与 availableAt，并证明 eligibleRows 的所有输出均满足 availableAt ≤ decisionTime；一个“事件已发生但修订尚未发布”的例子被正确排除。当前仍是 filter safety，不是完整 as-of join；GitHub Actions Run #15 的 `lake build` 已 PASS，两个 theorem 的 `#print axioms` 均为 `[propext]`。它是 AI_Trader #488 可采用的形式化接口样例，不是对 #488 现有代码的验证。
