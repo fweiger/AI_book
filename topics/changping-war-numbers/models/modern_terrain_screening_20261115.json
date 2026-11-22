@@ -1,0 +1,38 @@
+{
+  "run_date": "2026-11-15",
+  "source": "Mapzen Terrain Tiles public AWS S3 GeoTIFF z10, SRTM-derived modern terrain",
+  "tile_ids": [
+    "10/832/402",
+    "10/833/402",
+    "10/832/403",
+    "10/833/403"
+  ],
+  "study_bbox_wgs84": [
+    112.71,
+    35.63,
+    113.14,
+    35.99
+  ],
+  "dimensions_width_height": [
+    626,
+    647
+  ],
+  "approx_ground_pixel_m": 62,
+  "elevation_m": {
+    "min": 761,
+    "median": 963,
+    "max": 1403,
+    "p10": 839,
+    "p90": 1133
+  },
+  "slope_deg": {
+    "median": 5.1,
+    "p90": 12.7,
+    "share_lt_5": 0.489,
+    "share_lt_10": 0.814,
+    "share_gt_20": 0.01
+  },
+  "analysis_method": "PIL tile mosaic, Gaussian sigma 1, numpy gradient, local ground pixel ~=62m",
+  "status": "REAL_MODERN_DEM_SCREENING_COMPLETED_NOT_BC260_BATTLE_SIMULATION",
+  "limitations": "Not ancient roads, ancient forests, water crossings, garrison positions, topography around every small cliff, or real army count."
+}

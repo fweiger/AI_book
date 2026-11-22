@@ -1,6 +1,6 @@
 # AI_book · 全仓研究专题与项目索引
 
-> 快照：2026-11-14（北京时间）。索引同时覆盖 `main` 已入库资料、GitHub Issue 研究入口和未合并 PR。**被索引不代表结论成立或研究完成。**
+> 快照：2026-11-15（北京时间）。索引同时覆盖 `main` 已入库资料、GitHub Issue 研究入口和未合并 PR。**被索引不代表结论成立或研究完成。**
 > 详细进度、验收和最新变更以各 Issue / PR 为准；本文件是导航，不复制另一份研究进度账本。
 
 ## 读懂状态
@@ -34,6 +34,7 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 | TOPIC-010 | [为何工业革命首先发生在英国？1450—1850 五国比较 #30](https://github.com/fweiger/AI_book/issues/30) | [跨国基线草稿 PR #31](https://github.com/fweiger/AI_book/pull/31) | `ISSUE + DRAFT PR` |
 | TOPIC-011 | [2026 中期选举至 2029：美国政策—财政—AI 投资—市场竞争性假说 #41](https://github.com/fweiger/AI_book/issues/41) | [研究框架 PR #51](https://github.com/fweiger/AI_book/pull/51) | `ISSUE + OPEN PR` |
 | TOPIC-012 | [太空算力：轨道光伏、发射、散热与全生命周期经济性 #60](https://github.com/fweiger/AI_book/issues/60) | [M0 研究总纲草稿 PR #61](https://github.com/fweiger/AI_book/pull/61) | `ISSUE + DRAFT PR` |
+| TOPIC-013 | [长平之战：坑杀40万与古代参战数字史料审计 #64](https://github.com/fweiger/AI_book/issues/64) | [首轮研究 Draft PR #65](https://github.com/fweiger/AI_book/pull/65) | `ISSUE + DRAFT PR` |
 
 | TOPIC-014 | [四论与哲学思想体系：本体论、认识论、价值论、方法论的关系及哲学史比较 #66](https://github.com/fweiger/AI_book/issues/66) | [V1.2 草稿 PR #67](https://github.com/fweiger/AI_book/pull/67)：朱熹31B短评已在《晦菴集》卷48获原著回证，局部赞同不证明全论转向；27候选主张、31节点/130关系，署期及独立学术复核未完成 | `ISSUE + DRAFT PR · NOT_IN_MAIN` |
 
