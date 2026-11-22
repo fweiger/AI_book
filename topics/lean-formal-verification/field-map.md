@@ -46,3 +46,13 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 5. 分布式、信息论、控制：先核实源代码、具体声明与证明状态，再决定是否列为正式案例。
 
 所有项目的版本、许可证、构建和 sorry/admit/公理审计都在 case-studies.md 持续补齐。
+
+
+## E. M0 版本与生态边界发现（2026-11-22）
+
+- Lean 4 项目不能只按“Lean”标签合并。Liquid Tensor Experiment 的仓库 README 明确说明它使用 Lean 3；这是重要的大型形式化历史案例，但与当前 Lean 4/Mathlib4 项目的工具链不同。
+- 当前审查的 Lean 4 项目分别固定在 4.30.0、4.33.1、4.35.0、4.36.0 和 4.37.0-rc1。版本兼容和依赖锁是跨项目复现的首要工程问题。
+- Formal Conjectures 主要把猜想转成形式化声明，项目的贡献规则明确排除已解决陈述；它的价值是开放问题基准和 AI 定理证明任务，不代表项目内猜想已被证明。
+- EconCSLib 的稳定库接口与 OpenProblem 实验接口分离；Blueprint 记录了尚未实现的数学目标。必须分别记录 stable theorem、stated target 和 open problem。
+- Aeneas 的 Lean backend 位于 backends/lean 子目录，不能仅检查仓库根目录来判断 Lean 工具链和构建入口。
+- rust-lean 是多子项目集合；正确的审计单位应下沉到具体 Hax/Aeneas 子项目，而不是将仓库根目录当成单一 Lean 包。
