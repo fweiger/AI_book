@@ -23,3 +23,13 @@
 - **E4**：相关现实应用还获得领域内适当的外部/经验验证；E4 不是 Lean 自身可授予的等级。
 
 不要把一个项目的 E1/E2 自动传递给它引用的所有 theorem、模块或应用。
+
+
+| C-ID | 主张 | 来源 | 状态 | 最强限制/反例 |
+|---|---|---|---|---|
+| C018-010 | Liquid Tensor Experiment 当前仓库 README 明确说明其形式化引擎选择 Lean 3，而非 Lean 4 | [仓库 README](https://github.com/leanprover-community/lean-liquid/blob/ee4795874a99ea5f9d85bd0b364425f07b932377/README.md) | E1 / 固定 commit 已读 | 可作为 Lean 形式化历史案例，不应计为 Lean 4/Mathlib4 项目 |
+| C018-011 | Formal Conjectures 是 Lean 中形式化猜想陈述的集合；其项目近期 commit 澄清 solved statements 不在目标范围 | [仓库 README](https://github.com/google-deepmind/formal-conjectures/blob/2207c54d0dbe960de591d280f997b195bf3f6e28/README.md)；[commit](https://github.com/google-deepmind/formal-conjectures/commit/2207c54d0dbe960de591d280f997b195bf3f6e28) | E1 / 固定 commit 已读 | 猜想陈述被形式化不代表猜想已被证明 |
+| C018-012 | Aeneas 的 Lean backend 在审查 commit 中固定 Lean 4.36.0，并通过子目录 Lake 配置固定 Mathlib v4.36.0 | [Lean toolchain](https://github.com/AeneasVerif/aeneas/blob/2e3d4488280bb8a95411db81019a7854a784861f/backends/lean/lean-toolchain)；[Lake config](https://github.com/AeneasVerif/aeneas/blob/2e3d4488280bb8a95411db81019a7854a784861f/backends/lean/lakefile.lean) | E1 / 固定文件已读 | 本轮没有构建 Aeneas，也没有验证其所有 Rust 输入均可抽取 |
+| C018-013 | EconCSLib 的稳定导入接口与实验性 OpenProblem 接口分离；README 声明稳定接口无 deferred proofs，Blueprint 仍包含未实现目标 | [EconCSLib README](https://github.com/gametheoryinlean/EconCSLib/blob/7cf3a05abbad108bdda61e018444aa58995e47cc/README.md) | E1 / 固定 commit 已读 | README 声明不是本轮独立构建证明；open targets 不等于 proved theorem |
+| C018-014 | 代表项目的 Lean 工具链版本存在明显差异，项目必须使用各自固定的 toolchain 和依赖 revision | [M0 项目审计表](case-studies.md) | E1 / 10 个固定 commit 的文件快照 | 版本快照随项目更新；不应从一次快照推断未来兼容性 |
+
