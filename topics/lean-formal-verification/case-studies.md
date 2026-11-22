@@ -40,3 +40,37 @@
 3. lake build 通过 ≠ 形式化定义与原论文完全等价。
 4. Lean 定理通过 ≠ 被建模的物理/经济/金融假设符合现实。
 5. 有 AI prover 参与 ≠ AI 输出无需人工检查；最终 proof term 仍须由 Lean Kernel 检查。
+
+
+## M0｜版本化项目准入快照（2026-11-22）
+
+> 固定在各项目默认分支的读取 commit；此表是可回读的源码元数据快照，不是完整许可证审查或构建验收。
+
+| 项目 | 分支 / 固定 commit | Lean 工具链 | 许可证 | 构建配置 | CI / 构建状态 |
+|---|---|---|---|---|---|
+| [mathlib4](https://github.com/leanprover-community/mathlib4) | master · [a495318](https://github.com/leanprover-community/mathlib4/commit/a495318fed6482b3c90df686de5131b46a70fd5b) | leanprover/lean4:v4.37.0-rc1 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.lean | 该 commit 的 bors status = success；本轮未本地构建 |
+| [formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | main · [2207c54](https://github.com/google-deepmind/formal-conjectures/commit/2207c54d0dbe960de591d280f997b195bf3f6e28) | leanprover/lean4:v4.33.1 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.toml | 未取得该 commit 的 status context；本轮未构建 |
+| [lean-liquid](https://github.com/leanprover-community/lean-liquid) | master · [ee47958](https://github.com/leanprover-community/lean-liquid/commit/ee4795874a99ea5f9d85bd0b364425f07b932377) | **Lean 3 legacy**；README 明确说明项目选择 Lean 3 | 根 LICENSE 路径未找到，许可待核 | 根 Lake 文件路径未找到；需核对旧版构建配置 | README 有 build badge；本轮未运行 |
+| [Aeneas](https://github.com/AeneasVerif/aeneas) | main · [2e3d448](https://github.com/AeneasVerif/aeneas/commit/2e3d4488280bb8a95411db81019a7854a784861f) | Lean backend：leanprover/lean4:v4.36.0 | 根 LICENSE 路径未找到，许可待核 | backends/lean/lakefile.lean；该文件将 Mathlib 固定为 v4.36.0 | 未取得该 commit 的 status context；本轮未构建 |
+| [ArkLib](https://github.com/Verified-zkEVM/ArkLib) | main · [22a5232](https://github.com/Verified-zkEVM/ArkLib/commit/22a523255e17f5d387de05ca0dae215bb0cc2cad) | leanprover/lean4:v4.36.0 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.toml；显式固定 VCVio 与 CompPoly 依赖 commit | 未取得该 commit 的 status context；本轮未构建 |
+| [rust-lean](https://github.com/Verified-zkEVM/rust-lean) | main · [49a83d2](https://github.com/Verified-zkEVM/rust-lean/commit/49a83d2a231c24f8a26a694ca2badaa36fb3914d) | 多子项目集合；根 lean-toolchain 未找到 | 根 LICENSE 路径未找到，许可待核 | README 说明各子目录独立构建；根 Lake 文件未找到 | 本轮未逐子项目构建 |
+| [MathEconLib](https://github.com/matheconlib/matheconlib) | main · [4c696cc](https://github.com/matheconlib/matheconlib/commit/4c696ccb19f6598a3f350458e64a7ad2976c6631) | leanprover/lean4:v4.35.0 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.toml；Mathlib revision = v4.35.0 | 未取得该 commit 的 status context；本轮未构建 |
+| [EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | main · [7cf3a05](https://github.com/gametheoryinlean/EconCSLib/commit/7cf3a05abbad108bdda61e018444aa58995e47cc) | leanprover/lean4:v4.30.0 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.toml；Mathlib revision = v4.30.0 | README 提供 cache/build 命令；本轮未执行 |
+| [MathFin](https://github.com/formal-applied-math/formal-mathfin) | main · [cbe842d](https://github.com/formal-applied-math/formal-mathfin/commit/cbe842dda1e71fd7173f3325971796686dbf7feb) | leanprover/lean4:v4.35.0 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.lean | 未取得该 commit 的 status context；本轮未构建 |
+| [physicslib4](https://github.com/physicslib/physicslib4) | main · [cab9208](https://github.com/physicslib/physicslib4/commit/cab9208e44d6869b602dd2d73814aa1f9555367b) | leanprover/lean4:v4.35.0 | Apache-2.0（根 LICENSE 已读） | 根 lakefile.toml；Mathlib revision = v4.35.0 | 未取得该 commit 的 status context；本轮未构建 |
+
+### 版本审查发现
+
+1. 同一研究生态中已观察到 Lean 4.30.0、4.33.1、4.35.0、4.36.0 和 4.37.0-rc1；不能为所有项目指定一个全局版本。
+2. Mathlib 当前 master 快照使用 4.37.0-rc1；MathEconLib、MathFin、physicslib4 使用 4.35.0；ArkLib/Aeneas Lean backend 使用 4.36.0；EconCSLib 使用 4.30.0。
+3. Liquid Tensor Experiment 的 README 明确写明其使用 Lean 3，因为项目启动时 Lean 4 缺少所需数学基础设施。它可作为大型形式化工程历史案例，但不能冒充 Lean 4 项目。
+4. Formal Conjectures 是猜想陈述形式化集合；项目近期 commit 明确澄清 solved statements 不在其目标范围。不能把“已形式化猜想”理解为“猜想已证明”。
+5. EconCSLib README 区分稳定导入接口与实验性 OpenProblem；其 Blueprint 同时记录已形式化内容和仍需 Lean 实现的数学目标。
+6. 根目录找不到 LICENSE/lean-toolchain/lakefile 不等于项目没有许可或无法构建；对 Aeneas、rust-lean 等多层仓库必须审查实际子项目路径。
+
+### 审计限制
+
+- 本轮读取了 10 个仓库元数据、默认分支 commit、README；确认了 7 个根目录 Apache-2.0 LICENSE、7 个根目录 Lean 4 toolchain、1 个 Aeneas 子目录 Lean toolchain，以及 8 个根/子目录 Lake 配置入口。
+- Liquid Tensor 是 Lean 3 legacy；rust-lean 是多子项目集合，不能以根目录配置代表所有子项目。
+- 除 Mathlib 的 bors success 外，本轮未从当前 status 查询得到其他 commit 的状态上下文；这不等于其 CI 不存在。
+- 所有项目的本地构建均 NOT_RUN；依赖锁文件、完整许可证、proof status、sorry/admit 与公理依赖仍待核。
