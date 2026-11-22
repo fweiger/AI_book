@@ -198,3 +198,27 @@ Hax 与 Aeneas 两个目录中的 Rust 源文件 \`compute_log_arity_for_round\`
 - 当前 Hax main（2026-11-16 commit \`0d2f66ed697c46d7c0f5038150b7c9679e4d954b\`）Cargo workspace version 为 0.5.0，Lean library toolchain 为 4.35.0，默认 hax-lean-lib 为 v0.3.42；PR #2064 已重命名 Lean backends，PR #2142 已使 \`cargo hax into lean\` 默认生成完整 Lean package。不可直接用当前 main 替换旧 FRI 项目依赖而不迁移 Lean/Mathlib/ArkLib 版本。
 - 对 rust-lean 固定 commit 查询 workflow runs 和 combined status 均未返回记录；本轮本地环境也没有 Lean/Lake/Elan/Rust/Cargo 可执行文件。故 Hax/Aeneas build 均为 **NOT_RUN**，不是 PASS，也不能由 README 的历史 build 说明替代。
 
+
+## M0.4｜Hax ADC 历史问题的上游修复状态与版本漂移（2026-11-22）
+
+Hax ADC README 所列 Issue #1911/#1912/#1915/#1916/#1914 反映早期开发快照，不能直接当作当前 Hax 限制。
+
+| 旧问题 | 上游状态与证据 | 当前解释 |
+|---|---|---|
+| #1911 cast_op 后加法类型推断 | [PR #1925](https://github.com/pereq-dev/hax/pull/1925) 已合并（2026-02-09），增加显式类型标注并覆盖 cast 后加法测试 | 早期障碍已在上游修复；目标项目仍需实测 |
+| #1912 cast 后 shift 类型问题 | 同由 [PR #1925](https://github.com/pereq-dev/hax/pull/1925) 处理 | 不再泛称当前版本不支持 |
+| #1915 hax_bv_decide 不接受原规格 | [PR #1933](https://github.com/pereq-dev/hax/pull/1933) 已合并（2026-02-11），引入 specset int / specset bv 与 hax_mvcgen | 整数推理和 bit-vector 证明需使用不同规格集 |
+| #1916 RustM 单子表达式难以自动化 | 上游讨论给出通过 @[spec] 与 mvcgen 将 RustM 规格归约为纯 Lean 目标的做法 | 不是简单消除 monad，而是提供合适 spec 并经 mvcgen 归约 |
+| #1914 模块名首字母大写 | [PR #1927](https://github.com/pereq-dev/hax/pull/1927) 已合并（2026-02-11） | 上游已调整模块命名 |
+| 默认生成完整 Lean package | [PR #2142](https://github.com/pereq-dev/hax/pull/2142) 已合并（2026-08-26） | 新版默认生成 lean-toolchain、lakefile、root module、Verification/ 与 Assumptions/ |
+
+### 版本漂移
+
+- Hax-FRI manifest 固定 Hax commit 1332b8fa19967234232473d0d3ec88e4d8ce8424，标题为升级 Lean v4.26.0，创建于 2026-01-20。
+- Hax PR #1925（2026-02-09）和 #1933（2026-02-11）晚于该固定 commit；不能假定 Hax-FRI 已包含这些修复。
+- Hax 0.5.0 changelog（2026-11-09）要求 Lean 4.35.0，并包含 Lean backend breaking changes；与 Hax-FRI Lean 4.26.0 基线不同，不能直接替换而不迁移。
+- Hax 0.5.0 还涉及 Lean module 结构、Assumptions/、Aeneas/Charon 工具版本等变化。升级应作为独立兼容性实验。
+
+### 证据边界
+
+已读取 Hax issues/PR 状态和 PR 描述；#1925、#1927、#1933、#2142 均 merged。已读取 Hax 0.5.0 changelog。未在 Hax-FRI 运行旧版构建，也未做 4.26.0 → 4.35.0 迁移。上游 PR merged 不等于 rust-lean 项目已采用修复或端到端 FRI 正确性证明完成。
