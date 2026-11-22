@@ -113,10 +113,10 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|LAKE-MANIFEST-AUDIT-20261122
-- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|STRUCTURAL-CI-PASS-20261122
+- **当前 active_event_key：** none
+- **当前 writer_owner：** none
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|LAKE-MANIFEST-AUDIT-20261122
 - **旧 Writer 已停止/隔离证据：** not_applicable（初始化无并发事件写入）
 - **若无法 fencing：** 不适用
 
@@ -127,4 +127,4 @@
 | §5阻断与未受影响工作 | 项目深审尚未完成；其他领域可继续 | §5 | CONSISTENT |
 | §6路径变更与第7节裁决 | 先做项目准入，避免堆砌未经核实案例 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向 M0 版本化项目准入 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 结构校验事件已同步；本轮 Lake manifest 事件待写入 | [Issue comment #7077193390](https://github.com/fweiger/AI_book/issues/74#issuecomment-7077193390) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING |
+| 最新 Issue 进度事件与本文件版本 | Lake manifest 审计事件已写入 Issue #74，评论列表 GET 回读确认 | [Issue comment #7077332549](https://github.com/fweiger/AI_book/issues/74#issuecomment-7077332549) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
