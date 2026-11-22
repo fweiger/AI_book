@@ -181,3 +181,8 @@
 - [Large-eddy simulations with ClimateMachine v0.2.0](https://doi.org/10.5194/gmd-15-6259-2022)；ClimateMachine.jl README 标记旧仓库不再维护，后续资源转向 ClimaCore/ClimaAtmos/ClimaCoupler。
 
 - [Hax: high-assurance translation of Rust into Lean/F*/Rocq](https://github.com/pereq-dev/hax)；README identifies Lean as one supported backend.
+
+- [SP1-lean formal verification](https://github.com/succinctlabs/sp1-lean)；[Zisk-FV Lean project](https://github.com/eth-act/zisk-fv)；[OpenVM Lean verification announcement](https://blog.openvm.dev/fv)。
+- [Hax Rust-to-Lean/F*/Rocq translator](https://github.com/pereq-dev/hax)；[Aeneas/Rust-to-Lean pipeline experience report](https://arxiv.org/abs/2605.30106)。
+- [Black–Scholes (1973)](https://doi.org/10.1086/260062)；[Cox–Ross–Rubinstein (1979)](https://doi.org/10.1016/0304-405X(79)90015-1)。
+- [HepLean: Digitalising high energy physics](https://doi.org/10.1016/j.cpc.2024.109457)；[Large-eddy simulations with ClimateMachine v0.2.0](https://doi.org/10.5194/gmd-15-6259-2022)。
