@@ -222,3 +222,66 @@ Hax ADC README 所列 Issue #1911/#1912/#1915/#1916/#1914 反映早期开发快�
 ### 证据边界
 
 已读取 Hax issues/PR 状态和 PR 描述；#1925、#1927、#1933、#2142 均 merged。已读取 Hax 0.5.0 changelog。未在 Hax-FRI 运行旧版构建，也未做 4.26.0 → 4.35.0 迁移。上游 PR merged 不等于 rust-lean 项目已采用修复或端到端 FRI 正确性证明完成。
+
+## M0.5｜MathFin：金融数学形式化库与可迁移的研究方法（2026-11-22）
+
+> 固定审查仓库：[formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin)，commit `cbe842dda1e71fd7173f3325971796686dbf7feb`。Lean toolchain = `leanprover/lean4:v4.35.0`；Lake manifest 固定 Mathlib `e91b128082cc221d6432a6a5aadcd3243af8e76c`、BrownianMotion `497e5e2a60450796f75ab920e6c33addae4d644d`、LeanArchitect `9f3bb53916b9d6fa05b7777389e1844f82b1c9a6` 等依赖。
+
+### 1. 覆盖范围与形式化状态
+
+MathFin 是 Lean 4 数学金融库，覆盖随机分析、Itô 积分与公式、Girsanov、鞅表示、SDE、无套利理论、衍生品定价、固定收益、投资组合、风险度量和精算数学。
+
+README 报告 906 项文献结果：866 `full`、18 `library_wrapper`、22 `reduced_core`。本轮额外解析三个 benchmark JSON：`risk_measures.json` 49 项、`portfolio_and_performance.json` 67 项、`binomial.json` 40 项，共 156 项，均标记 `full`。156 是本轮抽查的三个文件，不是全库重算。
+
+项目将形式化保真度区分为：
+- `full`：从诚实假设出发的真实形式化推导；
+- `library_wrapper`：直接调用 statement 匹配的 Mathlib/BrownianMotion 定理；
+- `reduced_core`：证明比文献命名结果更窄的核心内容；
+- `placeholder`：可编译但尚未表达有意义的目标。
+
+只有 `full + library_wrapper` 计入交付就绪数量。项目明确禁止把“能编译”与“忠实证明了文献定理”混为一谈。
+
+### 2. 三个可迁移的金融数学案例
+
+**A. Gaussian CVaR 的 Rockafellar–Uryasev 变分刻画**
+
+在损失 (L=mu+sigma Z)、(sigma>0)、(Phi(z)=alpha<1) 的 Gaussian 模型下，证明
+[
+operatorname{CVaR}_alpha(L)
+=min_cleft(c+rac{mathbb E[(L-c)^+]}{1-alpha}ight),
+]
+最小值在 (c=operatorname{VaR}_alpha(L)) 取得。
+
+证明不是只整理闭式公式，而是构造点态证书 ((L-c)^+ge (L-c)mathbf 1_{Z>z})，积分后得到任意阈值 c 的下界，再证明 VaR 处取等。源码：[RockafellarUryasev.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean)。benchmark 状态为 `full`、Axioms-clean。限制：Gaussian 损失与参数化假设，不是对真实 A 股收益分布的经验验证。
+
+**B. Markowitz Lagrangian FOC 的充分性**
+
+对半正定协方差矩阵 (Sigma)，若组合 w 满足预算与目标收益约束，并满足
+[
+Sigma w=lambda_1mathbf 1+lambda_2mu,
+]
+则证明 w 在同一可行集合内具有不高于其他组合的方差。源码：[MarkowitzLagrangian.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Choice/Portfolio/MarkowitzLagrangian.lean)。证明使用约束切空间中的 admissible perturbation、方向导数系数和 KKT sufficiency。限制：证明的是 FOC (Rightarrow) 全局最小方差；没有证明每个最优组合都必须满足该 FOC。
+
+**C. CRR 二叉树到 Black–Scholes 的收敛**
+
+先把单步风险中性收益的特征函数写成 cos/sin 形式，证明 (n(arphi_n-1)) 收敛到 Gaussian 指数，再用复数幂极限和 Lévy 连续性定理得到 n 步对数收益的分布收敛；随后用有界 Put payoff 与 Put-Call Parity 得到 Call 价格收敛。源码：[CRRCharFun.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean)、[CRRClosedForm.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRClosedForm.lean)。benchmark 状态为 `full`、Axioms-clean。
+
+**额外的形式化质量案例：排除 vacuous theorem。** CRR Call 收敛定理曾把 no-arbitrage 假设量化到 n=0；但 n=0 时 u=d=1，no-arbitrage 条件不可能成立，因此原定理假设不可满足，证明会空洞成立。项目在 2026-08-20 修正为只要求 n≥1，并给出 `binomialNoArb_crr`，在 (|r|sqrt T<sigma) 时证明该条件可满足。该修正记录在 [binomial benchmark](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/binomial.json)。这说明形式化审查不仅要看 proof term，还要检查前提是否可满足。
+
+### 3. 公理审计与构建治理
+
+- [MathFin/AxiomAudit.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/AxiomAudit.lean) 对代表性关键定理使用 `#guard_msgs in #print axioms` 固定其公理依赖。
+- 生成文件 [MathFin/AxiomAuditGen.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/AxiomAuditGen.lean) 对 benchmark proof 实际引用的 1,115 个 MathFin 常量及 29 个上游常量固定精确公理集；新增 `sorryAx` 或非标准公理会导致对应 guard/build 失败。
+- [build.yml](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/.github/workflows/build.yml) 定义 Python honesty gates、`lake build`、声明索引与公理审计；[reproduce.sh](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/scripts/reproduce.sh) 提供 clean-clone 复现命令，`--corpus` 还会逐条重新 elaboration benchmark。
+- `MathFinFrontier` 的 connector 是单独的未证明声明库，不被 `MathFin` 导入；根目录 `Challenge.lean` 的两个 sorry 是 Palomar Challenge/Solution 契约的一部分，由 `Solution.lean` 对应证明。不能把这些外围目标的 sorry 与核心 `MathFin/` 的证明状态混为一谈。
+- 本轮没有从 GitHub connector 获得该 commit 的 workflow run 或 status context；构建工作流“存在”不等于本轮已验证它通过。本机也没有 Lean/Lake/Elan，因此本轮 build = NOT_RUN。
+
+### 4. 对量化金融研究的适用边界
+
+MathFin 证明的是**金融数学模型与算法性质**，不是市场数据真实性、因子有效性或策略盈利性。对 AI_Trader #488 的合理分工是：
+
+- Lean：形式化数据准入与程序不变量，例如 observation 的 `availableAt ≤ decisionTime`、as-of filter 不泄漏未来版本、point-in-time 股票池成员资格、订单/现金/持仓状态转换和风险约束；
+- Python：读取真实行情/Level2、数值计算、统计检验、交易成本、样本外回测与性能评估；
+- 数据供应商时间戳、历史修订、缺失数据与市场机制事实仍需独立数据证据，Lean 不能凭空证明这些外部事实为真。
+
+本专题只建立这种方法映射，不接管 AI_Trader #488 的实证实验，也不声称已经实现 PIT Lean proof。
