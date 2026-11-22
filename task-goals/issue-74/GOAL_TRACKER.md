@@ -8,18 +8,18 @@
 - 所属源仓库：fweiger/AI_book
 - 项目入口：[TOPIC-018 README](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/README.md)
 - 本文件路径：task-goals/issue-74/GOAL_TRACKER.md
-- 当前阶段：M0/M1/M2/M3｜项目准入、数学与跨学科证据地图、方法库并行推进
+- 当前阶段：M2｜Lean 跨行业应用框架与机会地图主线；论文/项目映射和项目审计按机会触发
 - 创建时间：2026-11-22
-- 最近更新：2026-11-23（核对最新 PR head d987f59；Lean PIT Run #45 与知识库完整性 Run #1276 均 PASS；纠正 Tracker 历史状态冲突）
+- 最近更新：2026-11-23（Lean 跨行业应用框架 v0.1 已建立；已验证 PR head 59a287a 的 knowledge integrity 与 Lean PIT 检查均 PASS）
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
-- 本轮 Tracker 写入前观察到的最新 PR head：d987f59d21a273c3f7f5c96d992a7411e40629c3
+- 本轮 Tracker 写入前观察到的最新已验证 PR head：59a287a5cf5f761e21ad2d10798de508e6869cd4
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
-- 目标漂移状态：D0（Hax/Aeneas、MathFin 和 PIT 原型均直接推进 AC-03/04/05/06；没有接管 AI_Trader #488）
-- 状态一致性：CONSISTENT（已将 §3/§4/§10 的 PIT build、最新 PR head 与 CI 统一到 d987f59 / Run #45 / Run #1276；§7 当前项目审计动作与 §9/§10 最新历史相符；规范 Issue #74 批准基线未改变）
-- Issue 同步状态：SYNCED（状态纠偏事件已写入规范 Issue #74 并回读唯一匹配，见 comment #7082188858）
+- 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
+- 状态一致性：STATE_CONFLICT pending 当前行业应用框架事件同步；Tracker/文档证据已更新，等待 Issue #74 回执写入并回读；批准基线未改变
+- Issue 同步状态：ISSUE_SYNC_PENDING（Batch A 事件已同步；当前框架 v0.1 事件待同步）
 
 ## 1. 批准目标基线
 
@@ -75,7 +75,7 @@
   - 历史 GitHub Actions run #1201 只验证旧 commit 的知识库结构/链接/YAML，不是 Lean build。
 - **尚未验证/失败/未知：**
   - 当前本地执行环境仍没有 Lean/Lake/Elan，但 PIT 最小项目已由 GitHub-hosted Actions 实际构建；Hax/Aeneas/MathFin 等外部项目仍未在本轮独立 build。
-  - 当前 PR head `f7a2c55dca048d8c2e4c513528ab05096a27aa8d` 的 Lean PIT build 与 knowledge integrity 两项检查均 success；PR #75 仍为 Draft、未合并。
+  - 已验证 PR head `59a287a5cf5f761e21ad2d10798de508e6869cd4` 的 Knowledge-base integrity Run #1291 与 Lean PIT Run #60 均 success；PR #75 仍为 Draft、未合并。
   - 未独立复现 MathFin 完整 corpus、Hax 官方 ADC example、Hax-FRI 或 Aeneas FRI build。
   - 本轮未运行外部 MathFin、Hax-FRI、Aeneas、AI4SLT、Rate-Distortion、Veil 等项目的独立 build；各自仍按 NOT_RUN 记录。
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
@@ -155,7 +155,7 @@
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致；未修改 Goal/Scope/Non-goals/AC | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
 | §3/§4当前阶段与实际证据 | 行业应用框架 v0.1 已提交；PR head f7a2c55 的 validate-knowledge Run #1289 与 Lean PIT Run #58 均 success；项目审计未新增 | [主框架](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-application-framework.md) / [行业机会地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-opportunity-map.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
-| §6路径变更与第7节裁决 | PIT build 已完成；第7节已转向领域论文—项目矩阵 | §6/§7 | PASS |
+| §6路径变更与第7节裁决 | 研究顺序已调整为行业需求→形式化问题→Lean能力→论文/项目；项目审计只在具体方向需要时触发 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 均已调整为先建立行业应用框架；项目审计改为具体方向选定后的按需工作 | §7/§9 | PASS |
 | 最新 Issue 进度事件与本文件版本 | Batch A 完成事件已同步；本轮框架事件尚待发布，当前 Writer 声明有效 | [Issue comment #7083593912](https://github.com/fweiger/AI_book/issues/74#issuecomment-7083593912) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING / CLAIMED |
 
