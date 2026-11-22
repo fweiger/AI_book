@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "topic_version": "0.4.0",
+  "topic_version": "0.5.0",
   "topic_id": "TOPIC-018",
   "title": "Lean 形式化证明与跨学科可验证系统",
   "source_level": "官方文档、公开项目页面和论文初筛；项目构建与独立复现尚未完成",
@@ -166,6 +166,42 @@
       "id": "L22",
       "type": "governance",
       "title": "Hax version compatibility and generated Lean package migration",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L26",
+      "type": "case_study",
+      "title": "MathFin：金融数学形式化库",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L27",
+      "type": "governance",
+      "title": "形式化保真度等级与 scope disclosure",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L28",
+      "type": "method",
+      "title": "生成式 axiom audit 与 CI soundness floor",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L29",
+      "type": "method",
+      "title": "Gaussian CVaR 的 pointwise certificate",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L30",
+      "type": "method",
+      "title": "CRR→Black-Scholes 的特征函数收敛",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L31",
+      "type": "method",
+      "title": "Markowitz Lagrangian FOC 的 KKT 充分性",
       "evidence_level": "E1"
     }
   ],
@@ -344,6 +380,51 @@
       "source": "L22",
       "target": "L16",
       "relation": "控制升级后构建与证明状态验收"
+    },
+    {
+      "source": "L26",
+      "target": "L27",
+      "relation": "显式区分形式化保真度"
+    },
+    {
+      "source": "L26",
+      "target": "L28",
+      "relation": "生成公理依赖审计"
+    },
+    {
+      "source": "L26",
+      "target": "L29",
+      "relation": "风险度量的最优性证明"
+    },
+    {
+      "source": "L26",
+      "target": "L30",
+      "relation": "离散定价模型到连续极限"
+    },
+    {
+      "source": "L26",
+      "target": "L31",
+      "relation": "投资组合约束优化"
+    },
+    {
+      "source": "L27",
+      "target": "L16",
+      "relation": "限制研究结论的证据等级"
+    },
+    {
+      "source": "L28",
+      "target": "L16",
+      "relation": "检查 theorem 传递公理依赖"
+    },
+    {
+      "source": "L29",
+      "target": "L08",
+      "relation": "形式化 CVaR 风险度量"
+    },
+    {
+      "source": "L30",
+      "target": "L08",
+      "relation": "形式化 CRR 定价收敛"
     }
   ],
   "reading_paths": [
@@ -442,6 +523,18 @@
         "L22",
         "L16"
       ]
+    },
+    {
+      "id": "Q09",
+      "name": "金融数学形式化与量化边界",
+      "nodes": [
+        "L26",
+        "L27",
+        "L28",
+        "L29",
+        "L31",
+        "L30"
+      ]
     }
   ],
   "claim_index": "claims.md",
@@ -457,6 +550,9 @@
     "同一 Rust 函数上的单个对照样本不能推出 Hax/Aeneas 的普遍优劣",
     "源码中无 sorry 不等于已由 Lean Kernel 独立构建验收；必须记录实际 build",
     "跨库 bridge 中的 axiom/opaque 会把证明义务移出当前 theorem，必须单独审计",
-    "上游修复已合并不代表目标项目固定依赖已包含修复；旧版复现和新版迁移必须分开验收"
+    "上游修复已合并不代表目标项目固定依赖已包含修复；旧版复现和新版迁移必须分开验收",
+    "MathFin 的金融数学 theorem 不等同于真实市场数据、因子有效性或策略盈利证明",
+    "CRR 等 theorem 必须检查假设非空性，避免 vacuous theorem",
+    "PIT/no-lookahead formalization 仍是候选研究设计，尚未在 AI_Trader 或生产代码验证"
   ]
 }
