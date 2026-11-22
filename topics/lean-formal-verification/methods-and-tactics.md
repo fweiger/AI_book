@@ -158,3 +158,22 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **失败边界**：若要证明 panic-freedom/total correctness，还需单独证明输入条件足以保证所有 checked subtraction 和分支成功。
 - **来源**：[Hax FoldingCorrectness](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/hax-FRI/lean/P3FriProofs/Proofs/FoldingCorrectness.lean) · [Aeneas BasicProofs](https://github.com/Verified-zkEVM/rust-lean/blob/49a83d2a231c24f8a26a694ca2badaa36fb3914d/aeneas-FRI/fold_arity_lean/FoldArityVerif/BasicProofs.lean)。
 - **状态**：E1 / 源码方法已读；未构建。
+
+## 9. Hax 规格分组与版本升级方法卡
+
+### M-04｜双规格集：整数推理与位向量 bit-blasting 分离
+
+- **问题**：同一 Rust 程序既需要数学整数描述功能正确性，又需要 bit-vector 语义刻画机器整数溢出/位级运算；单一规格集合可能不适合两类 tactic。
+- **上游方案**：Hax PR #1933 引入 @[specset int] 与 @[specset bv]，并通过 set_option hax_mvcgen.specset 选择规格集；使用 hax_mvcgen 包装 mvcgen，自动收集对应规格引理。
+- **执行步骤**：为数学语义建立 int 规格集并用 grind/omega；为位级语义建立 bv 规格集并用 hax_bv_decide/bv_decide；在目标证明处显式选择；检查两套规格的语义一致性。
+- **失败边界**：规格集选择错误、前后置条件不一致、抽取后模型不在 tactic 支持片段内，仍会失败。
+- **来源**：[Hax PR #1933](https://github.com/pereq-dev/hax/pull/1933)。
+- **状态**：E1；尚未在 rust-lean ADC 项目独立复现。
+
+### M-05｜Hax 项目版本升级与生成结构迁移
+
+- **问题**：Hax 生成代码与 Lean proof library、Aeneas/Charon、Lean toolchain 强版本耦合。
+- **步骤**：固定原项目 commit/Hax commit/Lean toolchain/Lake manifest；先复现旧环境；单独建立升级分支；采用新版本迁移 Extraction/、Assumptions/、Verification/、root module 与 Lake 配置；重跑 extraction、Lean build、spec proofs 和项目级 correctness theorem；保留新旧生成代码差异和日志。
+- **失败边界**：只升级 Lean 或 Hax CLI，不同步迁移 proof library、Aeneas/Charon 和 manifest，会形成不可复现混合环境。
+- **来源**：[Hax PR #2142](https://github.com/pereq-dev/hax/pull/2142) · [Hax CHANGELOG](https://github.com/pereq-dev/hax/blob/main/CHANGELOG.md)。
+- **状态**：E1；迁移和构建未执行。
