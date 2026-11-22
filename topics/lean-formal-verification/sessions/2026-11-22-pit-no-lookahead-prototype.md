@@ -24,3 +24,13 @@
 ## 下一步
 
 读取 PR #75 最新 head 的 `Lean PIT no-lookahead proof` workflow run 和 job 结果；若失败，按实际 Lean 编译错误修复；若通过，再增加 latest eligible revision 的显式排序/选择规范，而不是直接扩展到生产数据。
+
+## Post-run verification (2026-11-22)
+
+- GitHub Actions [Lean PIT no-lookahead proof Run #15](https://github.com/fweiger/AI_book/actions/runs/45031340887) completed successfully.
+- Job: `build`; step `Build with pinned Lean toolchain`: success.
+- Log: Lean 4.35.0 installed; Lake built `PITNoLookahead`; `Build completed successfully (3 jobs)`.
+- `#print axioms PITNoLookahead.eligibleRows_no_lookahead` → `[propext]`.
+- `#print axioms PITNoLookahead.late_available_revision_excluded` → `[propext]`.
+- The proof uses the standard propositional extensionality axiom only; no `sorryAx`, no user-declared axiom, and no `Classical.choice` were reported.
+- This is E2 for the minimal eligibility filter proof. It does not promote the full as-of join or any external data timestamp to verified status.
