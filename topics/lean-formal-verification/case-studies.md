@@ -306,3 +306,39 @@ MathFin 证明的是**金融数学模型与算法性质**，不是市场数据�
 - 最新 Run #19 的 `#print axioms` 对两个定理均输出 `[propext]`，没有 `sorryAx`、`Classical.choice` 或用户自定义 axiom。该标准公理依赖已在 job log 实际回读。 [Run #19](https://github.com/fweiger/AI_book/actions/runs/45031617398)。\n- 这是 eligibility filter safety theorem，不是完整 as-of join；尚未证明 latest eligible revision 选择、输入排序、重复版本优先级、空值处理。
 - 定理假设 availableAt 时间戳本身可信；它不证明数据供应商时间戳真实，也不证明任何因子有效或策略盈利。
 - 该原型位于 AI_book 专题分支，不修改 AI_Trader #488。
+
+## M0.7｜跨学科“研究方向—论文—Lean/相邻项目”映射（2026-11-22）
+
+> 完整方向和来源矩阵见 [field-evidence-matrix.md](field-evidence-matrix.md)。本节只记录本轮新核验的项目边界、版本线索和证据等级。
+
+| 领域 | 本轮确认的 Lean 项目/框架 | 论文/理论来源 | 当前证据与限制 |
+|---|---|---|---|
+| 数学 | Mathlib、Formal Conjectures、Liquid Tensor | Mathlib CPP 2020、Mathlib Papers 索引 | 基础设施成熟，但具体 theorem 仍需逐项核验 |
+| CS/程序验证 | CSLib、CertifyingDatalog、LeanLTL、Lentil、Loom、Veil、Velvet、Aeneas/Hax | CSLib EPTCS 2026、Datalog ITP 2025、LeanLTL ITP 2025、Veil CAV 2025、POPL 2026 multi-modal verifiers | 已读取多个 README、论文和配置；外部项目未在本轮独立 build |
+| 密码学 | VCVio、ArkLib、CompPoly、Aeneas/Hax、rust-lean | VCVio ePrint 2026/899、Rust-to-Lean pipeline 2026 | 抽取、协议证明和实现精化是不同层次 |
+| 分布式 | Veil、IFP、Lentil、Resonate Specification、btc-verified | Veil CAV 2025、Verdi PLDI 2015、IronFleet SOSP 2015、Raft USENIX 2014 | IFP 仅受限 Phase 1；Resonate 不是共识；btc-verified 不是完整 consensus proof；未确认完整 Lean Raft/Paxos |
+| 经济学 | MathEconLib、gametheoryinlean/EconCSLib、nikhgarg/EconCSLib、Econlib | EconCSLib 两篇 2026 论文 | 两个 EconCSLib 同名但独立；MathEconLib 当前偏微观基础；宏观/计量仍有空白 |
+| 金融数学 | MathFin、BrownianMotion、PIT prototype | MathFin arXiv 2606.01356、Markowitz、Rockafellar–Uryasev、CRR | MathFin 论文 804 benchmark vs 当前 README 906；不是经验回测系统 |
+| AI/ML/统计 | AI4SLT、TorchLean、LeanDojo-v2 | AI4SLT ICML 2026、TorchLean 2026、LeanDojo-v2 2026 | 学习理论、模型验证、AI 证明工具需分开；未独立 build |
+| 物理/量子 | Physlib、PhyslibAlpha、QuantumInfo、physicslib4、Lean-QuantumInfo | HepLean CPC 2025、Generalized Quantum Stein 2025、FormalQFT 2026 | 多个独立 codebase，不能当作一个完整统一库 |
+| 信息论 | LeanInfoTheory、infotheorylib、rate_distortion_lean4、KTAIT | Rate-Distortion Lean 2026、Cover–Thomas、El Gamal–Kim | LeanInfoTheory 官网部分页面滞后；infotheorylib 使用 Lean 4.37.0-rc1 |
+| 控制 | DynamicalSystems、LeanForControl、control-theory-in-lean、TorchLean | Foundations of Machine-Checked Control Theory in Lean 2026 | DynamicalSystems 与 LeanForControl 是不同项目；toolchain 版本不同 |
+
+### 本轮重要边界发现
+
+1. **BFT 不等于共识完整证明**：IFP README 声称 103 个 safety invariants 中 93 个已机器验证，但其 Phase 1 是两参与者、单 epoch 的受限实例；成员动态变化和完整部署语义不能据此推断。
+2. **时序逻辑不等于分布式协议实现**：LeanLTL/Lentil 提供逻辑和 trace 语言；Veil 才是状态转换系统验证框架；具体协议仍需模型、故障假设和 safety/liveness theorem。
+3. **AI4SLT 不等于金融策略验证**：它提供经验过程与泛化界的数学基础；市场分布、样本外表现和回测泄漏仍需数据与统计实验。
+4. **StatWhy 是相邻非 Lean 工具**：其目标是检查统计假设检验程序是否声明了必要条件，不是证明未知总体分布假设为真。
+5. **信息论项目并非同一库**：LeanInfoTheory 偏通用有限离散 API，infotheorylib 偏教材逐章映射，rate_distortion_lean4 聚焦有限字母表率失真定理。
+6. **金融数学与实证量化有边界**：MathFin 可形式化风险、定价和组合理论；本轮没有找到成熟 Lean 项目直接覆盖 A 股 Level-2 因子、PIT 历史修订、IC/IR、交易成本和回测执行。
+
+### PIT 原型最新构建状态（更新至 2026-11-22）
+
+- 证明源码提交：2cbece7184815f8d17bf09130f66dd024630e51c。
+- [Lean GitHub Actions Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832)：Lean 4.35.0 lake build success，3 个构建任务完成。
+- eligibleRows_no_lookahead 与 late_available_revision_excluded 均编译成功；两个 theorem 的 print axioms 均为 [propext]。
+- [Knowledge integrity Run #1255](https://github.com/fweiger/AI_book/actions/runs/45031763864)：success。
+- 后续 Tracker-only commit 未修改 PIT proof/package。该结果仍只证明 eligibility filter safety，不是完整 latest-revision as-of join。
+
+**本轮外部项目状态：** 未对上述外部 Lean 仓库执行独立 clean build；均按 README/论文/配置证据分级，不标 E3。
