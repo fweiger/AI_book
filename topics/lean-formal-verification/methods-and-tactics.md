@@ -161,16 +161,7 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 
 ## 9. Hax 规格分组与版本升级方法卡
 
-### M-04｜双规格集：整数推理与位向量 bit-blasting 分离
-
-- **问题**：同一 Rust 程序既需要数学整数描述功能正确性，又需要 bit-vector 语义刻画机器整数溢出/位级运算；单一规格集合可能不适合两类 tactic。
-- **上游方案**：Hax PR #1933 引入 @[specset int] 与 @[specset bv]，并通过 set_option hax_mvcgen.specset 选择规格集；使用 hax_mvcgen 包装 mvcgen，自动收集对应规格引理。
-- **执行步骤**：为数学语义建立 int 规格集并用 grind/omega；为位级语义建立 bv 规格集并用 hax_bv_decide/bv_decide；在目标证明处显式选择；检查两套规格的语义一致性。
-- **失败边界**：规格集选择错误、前后置条件不一致、抽取后模型不在 tactic 支持片段内，仍会失败。
-- **来源**：[Hax PR #1933](https://github.com/pereq-dev/hax/pull/1933)。
-- **状态**：E1；尚未在 rust-lean ADC 项目独立复现。
-
-### M-05｜Hax 项目版本升级与生成结构迁移
+### M-15｜Hax 项目版本升级与生成结构迁移
 
 - **问题**：Hax 生成代码与 Lean proof library、Aeneas/Charon、Lean toolchain 强版本耦合。
 - **步骤**：固定原项目 commit/Hax commit/Lean toolchain/Lake manifest；先复现旧环境；单独建立升级分支；采用新版本迁移 Extraction/、Assumptions/、Verification/、root module 与 Lake 配置；重跑 extraction、Lean build、spec proofs 和项目级 correctness theorem；保留新旧生成代码差异和日志。
@@ -198,7 +189,7 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 ### M-10｜用点态证书证明风险度量的最优性
 
 - **领域/问题**：证明 Gaussian CVaR 是 Rockafellar–Uryasev 目标函数的最小值。
-- **步骤**：先确定尾部事件 (Z>z)；构造 ((L-c)^+ ge (L-c)mathbf 1_{Z>z})；对两边积分；利用 Gaussian tail mass 和 truncated first moment 化简；在 (c=VaR_alpha) 处证明取等。
+- **步骤**：先确定尾部事件 Z > z；构造 shortfall positive-part 大于等于尾部事件上的线性损失项；对两边积分；利用 Gaussian tail mass 和 truncated first moment 化简；在 VaR 阈值处证明取等。
 - **技巧**：将最优性证明转化为一个可积分的 pointwise certificate，避免直接求导或引入额外凸分析 machinery。
 - **失败边界**：该案例在 Gaussian loss、(sigma>0)、(Phi(z)=alpha<1) 条件下成立；不能直接推到任意经验分布或厚尾收益。
 - **来源**：[RockafellarUryasev.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Risk/RockafellarUryasev.lean)。
@@ -207,7 +198,7 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 ### M-11｜用特征函数与 Lévy 连续性定理证明离散模型收敛
 
 - **领域/问题**：证明 CRR n-step risk-neutral log-return 收敛到 Black-Scholes Gaussian law。
-- **步骤**：精确计算单步特征函数；将其写成 cos/sin；证明 (n(arphi_n-1)) 收敛到 Gaussian 指数；应用复数幂极限；再用 Lévy continuity theorem 从特征函数收敛推出弱收敛。
+- **步骤**：精确计算单步特征函数；将其写成 cos/sin；证明 n 乘以 (phi_n - 1) 收敛到 Gaussian 指数；应用复数幂极限；再用 Lévy continuity theorem 从特征函数收敛推出弱收敛。
 - **价格层**：先对有界 Put payoff 使用弱收敛，再通过 Put-Call Parity 推出 Call 价格极限，避免直接处理无界 Call payoff 的 uniform-integrability/Vitali 步骤。
 - **失败边界**：CRR 每步风险中性概率必须满足概率约束；Call 收敛还依赖 no-arbitrage 假设。必须先证明这些假设可满足。
 - **来源**：[CRRCharFun.lean](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/MathFin/Models/Binomial/CRRCharFun.lean) · [CRR benchmark](https://github.com/formal-applied-math/formal-mathfin/blob/cbe842dda1e71fd7173f3325971796686dbf7feb/benchmarks/binomial.json)。
