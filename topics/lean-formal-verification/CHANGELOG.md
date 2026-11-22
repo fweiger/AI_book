@@ -16,3 +16,5 @@
 - **2026-11-22，v0.4.0（Draft）**：追踪 Hax ADC 历史障碍的上游解决状态；确认 PR #1925、#1927、#1933、#2142 已合并；识别 Hax-FRI 固定 commit 早于 #1925/#1933，而 Hax 0.5.0 已升级至 Lean 4.35.0 并包含 breaking changes。新增 C018-018 至 C018-022、M-04/M-05。下一步从“追踪旧障碍”转为“旧版基线复现 + 新版迁移对照”。
 
 - **2026-11-22，v0.5.0（Draft）**：深审 MathFin 固定 commit，读取 4.35.0 toolchain、Mathlib/BrownianMotion manifest、coverage taxonomy、AxiomAudit/AxiomAuditGen、build workflow、Gaussian CVaR、Markowitz KKT、CRR convergence 与 Gaussian risk report；解析 risk/portfolio/binomial 三个 benchmark JSON 共 156 项且均为 full。新增 M-08 至 M-13、C018-026 至 C018-033、Q09；强调 MathFin 是数学金融证明库，不是实证回测系统。未运行 MathFin build。
+
+- **2026-11-22，v0.6.0（Draft）**：建立独立 Lean 4.35.0 PIT/no-lookahead 最小 package 与专用 GitHub Actions build workflow；区分 eventTime/availableAt/decisionTime，加入 eligibleRows_no_lookahead、late_available_revision_excluded 和 late correction 示例；新增 M-14、C018-034 至 C018-037、Q10。当前只完成源码和工作流配置，build 等待 CI 回读。
