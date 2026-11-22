@@ -2,7 +2,7 @@
 
 > 规范研究任务：[AI_book Issue #74](https://github.com/fweiger/AI_book/issues/74)  
 > Task ID：AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION  
-> 建立：2026-11-22；专题版本：0.4.0（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有局部源码证据。静态源码审计不代表项目已独立构建或完整证明。
+> 建立：2026-11-22；专题版本：0.5.0（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有金融与密码学源码证据。静态源码审计不代表项目已独立构建或完整证明。
 
 ## 最初的问题
 
@@ -56,3 +56,9 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 - Hax ADC 从早期 PoC 发展为官方 \`lean_adc\` 示例：\`specset bv\` + \`hax_mvcgen\` + \`bv_decide\`。
 - 本轮所有 Lean build 均 NOT_RUN；没有把静态源码检查升级为 Kernel 构建验收。
 - 详细证据见 [case-studies.md](case-studies.md)、[methods-and-tactics.md](methods-and-tactics.md) 和 [claims.md](claims.md)。
+
+## 金融领域新增结论（2026-11-22）
+
+MathFin 提供了可复用的数学金融证明样例，但它不替代行情数据、PIT 核验和经验回测。重点新增了 CVaR 点态证书、Markowitz KKT 充分性、CRR 特征函数收敛、假设非空性检查，以及 benchmark formalization fidelity 与生成式公理审计方法。
+
+面向 AI_Trader #488 的候选接口是：Lean 证明数据可得时间、as-of filter、point-in-time universe 和状态机不变量；Python 负责真实数据、数值计算、统计检验、交易成本与样本外回测。此接口目前仍是研究设计，未接入生产或 #488 实验。
