@@ -2,7 +2,7 @@
 
 > 规范研究任务：[AI_book Issue #74](https://github.com/fweiger/AI_book/issues/74)  
 > Task ID：AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION  
-> 建立：2026-11-22；专题版本：0.6.1（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有金融与密码学源码证据。静态源码审计不代表项目已独立构建或完整证明。
+> 建立：2026-11-22；专题版本：0.6.3（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有金融与密码学源码证据。静态源码审计不代表项目已独立构建或完整证明。
 
 ## 最初的问题
 
@@ -65,4 +65,4 @@ MathFin 提供了可复用的数学金融证明样例，但它不替代行情数
 
 ## PIT/no-lookahead 最小原型
 
-已建立独立 Lean 4.35.0 示例：[PITNoLookahead.lean](examples/pit-no-lookahead/PITNoLookahead.lean)。它区分 eventTime 与 availableAt，证明过滤后的每条记录都不晚于 decisionTime。该示例的 Lean 4.35.0 `lake build` 已由 GitHub Actions Run #15 验证通过；两个 theorem 的 `#print axioms` 均为 `[propext]`。它仍没有实现 latest-revision as-of join。
+已建立独立 Lean 4.35.0 示例：[PITNoLookahead.lean](examples/pit-no-lookahead/PITNoLookahead.lean)。它区分 eventTime 与 availableAt，证明过滤后的每条记录都不晚于 decisionTime。该示例的 Lean 4.35.0 `lake build` 已由 GitHub Actions Run #19 验证通过；两个 theorem 的 `#print axioms` 均为 `[propext]`。它仍没有实现 latest-revision as-of join。
