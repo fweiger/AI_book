@@ -34,7 +34,7 @@
 | AC-02 | 多数学分支至少 8 个真实代表案例，证明状态清楚 | 源码、论文、Blueprint 逐项核验 | not_run | [Lean Projects](https://leanprover-community.github.io/lean_projects.html) |
 | AC-03 | 至少 6 个非数学领域完成项目/论文证据审查 | 项目与论文原文、源码核对 | partial | [field-map.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/field-map.md) |
 | AC-04 | 至少 12 张可复用方法卡含步骤和失败边界 | 每张卡的源码/文档/最小示例 | not_run | [methods-and-tactics.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/methods-and-tactics.md) |
-| AC-05 | 至少 10 个代表项目核对元数据、许可证、toolchain、构建/CI | GitHub 元数据、源码、CI、复现日志 | not_run | [case-studies.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/case-studies.md) |
+| AC-05 | 至少 10 个代表项目核对元数据、许可证、toolchain、构建/CI | GitHub 元数据、源码、CI、复现日志 | partial | [case-studies.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/case-studies.md) |
 | AC-06 | 一条 Lean 项目最小流程可复现 | 固定环境/依赖并执行 build | not_run | [Playbook](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/formalization-playbook.md) |
 | AC-07 | 与 AI_Trader #488 关联但不重复/接管其量化实验 | 两 Issue Goal/Scope/AC 对照 | partial | [AI_Trader #488](https://github.com/fweiger/AI_Trader/issues/488) |
 | AC-08 | 非主要研究者独立审查数学案例、跨学科案例和方法库 | 独立 QA 报告与复现 | not_run | |
@@ -61,7 +61,7 @@
 - **最近完成的一轮：** 2026-11-22 任务登记、专题骨架与首轮来源地图。
 - **本轮实际完成：** 检查 AI_book 现有专题编号及 Issue；确认 TOPIC-015/#68、TOPIC-016/#70、TOPIC-017/#72 已占用；检索 Lean 官方参考、Mathlib、Aeneas、Rust-to-Lean、经济学/金融数学、TorchLean 和 physicslib4 等来源；建立 Issue #74、专题文件、唯一 Tracker 和 Draft PR #75；GitHub Actions 结构校验 run #1201 PASS（仅结构/链接/YAML）。
 - **已经核验的结果：** Lean 官方参考说明 Kernel 检查 proof terms；官方安装手册将 Elan 定义为 version manager；Aeneas 官方页说明 Lean backend 及 safe sequential Rust 范围；MathFin、MathEconLib、TorchLean、physicslib4 均有可回读项目/论文来源。
-- **尚未验证/失败/未知：** 所有代表仓库逐项固定 commit、许可证和构建；全部数学案例 proof status；Mathlib/MathFin 的逐定理 faithfulness；分布式协议和信息论候选的源码深审；独立 QA。
+- **尚未验证/失败/未知：** 3 个仓库根 LICENSE 路径仍未找到（不推断无许可）；Liquid Tensor 的 Lean 3 旧构建配置、rust-lean 的具体子项目配置尚未闭合；所有本地构建均 NOT_RUN；全部数学案例 proof status；Mathlib/MathFin 的逐定理 faithfulness；分布式协议和信息论候选的源码深审；独立 QA。
 - **对原始目标的实际贡献：** 形成初步跨学科方向和可复用方法分类；尚未完成系统性文献/源码审计。
 - **当前阶段判断：** M0 进行中，来源初筛完成一部分，项目准入未完成。
 - **本轮 AC 与目标对齐证据：** 初始技术定义和领域地图直接推进 AC-01/03/05；方法目录为 AC-04 的框架，不计方法卡完成。
@@ -84,14 +84,14 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 完成 M0 的版本化准入矩阵：对 Lean/Mathlib/Elan/Lake/Blueprint 官方文档和首批 10 个代表项目，逐项记录 repo、commit/release、许可证、lean-toolchain、依赖锁、CI/构建和 theorem 状态。
-- **对应未完成 AC 与当前阶段：** AC-01/03/05；M0。
-- **为什么它推进原始目标：** 当前最大风险不是缺少领域名称，而是把项目简介误当作证明事实。先核准版本、源码和证明状态，才能可靠比较各领域的实际方法。
-- **预期实质交付物与完成条件/验证方法：** 更新 case-studies.md，新增项目准入表；至少 10 个项目的元数据和源码入口可回读，许可证与工具链有直接证据；真实 build 项目标记 PASS/FAIL/NOT_RUN。
+- **唯一优先动作：** 完成 M0 的非标准仓库边界审计：为 Lean 3 legacy 的 Liquid Tensor 确认其旧版构建入口，为 rust-lean 选择一个具体 Hax/Aeneas 子项目并锁定其 toolchain、LICENSE、Lake 配置和 manifest；不得将多项目根仓库算作已完整审计的单一 Lean 包。
+- **对应未完成 AC 与当前阶段：** AC-05；M0。
+- **为什么它推进原始目标：** 当前最大风险已从项目发现转为非标准仓库的审计边界：Liquid Tensor 是 Lean 3，rust-lean 是多子项目集合。把它们误当成普通 Lean 4 根包会造成版本、许可和构建结论失真。
+- **预期实质交付物与完成条件/验证方法：** 更新 case-studies.md，补齐 Liquid Tensor 旧版构建入口和 rust-lean 具体子项目的版本/许可/依赖配置；所有缺失字段明确标注 NOT_FOUND/UNKNOWN，不推断无许可或不可构建。
 - **需要先读取或检查的证据：** 每个项目的 GitHub repo metadata、README、LICENSE、lean-toolchain、lakefile、lake-manifest.json、CI 和 blueprint/theorem files。
 - **若受阻，下一项不受影响的工作：** 对 Lean 官方语言参考、Elan、Lake 和 Mathlib 文档继续做精确组件职责审查；不转入 A 股策略实验。
 - **为什么本动作优于其他候选动作：** 直接扩写教程或收集更多项目名会增加未经核实的信息；准入审查同时推进 AC-01 和 AC-05，并为 M1/M2 建立可靠基线。
-- **局部调查边界/止损条件：** 每个项目最多先审查官方 README/metadata、许可证、工具链文件和 CI；若入口不存在或权限受阻，记录原因后转向下一代表项目，不递归扫描无关目录。
+- **局部调查边界/止损条件：** 每个非标准仓库最多沿 README 明确指向的子项目审查必要配置；若路径不存在或权限受阻，记录原因后转向已具备完整元数据的 Lean 4 项目，不递归扫描无关目录。
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -107,14 +107,15 @@
 
 | 时间/批次 | 实际工作与结果 | AC 贡献 | 证据链接 | 偏差/一致性、阻断或路线调整 | 本轮建议下一步 |
 |---|---|---|---|---|---|
-| 2026-11-22 / INIT | 查重专题编号和既有 Issue；创建 AI_book #74；建立专题文件、唯一 Tracker、索引导航和 Draft PR #75。未运行 Lean 构建、未逐项目核验所有许可证和源码。 | AC-01/03 框架与来源初筛 PARTIAL；AC-02/04/05/06/08 NOT_RUN；AC-07 边界已定义但未验收。 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；Issue 已回链 Tracker 与 PR 并 GET 回读。 | M0 版本化项目准入矩阵。 |
-| 2026-11-22 / CI-STRUCTURE | 对当前 PR head commit 运行仓库完整性 workflow；validate-knowledge 与 Discussion YAML 检查均 PASS。未运行 Lean 构建。 | 结构/链接/YAML 校验 PASS；AC-01/03/05 仍仅 PARTIAL，AC-02/04/06/08 NOT_RUN。 | [Workflow run #1201](https://github.com/fweiger/AI_book/actions/runs/45007709196) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；CI 仅为知识库结构校验，不提升学术证据等级。 | M0 版本化项目准入矩阵。 |
+| 2026-11-22 / INIT | 查重专题编号和既有 Issue；创建 AI_book #74；建立专题文件、唯一 Tracker、索引导航和 Draft PR #75。未运行 Lean 构建、未逐项目核验所有许可证和源码。 | AC-01/03/05 PARTIAL；AC-02/04/06/08 NOT_RUN；AC-07 边界已定义但未验收。 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；Issue 已回链 Tracker 与 PR 并 GET 回读。 | M0 版本化项目准入矩阵。 |
+| 2026-11-22 / CI-STRUCTURE | 对 PR head commit e57491d00728fdfba2f5a26cf7df00fd41d27f63 运行仓库完整性 workflow；validate-knowledge 与 Discussion YAML 检查均 PASS。未运行 Lean 构建。 | 结构/链接/YAML 校验 PASS；AC-01/03/05 仍仅 PARTIAL，AC-02/04/06/08 NOT_RUN。 | [Workflow run #1201](https://github.com/fweiger/AI_book/actions/runs/45007709196) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | D0 / CONSISTENT；CI 仅为知识库结构校验，不提升学术证据等级。 | M0 版本化项目准入矩阵。 |
+| 2026-11-22 / M0-MANIFEST | 对 10 个固定仓库 commit 读取 README/toolchain/许可证/Lake 配置；8 个 Lean 4 项目 Lake manifest 成功解析并记录 Mathlib 与外部依赖 revision。未运行项目 build。 | AC-05 PARTIAL；项目来源/版本边界更清楚；AC-02/04/06/08 NOT_RUN。 | [case-studies.md](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/case-studies.md) · [manifest audit session](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-22-lake-manifest-audit.md) | D0 / CONSISTENT；Lean 3 legacy、嵌套 backend、多子项目边界需单独审查。 | 补齐 Liquid Tensor 与 rust-lean 的项目级构建边界。 |
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** none
-- **当前 writer_owner：** none
-- **当前 write_state：** SYNCED
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|LAKE-MANIFEST-AUDIT-20261122
+- **当前 writer_owner：** chatgpt-session-20261122-topic018-init
+- **当前 write_state：** CLAIMED
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M0|STRUCTURAL-CI-PASS-20261122
 - **旧 Writer 已停止/隔离证据：** not_applicable（初始化无并发事件写入）
 - **若无法 fencing：** 不适用
@@ -126,4 +127,4 @@
 | §5阻断与未受影响工作 | 项目深审尚未完成；其他领域可继续 | §5 | CONSISTENT |
 | §6路径变更与第7节裁决 | 先做项目准入，避免堆砌未经核实案例 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | 均指向 M0 版本化项目准入 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 稳定事件键已写入 Issue #74，评论列表 GET 回读确认 | [Issue comment #7077193390](https://github.com/fweiger/AI_book/issues/74#issuecomment-7077193390) · [PR #75](https://github.com/fweiger/AI_book/pull/75) · run #1201 | SYNCED |
+| 最新 Issue 进度事件与本文件版本 | 结构校验事件已同步；本轮 Lake manifest 事件待写入 | [Issue comment #7077193390](https://github.com/fweiger/AI_book/issues/74#issuecomment-7077193390) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING |
