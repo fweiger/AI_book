@@ -33,3 +33,8 @@
 | C018-013 | EconCSLib 的稳定导入接口与实验性 OpenProblem 接口分离；README 声明稳定接口无 deferred proofs，Blueprint 仍包含未实现目标 | [EconCSLib README](https://github.com/gametheoryinlean/EconCSLib/blob/7cf3a05abbad108bdda61e018444aa58995e47cc/README.md) | E1 / 固定 commit 已读 | README 声明不是本轮独立构建证明；open targets 不等于 proved theorem |
 | C018-014 | 代表项目的 Lean 工具链版本存在明显差异，项目必须使用各自固定的 toolchain 和依赖 revision | [M0 项目审计表](case-studies.md) | E1 / 10 个固定 commit 的文件快照 | 版本快照随项目更新；不应从一次快照推断未来兼容性 |
 
+
+
+| C-ID | 主张 | 来源 | 状态 | 最强限制/反例 |
+|---|---|---|---|---|
+| C018-015 | 8 个已审查的 Lean 4 项目均通过 Lake manifest 将 Mathlib/其他依赖固定到具体 Git revision；工具链版本号不足以单独复现项目 | [M0 Lake manifest 审计表](case-studies.md) | E1 / 8 个固定 manifest 已解析 | manifest 存在不代表当前环境构建通过；还需锁定项目 commit、toolchain、外部依赖可用性并执行构建 |
