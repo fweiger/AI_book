@@ -231,3 +231,37 @@ AI 可以协助搜索和生成证明，但不能代替领域专家确定模型�
 - **失败边界**：该定理只证明 filter safety；未证明 latest-version selection、排序、revision tie-break、source timestamp authenticity、标签窗口隔离或生产代码实现。
 - **来源**：[PITNoLookahead.lean](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/examples/pit-no-lookahead/PITNoLookahead.lean) · [dedicated workflow](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/.github/workflows/lean-pit-no-lookahead.yml)。
 - **状态**：E2 / Lean 4.35.0 `lake build` PASS（Run #19）；两个 theorem 的 `#print axioms` 均为 `[propext]`。
+
+## 10. 跨领域可复用方法卡（2026-11-22）
+
+### M-16｜多模态验证器：模型检查 + SMT + Lean Kernel
+
+- **问题**：单一 tactic 或单一模型检查器难以兼顾可执行状态探索、自动约束求解和完整交互式证明。
+- **方法**：在 Lean 中嵌入可执行语义；把状态、异常、非确定性和发散等 effect 编码到语义层；由语义推导 sound verification-condition generator；先用模型检查/SMT 处理自动化目标，失败时保留 Lean 交互证明。
+- **代表项目**：[Veil](https://github.com/verse-lab/veil)、[Loom](https://github.com/verse-lab/loom)、[Velvet](https://github.com/verse-lab/velvet)。
+- **论文**：[Foundational Multi-Modal Program Verifiers](https://doi.org/10.1145/3776719)、[Veil CAV 2025](https://doi.org/10.1007/978-3-031-98682-6_2)。
+- **失败边界**：模型检查通过不代表无界状态空间证明；SMT 结果的可信度取决于 verifier soundness；真实实现还需 refinement/trace conformance。
+- **状态**：E1/E2；本轮读取论文、README 和 Veil Lake 配置，未独立 build。
+
+### M-17｜统计学习理论形式化：从概率假设到泛化界
+
+- **问题**：经验风险、泛化误差、模型复杂度和样本量之间的关系容易被非严格地引用。
+- **方法**：明确概率空间与独立性假设；形式化经验过程、集中不等式、Gaussian Lipschitz concentration、covering/entropy integral；再把 theorem 连接到特定学习器的风险界。
+- **代表项目**：[AI4SLT / lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory)。
+- **论文**：[Statistical Learning Theory in Lean 4](https://arxiv.org/abs/2602.02285)。
+- **量化迁移**：可作为因子筛选、模型复杂度、样本外泛化和过拟合分析的理论基础；不能替代市场分布假设核验、交易成本或真实 OOS 实验。
+- **失败边界**：概率假设本身若与市场数据不符，Lean 只证明条件命题；泛化界不自动推出 alpha。
+- **状态**：E1/E2；读取论文、README 和 toolchain，未独立 build。
+
+### M-18｜信息论模块化：熵/KL/信道 API 与操作性定理分层
+
+- **问题**：信息论证明常混合有限分布、条件独立、Markov 结构、熵不等式和编码构造。
+- **方法**：先建立有限 PMF、entropy、mutual information、KL、Markov kernel 和 data processing 的通用 API；再把 source coding、channel capacity、rate-distortion 等操作性定理作为独立层；逐项记录有限字母表、连续变量和网络场景的假设差异。
+- **代表项目**：[LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory)、[infotheorylib](https://github.com/matteonerini/infotheorylib)、[rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4)。
+- **论文**：[Lean rate-distortion formalization](https://arxiv.org/abs/2610.22404)。
+- **失败边界**：有限离散结果不能直接推广到连续信源；rate-distortion direct/converse 需要逐项核对 distortion、alphabet、blocklength 和极限假设。
+- **状态**：E1/E2；读取 repo README/toolchain 和论文，未独立 build。
+
+### M-14｜PIT/no-lookahead 构建状态更新
+
+PIT 最小 package 的 GitHub Actions [Run #24](https://github.com/fweiger/AI_book/actions/runs/45031763832) 在证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 上通过 Lean 4.35.0 lake build；两个 theorem 的 print axioms 均为 [propext]。当前证据升级为 E2 / CI PASS，仍不是独立 E3，也不是完整 as-of join。
