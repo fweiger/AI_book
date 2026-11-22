@@ -70,3 +70,8 @@
 ## 2026-11-23｜递归叶节点与项目映射
 
 行业分类必须继续下钻到具体业务问题和形式化对象；每条叶节点挂接论文/标准与 GitHub 项目。项目关系区分 Lean 直接研究、Lean 基础设施、相邻形式化工具和行业参考实现。完整首轮地图见 [industry-leaf-project-map.md](industry-leaf-project-map.md)。项目审计/原型不属于当前阶段门槛。
+
+
+## 2026-11-23｜项目级递归拆分
+
+60 个首轮候选节点继续向项目级拆分；第二轮新增 55 个子节点。父子关系、单一问题、论文—项目关系和叶节点闭合状态见 [industry-recursive-split-register.md](industry-recursive-split-register.md)。仍过宽的节点必须继续拆，不设固定节点数量。

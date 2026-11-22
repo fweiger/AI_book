@@ -93,3 +93,8 @@
 首版 12 个行业已扩展为 **60 个最小研究单元**。每个叶节点列出具体问题、形式化对象、论文/标准或原始技术资料、实际 GitHub 项目和项目关系标签。完整目录见 [industry-leaf-project-map.md](industry-leaf-project-map.md)。
 
 层级按问题复杂度变化，不固定在二级或三级。项目审计、clean build 和最小原型留待用户选择具体方向后进行。当前映射重点是确保每条分支都到达真实仓库，同时不把相邻工具和行业参考实现冒充 Lean 项目。
+
+
+## 6. 第二轮递归拆分
+
+60 个首轮候选父节点已开始继续拆分，新增 55 个项目级候选子节点。父节点不因有项目链接就自动成为最终叶节点。具体父子关系、论文—项目关系和闭合状态见 [industry-recursive-split-register.md](industry-recursive-split-register.md)。

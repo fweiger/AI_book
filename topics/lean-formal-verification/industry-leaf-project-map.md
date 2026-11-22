@@ -177,7 +177,11 @@
 5. 气候、电网、交通、采购等方向虽有项目，但 Lean 的增量价值仍待验证；ClimateMachine.jl 旧仓库已标记不再维护，当前映射转向 ClimaCore/ClimaAtmos/ClimaCoupler。
 6. 部分论文是行业/方法证据，不是项目的直接 companion paper；后续要继续核对每条论文—项目关系，不能把相关性写成同一研究团队或同一实现。
 
-## 6. 本阶段完成定义与下一步
+## 6. 首轮节点不是最终叶节点
+
+60 个首轮节点是行业覆盖起点。第二轮父子拆分见 [industry-recursive-split-register.md](industry-recursive-split-register.md)，目前新增 55 个子节点。凡一个父节点仍含不同算法、组件、证明目标或独立项目，必须继续拆分；子节点只有满足单一问题、论文/标准、具体 GitHub 仓库和关系标签后，才可标记 LEAF_CLOSED。
+
+## 7. 本阶段完成定义与下一步
 
 完成条件：
 - 12 个行业均递归拆分，不停在行业名称或抽象二级领域。

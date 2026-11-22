@@ -29,7 +29,8 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 
 - [Lean 跨行业应用研究框架（主框架）](industry-application-framework.md)
 - [行业应用机会地图](industry-opportunity-map.md)
-- [递归下钻与 GitHub 项目叶节点地图（12 行业 / 60 单元）](industry-leaf-project-map.md)
+- [首轮行业候选节点地图（12 行业 / 60 父节点）](industry-leaf-project-map.md)
+- [第二轮递归拆分登记表（新增 55 个项目级子节点）](industry-recursive-split-register.md)
 - [应用机会卡模板](application-opportunity-card-template.md)
 - [已有领域证据与论文—项目资源索引（支撑层）](field-map.md)
 - [代表案例与项目审计台账](case-studies.md)
@@ -117,3 +118,8 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23｜递归下钻至 GitHub 项目叶节点
 
 用户明确要求所有行业分支按业务复杂度递归下钻，不能停在二级/三级；每条研究叶节点必须挂接对应论文/标准和实际 GitHub 项目。当前已形成 [60 个最小研究单元地图](industry-leaf-project-map.md)，覆盖 12 个一级行业。项目审计与最小原型留待用户选定方向后进行。
+
+
+## 2026-11-23｜第二轮项目级递归拆分
+
+首轮 60 个候选父节点不是最终叶节点。本轮新增 55 个更细的子节点，并将状态分为 CANDIDATE_LEAF、LEAF_CLOSED、PAPER_GAP、PROJECT_GAP 和 CONTINUE_SPLIT。项目映射不等于项目审计。

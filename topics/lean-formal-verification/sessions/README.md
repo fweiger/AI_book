@@ -26,3 +26,5 @@
 - [2026-11-23：项目审计批次 A——Rate-Distortion、AI4SLT、Veil](2026-11-23-project-audit-batch-a.md)
 
 - [2026-11-23：行业递归下钻至 GitHub 项目叶节点 v0.2](2026-11-23-recursive-industry-leaf-project-map.md)
+
+- [2026-11-23：第二轮递归拆分至项目级子节点](2026-11-23-project-level-recursive-splits.md)

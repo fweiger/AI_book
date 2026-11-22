@@ -1,0 +1,106 @@
+# TOPIC-018｜第二轮递归拆分登记表：从候选方向到项目级研究单元
+
+> **版本：** v0.1 · 2026-11-23  
+> **上游：** [industry-leaf-project-map.md](industry-leaf-project-map.md) 中的 60 个首轮候选节点。  
+> **本轮新增：** 55 个更细的子节点，覆盖不同算法、组件、证明目标或项目实现。  
+> **重要：** 55 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。
+
+## 1. 状态与停止规则
+
+| 状态 | 含义 |
+|---|---|
+| `CANDIDATE_LEAF` | 已明确到一个具体问题，并找到论文/标准与 GitHub 项目；仍需核对论文—项目是否为直接 companion |
+| `LEAF_CLOSED` | 一个问题、一组明确性质、直接论文和对应项目均已建立；只表示映射闭合，不表示代码审计通过 |
+| `PAPER_GAP` | GitHub 项目存在，但本轮没有找到足够直接的论文；不能宣称研究证据闭合 |
+| `PROJECT_GAP` | 具体问题已明确，但尚未找到可信 GitHub 项目；不允许虚构仓库 |
+| `CONTINUE_SPLIT` | 当前节点仍包含不同组件、算法、用户流程或证明目标，必须继续拆分 |
+
+论文—项目关系：
+- `DIRECT_COMPANION`：论文明确介绍该项目或对应实现。
+- `RELATED_METHOD`：论文研究同类方法/性质，但不是该仓库的 companion paper。
+- `STANDARD_OR_SPEC`：规范、标准或官方技术资料。
+- `PROJECT_DOC_ONLY`：当前只有仓库 README/官方项目说明。
+- `PAPER_GAP`：尚未找到适当论文。
+
+## 2. 第二轮拆分：55 个项目级候选单元
+
+| 子节点 ID | 父节点 | 具体场景 / 最小问题 | 形式化对象与目标性质 | 论文/标准 | GitHub 项目 | Lean/项目关系与当前状态 |
+|---|---|---|---|---|---|---|
+| IND01-05-A | IND01-05 zkVM硬件 | OpenVM v2.0.0 的 RV32IM opcode 语义是否满足指令规格 | opcode 逐项语义、位向量状态转移、soundness | [OpenVM-FV 官方验证说明](https://blog.openvm.dev/fv)；RISC-V ISA | [openvm-org/openvm-fv](https://github.com/openvm-org/openvm-fv) | DIRECT_LEAN_RESEARCH；README 说明覆盖 45 个 RV32IM opcode；PROJECT_DOC_ONLY / PAPER_GAP |
+| IND01-05-B | IND01-05 zkVM硬件 | SP1 Hypercube chip 的逐行约束是否忠实于参考语义 | chip row、约束系统、soundness/faithfulness；不扩张为整机端到端安全 | SP1-lean 项目说明 | [succinctlabs/sp1-lean](https://github.com/succinctlabs/sp1-lean) | DIRECT_LEAN_RESEARCH；README 说明部分 completeness 证明仍有缺口；PROJECT_DOC_ONLY / PAPER_GAP |
+| IND01-05-C | IND01-05 zkVM硬件 | Zisk RV64IM 相关组件的 Lean 形式化 | 指令/组件规格与实现符合性 | Zisk-FV 项目说明 | [eth-act/zisk-fv](https://github.com/eth-act/zisk-fv) | DIRECT_LEAN_RESEARCH；README 明确 under construction，且不提供 ZisK 安全保证；PROJECT_DOC_ONLY / PAPER_GAP |
+| IND02-02-A | IND02-02 Rust验证 | 将受限 Rust 函数语义抽取为 Lean 函数并证明规格 | Rust 子集语义、借用/所有权相关抽象、前后置条件 | [Aeneas/Rust-to-Lean](https://arxiv.org/abs/2605.30106) | [AeneasVerif/aeneas](https://github.com/AeneasVerif/aeneas) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND02-02-B | IND02-02 Rust验证 | Rust 源码到 Lean/F*/Rocq 的翻译与证明边界 | 源语言语义、翻译正确性、后端信任边界 | [Aeneas/Rust-to-Lean 研究](https://arxiv.org/abs/2605.30106)；[Hax 项目说明](https://github.com/pereq-dev/hax) | [pereq-dev/hax](https://github.com/pereq-dev/hax) | DIRECT_LEAN_RESEARCH / 多后端工具；RELATED_METHOD；CANDIDATE_LEAF |
+| IND02-04-A | IND02-04 时序性质 | 分布式软件状态机的 LTL 安全性与活性 | 迁移系统、时序公式、可达性与活性 | [LeanLTL / ITP 2025](https://doi.org/10.4230/LIPIcs.ITP.2025.37) | [UCSCFormalMethods/LeanLTL](https://github.com/UCSCFormalMethods/LeanLTL) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND02-04-B | IND02-04 工作流 | 异步工作流的状态迁移、幂等性与故障恢复 | 事件、状态机、重试语义、幂等不变量 | [Veil/CAV 2025](https://doi.org/10.1007/978-3-031-98682-6_2)（相关状态机方法）；Resonate 项目说明 | [resonatehq/resonate-specification](https://github.com/resonatehq/resonate-specification) | DOMAIN_REFERENCE_IMPLEMENTATION；RELATED_METHOD / PROJECT_DOC_ONLY；CANDIDATE_LEAF |
+| IND03-02-A | IND03-02 SNARK/IOP | 有限域多项式运算和可计算多项式基础 | 多项式、有限域、系数运算、代数恒等式 | [Rust-to-Lean pipeline report](https://arxiv.org/abs/2605.30106) | [Verified-zkEVM/CompPoly](https://github.com/Verified-zkEVM/CompPoly) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND03-02-B | IND03-02 SNARK/IOP | IOR/SNARK 证明系统的组合结构与验证关系 | 证明系统接口、组合性、可靠性/完备性假设 | [Rust-to-Lean pipeline report](https://arxiv.org/abs/2605.30106)；ArkLib 项目资料 | [Verified-zkEVM/ArkLib](https://github.com/Verified-zkEVM/ArkLib) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND03-02-C | IND03-02 SNARK/IOP | 游戏式密码学安全证明与归约 | 对手/挑战者、安全游戏、优势与归约 | [VCVio ePrint 2026/899](https://eprint.iacr.org/2026/899) | [Verified-zkEVM/VCVio](https://github.com/Verified-zkEVM/VCVio) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND03-05-A | IND03-05 共识 | Veil 中 BFT 协议的 transition-system 不变量 | 状态、事件、协议安全性质与假设 | [Veil/CAV 2025](https://doi.org/10.1007/978-3-031-98682-6_2) | [verse-lab/veil](https://github.com/verse-lab/veil) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND03-05-B | IND03-05 共识 | IFP 中协议状态与故障假设的验证对象 | 协议状态、消息关系、容错假设 | IFP 项目技术资料；分布式协议形式化方法综述 | [sarvalabs/ifp](https://github.com/sarvalabs/ifp) | DIRECT_LEAN_RESEARCH；PROJECT_DOC_ONLY / PAPER_GAP |
+| IND04-01-A | IND04-01 随机过程 | Brownian motion 的定义、滤过与路径性质 | 概率空间、滤过、连续路径与布朗增量 | [MathFin research](https://arxiv.org/abs/2606.01356) | [RemyDegenne/brownian-motion](https://github.com/RemyDegenne/brownian-motion) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-01-B | IND04-01 随机过程 | SDE/随机积分的定义与基础定理 | Itô 积分、随机微分方程、存在性/唯一性条件 | [MathFin research](https://arxiv.org/abs/2606.01356) | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | DIRECT_LEAN_RESEARCH；CANDIDATE_LEAF |
+| IND04-02-A | IND04-02 期权定价 | CRR 二叉树定价递推和无套利条件 | 离散状态树、风险中性概率、递推关系 | [Cox–Ross–Rubinstein (1979)](https://doi.org/10.1016/0304-405X(79)90015-1) | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-02-B | IND04-02 期权定价 | Black–Scholes 连续时间定价公式的假设与推导 | Brownian motion、SDE、无套利 PDE、风险中性定价 | [Black–Scholes (1973)](https://doi.org/10.1086/260062) | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin)；[brownian-motion](https://github.com/RemyDegenne/brownian-motion) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-03-A | IND04-03 组合优化 | Markowitz 均值—方差模型的可行域与最优性条件 | 二次规划、协方差矩阵、凸性/KKT 条件 | [Markowitz (1952)](https://doi.org/10.1111/j.1540-6261.1952.tb01525.x) | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin)；[Mathlib4](https://github.com/leanprover-community/mathlib4) | DIRECT_LEAN_RESEARCH / LEAN_INFRASTRUCTURE；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-03-B | IND04-03 组合优化 | CVaR 的定义、凸表示与优化等价关系 | 尾部风险、分位数、凸优化、Rockafellar–Uryasev 表示 | [Rockafellar–Uryasev CVaR](https://doi.org/10.21314/JOR.2000.038) | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin)；[Mathlib4](https://github.com/leanprover-community/mathlib4) | DIRECT_LEAN_RESEARCH / LEAN_INFRASTRUCTURE；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-04-A | IND04-04 PIT数据 | 单条数据是否在决策时点可见：availableAt ≤ decisionTime | 时间戳、可得时点、修订时点、as-of 谓词 | [Probability of Backtest Overfitting](https://doi.org/10.21314/JCF.2016.322)；[Seven Sins](https://doi.org/10.3905/jpm.2019.1.069) | [AI_book PIT 规格](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification) | DIRECT_LEAN_RESEARCH / INTERNAL_PROJECT；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-04-B | IND04-04 PIT数据 | 历史股票池成员、成分调整与历史修订是否按当时可得版本回放 | point-in-time universe、版本选择、成员有效区间 | [Seven Sins of Quantitative Investing](https://doi.org/10.3905/jpm.2019.1.069) | [AI_Trader](https://github.com/fweiger/AI_Trader)；[Issue #488](https://github.com/fweiger/AI_Trader/issues/488) | INTERNAL_PROJECT；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-05-A | IND04-05 社会选择 | 投票规则的公平性、公理与反例 | 偏好关系、投票函数、公理和不可能性结果 | [EconCSLib research](https://arxiv.org/abs/2606.16144) | [SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND04-05-B | IND04-05 拍卖/机制 | 拍卖规则的激励相容、个体理性与分配性质 | 机制、策略、效用、激励相容条件 | [EconCSLib research](https://arxiv.org/abs/2606.16144) | [gametheoryinlean/EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION/RELATED_METHOD 待核；CANDIDATE_LEAF |
+| IND04-05-C | IND04-05 经济均衡 | 均衡存在性与机制约束下的经济结论 | 偏好、均衡、固定点、机制条件 | [Economic mechanism formalization](https://arxiv.org/abs/2606.13306) | [matheconlib/matheconlib](https://github.com/matheconlib/matheconlib) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND05-01-A | IND05-01 铁路联锁 | 两条进路是否冲突、锁闭和释放条件是否安全 | 轨道区段、进路状态、互斥与可达性 | [SPIN railway control validation](https://doi.org/10.1109/ICDSN.2000.857524) | [safe-railway-system-promela](https://github.com/egrabanica/safe-railway-system-promela) | ADJACENT_FORMAL_TOOL（Promela/SPIN）；RELATED_METHOD；CANDIDATE_LEAF |
+| IND05-01-B | IND05-01 列控协议 | ETCS 状态与通信消息顺序是否允许非法状态 | 协议状态、消息顺序、故障转移与活性 | [ETCS interlocking verification](https://doi.org/10.1016/j.scico.2016.05.010) | [apalache-mc/apalache](https://github.com/apalache-mc/apalache)；[tlaplus/Examples](https://github.com/tlaplus/Examples) | ADJACENT_FORMAL_TOOL（TLA+/模型检查）；RELATED_METHOD；CANDIDATE_LEAF |
+| IND05-03-A | IND05-03 ADAS | 神经网络反馈控制器闭环可达集是否越过安全边界 | neural feedback loop、可达集、扰动与安全包线 | [Neural network verification research](https://doi.org/10.1007/978-3-030-25540-4_26)；CoCoSaFe 2025 | [neu-autonomy/nfl_veripy](https://github.com/neu-autonomy/nfl_veripy) | ADJACENT_FORMAL_TOOL；RELATED_METHOD；CANDIDATE_LEAF |
+| IND05-03-B | IND05-03 ADAS | 连续/混合车辆控制器是否保持安全不变量 | 混合自动机、微分方程、控制不变量 | [Code-Level Safety Verification for Automated Driving](https://doi.org/10.1007/978-3-031-71177-0_22) | [LS-Lab/KeYmaeraX-release](https://github.com/LS-Lab/KeYmaeraX-release) | ADJACENT_FORMAL_TOOL（dL）；RELATED_METHOD；CANDIDATE_LEAF |
+| IND06-01-A | IND06-01 PLC | IEC 61131-3 PLC 逻辑的扫描周期、计时器和安全属性 | PLC 程序语义、状态转移、时序性质 | [ESBMC-PLC+](https://arxiv.org/abs/2606.23870) | [IS2Lab/esbmc-plcplus](https://github.com/IS2Lab/esbmc-plcplus) | ADJACENT_FORMAL_TOOL（SMT/BMC）；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND06-01-B | IND06-01 PLC | PLC 运行时/参考实现对 IEC 61131-3 程序的执行语义 | 扫描周期、输入输出映射、程序执行状态 | [PLC benchmark suite](https://arxiv.org/abs/2609.18994) | [OpenPLC_v3](https://github.com/thiagoralves/OpenPLC_v3) | DOMAIN_REFERENCE_IMPLEMENTATION；RELATED_METHOD；CANDIDATE_LEAF |
+| IND06-03-A | IND06-03 机器人 | 任务级机械臂动作序列与抓取/放置规划 | 任务图、动作前后条件、碰撞约束 | [MoveIt Task Constructor / ICRA 2019](https://doi.org/10.1109/ICRA.2019.8793898) | [moveit/moveit2](https://github.com/moveit/moveit2) | DOMAIN_REFERENCE_IMPLEMENTATION；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND06-03-B | IND06-03 机器人控制 | 机器人动力系统的稳定性与控制约束 | 动力系统、Lyapunov 函数、控制不变量 | [Lean control theory](https://arxiv.org/abs/2607.19727) | [LeanForControl](https://github.com/AnandGokhale/LeanForControl)；[DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION/RELATED_METHOD 待核；CANDIDATE_LEAF |
+| IND06-04-A | IND06-04 电网 | 潮流计算与节点电压/线路约束 | 潮流方程、节点平衡、约束可行性 | [pandapower paper](https://doi.org/10.1109/TPWRS.2018.2829021) | [e2nIEE/pandapower](https://github.com/e2nIEE/pandapower) | DOMAIN_REFERENCE_IMPLEMENTATION；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND06-04-B | IND06-04 电网 | 电网操作中的序贯动作、拓扑切换与安全状态 | 电网状态、动作集合、约束违规与恢复 | [Grid2Op 项目论文/引用入口](https://github.com/Grid2op/Grid2Op) | [Grid2op/Grid2Op](https://github.com/Grid2op/Grid2Op) | DOMAIN_REFERENCE_IMPLEMENTATION；PROJECT_DOC_ONLY / PAPER_GAP（本轮未核实正式 companion paper） |
+| IND07-04-A | IND07-04 系统生物学 | SBML 模型结构、引用、单位与模型交换的一致性 | SBML schema、species/reaction/parameter 关系 | [Systems Biology standards and best practices](https://pmc.ncbi.nlm.nih.gov/articles/PMC10435326/) | [sbmlteam/libsbml](https://github.com/sbmlteam/libsbml) | DOMAIN_REFERENCE_IMPLEMENTATION；RELATED_METHOD；CANDIDATE_LEAF |
+| IND07-04-B | IND07-04 系统生物学 | 生化反应网络 ODE 模型的仿真语义与复现 | 反应网络、ODE、初始条件、参数与数值求解 | [Systems Biology standards and best practices](https://pmc.ncbi.nlm.nih.gov/articles/PMC10435326/) | [sys-bio/tellurium](https://github.com/sys-bio/tellurium) | DOMAIN_REFERENCE_IMPLEMENTATION；RELATED_METHOD；CANDIDATE_LEAF |
+| IND08-01-A | IND08-01 信息论 | Shannon entropy 与 KL divergence 的定义和基本不等式 | 离散分布、熵、相对熵、非负性 | Cover & Thomas, *Elements of Information Theory* | [LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) | DIRECT_LEAN_RESEARCH；PROJECT_DOC_ONLY/RELATED_METHOD；CANDIDATE_LEAF |
+| IND08-01-B | IND08-01 信息论 | Mutual information 与数据处理不等式 | 联合分布、条件熵、互信息、Markov chain | Cover & Thomas, *Elements of Information Theory* | [infotheorylib](https://github.com/matteonerini/infotheorylib) | DIRECT_LEAN_RESEARCH；PROJECT_DOC_ONLY/RELATED_METHOD；CANDIDATE_LEAF |
+| IND08-02-A | IND08-02 率失真 | 率失真函数、失真下界与最优编码率 | 失真函数、编码率、概率分布与下界 | [Rate-distortion Lean research](https://arxiv.org/abs/2610.22404) | [rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND08-02-B | IND08-02 编码理论 | 信源/信道编码定理的概率与信息量度基础 | 编码、熵率、互信息、渐近界 | Cover & Thomas, *Elements of Information Theory* | [LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND08-03-A | IND08-03 P4 | Stateful P4 packet processing 的状态语义和多包性质 | packet state、转移关系、程序语义与不变量 | [Foundational Verification of Stateful P4 Packet Processing](https://www.cs.princeton.edu/~appel/papers/FoundationalVerificationP4.pdf) | [VerifiableP4](https://github.com/verified-network-toolchain/VerifiableP4) | ADJACENT_FORMAL_TOOL（Coq）；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND08-03-B | IND08-03 P4 | P4 编译器前端与 IR 变换是否保持程序行为 | P4 AST/IR、编译变换、语义保持 | [P4 stateful verification paper](https://www.cs.princeton.edu/~appel/papers/FoundationalVerificationP4.pdf)；P4 language specification | [p4lang/p4c](https://github.com/p4lang/p4c) | DOMAIN_REFERENCE_IMPLEMENTATION；RELATED_METHOD；CANDIDATE_LEAF |
+| IND09-03-A | IND09-03 神经网络验证 | Star-set reachability 对神经网络输出集合的过近似 | Star set、可达集、安全属性与反例 | [StarV/CAV 2025](https://doi.org/10.1007/978-3-031-98679-6_17) | [V2A2/StarV](https://github.com/V2A2/StarV) | ADJACENT_FORMAL_TOOL；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND09-03-B | IND09-03 神经网络验证 | ReLU 网络在输入约束下是否违反安全性质 | SMT 编码、ReLU 约束、反例搜索 | [Marabou/CAV 2019](https://doi.org/10.1007/978-3-030-25540-4_26) | [NeuralNetworkVerification/Marabou](https://github.com/NeuralNetworkVerification/Marabou) | ADJACENT_FORMAL_TOOL；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND09-03-C | IND09-03 神经网络验证 | Branch-and-bound 神经网络验证的界传播与剪枝正确性 | 线性松弛、上下界、分支与证明证书 | [Beta-CROWN research](https://arxiv.org/abs/2103.06624) | [Verified-Intelligence/alpha-beta-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN) | ADJACENT_FORMAL_TOOL；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND09-05-A | IND09-05 自动证明 | 检索增强的 theorem/lemma 检索与 premise selection | Lean theorem 状态、检索索引、前提候选 | [LeanDojo](https://arxiv.org/abs/2306.15626) | [lean-dojo/LeanDojo](https://github.com/lean-dojo/LeanDojo) | LEAN_INFRASTRUCTURE；DIRECT_COMPANION；原仓库 deprecated，CANDIDATE_LEAF |
+| IND09-05-B | IND09-05 自动证明 | 根据当前 proof state 推荐 tactic 并保持 Kernel 检查 | proof state、tactic suggestion、证明项检查 | [LeanCopilot](https://arxiv.org/abs/2404.12534) | [lean-dojo/LeanCopilot](https://github.com/lean-dojo/LeanCopilot) | LEAN_INFRASTRUCTURE / DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND10-04-A | IND10-04 科学计算 | ODE/PDE 与数值算法中的定义、误差与可计算性 | 函数空间、微分算子、数值近似与误差界 | SciLean 项目说明；[Lean control theory](https://arxiv.org/abs/2607.19727)（相关研究） | [lecopivo/SciLean](https://github.com/lecopivo/SciLean) | DIRECT_LEAN_RESEARCH；README 定位为早期 proof-of-concept；RELATED_METHOD / PAPER_GAP |
+| IND10-04-B | IND10-04 动力系统 | 动力系统不变量、稳定性与长期行为 | 状态空间、流、轨道、不变量与稳定性 | [Lean control theory](https://arxiv.org/abs/2607.19727)（相关研究） | [mcdoll/DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND10-04-C | IND10-04 控制理论 | Lyapunov/小增益等控制稳定性定理 | 控制系统、Lyapunov 函数、稳定性条件 | [Lean control theory](https://arxiv.org/abs/2607.19727) | [AnandGokhale/LeanForControl](https://github.com/AnandGokhale/LeanForControl) | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND11-01-A | IND11-01 法律推理 | 法律规则、例外、资格判定的形式化表达 | 规则谓词、例外条件、证据和解释边界 | [LegalLean monograph](https://legal-lean.aguilar-pelaez.co.uk/) | [edu-ap/legal-lean](https://github.com/edu-ap/legal-lean) | DIRECT_LEAN_RESEARCH；早期项目；PROJECT_DOC_ONLY / PAPER_GAP（同行评审论文未确认） |
+| IND11-01-B | IND11-01 法律计算 | 将法规/税法条款表达为可执行且可审查的程序 | 立法文本到程序的语义映射、计算规则与例外 | [Catala / ICFP 2021](https://doi.org/10.1145/3473582) | [CatalaLang/catala](https://github.com/CatalaLang/catala) | ADJACENT_FORMAL_TOOL（Catala/F*）；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND11-04-A | IND11-04 选举验证 | 加密选票、零知识证明与可验证计票 | ballot encryption、proofs、tally verification | [ElectionGuard / USENIX Security 2024](https://www.usenix.org/conference/usenixsecurity24/presentation/benaloh) | [Election-Tech-Initiative/electionguard](https://github.com/Election-Tech-Initiative/electionguard)；[verifier](https://github.com/Election-Tech-Initiative/electionguard-verifier) | DOMAIN_REFERENCE_IMPLEMENTATION；DIRECT_COMPANION；CANDIDATE_LEAF |
+| IND11-04-B | IND11-04 投票规则 | 投票规则的公平性公理和社会选择性质 | 偏好关系、投票函数、公理与反例 | [EconCSLib research](https://arxiv.org/abs/2606.16144) | [SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
+| IND12-04-A | IND12-04 AI证明助理 | 通过检索找到相关 theorem/premise 并构造证明上下文 | theorem 库索引、premise retrieval、proof context | [LeanDojo](https://arxiv.org/abs/2306.15626) | [lean-dojo/LeanDojo](https://github.com/lean-dojo/LeanDojo) | LEAN_INFRASTRUCTURE；DIRECT_COMPANION；原仓库 deprecated，CANDIDATE_LEAF |
+| IND12-04-B | IND12-04 AI证明助理 | 从当前 proof state 推荐 tactic 并生成候选证明步骤 | tactic 候选、状态转移、证明项检查 | [LeanCopilot](https://arxiv.org/abs/2404.12534) | [lean-dojo/LeanCopilot](https://github.com/lean-dojo/LeanCopilot) | LEAN_INFRASTRUCTURE / DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+
+## 3. 父节点状态与仍需继续拆分的方向
+
+以下父节点已有子节点，但仍可能需要继续细分；不能因子节点数量增加就自动关闭：
+
+- **zkVM/硬件：** OpenVM opcode、SP1 chip、Zisk instruction families 还可按 opcode/constraint family 继续拆；本轮先到仓库和明确证明范围。
+- **金融数学：** Brownian motion、SDE、CRR、Black–Scholes、Markowitz、CVaR 仍可按定义、引理和目标性质继续拆；要先核对 MathFin 实际覆盖的文件与 theorem。
+- **PIT：** 数据可得时点、股票池成员时点、历史修订版本、事件时间/入库时间仍可进一步区分；后续需对照真实数据字段和采集管线。
+- **神经网络验证：** Star-set、SMT、branch-and-bound 是不同方法分支；各自内部还可按网络结构、性质和证书形式拆分。
+- **控制与科学计算：** ODE/PDE、动力系统、Lyapunov 稳定性分别建模；SciLean/DynamicalSystems/LeanForControl 的真实定理覆盖尚未逐项审计。
+- **法律与选举：** 法律规则解释、法律计算、加密计票、投票公平性是不同问题，不得合并成“法律形式化”。
+
+## 4. 下一轮叶节点闭合检查
+
+对每个 `CANDIDATE_LEAF` 逐项执行：
+1. 论文是否真的研究该具体问题，而不是仅仅行业背景相似？
+2. GitHub 仓库是否是论文 companion artifact，还是仅提供相邻工具/行业参考实现？
+3. 若为 Lean 项目，Lean 代码实际覆盖哪个定义、定理、组件或证明目标？
+4. 若为相邻工具，Lean 可能接入的边界是什么，是否有必要使用 Lean？
+5. 是否仍包含多个算法、不同用户流程、不同目标性质或多个独立项目？若是，继续拆。
+6. 达到 `LEAF_CLOSED` 后才从研究目录中视为闭合；代码 build、许可证、sorry/admit 和 proof completeness 属于之后的项目审计，不在此阶段自动执行。
+
+**下一步唯一动作：** 对剩余未拆父节点和本表候选叶节点继续做项目—论文一一对应核对，优先处理 `PAPER_GAP` 和仍然过宽的节点。当前不执行项目审计或原型。
