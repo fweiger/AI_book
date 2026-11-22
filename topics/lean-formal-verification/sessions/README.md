@@ -22,3 +22,5 @@
 - [2026-11-22：PIT / No-Lookahead 最小 Lean 规格原型](2026-11-22-pit-no-lookahead-prototype.md)
 
 - [2026-11-23：跨学科研究方向—论文—项目映射与源码复核](2026-11-23-cross-domain-direction-paper-project-map.md)
+
+- [2026-11-23：项目审计批次 A——Rate-Distortion、AI4SLT、Veil](2026-11-23-project-audit-batch-a.md)
