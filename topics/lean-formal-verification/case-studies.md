@@ -74,3 +74,23 @@
 - Liquid Tensor 是 Lean 3 legacy；rust-lean 是多子项目集合，不能以根目录配置代表所有子项目。
 - 除 Mathlib 的 bors success 外，本轮未从当前 status 查询得到其他 commit 的状态上下文；这不等于其 CI 不存在。
 - 所有项目的本地构建均 NOT_RUN；依赖锁文件、完整许可证、proof status、sorry/admit 与公理依赖仍待核。
+
+
+## M0.2｜Lake 依赖锁文件审查（2026-11-22）
+
+以下 8 个 Lean 4 项目在固定 commit 中存在 Lake manifest；本轮已解析并记录其中的依赖 revision。它们不是浮动版本说明，而是实际锁定的依赖提交。
+
+| 项目 | manifest 版本 / 路径 | Mathlib revision | 其他代表性锁定依赖 | manifest blob SHA |
+|---|---|---|---|---|
+| mathlib4 | 1.3.0 · 根 lake-manifest.json | 本项目自身 | plausible 0d8633ef、aesop 637fdbb8、batteries 1804c8a0、proofwidgets 197b8bdf 等 | 1950a20caaba318f2d2de3793564ee0f43319082 |
+| Formal Conjectures | 1.2.0 · 根 lake-manifest.json | 0df444a360eaa60ab8c11dca51a86af692955474 | plausible b7eb3304、aesop 3448c0bc、batteries 4488d40d 等 | fae5d498d3f9dc3f6d1efd7c2adc03dd5bb6c8d6 |
+| Aeneas Lean backend | 1.3.0 · backends/lean/lake-manifest.json | fc4f59e577feb1a4956671bc04ac18aaaf8cd842 | plausible 054b228c、aesop 66ff77cf、batteries b4b25a38 等 | 92dec241df0077e53c73fdc5c556b7dca08631da |
+| ArkLib | 1.3.0 · 根 lake-manifest.json | fc4f59e577feb1a4956671bc04ac18aaaf8cd842 | CompPoly 1a9ad0ef、VCVio f1e63c78、QuantumFoundations 5ecbeec2、PolyFun 528b3b1f | f044c5d779add5f35d4feae3a5e7d48e811cfa3e |
+| MathEconLib | 1.3.0 · 根 lake-manifest.json | 56a005855ea17e0b0958f73ec801ae140b0a1679 | plausible dfa4f381、aesop 4a174c49、batteries 66e46918 等 | 39f6e9b92d228ea5870e86c6b63f0d55b3b3603d |
+| EconCSLib | 1.2.0 · 根 lake-manifest.json | c5ea00351c28e24afc9f0f84379aa41082b1188f | plausible a456461b、aesop 558915ae、batteries 32dc18cd 等 | 656403a725a0871fe355867e46ca49ab232630bb |
+| MathFin | 1.2.0 · 根 lake-manifest.json | e91b128082cc221d6432a6a5aadcd3243af8e76c | BrownianMotion 497e5e2a、LeanArchitect 9f3bb539、checkdecls 3d425859 | 8e7eac5fac66747e4a545876def9d6a100d94181 |
+| physicslib4 | 1.3.0 · 根 lake-manifest.json | 56a005855ea17e0b0958f73ec801ae140b0a1679 | doc-gen4 0e1ffe2e、checkdecls 3d425859、leansqlite 4ed2f27e 等 | 0fc0e8640ae5169b2b90b183fb9d69878fe605ba |
+
+**发现：** 即使两个项目使用相同的 Lean/Mathlib 版本字符串，它们也可能锁定不同的 Mathlib commit 和不同的传递依赖。可复现单位应至少包括项目 commit、lean-toolchain、lake-manifest.json，而不是只记录 Lean 版本。
+
+Liquid Tensor 的旧 Lean 3 项目和 rust-lean 多子项目集合未在根目录发现对应 Lake manifest；这两者应按各自真实子项目继续审查，不能把根路径 NOT_FOUND 写成不存在。
