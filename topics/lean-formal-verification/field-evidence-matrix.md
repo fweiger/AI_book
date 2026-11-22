@@ -404,3 +404,75 @@
 **尚未完成：** 外部仓库的全量 theorem/sorry/axiom/许可证/CI 审计和独立构建；部分项目 README/论文统计存在版本差异；领域覆盖不是穷尽性综述。
 
 **下一步：** 先对 A1/A2 项目做固定 commit、许可证、依赖、CI、关键 theorem 与 axiom audit；然后选出可复用的方法，将它们与 PIT/量化研究流程逐项对接。不要把所有仓库同时 clone/build，也不要因一个项目阻断整个地图。
+
+## 7. 研究方向粒度的论文—项目映射（2026-11-23 补充）
+
+以下把可研究的问题、正式文献、Lean 项目和相邻实现一一对应。Lean 项目、相邻证明助手与普通实现严格分栏。
+
+| 学科 | 具体研究方向 / 可形式化对象 | 代表论文 / 原始理论 | Lean 项目或框架 | 相邻开源项目 | 主要边界 / 下一项研究 |
+|---|---|---|---|---|---|
+| 数学 | 测度、概率、随机过程与分析基础 | The Lean Mathematical Library；Mathlib Papers | [Mathlib](https://github.com/leanprover-community/mathlib4)、[BrownianMotion](https://github.com/RemyDegenne/brownian-motion) | Isabelle AFP | 数学基础定理需逐项映射到具体命题；不能把库存在当作某个猜想已证明 |
+| 数学 | 大型定理、猜想陈述、长证明依赖工程 | [Liquid Tensor Experiment](https://github.com/leanprover-community/lean-liquid)；Mathlib Papers | [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures)、[Lean Blueprint](https://github.com/PatrickMassot/leanblueprint) | Rocq/Coq 数学库 | 区分形式化陈述、完整证明和项目级证明工程 |
+| CS / 软件验证 | Hoare logic、程序语义、弱前置条件和验证器生成 | [Foundational Multi-Modal Program Verifiers](https://doi.org/10.1145/3776719)；[CSLib](https://arxiv.org/abs/2602.04846) | [CSLib](https://github.com/leanprover/cslib)、[Loom](https://github.com/verse-lab/loom)、[Velvet](https://github.com/verse-lab/velvet) | Dafny、Why3 | 区分验证器框架 soundness 与被验证程序正确性 |
+| CS / 软件验证 | Datalog 规则推理的可验证证书 | [Verifying Datalog Reasoning with Lean](https://doi.org/10.4230/LIPIcs.ITP.2025.36) | [CertifyingDatalog](https://github.com/knowsys/CertifyingDatalog) | Soufflé Datalog | Lean checker 验证给定 derivation certificate，不等于生产规则引擎整体无 bug |
+| CS / 软件验证 | LTL、有限/无限 trace 与并发属性 | [LeanLTL ITP 2025](https://doi.org/10.4230/LIPIcs.ITP.2025.37) | [LeanLTL](https://github.com/UCSCFormalMethods/LeanLTL)、[Lentil](https://github.com/verse-lab/Lentil) | TLA+、SPIN | 逻辑语义可复用；仍需把系统事件与抽象 trace 建立可靠映射 |
+| 密码学 | 安全游戏、oracle 查询、密码学归约 | [VCVio](https://eprint.iacr.org/2026/899) | [VCVio](https://github.com/Verified-zkEVM/VCVio) | EasyCrypt | 核查概率语义、oracle handler 和 reduction statement；游戏模型不等于真实部署 |
+| 密码学 / ZK | SNARK、IOP、多项式承诺、有限域与 soundness | ArkLib/CompPoly 形式化路线 | [ArkLib](https://github.com/Verified-zkEVM/ArkLib)、[CompPoly](https://github.com/Verified-zkEVM/CompPoly) | [Fiat-Crypto](https://github.com/mit-plv/fiat-crypto) | 拆分代数组件、协议 soundness、实现精化和可信设置 |
+| 密码学 / 实现 | Rust 密码学实现到 Lean 的语义抽取与规格验证 | [Rust-to-Lean Verification Pipeline](https://arxiv.org/abs/2605.30106) | [Aeneas](https://github.com/AeneasVerif/aeneas)、[Hax](https://github.com/cryspen/hax)、[rust-lean](https://github.com/Verified-zkEVM/rust-lean) | [HACL*](https://github.com/hacl-star/hacl-star) | 抽取成功、抽取语义可信、实现满足规格是三个独立验收层次 |
+| 分布式系统 | BFT safety、quorum intersection、状态机不变量 | [Veil CAV 2025](https://doi.org/10.1007/978-3-031-98682-6_2) | [Veil](https://github.com/verse-lab/veil)、[IFP](https://github.com/sarvalabs/ifp) | [Verdi](https://github.com/uwplse/verdi)、[IronFleet](https://github.com/Microsoft/Ironclad) | IFP 当前 Phase 1 限于两个固定参与者、单 epoch；不能写成完整协议已证明 |
+| 分布式系统 | Liveness、时序性质、事件驱动服务 trace conformance | [LeanLTL ITP 2025](https://doi.org/10.4230/LIPIcs.ITP.2025.37) | [Lentil](https://github.com/verse-lab/Lentil)、[Resonate Specification](https://github.com/resonatehq/resonate-specification) | TLA+、Raft specification | 逻辑库、服务抽象机、真实 trace checker 不是同一个证明对象 |
+| 经济学 | 博弈论、机制设计、拍卖、匹配与社会选择 | [EconCSLib (Bei et al.)](https://arxiv.org/abs/2606.16144) | [MathEconLib](https://github.com/matheconlib/matheconlib)、[gametheoryinlean/EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | [socialchoicelean](https://github.com/dominikpeters/socialchoicelean) | 逐篇核验均衡存在、激励相容和机制性质的形式化陈述 |
+| 经济学 | 研究论文逐篇形式化、结果依赖 DAG 与作者审查流程 | [EconCSLib (Garg)](https://arxiv.org/abs/2606.13306) | [nikhgarg/EconCSLib](https://github.com/nikhgarg/EconCSLib) | 论文复现与 proof-assistant workflows | 与 Bei 团队的同名项目是两个独立仓库；宏观、计量、因果识别仍有空白 |
+| 金融数学 | Brownian motion、Itô 积分、SDE、风险中性定价 | [A Formally Verified Library of Mathematical Finance](https://arxiv.org/abs/2606.01356) | [MathFin](https://github.com/formal-applied-math/formal-mathfin)、[BrownianMotion](https://github.com/RemyDegenne/brownian-motion) | Isabelle AFP actuarial mathematics | MathFin 是数学金融理论库，不是行情数据库、因子库或回测引擎 |
+| 金融 / 量化 | CVaR、组合优化、PIT、as-of join 与回测时间语义 | Markowitz 1952；Rockafellar–Uryasev 2000；本专题 PIT 原型 | MathFin、[PITNoLookahead](examples/pit-no-lookahead/PITNoLookahead.lean) | Python/pandas、数据供应商历史快照 | 当前 Lean 原型只证明 availableAt filter safety；A 股 L2、因子 IC/IR、成本、样本外仍是经验研究 |
+| AI / 统计学习 | Empirical processes、Gaussian concentration、Dudley entropy integral、泛化界 | [AI4SLT, ICML 2026](https://proceedings.mlr.press/v306/zhang26cd.html) | [lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory) | StatWhy | 学习理论 theorem 不自动给出特定模型/金融因子的 OOS 保证 |
+| AI / 神经网络 | Tensor shape、浮点语义、图变换、鲁棒性与神经控制器 | [TorchLean](https://arxiv.org/abs/2602.22631) | [TorchLean](https://github.com/lean-dojo/TorchLean) | [StarV](https://github.com/V2A2/StarV)、[Marabou](https://github.com/NeuralNetworkVerification/Marabou)、[α,β-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN) | 分别审查 Lean 数学语义、CPU/CUDA native backend、数值误差界和证书 checker |
+| 物理 | 高能物理定义、矩阵、对称性、异常抵消和 Higgs 计算 | [HepLean: Digitalising high energy physics](https://doi.org/10.1016/j.cpc.2024.109457) | [HepLean](https://github.com/HEPLean/HepLean)、[Physlib](https://github.com/leanprover-community/physlib) | Mathematica / SymPy（计算对照，不是证明助手） | 数字化论文数学推导，不验证实验数据或模型经验正确性 |
+| 物理 / 量子 | QFT 公理体系、operator algebra、量子相对熵与假设检验 | [Generalized Quantum Stein's Lemma](https://arxiv.org/abs/2510.08672)；[Formalization of QFT](https://arxiv.org/abs/2603.15770) | [Lean-QuantumInfo](https://github.com/Timeroot/Lean-QuantumInfo)、[physicslib4](https://github.com/physicslib/physicslib4)、[FormalQFT](https://github.com/FormalQFT) | Coq/Rocq 数学物理库 | 多个独立代码库；需检查定义、operator 假设和 theorem scope |
+| 信息论 | 熵、互信息、KL、Markov、DPI、Fano 与充分统计量 | Cover & Thomas, Elements of Information Theory | [LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory)、[infotheorylib](https://github.com/matteonerini/infotheorylib) | [Rocq infotheo](https://github.com/affeldt-aist/infotheo) | LeanInfoTheory 是有限离散 API；连续分布、网络多终端信息论仍需补证 |
+| 信息论 / 编码 | Source coding、channel capacity、rate-distortion direct/converse | [Rate-Distortion Lean formalization](https://arxiv.org/abs/2610.22404) | [rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4)、LeanInfoTheory v0.2.0 | Rocq infotheo | rate-distortion 项目限定有限字母表、PMF、自然对数/nats |
+| 控制 | Lyapunov stability、LaSalle、small-gain、passivity、L_p stability | [Foundations of Machine-Checked Control Theory in Lean](https://arxiv.org/abs/2607.19727) | [DynamicalSystems](https://github.com/mcdoll/DynamicalSystems)、[LeanForControl](https://github.com/AnandGokhale/LeanForControl) | [KeYmaera X](https://keymaerax.org/)、[VeriDrone](https://github.com/VeriDrone) | 核对 ODE 解存在性、well-posedness；数学稳定性不等于真实硬件闭环安全 |
+| 控制 / Learning-enabled systems | Hybrid dynamics、reachability、神经控制器安全属性 | TorchLean 2026；KeYmaera X 文献 | TorchLean controller case study | StarV、VeriDrone、KeYmaera X | 把模型、采样/执行器和真实控制实现的 refinement boundary 单独说明 |
+
+### 7.1 这张矩阵的使用规则
+
+- 每个研究方向必须对应一个明确的数学对象或程序性质；学科名称本身不是形式化问题。
+- 论文与项目必须建立直接关系：论文作者提供的 companion repository 优先；相邻项目必须标记为 ADJACENT_TOOL_ONLY。
+- 项目证据区分 README_ONLY、SOURCE_READ、CI_BUILD_READ、INDEPENDENT_BUILD；未执行构建必须为 NOT_RUN。
+- 没有 Lean 对应物时记录 NO_LEAN_PROJECT_FOUND_IN_THIS_PASS，保留最接近的 Rocq/Coq/Isabelle/Dafny/TLA+/SMT 项目作为方法参照。
+- 这不是穷尽性综述；每轮新增来源都注明访问日期、版本和范围。
+
+## 8. 2026-11-23｜代表项目实时源码与版本核对
+
+本轮通过已连接 GitHub 直接读取项目文件；这里只核验 README、关键文件和 toolchain，不声称已独立构建。
+
+| 项目 | 当前读取证据 | 当前版本线索 | 可确认的研究对象 | 本轮构建状态 |
+|---|---|---|---|---|
+| MathFin | main README、CITATION.cff、docs/coverage.md、lean-toolchain | README：906 corpus results（866 full、18 library wrappers、22 reduced cores）；CITATION software release 2.0.0 / 2026-11-11：833 delivery-ready；toolchain Lean 4.35.0 | 金融数学、随机分析、定价、组合、风险、精算；coverage 文件定义 full/library_wrapper/reduced_core/placeholder | NOT_RUN（本专题未独立 clean build） |
+| LeanInfoTheory | master README、lean-toolchain | v0.2.0（2026-11-05）；811 supported declarations、57 modules；Lean 4.33.1；Apache-2.0 | 有限离散熵、互信息、KL、信道、Markov、DPI、Fano、充分统计量；新增 iid source coding 与 finite-channel capacity | NOT_RUN |
+| rate_distortion_lean4 | README、MainResults.lean、lean-toolchain | Lean 4.28.0；主结果文件显式 print axioms 并设置允许公理集合 | 有限字母表率失真 direct/converse、boundary achievability、可达性等价和右连续性 | NOT_RUN |
+| AI4SLT | ICML 2026 PMLR 论文页、GitHub README、lean-toolchain | 论文见 PMLR 306；repo toolchain Lean 4.32.0；Apache-2.0 | Gaussian Lipschitz concentration、Dudley entropy integral、least-squares sharp rates；repo README 另说明论文后扩展到 Hanson–Wright、矩阵扰动和 matrix Bernstein | NOT_RUN |
+| TorchLean | main README、lean-toolchain | Lean 4.36.0 | 同一 Lean tensor/model 定义连接执行、训练、图变换、证书检查与证明；CPU/CUDA backend 需分别审计 | NOT_RUN |
+| DynamicalSystems | main README、lean-toolchain | Lean 4.36.0-rc2 | Lyapunov stability、LaSalle、small-gain、causality、L_p stability、passivity（以论文和项目说明为准） | NOT_RUN |
+| Veil / IFP | Veil main README、toolchain；IFP main README | Veil Lean 4.35.0；IFP README 日期 2026-04-08 | Veil 2.0 提供 transition-system specification/model checking/Lean proof；IFP 103 invariants 中 93 已验证、10 pending | NOT_RUN；IFP 当前是两固定参与者、单 epoch Phase 1 |
+
+### 8.1 本轮修正和不能混用的统计
+
+1. **MathFin 数字不是同一快照**：当前 GitHub main README 为 906 corpus results；CITATION.cff 的 2.0.0（2026-11-11）为 833 delivery-ready；docs/coverage.md 中的 806 是 2026-11-08 的审计检查点；论文 v4 的 804 是论文快照。数字口径和时间不同，不得选一个数字代表所有版本。
+2. **LeanInfoTheory 官网页面存在滞后**：当前 GitHub master README 是 v0.2.0 / 811 declarations / 57 modules；官网某些页面仍显示 v0.1.0 / 601 declarations。正式引用应固定 v0.2.0 release。
+3. **Rate-distortion 是独立专项项目**：README 限定有限字母表、PMF、非负有限 distortion 和 nats；MainResults.lean 对主定理运行 print axioms，并用 Lean.collectAxioms 拒绝允许集合以外的公理。该文件结构是可审计证据，不代表本专题已经运行它。
+4. **AI4SLT 论文与仓库要分时点**：PMLR 论文介绍经验过程、Gaussian concentration、Dudley entropy integral 和 sparse least-squares；当前仓库 README 说明论文后又增加 Hanson–Wright、矩阵扰动和 matrix Bernstein。新增内容不能倒灌为论文原始贡献。
+5. **TorchLean 的统一语义有 backend 边界**：README 声明 CPU 路径运行 Lean rules，CUDA 注册 native operators 使用 LibTorch ATen；应单独审计 CPU/CUDA 语义一致性、浮点误差和证书 checker。
+6. **IFP 的 93/103 不能泛化**：README 明确当前 Phase 1 是两个固定参与者、单 epoch、确定节点集合；Phase 2 扩展多参与者，Phase 3 才包含 read locks 和 epoch reconfiguration。
+
+### 8.2 论文—项目映射的下一层审计
+
+下一轮不再横向添加大量项目名称，而是对每个领域选 1–2 个代表项目做固定 commit、LICENSE、toolchain、manifest、关键 theorem、sorry/axiom/opaque、CI/build 的项目卡。优先顺序：
+
+1. 数学/金融基础：Mathlib、BrownianMotion、MathFin。
+2. 信息论/统计学习：LeanInfoTheory、rate_distortion_lean4、AI4SLT。
+3. 软件/分布式验证：Veil、Loom/Velvet、CertifyingDatalog。
+4. AI/控制：TorchLean、DynamicalSystems。
+5. 物理/经济/密码学：HepLean/Physlib、MathEconLib/EconCSLib、ArkLib/VCVio。
+
+按每个项目的直接论文关系优先，不能把同领域相邻工具当成论文 companion。
