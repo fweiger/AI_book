@@ -120,3 +120,16 @@
 81. [Econlib](https://github.com/danlyng/Econlib) — 经济学/政治理论 Lean 4 library；本轮仅完成 README/toolchain 审查。
 82. [Physlib](https://github.com/leanprover-community/physlib) — 物理学数字化社区项目，包含 Physlib、PhyslibAlpha 与 QuantumInfo。
 83. [KTAIT](https://github.com/giulioruffini/KTAIT) — Kolmogorov/algorithmic information theory 的 Lean 项目。
+
+
+## 2026-11-23｜方向级论文与项目源码核验补充
+
+84. Zhang, Lee & Liu, [AI4SLT: Empirical Processes in Lean 4 for Formal Statistical Learning Theory](https://proceedings.mlr.press/v306/zhang26cd.html), ICML 2026 / PMLR 306 — 官方会议论文页；配套代码 [lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory)。
+85. Yan et al., [Aligning Information Theory and Formal Verification: A Lean Formalization of Rate-Distortion Theory](https://arxiv.org/abs/2610.22404), 2026 — 有限字母表率失真 formalization；配套代码 [rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4)。
+86. Doll & Shames, [Foundations of Machine-Checked Control Theory in Lean](https://arxiv.org/abs/2607.19727), 2026 — Lyapunov stability 与 small-gain formalization；配套代码 [DynamicalSystems](https://github.com/mcdoll/DynamicalSystems)。
+87. [TorchLean source repository](https://github.com/lean-dojo/TorchLean) — README 说明 Lean tensor/model definitions 复用于训练、图变换、证书检查和证明；当前 toolchain Lean 4.36.0。
+88. [LeanInfoTheory v0.2.0 source](https://github.com/serhatemrecoban/LeanInfoTheory/tree/v0.2.0) — 811 supported declarations、57 modules；当前 master README 与 toolchain v4.33.1 已读取，正式复现应固定 release。
+89. [HepLean repository](https://github.com/HEPLean/HepLean) — HepLean CPC 2025 论文的 companion repository；项目使用 Lean 4 数字化高能物理定义、定理、证明和计算。
+90. [Veil 2.0](https://github.com/verse-lab/veil) 与 [IFP proof case](https://github.com/sarvalabs/ifp) — Veil 是 Lean transition-system verification framework；IFP README 明确 Phase 1 受限于两固定参与者、单 epoch。
+91. [rate_distortion_lean4 MainResults.lean](https://github.com/fubinyan/rate_distortion_lean4/blob/main/MainResults.lean) — 主定理的 print axioms 和 Lean.collectAxioms allowlist 审计入口。
+92. [MathFin current README](https://github.com/formal-applied-math/formal-mathfin/blob/main/README.md)、[CITATION.cff](https://github.com/formal-applied-math/formal-mathfin/blob/main/CITATION.cff)、[coverage.md](https://github.com/formal-applied-math/formal-mathfin/blob/main/docs/coverage.md) — 当前 corpus、软件 release、历史 coverage audit 的不同快照，禁止混为同一统计。
