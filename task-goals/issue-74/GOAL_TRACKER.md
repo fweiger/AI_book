@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：STATE_CONFLICT pending 本轮项目级递归拆分事件同步；55 个子节点文档已提交且两项 CI 通过，等待 Issue #74 回执写入和回读；批准 Goal/Scope/AC 未变
-- Issue 同步状态：ISSUE_SYNC_PENDING（本轮 55 个项目级子节点交付事件尚待发布；上轮递归规则事件已同步 comment #7084291199）
+- 状态一致性：CONSISTENT（55 个子节点文档已提交；文档提交 head 82cd4 的 Knowledge-base integrity Run #1303 与 Lean PIT Run #72 均 success；Issue #74 本轮 event_key 回读唯一匹配 comment #7084474199；批准 Goal/Scope/AC 未变）
+- Issue 同步状态：SYNCED（本轮 55 个项目级子节点交付事件已写入 Issue #74 并 GET 回读唯一匹配，见 comment #7084474199）
 
 ## 1. 批准目标基线
 
@@ -88,7 +88,7 @@
 - **当前阶段判断：** M2 行业递归下钻已从 60 个首轮候选父节点推进到 55 个更细的项目级子节点，但并非全部已闭合。后续继续拆分仍含不同算法/组件/目标性质的节点，并核对论文与项目是否直接对应；源码审计、clean build 和最小原型留待用户选定方向后。
 - **本轮 AC 与目标对齐证据：** AC-03 新增 60 个首轮候选父节点和 55 个递归子节点，仍 PARTIAL（剩余父节点未全部拆分，且部分 PAPER_GAP/关系未闭合）；AC-05 Batch A 既有审计仍 PARTIAL，本轮无新增项目审计；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（尚未完成行业场景与验证工具边界的全面映射）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** STATE_CONFLICT pending 本轮递归拆分事件同步；最新 PR head 82cd4 的 Knowledge-base integrity Run #1303 与 Lean PIT Run #72 已 success，等待 Issue #74 回执写入和回读。批准 Goal/Scope/AC v1.0 未变。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；55 个子节点文档提交 82cd4 的 Knowledge-base integrity Run #1303 与 Lean PIT Run #72 均 success；Issue #74 的本轮 event_key GET 回读唯一匹配 1 条（comment #7084474199）；Goal/Scope/AC v1.0 未变。Tracker 元数据提交 head 613b 的新 CI 尚待回读。
 
 ## 5. 阻断与未受影响工作
 
@@ -149,11 +149,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|PROJECT-LEVEL-LEAF-REFINEMENT-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-project-level-leaf-refinement
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|RECURSIVE-LEAF-CLOSURE-RULE-20261123
-- **旧 Writer 已停止/隔离证据：** 上一递归叶节点规则事件已同步并回读 comment #7084291199；Tracker 当前 active_event_key 为 NONE；本轮写入前确认无并发 Writer。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|PROJECT-LEVEL-LEAF-REFINEMENT-20261123
+- **旧 Writer 已停止/隔离证据：** 本轮项目级递归拆分事件已写入 Issue #74，GET 回读确认 comment #7084474199 唯一匹配；Writer 声明已清理，无并发 Writer。
 - **若无法 fencing：** 不适用
 
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
@@ -163,5 +163,5 @@
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | 研究顺序已调整为行业需求→形式化问题→Lean能力→论文/项目；项目审计只在具体方向需要时触发 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 均已调整为先建立行业应用框架；项目审计改为具体方向选定后的按需工作 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 上轮递归规则事件已同步；本轮 55 子节点交付事件待发布，当前 Writer 声明有效 | [Issue comment #7084291199](https://github.com/fweiger/AI_book/issues/74#issuecomment-7084291199) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING / CLAIMED |
+| 最新 Issue 进度事件与本文件版本 | 本轮 55 子节点交付 event_key 已写入 Issue #74，GET 回读唯一匹配；Writer 声明已清理 | [Issue comment #7084474199](https://github.com/fweiger/AI_book/issues/74#issuecomment-7084474199) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
 
