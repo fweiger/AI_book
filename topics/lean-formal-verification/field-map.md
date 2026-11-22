@@ -1,6 +1,6 @@
-# TOPIC-018｜数学与跨学科应用全景
+# TOPIC-018｜已有领域证据与论文—项目资源索引（支撑层）
 
-> 初始来源审查日期：2026-11-22。以下是来源级地图，不是完整系统综述。E1 表示官方项目页/原始论文已读到方法与边界；未克隆构建的项目均不得标为 E2。
+> 初始来源审查日期：2026-11-22。**本文件是论文/Lean 项目/相邻工具的证据索引，不是本专题的主框架，也不负责决定行业机会优先级。** 主框架见 [industry-application-framework.md](industry-application-framework.md)，首版行业机会见 [industry-opportunity-map.md](industry-opportunity-map.md)。只有某个行业机会被选定后，才从本索引中检索论文和项目，并按需启动具体项目审计。E1 表示官方项目页/原始论文已读到方法与边界；未克隆构建的项目均不得标为 E2。
 
 ## A. 数学领域
 
@@ -37,15 +37,13 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 - Mathlib 是社区驱动数学库，不是 Lean Kernel。
 - Lake、Blueprint 的具体职责与复现流程仍需在 M0 逐项补充官方文档和真实工程示例。
 
-## D. 后续审查优先级
+## D. 后续使用规则：由行业机会触发资源映射
 
-1. 数学：Mathlib、Formal Conjectures、Liquid Tensor、Fermat、Equational Theories。
-2. 工程：Aeneas、Hax、ArkLib、Verified-zkEVM。
-3. 经济金融：MathEconLib、两种不同的 EconCSLib、Econlib、MathFin。
-4. AI/物理：TorchLean、physicslib4、FormalQFT、Physlib。
-5. 分布式、信息论、控制：先核实源代码、具体声明与证明状态，再决定是否列为正式案例。
-
-所有项目的版本、许可证、构建和 sorry/admit/公理审计都在 case-studies.md 持续补齐。
+1. 先从 [industry-opportunity-map.md](industry-opportunity-map.md) 选定具体行业、业务领域和问题，不以现有项目名录决定研究主线。
+2. 将问题拆成可形式化对象和目标性质后，再回到本文件寻找直接论文、Lean 项目和相邻工具。
+3. 论文与项目映射必须说明它们解决的是否为同一个问题；相邻工具不得标成 Lean 项目。
+4. 只有当某项目被选作方向的关键复用资产、复现对象或原型基础时，才在 [case-studies.md](case-studies.md) 开展固定版本、许可证、toolchain、定理、证明依赖和构建审计。
+5. 本文件中的项目存在、README 声明和源码线索均不自动代表构建通过、证明完整或行业采用。
 
 
 ## E. M0 版本与生态边界发现（2026-11-22）

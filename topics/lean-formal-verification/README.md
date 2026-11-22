@@ -2,7 +2,7 @@
 
 > 规范研究任务：[AI_book Issue #74](https://github.com/fweiger/AI_book/issues/74)  
 > Task ID：AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION  
-> 建立：2026-11-22；专题版本：0.6.3（Draft）；状态：OPEN_RESEARCH / M0 项目准入进行中，M2/M3 已有金融与密码学源码证据。静态源码审计不代表项目已独立构建或完整证明。
+> 建立：2026-11-22；专题版本：0.8.0（Draft）；状态：OPEN_RESEARCH / M2 行业应用框架搭建中。当前先完成行业—业务场景—形式化问题—Lean 能力框架，论文和 GitHub 项目作为下游证据，项目审计按具体方向需要触发。
 
 ## 最初的问题
 
@@ -10,9 +10,9 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 
 ## 核心研究框架
 
-**问题/猜想 → 数学定义与假设 → Lean 形式化陈述 → 证明分解与定理复用 → Kernel 检查 →（如涉及程序）实现精化/差分验证 → 独立审查与可复现归档。**
+**行业 → 业务领域/价值链 → 具体场景 → 业务问题 → 可形式化对象 → 目标性质 → Lean 能力与适配边界 → 论文 → GitHub 项目 → 按需审计 → 原型/应用验证。**
 
-本专题不是 Lean 语法手册，也不只围绕某个著名猜想。核心资产是可复用的跨学科案例、方法卡、证据和边界。
+本专题首先回答 Lean 能在哪些行业和业务领域解决什么问题。Lean 的定理证明、规格建模、可执行参考模型、程序精化和数学库是解决问题的能力，不是研究目标本身。先建立行业应用框架，再从具体机会寻找论文和项目；未选定方向前不开展大批 GitHub 项目审计。
 
 ## 术语边界
 
@@ -27,7 +27,10 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 
 ## 导航
 
-- [数学与跨学科应用全景](field-map.md)
+- [Lean 跨行业应用研究框架（主框架）](industry-application-framework.md)
+- [行业应用机会地图](industry-opportunity-map.md)
+- [应用机会卡模板](application-opportunity-card-template.md)
+- [已有领域证据与论文—项目资源索引（支撑层）](field-map.md)
 - [代表案例与项目审计台账](case-studies.md)
 - [方法与技巧库](methods-and-tactics.md)
 - [形式化研究工作流](formalization-playbook.md)
@@ -101,3 +104,10 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 - [Veil](https://github.com/verse-lab/veil)：main 固定 commit 的 [Run #442](https://github.com/verse-lab/veil/actions/runs/45014566842) 在 Linux/macOS build/test PASS；TrustAudit 的 7 条 shipped route 和 positive control 均 PASS；可信 SMT 与 sorryAx 边界已记录。
 
 本轮新增 M-19/M-20、C018-061—068 和三张项目审计卡。AC-05 仍 PARTIAL：Rate-Distortion 当前版本未 build；外部项目没有本专题独立构建。
+
+
+## 2026-11-23｜研究顺序纠偏
+
+用户明确要求先搭建 Lean 跨行业应用框架，而不是继续进入具体项目审计。当前主线为行业分类、业务领域、具体场景、可形式化问题、Lean 能力、适配边界和价值路径；随后才从具体机会映射论文与 GitHub 项目。已有项目矩阵、案例和 Batch A 审计作为证据资产保留，项目审计仅在选定具体方向并确有复用/原型需要时进行。
+
+详见 [主框架](industry-application-framework.md)、[首版行业机会地图](industry-opportunity-map.md) 和 [应用机会卡模板](application-opportunity-card-template.md)。
