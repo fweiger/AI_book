@@ -80,3 +80,9 @@ Lean 社区目录明确说明其项目列表是代表性样本，不保证穷尽
 - Hax ADC 的历史 PoC 问题已由上游多项 PR 迭代；官方 ADC example 采用 \`specset bv\` + \`hax_mvcgen\` + \`bv_decide\`，更适合作为可迁移的方法。
 
 **研究边界：** 本轮是固定 commit 的源码与依赖审计；没有运行 Lean build，也没有独立复现上游报告。不能把源码中无 sorry 等同于 Kernel 已接受，也不能把 axiomatized bridge 视为实现精化证明。
+
+### Hax/Rust 验证生态的时点修正
+
+Hax ADC README 记录的是早期开发阶段的失败列表。后续 Hax 上游已合并 cast 类型标注（#1925）、规格集分离（#1933）、模块命名修复（#1927）和完整 Lean package scaffold（#2142）。研究问题应从“功能是否缺失”转为“目标项目锁定的 Hax 版本是否包含修复，以及升级后能否完成抽取、构建和正确性证明”。
+
+Hax-FRI 固定的 Hax commit 是 2026-01-20 的 Lean 4.26.0 升级提交，早于 #1925/#1933；Hax 0.5.0（2026-11-09）要求 Lean 4.35.0 并包含 breaking changes。应保留旧版可复现基线，再单独建立新版迁移分支。
