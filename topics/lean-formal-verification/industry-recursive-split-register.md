@@ -2,8 +2,8 @@
 
 > **版本：** v0.1 · 2026-11-23  
 > **上游：** [industry-leaf-project-map.md](industry-leaf-project-map.md) 中的 60 个首轮候选节点。  
-> **本轮新增：** 55 个更细的子节点，覆盖不同算法、组件、证明目标或项目实现。  
-> **重要：** 55 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。2026-11-23 首轮论文—仓库精度复核修订了 9 个子节点，见 [证据核验批次](sessions/2026-11-23-leaf-linkage-verification-batch1.md)。
+> **累计新增：** 第二轮原 55 个 + 论文—仓库复核期间新拆 7 个 = **62 个候选子节点**，覆盖不同算法、组件、证明目标或项目实现。  
+> **重要：** 62 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。2026-11-23 首轮论文—仓库精度复核修订了 9 个子节点，见 [证据核验批次](sessions/2026-11-23-leaf-linkage-verification-batch1.md)。
 
 ## 1. 状态与停止规则
 
@@ -81,6 +81,20 @@
 | IND11-04-B | IND11-04 投票规则 | 投票规则的公平性公理和社会选择性质 | 偏好关系、投票函数、公理与反例 | [EconCSLib research](https://arxiv.org/abs/2606.16144) | [SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | DIRECT_LEAN_RESEARCH；RELATED_METHOD；CANDIDATE_LEAF |
 | IND12-04-A | IND12-04 AI证明助理 | 通过检索找到相关 theorem/premise 并构造证明上下文 | theorem 库索引、premise retrieval、proof context | [LeanDojo](https://arxiv.org/abs/2306.15626) | [lean-dojo/LeanDojo](https://github.com/lean-dojo/LeanDojo)（历史原仓库）；[lean-dojo/LeanDojo-v2](https://github.com/lean-dojo/LeanDojo-v2)（新项目入口） | LEAN_INFRASTRUCTURE；原 LeanDojo 是论文 DIRECT_COMPANION；v2 是功能扩展的后继项目，原仓库 deprecated；CANDIDATE_LEAF |
 | IND12-04-B | IND12-04 AI证明助理 | 从当前 proof state 推荐 tactic 并生成候选证明步骤 | tactic 候选、状态转移、证明项检查 | [LeanCopilot](https://arxiv.org/abs/2404.12534) | [lean-dojo/LeanCopilot](https://github.com/lean-dojo/LeanCopilot) | LEAN_INFRASTRUCTURE / DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；CANDIDATE_LEAF |
+
+## 2A. 本轮追加递归下钻：7 个子节点（3 个原未拆父节点）
+
+> 本轮从 35 个尚未拆分的首轮父节点中，选择 3 个有直接 GitHub README 和原始论文/技术资料的方向，继续拆成具体组件/性质。下面是 **候选**，不是已经完成项目级证明审计。新增后第二轮及追加子节点总计 **62** 个，已发生子节点拆分的父节点为 **28** 个，其余 **32** 个仍未拆分。
+
+| 子节点 ID | 父节点 | 具体场景 / 最小问题 | 形式化对象与目标性质 | 论文/标准 | GitHub 项目 | Lean/项目关系与当前状态 |
+|---|---|---|---|---|---|---|
+| IND02-01-A | IND02-01 云授权 | Cedar 策略语言的授权决策语义和关键性质是否可形式化证明 | policy evaluator、表达式/实体、授权结果、语义不变量 | [AWS 形式化验证与差分测试技术说明](https://aws.amazon.com/blogs/opensource/lean-into-verified-software-development/)；[Cedar 原始规格](https://github.com/cedar-policy/cedar-spec) | [cedar-policy/cedar-spec](https://github.com/cedar-policy/cedar-spec)（`cedar-lean/`） | DIRECT_LEAN_APPLICATION；PRIMARY_PROJECT_SPEC（技术报告不是同行评审论文）/ CANDIDATE_LEAF |
+| IND02-01-B | IND02-01 云授权 | Rust 生产授权引擎与 Lean 参考规格如何发现行为不一致 | Lean reference evaluator、Rust authorizer、输入生成、差分测试 oracle | [AWS 差分测试技术说明](https://www.amazon.science/blog/how-we-built-cedar-with-automated-reasoning-and-differential-testing)；[cedar-spec README](https://github.com/cedar-policy/cedar-spec) | [cedar-policy/cedar-spec](https://github.com/cedar-policy/cedar-spec)（`cedar-drt/`）；[cedar-policy/cedar](https://github.com/cedar-policy/cedar) | DIRECT_LEAN_APPLICATION + DOMAIN_REFERENCE_IMPLEMENTATION；DRT 不能自动替代整个 Rust 的精化证明 / CANDIDATE_LEAF |
+| IND02-05-A | IND02-05 xv6 操作系统 | xv6-riscv 内核及设备/断电模型下系统是否会 stuck，输出 trace 是否满足给定规格 | Sail RISC-V 语义、Iris 分离逻辑、执行轨迹、系统 adequacy | [xv6iris arXiv 2609.04043](https://arxiv.org/abs/2609.04043)；[xv6iris README](https://github.com/mit-pdos/xv6iris/tree/lean) | [mit-pdos/xv6iris](https://github.com/mit-pdos/xv6iris/tree/lean)（`Xv6.xv6FsAdequacy_closed`） | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION（论文 + README）；证明状态仅为项目自述 / CANDIDATE_LEAF |
+| IND02-05-B | IND02-05 xv6 操作系统 | xv6 用户态指令执行和分离逻辑资源规格如何连接 | user-mode instruction semantics、memory/resource invariants、adequacy | [xv6iris arXiv 2609.04043](https://arxiv.org/abs/2609.04043) | [mit-pdos/xv6iris](https://github.com/mit-pdos/xv6iris/tree/lean)（README 所述 `Xv6.userProof`） | DIRECT_LEAN_RESEARCH；DIRECT_COMPANION；与内核全系统定理分开追踪 / CANDIDATE_LEAF |
+| IND09-02-A | IND09-02 TorchLean | 张量形状约束与线性代数运算如何在 Lean 中表达 | tensor shape、算子、形状约束、代数性质 | [TorchLean 论文](https://arxiv.org/abs/2602.22631)；[TorchLean README](https://github.com/lean-dojo/TorchLean) | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean)（`TorchLean.Tensor`） | DIRECT_LEAN_RESEARCH；RELATED_METHOD/PROJECT_DOC（具体论文覆盖待逐项确认）/ CANDIDATE_LEAF |
+| IND09-02-B | IND09-02 TorchLean | 模型计算图重写是否保持语义，证书/证明如何验证 | graph rewrite、model semantics、proof/certificate checking | [TorchLean 论文](https://arxiv.org/abs/2602.22631)；[TorchLean README](https://github.com/lean-dojo/TorchLean) | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean)（`TorchLean.Verify`） | DIRECT_LEAN_RESEARCH；RELATED_METHOD/PROJECT_DOC（具体覆盖待核）/ CANDIDATE_LEAF |
+| IND09-02-C | IND09-02 TorchLean | CPU/CUDA 训练路径共享的算子定义与 autograd tape 对应关系 | autograd tape、operator semantics、CPU rule、LibTorch/生成 kernel | [TorchLean 论文](https://arxiv.org/abs/2602.22631)；[TorchLean README](https://github.com/lean-dojo/TorchLean) | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean)（`TorchLean.Op`、`TorchLean.CUDA`） | DIRECT_LEAN_RESEARCH（训练/执行实现）；性能或生产 correctness 不能由 README 直接证明 / CANDIDATE_LEAF |
 
 ## 3. 父节点状态与仍需继续拆分的方向
 
