@@ -184,3 +184,9 @@ Batch9/10 为历史 **33 个弱索引入口**补齐真实 GitHub Lean 源码文�
 [Batch15 第四批P1/P2完整24项源码→论文/性质/边界映射](industry-depth3-p1p2-source-map-batch15.md)已提交并GET回读。原IND01已经无未下钻P1/P2，故本批选择其他11个行业各至少一父、工业与电网额外一父，总计12个全新L2（P1 5、P2 7），每父两个L3且不重复Batch12/13/14。原[124 L2登记](industry-recursive-split-register.md)和[triage](industry-leaf-closure-triage.md)分别新增12个反向链接。
 
 **累计78/124个L2有L3（P0 30/P1 19/P2 29），177 L3+2 L4=179登记/178终端，P1剩28/P2剩18，共46个L2未到L3。** 证据范围包括Cedar DRT Rust-Lean差分测试、VCVio密码学game定理、Black–Scholes条件性期权定价与Delta hedge、Veil FloodSet有限Lasso检查vs单独decisionStable时序证明、Physicslib4 GNS存在/唯一性定理；nfl_veripy、MoveIt Task Constructor、Grid2Op、Tellurium、Marabou是Python/C++/ROS2相邻领域工具，SocialChoiceLean的Pivato定理和FormalConjectures声明质量规则有不同proof/论文关系。**新24项统一SOURCE_MAPPED_WITH_SCOPE，不是LEAN_BUILD_PASS，未运行外部独立构建/公理审计。** 下一步选第五批约12个剩余P1/P2父节点，继续问题→论文→具体GitHub文件的知识树，不因本批局部可证明性或非Lean项目走向无边界审计。
+
+## 2026-11-24｜Batch16：P1/P2第五批11行业12父24个源码级L3
+
+[Batch16：第五批论文/源码/TCB研究矩阵（24个具名L3）](industry-depth3-p1p2-source-map-batch16.md)已GitHub提交并GET回读。选择IND02–IND12全部还有余量的11个行业，IND09双父，总计12个此前未覆盖的P1/P2 L2（P1 8/P2 4），每父2个新L3。原[124 L2登记](industry-recursive-split-register.md)与[triage](industry-leaf-closure-triage.md)分别反链12项。
+
+**累计90/124个L2有L3**（P0 30 + P1 27 + P2 33），**201 L3+2 L4=203登记单元、202终端**；剩余P1 20/P2 14，合计34个L2未达L3。新增24项`SOURCE_MAPPED_WITH_SCOPE`非`LEAN_BUILD_PASS`，本轮没跑外部clean build/axiom audit。重要证据：hax 0.4 Lean后端依赖Charon/Aeneas等TCB；ZisK`root_soundness`依赖程序ROM和Sail decode约束；formal-mathfin SDE Picard存在和Grönwall唯一性已有具名源码；KeYmaeraX Scala/dL、OpenPLC v3 EOL与v4 C后继、RDKit及P4C C++实现不是Lean proof；TorchLean shape-indexed tensor定义与Bool verify、Meta TMEM reuse KIR和CuTe frontend翻译需划定信任边界；ClimaAtmos pressure-work源码有no-op和文档未实现能量项；Catala保留F*与Lean语言区别、NNG4数学归纳教学示例不等于全部游戏soundness。**下一步从剩34个中取第六批约12个新父**，继续具体场景→单性质→论文→GitHub文件研究树，不以某项实现缺口导致无边界审计。
