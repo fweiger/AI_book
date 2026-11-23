@@ -41,6 +41,13 @@
 - **仍需证据**：ArkLib Sumcheck Interaction 迁移与 Hachi/Fiat-Shamir 组合、SP1 witness decode seam、Resonate 31/92、TorchLean Float/FFI/CUDA 与 Lean proof 的实现距离、Lean-MLIR 固定 ITP24 artifact 与当前 main 的差异；所有情况仍按单问题标注。**没有将任何叶节点擅自升级 LEAF_CLOSED。**
 - **唯一下一步**：优先对 **10 个仍为 `PROJECT_DOC_LINK` 的 L3/L4 节点**定位相应的源码、具名性质、论文/工程边界；完成后对 83 登记单元/82 终端开展统一来源级闭合判定，再推进 P1/P2 94 个 L2。
 
+## 1D. Batch10：10 个文档级 P0 L3 源码精确映射与证明缺口（最新）
+
+- [Batch10 10 项 doc→source 原始代码/符号与信任边界](industry-doc-to-source-anchors-batch10.md) 已 GET 回读，分别对应 Resonate validator（1）、TorchLean CUDA/FFI（1）、Lean Kernel Verify P0/P1 规格（5）、Zisk FV Aeneas 提取/解码桥接（1）、Sparkle 仲裁器与 Signal DSL（2）。来源为真实 `.lean` 文件或具名工具/模型声明，**10/10 文件级定位 PASS ≠ 10 项完成证明**。
+- 与 [Batch9 23 个 repo/dir 源码锚点](industry-repo-dir-source-anchors-batch9.md) 合并后，Batch8 建表时的 **33 个低精度索引入口**均有可回读的文件级 overlay；原 37/9/14/10/11/2 分类保留为历史快照，不应再说尚有 23 repo/dir 或 10 doc 节点等待首个文件定位。
+- **重要纠偏：** Resonate 的 `valid/lean/correctness.lean` 多处 `sorry`；LKV `holdsPar_eq`、TMEM/Store 判定只是抽象 KIR/Run 模型里的 checker/spec 关系；Zisk 当前 main 存在 ProductionM2/Aeneas 提取 + opcode/decoder bridge 的具体 Lean 文件，之前“主树未接入任何桥接”的笼统说法过时，仍须把完整 root 声明前提与 Rust/Sail extraction TCB 分开；Sparkle `ArbiterProps.lean` pure FSM theorem 与 `RoundRobin.lean` Signal+Verilog 生成不能自动宣称是同一证明的实现等价。
+- **唯一下一步**：在 83 登记单元/82 个终端的全量矩阵基础上，结合 Batch9+10 overlay 逐条判定**来源级** `SOURCE_LEVEL_CLOSED` 或 `REQUIRES_MORE_EVIDENCE`，记录每项的 paper↔repo 直接性与源码类型、Lean GAP/开放前提；然后再推进 P1/P2 的 94 个 L2，禁止把来源级归档说成 Lean kernel 构建验收。
+
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
 | 关键词/类型 | L2 命中数量 | 该信号的含义 |
