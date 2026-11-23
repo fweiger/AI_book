@@ -3,6 +3,12 @@
 > 2026-11-23；规范任务 [AI_book #74](https://github.com/fweiger/AI_book/issues/74)，研究 [PR #75](https://github.com/fweiger/AI_book/pull/75)。本文件基于 Batch4–7 的**原始映射行**生成并按有界规则复核，不是 83 个外部仓库独立构建、证明核验或同行评审。
 > 原始研究深钻结构：12 一级领域 / 60 父场景 / 124 L2（30 P0 /47 P1/47 P2）；目前 30/30 P0 均已至少下钻一层，得到 81 L3 与 2 L4。**独立登记单元 83 = 81+2，但终端叶节点 82 = 80 个未被拆分的 L3 +2 L4**；`IND04-03-B-02` 是 L4 父节点，不应计作单独叶节点。
 
+## Batch9 增量校正（2026-11-23；不改写 Batch8 历史快照）
+
+- Batch8 的文件精度分类 **14 `REPO_LEVEL_LINK` + 9 `REPO_DIRECTORY_LINK`** 属**Batch8 历史时点的入口状态**。现在经 [Batch9 的 23 条逐问题原始文件/定理映射](industry-repo-dir-source-anchors-batch9.md)，上述 23 项已全部找到可读的确切源码文件；本矩阵下方原各行的 `source_type` 是 Batch8 建表时快照，不代表最新核验精度。
+- GitHub 连接器实际回读了 23 对应的原始文件、声明或设计接口；对于作者自述尚未闭合的公理、`sorry`、系统实现精化、协议 Interaction 迁移，依然按 `REQUIRES_MORE_EVIDENCE` 保留，不将文件级定位升级成 `LEAF_CLOSED`。
+- 研究基线仍为 **83 个登记单元（81 L3+2 L4）、82 个终端节点、30/30 P0**；没有增加节点。**本轮下一来源级目标：10 个原 PROJECT_DOC_LINK 入口**，再做完整 83 单元的来源关系判定与 P1/P2 94 节点的细分研究。
+
 ## 1. 严格解释
 
 - **本轮是逐行证据分类，不是声称独立验证 83 个 GitHub 上游工程。** 来源级 `E1` 指已有对应 issue/论文/仓库/具体源码路径或作者文档的可回读映射；`NAMED_THEOREM_E1_NOT_BUILT` 表示名称/源文件可查，不等于 Lean kernel 运行、无 sorry/公理或全部假设已闭合。
