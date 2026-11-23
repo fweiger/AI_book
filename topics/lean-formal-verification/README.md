@@ -136,3 +136,8 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23｜Batch6：6 个 P0 节点的 17 个 L3 源码/论文入口
 
 [Batch6 源码锚点与单问题研究表](industry-depth3-p0-source-anchors-batch6.md)：补充 OpenVM RV32IM、Zisk RV64IM、EconCSLib 机制设计、LeanForControl、LeanInfoTheory、Sparkle 等六个此前未进入 L3 的 P0 父节点，新增 17 个研究单元。累计 23/30 个 P0 已至少继续一层，60 个 L3 与 2 个 L4；尚余 7 个 P0 待下钻。更新后的 [124 节点 triage](industry-leaf-closure-triage.md) 保持原 P0/P1/P2 分母与未关闭的来源缺口。来源级 E1 不等于外部项目独立 build、证明审计或 LEAF_CLOSED；当前仍以跨行业递归框架及论文—GitHub 项目关联为主线。
+
+
+## 2026-11-23｜Batch7：剩余 7 个 P0 的 21 个 L3 研究对象
+
+[Batch7 单一问题—论文/官方资料—GitHub 源码/Lean GAP 对照表](industry-depth3-p0-source-anchors-batch7.md)：本轮对 IFP、PIT 历史股票池、SciLean、LegalLean、Concerto、CGM/OpenAPS 和 ClimaCore 七个此前未到 L3 的 P0 各增加 3 个 L3，共 21 个源级研究问题，累计 **30/30 P0 至少再深入一层，81 个 L3、2 个 L4**。对应 [124 L2 triage](industry-leaf-closure-triage.md) 已更新。此为结构研究深度覆盖，不是 LEAF_CLOSED；SciLean `sorry_proof`、LegalLean 的显式演示 axiom、IFP 未完成不变量和 Concerto/CGM/ClimaCore 的 LEAN_GAP 必须保留。下一轮转为 81 L3/2 L4 的逐问题证据闭合核查，再处理 P1/P2，不提前开展无目标项目审计。
