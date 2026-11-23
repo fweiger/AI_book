@@ -153,9 +153,9 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** NONE
-- **当前 writer_owner：** NONE
-- **当前 write_state：** SYNCED
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P0-DEPTH3-SOURCE-ANCHORS-BATCH5-20261123
+- **当前 writer_owner：** chatgpt-session-20261123-P0-depth3-source-batch5
+- **当前 write_state：** CLAIMED
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|DEPTH3-PAPER-REPO-BATCH4-20261123
 - **旧 Writer 已停止/隔离证据：** 本轮唯一 Writer 已提交 Issue #74 comment #7094018808、GET 回读确认唯一 event_key 匹配且两项 CI success；当前声明已清理，无并发 Writer 迹象。
 - **若无法 fencing：** 不适用
