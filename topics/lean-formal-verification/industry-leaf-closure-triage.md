@@ -17,14 +17,15 @@
 | 尚未进入 L3 的 L2 节点 | **116** | 不意味着 116 个都必须再拆，需依单问题与项目闭合条件逐个判断 |
 | 本轮 L3 候选 | **16** | 都有真实 GitHub URL 和论文/研究说明，仍未做外部项目构建 |
 
-## 1A. 第三、第四层的实际进展（Batch 4 + Batch 5 + Batch 6）
+## 1A. 第三、第四层的实际进展（Batch 4–7）
 
 - [Batch4 L3 表](industry-depth3-paper-project-map.md)：**8 个 P0 L2 → 16 个 L3**。
 - [Batch5 L3/L4 代码锚点](industry-depth3-p0-source-anchors-batch5.md)：**9 个新的 P0 L2 → 27 个 L3，另外 2 个 CVaR L4 证明目标**。
 - [Batch6 六个 P0 的 17 L3 源码/论文映射](industry-depth3-p0-source-anchors-batch6.md)：OpenVM、Zisk、机制设计、控制理论、信息论与 Sparkle 6 个此前未进入 L3 的 P0 L2 → 17 个 L3（源码/技术资料来源级 E1）。
-- 合计已有 **23/30 个 P0 L2 至少继续一层**；新一层共 **60 个 L3**（16+27+17）和 **2 个 L4**。**剩余 7 个 P0** 尚未按当前方法具体下钻；其他 47+47 个 P1/P2 的来源关系仍未整体验收。
+- [Batch7 剩余 7 个 P0 的 21 L3 研究映射](industry-depth3-p0-source-anchors-batch7.md)：IFP、PIT 历史股票池、SciLean、LegalLean、Concerto、CGM/OpenAPS、ClimaCore 的直接 Lean 代码 / 行业源码缺口分层。
+- 合计已有 **30/30 个 P0 L2 至少继续一层**；新一层共 **81 个 L3**（16+27+17+21）和 **2 个 L4**。**剩余未至少进入 L3 的 P0：0**；这仅为研究深度覆盖，不是 LEAF_CLOSED。其他 47+47 个 P1/P2 的来源关系仍未整体验收。
 - `L3_MAPPING_E1` 仅证明已定位研究问题、第一手资料与代码/项目入口；并非 `LEAF_CLOSED`，不自动解除 `PAPER_GAP` 或 `LEAN_GAP`。
-- **尚未继续 L3 的 P0 ID：** `IND03-05-B`、`IND04-04-B`、`IND10-04-A`、`IND11-01-A`、`IND11-02-B`、`IND07-03-B`、`IND10-06-A`。
+- **尚未继续 L3 的 P0 ID：无（30/30 均已至少细分一层）**。下一轮改为逐个核验 L3 是否足够小、源码/theorem 是否对应论文及证明状态；不可根据 P0 初次细拆就宣布研究闭合。
 
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
@@ -62,7 +63,7 @@
 | `IND03-02-B` | IOR/SNARK 证明系统的组合结构与验证关系 | [Verified-zkEVM/ArkLib](https://github.com/Verified-zkEVM/ArkLib) | P0 | RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch5 ×3** |
 | `IND03-02-C` | 游戏式密码学安全证明与归约 | [Verified-zkEVM/VCVio](https://github.com/Verified-zkEVM/VCVio) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND03-05-A` | Veil 中 BFT 协议的 transition-system 不变量 | [verse-lab/veil](https://github.com/verse-lab/veil) | P0 | DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch5 ×3** |
-| `IND03-05-B` | IFP 中协议状态与故障假设的验证对象 | [sarvalabs/ifp](https://github.com/sarvalabs/ifp) | P0 | PAPER_GAP, PROJECT_DOC_ONLY |
+| `IND03-05-B` | IFP 中协议状态与故障假设的验证对象 | [sarvalabs/ifp](https://github.com/sarvalabs/ifp) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND04-01-A` | Brownian motion 的定义、滤过与路径性质 | [RemyDegenne/brownian-motion](https://github.com/RemyDegenne/brownian-motion) | P0 | CONTINUE_SPLIT, DIRECT_COMPANION_CANDIDATE |
 | `IND04-01-B` | SDE/随机积分的定义与基础定理 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P2 |  |
 | `IND04-02-A` | CRR 二叉树定价递推和无套利条件 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P0 | CONTINUE_SPLIT, RELATED_METHOD |
@@ -70,7 +71,7 @@
 | `IND04-03-A` | Markowitz 均值—方差模型的可行域与最优性条件 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P1 | RELATED_METHOD |
 | `IND04-03-B` | CVaR 的定义、凸表示与优化等价关系 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P0 | RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch5 ×4** |
 | `IND04-04-A` | 单条数据是否在决策时点可见：availableAt ≤ decisionTime | [fweiger/AI_book](https://github.com/fweiger/AI_book) | P1 | RELATED_METHOD |
-| `IND04-04-B` | 历史股票池成员、成分调整与历史修订是否按当时可得版本回放 | [fweiger/AI_Trader](https://github.com/fweiger/AI_Trader) | P0 | RELATED_METHOD · **细拆候选** |
+| `IND04-04-B` | 历史股票池成员、成分调整与历史修订是否按当时可得版本回放 | [fweiger/AI_Trader](https://github.com/fweiger/AI_Trader) | P0 | RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND04-05-A` | 投票规则的公平性、公理与反例 | [dominikpeters/SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | P1 | RELATED_METHOD |
 | `IND04-05-B` | 拍卖规则的激励相容、个体理性与分配性质 | [gametheoryinlean/EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch6 ×3** |
 | `IND04-05-C` | 均衡存在性与机制约束下的经济结论 | [matheconlib/matheconlib](https://github.com/matheconlib/matheconlib) | P1 | RELATED_METHOD |
@@ -97,10 +98,10 @@
 | `IND09-03-C` | Branch-and-bound 神经网络验证的界传播与剪枝正确性 | [Verified-Intelligence/alpha-beta-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND09-05-A` | 检索增强的 theorem/lemma 检索与 premise selection | [lean-dojo/LeanDojo](https://github.com/lean-dojo/LeanDojo) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND09-05-B` | 根据当前 proof state 推荐 tactic 并保持 Kernel 检查 | [lean-dojo/LeanCopilot](https://github.com/lean-dojo/LeanCopilot) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND10-04-A` | ODE/PDE 与数值算法中的定义、误差与可计算性 | [lecopivo/SciLean](https://github.com/lecopivo/SciLean) | P0 | PAPER_GAP, RELATED_METHOD · **细拆候选** |
+| `IND10-04-A` | ODE/PDE 与数值算法中的定义、误差与可计算性 | [lecopivo/SciLean](https://github.com/lecopivo/SciLean) | P0 | PAPER_GAP, RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND10-04-B` | 动力系统不变量、稳定性与长期行为 | [mcdoll/DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | P1 | RELATED_METHOD |
 | `IND10-04-C` | Lyapunov/小增益等控制稳定性定理 | [AnandGokhale/LeanForControl](https://github.com/AnandGokhale/LeanForControl) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND11-01-A` | 法律规则、例外、资格判定的形式化表达 | [edu-ap/legal-lean](https://github.com/edu-ap/legal-lean) | P0 | PAPER_GAP, PROJECT_DOC_ONLY |
+| `IND11-01-A` | 法律规则、例外、资格判定的形式化表达 | [edu-ap/legal-lean](https://github.com/edu-ap/legal-lean) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND11-01-B` | 将法规/税法条款表达为可执行且可审查的程序 | [CatalaLang/catala](https://github.com/CatalaLang/catala) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND11-04-A` | 加密选票、零知识证明与可验证计票 | [Election-Tech-Initiative/electionguard](https://github.com/Election-Tech-Initiative/electionguard) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND11-04-B` | 投票规则的公平性公理和社会选择性质 | [dominikpeters/SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | P1 | RELATED_METHOD |
@@ -122,7 +123,7 @@
 | `IND07-02-B` | FHIR 跨资源引用、患者归属及业务权限能否在实际服务器工作流中满足业务约束 | [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | P1 | LEAN_GAP |
 | `IND08-04-A` | FloodSet 一类协议在状态迁移下的指定时序性质如何表达、模型检查与证明 | [verse-lab/veil](https://github.com/verse-lab/veil) | P1 | RELATED_METHOD |
 | `IND11-02-A` | 如何将含例外和默认规则的税收/社保法条变成可执行且可审查的规则 | [CatalaLang/catala](https://github.com/CatalaLang/catala) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND11-02-B` | 结构化合同模型与条款数据的字段、类型、引用关系如何定义与校验 | [accordproject/concerto](https://github.com/accordproject/concerto) | P0 | LEAN_GAP, PAPER_GAP, PROJECT_DOC_ONLY |
+| `IND11-02-B` | 结构化合同模型与条款数据的字段、类型、引用关系如何定义与校验 | [accordproject/concerto](https://github.com/accordproject/concerto) | P0 | LEAN_GAP, PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND12-02-A` | 将尚未解决的科研数学猜想转换为 Lean 4 可检查的精确**命题陈述** | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND12-02-B` | 已翻译 Lean 命题是否忠实原始论文中的量词、边界值、条件与反例语义 | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | P2 |  |
 | `IND01-02-A` | Lean 4 组合电路规格→Signal DSL→Verilog 生成 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch6 ×2** |
@@ -142,7 +143,7 @@
 | `IND06-05-A` | 热工/化工装置流体与热模型的 ODE 仿真 | [OpenModelica/OpenModelica](https://github.com/OpenModelica/OpenModelica) | P1 | LEAN_GAP |
 | `IND06-05-B` | 化工吸附 Langmuir/BET 公式推导证明 | [atomslab/LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND07-03-A` | 开源 AID 系统胰岛素在体量 IOB 计算口径 | [openaps/oref0](https://github.com/openaps/oref0) | P1 | LEAN_GAP |
-| `IND07-03-B` | CGM 时效/预测/剂量约束的控制状态建模 | [openaps/oref0](https://github.com/openaps/oref0) | P0 | LEAN_GAP · **细拆候选** |
+| `IND07-03-B` | CGM 时效/预测/剂量约束的控制状态建模 | [openaps/oref0](https://github.com/openaps/oref0) | P0 | LEAN_GAP · **细拆候选** · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND09-01-A` | 统计学习 Gaussian Lipschitz concentration 定理 | [YuanheZ/lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory) | P0 | CONTINUE_SPLIT, DIRECT_COMPANION_CANDIDATE, PROJECT_LINEAGE |
 | `IND09-01-B` | localized least-squares 泛化/最优统计率界 | [YuanheZ/lean-stat-learning-theory](https://github.com/YuanheZ/lean-stat-learning-theory) | P0 | CONTINUE_SPLIT, DIRECT_COMPANION_CANDIDATE, PROJECT_LINEAGE |
 | `IND10-02-A` | Haag–Kastler AQFT 公理化局部可观测量 | [physicslib/physicslib4](https://github.com/physicslib/physicslib4) | P2 |  |
@@ -151,7 +152,7 @@
 | `IND10-03-B` | 量子熵/信息容量等式与界的条件 | [leanprover-community/physlib](https://github.com/leanprover-community/physlib) | P2 |  |
 | `IND10-05-A` | 单层 Langmuir 吸附模型形式化 | [atomslab/LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND10-05-B` | 多层 BET 吸附模型形式化 | [atomslab/LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND10-06-A` | 气候动力核网格/PDE 离散与数值守恒候选性质 | [CliMA/ClimaCore.jl](https://github.com/CliMA/ClimaCore.jl) | P0 | LEAN_GAP · **细拆候选** |
+| `IND10-06-A` | 气候动力核网格/PDE 离散与数值守恒候选性质 | [CliMA/ClimaCore.jl](https://github.com/CliMA/ClimaCore.jl) | P0 | LEAN_GAP · **细拆候选** · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND10-06-B` | 全球大气求解/微物理/对流参数化模型 | [CliMA/ClimaAtmos.jl](https://github.com/CliMA/ClimaAtmos.jl) | P1 | LEAN_GAP |
 | `IND12-01-A` | Natural Number Game 互动自然数证明练习 | [leanprover-community/NNG4](https://github.com/leanprover-community/NNG4) | P2 |  |
 | `IND12-01-B` | Lean Game Server 关卡及证明检查流程 | [leanprover-community/lean4game](https://github.com/leanprover-community/lean4game) | P1 | PROJECT_DOC_ONLY |
@@ -213,3 +214,11 @@
 ## Batch6 增量证据（2026-11-23）
 
 [17 个 L3 源码/论文映射完整表](industry-depth3-p0-source-anchors-batch6.md) 已实际写入、回读校验 ID 唯一。本批 6 个父节点此前均未下钻；目前 23/30 个 P0 有 L3，剩余 7 个在 §1A 列示。研究级 E1 不自动转为 LEAF_CLOSED，外部 clean build、依赖/公理审计、原型和独立 QA 均 NOT_RUN。原 124 L2 和 P0/P1/P2 = 30/47/47 分母不变。
+
+
+## Batch7 增量证据：30/30 P0 覆盖，但证明与叶节点均未全部闭合
+
+- [Batch7 的 21 个 L3 源码锚点与 Lean GAP](industry-depth3-p0-source-anchors-batch7.md) 已实际写回并 GET 回读：7 个原未下钻 P0，各 3 个唯一 L3，涵盖 IFP、PIT 历史股票池、SciLean、LegalLean、Concerto、CGM/OpenAPS 与 ClimaCore；直接 Lean 项目与其他行业实现严格分开。
+- **累计 81 L3、2 L4，30/30 P0 至少继续一层；原 124 L2/P0=30、P1=47、P2=47 不变。** 任何补全比例仅表示研究地图结构深度，不表示源码编译、证明独立 QA 或行业现实安全。
+- 纠偏要点：IFP 93/103 不变量仍有 10 pending；SciLean `odeSolve_fixed_dt` 有 `sorry_proof`；LegalLean 的 TypeclassConstraint 有显式 `axiom IsReasonable`；Concerto/OpenAPS/ClimaCore 是 LEAN_GAP；PIT 已有 eligibility theorem 但没有历史成员版本选择完整证明。
+- **下一轮优先**：对 30 P0 的 **81 个 L3 和 2 个 L4** 建立 closure 状态矩阵，定理/假设/论文/代码相符才记来源级闭合；如果有必要再向 L4/L5 递归。随后处理 P1/P2 来源匹配与未完成 AC，不开展无目标的外部项目审计。
