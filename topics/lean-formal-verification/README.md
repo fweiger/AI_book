@@ -32,6 +32,8 @@ Lean 如何把数学猜想、定义和证明转化为机器可检查的形式化
 - [首轮行业候选节点地图（12 行业 / 60 父节点）](industry-leaf-project-map.md)
 - [跨行业递归拆分登记表（60/60 父节点至少拆一层、124 个候选子节点）](industry-recursive-split-register.md)
 - [第三层研究地图：8 个 L2 分支→16 个 L3 问题/论文/GitHub](industry-depth3-paper-project-map.md)
+- [P0 深度映射 Batch 5：9 个 L2→27 个 L3，CVaR 再拆 2 个 L4](industry-depth3-p0-source-anchors-batch5.md)
+- [Batch 5 原始资料及研究边界记录](sessions/2026-11-23-depth3-p0-source-anchors-batch5.md)
 - [124 个 L2 节点的叶节点闭合/缺口复核队列](industry-leaf-closure-triage.md)
 - [Batch 4：第三层研究与证据分级记录](sessions/2026-11-23-depth3-paper-repo-and-closure-triage.md)
 - [跨行业递归 Batch 3：25 父节点新增 50 子问题，首轮父节点覆盖贯通](sessions/2026-11-23-recursive-industry-split-batch3.md)
@@ -123,7 +125,7 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 
 ## 2026-11-23｜递归下钻至 GitHub 项目叶节点
 
-用户明确要求所有行业分支按业务复杂度递归下钻，不能停在二级/三级；每条研究叶节点必须挂接对应论文/标准和实际 GitHub 项目。当前已形成 [60 个首轮候选父节点](industry-leaf-project-map.md) 与 [124 个候选子节点](industry-recursive-split-register.md)：**60/60 父节点均至少下钻一层**，但这不是 124 个终端研究单元全部闭合；目前已有 [8 个 L2 父节点的 16 个 L3 候选](industry-depth3-paper-project-map.md) 及 [124 节点缺口队列](industry-leaf-closure-triage.md)。后续应继续核验论文—仓库关系、重复复用与必要的更深层递归。项目审计与最小原型留待用户选定方向后进行。
+用户明确要求所有行业分支按业务复杂度递归下钻，不能停在二级/三级；每条研究叶节点必须挂接对应论文/标准和实际 GitHub 项目。当前已形成 [60 个首轮候选父节点](industry-leaf-project-map.md) 与 [124 个候选子节点](industry-recursive-split-register.md)：**60/60 父节点均至少下钻一层**，但这不是 124 个终端研究单元全部闭合；目前已有 [Batch4 的 16 个 L3](industry-depth3-paper-project-map.md) 与 [Batch5 的 27 个 L3/2 个 L4](industry-depth3-p0-source-anchors-batch5.md)，合计 17/30 个 P0 L2 已至少继续下钻一层；[124 节点缺口队列](industry-leaf-closure-triage.md)仍持续核验。后续应继续核验论文—仓库关系、重复复用与必要的更深层递归。项目审计与最小原型留待用户选定方向后进行。
 
 
 ## 2026-11-23｜第二轮项目级递归拆分
