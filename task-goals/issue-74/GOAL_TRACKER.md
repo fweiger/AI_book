@@ -168,9 +168,9 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** NONE
-- **当前 writer_owner：** NONE
-- **当前 write_state：** SYNCED（Batch10 事件唯一 GET 验证后 Writer 已释放）
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|SOURCE-CLOSURE-DECISIONS-BATCH11-20261123
+- **当前 writer_owner：** chatgpt-session-20261123-batch11-source-closure
+- **当前 write_state：** CLAIMED（Batch11：83 项来源级研究叶闭合决策生成并同步 Issue 中，尚未事件发布）
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|DOC-TO-SOURCE-BATCH10-20261123
 - **旧 Writer 已停止/隔离证据：** Batch9 Writer 原已释放；Batch10 本轮通过 Tracker SHA CAS 领取，Issue #74 comment #7098113514 事件键唯一回读后已清理 CLAIMED。
 - **若无法 fencing：** 不适用；并发冲突时停写不抢占。
