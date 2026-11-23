@@ -131,3 +131,8 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23｜第二轮项目级递归拆分
 
 首轮 60 个候选父节点不是最终叶节点。本轮新增 55 个更细的子节点，并将状态分为 CANDIDATE_LEAF、LEAF_CLOSED、PAPER_GAP、PROJECT_GAP 和 CONTINUE_SPLIT。项目映射不等于项目审计。
+
+
+## 2026-11-23｜Batch6：6 个 P0 节点的 17 个 L3 源码/论文入口
+
+[Batch6 源码锚点与单问题研究表](industry-depth3-p0-source-anchors-batch6.md)：补充 OpenVM RV32IM、Zisk RV64IM、EconCSLib 机制设计、LeanForControl、LeanInfoTheory、Sparkle 等六个此前未进入 L3 的 P0 父节点，新增 17 个研究单元。累计 23/30 个 P0 已至少继续一层，60 个 L3 与 2 个 L4；尚余 7 个 P0 待下钻。更新后的 [124 节点 triage](industry-leaf-closure-triage.md) 保持原 P0/P1/P2 分母与未关闭的来源缺口。来源级 E1 不等于外部项目独立 build、证明审计或 LEAF_CLOSED；当前仍以跨行业递归框架及论文—GitHub 项目关联为主线。
