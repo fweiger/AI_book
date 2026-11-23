@@ -10,7 +10,7 @@
 - 本文件路径：task-goals/issue-74/GOAL_TRACKER.md
 - 当前阶段：M2｜行业应用递归下钻、项目级研究单元与论文—GitHub映射
 - 创建时间：2026-11-22
-- 最近更新：2026-11-23（Batch12：P1/P2中跨12个IND01–IND12行业的12个L2（P1四项/P2八项）完成各2个具体源码/性质L3，新增24唯一L3；原L2表/triage/README GET回读反向链接，累计105 L3+2 L4=107登记、106终端，42/124 L2细拆；仍有82 P1/P2待展开）
+- 最近更新：2026-11-24（Batch13：第二批IND01–IND12跨12行业未重复的P1/P2父节点12个〔P1=4、P2=8〕→24个具名问题/源文件L3；原124 L2登记与triage各12行反向链接，README GET；累计129 L3+2 L4=131登记/130终端，54/124已有第三层，P1剩39/P2剩31共70待下钻）
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch12 12L2/24唯一L3/12行业、124父表/triage各12行、README及Issue唯一事件均已GET回读，Writer已释放，原协议/Goal不变）
-- Issue 同步状态：SYNCED（Batch12 event_key 在 Issue #74 唯一 GET 回读1条：[comment #7106397921](https://github.com/fweiger/AI_book/issues/74#issuecomment-7106397921)，Writer已释放）
+- 状态一致性：CONSISTENT（Batch13 12父×2=24唯一L3、12行业，原124父表和triage各12行及README均GET回读；Writer单独CLAIMED、Issue回执待同步；原Goal/AC不变）
+- Issue 同步状态：ISSUE_SYNC_PENDING（Batch13研究文档、L2登记/triage、README/Tracker均已GitHub写入及GET回读；Issue #74规范单事件待发布）
 
 ## 1. 批准目标基线
 
@@ -58,7 +58,7 @@
 
 ## 4. 当前检查点
 
-- **最近完成的一轮：** 2026-11-23 Batch12：从P1/P2 94个L2中选取IND01–IND12跨12行业的12个未下钻父节点（P1=4/P2=8），拆为24个具单一问题/对象/性质的L3并映射真实GitHub具体文件；同时关联论文/标准和direct companion vs related method vs历史Lean3 vs F* vs C++ implementation。代码文件已GET回读，原124 L2与triage 12行反向链接已提交；没有外部独立build/axiom审计。
+- **最近完成的一轮：** 2026-11-24 Batch13：由剩82个P1/P2未下钻L2中选择跨12行业12个新父节点（P1四/P2八），按源文件及一手论文/标准下钻24唯一L3；Lean源码含CertifyingDatalog、Aeneas FRI局部证明/ArkLib sorry、Sparkle AXI4-Lite纯FSM与Signal gap、Matheconlib与DynamicalSystems；KeYmaeraX(dL/Scala)、ESBMC-PLC+(SMT/BMC)、VerifiableP4(CoQ)、αβ-CROWN(Python)、ElectionGuard Rust verifier、FHIR XML、leanblueprint Python技术类别分明。来源类型、paper lineage与开放义务逐ID记录；未运行外部独立构建/实物测试。
 - **本轮实际完成：**
   1. 对 rust-lean 固定 commit 的 Hax/Aeneas 两条 pipeline 做同源比较；两边使用相同 blob SHA 的 compute_log_arity_for_round Rust 源码。
   2. 审计 Hax issues/PR，确认 cast/specset/ADC 等后续上游修复；识别 Hax-FRI 固定 Hax commit 早于关键修复。
@@ -93,10 +93,10 @@
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
   - 非主要研究者独立 QA 尚未执行。
 - **对原始目标的实际贡献：** 已建立 12 个一级行业的行业需求框架；60 个首轮候选父节点下钻出 55 个项目级子节点，逐项挂接形式化对象、论文/标准和 GitHub 项目；Lean 直接研究、相邻形式化工具和行业参考实现分开标记。
-- **当前阶段判断：** 原12行业/60最初父场景/124 L2（30 P0/47 P1/47 P2）不变；至本批累计 **105 L3+2 L4=107登记单元、106真实终端**，已有下级L3的父节点42/124（P0 30 + P1 4 + P2 8），P1剩43/P2剩39即82个L2未下钻。原P0 Batch11中83条来源级52 CLOSED/31 NEED-EVIDENCE仍是限定历史口径，不能把新24项自动纳入52统计，也不将源码定理存在认定为独立kernel/系统验收。
-- **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（新增24条跨12行业的L3→原论文/技术说明→真实GitHub文件/具名性质，完成P1/P2中12个L2）；AC-07 PARTIAL（Sail类型检查不等于ISA精化、SocialChoice论文错配、LeanChemicalTheories历史Lean3、Catala F*非Lean、SBML C++ LEAN_GAP、FormalConjectures sorry、LeanCopilot advice≠kernel proof、RateDistortion作者构建报告与本轮NOT_RUN分开）；AC-05/08本轮NOT_RUN；原Goal/Scope/AC未改。
+- **当前阶段判断：** 原12行业/60初始父/124 L2（P0=30,P1=47,P2=47）不变。Batch11 P0: 81L3+2L4=83登记，52个限定SOURCE_LEVEL_CLOSED/31待实质证据；Batch12/13各增24L3，故累计 **129L3+2L4=131登记研究单元、130真实终端**。第三层父节点54/124（P0=30,P1=8,P2=16）；剩余P1=39/P2=31即70个。新24项仅SOURCE_MAPPED_WITH_SCOPE，不等同kernel/论文闭合。
+- **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（新增12父24子，真实原始论文/标准与GitHub源文件/具体性质已读取，累计54/124 L2下钻）；AC-07 PARTIAL（Lean theorem和其他Coq、Scala/dL、SMT/BMC、Python、Rust、FHIR XML及Blueprint工具分类，并将Aeneas-ArkLib sorry、Sparkle Signal→RTL gap、FHIR R5-v6版本冲突与作者自报构建显式保留）；AC-05/08本轮NOT_RUN。来源索引24/24 PASS，不等于任何外部proof验收。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（原L2登记124唯一、triage12行及Batch12新增24个唯一L3和README导航已GET回读，树累计105 L3+2 L4；Issue事件待同步未提前声称SYNCED，唯一Writer CLAIMED且无协议/路由变更，D0）。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（Batch13 24个ID唯一、12新父P1/P2且不与Batch12重复、原124 L2登记与triage各12行反链及README同步已GET；原目标D0、Writer CLAIMED/Issue pending明确标注、不改变协议/任务路由）。
 
 ## 5. 阻断与未受影响工作
 
@@ -118,11 +118,11 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 继续 [Batch12 首批12行业P1/P2具体源码地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch12.md) 的宽度优先研究模式，在**剩余82个尚未下钻的P1/P2 L2**中选择**第二批12个不同父节点**（优先不同子领域与开源仓库），每项向具体单问题/形式化性质→原论文或一手标准/项目说明→精确 GitHub 文件/定理或明确 LEAN_GAP 继续下钻。保持IND01–IND12的行业可比较性，但不把每父2叶作为固定停止要求，必要时继续L4。
-- **原目标/AC：** Issue #74 v1.0 及锁定Task Center V1.2.2协议不变。原P0有界31项仍需证据，原Batch11 52项来源级闭合只表示资料映射；本轮新24项状态统一SOURCE_MAPPED_WITH_SCOPE，未升级为LEAN_BUILD_PASS或LEAF_CLOSED。
-- **当前缺口与分母：** 原124 L2，已42个具第三层（P0 30+P1 4+P2 8），还有P1=43、P2=39；累计105 L3+2 L4=107登记、106终端。Catala F*、libSBML C++、LeanChemicalTheories Lean3、SocialChoiceLean论文关系、Sail backend WIP等是各自边界，不阻断不同场景的论文/GitHub映射。
-- **可观察交付：** 下批新父节点ID/优先级与全部实际源码、独立问题/定理、论文/仓库对应、直接性/版本/假设、旧父节点反向链接、数量与唯一Writer的Issue同步回读。无真实新证据，不重复审计已确定节点。
-- **不执行：** 无目标项目级审计/最小原型、外部上游项目全部clean build、生产部署或交易、临床/硬件真实实验、AI_Trader #488写入或跨仓敏感操作。
+- **唯一优先动作：** 继续 [Batch12 首批12行业24 L3](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch12.md) 与 [Batch13 第二批12行业24 L3](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch13.md) 的研究广度主线，从 **剩余70个未下钻的P1/P2父节点（P1 39/P2 31）中再选择第三批约12个未重复的独立L2场景**，先核实精确项目源码和论文/一手技术资料，再按可分性质下钻到L3（必要时L4），严禁凭计划虚构节点。
+- **当前分母：** 12行业/60原父/124 L2(P0 30/P1 47/P2 47)；54/124个L2有L3〔P0 30+P1 8+P2 16〕；累计129L3+2L4=131登记、130终端。新48个P1/P2 L3仅SOURCE_MAPPED_WITH_SCOPE；P0 Batch11 来源级52 CLOSED/31 REQUIRES_MORE_EVIDENCE有界挂起。
+- **选下一步理由：** 原Goal要求覆盖行业→场景→具体问题→Lean/相邻形式化方法→原论文/代码并可在GitHub下钻；P1/P2还有70项薄覆盖，优先填新的行业子方向比反复审计已有局部Rust FRI sorry、FHIR版本、AXI HDL精化等细节更推进整体AC-03/07。
+- **验收方法：** 全部新父ID/优先级与原124 L2及triage对应，不重复Batch12/13；L3单问题、源文件精确可回读、具名property/theorem或非Lean/LEAN_GAP、论文项目直接/相关/技术资料关系、明确版本/假设/信任前提；更新单Tracker/Issue唯一事件并回读。
+- **不做：** 不重开新Issue，不改批准的Goal/Scope/AC、不擅自修改AI_Trader #488、数据/生产/交易或设备，不以源码存在声称外部Lean build/公理审查PASS，不进行无目标的大批项目审计。
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -170,21 +170,24 @@
 
 | 2026-11-23 / P1P2-12-INDUSTRIES-BATCH12 | 首批按IND01–IND12 12行业各选1个P1/P2 L2（P1=4/P2=8），逐项目源文件回读形成24个唯一L3，特别标注Sail WIP、Cedar/CompPoly/Pivato/LeanLTL/率失真/AQFT theorem范围、Lean3 Langmuir/BET、Catala F*、libSBML非Lean、LeanCopilot tactic、未解猜想sorry。原124 L2登记/triage各12行反向链接且README回读。累计42/124 L2具L3，105L3+2L4=107登记/106终端。 | AC-03/07 PARTIAL，来源定位24/24 PASS；外部独立kernel/build/AC-05/08 NOT_RUN | [Batch12](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch12.md) · [124父表](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-recursive-split-register.md) | D0/CONSISTENT，文件级非证明级；Issue事件待同步、Writer CLAIMED | 第二批继续12个尚未下钻P1/P2父节点，剩82个（P1 43/P2 39）。 |
 
+| 2026-11-24 / P1P2-SECOND-12-INDUSTRIES-BATCH13 | 从未细拆的P1/P2中第二批选IND01–IND12各一个L2（P1=4/P2=8），对12新父建立24个源码级L3；ITP25 Datalog proof-tree/DAG Lean、FRI Aeneas局部proof+ArkLib sorry、Sparkle AXI FSM与Signal精化缺口、Matheconlib与DynamicalSystems、KeYmaeraX、ESBMC-PLC+、VerifiableP4 Coq、αβCROWN、ElectionGuard Rust、FHIR标准与Blueprint工具均明确语言/证明差异。原124 L2登记/triage各12行及README已回读，累计54/124已L3、129L3+2L4=131登记/130终端，P1/P2剩70。 | AC-03/07 PARTIAL；24/24源码级研究映射PASS；外部独立Build/QA及AC-05/08 NOT_RUN | [Batch13](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch13.md) · [原124父表](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-recursive-split-register.md) | D0/CONSISTENT；仅SOURCE_MAPPED_WITH_SCOPE，Issue事件未同步，Writer CLAIMED | 第三批从剩70个P1/P2中新选约12父继续实际论文/源码研究下钻。 |
+
 ## 10. 最近一次状态一致性回读
 
 - **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-SECOND-12-INDUSTRIES-BATCH13-20261124
 - **当前 writer_owner：** chatgpt-session-20261124-batch13-p1p2
-- **当前 write_state：** CLAIMED（Batch13：第二批跨12行业P1/P2研究进行中，Issue事件未发布）
+- **当前 write_state：** CLAIMED（Batch13 12个L2/24 L3和登记/triage/README均GET回读；待Issue事件唯一同步）
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-12-INDUSTRIES-BATCH12-20261123
-- **旧 Writer 已停止/隔离证据：** Batch11已释放；Batch12以Tracker SHA CAS领取，Issue #74 comment #7106397921单事件GET验证后释放Writer。
-- **若无法 fencing：** 当前无冲突；如权限或并发写入不明，不擅自重试覆盖。
+- **旧 Writer 已停止/隔离证据：** Batch12唯一Writer曾为NONE/SYNCED，本轮依据最新Tracker blob SHA CAS登记并GET回读。
+- **若无法 fencing：** 遇到冲突不覆盖源文件或伪称同步，停止并报告。
 
-| 核对项 | 最近状态与证据 | 本轮结果 |
+| 核对项 | 最新状态与证据 | 本轮结果 |
 |---|---|---|
-| 规范Issue/固定协议 | AI_book #74 v1.0；AI_tasks V1.2.2 commit f0e5ccb90c54265dcd07abb9a975c903eb031ccf | PASS |
-| Batch12 24个新研究节点 | 12个独立P1/P2父×2=24唯一L3，IND01–IND12全部行业；[源文件研究表](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch12.md) | PASS（来源级，NOT_RUN构建） |
-| 124 L2父子反向关联 | 原父表124唯一ID，其中12行新增Batch12链接，triage同12行状态回链、README导航GET | PASS |
-| 累计树和优先级 | P0=30、P1=47、P2=47；42/124已有L3；105L3+2L4=107登记/106终端，剩P1 43/P2 39 | PASS（结构） |
-| 独立外部验证/CI | 本批未运行全部外部Lake/axiom构建，最新CI待核 | NOT_RUN/UNKNOWN |
-| Batch12 Issue事件 | [comment #7106397921](https://github.com/fweiger/AI_book/issues/74#issuecomment-7106397921) event_key唯一1条，Writer已释放 | SYNCED |
-| 目标与唯一下一步 | D0；第二批从剩82个P1/P2选12父，下钻到真实源码 | CONSISTENT |
+| 规范Issue与锁定协议 | AI_book #74 v1.0；AI_tasks V1.2.2 f0e5ccb90c54265dcd07abb9a975c903eb031ccf | PASS |
+| Batch13 12L2/24L3 | [Batch13研究源码明细](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p1p2-source-map-batch13.md) 24个唯一L3，12行业、P1四/P2八，不重复Batch12 | PASS（研究级） |
+| 父子反向导航 | 原124 L2主登记与triage对应12行Batch13反向链接，README导航已GET回读 | PASS |
+| 累计树 | 54/124 L2具L3，129L3+2L4=131登记、130终端；剩70个P1/P2 | PASS（结构） |
+| 论文语言与证明边界 | Lean4/Coq/dL/SMT/Python/Rust/FHIR/Blueprint、历史/直接论文及sorry/版本明确 | PARTIAL（来源级） |
+| 独立上游构建及GitHub CI | 未执行新增外部build/kernel/axiom审计，当前分支CI另查 | NOT_RUN/UNKNOWN |
+| Batch13 Issue事件 | Writer CLAIMED，待规范Issue #74评论发布/单事件GET回读 | ISSUE_SYNC_PENDING |
+| 目标与唯一下一步 | D0；第三批选择剩70个P1/P2中的约12父 | CONSISTENT |
