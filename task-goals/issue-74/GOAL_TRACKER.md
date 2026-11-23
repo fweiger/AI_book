@@ -10,7 +10,7 @@
 - 本文件路径：task-goals/issue-74/GOAL_TRACKER.md
 - 当前阶段：M2｜行业应用递归下钻、项目级研究单元与论文—GitHub映射
 - 创建时间：2026-11-22
-- 最近更新：2026-11-23（Batch7：7 个原未下钻的 P0→21 L3，累计 30/30 P0 至少一层、81 L3/2 L4；21 个研究节点与 124 L2 队列、README 均已源级回读）
+- 最近更新：2026-11-23（Batch8：从 Batch4–7 四批原表读取并建立 83 条唯一 L3/L4 来源级闭合门禁矩阵：81 L3、2 L4、30 个 P0，真正终端叶节点 82；已更新 triage 和 README 并 GET 回读）
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch7 21 L3 研究文件/triage/README、Tracker 和 Issue #74 event_key 唯一回读一致；原批准 v1.0/锁定协议未变，当前 Writer 已释放）
-- Issue 同步状态：SYNCED（Batch7 event_key 已在 Issue #74 唯一 GET 回读 1 条：[comment #7097378271](https://github.com/fweiger/AI_book/issues/74#issuecomment-7097378271)，本轮 Writer 声明已清理）
+- 状态一致性：CONSISTENT（Batch8 矩阵 83 ID/82 终端与 triage/README 三份研究源回读一致；Issue 本轮事件仍待发布，CLAIMED/ISSUE_SYNC_PENDING 显式记录，不谎称同步完成）
+- Issue 同步状态：ISSUE_SYNC_PENDING（Batch8 研究证据与 Tracker 已更新，待唯一 Writer 写入规范 Issue #74 并核对事件键）
 
 ## 1. 批准目标基线
 
@@ -58,7 +58,7 @@
 
 ## 4. 当前检查点
 
-- **最近完成的一轮：** 2026-11-23 Batch7：对剩余 7 个 P0（IFP、PIT 历史股票池、SciLean、LegalLean、Concerto、CGM/OpenAPS、ClimaCore）各新增 3 个 L3（共 21）。每个有单问题、性质/假设、论文/官方资料、真实 GitHub 代码或规格和 Lean/GAP 标注；累计 30/30 P0 至少继续一层，81 L3、2 L4；但不代表叶节点全闭合。外部 build/QA/原型均 NOT_RUN。
+- **最近完成的一轮：** 2026-11-23 Batch8：将 Batch4–7 的 81 个 L3、2 个 L4 逐行整理为 83 条唯一 ID 的来源级研究门禁矩阵，30/30 P0 仍至少一层；1 个 L3 已作为 2 个 L4 的父节点，所以 terminal=82。矩阵记录问题、源码路径、论文关系、proof_state、GAP 与下一证据动作；本轮不运行外部 build/axiom 审计/原型，未将任何节点冒充最终 LEAF_CLOSED。
 - **本轮实际完成：**
   1. 对 rust-lean 固定 commit 的 Hax/Aeneas 两条 pipeline 做同源比较；两边使用相同 blob SHA 的 compute_log_arity_for_round Rust 源码。
   2. 审计 Hax issues/PR，确认 cast/specset/ADC 等后续上游修复；识别 Hax-FRI 固定 Hax commit 早于关键修复。
@@ -72,6 +72,9 @@
   10. Batch3 两组共拆 25 个此前未拆父节点、新增 50 个候选子节点：覆盖 RTL/编译器、VCVio/zkVM、安全控制与交通、工业模型、医疗/生物、统计学习、量子和化学、气候、政府采购和科研教育。程序确认 60/60 父节点都有子节点、124/124 子 ID 唯一、124/124 含 GitHub URL；识别跨行业复用和 Lean GAP。既有 Lean 工程证明、外部 build、原型未新增审计。
   11. Batch4 继续从 L2 向 L3：从 IND01-03-A、IND03-01-A/B、IND04-01-A、IND04-02-A、IND09-01-A/B、IND09-02-B 共 8 节点新增 16 个有论文/源码仓库关联的 L3；新增 124 L2 全量闭合 triage（P0/P1/P2：30/47/47）。修正 Brownian 原始 2025 论文与 MathFin 泛关联，以及 AI4SLT 原论文仓库与 StatsMLlib 整合后继项目。
   12. Batch5：从 9 个不同的 P0 L2 父节点继续下钻新增 27 个 L3、2 个 CVaR L4（具名源码 theorem）。完整查明 SP1 per-chip soundness/completeness/fidelity 边界、Resonate 31/92 properties、ArkLib legacy/Interaction 迁移、Veil crash-fault、MathFin 一般可积 CVaR/有限状态对偶、TorchLean real-vs-CUDA、LKV memory/barrier 两条父分支及 OCDS LEAN_GAP；未增加原 124 L2 节点数量，13 个 P0 待继续。
+  13. Batch6：6 个新 P0 L2 再细拆 17 个 L3，累计 23/30 P0、60 L3/2 L4；来源级映射，不做外部构建。
+  14. Batch7：剩余 7 个 P0 再细拆 21 个 L3，累计 30/30 P0、81 L3/2 L4；仅研究深度覆盖，不等于 LEAF_CLOSED。
+  15. Batch8：四批研究表整合为 **83 条登记研究单元（81 L3+2 L4）、82 个终端叶节点**；确认 30 个 P0 及所有 ID 唯一；按源代码精度、论文关联、证明状态与行动门禁逐行生成映射矩阵，已 GET 回读；开放证明、Lean GAP 和本轮未做的外部 QA 全部显式保留。
 - **已经核验的结果：**
   - PIT/no-lookahead 最小 package 的最新 PR head `d987f59d21a273c3f7f5c96d992a7411e40629c3` 已通过 [Lean Run #45](https://github.com/fweiger/AI_book/actions/runs/45043563533) 与 [Knowledge-base integrity Run #1276](https://github.com/fweiger/AI_book/actions/runs/45043563539)；Lean 4.35.0 `lake build` 完成（3 jobs），`eligibleRows_no_lookahead` 和 `late_available_revision_excluded` 均编译成功，`#print axioms` 均为 `[propext]`。
   - Hax-FRI 的 FoldingCorrectness 有两个实质性边界定理源码证明；该文件仍有 4 个 sorry，BasicProofs 有 9 个 sorry。
@@ -89,10 +92,10 @@
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
   - 非主要研究者独立 QA 尚未执行。
 - **对原始目标的实际贡献：** 已建立 12 个一级行业的行业需求框架；60 个首轮候选父节点下钻出 55 个项目级子节点，逐项挂接形式化对象、论文/标准和 GitHub 项目；Lean 直接研究、相邻形式化工具和行业参考实现分开标记。
-- **当前阶段判断：** M2 仍为 12 一级行业/60 原父节点/124 L2。30/30 个 P0 已至少继续深入 L3，累计 **81 L3、2 L4**；但它们仍有 RELATED_METHOD、LEAN_GAP、PAPER_GAP、OPEN_PROOF_TARGET，不能将 P0 深度覆盖当作 LEAF_CLOSED 或 AC-03 最终验收。P1/P2 94 项来源闭合仍待审。
-- **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（21 个 L3，累计 81 L3/2 L4；30/30 P0 初次深钻；尚未叶节点逐问题闭合与 P1/P2 复核）；AC-07 PARTIAL（PIT 只已证明 availableAt filter，IFP 作者进度与总体安全区分，SciLean sorry_proof，LegalLean axiom，Concerto/CGM/ClimaCore Lean GAP）；AC-05/08 本轮 NOT_RUN，AC-06 沿用历史 PIT 有限 PASS。
+- **当前阶段判断：** M2 仍是 12 一级行业/60 父节点/124 L2；已有 30/30 P0、81 L3 与2 L4（83 个登记单元，82 个终端）。Batch8 对所有 83 个单元完成研究证据分类与链接复核，**不是证明级叶节点闭合**。来源精度中37 个直接 Lean 文件、9 个目录级、14 个仓库级、10 个文档、11 个非 Lean 行业实现、2 个内部示例/任务；优先补齐 23 个仓库/目录级来源；P1/P2 94 个 L2 仍待审。
+- **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（81 L3+2 L4 全量83条来源级闭合门禁矩阵已写入；只有结构/映射审查，不是项目 theorem 构建）；AC-07 PARTIAL（显式区分原论文、技术说明、软件归档和非 Lean 行业参考；记录 PIL/CUDA/安全假设、IFP 93/103、Resonate31/92、SciLean sorry、LegalLean axiom、PIT version gap）；AC-05/08 本轮 NOT_RUN，批准需求不变。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（已 GET 回读 Batch7 研究文件 21 个唯一 ID、triage 的 30/30 和 81 L3、README；§7 将唯一下一步从初次深钻改为证据闭合核验；Issue 尚未同步但 CLAIMED 状态显式记载，不虚报同步成功）。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（Batch8 83 个 ID、30 L2 父节点、82 个终端及 37/9/14/10/11/2 来源类型由实际研究表生成并回读；§7/§9/§10 同向，本轮 Issue 事件显式 PENDING；未修改 Goal/Scope/AC）。
 
 ## 5. 阻断与未受影响工作
 
@@ -114,12 +117,12 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 对已形成的 **81 个 L3 与 2 个 L4** 建立可回读的**单问题研究叶节点闭合矩阵**：逐项核对 parent ID、形式化对象/性质、论文 vs companion / RELATED_METHOD、真实 GitHub 定理/源码路径、证据成熟度与明确 OPEN_PROOF_TARGET/LEAN_GAP；优先选已定位 theorem 的直接 Lean 分支和明确 gap 的行业实现分支，防止把初次下钻错误当做关闭。
-- **对应未完成 AC：** AC-03（跨行业项目/论文证据深度与闭合），AC-07（数学/行业代码信任边界）；后续 P1/P2 94 个 L2 同样要求来源关系核实，不能靠项目数量凑验收。
-- **为何优先：** Batch4–7 的 30/30 P0 至少都有 L3，对“继续下钻尚未有 L3 的 P0”已无剩余目标；盲目增加 L4 节点将放大宽泛/误配风险。先逐项判定 81 L3/2 L4 的闭合条件，再仅对未闭合且仍复合的节点选择 L4/L5，下游具体方向需要时再做外部项目审计。
-- **可观察交付：** 一份带唯一 ID、单一性质、源码/论文直接性、Lean 证明状态、GAP 标签、决定继续细拆或研究闭合的 83 项矩阵；重点纠正 IFP 93/103 尚未全部证明、SciLean `sorry_proof`、LegalLean 显式 axiom、PIT 不具备完整历史成员 as-of 选择、Concerto/CGM/ClimaCore 无直接 Lean 已证明成果。
-- **基础证据：** [Batch7 21 L3](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p0-source-anchors-batch7.md) 与 [全量 L2 triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md)；Batch4/5/6 保持原文件。
-- **边界：** 当前不实施外部 clean build / 独立 proof/axiom 审计 / 最小原型 / 生产交易 / AI_Trader #488 写入，不改变原 Goal/Scope/AC。来源级结论不能直接称 LEAF_CLOSED。
+- **唯一优先动作：** 使用 [Batch8 全量证据矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md)，优先对 **23 个仍停留在 GitHub 仓库级或目录级的 L3/L4 研究入口（14 repo + 9 directory）** 执行精确源码/具名 theorem/适用前提与论文对应定位；把来源级的疑点转为 `SOURCE_LEVEL_CLOSED` 或 `REQUIRES_MORE_EVIDENCE`，不把 theorem 名称冒充独立 build PASS。
+- **对应未完成 AC：** AC-03（跨行业项目/论文证据闭合）；AC-07（Lean、相邻技术、行业实现与实际系统事实边界），对原 Issue #74 的 Goal/Scope/Non-goals/AC 维持 v1.0。
+- **优先级理由：** Batch8 已全部登记 83 条研究单元，识别 23 个入口精度明显不足的 repo/目录项，是当前多领域证据链最直接的结构性缺口；在这之前无目标扩展 L4/L5 或对外部项目全量审计效率较低。其余 10 文档级节点、proof-state 依赖问题和 P1/P2 94 个 L2 随后依同一闭合标准推进。
+- **可观察交付：** 对 23 个目标逐条记录精确仓库文件、符号/定理、前提/版本、论文/项目关系、是否为已证定理或模型/开放目标；不能闭合时标具体 `PAPER_GAP`/`LEAN_GAP`/`OPEN_PROOF_TARGET`，保留真实证据链接。优先深钻跨行业而不是单一项目排障。
+- **基础材料：** [Batch8 83 条矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md)、[L2 triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md)、Batch4–7 原论文/源码。
+- **安全边界：** 不执行无目标外部 clean build/完整 sorry/axiom 项目审计、临床/量化/交易实验、生产部署、AI_Trader #488 写入；不改变批准合同。不将研究级 SOURCE_LEVEL_MAPPED 说成 LEAF_CLOSED。
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -157,20 +160,22 @@
 
 | 2026-11-23 / P0-DEPTH3-REMAINDER-BATCH7 | 余下 7 个 P0（IFP/股票池 PIT/SciLean/LegalLean/Concerto/CGM/ClimaCore）各新增 3 个 L3，共 21 个；源文件/官方文档与明确 GAP 分层；累计 30/30 P0 至少继续一层，81 L3/2 L4。新研究文件、triage 和 README 全部提交且 GET 回读；无外部 clean build。 | AC-03/07 PARTIAL（来源级增量 PASS）；AC-05/08 本轮 NOT_RUN | [Batch7](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p0-source-anchors-batch7.md) · [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | D0 / CONSISTENT（Issue 事件待同步），Lean GAP / open proof target 持续存在；不称 LEAF_CLOSED。 | 对 81 L3/2 L4 执行逐问题闭合判据矩阵，再推进 P1/P2 来源关系。 |
 
+| 2026-11-23 / L3-L4-CLOSURE-MATRIX-BATCH8 | 对 Batch4–7 四批研究单元逐行建立 83 条唯一 L3/L4 来源级闭合门禁矩阵（81 L3+2 L4），发现 1 个 L3 是两个 L4 的父节点，**82 个终端**而非 83；源码入口类型 37 Lean 文件、9 目录、14 仓库、10 说明、11 非 Lean、2 内部。研究矩阵、triage、README 已提交回读；没有独立外部证明运行。 | AC-03/07 PARTIAL；结构映射 PASS；AC-05/08 NOT_RUN | [Batch8 矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md) · [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | D0/CONSISTENT；Issue 事件待同步；不存在 83 项真正终端或 theorem PASS 的结论 | 优先为 23 个仓库/目录级入口定位具体定理/文件/论文，后处理文档级与 P1/P2。 |
+
 ## 10. 最近一次状态一致性回读
 
 - **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|L3-L4-CLOSURE-MATRIX-BATCH8-20261123
 - **当前 writer_owner：** chatgpt-session-20261123-batch8-closure-matrix
-- **当前 write_state：** CLAIMED（Batch8 83 个登记研究单元的闭合矩阵生成和状态更新中，尚未发布本轮 Issue 事件）
+- **当前 write_state：** CLAIMED（Batch8 矩阵/triage/README GET 回读，Writer 待写入 Issue #74 本轮事件）
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P0-DEPTH3-REMAINDER-BATCH7-20261123
-- **旧 Writer 已停止/隔离证据：** Batch6 Writer 领取前已释放；本轮 Batch7 Writer 已发布 Issue #74 comment #7097378271 并唯一 GET 回读，本轮待发布 CLAIMED 已清理。
-- **若无法 fencing：** 当前不适用；遇到并发阻断不得抢占旧 Writer。
+- **旧 Writer 已停止/隔离证据：** Batch7 最新 Tracker 为 NONE/SYNCED，本轮以该 SHA CAS 获取唯一 Writer 并 GET 验证。
+- **若无法 fencing：** 不适用；若发现并发其他 Writer，不自动抢占。
 
-| 项目 | 最近核对值 | 证据与范围 | 结果 |
+| 项目 | 最新核对值 | 证据 | 结果 |
 |---|---|---|---|
-| 规范 Issue / 原目标 | AI_book #74 原批准 v1.0 不变、锁定协议 f0e5ccb90c54265dcd07abb9a975c903eb031ccf 已读 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| 7 个 P0 增量 | Batch7 21 个 L3 唯一 ID，对应 7 个原始未下钻 P0；累计 30/30 P0、81 L3/2 L4 | [Batch7](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p0-source-anchors-batch7.md) | PASS（E1 来源级） |
-| 全量队列与导航 | 124 L2 triage / README 记录了 Batch7、0 个未下钻 P0；P0/P1/P2 静态分母不变 | [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | PASS（文本结构回读） |
-| 最新 CI | Batch7 的最新提交 CI 未核验结论；旧 PIT 证明的历史 PASS 不迁移为本轮外部项目的构建结果 | Draft PR #75 | UNKNOWN / NOT_RUN |
-| 当前 Issue 事件 | Batch7 event_key 已唯一匹配 1 条，comment #7097378271；Writer 已释放 | [Issue Batch7](https://github.com/fweiger/AI_book/issues/74#issuecomment-7097378271) | SYNCED |
-| §7 当前优先动作 | 研究转为 81 L3/2 L4 的 source–paper–theorem closure 检查；不做无目标外部审计 | 本 Tracker §7 | D0 |
+| 规范任务/协议 | Issue #74 需求 v1.0 和锁定 V1.2.2 commit f0e5ccb90c54265dcd07abb9a975c903eb031ccf | [Issue](https://github.com/fweiger/AI_book/issues/74)；协议 | PASS |
+| 研究单元矩阵 | 83 唯一研究 ID、30 L2 P0、81 L3/2 L4、82 terminal，未出现重名；保留 source/paper/proof 三轴 | [Batch8](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md) | PASS（来源级） |
+| triage/专题入口 | 矩阵已回链至 triage §1B 和 README；之前 124 L2 分母不变 | [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | PASS（文本回读） |
+| 本轮外部证明/CI | 外部仓库 clean build 与 theorem/axiom 全局审计、原型 NOT_RUN；新提交 GitHub CI 结果尚未核对 | PR #75 | UNKNOWN / NOT_RUN |
+| Issue 事件 | Batch8 event_key 仍待本轮唯一 Writer 发布并 GET 回读 | Issue #74 | ISSUE_SYNC_PENDING |
+| 当前唯一下一步 | 优先处理 23 个仓库/目录级研究入口的源文件/定理/论文精确匹配，避免假闭合 | §7/Batch8 | D0 |
