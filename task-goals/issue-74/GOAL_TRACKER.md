@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch11 83/83唯一、52/31两态完整、82终端及33条补证回链已GET回读；当前唯一Writer CLAIMED、Issue事件待同步，未将来源级闭合冒充Lean证明成功）
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch11 矩阵、triage、README与Tracker已完成写入及回读；当前唯一Writer待发布规范 Issue #74事件并核查）
+- 状态一致性：CONSISTENT（Batch11 83/83唯一、52/31状态、82终端、33条源码overlay、triage/README及规范Issue事件唯一回读一致；Writer已释放，批准目标/协议未变）
+- Issue 同步状态：SYNCED（Batch11 event_key 在 Issue #74 GET 唯一回读1条：[comment #7105879844](https://github.com/fweiger/AI_book/issues/74#issuecomment-7105879844)，当前Writer已释放）
 
 ## 1. 批准目标基线
 
@@ -169,11 +169,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|SOURCE-CLOSURE-DECISIONS-BATCH11-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-batch11-source-closure
-- **当前 write_state：** CLAIMED（Batch11 83条来源级闭合门禁及 triage/README 已GET回读，唯一Writer待发布Issue事件）
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|DOC-TO-SOURCE-BATCH10-20261123
-- **旧 Writer 已停止/隔离证据：** Batch10的活动Writer为NONE/SYNCED，本轮通过最新Tracker blob SHA CAS声明并GET回读。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED（Batch11 event_key 单条回读确认，Writer已释放）
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|SOURCE-CLOSURE-DECISIONS-BATCH11-20261123
+- **旧 Writer 已停止/隔离证据：** Batch10 Writer 已释放；本轮Batch11以Tracker SHA CAS唯一领取，Issue #74 comment #7105879844 单条回读成功后释放CLAIMED。
 - **若无法 fencing：** 若发生并发修改/权限冲突，停写并显式报告，不自行重分配。
 
 | 核对项 | 最新值 | 来源 | 结果 |
@@ -183,5 +183,5 @@
 | 来源级决策 | 52 SOURCE_LEVEL_CLOSED、31 REQUIRES_MORE_EVIDENCE；33历史弱入口已有具体文件overlay | Batch8/9/10/11 | PASS（研究来源级，非 theorem build） |
 | 研究导航一致性 | Batch11已在triage 1E/6与README回链，唯一下一步已转向P1/P2的94个L2 | 当前分支GET回读 | PASS |
 | 外部Build/QA/CI | 本批未运行独立外部项目build/kernel audit；最新GitHub CI待查 | PR #75 | NOT_RUN/UNKNOWN |
-| Batch11 Issue事件 | Writer CLAIMED，事件键尚待发布/GET核查 | Issue #74 | ISSUE_SYNC_PENDING |
+| Batch11 Issue事件 | event_key恰好1条、comment #7105879844，Writer已释放 | [Issue Batch11](https://github.com/fweiger/AI_book/issues/74#issuecomment-7105879844) | SYNCED |
 | Goal偏移/当前动作 | D0；31项保留异常队列，优先继续P1/P2框架覆盖 | §7 | CONSISTENT |
