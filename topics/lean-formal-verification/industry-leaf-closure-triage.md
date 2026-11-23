@@ -61,6 +61,13 @@
 - **范围/来源差异**：Cedar/CompPoly/LeanLTL/RateDistortion/AQFT存在实际Lean4源文件和定理/定义；Sail→Lean生成代码的type-check非实现精化；Langmuir/BET是历史Lean3论文伴随项目；Catala用F*而非Lean；libSBML为C++行业参考；FormalConjectures还有`sorry`；LeanCopilot tactic建议不是证明。SocialChoiceLean Pivato定理不可直接与原登记中的EconCSLib论文做错配。
 - **唯一下一步**：继续其他未展开的P1/P2 L2，优先第二批跨行业不同子领域12个父节点，按“单问题/性质→一手文献→真实GitHub文件/具名定理或LEAN_GAP”下钻，保持P0 31条未闭合异常为有界队列。**24条仅SOURCE_MAPPED_WITH_SCOPE，不叫LEAF_CLOSED或已独立构建**。
 
+## 1G. Batch13：第二批P1/P2跨12行业真实源码下钻（2026-11-24）
+
+- [Batch13：12个不重复P1/P2父节点→24个新L3，精确文件/性质/论文关系](industry-depth3-p1p2-source-map-batch13.md) 已实际提交和GET回读，横跨IND01–IND12的不同子领域，P1=4/P2=8。原124 L2主表与本队列各12个原父行已建立Batch13反向链接。
+- **最新树分母**：12行业/60初始父/124 L2（P0=30/P1=47/P2=47）不变；Batch11的P0 81L3+2L4、Batch12增24L3、Batch13再增24L3，累计 **129 L3+2 L4=131登记单元**；旧CVaR父L3不算终端，故**130终端**。具第三层的L2 **54/124 = P0 30 + P1/P2 24**；P1还39、P2还31，即**70个未下钻**。
+- **来源类型和重要缺口**：CertifyingDatalog有Lean proof-tree与DAG checker theorem；Aeneas FRI fold_step局部 theorem 与ArkLib `sorry`分别保留；Sparkle AXI4-Lite FSM proof与Signal实现精化未闭；Matheconlib/Lean DynamicalSystems有具名定理；KeYmaera X是Scala/dL、ESBMC-PLC+是SMT/BMC、VerifiableP4是Coq、alpha-beta-CROWN是Python数值算法、ElectionGuard验证器是Rust、FHIR是HL7标准XML、leanblueprint是Python依赖图工具。非Lean必须明确保留`LEAN_GAP`，不能被项目声称formal verification而误标成Lean proof。
+- **唯一下一步**：从剩余 **70个P1/P2 L2** 再选第三批约12个此前未下钻的父节点，以相同“具体问题→目标性质→原论文/标准/项目资料→GitHub源码→开放边界”路径继续扩展；P0 Batch11的31条证据缺口保持有界队列。新增24项`SOURCE_MAPPED_WITH_SCOPE`，**不是`LEAF_CLOSED`或`LEAN_BUILD_PASS`**，没有独立运行外部build。
+
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
 | 关键词/类型 | L2 命中数量 | 该信号的含义 |
@@ -108,12 +115,12 @@
 | `IND04-04-B` | 历史股票池成员、成分调整与历史修订是否按当时可得版本回放 | [fweiger/AI_Trader](https://github.com/fweiger/AI_Trader) | P0 | RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND04-05-A` | 投票规则的公平性、公理与反例 | [dominikpeters/SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | P1 | RELATED_METHOD · **Batch12 L3 ×2：源码级映射** · [证据](industry-depth3-p1p2-source-map-batch12.md) |
 | `IND04-05-B` | 拍卖规则的激励相容、个体理性与分配性质 | [gametheoryinlean/EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch6 ×3** |
-| `IND04-05-C` | 均衡存在性与机制约束下的经济结论 | [matheconlib/matheconlib](https://github.com/matheconlib/matheconlib) | P1 | RELATED_METHOD |
+| `IND04-05-C` | 均衡存在性与机制约束下的经济结论 | [matheconlib/matheconlib](https://github.com/matheconlib/matheconlib) | P1 | RELATED_METHOD · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND05-01-A` | 两条进路是否冲突、锁闭和释放条件是否安全 | [egrabanica/safe-railway-system-promela](https://github.com/egrabanica/safe-railway-system-promela) | P1 | RELATED_METHOD |
 | `IND05-01-B` | ETCS 状态与通信消息顺序是否允许非法状态 | [apalache-mc/apalache](https://github.com/apalache-mc/apalache) | P1 | RELATED_METHOD |
 | `IND05-03-A` | 神经网络反馈控制器闭环可达集是否越过安全边界 | [neu-autonomy/nfl_veripy](https://github.com/neu-autonomy/nfl_veripy) | P1 | RELATED_METHOD |
-| `IND05-03-B` | 连续/混合车辆控制器是否保持安全不变量 | [LS-Lab/KeYmaeraX-release](https://github.com/LS-Lab/KeYmaeraX-release) | P1 | RELATED_METHOD |
-| `IND06-01-A` | IEC 61131-3 PLC 逻辑的扫描周期、计时器和安全属性 | [IS2Lab/esbmc-plcplus](https://github.com/IS2Lab/esbmc-plcplus) | P2 | DIRECT_COMPANION_CANDIDATE |
+| `IND05-03-B` | 连续/混合车辆控制器是否保持安全不变量 | [LS-Lab/KeYmaeraX-release](https://github.com/LS-Lab/KeYmaeraX-release) | P1 | RELATED_METHOD · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
+| `IND06-01-A` | IEC 61131-3 PLC 逻辑的扫描周期、计时器和安全属性 | [IS2Lab/esbmc-plcplus](https://github.com/IS2Lab/esbmc-plcplus) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND06-01-B` | PLC 运行时/参考实现对 IEC 61131-3 程序的执行语义 | [thiagoralves/OpenPLC_v3](https://github.com/thiagoralves/OpenPLC_v3) | P1 | RELATED_METHOD |
 | `IND06-03-A` | 任务级机械臂动作序列与抓取/放置规划 | [moveit/moveit_task_constructor](https://github.com/moveit/moveit_task_constructor) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND06-03-B` | 机器人动力系统的稳定性与控制约束 | [AnandGokhale/LeanForControl](https://github.com/AnandGokhale/LeanForControl) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch6 ×3** |
@@ -125,19 +132,19 @@
 | `IND08-01-B` | Mutual information 与数据处理不等式 | [matteonerini/infotheorylib](https://github.com/matteonerini/infotheorylib) | P1 | RELATED_METHOD, PROJECT_DOC_ONLY |
 | `IND08-02-A` | 率失真函数、失真下界与最优编码率 | [fubinyan/rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch12 L3 ×2：源码级映射** · [证据](industry-depth3-p1p2-source-map-batch12.md) |
 | `IND08-02-B` | 信源/信道编码定理的概率与信息量度基础 | [serhatemrecoban/LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) | P1 | RELATED_METHOD |
-| `IND08-03-A` | Stateful P4 packet processing 的状态语义和多包性质 | [verified-network-toolchain/VerifiableP4](https://github.com/verified-network-toolchain/VerifiableP4) | P2 | DIRECT_COMPANION_CANDIDATE |
+| `IND08-03-A` | Stateful P4 packet processing 的状态语义和多包性质 | [verified-network-toolchain/VerifiableP4](https://github.com/verified-network-toolchain/VerifiableP4) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND08-03-B` | P4 编译器前端与 IR 变换是否保持程序行为 | [p4lang/p4c](https://github.com/p4lang/p4c) | P1 | RELATED_METHOD |
 | `IND09-03-A` | Star-set reachability 对神经网络输出集合的过近似 | [V2A2/StarV](https://github.com/V2A2/StarV) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND09-03-B` | ReLU 网络在输入约束下是否违反安全性质 | [NeuralNetworkVerification/Marabou](https://github.com/NeuralNetworkVerification/Marabou) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND09-03-C` | Branch-and-bound 神经网络验证的界传播与剪枝正确性 | [Verified-Intelligence/alpha-beta-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN) | P2 | DIRECT_COMPANION_CANDIDATE |
+| `IND09-03-C` | Branch-and-bound 神经网络验证的界传播与剪枝正确性 | [Verified-Intelligence/alpha-beta-CROWN](https://github.com/Verified-Intelligence/alpha-beta-CROWN) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND09-05-A` | 检索增强的 theorem/lemma 检索与 premise selection | [lean-dojo/LeanDojo](https://github.com/lean-dojo/LeanDojo) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND09-05-B` | 根据当前 proof state 推荐 tactic 并保持 Kernel 检查 | [lean-dojo/LeanCopilot](https://github.com/lean-dojo/LeanCopilot) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch12 L3 ×2：源码级映射** · [证据](industry-depth3-p1p2-source-map-batch12.md) |
 | `IND10-04-A` | ODE/PDE 与数值算法中的定义、误差与可计算性 | [lecopivo/SciLean](https://github.com/lecopivo/SciLean) | P0 | PAPER_GAP, RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch7 ×3** |
-| `IND10-04-B` | 动力系统不变量、稳定性与长期行为 | [mcdoll/DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | P1 | RELATED_METHOD |
+| `IND10-04-B` | 动力系统不变量、稳定性与长期行为 | [mcdoll/DynamicalSystems](https://github.com/mcdoll/DynamicalSystems) | P1 | RELATED_METHOD · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND10-04-C` | Lyapunov/小增益等控制稳定性定理 | [AnandGokhale/LeanForControl](https://github.com/AnandGokhale/LeanForControl) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND11-01-A` | 法律规则、例外、资格判定的形式化表达 | [edu-ap/legal-lean](https://github.com/edu-ap/legal-lean) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch7 ×3** |
 | `IND11-01-B` | 将法规/税法条款表达为可执行且可审查的程序 | [CatalaLang/catala](https://github.com/CatalaLang/catala) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch12 L3 ×2：源码级映射** · [证据](industry-depth3-p1p2-source-map-batch12.md) |
-| `IND11-04-A` | 加密选票、零知识证明与可验证计票 | [Election-Tech-Initiative/electionguard](https://github.com/Election-Tech-Initiative/electionguard) | P2 | DIRECT_COMPANION_CANDIDATE |
+| `IND11-04-A` | 加密选票、零知识证明与可验证计票 | [Election-Tech-Initiative/electionguard](https://github.com/Election-Tech-Initiative/electionguard) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND11-04-B` | 投票规则的公平性公理和社会选择性质 | [dominikpeters/SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | P1 | RELATED_METHOD |
 | `IND12-04-A` | 通过检索找到相关 theorem/premise 并构造证明上下文 | [lean-dojo/LeanDojo](https://github.com/lean-dojo/LeanDojo) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND12-04-B` | 从当前 proof state 推荐 tactic 并生成候选证明步骤 | [lean-dojo/LeanCopilot](https://github.com/lean-dojo/LeanCopilot) | P2 | DIRECT_COMPANION_CANDIDATE |
@@ -151,9 +158,9 @@
 | `IND01-01-A` | 如何把 Sail RISC-V ISA 规范转换为 Lean 可类型检查的形式化指令语义 | [opencompl/sail-riscv-lean](https://github.com/opencompl/sail-riscv-lean) | P2 |  · **Batch12 L3 ×2：源码级映射** · [证据](industry-depth3-p1p2-source-map-batch12.md) |
 | `IND01-04-A` | Blackwell TLX/Triton/CuTe GPU kernel 在**给定案例输入**下有无越界/地址回绕 | [facebookresearch/lean_kernel_verify](https://github.com/facebookresearch/lean_kernel_verify) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch5 ×2** |
 | `IND01-04-B` | 给定 kernel 编译变体中 barrier/TMEM 或 shared-memory 复用次序是否违反指定安全规 | [facebookresearch/lean_kernel_verify](https://github.com/facebookresearch/lean_kernel_verify) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch5 ×3** |
-| `IND02-03-A` | 对 Datalog 推导结果提供 proof-tree 证书并以 Lean 验证其语义正确性 | [knowsys/CertifyingDatalog](https://github.com/knowsys/CertifyingDatalog) | P2 | DIRECT_COMPANION_CANDIDATE |
+| `IND02-03-A` | 对 Datalog 推导结果提供 proof-tree 证书并以 Lean 验证其语义正确性 | [knowsys/CertifyingDatalog](https://github.com/knowsys/CertifyingDatalog) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND02-03-B` | 对共享子推导的 DAG 证书进行验证，以降低重复 proof-tree 编码 | [knowsys/CertifyingDatalog](https://github.com/knowsys/CertifyingDatalog) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND07-02-A` | 医疗记录 FHIR Resource/Profile 的结构、必填字段和 cardinality 是否符合指定版本标 | [HL7/fhir](https://github.com/HL7/fhir) | P1 | LEAN_GAP |
+| `IND07-02-A` | 医疗记录 FHIR Resource/Profile 的结构、必填字段和 cardinality 是否符合指定版本标 | [HL7/fhir](https://github.com/HL7/fhir) | P1 | LEAN_GAP · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND07-02-B` | FHIR 跨资源引用、患者归属及业务权限能否在实际服务器工作流中满足业务约束 | [hapifhir/hapi-fhir](https://github.com/hapifhir/hapi-fhir) | P1 | LEAN_GAP |
 | `IND08-04-A` | FloodSet 一类协议在状态迁移下的指定时序性质如何表达、模型检查与证明 | [verse-lab/veil](https://github.com/verse-lab/veil) | P1 | RELATED_METHOD |
 | `IND11-02-A` | 如何将含例外和默认规则的税收/社保法条变成可执行且可审查的规则 | [CatalaLang/catala](https://github.com/CatalaLang/catala) | P2 | DIRECT_COMPANION_CANDIDATE |
@@ -161,7 +168,7 @@
 | `IND12-02-A` | 将尚未解决的科研数学猜想转换为 Lean 4 可检查的精确**命题陈述** | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | P2 | DIRECT_COMPANION_CANDIDATE · **Batch12 L3 ×2：源码级映射** · [证据](industry-depth3-p1p2-source-map-batch12.md) |
 | `IND12-02-B` | 已翻译 Lean 命题是否忠实原始论文中的量词、边界值、条件与反例语义 | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | P2 |  |
 | `IND01-02-A` | Lean 4 组合电路规格→Signal DSL→Verilog 生成 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch6 ×2** |
-| `IND01-02-B` | 时序仲裁器/AXI4-Lite 总线状态约束 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P2 |  |
+| `IND01-02-B` | 时序仲裁器/AXI4-Lite 总线状态约束 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P2 |  · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND01-03-A` | MLIR SSA peephole 重写语义保持 | [opencompl/lean-mlir](https://github.com/opencompl/lean-mlir) | P0 | CONTINUE_SPLIT, DIRECT_COMPANION_CANDIDATE |
 | `IND01-03-B` | LLVM IR→RISC-V 指令选择的精化 | [opencompl/lean-mlir](https://github.com/opencompl/lean-mlir) | P2 |  |
 | `IND03-01-A` | 概率/oracle 密码安全游戏的精确定义 | [Verified-zkEVM/VCVio](https://github.com/Verified-zkEVM/VCVio) | P0 | CONTINUE_SPLIT |
@@ -190,10 +197,10 @@
 | `IND10-06-B` | 全球大气求解/微物理/对流参数化模型 | [CliMA/ClimaAtmos.jl](https://github.com/CliMA/ClimaAtmos.jl) | P1 | LEAN_GAP |
 | `IND12-01-A` | Natural Number Game 互动自然数证明练习 | [leanprover-community/NNG4](https://github.com/leanprover-community/NNG4) | P2 |  |
 | `IND12-01-B` | Lean Game Server 关卡及证明检查流程 | [leanprover-community/lean4game](https://github.com/leanprover-community/lean4game) | P1 | PROJECT_DOC_ONLY |
-| `IND12-03-A` | Lean Blueprint 数学定理依赖可视化 | [PatrickMassot/leanblueprint](https://github.com/PatrickMassot/leanblueprint) | P2 | E1_SCOPE_CHECK |
+| `IND12-03-A` | Lean Blueprint 数学定理依赖可视化 | [PatrickMassot/leanblueprint](https://github.com/PatrickMassot/leanblueprint) | P2 | E1_SCOPE_CHECK · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND12-03-B` | Blueprint 文档与 Lean 代码声明同步核对 | [PatrickMassot/leanblueprint](https://github.com/PatrickMassot/leanblueprint) | P2 | E1_SCOPE_CHECK |
 | `IND03-04-A` | Rust MIR/LLBC 翻译为 Lean 可验证纯函数的工具链 | [AeneasVerif/aeneas](https://github.com/AeneasVerif/aeneas) | P2 |  |
-| `IND03-04-B` | Rust FRI folding 核心算法经 Aeneas/Hax 两条路径形式化 | [Verified-zkEVM/rust-lean](https://github.com/Verified-zkEVM/rust-lean) | P2 |  |
+| `IND03-04-B` | Rust FRI folding 核心算法经 Aeneas/Hax 两条路径形式化 | [Verified-zkEVM/rust-lean](https://github.com/Verified-zkEVM/rust-lean) | P2 |  · **Batch13 L3×2：源码/论文/形式化语言分类** · [证据](industry-depth3-p1p2-source-map-batch13.md) |
 | `IND05-02-A` | 简化铁路双轨信号系统的区段互斥 | [egrabanica/safe-railway-system-promela](https://github.com/egrabanica/safe-railway-system-promela) | P1 | LEAN_GAP |
 | `IND05-02-B` | 铁路信号站间事件顺序的 deadlock/liveness 建模 | [egrabanica/safe-railway-system-promela](https://github.com/egrabanica/safe-railway-system-promela) | P1 | LEAN_GAP |
 | `IND07-01-A` | 血液透析设备 preparation/initiation/ending 工作流的 ASM 规格 | [asmeta/asmeta](https://github.com/asmeta/asmeta) | P1 | LEAN_GAP |
@@ -240,9 +247,9 @@
 6. `LEAF_CLOSED` 仅是**研究映射闭合**，绝不等于 theorem axiom footprint、软件构建、模型正确性或生产部署通过，这些属于用户今后按需选择的项目审计。
 7. 定向人工验证可以将 P0/P1/P2 升降，但应保留所用原始资料和版本；不把自动 triage 结果误当实证检验。
 
-## 6. 唯一下一步（Batch12 更新）
+## 6. 唯一下一步（Batch13 更新）
 
-Batch11已将原P0 83登记来源分为52个限定来源级闭合/31个仍需证据。Batch12已经将P1/P2中 **12个L2（跨12行业）下钻为24个真实文件级L3**，还有**82个P1/P2 L2**未达到同等深度。本轮唯一下一步：**第二批优先再选择其他12个未展开的P1/P2父节点**，尽量覆盖不同具体子领域与开源仓库，向论文/标准→源码定理或明确LEAN_GAP继续推进。避免对已映射24条和P0开放31条进行无范围项目审计；原Issue目标/AC不变。
+Batch12与Batch13分别映射了12个不同P1/P2父节点、24个真实文件级L3；与原P0 30父合计 **54/124 个L2已有L3**，累计129L3+2L4=131登记单元/130终端。**下轮主线：从剩70个P1/P2父节点（P1=39、P2=31）中选第三批约12个不同子领域，按实际证据继续下钻**，其中仍需区分Lean源码、Coq/dL/SMT系统、行业标准和工程工具，不因本轮ARKLIB、FHIR版本、Sparkle精化等具体缺口陷入重复全仓审计。保持Issue #74 v1.0与原AC不变。
 
 ## Batch6 增量证据（2026-11-23）
 
