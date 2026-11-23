@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：STATE_CONFLICT pending Batch3 事件同步；已提交跨行业 60/60 父节点覆盖与 124 候选子节点的研究记录，等待本轮 Issue #74 回执和 GET 回读；批准 Goal/Scope/AC 不变
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch3 实质文件与 Tracker 已提交，当前唯一 Writer CLAIMED）
+- 状态一致性：CONSISTENT（Batch3 研究文件/Tracker 已提交，Issue #74 本轮 event_key 已 GET 回读唯一匹配 comment #7093733197；研究提交 head af4de90 的 Knowledge-base integrity Run #1328 和 Lean PIT Run #97 均 success；批准 Goal/Scope/AC 未改变）
+- Issue 同步状态：SYNCED（Batch3 研究成果 event_key 已写入 Issue #74 并 GET 回读唯一匹配 comment #7093733197，当前 Writer 声明已清理）
 
 ## 1. 批准目标基线
 
@@ -90,7 +90,7 @@
 - **当前阶段判断：** M2 第一阶段行业父节点下钻覆盖已完成：12 个一级行业、60/60 个父节点均有子节点、124 个唯一候选子节点（其中部分项目跨行业复用）。**该覆盖完成仅为结构 PASS，不代表 124 个研究叶节点均 LEAF_CLOSED**。后续需按单一问题、性质与论文—项目关联质量决定进一步深钻，优先检查 PROJECT_GAP/LEAN_GAP、PAPER_GAP、CROSS_DOMAIN_REUSE 和仍过宽的节点。
 - **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（一级行业到项目级问题映射覆盖 60/60 父、124 子全部有 GitHub URL，但论文 direct companion、深度闭合和唯一项目核验尚未全量完成）；AC-07 PARTIAL（已区分 Lean/相邻形式化工具/行业参考实现、历史迁移及跨领域复用）；AC-05 保持原 PARTIAL，本轮不审计外部项目；AC-06 历史 PIT 最小包 PASS，不据此宣称行业验证成功；AC-08 NOT_RUN。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** STATE_CONFLICT pending Batch3 研究事件发布/回读；实质表格和 session 文件已提交、当前 Tracker 在唯一 Writer CLAIMED 状态；原 Goal/Scope/AC v1.0 未改变。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；程序校验 60/60 父节点已下钻、124 个子 ID 唯一且全部有 GitHub URL；Issue comment #7093733197 的 Batch3 event_key GET 回读唯一匹配 1 条；对文档/Tracker 提交 af4de90 的 Knowledge-base integrity #1328 与 Lean PIT #97 两项 CI 回读 success。CI 不证明外部项目质量。批准 Goal/Scope/AC v1.0 不变。
 
 ## 5. 阻断与未受影响工作
 
@@ -152,19 +152,19 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|RECURSIVE-PARENT-SPLIT-BATCH3-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-recursive-parent-split-batch3
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|RECURSIVE-PARENT-SPLIT-BATCH2-20261123
-- **旧 Writer 已停止/隔离证据：** 本轮 Writer 已完成 Issue comment #7093511668 发布且 GET 回读唯一匹配；原声明已清理；没有并发发布迹象。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|RECURSIVE-PARENT-SPLIT-BATCH3-20261123
+- **旧 Writer 已停止/隔离证据：** 本轮唯一 Writer 已发布 Issue #74 comment #7093733197 并 GET 回读确认唯一匹配，Writer claim 已清理，没有并发发布迹象。
 - **若无法 fencing：** 不适用
 
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致；未修改 Goal/Scope/Non-goals/AC | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | Batch3 文件已提交；60/60 父节点均有子节点、124/124 子 ID 唯一且均含 GitHub URL；跨领域重复和 Lean gap 已标，但未完成所有叶节点 paper–repo 关系核验；CI 待回读。 | [Batch3](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-recursive-industry-split-batch3.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | STRUCTURE_PASS / AC-03_PARTIAL |
+| §3/§4当前阶段与实际证据 | 60/60 父节点均已下钻一层，124/124 子节点 ID 唯一且含 GitHub URL；文档提交 af4de90 的 Knowledge-base integrity Run #1328、Lean PIT Run #97 success；外部项目构建 NOT_RUN，全部 LEAF_CLOSED 尚 PARTIAL。 | [Batch3](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-recursive-industry-split-batch3.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | STRUCTURE_PASS / AC-03_PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | 研究顺序已调整为行业需求→形式化问题→Lean能力→论文/项目；项目审计只在具体方向需要时触发 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 最新一行均为 124 个候选子节点的深度闭合、paper–repo 核验与必要更深层递归；不转入外部项目审计 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | Batch3 新 event 仍为 CLAIMED；实质文件及 Tracker 已提交，待 Issue 同步/回读 | [Issue #74](https://github.com/fweiger/AI_book/issues/74) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING |
+| 最新 Issue 进度事件与本文件版本 | Batch3 event_key 在规范 Issue 已 GET 回读唯一匹配一条（comment #7093733197）；Writer 声明完成后清理 | [Issue comment #7093733197](https://github.com/fweiger/AI_book/issues/74#issuecomment-7093733197) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
 
