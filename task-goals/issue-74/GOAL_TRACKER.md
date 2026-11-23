@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch7 21 L3 文件、triage、专题入口回读一致；Issue 事件尚未发布，Tracker 明示 CLAIMED / ISSUE_SYNC_PENDING；批准需求 v1.0/锁定协议未变）
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch7 唯一 Writer CLAIMED，等待本轮规范 Issue 事件 GET 验证，不提前声称 SYNCED）
+- 状态一致性：CONSISTENT（Batch7 21 L3 研究文件/triage/README、Tracker 和 Issue #74 event_key 唯一回读一致；原批准 v1.0/锁定协议未变，当前 Writer 已释放）
+- Issue 同步状态：SYNCED（Batch7 event_key 已在 Issue #74 唯一 GET 回读 1 条：[comment #7097378271](https://github.com/fweiger/AI_book/issues/74#issuecomment-7097378271)，本轮 Writer 声明已清理）
 
 ## 1. 批准目标基线
 
@@ -159,11 +159,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P0-DEPTH3-REMAINDER-BATCH7-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-batch7-p0-closure
-- **当前 write_state：** CLAIMED（Batch7 文件/triage/README 已回读；单一 Writer 待发 Issue 事件）
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P0-DEPTH3-SOURCE-ANCHORS-BATCH6-20261123
-- **旧 Writer 已停止/隔离证据：** Batch6 Writer 在领取前已显式清理为 NONE；本轮 Batch7 采用当前 Tracker blob SHA CAS 和 GET 回读声明唯一 Writer。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED（Batch7 唯一 Issue 事件已 GET 回读，Writer 已释放）
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P0-DEPTH3-REMAINDER-BATCH7-20261123
+- **旧 Writer 已停止/隔离证据：** Batch6 Writer 领取前已释放；本轮 Batch7 Writer 已发布 Issue #74 comment #7097378271 并唯一 GET 回读，本轮待发布 CLAIMED 已清理。
 - **若无法 fencing：** 当前不适用；遇到并发阻断不得抢占旧 Writer。
 
 | 项目 | 最近核对值 | 证据与范围 | 结果 |
@@ -172,5 +172,5 @@
 | 7 个 P0 增量 | Batch7 21 个 L3 唯一 ID，对应 7 个原始未下钻 P0；累计 30/30 P0、81 L3/2 L4 | [Batch7](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-depth3-p0-source-anchors-batch7.md) | PASS（E1 来源级） |
 | 全量队列与导航 | 124 L2 triage / README 记录了 Batch7、0 个未下钻 P0；P0/P1/P2 静态分母不变 | [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | PASS（文本结构回读） |
 | 最新 CI | Batch7 的最新提交 CI 未核验结论；旧 PIT 证明的历史 PASS 不迁移为本轮外部项目的构建结果 | Draft PR #75 | UNKNOWN / NOT_RUN |
-| 当前 Issue 事件 | 唯一 Writer CLAIMED，尚待发布/回读 Batch7 event_key | Issue #74 | ISSUE_SYNC_PENDING |
+| 当前 Issue 事件 | Batch7 event_key 已唯一匹配 1 条，comment #7097378271；Writer 已释放 | [Issue Batch7](https://github.com/fweiger/AI_book/issues/74#issuecomment-7097378271) | SYNCED |
 | §7 当前优先动作 | 研究转为 81 L3/2 L4 的 source–paper–theorem closure 检查；不做无目标外部审计 | 本 Tracker §7 | D0 |
