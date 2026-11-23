@@ -178,3 +178,9 @@ Batch9/10 为历史 **33 个弱索引入口**补齐真实 GitHub Lean 源码文�
 [Batch14 第三批24个L3问题→论文/源码与开放证明义务](industry-depth3-p1p2-source-map-batch14.md)已提交回读。此次选择IND01–IND12各一个此前未细拆的P1/P2父节点（P1=6、P2=6），与Batch12/13共36个不同P1/P2父节点；在[124 L2原登记](industry-recursive-split-register.md)及[triage队列](industry-leaf-closure-triage.md)各增加本轮12条反向链接。
 
 **累计66/124个L2具L3，153L3+2L4=155登记/154真实终端；P1剩33、P2剩25，共58个L2未达第三层。** OpenVM SHA256约束/压缩桥、xv6iris受限adequacy、Markowitz最小方差、LeanInfoTheory编码converse、Physlib量子DPI都有具名源码，但**Lean-MLIR LLVM→RISCV peephole `axiom refinement_correctness` 和 `toPeepholeUNSOUND` 是明确不可信精化桥（未完成proof）**。SUMO C++、pandapower Python、Biopython Python、OCDS标准JSON均为行业证据不是Lean theorem；LeanDojo-v2与Lean Game Server是证明辅助/教育工具。OCDS 1.2-dev源码内1.1.5 schema ID保留版本问题。新24项仅SOURCE_MAPPED_WITH_SCOPE，本轮无外部独立build或公理审计。下一步选择剩58个中的第四批约12个新P1/P2父，继续原行业→论文→GitHub最小单元地图，不扩大局部审计。
+
+## 2026-11-24｜Batch15：P1/P2第四批12父24子，覆盖11个仍有余量的行业
+
+[Batch15 第四批P1/P2完整24项源码→论文/性质/边界映射](industry-depth3-p1p2-source-map-batch15.md)已提交并GET回读。原IND01已经无未下钻P1/P2，故本批选择其他11个行业各至少一父、工业与电网额外一父，总计12个全新L2（P1 5、P2 7），每父两个L3且不重复Batch12/13/14。原[124 L2登记](industry-recursive-split-register.md)和[triage](industry-leaf-closure-triage.md)分别新增12个反向链接。
+
+**累计78/124个L2有L3（P0 30/P1 19/P2 29），177 L3+2 L4=179登记/178终端，P1剩28/P2剩18，共46个L2未到L3。** 证据范围包括Cedar DRT Rust-Lean差分测试、VCVio密码学game定理、Black–Scholes条件性期权定价与Delta hedge、Veil FloodSet有限Lasso检查vs单独decisionStable时序证明、Physicslib4 GNS存在/唯一性定理；nfl_veripy、MoveIt Task Constructor、Grid2Op、Tellurium、Marabou是Python/C++/ROS2相邻领域工具，SocialChoiceLean的Pivato定理和FormalConjectures声明质量规则有不同proof/论文关系。**新24项统一SOURCE_MAPPED_WITH_SCOPE，不是LEAN_BUILD_PASS，未运行外部独立构建/公理审计。** 下一步选第五批约12个剩余P1/P2父节点，继续问题→论文→具体GitHub文件的知识树，不因本批局部可证明性或非Lean项目走向无边界审计。
