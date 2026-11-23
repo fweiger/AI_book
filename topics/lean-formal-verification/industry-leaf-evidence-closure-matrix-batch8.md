@@ -9,6 +9,13 @@
 - GitHub 连接器实际回读了 23 对应的原始文件、声明或设计接口；对于作者自述尚未闭合的公理、`sorry`、系统实现精化、协议 Interaction 迁移，依然按 `REQUIRES_MORE_EVIDENCE` 保留，不将文件级定位升级成 `LEAF_CLOSED`。
 - 研究基线仍为 **83 个登记单元（81 L3+2 L4）、82 个终端节点、30/30 P0**；没有增加节点。**本轮下一来源级目标：10 个原 PROJECT_DOC_LINK 入口**，再做完整 83 单元的来源关系判定与 P1/P2 94 节点的细分研究。
 
+## Batch10 最新源码覆盖（Batch8 历史矩阵的 overlay，不改写原行）
+
+- [Batch10：剩余 10 个纯文档入口的原始 Lean 源文件与证明差距](industry-doc-to-source-anchors-batch10.md) 已 GET 回读 10/10，并保留 Resonate checker 的 `sorry`、TorchLean CUDA/FFI 实现边界、Lean Kernel Verify 的 KIR/给定执行模型条件、Zisk 生产 Aeneas 提取桥接及 TCB、Sparkle pure FSM 到 Signal Verilog 的未证明整体精化。
+- [Batch9：23 个原 repo/dir 入口的源码锚点](industry-repo-dir-source-anchors-batch9.md) + Batch10 的 10 个 doc 入口合计 **33 个历史弱精度来源条目已新增文件级锚点**；本表下方 `REPO_LEVEL_LINK` 14、`REPO_DIRECTORY_LINK` 9、`PROJECT_DOC_LINK` 10 **只代表 Batch8 创建时快照**，不能再称当前还有 33 项“未定位文件”。
+- **证据等级未等量升级**：找到 `.lean` 或具名 `theorem` 仅说明来源精度，具体是否 `sorry`、axiom、条件性 proof、实际 checker soundness、编译器/外部设备精化，都要再检。研究单元仍为 **81 L3+2 L4=83 登记、82 终端/30 P0**；未将任何条目直接标正式 proof PASS 或最终 `LEAF_CLOSED`。
+- **当前唯一下一步**：依 Batch9+10 的文件级 overlay，对 83 条原始登记单元逐行给出 `SOURCE_LEVEL_CLOSED` 或 `REQUIRES_MORE_EVIDENCE` 的**来源/论文/源码层次**判断（不当作独立构建证明），然后继续 P1/P2 共 94 个 L2 研究方向。
+
 ## 1. 严格解释
 
 - **本轮是逐行证据分类，不是声称独立验证 83 个 GitHub 上游工程。** 来源级 `E1` 指已有对应 issue/论文/仓库/具体源码路径或作者文档的可回读映射；`NAMED_THEOREM_E1_NOT_BUILT` 表示名称/源文件可查，不等于 Lean kernel 运行、无 sorry/公理或全部假设已闭合。
