@@ -10,7 +10,7 @@
 - 本文件路径：task-goals/issue-74/GOAL_TRACKER.md
 - 当前阶段：M2｜行业应用递归下钻、项目级研究单元与论文—GitHub映射
 - 创建时间：2026-11-22
-- 最近更新：2026-11-23（Batch10：将原 10 条 PROJECT_DOC_LINK 全部升级为明确的 Lean 源文件/模型/具名性质，实际文件回读10/10；Batch9 23 + Batch10 10 = 33 个历史弱入口现有文件级 overlay；原 83 登记/82 终端/30 P0 不变；更新矩阵、triage、README）
+- 最近更新：2026-11-23（Batch11：Batch8/9/10 原表完成83条唯一 L3/L4 来源级闭合判定：52 SOURCE_LEVEL_CLOSED/31 REQUIRES_MORE_EVIDENCE；82 terminal=52/30，1个L3为两个L4的父项；triage/README 交叉引用已GET回读，原30 P0/94 P1+P2分母不变）
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch10 10/10 文件级源锚点、Batch8 overlay/triage/README/Tracker 及 Issue #74 事件键唯一回读一致；Writer 已释放；原目标/协议保持）
-- Issue 同步状态：SYNCED（Batch10 event_key 已在 Issue #74 唯一 GET 回读 1 条：[comment #7098113514](https://github.com/fweiger/AI_book/issues/74#issuecomment-7098113514)，本轮 Writer 已释放）
+- 状态一致性：CONSISTENT（Batch11 83/83唯一、52/31两态完整、82终端及33条补证回链已GET回读；当前唯一Writer CLAIMED、Issue事件待同步，未将来源级闭合冒充Lean证明成功）
+- Issue 同步状态：ISSUE_SYNC_PENDING（Batch11 矩阵、triage、README与Tracker已完成写入及回读；当前唯一Writer待发布规范 Issue #74事件并核查）
 
 ## 1. 批准目标基线
 
@@ -58,7 +58,7 @@
 
 ## 4. 当前检查点
 
-- **最近完成的一轮：** 2026-11-23 Batch10：完成 10 个 PROJECT_DOC_LINK L3 原始源码/性质映射，跨 Resonate validator、TorchLean CUDA/FFI backend、LKV 五个 GPU KIR 规格、Zisk FV Aeneas/decoder 及 root_soundness、Sparkle 仲裁器纯 FSM 与可综合 Signal DSL。实际代码/定理文件已回读，Resonate sorry / LKV KIR→现实 / Zisk TCB / Sparkle refinement / TorchLean native runtime 限制保留。Batch8+9+10 说明现有 33 个弱来源条目均有文件级覆盖，但不意味着 theorem PASS。
+- **最近完成的一轮：** 2026-11-23 Batch11：对83登记研究单元逐项判研究来源级闭合52、仍需证据31；中含已拆分的1个L3父项，真正终端82=52已完成单问题来源映射+30仍待实质性证据。所有行有原始性质、对应GitHub源码或非Lean参考、论文血缘类型、显式缺口；Batch9/10 33个历史弱索引有文件级overlay。未执行新增外部项目构建、独立kernel审查，未新增L3/L4。
 - **本轮实际完成：**
   1. 对 rust-lean 固定 commit 的 Hax/Aeneas 两条 pipeline 做同源比较；两边使用相同 blob SHA 的 compute_log_arity_for_round Rust 源码。
   2. 审计 Hax issues/PR，确认 cast/specset/ADC 等后续上游修复；识别 Hax-FRI 固定 Hax commit 早于关键修复。
@@ -93,10 +93,10 @@
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
   - 非主要研究者独立 QA 尚未执行。
 - **对原始目标的实际贡献：** 已建立 12 个一级行业的行业需求框架；60 个首轮候选父节点下钻出 55 个项目级子节点，逐项挂接形式化对象、论文/标准和 GitHub 项目；Lean 直接研究、相邻形式化工具和行业参考实现分开标记。
-- **当前阶段判断：** M2 原12行业/60父场景/124 L2（30 P0/47 P1/47 P2）保持不变，81 L3+2 L4=83 登记、82 终端。Batch8 历史原文件有14 repo+9 directory+10 doc=33 个弱精度链接；Batch9/10 分别新增23+10 file-level overlay，**当前33/33入口已有明确源码/模型文件可回读**；其余11个非 Lean 行业实现和2个内部示例不属于这33个。仍须以 proof_state、paper companion、模型假设区分 SOURCE_LEVEL_CLOSED 与 REQUIRES_MORE_EVIDENCE。
-- **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（10/10 文档入口精确关联代码；累计33/33历史弱精度入口具文件级 overlay）；AC-07 PARTIAL（Resonate validator 正确性部分 sorry；LKV 比对 Bool checker/Run spec 非真实 GPU 端到端；TorchLean Capsule/Planner soundness 不证明 native CUDA；Zisk 当前 Aeneas ProductionM2/Decode bridge 已在源树，之前过时描述纠正但 root 有抽取/绑定 TCB；Sparkle pure ArbiterProps 有 theorem 与 Signal/Verilog 实现分离）；AC-05/08 本轮 NOT_RUN。
+- **当前阶段判断：** 12一级行业/60最初父场景/124 L2（P0/P1/P2=30/47/47）维持，已30/30 P0下钻并有81 L3、2 L4（83登记、82终端）。Batch11来源层按限制闭合52、仍需证据31；其中11条非Lean行业实现、2个内部示例与一项非终端CVaR父项均独立识别。52不是已核验的Lean定理数，31不是都要展开全仓审计；下阶段转P1/P2 94 L2以保持原框架全局宽度。
+- **本轮 AC 与目标对齐证据：** AC-03 PARTIAL（83项来源级状态门禁52/31、原83 ID/82终端和30 P0可追溯；P1/P2 94 L2仍待同程度细拆）；AC-07 PARTIAL（技术论文/项目血缘、Lean theorem vs模型/tactic/非Lean实现、Rust/Sail/CUDA/RTL/临床/市场可信边界明确保留）；AC-05/08 本轮 NOT_RUN；不将SOURCE_LEVEL_CLOSED称为kernel/PIT全流程或真实生产正确。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（Batch10 文件10个唯一 ID、Batch8 33 低精度历史入口的两个 overlay、triage/README 文件已 GET；§7 下一步转全83项证据闭合判定、§9历史只追加1条；Issue 事件仍显式 ISSUE_SYNC_PENDING，单 Writer 未释放之前不称 SYNCED；目标 D0）。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT（Batch11 83条/52来源闭合/31需证/82终端含1非终端父项经GET回读，triage§1E/§6与README一致；本轮Issue仍PENDING，单Writer占有，未改原Issue v1.0/协议commit；目标D0）。
 
 ## 5. 阻断与未受影响工作
 
@@ -118,11 +118,10 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 基于 [Batch8 全量83项门禁矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md)、[Batch9 repo/dir 23条源码锚点](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-repo-dir-source-anchors-batch9.md) 与 [Batch10 doc 10条源码锚点](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-doc-to-source-anchors-batch10.md)，对 **83 登记研究单元（82 真正终端）** 逐条进行来源级证据判定：`SOURCE_LEVEL_CLOSED`（论文/项目/源码/单问题对应、严格保留前提）或 `REQUIRES_MORE_EVIDENCE`（具体缺来源、paper/定理范围冲突、open proof/axiom/LEAN_GAP）。
-- **目标与 AC：** 持续推进 AC-03/AC-07，原 Issue #74 v1.0 Goal/Scope/Non-goals/AC 不变。30/30 P0 深钻覆盖不能视为全部叶闭合，33个文件级锚点也不是33项 kernel-verified 定理。
-- **选择理由：** 原弱源码路径已通过 Batch9+10 具体定位，继续专门查同一批的 repo/doc 链接没有增量价值；当前阻断是论文与具体 theorem 的精确伴随关系、信任前提和由此引发的单问题研究叶状态。需要时仅对不满足闭合条件的复合问题继续 L4/L5。
-- **交付与复核：** 一份保留所有83个ID、82终端的研究叶闭合决策矩阵，区分 Lean proof、模型/工具、相关方法论文、非 Lean reference implementation、内部最小原型、作者报告/独立测试；能够从源 GitHub path 和具体判据反向追溯。不编造 proof/kernel 运行。
-- **后续阶段：** 完成来源级闭合门禁后，按同一方法推进 P1/P2 **94 个 L2** 至真实论文、GitHub 项目与必要定理节点；无目标外部项目审计、最小原型及量化/临床/生产实测仍不是当前动作。
+- **唯一优先动作：** 基于 [Batch11 83条来源级闭合判定矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-source-closure-decisions-batch11.md)，将 P0 所有 **31 条 REQUIRES_MORE_EVIDENCE（其中1条已拆分的非终端）**保留为明确、有界的定理/论文/信任边界异常队列，**主线转向 P1/P2 共 94 个 L2 研究场景**，分行业下钻至单一性质/问题、原始论文或一手文档、真实 GitHub 仓库与具体源文件/具名定理或显式 LEAN_GAP。
+- **为什么是当前动作：** 30/30 P0 已下钻，Batch8–11 已完成83登记单元的来源级门禁；无差别继续审计已闭合52项或死磕31个条件性proof/非Lean差距，会使原跨行业论文—GitHub知识树不合理地聚焦几个分支。94个P1/P2仍缺相当深度的来源链，优先横向覆盖符合原Goal/AC-03/AC-07。
+- **目标/边界：** Issue #74 v1.0 Goal/Scope/Non-goals/AC不变；继续12个行业、124 L2的变量深度树。严禁把52 SOURCE_LEVEL_CLOSED等同52个Lean theorem kernel PASS；遇到无法定位的行业Lean直接项目须标记LEANGAP、不得虚构。31例外项只有出现真正新证据或与P1/P2研究依赖时定向处理；不进行无目标的全仓构建/原型/生产/交易或跨仓写入AI_Trader #488。
+- **可观察交付：** 按行业/优先级记录 P1/P2 当前94个 L2 的研究进度并逐批新增可回读的 L3/更细问题—性质—论文—GitHub源码映射，保持父子ID和版本/假设明确；更新原triage与唯一Tracker、规范Issue事件，无新结果不刷新状态。
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -166,20 +165,23 @@
 
 | 2026-11-23 / DOC-TO-SOURCE-BATCH10 | 对 Batch8 剩余10条PROJECT_DOC_LINK精查 Resonate/TorchLean/LKV/Zisk/Sparkle 实际源文件并 GET 回读，10/10 唯一 L3 ID、真实源码/声明与假设限制；与 Batch9 23条合并，使历史33个弱来源入口均有文件级 overlay。明确 Resonate checker sorry、Zisk 当前 extraction bridge 的增量纠正、Sparkle FSM↔Signal refinement gap、LKV 模型与GPU执行不等价。 | AC-03/07 PARTIAL；来源级10/10 PASS；外部 kernel/build/QA NOT_RUN | [Batch10](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-doc-to-source-anchors-batch10.md) · [Batch8](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md) | D0/CONSISTENT；Issue 事件待同步、未宣称 LEAF_CLOSED 或运行独立构建 | 依据 Batch8+9+10 对83登记单元逐行来源级 closed/requires-more-evidence 后再推进94 P1/P2。 |
 
+| 2026-11-23 / SOURCE-CLOSURE-DECISIONS-BATCH11 | 将 Batch8 83项及Batch9/10 33个文件级overlay逐条合并成来源闭合门禁：**52 SOURCE_LEVEL_CLOSED/31 REQUIRES_MORE_EVIDENCE，83 ID唯一；一条L3为两个L4父项，终端82=52来源级闭合+30待证**。全部关联论文类型、真实GitHub源码/行业ref与具体缺口；保留11非Lean、PIT修订、SP1/Zisk、GPU/RTL、SciLean sorry、LegalLean axiom等界限。 | AC-03/07 PARTIAL；研究来源级83行PASS；新增外部build/QA NOT_RUN | [Batch11矩阵](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-source-closure-decisions-batch11.md) · [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | D0/CONSISTENT；仅研究证据判定非kernel验收；Issue事件待同步 | P0 31项做有界异常队列；主线推进P1/P2 94个L2的论文—GitHub递归下钻。 |
+
 ## 10. 最近一次状态一致性回读
 
 - **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|SOURCE-CLOSURE-DECISIONS-BATCH11-20261123
 - **当前 writer_owner：** chatgpt-session-20261123-batch11-source-closure
-- **当前 write_state：** CLAIMED（Batch11：83 项来源级研究叶闭合决策生成并同步 Issue 中，尚未事件发布）
+- **当前 write_state：** CLAIMED（Batch11 83条来源级闭合门禁及 triage/README 已GET回读，唯一Writer待发布Issue事件）
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|DOC-TO-SOURCE-BATCH10-20261123
-- **旧 Writer 已停止/隔离证据：** Batch9 Writer 原已释放；Batch10 本轮通过 Tracker SHA CAS 领取，Issue #74 comment #7098113514 事件键唯一回读后已清理 CLAIMED。
-- **若无法 fencing：** 不适用；并发冲突时停写不抢占。
+- **旧 Writer 已停止/隔离证据：** Batch10的活动Writer为NONE/SYNCED，本轮通过最新Tracker blob SHA CAS声明并GET回读。
+- **若无法 fencing：** 若发生并发修改/权限冲突，停写并显式报告，不自行重分配。
 
-| 项目 | 本轮核对 | 证据 | 结果 |
+| 核对项 | 最新值 | 来源 | 结果 |
 |---|---|---|---|
-| 规范 Issue / 锁定协议 | AI_book #74 v1.0；AI_tasks V1.2.2 f0e5ccb90c54265dcd07abb9a975c903eb031ccf | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| Batch10 文档到源码 | 原10 PROJECT_DOC_LINK全部具实际可读Lean源文件/定理或明确模型/工具，10唯一研究ID | [Batch10](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-doc-to-source-anchors-batch10.md) | PASS（来源级） |
-| 所有33历史弱入口 | 23 Batch9+10 Batch10 文件级锚点，可追溯，原Batch8精度为历史快照；仍83登记/82终端 | [Batch8](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md) | PASS（结构回读） |
-| 独立外部 build / kernel QA | 未运行完整外部工程 clean build 或 proof/axiom 检查；新PR head CI状态待查 | Draft PR #75 | NOT_RUN/UNKNOWN |
-| Issue事件与Writer | Batch10 event_key 恰好 1 条，comment #7098113514；Writer 已释放 | [Issue Batch10](https://github.com/fweiger/AI_book/issues/74#issuecomment-7098113514) | SYNCED |
-| 唯一下一步 | 83研究条目来源级 closed/requires-more-evidence 矩阵（非外部proof验收） | §7 | D0 |
+| 原始Issue/协议 | AI_book #74 v1.0；锁定V1.2.2 f0e5ccb90c54265dcd07abb9a975c903eb031ccf | 规范Issue与协议入口 | PASS |
+| 全量研究单元 | 81 L3+2 L4=83登记/82终端、30 P0 | [Batch11](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-source-closure-decisions-batch11.md) | PASS（结构） |
+| 来源级决策 | 52 SOURCE_LEVEL_CLOSED、31 REQUIRES_MORE_EVIDENCE；33历史弱入口已有具体文件overlay | Batch8/9/10/11 | PASS（研究来源级，非 theorem build） |
+| 研究导航一致性 | Batch11已在triage 1E/6与README回链，唯一下一步已转向P1/P2的94个L2 | 当前分支GET回读 | PASS |
+| 外部Build/QA/CI | 本批未运行独立外部项目build/kernel audit；最新GitHub CI待查 | PR #75 | NOT_RUN/UNKNOWN |
+| Batch11 Issue事件 | Writer CLAIMED，事件键尚待发布/GET核查 | Issue #74 | ISSUE_SYNC_PENDING |
+| Goal偏移/当前动作 | D0；31项保留异常队列，优先继续P1/P2框架覆盖 | §7 | CONSISTENT |
