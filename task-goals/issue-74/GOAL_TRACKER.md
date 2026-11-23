@@ -178,9 +178,9 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** NONE
-- **当前 writer_owner：** NONE
-- **当前 write_state：** SYNCED（Batch15 Issue #74唯一事件GET成功，Writer已释放）
+- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-FIFTH-BREADTH-BATCH16-20261124
+- **当前 writer_owner：** chatgpt-session-20261124-batch16
+- **当前 write_state：** CLAIMED（Batch16 第五批P1/P2研究开始，唯一Issue事件未同步）
 - **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-FOURTH-BREADTH-BATCH15-20261124
 - **旧 Writer 已停止/隔离证据：** Batch14 Writer已释放；Batch15经Tracker最新SHA CAS领取并GET回读，Issue #74 comment #7112933160事件键唯一核验后释放。
 - **若无法 fencing：** 并发写入/权限冲突时停止，不虚报同步完成。
