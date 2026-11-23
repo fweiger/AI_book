@@ -160,3 +160,9 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 [Batch11 全 83 项研究证据闭合矩阵](industry-leaf-source-closure-decisions-batch11.md) 已按 Batch8+9+10 源码一手材料建立并回读；**52 条 SOURCE_LEVEL_CLOSED（仅已限定问题的来源/性质映射）、31 条 REQUIRES_MORE_EVIDENCE（显式未闭合的 proof/信任/论文/非 Lean GAP）**，其中一个 CVaR L3 是两个 L4 的父项，因此 **82 个终端 = 52 个来源级映射闭合 + 30 个待证**。不应把该分类写成 52 个机器证明通过或 82 个叶节点完全验收。
 
 Batch9/10 为历史 **33 个弱索引入口**补齐真实 GitHub Lean 源码文件；依旧单列 Resonate validator `sorry`、IFP 93/103、SciLean `sorry_proof`、LegalLean 显式 `axiom`、SP1/Zisk witness/extraction 前提、TorchLean CUDA/FFI、Sparkle Signal/RTL refinement、金融 PIT membership/latest-as-of，以及 11 个 non-Lean 行业实现。**当前唯一主线**是将同一方法推广到 **P1/P2 的 94 个 L2 节点**，按行业层级继续下钻至真实论文、项目和具名源码；31 个 P0 未完成义务保留为定向证据队列，不再无目标逐项目审计。
+
+## 2026-11-23｜Batch12：P1/P2 横向覆盖开始，12行业→24具体源码研究单元
+
+[Batch12 P1/P2 首批12行业、12个L2父节点→24个实际GitHub源文件L3](industry-depth3-p1p2-source-map-batch12.md) 已回读，原[124个L2登记](industry-recursive-split-register.md)及[triage队列](industry-leaf-closure-triage.md)同步了12个父节点的反向链接。已细拆到L3的父节点由P0 30扩至 **42/124**（新增P1 4+P2 8），原P0的81L3+2L4，加24新L3后累计 **105个L3+2个L4=107登记单元、106终端**。**P1/P2剩82个L2未下钻**。本批不是24个独立GitHub项目、也不是24个定理已通过审计。
+
+样例覆盖 RISC-V Sail→Lean 生成模型、Cedar授权、CompPoly多项式证书、SocialChoiceLean的Pivato定理、LeanLTL交通灯、Langmuir/BET历史Lean3、SBML C++参考、率失真、LeanCopilot建议、Physicslib4 AQFT、Catala F*法律编译、FormalConjectures中仍为`sorry`的猜想。**有些是相邻证明语言或行业程序，不可冒充Lean**；论文直系、相关方法/理论谱系及错误配对均明确分类。下一步只选择其他 **12个未覆盖的P1/P2父节点**进行跨行业第二批下钻，原P0来源级31项开放义务有界保留，不进行无目标审计或新实验。
