@@ -32,3 +32,5 @@
 - [2026-11-23：论文—GitHub 项目关联精度核验 Batch 1（9 项纠正 + 7 个新子节点）](2026-11-23-leaf-linkage-verification-batch1.md)
 
 - [行业递归下钻 Batch 2（7 个父节点、12 个新子节点）](2026-11-23-recursive-industry-split-batch2.md)
+
+- [2026-11-23：跨行业递归 Batch 3（25 个原未拆父节点新增 50 个子节点；60/60 父节点覆盖）](2026-11-23-recursive-industry-split-batch3.md)
