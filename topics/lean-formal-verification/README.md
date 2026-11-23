@@ -141,3 +141,8 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23｜Batch7：剩余 7 个 P0 的 21 个 L3 研究对象
 
 [Batch7 单一问题—论文/官方资料—GitHub 源码/Lean GAP 对照表](industry-depth3-p0-source-anchors-batch7.md)：本轮对 IFP、PIT 历史股票池、SciLean、LegalLean、Concerto、CGM/OpenAPS 和 ClimaCore 七个此前未到 L3 的 P0 各增加 3 个 L3，共 21 个源级研究问题，累计 **30/30 P0 至少再深入一层，81 个 L3、2 个 L4**。对应 [124 L2 triage](industry-leaf-closure-triage.md) 已更新。此为结构研究深度覆盖，不是 LEAF_CLOSED；SciLean `sorry_proof`、LegalLean 的显式演示 axiom、IFP 未完成不变量和 Concerto/CGM/ClimaCore 的 LEAN_GAP 必须保留。下一轮转为 81 L3/2 L4 的逐问题证据闭合核查，再处理 P1/P2，不提前开展无目标项目审计。
+
+## 2026-11-23｜Batch8：83 条 L3/L4 来源级研究闭合门禁
+
+[完整 83 条证据闭合矩阵](industry-leaf-evidence-closure-matrix-batch8.md) 已按 Batch4–7 原始研究行逐项生成并回读；主键核对：**81 个 L3 + 2 个 L4 = 83 个独立登记单元，30/30 P0 至少一层下钻，82 个真正终端叶节点**（因为一个 L3 是两个 L4 的父节点）。从来源精度看，37 个直接 Lean 文件、9 个目录、14 个仓库级、10 个说明/文档、11 个非 Lean 行业项目和 2 个内部示例/任务。上述分类不是 proof PASS 或 LEAF_CLOSED。现需优先为 23 个仓库/目录级入口补齐准确代码/定理锚点及论文—项目直接性，再逐项判据闭合和处理 P1/P2 94 个 L2；不提前做无目的的外部项目审计与最小原型。
+
