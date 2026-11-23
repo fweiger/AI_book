@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch12 12父×2=24唯一 L3、12行业、原124 L2登记与triage精确12项反向链接均已GET回读；Source mapped非Lean build，当前Writer CLAIMED且Issue待同步）
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch12研究文件、父级导航、triage和README及唯一Tracker已GET；等待规范Issue #74单条事件发布及回读）
+- 状态一致性：CONSISTENT（Batch12 12L2/24唯一L3/12行业、124父表/triage各12行、README及Issue唯一事件均已GET回读，Writer已释放，原协议/Goal不变）
+- Issue 同步状态：SYNCED（Batch12 event_key 在 Issue #74 唯一 GET 回读1条：[comment #7106397921](https://github.com/fweiger/AI_book/issues/74#issuecomment-7106397921)，Writer已释放）
 
 ## 1. 批准目标基线
 
@@ -172,11 +172,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-12-INDUSTRIES-BATCH12-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-batch12-p1p2
-- **当前 write_state：** CLAIMED（Batch12 12L2×2个L3及原登记/triage/README都已GET回读；待规范Issue事件）
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|SOURCE-CLOSURE-DECISIONS-BATCH11-20261123
-- **旧 Writer 已停止/隔离证据：** Batch11原Writer NONE/SYNCED，本轮使用最新Tracker SHA CAS登记并GET唯一Writer。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED（Batch12 Issue #74事件唯一GET回读成功，Writer已释放）
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-12-INDUSTRIES-BATCH12-20261123
+- **旧 Writer 已停止/隔离证据：** Batch11已释放；Batch12以Tracker SHA CAS领取，Issue #74 comment #7106397921单事件GET验证后释放Writer。
 - **若无法 fencing：** 当前无冲突；如权限或并发写入不明，不擅自重试覆盖。
 
 | 核对项 | 最近状态与证据 | 本轮结果 |
@@ -186,5 +186,5 @@
 | 124 L2父子反向关联 | 原父表124唯一ID，其中12行新增Batch12链接，triage同12行状态回链、README导航GET | PASS |
 | 累计树和优先级 | P0=30、P1=47、P2=47；42/124已有L3；105L3+2L4=107登记/106终端，剩P1 43/P2 39 | PASS（结构） |
 | 独立外部验证/CI | 本批未运行全部外部Lake/axiom构建，最新CI待核 | NOT_RUN/UNKNOWN |
-| Batch12 Issue事件 | 唯一Writer CLAIMED，尚待Issue #74 event_key发布及GET | ISSUE_SYNC_PENDING |
+| Batch12 Issue事件 | [comment #7106397921](https://github.com/fweiger/AI_book/issues/74#issuecomment-7106397921) event_key唯一1条，Writer已释放 | SYNCED |
 | 目标与唯一下一步 | D0；第二批从剩82个P1/P2选12父，下钻到真实源码 | CONSISTENT |
