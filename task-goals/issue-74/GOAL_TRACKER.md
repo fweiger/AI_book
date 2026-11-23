@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch13 12父×2=24唯一L3、12行业，原124父表和triage各12行及README均GET回读；Writer单独CLAIMED、Issue回执待同步；原Goal/AC不变）
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch13研究文档、L2登记/triage、README/Tracker均已GitHub写入及GET回读；Issue #74规范单事件待发布）
+- 状态一致性：CONSISTENT（Batch13 12父/24唯一L3、12行业、124父表/triage各12条回链、README、唯一Issue事件均GET回读；Writer已释放，原Goal/AC/协议不变）
+- Issue 同步状态：SYNCED（Batch13 event_key已在Issue #74单事件GET回读1条：[comment #7112419718](https://github.com/fweiger/AI_book/issues/74#issuecomment-7112419718)；Writer已释放）
 
 ## 1. 批准目标基线
 
@@ -174,11 +174,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-SECOND-12-INDUSTRIES-BATCH13-20261124
-- **当前 writer_owner：** chatgpt-session-20261124-batch13-p1p2
-- **当前 write_state：** CLAIMED（Batch13 12个L2/24 L3和登记/triage/README均GET回读；待Issue事件唯一同步）
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-12-INDUSTRIES-BATCH12-20261123
-- **旧 Writer 已停止/隔离证据：** Batch12唯一Writer曾为NONE/SYNCED，本轮依据最新Tracker blob SHA CAS登记并GET回读。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED（Batch13 event_key单条GET确认后Writer已释放）
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-SECOND-12-INDUSTRIES-BATCH13-20261124
+- **旧 Writer 已停止/隔离证据：** Batch12原Writer为NONE/SYNCED，Batch13以Tracker blob SHA CAS领取并GET回读，Issue #74 comment #7112419718单事件GET后释放。
 - **若无法 fencing：** 遇到冲突不覆盖源文件或伪称同步，停止并报告。
 
 | 核对项 | 最新状态与证据 | 本轮结果 |
@@ -189,5 +189,5 @@
 | 累计树 | 54/124 L2具L3，129L3+2L4=131登记、130终端；剩70个P1/P2 | PASS（结构） |
 | 论文语言与证明边界 | Lean4/Coq/dL/SMT/Python/Rust/FHIR/Blueprint、历史/直接论文及sorry/版本明确 | PARTIAL（来源级） |
 | 独立上游构建及GitHub CI | 未执行新增外部build/kernel/axiom审计，当前分支CI另查 | NOT_RUN/UNKNOWN |
-| Batch13 Issue事件 | Writer CLAIMED，待规范Issue #74评论发布/单事件GET回读 | ISSUE_SYNC_PENDING |
+| Batch13 Issue事件 | [comment #7112419718](https://github.com/fweiger/AI_book/issues/74#issuecomment-7112419718)，event_key唯一1条；Writer已释放 | SYNCED |
 | 目标与唯一下一步 | D0；第三批选择剩70个P1/P2中的约12父 | CONSISTENT |
