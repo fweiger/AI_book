@@ -48,6 +48,12 @@
 - **重要纠偏：** Resonate 的 `valid/lean/correctness.lean` 多处 `sorry`；LKV `holdsPar_eq`、TMEM/Store 判定只是抽象 KIR/Run 模型里的 checker/spec 关系；Zisk 当前 main 存在 ProductionM2/Aeneas 提取 + opcode/decoder bridge 的具体 Lean 文件，之前“主树未接入任何桥接”的笼统说法过时，仍须把完整 root 声明前提与 Rust/Sail extraction TCB 分开；Sparkle `ArbiterProps.lean` pure FSM theorem 与 `RoundRobin.lean` Signal+Verilog 生成不能自动宣称是同一证明的实现等价。
 - **唯一下一步**：在 83 登记单元/82 个终端的全量矩阵基础上，结合 Batch9+10 overlay 逐条判定**来源级** `SOURCE_LEVEL_CLOSED` 或 `REQUIRES_MORE_EVIDENCE`，记录每项的 paper↔repo 直接性与源码类型、Lean GAP/开放前提；然后再推进 P1/P2 的 94 个 L2，禁止把来源级归档说成 Lean kernel 构建验收。
 
+## 1E. Batch11：83 个登记研究单元的来源级闭合判定（本专题最新）
+
+- [Batch11：83 行来源级闭合判定全量矩阵](industry-leaf-source-closure-decisions-batch11.md) 已真实提交并 GET 回读：83/83 ID 唯一，**52 条 `SOURCE_LEVEL_CLOSED`、31 条 `REQUIRES_MORE_EVIDENCE`**；含一个不计终端的 CVaR L3 父项，故**82 个终端 = 52 个来源级闭合 + 30 个仍需证据**。`SOURCE_LEVEL_CLOSED` 仅说明单问题→源码/论文或技术资料的限定对应，**不是 theorem/kernel PASS 或真实系统验证**。
+- 原 Batch8 的 23 个 repo/dir、10 个 doc 弱入口均已经 Batch9+10 得到可回读的 Lean 文件级 overlay。其余 11 个 non-Lean 行业参考始终保持 `LEAN_GAP`，2 个内部应用/样例单独标注。IFP/Resonate 作者报告、SciLean `sorry_proof`、LegalLean `axiom`、SP1/Zisk extraction trust、LKV GPU KIR/实机和 PIT as-of 限制不得从来源级结论升级为实际 proof。
+- **当前唯一下一步（保持宽度优先）**：31 个仍需证据项保留为明确的异常/证明义务队列，必要时按真实新证据定向完善；主线转向 **P1/P2 共 94 个 L2**，以行业批次下钻到单一问题、目标性质、原论文/官方资料、实际 GitHub 项目与源码/具名定理或显式 `LEAN_GAP`。不对已来源级闭合的 52 项做无差别重复搜索，不提前进行全项目审计或原型。
+
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
 | 关键词/类型 | L2 命中数量 | 该信号的含义 |
@@ -227,10 +233,9 @@
 6. `LEAF_CLOSED` 仅是**研究映射闭合**，绝不等于 theorem axiom footprint、软件构建、模型正确性或生产部署通过，这些属于用户今后按需选择的项目审计。
 7. 定向人工验证可以将 P0/P1/P2 升降，但应保留所用原始资料和版本；不把自动 triage 结果误当实证检验。
 
-## 6. 唯一下一步
+## 6. 唯一下一步（Batch11 更新）
 
-优先处理剩余 13 个未下钻的 P0 项，并对已下钻的 17 个 P0 继续核对源码性质与直接论文关系；其后逐项核验 P1 的来源差异、P2 的直接论文 companion 与项目血缘。**不运行最小原型、不做外部项目代码审计**，不改变 TOPIC-018 原批准 Goal/Scope/AC。
-
+依据 [Batch11 83 项来源级闭合判定](industry-leaf-source-closure-decisions-batch11.md)，P0 30/30 已下钻；52 项已完成限定研究资料与 GitHub 源码的来源级对应（不等于 Lean theorem build），31 项明确登记证据缺口，其中 1 项为已拆分的非终端父节点。**下一主线为 P1/P2 94 个 L2 的行业横向递归下钻至论文和 GitHub 源码**；不返回“还有 13 个 P0 没下钻”的历史进度，不把 31 个开放证明义务变成无目标项目审计。保持 Issue #74 批准目标、AC 和其他仓库权限不变。
 
 ## Batch6 增量证据（2026-11-23）
 
