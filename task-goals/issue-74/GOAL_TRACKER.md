@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch8 矩阵 83 ID/82 终端与 triage/README 三份研究源回读一致；Issue 本轮事件仍待发布，CLAIMED/ISSUE_SYNC_PENDING 显式记录，不谎称同步完成）
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch8 研究证据与 Tracker 已更新，待唯一 Writer 写入规范 Issue #74 并核对事件键）
+- 状态一致性：CONSISTENT（Batch8 83 ID/82 终端矩阵、triage/README、Tracker 和 Issue #74 的唯一事件键均已回读；Writer 已释放；批准需求与锁定协议未变）
+- Issue 同步状态：SYNCED（Batch8 event_key 在 Issue #74 GET 回读唯一 1 条：[comment #7097540945](https://github.com/fweiger/AI_book/issues/74#issuecomment-7097540945)，本轮 Writer 已释放）
 
 ## 1. 批准目标基线
 
@@ -164,11 +164,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|L3-L4-CLOSURE-MATRIX-BATCH8-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-batch8-closure-matrix
-- **当前 write_state：** CLAIMED（Batch8 矩阵/triage/README GET 回读，Writer 待写入 Issue #74 本轮事件）
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P0-DEPTH3-REMAINDER-BATCH7-20261123
-- **旧 Writer 已停止/隔离证据：** Batch7 最新 Tracker 为 NONE/SYNCED，本轮以该 SHA CAS 获取唯一 Writer 并 GET 验证。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED（Batch8 Issue 事件唯一回读确认，当前 Writer 声明已清理）
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|L3-L4-CLOSURE-MATRIX-BATCH8-20261123
+- **旧 Writer 已停止/隔离证据：** Batch7 Writer 原已释放；本轮 Batch8 以 Tracker SHA CAS 领取后唯一发布 comment #7097540945 并 GET 核实，当前 CLAIMED 已清理。
 - **若无法 fencing：** 不适用；若发现并发其他 Writer，不自动抢占。
 
 | 项目 | 最新核对值 | 证据 | 结果 |
@@ -177,5 +177,5 @@
 | 研究单元矩阵 | 83 唯一研究 ID、30 L2 P0、81 L3/2 L4、82 terminal，未出现重名；保留 source/paper/proof 三轴 | [Batch8](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-evidence-closure-matrix-batch8.md) | PASS（来源级） |
 | triage/专题入口 | 矩阵已回链至 triage §1B 和 README；之前 124 L2 分母不变 | [triage](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-closure-triage.md) | PASS（文本回读） |
 | 本轮外部证明/CI | 外部仓库 clean build 与 theorem/axiom 全局审计、原型 NOT_RUN；新提交 GitHub CI 结果尚未核对 | PR #75 | UNKNOWN / NOT_RUN |
-| Issue 事件 | Batch8 event_key 仍待本轮唯一 Writer 发布并 GET 回读 | Issue #74 | ISSUE_SYNC_PENDING |
+| Issue 事件 | Batch8 event_key 在 Issue #74 唯一匹配 1 条、comment #7097540945，Writer 已释放 | [Issue Batch8](https://github.com/fweiger/AI_book/issues/74#issuecomment-7097540945) | SYNCED |
 | 当前唯一下一步 | 优先处理 23 个仓库/目录级研究入口的源文件/定理/论文精确匹配，避免假闭合 | §7/Batch8 | D0 |
