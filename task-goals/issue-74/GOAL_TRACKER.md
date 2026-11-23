@@ -10,7 +10,7 @@
 - 本文件路径：task-goals/issue-74/GOAL_TRACKER.md
 - 当前阶段：M2｜行业应用递归下钻、项目级研究单元与论文—GitHub映射
 - 创建时间：2026-11-22
-- 最近更新：2026-11-23（60 个首轮候选父节点 + 55 个第二轮子节点；最新 PR head 82cd4 的知识库完整性与 Lean PIT 检查均 PASS）
+- 最近更新：2026-11-23（60 个父节点、62 个候选子节点；9 条论文—项目映射纠正及新增 7 个细分节点；最新证据记录已提交）
 - 批准需求修订号：v1.0
 - 选定协议路径/候选分支：task-center/v1.2.2/ENTRY.md / experiment/task-center-v1.2.2-continue-goal-guard-20261119
 - **锁定执行协议 commit SHA：** f0e5ccb90c54265dcd07abb9a975c903eb031ccf
@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（55 个子节点文档已提交；文档提交 head 82cd4 的 Knowledge-base integrity Run #1303 与 Lean PIT Run #72 均 success；Issue #74 本轮 event_key 回读唯一匹配 comment #7084474199；批准 Goal/Scope/AC 未变）
-- Issue 同步状态：SYNCED（本轮 55 个项目级子节点交付事件已写入 Issue #74 并 GET 回读唯一匹配，见 comment #7084474199）
+- 状态一致性：STATE_CONFLICT pending 当前 Batch1 事件同步；原有 55 节点的历史事件已同步，本轮 9 条纠正和 7 个新增子节点的文件已提交，等待 Issue 回执并 GET 回读；批准 Goal/Scope/AC 未变
+- Issue 同步状态：ISSUE_SYNC_PENDING（上一批 55 子节点已同步 comment #7084474199；本轮证据关联纠正事件待同步）
 
 ## 1. 批准目标基线
 
@@ -58,7 +58,7 @@
 
 ## 4. 当前检查点
 
-- **最近完成的一轮：** 2026-11-23 行业递归下钻 v0.2：60 个首轮候选父节点，新增 55 个更具体的项目级子节点；项目审计仍按用户选定方向触发。Batch A 作为既有证据资产保留。
+- **最近完成的一轮：** 2026-11-23 论文—项目关联核验 Batch1：纠正 9 个候选子节点的原始论文/技术报告/GitHub 项目关系；新增 7 个子节点，现为 60 父节点+62 子节点；项目审计仍按用户选定方向触发。
 - **本轮实际完成：**
   1. 对 rust-lean 固定 commit 的 Hax/Aeneas 两条 pipeline 做同源比较；两边使用相同 blob SHA 的 compute_log_arity_for_round Rust 源码。
   2. 审计 Hax issues/PR，确认 cast/specset/ADC 等后续上游修复；识别 Hax-FRI 固定 Hax commit 早于关键修复。
@@ -85,10 +85,10 @@
   - 未完成完整 as-of join/latest-revision 证明；未修改 AI_Trader #488。
   - 非主要研究者独立 QA 尚未执行。
 - **对原始目标的实际贡献：** 已建立 12 个一级行业的行业需求框架；60 个首轮候选父节点下钻出 55 个项目级子节点，逐项挂接形式化对象、论文/标准和 GitHub 项目；Lean 直接研究、相邻形式化工具和行业参考实现分开标记。
-- **当前阶段判断：** M2 行业递归下钻已从 60 个首轮候选父节点推进到 55 个更细的项目级子节点，但并非全部已闭合。后续继续拆分仍含不同算法/组件/目标性质的节点，并核对论文与项目是否直接对应；源码审计、clean build 和最小原型留待用户选定方向后。
-- **本轮 AC 与目标对齐证据：** AC-03 新增 60 个首轮候选父节点和 55 个递归子节点，仍 PARTIAL（剩余父节点未全部拆分，且部分 PAPER_GAP/关系未闭合）；AC-05 Batch A 既有审计仍 PARTIAL，本轮无新增项目审计；AC-06 PIT 最小工作流 PASS；AC-07 仍 PARTIAL（尚未完成行业场景与验证工具边界的全面映射）。
+- **当前阶段判断：** M2 行业递归下钻现有 60 个首轮父节点、62 个项目级候选子节点（28 个父节点已拆、32 个未拆），9 条论文—项目关系已修订，但其余候选叶节点并非全部闭合。应继续拆分仍含不同算法/组件/目标性质的节点，并逐条核对论文是 direct companion、技术报告还是 related method；项目内部审计与原型后置。
+- **本轮 AC 与目标对齐证据：** AC-03 已有 60 个首轮父节点、62 个递归候选子节点，9 条关联修正（补项目直接对应/技术报告/仓库后继信息），仍 PARTIAL（32 个父节点未拆，其他子节点仍待原始论文—项目复核）；AC-05 保持既有 PARTIAL，本轮无外部项目构建或审计；AC-06 PIT 最小工作流历史 PASS；AC-07 PARTIAL（Lean 与相邻工具的分类有所纠正）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；55 个子节点文档提交 82cd4 的 Knowledge-base integrity Run #1303 与 Lean PIT Run #72 均 success；Issue #74 的本轮 event_key GET 回读唯一匹配 1 条（comment #7084474199）；Goal/Scope/AC v1.0 未变。Tracker 元数据提交 head 613b 的新 CI 尚待回读。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** STATE_CONFLICT pending Issue #74 当前 Batch1 事件回执；仓库主表和新增研究记录已写入，Tracker 仍由唯一 Writer CLAIMED；批准 Goal/Scope/AC v1.0 未变。
 
 ## 5. 阻断与未受影响工作
 
@@ -110,15 +110,13 @@
 
 ## 7. 下一步
 
-- **唯一优先动作：** 继续复核尚未拆分的首轮父节点，并对现有 55 个子节点逐项核对论文—项目关系；对仍包含不同业务流程、算法、组件或目标性质的节点继续拆分，直至每个闭合节点对应一个具体问题和具体 GitHub 项目。
-- **对应未完成 AC 与当前阶段：** AC-03（行业应用证据尚未闭合到最小问题与项目级叶节点）；AC-07（Lean 与相邻验证方法的边界需按具体项目区分）；M2。
-- **为什么它推进原始目标：** 用户明确要求不以固定层数或 60 个数量作为终点；只要一个分支还包含不同问题、组件、证明目标或代码项目，就必须继续拆分，直到具体问题与 GitHub 项目可追溯对应。
-- **预期实质交付物与完成条件/验证方法：** ① 已有 55 个子节点的父子登记表；② 对每个候选节点补齐单一问题、形式化对象、目标性质、论文/标准、GitHub repo、Lean/相邻工具关系；③ 明确 LEAF-CLOSED / CANDIDATE_LEAF / CONTINUE-SPLIT / PROJECT-GAP / PAPER-GAP 状态；④ 逐项核对论文是否为项目 companion，避免仅因领域相关就判定闭合。仓库 README/官方说明可作项目映射证据，但不代表审计通过。
-- **需要先读取或检查的证据：** 当前 industry-leaf-project-map.md 的 60 个节点、各项目 README/官方文档、论文原文与项目 companion paper；优先拆分多项目、多算法、多目标性质的宽泛节点。
-- **若受阻，下一项不受影响的工作：** 对已足够具体的节点先标记 LEAF-CLOSED；对没有直接 Lean 项目的节点保留相邻形式化工具或行业参考项目并标记 Lean direct gap；未找到真实仓库时标 PROJECT-GAP，不虚构。
-- **为什么本动作优于其他候选动作：** 目前主要风险是把候选方向过早宣布为叶节点。先做粒度复核和父子拆分，才能保证后续论文—项目映射真正对应具体问题，而不是宽泛领域。
-- **局部调查边界/止损条件：** 当前只做递归分类、论文映射与 GitHub 项目定位；不执行源码深审、许可证审计、clean build、项目改造、最小原型或生产集成。用户后续选定项目后再决定是否审计。
-
+- **唯一优先动作：** 继续对尚未拆开的 32 个父节点做“业务场景→单一问题→形式化对象/目标性质→论文/标准→GitHub 实际仓库”的递归拆分，并对已有 62 个候选子节点逐项检查论文—仓库真实性、DIRECT_COMPANION/RELATED_METHOD/PRIMARY_TECH_REPORT/PROJECT_GAP 关系和是否仍应拆分；本轮不做项目代码审计。
+- **对应未完成 AC 与阶段：** AC-03（跨行业证据地图的叶节点闭合），AC-07（Lean/相邻工具边界），M2。
+- **为何优于其他候选：** 一轮 9 项关联核验发现 Resonate 被误归类为普通参考实现、MoveIt 的 companion 仓库错位、Grid2Op 论文缺失、旧 LeanDojo 被继续用作默认入口等真实问题；在技术审计前修正“问题—论文—项目”映射更能推进核心目标。
+- **可观察验收：** 对剩余 32 父节点判断是否必须继续拆分；每个继续拆分的子节点需具体问题、形式化对象、目标性质、论文/标准与真实 GitHub 仓库，并明确 Lean/相邻技术及论文—项目关系；已有 62 个候选子节点继续按证据批次复核。无仓库标 PROJECT_GAP，不得强行关闭。
+- **证据依赖：** 现有 60 父节点地图、62 子节点表、Batch1 核验记录、各领域标准/论文、GitHub 官方 README 或项目页；优先复用现有材料。
+- **真实阻断边界：** 个别论文 companion 未找到只阻断对应叶节点，不影响其他行业继续拆分。未找到 Lean 直接项目可附相邻形式化项目/参考实现但必须标明差别。
+- **不在本轮：** 不运行外部项目 clean build、不做 sorry/axiom/许可证审计、不做最小原型、不接入生产或 AI_Trader #488，不修改批准 Goal/Scope/AC。
 
 ## 8. 每次“继续”前的恢复核对
 
@@ -134,6 +132,7 @@
 
 | 时间/批次 | 实际工作与结果 | AC 贡献 | 证据链接 | 偏差/一致性、阻断或路线调整 | 本轮建议下一步 |
 |---|---|---|---|---|---|
+| 2026-11-23 / EVIDENCE-LINKAGE-CORRECTIONS-BATCH1 | 从 55 子节点出发，以 GitHub 项目 README/原始论文/技术报告核验并纠正 9 条映射：Resonate 为 Lean 4 直接规格（31/92 自述无界证明）、MoveIt Task Constructor ICRA 2019 的 companion 仓库定位、Grid2Op PMLR 论文、Aeneas 作为工具 vs rust-lean 实践仓库、LeanDojo-v2 后继、OpenVM/SP1 技术报告与论文级别区分；在 Cedar、xv6iris、TorchLean 三个父节点下新增 7 子节点。累计 60 父节点、62 子节点，28 父节点已拆/32 未拆；未开展源码项目审计。 | AC-03 PARTIAL（修正 9 条关联 + 扩展 7 个子节点）；AC-07 PARTIAL；AC-05 不升级。 | [Batch1 证据记录](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-leaf-linkage-verification-batch1.md) · [递归登记表](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-recursive-split-register.md) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | D0；9 项为来源与关联核验 PASS，不等于 62 个最终叶节点已闭合；最新检查正在回读。 | 优先继续拆分剩余 32 父节点，同时复核 62 子节点的原始论文—项目映射。 |
 | 2026-11-23 / PROJECT-LEVEL-LEAF-REFINEMENT | 将 60 个首轮候选父节点继续下钻，新增 55 个项目级子节点；逐项列出具体问题、形式化对象/性质、论文/标准、GitHub 项目与 Lean/相邻工具关系；55/55 子节点均有 GitHub 链接。部分节点标记 PAPER_GAP / PROJECT_DOC_ONLY / RELATED_METHOD，尚未全部闭合；本轮无项目源码审计或外部 build。 | AC-03 PARTIAL（从 60 父节点扩展为 55 子节点，仍需继续拆分和核对论文—项目关系）；AC-07 PARTIAL；AC-05 不变。 | [第二轮递归拆分登记表](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-recursive-split-register.md) · [首轮行业地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-leaf-project-map.md) · [PR #75](https://github.com/fweiger/AI_book/pull/75) · [Integrity Run #1303](https://github.com/fweiger/AI_book/actions/runs/45061019077) · [Lean PIT Run #72](https://github.com/fweiger/AI_book/actions/runs/45061019102) | D0；用户要求不以固定数量为终点；最新 PR head 82cd4 两项检查均 success；项目映射不等于项目审计。 | 继续拆分剩余宽泛父节点，并核对 55 个子节点的论文—项目 companion 关系。 |
 | 2026-11-23 / INDUSTRY-APPLICATION-FRAMEWORK-V1 | 新建主框架（行业→业务领域→场景→问题→形式化对象→Lean 能力→论文/项目→按需审计）；建立 12 个一级行业、12 类跨行业问题、Lean 适配性/工具选择/证据成熟度；新建行业机会地图与机会卡模板；更新 README、field-map 支撑层定位和 knowledge-map。未开展新的项目审计。 | AC-03 PARTIAL（框架 v0.1 已交付，二级场景仍待扩展）；AC-07 PARTIAL；不提升 AC-05。 | [主框架](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-application-framework.md) · [行业机会地图](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-opportunity-map.md) · [机会卡模板](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/application-opportunity-card-template.md) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | D0；按用户明确要求以行业需求为研究入口；Lean 专属证据与一般形式化方法证据分开。PR head f7a2c55 的 validate-knowledge 与 build 均 success。 | 将 12 个一级行业下钻到二级业务领域和具体场景，形成第一批机会卡草案。 |
 | 2026-11-23 / BATCH-A-COMPLETE-AND-APPLICATION-FRAMEWORK-RESET | 完成 Batch A 三个项目审计卡：Rate-Distortion 当前源码/旧 build 时点不匹配，结论 PARTIAL；AI4SLT 有固定 release build 证据，结论 PASS/E2；Veil 固定 main SHA 的 Linux/macOS CI 与 TrustAudit 通过，结论 PASS/E2；SCP 示例仅覆盖 safety，不等于原始完整 safety+liveness 证明。用户明确研究顺序：先搭建行业/领域应用框架，再从框架映射论文和项目；项目审计仅在具体方向需要时启动。 | AC-03/05 PARTIAL；完成一批代表项目样本，但主线改为推进 AC-03 的行业应用框架。 | [Batch A 审计记录](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-project-audit-batch-a.md) · [PR #75](https://github.com/fweiger/AI_book/pull/75) | D0；用户澄清的是执行顺序，不修改批准 Goal/Scope/AC。当前 PR head 03bd4bc 的 knowledge integrity 与 Lean PIT 两项检查均 success。 | 建立行业→业务领域→场景→问题→形式化对象→Lean 能力→价值/边界的主框架。 |
@@ -159,9 +158,9 @@
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致；未修改 Goal/Scope/Non-goals/AC | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | 60 个首轮候选父节点 + 55 个递归子节点已提交；PR head 82cd4 的 Knowledge-base integrity Run #1303 与 Lean PIT Run #72 均 success；项目源码审计未新增 | [递归拆分表](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/industry-recursive-split-register.md) / [Run #1303](https://github.com/fweiger/AI_book/actions/runs/45061019077) / [Run #72](https://github.com/fweiger/AI_book/actions/runs/45061019102) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
+| §3/§4当前阶段与实际证据 | Batch1 修正 9 条论文—项目关联并新增 7 子节点；共 60 父/62 子，28 父已拆/32 待拆；最新来源在 Batch1 session；与批准目标一致 | [Batch1](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-leaf-linkage-verification-batch1.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | 研究顺序已调整为行业需求→形式化问题→Lean能力→论文/项目；项目审计只在具体方向需要时触发 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 均已调整为先建立行业应用框架；项目审计改为具体方向选定后的按需工作 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 本轮 55 子节点交付 event_key 已写入 Issue #74，GET 回读唯一匹配；Writer 声明已清理 | [Issue comment #7084474199](https://github.com/fweiger/AI_book/issues/74#issuecomment-7084474199) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
+| 最新 Issue 进度事件与本文件版本 | 当前 Batch1 event_key 已由唯一 Writer CLAIMED，文档已写回但 Issue 尚待发布，不能称 SYNCED | [Issue #74](https://github.com/fweiger/AI_book/issues/74) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING / CLAIMED |
 
