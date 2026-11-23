@@ -34,3 +34,5 @@
 - [行业递归下钻 Batch 2（7 个父节点、12 个新子节点）](2026-11-23-recursive-industry-split-batch2.md)
 
 - [2026-11-23：跨行业递归 Batch 3（25 个原未拆父节点新增 50 个子节点；60/60 父节点覆盖）](2026-11-23-recursive-industry-split-batch3.md)
+
+- [2026-11-23：Batch 4 第三层论文—GitHub 映射（8 父/16 子）与 124 节点深度复核队列](2026-11-23-depth3-paper-repo-and-closure-triage.md)
