@@ -1,4 +1,4 @@
-# TOPIC-018｜P0 深度映射 Batch 5：9 个 L2 高优先级分支 → 25 个可定位代码的 L3 问题
+# TOPIC-018｜P0 深度映射 Batch 5：9 个 L2 高优先级分支 → 27 个可定位代码的 L3 问题
 
 > 日期：2026-11-23 · [规范 Issue #74](https://github.com/fweiger/AI_book/issues/74) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75)  
 > L2 主表：[124 个候选子节点](industry-recursive-split-register.md) · [P0/P1/P2 证据队列](industry-leaf-closure-triage.md) · [前一批 L3 的 16 个节点](industry-depth3-paper-project-map.md)  
@@ -6,7 +6,7 @@
 
 ## 1. 选择理由与证据标准
 
-初始 60/60 父节点已经有一层，现阶段不能靠机械增加项目数量推进。当前 30 个 P0 L2 中 8 个具备高质量一手项目来源和可验证的子模块/算法边界；优先从工业硬件、异步工作流、密码学、分布式共识、金融 CVaR、AI 算子、GPU 安全和政府采购版本血缘九个方向拆开。将不同目标性质保持为独立研究问题，保留 Lean / 相邻技术 / 行业参考实现与对应论文证据的区分。
+初始 60/60 父节点已经有一层，现阶段不能靠机械增加项目数量推进。当前 30 个 P0 L2 中 9 个具备较明确的一手项目资料和子模块/算法边界；研究横跨 zkVM 硬件、异步工作流、SNARK、分布式共识、金融 CVaR、AI 算子、GPU 内存与同步安全（拆为两个 L2 父节点）、政府采购版本血缘。将不同目标性质保持为独立研究问题，保留 Lean / 相邻技术 / 行业参考实现与对应论文证据的区分。
 
 **注意**：Github 项目的文件路径来自官方 README/项目规格，其中部分已通过仓库按路径回读，另一部分为 README 中指向的目录，标注 `PROJECT_DOCUMENTED_PATH` / `REPOSITORY_LAYOUT_VERIFIED`。`SOURCE_FILE_VERIFIED` 只证明本轮实际读取了指定原始文件内容；不等于证明通过。
 
