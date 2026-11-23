@@ -34,6 +34,13 @@
 - 研究级别：具名 theorem 或模型说明 ≠ 独立 kernel 校验；未处理条件性 premises、作者部分完成、`sorry_proof`、显式 axiom、非 Lean 系统 LEAN_GAP。**当前 LEAF_CLOSED 未作最终判定；不得将 P0 的 30/30 下钻覆盖当成 30/30 证据闭合。**
 - **唯一下一步**：根据矩阵弱源码位置，优先把 **23 个仓库/目录级入口**定位到具体文件/具名性质/论文关联并审查适用前提，按每条列出的下一证据动作判断来源级闭合或继续分拆；然后推进其余文档级缺口与 P1/P2 94 个 L2 来源关系。仍不执行无目标的外部 clean build 和原型。
 
+## 1C. Batch9：23 个 repo/dir 弱入口已定位到原始源码（最新来源精度）
+
+- [Batch9：23 个源文件/具名符号、论文范围及开放条件对照](industry-repo-dir-source-anchors-batch9.md) 已实际 GET 回读 **23/23**。这是对 Batch8 14 仓库级 + 9 目录级入口的**证据精度升级**；原 Batch8 `source_type` 统计仍作为历史快照保留，不能再称当前还存在 23 个未定位源码的弱链接。
+- Lean-MLIR `denote_rewritePeepholeAt`、VCVio oracle/program logic、MathFin CRR、StatsMLlib 四类概率/统计定理、Brownian 项目构造/连续修改、SP1 局部 faithfulness、Resonate trace invariant、TorchLean checked lowering/CROWNQuery 和 ArkLib legacy/Hachi 均找到实际文件/声明；不等于整套框架或部署系统 correctness。
+- **仍需证据**：ArkLib Sumcheck Interaction 迁移与 Hachi/Fiat-Shamir 组合、SP1 witness decode seam、Resonate 31/92、TorchLean Float/FFI/CUDA 与 Lean proof 的实现距离、Lean-MLIR 固定 ITP24 artifact 与当前 main 的差异；所有情况仍按单问题标注。**没有将任何叶节点擅自升级 LEAF_CLOSED。**
+- **唯一下一步**：优先对 **10 个仍为 `PROJECT_DOC_LINK` 的 L3/L4 节点**定位相应的源码、具名性质、论文/工程边界；完成后对 83 登记单元/82 终端开展统一来源级闭合判定，再推进 P1/P2 94 个 L2。
+
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
 | 关键词/类型 | L2 命中数量 | 该信号的含义 |
