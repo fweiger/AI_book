@@ -4,7 +4,7 @@
 > 输入：[当前 124 个 L2 候选表](industry-recursive-split-register.md)；新增 [16 个 L3 实例](industry-depth3-paper-project-map.md)  
 > **本表是入口级 triage / 自动标签 + 定向人工资料核对，不是 124 项论文/仓库的独立真实性审计，不代表任何 L2 已全面 LEAF_CLOSED。**
 
-## 1. 当前分母与不同统计口径
+## 1. Batch4 建表时的静态分母与不同统计口径（历史快照；最新进展见 1A）
 
 | 指标 | 值 | 解释 |
 |---|---:|---|
@@ -17,13 +17,14 @@
 | 尚未进入 L3 的 L2 节点 | **116** | 不意味着 116 个都必须再拆，需依单问题与项目闭合条件逐个判断 |
 | 本轮 L3 候选 | **16** | 都有真实 GitHub URL 和论文/研究说明，仍未做外部项目构建 |
 
-## 1A. 第三、第四层的实际进展（Batch 4 + Batch 5）
+## 1A. 第三、第四层的实际进展（Batch 4 + Batch 5 + Batch 6）
 
 - [Batch4 L3 表](industry-depth3-paper-project-map.md)：**8 个 P0 L2 → 16 个 L3**。
 - [Batch5 L3/L4 代码锚点](industry-depth3-p0-source-anchors-batch5.md)：**9 个新的 P0 L2 → 27 个 L3，另外 2 个 CVaR L4 证明目标**。
-- 合计已有 **17/30 个 P0 L2 至少继续一层**；新一层共 **43 个 L3**（16+27）和 **2 个 L4**。**剩余 13 个 P0** 尚未按当前方法具体下钻；其他 47+47 个 P1/P2 的来源关系仍未整体验收。
+- [Batch6 六个 P0 的 17 L3 源码/论文映射](industry-depth3-p0-source-anchors-batch6.md)：OpenVM、Zisk、机制设计、控制理论、信息论与 Sparkle 6 个此前未进入 L3 的 P0 L2 → 17 个 L3（源码/技术资料来源级 E1）。
+- 合计已有 **23/30 个 P0 L2 至少继续一层**；新一层共 **60 个 L3**（16+27+17）和 **2 个 L4**。**剩余 7 个 P0** 尚未按当前方法具体下钻；其他 47+47 个 P1/P2 的来源关系仍未整体验收。
 - `L3_MAPPING_E1` 仅证明已定位研究问题、第一手资料与代码/项目入口；并非 `LEAF_CLOSED`，不自动解除 `PAPER_GAP` 或 `LEAN_GAP`。
-- **尚未继续 L3 的 P0 ID：** `IND01-05-A`、`IND01-05-C`、`IND03-05-B`、`IND04-04-B`、`IND04-05-B`、`IND06-03-B`、`IND08-01-A`、`IND10-04-A`、`IND11-01-A`、`IND11-02-B`、`IND01-02-A`、`IND07-03-B`、`IND10-06-A`。
+- **尚未继续 L3 的 P0 ID：** `IND03-05-B`、`IND04-04-B`、`IND10-04-A`、`IND11-01-A`、`IND11-02-B`、`IND07-03-B`、`IND10-06-A`。
 
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
@@ -50,9 +51,9 @@
 
 | L2 ID | 当前问题（摘要） | 主要 GitHub 仓库（按表中首次出现） | 优先级 | 需复核的关系 / 风险 |
 |---|---|---|---|---|
-| `IND01-05-A` | OpenVM v2.0.0 的 RV32IM opcode 语义是否满足指令规格 | [openvm-org/openvm-fv](https://github.com/openvm-org/openvm-fv) | P0 | PAPER_GAP |
+| `IND01-05-A` | OpenVM v2.0.0 的 RV32IM opcode 语义是否满足指令规格 | [openvm-org/openvm-fv](https://github.com/openvm-org/openvm-fv) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch6 ×3** |
 | `IND01-05-B` | SP1 Hypercube chip 的逐行约束是否忠实于参考语义 | [succinctlabs/sp1-lean](https://github.com/succinctlabs/sp1-lean) | P0 | PAPER_GAP · **细拆候选** · **L3_MAPPING_E1 Batch5 ×4** |
-| `IND01-05-C` | Zisk RV64IM 相关组件的 Lean 形式化 | [eth-act/zisk-fv](https://github.com/eth-act/zisk-fv) | P0 | PAPER_GAP, PROJECT_DOC_ONLY |
+| `IND01-05-C` | Zisk RV64IM 相关组件的 Lean 形式化 | [eth-act/zisk-fv](https://github.com/eth-act/zisk-fv) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch6 ×3** |
 | `IND02-02-A` | 将受限 Rust 函数语义抽取为 Lean 函数并证明规格 | [AeneasVerif/aeneas](https://github.com/AeneasVerif/aeneas) | P2 |  |
 | `IND02-02-B` | Rust 源码到 Lean/F*/Rocq 的翻译与证明边界 | [pereq-dev/hax](https://github.com/pereq-dev/hax) | P1 | RELATED_METHOD |
 | `IND02-04-A` | 分布式软件状态机的 LTL 安全性与活性 | [UCSCFormalMethods/LeanLTL](https://github.com/UCSCFormalMethods/LeanLTL) | P2 | DIRECT_COMPANION_CANDIDATE |
@@ -71,7 +72,7 @@
 | `IND04-04-A` | 单条数据是否在决策时点可见：availableAt ≤ decisionTime | [fweiger/AI_book](https://github.com/fweiger/AI_book) | P1 | RELATED_METHOD |
 | `IND04-04-B` | 历史股票池成员、成分调整与历史修订是否按当时可得版本回放 | [fweiger/AI_Trader](https://github.com/fweiger/AI_Trader) | P0 | RELATED_METHOD · **细拆候选** |
 | `IND04-05-A` | 投票规则的公平性、公理与反例 | [dominikpeters/SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | P1 | RELATED_METHOD |
-| `IND04-05-B` | 拍卖规则的激励相容、个体理性与分配性质 | [gametheoryinlean/EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** |
+| `IND04-05-B` | 拍卖规则的激励相容、个体理性与分配性质 | [gametheoryinlean/EconCSLib](https://github.com/gametheoryinlean/EconCSLib) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch6 ×3** |
 | `IND04-05-C` | 均衡存在性与机制约束下的经济结论 | [matheconlib/matheconlib](https://github.com/matheconlib/matheconlib) | P1 | RELATED_METHOD |
 | `IND05-01-A` | 两条进路是否冲突、锁闭和释放条件是否安全 | [egrabanica/safe-railway-system-promela](https://github.com/egrabanica/safe-railway-system-promela) | P1 | RELATED_METHOD |
 | `IND05-01-B` | ETCS 状态与通信消息顺序是否允许非法状态 | [apalache-mc/apalache](https://github.com/apalache-mc/apalache) | P1 | RELATED_METHOD |
@@ -80,12 +81,12 @@
 | `IND06-01-A` | IEC 61131-3 PLC 逻辑的扫描周期、计时器和安全属性 | [IS2Lab/esbmc-plcplus](https://github.com/IS2Lab/esbmc-plcplus) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND06-01-B` | PLC 运行时/参考实现对 IEC 61131-3 程序的执行语义 | [thiagoralves/OpenPLC_v3](https://github.com/thiagoralves/OpenPLC_v3) | P1 | RELATED_METHOD |
 | `IND06-03-A` | 任务级机械臂动作序列与抓取/放置规划 | [moveit/moveit_task_constructor](https://github.com/moveit/moveit_task_constructor) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND06-03-B` | 机器人动力系统的稳定性与控制约束 | [AnandGokhale/LeanForControl](https://github.com/AnandGokhale/LeanForControl) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** |
+| `IND06-03-B` | 机器人动力系统的稳定性与控制约束 | [AnandGokhale/LeanForControl](https://github.com/AnandGokhale/LeanForControl) | P0 | RELATED_METHOD, DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch6 ×3** |
 | `IND06-04-A` | 潮流计算与节点电压/线路约束 | [e2nIEE/pandapower](https://github.com/e2nIEE/pandapower) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND06-04-B` | 电网操作中的序贯动作、拓扑切换与安全状态 | [Grid2op/Grid2Op](https://github.com/Grid2op/Grid2Op) | P2 | E1_SCOPE_CHECK |
 | `IND07-04-A` | SBML 模型结构、引用、单位与模型交换的一致性 | [sbmlteam/libsbml](https://github.com/sbmlteam/libsbml) | P1 | RELATED_METHOD |
 | `IND07-04-B` | 生化反应网络 ODE 模型的仿真语义与复现 | [sys-bio/tellurium](https://github.com/sys-bio/tellurium) | P1 | RELATED_METHOD |
-| `IND08-01-A` | Shannon entropy 与 KL divergence 的定义和基本不等式 | [serhatemrecoban/LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) | P0 | PAPER_GAP |
+| `IND08-01-A` | Shannon entropy 与 KL divergence 的定义和基本不等式 | [serhatemrecoban/LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch6 ×3** |
 | `IND08-01-B` | Mutual information 与数据处理不等式 | [matteonerini/infotheorylib](https://github.com/matteonerini/infotheorylib) | P1 | RELATED_METHOD, PROJECT_DOC_ONLY |
 | `IND08-02-A` | 率失真函数、失真下界与最优编码率 | [fubinyan/rate_distortion_lean4](https://github.com/fubinyan/rate_distortion_lean4) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND08-02-B` | 信源/信道编码定理的概率与信息量度基础 | [serhatemrecoban/LeanInfoTheory](https://github.com/serhatemrecoban/LeanInfoTheory) | P1 | RELATED_METHOD |
@@ -124,7 +125,7 @@
 | `IND11-02-B` | 结构化合同模型与条款数据的字段、类型、引用关系如何定义与校验 | [accordproject/concerto](https://github.com/accordproject/concerto) | P0 | LEAN_GAP, PAPER_GAP, PROJECT_DOC_ONLY |
 | `IND12-02-A` | 将尚未解决的科研数学猜想转换为 Lean 4 可检查的精确**命题陈述** | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND12-02-B` | 已翻译 Lean 命题是否忠实原始论文中的量词、边界值、条件与反例语义 | [google-deepmind/formal-conjectures](https://github.com/google-deepmind/formal-conjectures) | P2 |  |
-| `IND01-02-A` | Lean 4 组合电路规格→Signal DSL→Verilog 生成 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P0 | PAPER_GAP, PROJECT_DOC_ONLY |
+| `IND01-02-A` | Lean 4 组合电路规格→Signal DSL→Verilog 生成 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P0 | PAPER_GAP, PROJECT_DOC_ONLY · **L3_MAPPING_E1 Batch6 ×2** |
 | `IND01-02-B` | 时序仲裁器/AXI4-Lite 总线状态约束 | [Verilean/sparkle](https://github.com/Verilean/sparkle) | P2 |  |
 | `IND01-03-A` | MLIR SSA peephole 重写语义保持 | [opencompl/lean-mlir](https://github.com/opencompl/lean-mlir) | P0 | CONTINUE_SPLIT, DIRECT_COMPANION_CANDIDATE |
 | `IND01-03-B` | LLVM IR→RISC-V 指令选择的精化 | [opencompl/lean-mlir](https://github.com/opencompl/lean-mlir) | P2 |  |
@@ -207,3 +208,8 @@
 ## 6. 唯一下一步
 
 优先处理剩余 13 个未下钻的 P0 项，并对已下钻的 17 个 P0 继续核对源码性质与直接论文关系；其后逐项核验 P1 的来源差异、P2 的直接论文 companion 与项目血缘。**不运行最小原型、不做外部项目代码审计**，不改变 TOPIC-018 原批准 Goal/Scope/AC。
+
+
+## Batch6 增量证据（2026-11-23）
+
+[17 个 L3 源码/论文映射完整表](industry-depth3-p0-source-anchors-batch6.md) 已实际写入、回读校验 ID 唯一。本批 6 个父节点此前均未下钻；目前 23/30 个 P0 有 L3，剩余 7 个在 §1A 列示。研究级 E1 不自动转为 LEAF_CLOSED，外部 clean build、依赖/公理审计、原型和独立 QA 均 NOT_RUN。原 124 L2 和 P0/P1/P2 = 30/47/47 分母不变。
