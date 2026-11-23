@@ -2,8 +2,8 @@
 
 > **版本：** v0.1 · 2026-11-23  
 > **上游：** [industry-leaf-project-map.md](industry-leaf-project-map.md) 中的 60 个首轮候选节点。  
-> **累计新增：** 第二轮原 55 个 + Batch1 新拆 7 个 + Batch2 新拆 12 个 + Batch3 新拆 32 个 = **106 个候选子节点**。  
-> **重要：** 106 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。2026-11-23 Batch1 修订了 9 个旧节点并追加 7 个子节点，见 [Batch1](sessions/2026-11-23-leaf-linkage-verification-batch1.md)；Batch2 再从 7 个此前未拆父节点新增 12 个子节点，见 [Batch2](sessions/2026-11-23-recursive-industry-split-batch2.md)；Batch3 从 16 个未拆父节点新增 32 个子节点，见 [Batch3](sessions/2026-11-23-recursive-industry-split-batch3.md)。
+> **累计新增：** 第二轮原 55 + Batch1 新拆 7 + Batch2 新拆 12 + Batch3 第一批新拆 32 + Batch3 收尾新拆 18 = **124 个候选子节点**；60 个首轮父节点均至少下钻一层。  
+> **重要：** 124 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。2026-11-23 Batch1 修订了 9 个旧节点并追加 7 个子节点，见 [Batch1](sessions/2026-11-23-leaf-linkage-verification-batch1.md)；Batch2 再从 7 个此前未拆父节点新增 12 个子节点，见 [Batch2](sessions/2026-11-23-recursive-industry-split-batch2.md)；Batch3 从 16 个未拆父节点新增 32 个子节点，见 [Batch3](sessions/2026-11-23-recursive-industry-split-batch3.md)。
 
 ## 1. 状态与停止规则
 
@@ -155,6 +155,32 @@
 | IND12-01-B | IND12-01 | Lean Game Server 关卡及证明检查流程 | level metadata、game engine、Lean checker integration | [原始来源](https://github.com/leanprover-community/lean4game) | [GitHub](https://github.com/leanprover-community/lean4game) | LEAN_INFRASTRUCTURE / PROJECT_DOC_ONLY；不等于学习效果研究；CANDIDATE_LEAF |
 | IND12-03-A | IND12-03 | Lean Blueprint 数学定理依赖可视化 | LaTeX theorem IDs、dependency graph、Lean declaration links | [原始来源](https://github.com/PatrickMassot/leanblueprint) | [GitHub](https://github.com/PatrickMassot/leanblueprint) | LEAN_INFRASTRUCTURE / PROJECT_DOC；不是 theorem proof 自身；CANDIDATE_LEAF |
 | IND12-03-B | IND12-03 | Blueprint 文档与 Lean 代码声明同步核对 | checkdecls、LaTeX→web、定理状态对应 | [原始来源](https://github.com/PatrickMassot/leanblueprint) | [GitHub](https://github.com/PatrickMassot/leanblueprint) | LEAN_INFRASTRUCTURE / PROJECT_DOC；不自动保证原论文含义忠实；CANDIDATE_LEAF |
+
+## 2D. Batch 3 收尾：剩余 9 个父节点 → 18 个候选子节点
+
+> 本段完成初始 60 个父节点的**至少一层下钻覆盖**，不是完成全部最深节点或 `LEAF_CLOSED`。本轮 9 个此前未拆父节点各增 2 个问题级候选，共 18 个。对铁路/医疗/生物信息/采购中缺少 Lean 项目的方向标记 `LEAN_GAP`；对 GPU/访问控制/物理知识库与已有节点复用同一项目标记 `CROSS_DOMAIN_REUSE`，防止误把跨行业映射当作独立 GitHub 项目。  
+> **总覆盖：60 个父节点全部至少拆一次；累计 124 个候选子节点（旧 106 + 18），尚未全部终点审查。**
+
+| 子节点 ID | 父节点 | 具体场景 / 最小问题 | 形式化对象与目标性质 | 原始论文/标准/技术资料 | GitHub 项目 | 关系与状态 |
+|---|---|---|---|---|---|---|
+| IND03-04-A | IND03-04 | Rust MIR/LLBC 翻译为 Lean 可验证纯函数的工具链 | Charon LLBC、Aeneas Lean backend、Rust 语义范围及翻译信任边界 | [原始来源](https://github.com/AeneasVerif/aeneas) | [GitHub](https://github.com/AeneasVerif/aeneas) | DIRECT_LEAN_RESEARCH / TOOLCHAIN_PROJECT；不是对任意 Rust 自动证明；CANDIDATE_LEAF |
+| IND03-04-B | IND03-04 | Rust FRI folding 核心算法经 Aeneas/Hax 两条路径形式化 | fold_step、fold_arity、Rust→Lean translation、函数规格与不变量 | [原始来源](https://arxiv.org/abs/2605.30106) | [GitHub](https://github.com/Verified-zkEVM/rust-lean) | DIRECT_LEAN_RESEARCH / PAPER_PRACTICE_CASE；pipeline 使用工具与项目 companion 分开；CANDIDATE_LEAF |
+| IND05-02-A | IND05-02 | 简化铁路双轨信号系统的区段互斥 | Promela signal-box/block sections、SPIN safety no-overlap | [原始来源](https://github.com/egrabanica/safe-railway-system-promela) | [GitHub](https://github.com/egrabanica/safe-railway-system-promela) | ADJACENT_FORMAL_TOOL / COURSE_PROJECT；非 ETCS 全协议验证；LEAN_GAP；CANDIDATE_LEAF |
+| IND05-02-B | IND05-02 | 铁路信号站间事件顺序的 deadlock/liveness 建模 | Promela proctype、消息顺序、LTL liveness 和有限模型检查 | [原始来源](https://github.com/egrabanica/safe-railway-system-promela) | [GitHub](https://github.com/egrabanica/safe-railway-system-promela) | ADJACENT_FORMAL_TOOL / COURSE_PROJECT；非 ETCS 正式 companion；LEAN_GAP；CANDIDATE_LEAF |
+| IND07-01-A | IND07-01 | 血液透析设备 preparation/initiation/ending 工作流的 ASM 规格 | Hemodialysis phases、控制状态与设备转换、运行时一致性 | [原始来源](https://doi.org/10.1016/j.scico.2017.07.003) | [GitHub](https://github.com/asmeta/asmeta) | ADJACENT_FORMAL_TOOL / RELATED_PAPER；asmeta 为 ASMETA 工具仓库，未核实论文具体模型路径；LEAN_GAP；CANDIDATE_LEAF |
+| IND07-01-B | IND07-01 | 透析超滤控制系统的流量约束及模型到控制器测试 | relative blood volume、ultrafiltration rate、Simulink/Stateflow 控制模型 | [原始来源](https://github.com/mathworks/Dialysis-Machine-Simulink) | [GitHub](https://github.com/mathworks/Dialysis-Machine-Simulink) | DOMAIN_REFERENCE_IMPLEMENTATION / PROJECT_DOC；不是 Lean 或经认证的真实医疗设备；LEAN_GAP；CANDIDATE_LEAF |
+| IND07-05-A | IND07-05 | 生物序列文件解析、编码与格式一致性 | sequence record、parser、round trip、输入约束 | [原始来源](https://doi.org/10.1093/bioinformatics/btp163) | [GitHub](https://github.com/biopython/biopython) | DOMAIN_REFERENCE_IMPLEMENTATION / RELATED_BIOINFORMATICS_PAPER；LEAN_GAP；CANDIDATE_LEAF |
+| IND07-05-B | IND07-05 | 化学分子 SMILES/结构表示与描述符计算一致性 | molecule graph、fingerprint、canonicalization、descriptor functions | [原始来源](https://github.com/rdkit/rdkit) | [GitHub](https://github.com/rdkit/rdkit) | DOMAIN_REFERENCE_IMPLEMENTATION / PROJECT_DOC；与 LeanChemicalTheories 的吸附模型不等价；LEAN_GAP；CANDIDATE_LEAF |
+| IND09-04-A | IND09-04 | AI GPU 推理 kernel 在指定 shape 下的访存界限 | TLX/Triton kernel、PTX/KIR、给定输入与 out-of-bounds | [原始来源](https://github.com/facebookresearch/lean_kernel_verify/blob/main/references/specs.md) | [GitHub](https://github.com/facebookresearch/lean_kernel_verify) | CROSS_DOMAIN_REUSE of IND01-04-A；DIRECT_LEAN_RESEARCH；非新独立项目；CANDIDATE_LEAF |
+| IND09-04-B | IND09-04 | CuTe/Triton kernel barrier 与 TMEM 复用时序 | CTA roles、barrier convergence、TMEM/shared-memory ordering | [原始来源](https://github.com/facebookresearch/lean_kernel_verify/blob/main/references/specs.md) | [GitHub](https://github.com/facebookresearch/lean_kernel_verify) | CROSS_DOMAIN_REUSE of IND01-04-B；DIRECT_LEAN_RESEARCH；不能声称全面无死锁；CANDIDATE_LEAF |
+| IND10-01-A | IND10-01 | 高能物理定义和代数物理结果的 Lean 领域库组织 | physics quantities、field-theory math、definitions/theorems、reviewed library | [原始来源](https://doi.org/10.1016/j.cpc.2024.109457) | [GitHub](https://github.com/leanprover-community/physlib) | DIRECT_LEAN_RESEARCH / SUCCESSOR；旧 HepLean→PhysLean 并入 Physlib，不应重复计数；CANDIDATE_LEAF |
+| IND10-01-B | IND10-01 | 高能物理新形式化材料进入 PhyslibAlpha 后如何与核心库区分 | PhyslibAlpha 草案、物理定义、proof dependencies、正式审查边界 | [原始来源](https://github.com/leanprover-community/physlib) | [GitHub](https://github.com/leanprover-community/physlib) | LEAN_INFRASTRUCTURE / PROJECT_DOC；Alpha 研究草案不自动等于 reviewed theorem；CANDIDATE_LEAF |
+| IND11-03-A | IND11-03 | 企业细粒度 RBAC/ABAC 授权策略的 Lean 语义与权限约束 | policy evaluator、entity/resource/action、allow-deny 条件 | [原始来源](https://aws.amazon.com/blogs/opensource/lean-into-verified-software-development/) | [GitHub](https://github.com/cedar-policy/cedar-spec) | CROSS_DOMAIN_REUSE of IND02-01-A；DIRECT_LEAN_APPLICATION；企业合规场景映射；CANDIDATE_LEAF |
+| IND11-03-B | IND11-03 | 授权策略在 Lean 规格与 Rust 执行引擎之间的差分一致性 | Lean policy spec、fuzz tests、Rust authorization engine oracle | [原始来源](https://www.amazon.science/blog/how-we-built-cedar-with-automated-reasoning-and-differential-testing) | [GitHub](https://github.com/cedar-policy/cedar-spec) | CROSS_DOMAIN_REUSE of IND02-01-B；DRT 不等于整个 Rust 实现精化证明；CANDIDATE_LEAF |
+| IND11-05-A | IND11-05 | 政府采购 tender/award 字段模式与阶段约束 | OCDS release schema、tender/award、字段类型与版本 | [原始来源](https://standard.open-contracting.org/) | [GitHub](https://github.com/open-contracting/standard) | DOMAIN_REFERENCE_IMPLEMENTATION / PRIMARY_STANDARD；LEAN_GAP；schema 不等于采购合法性；CANDIDATE_LEAF |
+| IND11-05-B | IND11-05 | 政府采购 contract amendment 的变更历史与可追溯性 | OCDS changes/release merged records、合同变更/时间序列 | [原始来源](https://github.com/open-contracting/standard) | [GitHub](https://github.com/open-contracting/standard) | DOMAIN_REFERENCE_IMPLEMENTATION / PRIMARY_STANDARD；LEAN_GAP；未发现 Lean 审计项目；CANDIDATE_LEAF |
+| IND12-05-A | IND12-05 | 跨学科物理知识的 Lean4 定理库与文献依赖管理 | 物理单位/模型定义、Lean4 theorem library、documentation | [原始来源](https://github.com/leanprover-community/physlib) | [GitHub](https://github.com/leanprover-community/physlib) | CROSS_DOMAIN_REUSE of IND10-01；DIRECT_LEAN_RESEARCH / PROJECT_DOC；CANDIDATE_LEAF |
+| IND12-05-B | IND12-05 | 化学物理 Langmuir/BET 论文结果的可检查知识资产 | adsorption assumptions、mathlib proofs、论文形式化 | [原始来源](https://doi.org/10.1039/d3dd00077j) | [GitHub](https://github.com/atomslab/LeanChemicalTheories) | CROSS_DOMAIN_REUSE of IND10-05；DIRECT_LEAN_RESEARCH / LEAN3_HISTORICAL；CANDIDATE_LEAF |
 
 ## 3. 父节点状态与仍需继续拆分的方向
 
