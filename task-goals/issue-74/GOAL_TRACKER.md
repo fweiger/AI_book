@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：STATE_CONFLICT pending 当前 Batch1 事件同步；原有 55 节点的历史事件已同步，本轮 9 条纠正和 7 个新增子节点的文件已提交，等待 Issue 回执并 GET 回读；批准 Goal/Scope/AC 未变
-- Issue 同步状态：ISSUE_SYNC_PENDING（上一批 55 子节点已同步 comment #7084474199；本轮证据关联纠正事件待同步）
+- 状态一致性：CONSISTENT（Batch1 纠正 9 条关联并新增 7 子节点，Issue #74 event_key 已回读唯一匹配 comment #7093114680；PR head fa6df71 的知识库完整性 #1314 与 Lean PIT #83 均 success；批准 Goal/Scope/AC 未变）
+- Issue 同步状态：SYNCED（本轮 Batch1 event_key 已写入规范 Issue #74 并回读唯一匹配 comment #7093114680）
 
 ## 1. 批准目标基线
 
@@ -88,7 +88,7 @@
 - **当前阶段判断：** M2 行业递归下钻现有 60 个首轮父节点、62 个项目级候选子节点（28 个父节点已拆、32 个未拆），9 条论文—项目关系已修订，但其余候选叶节点并非全部闭合。应继续拆分仍含不同算法/组件/目标性质的节点，并逐条核对论文是 direct companion、技术报告还是 related method；项目内部审计与原型后置。
 - **本轮 AC 与目标对齐证据：** AC-03 已有 60 个首轮父节点、62 个递归候选子节点，9 条关联修正（补项目直接对应/技术报告/仓库后继信息），仍 PARTIAL（32 个父节点未拆，其他子节点仍待原始论文—项目复核）；AC-05 保持既有 PARTIAL，本轮无外部项目构建或审计；AC-06 PIT 最小工作流历史 PASS；AC-07 PARTIAL（Lean 与相邻工具的分类有所纠正）。
 - **目标漂移 D0/D1/D2/UNKNOWN 及理由：** D0；用户明确研究顺序为先搭建 Lean 跨行业/领域应用框架，再从框架映射论文和 GitHub 项目，只有进入具体方向时才审计项目。这是对原 Goal 的执行路径纠偏，不修改批准 Goal/Scope/AC。
-- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** STATE_CONFLICT pending Issue #74 当前 Batch1 事件回执；仓库主表和新增研究记录已写入，Tracker 仍由唯一 Writer CLAIMED；批准 Goal/Scope/AC v1.0 未变。
+- **状态一致性 CONSISTENT/STATE_CONFLICT/UNKNOWN 及理由：** CONSISTENT；Batch1 关联修正与 7 个子节点已提交；Issue #74 当前 event_key comment #7093114680 GET 回读唯一匹配 1 条；PR head fa6df71 的 Knowledge-base integrity #1314 与 Lean PIT #83 success；批准 Goal/Scope/AC v1.0 未变。
 
 ## 5. 阻断与未受影响工作
 
@@ -148,19 +148,19 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|EVIDENCE-LINKAGE-CORRECTIONS-20261123
-- **当前 writer_owner：** chatgpt-session-20261123-evidence-linkage-corrections
-- **当前 write_state：** CLAIMED
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|PROJECT-LEVEL-LEAF-REFINEMENT-20261123
-- **旧 Writer 已停止/隔离证据：** 本轮项目级递归拆分事件已写入 Issue #74，GET 回读确认 comment #7084474199 唯一匹配；Writer 声明已清理，无并发 Writer。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|EVIDENCE-LINKAGE-CORRECTIONS-20261123
+- **旧 Writer 已停止/隔离证据：** 本轮唯一 Writer 已完成 GitHub Issue 回执并 GET 验证 comment #7093114680 唯一匹配；声明已清理，无并发 Writer。
 - **若无法 fencing：** 不适用
 
 | 项目 | 最新核对值 | 证据/版本 | 结果 |
 |---|---|---|---|
 | 规范 Issue Goal/Scope/AC 与本文件§1 | Issue #74 v1.0 与 Tracker 基线一致；未修改 Goal/Scope/Non-goals/AC | [Issue #74](https://github.com/fweiger/AI_book/issues/74) | PASS |
-| §3/§4当前阶段与实际证据 | Batch1 修正 9 条论文—项目关联并新增 7 子节点；共 60 父/62 子，28 父已拆/32 待拆；最新来源在 Batch1 session；与批准目标一致 | [Batch1](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-leaf-linkage-verification-batch1.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
+| §3/§4当前阶段与实际证据 | Batch1 修正 9 条论文—项目关联并新增 7 子节点；共 60 父/62 子，28 父已拆/32 待拆；已验证 head fa6df71 的 Knowledge-base integrity #1314 与 Lean PIT #83 均 success，但不代表行业项目构建 | [Batch1](https://github.com/fweiger/AI_book/blob/topic/TOPIC-018/lean-formal-verification-20261122/topics/lean-formal-verification/sessions/2026-11-23-leaf-linkage-verification-batch1.md) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | PASS / PARTIAL |
 | §5阻断与未受影响工作 | 本地缺 Lean Runner，但 PIT 最小包由 hosted Actions Run #45 验收；外部项目构建仍逐项执行 | §5 / Run #45 | CONSISTENT |
 | §6路径变更与第7节裁决 | 研究顺序已调整为行业需求→形式化问题→Lean能力→论文/项目；项目审计只在具体方向需要时触发 | §6/§7 | PASS |
 | §7唯一当前下一步 vs §9历史最后建议 | §7 与 §9 均已调整为先建立行业应用框架；项目审计改为具体方向选定后的按需工作 | §7/§9 | PASS |
-| 最新 Issue 进度事件与本文件版本 | 当前 Batch1 event_key 已由唯一 Writer CLAIMED，文档已写回但 Issue 尚待发布，不能称 SYNCED | [Issue #74](https://github.com/fweiger/AI_book/issues/74) / [PR #75](https://github.com/fweiger/AI_book/pull/75) | ISSUE_SYNC_PENDING / CLAIMED |
+| 最新 Issue 进度事件与本文件版本 | 当前 Batch1 event_key 在规范 Issue 中 GET 回读唯一匹配 1 条，Writer 声明已清理 | [Issue comment #7093114680](https://github.com/fweiger/AI_book/issues/74#issuecomment-7093114680) · [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) | SYNCED |
 
