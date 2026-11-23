@@ -30,3 +30,5 @@
 - [2026-11-23：第二轮递归拆分至项目级子节点](2026-11-23-project-level-recursive-splits.md)
 
 - [2026-11-23：论文—GitHub 项目关联精度核验 Batch 1（9 项纠正 + 7 个新子节点）](2026-11-23-leaf-linkage-verification-batch1.md)
+
+- [行业递归下钻 Batch 2（7 个父节点、12 个新子节点）](2026-11-23-recursive-industry-split-batch2.md)
