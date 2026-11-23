@@ -17,6 +17,14 @@
 | 尚未进入 L3 的 L2 节点 | **116** | 不意味着 116 个都必须再拆，需依单问题与项目闭合条件逐个判断 |
 | 本轮 L3 候选 | **16** | 都有真实 GitHub URL 和论文/研究说明，仍未做外部项目构建 |
 
+## 1A. 第三、第四层的实际进展（Batch 4 + Batch 5）
+
+- [Batch4 L3 表](industry-depth3-paper-project-map.md)：**8 个 P0 L2 → 16 个 L3**。
+- [Batch5 L3/L4 代码锚点](industry-depth3-p0-source-anchors-batch5.md)：**9 个新的 P0 L2 → 27 个 L3，另外 2 个 CVaR L4 证明目标**。
+- 合计已有 **17/30 个 P0 L2 至少继续一层**；新一层共 **43 个 L3**（16+27）和 **2 个 L4**。**剩余 13 个 P0** 尚未按当前方法具体下钻；其他 47+47 个 P1/P2 的来源关系仍未整体验收。
+- `L3_MAPPING_E1` 仅证明已定位研究问题、第一手资料与代码/项目入口；并非 `LEAF_CLOSED`，不自动解除 `PAPER_GAP` 或 `LEAN_GAP`。
+- **尚未继续 L3 的 P0 ID：** `IND01-05-A`、`IND01-05-C`、`IND03-05-B`、`IND04-04-B`、`IND04-05-B`、`IND06-03-B`、`IND08-01-A`、`IND10-04-A`、`IND11-01-A`、`IND11-02-B`、`IND01-02-A`、`IND07-03-B`、`IND10-06-A`。
+
 ## 2. 关键词证据缺口基线（存在重叠，非最终人工判定）
 
 | 关键词/类型 | L2 命中数量 | 该信号的含义 |
@@ -43,23 +51,23 @@
 | L2 ID | 当前问题（摘要） | 主要 GitHub 仓库（按表中首次出现） | 优先级 | 需复核的关系 / 风险 |
 |---|---|---|---|---|
 | `IND01-05-A` | OpenVM v2.0.0 的 RV32IM opcode 语义是否满足指令规格 | [openvm-org/openvm-fv](https://github.com/openvm-org/openvm-fv) | P0 | PAPER_GAP |
-| `IND01-05-B` | SP1 Hypercube chip 的逐行约束是否忠实于参考语义 | [succinctlabs/sp1-lean](https://github.com/succinctlabs/sp1-lean) | P0 | PAPER_GAP · **细拆候选** |
+| `IND01-05-B` | SP1 Hypercube chip 的逐行约束是否忠实于参考语义 | [succinctlabs/sp1-lean](https://github.com/succinctlabs/sp1-lean) | P0 | PAPER_GAP · **细拆候选** · **L3_MAPPING_E1 Batch5 ×4** |
 | `IND01-05-C` | Zisk RV64IM 相关组件的 Lean 形式化 | [eth-act/zisk-fv](https://github.com/eth-act/zisk-fv) | P0 | PAPER_GAP, PROJECT_DOC_ONLY |
 | `IND02-02-A` | 将受限 Rust 函数语义抽取为 Lean 函数并证明规格 | [AeneasVerif/aeneas](https://github.com/AeneasVerif/aeneas) | P2 |  |
 | `IND02-02-B` | Rust 源码到 Lean/F*/Rocq 的翻译与证明边界 | [pereq-dev/hax](https://github.com/pereq-dev/hax) | P1 | RELATED_METHOD |
 | `IND02-04-A` | 分布式软件状态机的 LTL 安全性与活性 | [UCSCFormalMethods/LeanLTL](https://github.com/UCSCFormalMethods/LeanLTL) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND02-04-B` | 异步工作流的状态迁移、幂等性与故障恢复 | [resonatehq/resonate-specification](https://github.com/resonatehq/resonate-specification) | P0 | PAPER_GAP |
+| `IND02-04-B` | 异步工作流的状态迁移、幂等性与故障恢复 | [resonatehq/resonate-specification](https://github.com/resonatehq/resonate-specification) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch5 ×3** |
 | `IND03-02-A` | 有限域多项式运算和可计算多项式基础 | [Verified-zkEVM/CompPoly](https://github.com/Verified-zkEVM/CompPoly) | P1 | RELATED_METHOD |
-| `IND03-02-B` | IOR/SNARK 证明系统的组合结构与验证关系 | [Verified-zkEVM/ArkLib](https://github.com/Verified-zkEVM/ArkLib) | P0 | RELATED_METHOD · **细拆候选** |
+| `IND03-02-B` | IOR/SNARK 证明系统的组合结构与验证关系 | [Verified-zkEVM/ArkLib](https://github.com/Verified-zkEVM/ArkLib) | P0 | RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch5 ×3** |
 | `IND03-02-C` | 游戏式密码学安全证明与归约 | [Verified-zkEVM/VCVio](https://github.com/Verified-zkEVM/VCVio) | P2 | DIRECT_COMPANION_CANDIDATE |
-| `IND03-05-A` | Veil 中 BFT 协议的 transition-system 不变量 | [verse-lab/veil](https://github.com/verse-lab/veil) | P0 | DIRECT_COMPANION_CANDIDATE · **细拆候选** |
+| `IND03-05-A` | Veil 中 BFT 协议的 transition-system 不变量 | [verse-lab/veil](https://github.com/verse-lab/veil) | P0 | DIRECT_COMPANION_CANDIDATE · **细拆候选** · **L3_MAPPING_E1 Batch5 ×3** |
 | `IND03-05-B` | IFP 中协议状态与故障假设的验证对象 | [sarvalabs/ifp](https://github.com/sarvalabs/ifp) | P0 | PAPER_GAP, PROJECT_DOC_ONLY |
 | `IND04-01-A` | Brownian motion 的定义、滤过与路径性质 | [RemyDegenne/brownian-motion](https://github.com/RemyDegenne/brownian-motion) | P0 | CONTINUE_SPLIT, DIRECT_COMPANION_CANDIDATE |
 | `IND04-01-B` | SDE/随机积分的定义与基础定理 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P2 |  |
 | `IND04-02-A` | CRR 二叉树定价递推和无套利条件 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P0 | CONTINUE_SPLIT, RELATED_METHOD |
 | `IND04-02-B` | Black–Scholes 连续时间定价公式的假设与推导 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P1 | RELATED_METHOD |
 | `IND04-03-A` | Markowitz 均值—方差模型的可行域与最优性条件 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P1 | RELATED_METHOD |
-| `IND04-03-B` | CVaR 的定义、凸表示与优化等价关系 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P0 | RELATED_METHOD · **细拆候选** |
+| `IND04-03-B` | CVaR 的定义、凸表示与优化等价关系 | [formal-applied-math/formal-mathfin](https://github.com/formal-applied-math/formal-mathfin) | P0 | RELATED_METHOD · **细拆候选** · **L3_MAPPING_E1 Batch5 ×4** |
 | `IND04-04-A` | 单条数据是否在决策时点可见：availableAt ≤ decisionTime | [fweiger/AI_book](https://github.com/fweiger/AI_book) | P1 | RELATED_METHOD |
 | `IND04-04-B` | 历史股票池成员、成分调整与历史修订是否按当时可得版本回放 | [fweiger/AI_Trader](https://github.com/fweiger/AI_Trader) | P0 | RELATED_METHOD · **细拆候选** |
 | `IND04-05-A` | 投票规则的公平性、公理与反例 | [dominikpeters/SocialChoiceLean](https://github.com/dominikpeters/SocialChoiceLean) | P1 | RELATED_METHOD |
@@ -103,10 +111,10 @@
 | `IND02-05-B` | xv6 用户态指令执行和分离逻辑资源规格如何连接 | [mit-pdos/xv6iris](https://github.com/mit-pdos/xv6iris) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND09-02-A` | 张量形状约束与线性代数运算如何在 Lean 中表达 | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean) | P1 | RELATED_METHOD |
 | `IND09-02-B` | 模型计算图重写是否保持语义，证书/证明如何验证 | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean) | P0 | CONTINUE_SPLIT, RELATED_METHOD |
-| `IND09-02-C` | CPU/CUDA 训练路径共享的算子定义与 autograd tape 对应关系 | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean) | P0 |  · **细拆候选** |
+| `IND09-02-C` | CPU/CUDA 训练路径共享的算子定义与 autograd tape 对应关系 | [lean-dojo/TorchLean](https://github.com/lean-dojo/TorchLean) | P0 |  · **细拆候选** · **L3_MAPPING_E1 Batch5 ×3** |
 | `IND01-01-A` | 如何把 Sail RISC-V ISA 规范转换为 Lean 可类型检查的形式化指令语义 | [opencompl/sail-riscv-lean](https://github.com/opencompl/sail-riscv-lean) | P2 |  |
-| `IND01-04-A` | Blackwell TLX/Triton/CuTe GPU kernel 在**给定案例输入**下有无越界/地址回绕 | [facebookresearch/lean_kernel_verify](https://github.com/facebookresearch/lean_kernel_verify) | P0 | PAPER_GAP |
-| `IND01-04-B` | 给定 kernel 编译变体中 barrier/TMEM 或 shared-memory 复用次序是否违反指定安全规 | [facebookresearch/lean_kernel_verify](https://github.com/facebookresearch/lean_kernel_verify) | P0 | PAPER_GAP |
+| `IND01-04-A` | Blackwell TLX/Triton/CuTe GPU kernel 在**给定案例输入**下有无越界/地址回绕 | [facebookresearch/lean_kernel_verify](https://github.com/facebookresearch/lean_kernel_verify) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch5 ×2** |
+| `IND01-04-B` | 给定 kernel 编译变体中 barrier/TMEM 或 shared-memory 复用次序是否违反指定安全规 | [facebookresearch/lean_kernel_verify](https://github.com/facebookresearch/lean_kernel_verify) | P0 | PAPER_GAP · **L3_MAPPING_E1 Batch5 ×3** |
 | `IND02-03-A` | 对 Datalog 推导结果提供 proof-tree 证书并以 Lean 验证其语义正确性 | [knowsys/CertifyingDatalog](https://github.com/knowsys/CertifyingDatalog) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND02-03-B` | 对共享子推导的 DAG 证书进行验证，以降低重复 proof-tree 编码 | [knowsys/CertifyingDatalog](https://github.com/knowsys/CertifyingDatalog) | P2 | DIRECT_COMPANION_CANDIDATE |
 | `IND07-02-A` | 医疗记录 FHIR Resource/Profile 的结构、必填字段和 cardinality 是否符合指定版本标 | [HL7/fhir](https://github.com/HL7/fhir) | P1 | LEAN_GAP |
@@ -163,7 +171,7 @@
 | `IND11-03-A` | 企业细粒度 RBAC/ABAC 授权策略的 Lean 语义与权限约束 | [cedar-policy/cedar-spec](https://github.com/cedar-policy/cedar-spec) | P1 | CROSS_DOMAIN_REUSE |
 | `IND11-03-B` | 授权策略在 Lean 规格与 Rust 执行引擎之间的差分一致性 | [cedar-policy/cedar-spec](https://github.com/cedar-policy/cedar-spec) | P1 | CROSS_DOMAIN_REUSE |
 | `IND11-05-A` | 政府采购 tender/award 字段模式与阶段约束 | [open-contracting/standard](https://github.com/open-contracting/standard) | P1 | LEAN_GAP |
-| `IND11-05-B` | 政府采购 contract amendment 的变更历史与可追溯性 | [open-contracting/standard](https://github.com/open-contracting/standard) | P0 | LEAN_GAP · **细拆候选** |
+| `IND11-05-B` | 政府采购 contract amendment 的变更历史与可追溯性 | [open-contracting/standard](https://github.com/open-contracting/standard) | P0 | LEAN_GAP · **细拆候选** · **L3_MAPPING_E1 Batch5 ×2** |
 | `IND12-05-A` | 跨学科物理知识的 Lean4 定理库与文献依赖管理 | [leanprover-community/physlib](https://github.com/leanprover-community/physlib) | P1 | CROSS_DOMAIN_REUSE |
 | `IND12-05-B` | 化学物理 Langmuir/BET 论文结果的可检查知识资产 | [atomslab/LeanChemicalTheories](https://github.com/atomslab/LeanChemicalTheories) | P1 | CROSS_DOMAIN_REUSE |
 
@@ -198,4 +206,4 @@
 
 ## 6. 唯一下一步
 
-先依 P0 队列继续完成具体问题的 L3/L4 下钻及 source–paper–repo 对应关系；其后逐项核验 P1 的来源差异、P2 的直接论文 companion 与项目血缘。**不运行最小原型、不做外部项目代码审计**，不改变 TOPIC-018 原批准 Goal/Scope/AC。
+优先处理剩余 13 个未下钻的 P0 项，并对已下钻的 17 个 P0 继续核对源码性质与直接论文关系；其后逐项核验 P1 的来源差异、P2 的直接论文 companion 与项目血缘。**不运行最小原型、不做外部项目代码审计**，不改变 TOPIC-018 原批准 Goal/Scope/AC。
