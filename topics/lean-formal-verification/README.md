@@ -154,3 +154,9 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23｜Batch10：剩余 10 个文档级来源全定位至源码
 
 [Batch10 文档级 10 项 Lean 源文件/性质/证明前提清单](industry-doc-to-source-anchors-batch10.md) 已实际回读：Resonate trace validation、TorchLean backend/CUDA 可信边界、Lean Kernel Verify 五项 GPU KIR 规格、Zisk RV64IM Aeneas 提取/解码桥接、Sparkle pure FSM/Signal DSL 两条。连同 [Batch9 的 23 条](industry-repo-dir-source-anchors-batch9.md)，Batch8 原本 **33 个仓库/目录/文档级弱索引入口已具文件级源码 overlay**，仍不意味着完成形式化证明；Resonate `sorry`、Zisk extraction TCB、LKV KIR/现实 GPU 桥接、Sparkle FSM/RTL refinement、TorchLean FFI/CUDA 均保留。历史 83 登记/82 终端/30 P0 不变。下一步为 **83 项来源级闭合状态判定**，后续进入 P1/P2 94 个 L2；不是无目标项目审计或量化/医疗/硬件原型。
+
+## 2026-11-23｜Batch11：83 个 L3/L4 来源级闭合决策与 P1/P2 主线
+
+[Batch11 全 83 项研究证据闭合矩阵](industry-leaf-source-closure-decisions-batch11.md) 已按 Batch8+9+10 源码一手材料建立并回读；**52 条 SOURCE_LEVEL_CLOSED（仅已限定问题的来源/性质映射）、31 条 REQUIRES_MORE_EVIDENCE（显式未闭合的 proof/信任/论文/非 Lean GAP）**，其中一个 CVaR L3 是两个 L4 的父项，因此 **82 个终端 = 52 个来源级映射闭合 + 30 个待证**。不应把该分类写成 52 个机器证明通过或 82 个叶节点完全验收。
+
+Batch9/10 为历史 **33 个弱索引入口**补齐真实 GitHub Lean 源码文件；依旧单列 Resonate validator `sorry`、IFP 93/103、SciLean `sorry_proof`、LegalLean 显式 `axiom`、SP1/Zisk witness/extraction 前提、TorchLean CUDA/FFI、Sparkle Signal/RTL refinement、金融 PIT membership/latest-as-of，以及 11 个 non-Lean 行业实现。**当前唯一主线**是将同一方法推广到 **P1/P2 的 94 个 L2 节点**，按行业层级继续下钻至真实论文、项目和具名源码；31 个 P0 未完成义务保留为定向证据队列，不再无目标逐项目审计。
