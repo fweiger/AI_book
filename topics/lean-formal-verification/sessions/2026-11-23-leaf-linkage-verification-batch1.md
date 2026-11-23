@@ -24,7 +24,7 @@
 - 尚未拆分的首轮父节点：**35** 个。
 - 55 个子节点目前还不能因存在 GitHub 项目就全数标为 `LEAF_CLOSED`；其中若干论文对应关系、过宽问题和项目性质需进一步修正。
 
-本轮只对 **9 个有具体原始证据的子节点**修订了论文/项目的关系和相关父节点导航；不是 55 个子节点的完整独立验收。
+本轮对 **9 个有具体原始证据的子节点**修订了论文/项目关系，并追加 **7 个**有第一手仓库来源的新子节点；不是 62 个子节点的完整独立验收。
 
 ## 3. 实际回读与纠正（9 个子节点）
 
@@ -48,9 +48,23 @@
 - [EconCSLib](https://github.com/gametheoryinlean/EconCSLib) README 的 Blueprint 同时包含形式化成果和数学目标；不能把目标项全部计作 Lean 已证明。
 - [LeanLTL](https://github.com/UCSCFormalMethods/LeanLTL) README 中提供 TrafficLights、有限/无限 trace 等实际库入口，但不是每个分布式系统的 companion implementation。
 
+## 3A. 在未拆父节点中追加 7 个有来源的候选子节点
+
+本轮在上述论文/项目映射纠正后，又以 GitHub 原始 README 为依据，从 **3 个尚未拆分的父节点** 新增 **7 个** 子节点：
+
+| 原父节点 | 追加子节点 | 区分的独立研究问题 | 第一手对应项目 |
+|---|---:|---|---|
+| IND02-01 云授权 | 2 | Lean 形式化 Cedar 授权决策语义；Lean/Rust 差分测试与实现一致性 | [cedar-spec](https://github.com/cedar-policy/cedar-spec) · [cedar](https://github.com/cedar-policy/cedar) |
+| IND02-05 OS/xv6 | 2 | 系统/设备执行的 trace adequacy；用户态指令与资源规范 | [xv6iris](https://github.com/mit-pdos/xv6iris/tree/lean) · [论文](https://arxiv.org/abs/2609.04043) |
+| IND09-02 AI/TorchLean | 3 | shape-checked tensors；graph rewrite 的验证；CPU/CUDA 共用 op/autograd 语义 | [TorchLean](https://github.com/lean-dojo/TorchLean) · [论文](https://arxiv.org/abs/2602.22631) |
+
+**新总量：** 首轮父节点 60；累计项目级候选子节点 **62**（原 55 + 本轮 7）；已发生下钻的父节点 **28**；尚未拆分的首轮父节点 **32**。
+
+这 7 个子节点仍为 `CANDIDATE_LEAF`，不是已验证 Lean theorem 证明完成，更不能表示生产程序已整体通过验证。新增条目已放在 [第二轮递归拆分登记表 §2A](../industry-recursive-split-register.md)。
+
 ## 4. 待拆节点与质量门槛
 
-本批次计算出 **35 个父节点尚无更细子节点**；应优先从多个算法、组件或系统流程仍混在同一节点的方向继续拆开。下一轮先从这些父节点中选有第一手标准/论文与仓库可回读的分支进行拆分；不得让“已有 GitHub 链接”成为停止递归的充分条件。
+初始核算 **35 个父节点**尚无子节点；本轮已新增 3 个父节点的 7 个子节点，当前剩余 **32 个父节点**没有更细子节点；应优先从多个算法、组件或系统流程仍混在同一节点的方向继续拆开。下一轮先从这些父节点中选有第一手标准/论文与仓库可回读的分支进行拆分；不得让“已有 GitHub 链接”成为停止递归的充分条件。
 
 逐条闭合检查：
 1. 是否对应单个业务/技术问题，还是仍包含多种算法和性质？
@@ -64,7 +78,7 @@
 ## 5. 本轮状态与唯一下一步
 
 - **PASS：** 9 个子节点的来源/论文/仓库关系已修正；关键项目 README 已回读。
-- **PARTIAL：** 55 个候选子节点尚未全部校核；60 个父节点中的 35 个尚未拆出下一层。
+- **PARTIAL：** 总计 62 个候选子节点尚未全部校核；60 个父节点中的 32 个尚未拆出下一层。
 - **NOT_RUN：** 外部项目 clean build、proof/axiom 检查、许可证审计、原型和生产集成。
 - **Goal drift：** D0，仍服务于 TOPIC-018 跨行业真实应用地图。
-- **唯一下一步：** 优先推进 35 个未拆父节点中仍然过宽的分支，同时按同一证据口径继续复核其余 46 个二轮子节点；记录 DIRECT_COMPANION / RELATED_METHOD / PRIMARY_TECH_REPORT / PROJECT_GAP，不能凑数。
+- **唯一下一步：** 优先推进剩余 32 个未拆父节点中仍然过宽的分支，同时按同一证据口径继续复核其余 53 个候选子节点；记录 DIRECT_COMPANION / RELATED_METHOD / PRIMARY_TECH_REPORT / PROJECT_GAP，不能凑数。
