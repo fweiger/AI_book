@@ -18,8 +18,8 @@
 - 最新规范 Issue 读取时间与修订：2026-11-22；初始批准版 v1.0
 - 本轮状态纠偏写入前 Tracker blob SHA：53eda2cdc976f40cc7d56275239036badf3c86ee；写入后以 GET 回读 SHA 为准
 - 目标漂移状态：D0（用户明确将执行顺序调整为行业/业务问题框架优先；仍服务于原 Goal，不修改批准 Goal/Scope/AC）
-- 状态一致性：CONSISTENT（Batch16 12父/24唯一L3不重复前四批、跨IND02–IND12共11行业；原124 L2登记与triage各12回链和README均GET；唯一Writer CLAIMED/Issue事件待同步，目标协议未变）
-- Issue 同步状态：ISSUE_SYNC_PENDING（Batch16 24行来源研究、原124L2/triage/README、唯一Tracker已GET回读，等待规范Issue #74唯一事件和Writer释放）
+- 状态一致性：CONSISTENT（Batch16 12父24唯一L3/11行业、124L2与triage各12个反链、README和Issue唯一事件已GET，Writer释放且Goal/AC/协议原样不变）
+- Issue 同步状态：SYNCED（Batch16 event_key已在Issue #74唯一GET回读1条：[comment #7113719542](https://github.com/fweiger/AI_book/issues/74#issuecomment-7113719542)，Writer已释放）
 
 ## 1. 批准目标基线
 
@@ -179,11 +179,11 @@
 
 ## 10. 最近一次状态一致性回读
 
-- **当前 active_event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-FIFTH-BREADTH-BATCH16-20261124
-- **当前 writer_owner：** chatgpt-session-20261124-batch16
-- **当前 write_state：** CLAIMED（Batch16 12父/24子及原登记/triage/README均GET，Issue单事件尚未发布）
-- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-FOURTH-BREADTH-BATCH15-20261124
-- **旧 Writer 已停止/隔离证据：** Batch15 Writer NONE/SYNCED，本轮以最新Tracker SHA CAS领取并GET确认。
+- **当前 active_event_key：** NONE
+- **当前 writer_owner：** NONE
+- **当前 write_state：** SYNCED（Batch16 Issue单事件GET后Writer已释放）
+- **最近完成的 event_key：** AI-BOOK-TOPIC-018-LEAN-FORMAL-VERIFICATION|M2|P1P2-FIFTH-BREADTH-BATCH16-20261124
+- **旧 Writer 已停止/隔离证据：** Batch15 Writer已释放，Batch16通过Tracker SHA CAS领取并GET，Issue #74 comment #7113719542唯一回读后释放。
 - **若无法 fencing：** 并发写入或权限不明则停止，不强制覆盖。
 
 | 核对项 | 证据 | 状态 |
@@ -194,5 +194,5 @@
 | 树结构 | 已有90/124个L2具L3，201L3+2L4=203登记、202终端，剩34个P1/P2 | PASS |
 | 证明边界 | Lean/Scala/C/C++/Julia/F*与tcB、no-op/版本缺口分别标注 | PARTIAL |
 | 外部build/CI | 外部独立构建/公理审计NOT_RUN，本分支关联CI另查 | NOT_RUN/UNKNOWN |
-| Issue事件 | Writer CLAIMED，唯一事件待发布/回读 | ISSUE_SYNC_PENDING |
+| Issue事件 | [comment #7113719542](https://github.com/fweiger/AI_book/issues/74#issuecomment-7113719542)，event_key一条GET回读，Writer已释放 | SYNCED |
 | 原目标与下一步 | D0/CONSISTENT，第六批从剩34个P1/P2中选约12 | CONSISTENT |
