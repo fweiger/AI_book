@@ -150,3 +150,7 @@ PIT package 的证明源码提交 2cbece7184815f8d17bf09130f66dd024630e51c 已�
 ## 2026-11-23｜Batch9：原 23 个 repo/dir 入口全部找到具体源码与声明
 
 [Batch9 23 条具体源文件/定理锚点清单](industry-repo-dir-source-anchors-batch9.md) 已 GET 回读，覆盖 Batch8 仍为 14 个仓库级 + 9 个目录级的研究单元；Lean-MLIR、VCVio、Brownian、MathFin、StatsMLlib、TorchLean、SP1、Resonate、ArkLib 均按单问题匹配文件与实际声明。**23/23 为文件级来源闭合，不是 Lean theorem/kernel PASS 或 23 个独立仓库验收**；SP1 decode、Resonate 全性质、ArkLib Interaction 迁移、TorchLean Float/CUDA 等仍有具体证明缺口。历史 [Batch8 全量矩阵](industry-leaf-evidence-closure-matrix-batch8.md) 已标明 23 个弱入口状态被本轮证据覆盖；登记口径仍为 83 个研究单元/82 个终端/30 P0。当前唯一下一步转向其余 **10 个文档级原始研究入口**，仍不转无目的的外部项目审计与原型。
+
+## 2026-11-23｜Batch10：剩余 10 个文档级来源全定位至源码
+
+[Batch10 文档级 10 项 Lean 源文件/性质/证明前提清单](industry-doc-to-source-anchors-batch10.md) 已实际回读：Resonate trace validation、TorchLean backend/CUDA 可信边界、Lean Kernel Verify 五项 GPU KIR 规格、Zisk RV64IM Aeneas 提取/解码桥接、Sparkle pure FSM/Signal DSL 两条。连同 [Batch9 的 23 条](industry-repo-dir-source-anchors-batch9.md)，Batch8 原本 **33 个仓库/目录/文档级弱索引入口已具文件级源码 overlay**，仍不意味着完成形式化证明；Resonate `sorry`、Zisk extraction TCB、LKV KIR/现实 GPU 桥接、Sparkle FSM/RTL refinement、TorchLean FFI/CUDA 均保留。历史 83 登记/82 终端/30 P0 不变。下一步为 **83 项来源级闭合状态判定**，后续进入 P1/P2 94 个 L2；不是无目标项目审计或量化/医疗/硬件原型。
