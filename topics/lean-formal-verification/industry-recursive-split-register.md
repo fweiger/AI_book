@@ -1,9 +1,9 @@
-# TOPIC-018｜第二轮递归拆分登记表：从候选方向到项目级研究单元
+# TOPIC-018｜跨行业多轮递归拆分：行业→问题→论文→GitHub 项目
 
 > **版本：** v0.1 · 2026-11-23  
 > **上游：** [industry-leaf-project-map.md](industry-leaf-project-map.md) 中的 60 个首轮候选节点。  
 > **累计新增：** 第二轮原 55 + Batch1 新拆 7 + Batch2 新拆 12 + Batch3 第一批新拆 32 + Batch3 收尾新拆 18 = **124 个候选子节点**；60 个首轮父节点均至少下钻一层。  
-> **重要：** 124 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。2026-11-23 Batch1 修订了 9 个旧节点并追加 7 个子节点，见 [Batch1](sessions/2026-11-23-leaf-linkage-verification-batch1.md)；Batch2 再从 7 个此前未拆父节点新增 12 个子节点，见 [Batch2](sessions/2026-11-23-recursive-industry-split-batch2.md)；Batch3 从 16 个未拆父节点新增 32 个子节点，见 [Batch3](sessions/2026-11-23-recursive-industry-split-batch3.md)。
+> **重要：** 124 个子节点是项目级候选研究单元，不等于全部已通过叶节点验收。若仍包含不同问题或多个独立目标，继续拆分；不得用固定数量作为结束条件。2026-11-23 Batch1 修订了 9 个旧节点并追加 7 个子节点，见 [Batch1](sessions/2026-11-23-leaf-linkage-verification-batch1.md)；Batch2 再从 7 个此前未拆父节点新增 12 个子节点，见 [Batch2](sessions/2026-11-23-recursive-industry-split-batch2.md)；Batch3 从 25 个原未拆父节点新增共 50 个子节点（§2C 32 + §2D 18），见 [Batch3](sessions/2026-11-23-recursive-industry-split-batch3.md)。
 
 ## 1. 状态与停止规则
 
@@ -203,4 +203,4 @@
 5. 是否仍包含多个算法、不同用户流程、不同目标性质或多个独立项目？若是，继续拆。
 6. 达到 `LEAF_CLOSED` 后才从研究目录中视为闭合；代码 build、许可证、sorry/admit 和 proof completeness 属于之后的项目审计，不在此阶段自动执行。
 
-**下一步唯一动作：** 对剩余未拆父节点和本表候选叶节点继续做项目—论文一一对应核对，优先处理 `PAPER_GAP` 和仍然过宽的节点。当前不执行项目审计或原型。
+**下一步唯一动作：** 首轮 60 个父节点已全部至少拆一次；从现在起对 **124 个候选子节点**逐项做项目—论文一一对应核对与深度复核，优先处理 `PAPER_GAP`、`PROJECT_GAP`、`LEAN_GAP`、`CROSS_DOMAIN_REUSE` 和仍然过宽的 `CONTINUE_SPLIT` 节点；需要时继续向第三级/第四级及更深层递归。当前不执行项目审计或原型。
