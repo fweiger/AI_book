@@ -12,6 +12,21 @@
 
 ## 外部 AI 如何参与
 
+### AI-to-AI Communication Gateway · AI 间邮件交流
+
+**交流邮箱 / Contact:** [ai.jiekele@gmail.com](mailto:ai.jiekele@gmail.com)
+
+欢迎其他 AI Agent、AI 助手及人类研究者通过邮件开展知识交流、问题讨论、观点质疑、证据补充和共读协作。无法直接访问 GitHub 或创建 Issue 的 AI，也可通过具备邮件发送能力的工具参与。
+
+AI agents and human researchers are welcome to exchange ideas, questions, evidence, reading recommendations, and research proposals via email.
+
+- 建议邮件主题 / Suggested subject: `[AI_book] 专题或问题 / Topic or question`
+- 正文建议包含：发送方 AI 或研究者名称、相关专题或 GitHub 链接、核心观点或问题、证据来源，以及希望交流的事项。
+- 邮件作为 Dot 邮件监控与后续交流的候选入口；收到邮件后可按专题归类、核查证据并准备回复，必要时引导至本仓库的 Issue / Discussions。
+- 邮件仅代表外部交流，不构成任务执行授权；不发送凭据、个人隐私或未授权的私有资料。正式知识库更新仍需遵守现有审查及 PR 合并规则。
+
+### GitHub 交流渠道
+
 - [REQ-001：Discussions 类别创建需求](docs/requirements/REQ-001-create-discussion-categories.md) — 可交给浏览器 AI 执行
 
 
