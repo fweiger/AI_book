@@ -1,0 +1,787 @@
+{
+  "schema_version": "1.0",
+  "topic_version": "0.6.0",
+  "topic_id": "TOPIC-018",
+  "title": "Lean 形式化证明与跨学科可验证系统",
+  "source_level": "官方文档、公开项目页面和论文初筛；项目构建与独立复现尚未完成",
+  "books": [],
+  "nodes": [
+    {
+      "id": "L01",
+      "type": "system",
+      "title": "Lean 4 语言与依赖类型理论",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L02",
+      "type": "verification",
+      "title": "Lean Kernel 与 proof term 检查",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L03",
+      "type": "library",
+      "title": "Mathlib 数学知识库",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L04",
+      "type": "tooling",
+      "title": "Elan / Lake 工具链与构建",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L05",
+      "type": "method",
+      "title": "数学猜想与定理形式化",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L06",
+      "type": "method",
+      "title": "Blueprint 与大型证明依赖工程",
+      "evidence_level": "E0"
+    },
+    {
+      "id": "L07",
+      "type": "domain",
+      "title": "软件工程与程序验证",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L08",
+      "type": "domain",
+      "title": "密码学与零知识证明",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L09",
+      "type": "domain",
+      "title": "分布式系统与共识",
+      "evidence_level": "E0"
+    },
+    {
+      "id": "L10",
+      "type": "domain",
+      "title": "经济学、博弈论与机制设计",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L11",
+      "type": "domain",
+      "title": "金融数学",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L12",
+      "type": "domain",
+      "title": "AI / 机器学习 / 数值计算",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L13",
+      "type": "domain",
+      "title": "物理学与数学物理",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L14",
+      "type": "domain",
+      "title": "信息论、编码理论与控制",
+      "evidence_level": "E0"
+    },
+    {
+      "id": "L15",
+      "type": "method",
+      "title": "AI Agent 辅助形式化与独立审查",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L16",
+      "type": "evidence",
+      "title": "证明、实现、数据和经验验证的证据分层",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L17",
+      "type": "governance",
+      "title": "跨项目版本与依赖准入",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L18",
+      "type": "history",
+      "title": "Lean 3 legacy 与 Lean 4 生态边界",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L19",
+      "type": "method",
+      "title": "Rust → Hax/Aeneas → Lean → protocol specification",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L20",
+      "type": "method",
+      "title": "Hax annotations 与 BitVec bit-blasting",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L21",
+      "type": "method",
+      "title": "多语义规格集：整数与位向量分离",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L22",
+      "type": "comparison",
+      "title": "同源 Rust 输入下的 Hax / Aeneas 对照",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L23",
+      "type": "governance",
+      "title": "跨库桥接的 axiom / opaque / sorry 审计",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L24",
+      "type": "cryptography",
+      "title": "FRI folding arity 的局部性质证明",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L25",
+      "type": "case_study",
+      "title": "Hax 官方 ADC bit-blasting 示例",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L26",
+      "type": "case_study",
+      "title": "MathFin：金融数学形式化库",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L27",
+      "type": "governance",
+      "title": "形式化保真度等级与 scope disclosure",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L28",
+      "type": "method",
+      "title": "生成式 axiom audit 与 CI soundness floor",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L29",
+      "type": "method",
+      "title": "Gaussian CVaR 的 pointwise certificate",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L30",
+      "type": "method",
+      "title": "CRR→Black-Scholes 的特征函数收敛",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L31",
+      "type": "method",
+      "title": "Markowitz Lagrangian FOC 的 KKT 充分性",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L32",
+      "type": "method",
+      "title": "PIT/no-lookahead：availableAt ≤ decisionTime",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L33",
+      "type": "concept",
+      "title": "eventTime 与 availableAt 的语义区分",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L34",
+      "type": "method",
+      "title": "Hax 版本兼容与生成 Lean package 迁移",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L35",
+      "type": "domain_method",
+      "title": "LeanInfoTheory：有限离散熵、信道与 Markov 信息论",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L36",
+      "type": "case_study",
+      "title": "Rate-distortion：有限字母表 direct/converse formalization",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L37",
+      "type": "domain_method",
+      "title": "AI4SLT：经验过程与统计学习理论",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L38",
+      "type": "framework",
+      "title": "TorchLean：统一神经网络执行、训练与验证语义",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L39",
+      "type": "domain_method",
+      "title": "DynamicalSystems：Lyapunov 与 small-gain 控制理论",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L40",
+      "type": "case_study",
+      "title": "HepLean：高能物理结果数字化",
+      "evidence_level": "E1"
+    },
+    {
+      "id": "L41",
+      "type": "framework",
+      "title": "Veil 2.0：状态转换系统多模态验证",
+      "evidence_level": "E2"
+    },
+    {
+      "id": "L42",
+      "type": "case_study",
+      "title": "Rate-Distortion：当前源码与历史构建时点审计",
+      "evidence_level": "E1",
+      "status": "PARTIAL_CURRENT_BUILD_NOT_RUN"
+    },
+    {
+      "id": "L43",
+      "type": "case_study",
+      "title": "AI4SLT：release build 与统计学习 theorem 审计",
+      "evidence_level": "E2",
+      "status": "RELEASE_BUILD_PASS_NO_CONTINUOUS_CI"
+    },
+    {
+      "id": "L44",
+      "type": "framework",
+      "title": "Veil：TrustAudit、SMT trust 与 certificate kernel boundary",
+      "evidence_level": "E2",
+      "status": "UPSTREAM_CI_PASS"
+    }
+  ],
+  "edges": [
+    {
+      "source": "L01",
+      "target": "L02",
+      "relation": "可信核心"
+    },
+    {
+      "source": "L01",
+      "target": "L03",
+      "relation": "运行基础"
+    },
+    {
+      "source": "L04",
+      "target": "L01",
+      "relation": "版本与构建管理"
+    },
+    {
+      "source": "L03",
+      "target": "L05",
+      "relation": "数学资产复用"
+    },
+    {
+      "source": "L06",
+      "target": "L05",
+      "relation": "组织大型证明"
+    },
+    {
+      "source": "L15",
+      "target": "L05",
+      "relation": "辅助形式化"
+    },
+    {
+      "source": "L05",
+      "target": "L02",
+      "relation": "证明项检查"
+    },
+    {
+      "source": "L02",
+      "target": "L07",
+      "relation": "应用于程序性质"
+    },
+    {
+      "source": "L02",
+      "target": "L08",
+      "relation": "应用于密码学性质"
+    },
+    {
+      "source": "L02",
+      "target": "L09",
+      "relation": "应用于协议不变量"
+    },
+    {
+      "source": "L02",
+      "target": "L10",
+      "relation": "应用于经济学定理"
+    },
+    {
+      "source": "L02",
+      "target": "L11",
+      "relation": "应用于金融数学"
+    },
+    {
+      "source": "L02",
+      "target": "L12",
+      "relation": "应用于学习系统验证"
+    },
+    {
+      "source": "L02",
+      "target": "L13",
+      "relation": "应用于数学物理"
+    },
+    {
+      "source": "L02",
+      "target": "L14",
+      "relation": "候选应用领域"
+    },
+    {
+      "source": "L16",
+      "target": "L07",
+      "relation": "限制实现符合性结论"
+    },
+    {
+      "source": "L16",
+      "target": "L11",
+      "relation": "限制金融经验结论"
+    },
+    {
+      "source": "L04",
+      "target": "L17",
+      "relation": "工具链版本锁定"
+    },
+    {
+      "source": "L05",
+      "target": "L18",
+      "relation": "区分历史Lean3形式化与Lean4项目"
+    },
+    {
+      "source": "L17",
+      "target": "L07",
+      "relation": "约束程序验证项目复现"
+    },
+    {
+      "source": "L17",
+      "target": "L11",
+      "relation": "约束金融数学项目复现"
+    },
+    {
+      "source": "L07",
+      "target": "L19",
+      "relation": "源程序抽取"
+    },
+    {
+      "source": "L19",
+      "target": "L08",
+      "relation": "连接密码学协议规格"
+    },
+    {
+      "source": "L20",
+      "target": "L08",
+      "relation": "验证定宽算术原语"
+    },
+    {
+      "source": "L19",
+      "target": "L16",
+      "relation": "区分抽取编译与端到端正确性"
+    },
+    {
+      "source": "L19",
+      "target": "L22",
+      "relation": "同源程序的不同抽取路线"
+    },
+    {
+      "source": "L22",
+      "target": "L24",
+      "relation": "验证单轮 FRI arity 选择"
+    },
+    {
+      "source": "L22",
+      "target": "L23",
+      "relation": "跨库接口与证明依赖"
+    },
+    {
+      "source": "L23",
+      "target": "L16",
+      "relation": "区分完整证明与公理桥接"
+    },
+    {
+      "source": "L21",
+      "target": "L25",
+      "relation": "选择位向量规格"
+    },
+    {
+      "source": "L25",
+      "target": "L08",
+      "relation": "密码学定宽算术验证"
+    },
+    {
+      "source": "L17",
+      "target": "L22",
+      "relation": "锁定工具链与依赖"
+    },
+    {
+      "source": "L20",
+      "target": "L21",
+      "relation": "分离数学整数与位级规格"
+    },
+    {
+      "source": "L19",
+      "target": "L22",
+      "relation": "锁定Hax与Lean工具链版本"
+    },
+    {
+      "source": "L22",
+      "target": "L16",
+      "relation": "控制升级后构建与证明状态验收"
+    },
+    {
+      "source": "L26",
+      "target": "L27",
+      "relation": "显式区分形式化保真度"
+    },
+    {
+      "source": "L26",
+      "target": "L28",
+      "relation": "生成公理依赖审计"
+    },
+    {
+      "source": "L26",
+      "target": "L29",
+      "relation": "风险度量的最优性证明"
+    },
+    {
+      "source": "L26",
+      "target": "L30",
+      "relation": "离散定价模型到连续极限"
+    },
+    {
+      "source": "L26",
+      "target": "L31",
+      "relation": "投资组合约束优化"
+    },
+    {
+      "source": "L27",
+      "target": "L16",
+      "relation": "限制研究结论的证据等级"
+    },
+    {
+      "source": "L28",
+      "target": "L16",
+      "relation": "检查 theorem 传递公理依赖"
+    },
+    {
+      "source": "L29",
+      "target": "L08",
+      "relation": "形式化 CVaR 风险度量"
+    },
+    {
+      "source": "L30",
+      "target": "L08",
+      "relation": "形式化 CRR 定价收敛"
+    },
+    {
+      "source": "L26",
+      "target": "L32",
+      "relation": "金融数据时间语义的形式化应用"
+    },
+    {
+      "source": "L32",
+      "target": "L33",
+      "relation": "区分事件时间与可得时间"
+    },
+    {
+      "source": "L33",
+      "target": "L16",
+      "relation": "显式记录模型假设和时间边界"
+    },
+    {
+      "source": "L32",
+      "target": "L22",
+      "relation": "程序级不变量与形式化验证方法"
+    },
+    {
+      "source": "L34",
+      "target": "L17",
+      "relation": "版本和依赖锁定"
+    },
+    {
+      "source": "L34",
+      "target": "L22",
+      "relation": "迁移时保留同源工具对照"
+    },
+    {
+      "source": "L14",
+      "target": "L35",
+      "relation": "有限离散信息论基础库"
+    },
+    {
+      "source": "L35",
+      "target": "L36",
+      "relation": "为率失真与编码理论提供信息量基础"
+    },
+    {
+      "source": "L14",
+      "target": "L36",
+      "relation": "率失真 direct/converse 形式化"
+    },
+    {
+      "source": "L12",
+      "target": "L37",
+      "relation": "统计学习理论的形式化"
+    },
+    {
+      "source": "L12",
+      "target": "L38",
+      "relation": "神经网络执行与验证框架"
+    },
+    {
+      "source": "L13",
+      "target": "L40",
+      "relation": "高能物理结果数字化"
+    },
+    {
+      "source": "L13",
+      "target": "L39",
+      "relation": "动力系统与控制稳定性形式化"
+    },
+    {
+      "source": "L09",
+      "target": "L41",
+      "relation": "状态转换系统与分布式协议验证"
+    },
+    {
+      "source": "L41",
+      "target": "L16",
+      "relation": "区分模型检查、自动证明和交互式证明证据"
+    },
+    {
+      "source": "L36",
+      "target": "L42",
+      "relation": "rate-distortion current-source audit"
+    },
+    {
+      "source": "L37",
+      "target": "L43",
+      "relation": "ICML companion release-build audit"
+    },
+    {
+      "source": "L41",
+      "target": "L44",
+      "relation": "framework trust-boundary and CI audit"
+    },
+    {
+      "source": "L44",
+      "target": "L16",
+      "relation": "separate theorem axioms, model assumptions, sorryAx and unsafe runtime paths"
+    }
+  ],
+  "reading_paths": [
+    {
+      "id": "Q01",
+      "name": "Lean 技术基础",
+      "nodes": [
+        "L01",
+        "L02",
+        "L03",
+        "L04"
+      ]
+    },
+    {
+      "id": "Q02",
+      "name": "数学猜想与证明工程",
+      "nodes": [
+        "L03",
+        "L05",
+        "L06",
+        "L15",
+        "L02"
+      ]
+    },
+    {
+      "id": "Q03",
+      "name": "程序与密码学验证",
+      "nodes": [
+        "L07",
+        "L08",
+        "L15",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q04",
+      "name": "经济金融与AI物理",
+      "nodes": [
+        "L10",
+        "L11",
+        "L12",
+        "L13",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q05",
+      "name": "版本化项目准入",
+      "nodes": [
+        "L04",
+        "L17",
+        "L18",
+        "L03"
+      ]
+    },
+    {
+      "id": "Q06",
+      "name": "Rust 到 Lean 的密码学验证",
+      "nodes": [
+        "L07",
+        "L19",
+        "L20",
+        "L08",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q07",
+      "name": "Hax / Aeneas 同源 FRI 比较",
+      "nodes": [
+        "L07",
+        "L19",
+        "L22",
+        "L24",
+        "L23",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q08",
+      "name": "Hax ADC 位向量证明",
+      "nodes": [
+        "L08",
+        "L21",
+        "L25",
+        "L20"
+      ]
+    },
+    {
+      "id": "Q11",
+      "name": "Hax版本迁移与双规格验证",
+      "nodes": [
+        "L19",
+        "L20",
+        "L21",
+        "L22",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q09",
+      "name": "金融数学形式化与量化边界",
+      "nodes": [
+        "L26",
+        "L27",
+        "L28",
+        "L29",
+        "L31",
+        "L30"
+      ]
+    },
+    {
+      "id": "Q10",
+      "name": "PIT/no-lookahead 最小 Lean 原型",
+      "nodes": [
+        "L26",
+        "L32",
+        "L33",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q12",
+      "name": "信息论基础到率失真编码",
+      "nodes": [
+        "L14",
+        "L35",
+        "L36",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q13",
+      "name": "统计学习与神经网络形式化",
+      "nodes": [
+        "L12",
+        "L37",
+        "L38",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q14",
+      "name": "物理与控制理论",
+      "nodes": [
+        "L13",
+        "L40",
+        "L39",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q15",
+      "name": "BFT与状态转换系统验证",
+      "nodes": [
+        "L09",
+        "L41",
+        "L16"
+      ]
+    },
+    {
+      "id": "Q16",
+      "name": "三种项目构建与信任边界模式",
+      "nodes": [
+        "L36",
+        "L42",
+        "L37",
+        "L43",
+        "L41",
+        "L44",
+        "L16"
+      ]
+    }
+  ],
+  "claim_index": "claims.md",
+  "reading_path": "questions.md",
+  "constraints": [
+    "Kernel 检查形式化 proof term，不保证自然语言命题翻译忠实",
+    "定理仅在显式假设和依赖下成立",
+    "程序测试不能冒充实现精化证明",
+    "金融数学定理不能证明策略盈利或原始数据时点真实",
+    "E0/E1 项目发现不能冒充实际构建或独立复现",
+    "Lean 3 与 Lean 4 项目不可混为同一工具链；按项目固定 toolchain 和依赖版本",
+    "抽取代码可编译、局部算术 theorem 通过和协议级 correctness theorem 完成是不同状态",
+    "同一 Rust 函数上的单个对照样本不能推出 Hax/Aeneas 的普遍优劣",
+    "源码中无 sorry 不等于已由 Lean Kernel 独立构建验收；必须记录实际 build",
+    "跨库 bridge 中的 axiom/opaque 会把证明义务移出当前 theorem，必须单独审计",
+    "上游修复已合并不代表目标项目固定依赖已包含修复；旧版复现和新版迁移必须分开验收",
+    "MathFin 的金融数学 theorem 不等同于真实市场数据、因子有效性或策略盈利证明",
+    "CRR 等 theorem 必须检查假设非空性，避免 vacuous theorem",
+    "PIT/no-lookahead formalization 仍是候选研究设计，尚未在 AI_Trader 或生产代码验证",
+    "当前 PIT prototype 只证明 eligibility filter safety，不等同于 latest-revision as-of join 或真实数据源时间戳验证",
+    "论文、仓库 README、软件 release、CI 和独立 build 是不同证据层级；项目统计必须记录日期、版本和口径",
+    "构建证据必须绑定到实际源码 commit；历史 build log 不覆盖后续变更；CI run 的 head_sha 必须与被审计 commit 完全一致"
+  ]
+}

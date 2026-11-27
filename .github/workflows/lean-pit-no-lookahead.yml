@@ -1,0 +1,30 @@
+name: Lean PIT no-lookahead proof
+
+on:
+  pull_request:
+    paths:
+      - 'topics/lean-formal-verification/examples/pit-no-lookahead/**'
+      - '.github/workflows/lean-pit-no-lookahead.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: topics/lean-formal-verification/examples/pit-no-lookahead
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Build with pinned Lean toolchain
+        run: lake build

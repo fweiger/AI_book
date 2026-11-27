@@ -1,6 +1,6 @@
 # AI_book · 全仓研究专题与项目索引
 
-> 快照：2026-11-14（北京时间）。索引同时覆盖 `main` 已入库资料、GitHub Issue 研究入口和未合并 PR。**被索引不代表结论成立或研究完成。**
+> 快照：2026-11-22（北京时间）。原有专题主表保留 2026-11-14 的历史基线；2026-11-20 至 2026-11-22 新增的 TOPIC-015—018 在第八节补录。索引同时覆盖 `main` 已入库资料、GitHub Issue 研究入口和未合并 PR。**被索引不代表结论成立或研究完成。**
 > 详细进度、验收和最新变更以各 Issue / PR 为准；本文件是导航，不复制另一份研究进度账本。
 
 ## 读懂状态
@@ -96,3 +96,17 @@ TOPIC-001 的开放讨论：[玻姆力学与意识测量 #8](https://github.com/
 3. 新的权威 Issue 或研究 PR 出现时，更新其所属专题的索引；PR 合并、关闭、迁移或删除后同步修正状态，避免失效入口。
 4. **研究进度及结论以规范 Issue、PR 和实际提交为准**；不得以索引条目数量、AI 意见一致或 PR 创建代替证据审查。
 5. 涉及已经迁出公开仓库的资料，不因历史链接可见而重新上传；公开索引只标注迁出事实。
+
+
+## 八、2026-11-20 至 2026-11-22 新增专题
+
+> 以下入口均已通过 GitHub 实际读取。PR 为 Draft，尚未合并；专题文件不因此属于 main。
+
+| ID | 规范研究入口 | 草稿 / 研究分支 | 当前索引状态 |
+| --- | --- | --- | --- |
+| TOPIC-015 | [哲学是什么？——本质、活动、气质、边界及多路径解释 #68](https://github.com/fweiger/AI_book/issues/68) | [Draft PR #69](https://github.com/fweiger/AI_book/pull/69) · `topic/TOPIC-015/what-is-philosophy-20261121` | `ISSUE + DRAFT PR` |
+| TOPIC-016 | [AI 与社会意识转型：生产力、旧权威、媒介与人的主体性 #70](https://github.com/fweiger/AI_book/issues/70) | [Draft PR #71](https://github.com/fweiger/AI_book/pull/71) · `topic/TOPIC-016/ai-social-consciousness-20261121` | `ISSUE + DRAFT PR` |
+| TOPIC-017 | [个人 WGS：数据质量 × 权威论文 × 跨领域研究深度 × GitHub 复现 #72](https://github.com/fweiger/AI_book/issues/72) | [Draft PR #73](https://github.com/fweiger/AI_book/pull/73) · `topic/TOPIC-017/2026-11-21-wgs-landscape` | `ISSUE + DRAFT PR` |
+| TOPIC-018 | [Lean 形式化证明与跨学科可验证系统 #74](https://github.com/fweiger/AI_book/issues/74) | [Draft PR #75](https://github.com/fweiger/AI_book/pull/75) · [专题分支](https://github.com/fweiger/AI_book/tree/topic/TOPIC-018/lean-formal-verification-20261122) | `ISSUE + DRAFT PR` |
+
+**编号说明**：本轮已核对 TOPIC-015、016、017 分别由 #68、#70、#72 使用；新专题使用 TOPIC-018。TOPIC-004 冲突和 TOPIC-009 迁出规则保持不变。
