@@ -1,0 +1,15 @@
+check_id,test,recomputed_or_observed,author_reported,status,interpretation,source_id
+A01,Table1_source_quarters,6,6,Q1_1772_TO_Q2_1773_ONLY,Source caption says through Q3 1773 but columns shown end Q2; Q3 1773 is not available,NLD-S73
+A02,Table1_notarial_sample_total_observations,637,637,SAMPLED_NOTARIAL_BILLS,Not all historical bills or all defaults; do not extrapolate without sampling design,NLD-S73
+A03,Table1_max_quarter_source_rounding_diff,1,1,TOTAL_COMPONENT_VS_QUARTER_PLUS_MINUS_ONE,Preserve publication values and map 5 origin cells separately,NLD-S73
+A04,Table1_max_origin_source_rounding_diff,1,1,GROUP_COMPONENT_VS_ORIGIN_PLUS_MINUS_ONE,Dash source cell treated missing not literal0; sum-of-reported categories only,NLD-S73
+A05,Table4_total_1764,806,806,MILLION_CURRENT_GUILDERS,Not census precision,NLD-S73
+A06,Table4_total_1772,794,794,MILLION_CURRENT_GUILDERS,Not census precision,NLD-S73
+A07,Table4_illiquid_share_1764,3.9702,4,PERCENT_ROUNDING,32/806 percent,NLD-S73
+A08,Table4_illiquid_share_1772,15.1134,15,PERCENT_ROUNDING,120/794 percent,NLD-S73
+A09,Table4_print_minus27_is_liquid_bucket,-27.02703,-27,PERCENTAGE_CELL_ALIGNMENT,"Not AWB deposits 31 to16, which declined48.39 percent; original PDF screenshot unavailable",NLD-S73
+A10,Table3_SEPPENWOLDE_1770_share,54.26953,53,PUBLISHED_PERCENT_NON_ROUNDING_MATCH,54.2695% versus printed53%; likely source table conversion or categorization unverified,NLD-S73
+A11,Table3_OTHERS_1770_share,36.43123,38,PUBLISHED_PERCENT_NON_ROUNDING_MATCH,"36.4312% versus printed38%; preserve original amounts, do not silently adjust",NLD-S73
+A12,Table5_source_account_group_total,2429,2429,MUTUALLY_EXCLUSIVE_PUBLISHED_SECTOR_CLASSIFICATION,Do not infer class memberships beyond source published,NLD-S73
+A13,Table5_source_account_balance_total,17761194,17761194,PUBLISHED_SECTOR_ACCUMULATED_BALANCES_BANK_FLORINS,Own author sector table matches source total; does not make VOC alone a known component,NLD-S73
+A14,Table5_VOC_WIC_SURINAM_nonseparability,9,9,AGGREGATE_SECTOR_N,"Withdrawal67% is >=80% bill activity collapse, not fraction of deposits withdrawn",NLD-S73

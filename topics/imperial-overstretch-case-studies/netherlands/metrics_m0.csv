@@ -1,0 +1,6 @@
+metric_id,period,metric,value_low,value_high,unit,owner_scope,source_id,evidence_status,limitations
+NLD-M001,1602-1700,VOC_people_sailed_from_Europe,317000,317000,persons_cumulative,VOC shipping not colonial population,NLD-S02,ARCHIVE_RECONSTRUCTION,"161? century period total, no annual series"
+NLD-M002,1700-1795,VOC_people_sailed_from_Europe,655000,655000,persons_cumulative,VOC shipping not enslaved people,NLD-S02,ARCHIVE_RECONSTRUCTION,95-year total not directly comparable in length
+NLD-M003,1640-1700,VOC_equipage_expenditure,370,370,million_guilders_nominal_period_total,"VOC company shipbuilding, outlays and goods sent to Asia",NLD-S02,ARCHIVE_RECONSTRUCTION,not annual; not government naval budgets; currency deflator missing
+NLD-M004,1700-1795,VOC_equipage_expenditure,1608,1608,million_guilders_nominal_period_total,"VOC company shipbuilding, outlays and goods sent to Asia",NLD-S02,ARCHIVE_RECONSTRUCTION,unequal sample length and inflation; expenditure not whole empire maintenance
+NLD-M005,1602-1795,VOC_ships_fitted_out,4700,4700,ship_voyage_equipment_total_approx,VOC entire operations,NLD-S02,ARCHIVE_RECONSTRUCTION,approximation across two centuries not annual fleet strength

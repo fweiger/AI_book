@@ -1,0 +1,9 @@
+# 2026-11-14 CASE-NLD-001 M3 hypothesis and shipping data research session
+- Existing Issue https://github.com/fweiger/AI_book/issues/33 and Draft PR #37, no duplicate task/branch.
+- Original scholar source *Werkers van de wereld* Matthias van Rossum (2013) dissertation printed p55 Table2 screenshot verified. Real quantitative data 1780/1785/1790 company-owned intra-Asian July tonnage, inclusive special 1785 sample, annual homebound arrival tonnage; stored in source CSV.
+- New result: 1785 owned intra-Asia 22200 vs1780 29747, about -25.37%; 1785 annual return tonnage 22744 vs1780 19680, about +15.57%. 1785 inclusive hired sample 32373 is NOT comparable with 1780 owned-only; difference not assumed all rented.
+- Official Huygens BGB methodology read: 55 noncontinuous historical book years in NA 1.04.18.02 original 10751–10801 and 10802–10809; public dataset transcribes cargo only, omits profit/office income-expenditure/stocks and bills of exchange; 1743 official directive to use Dutch guilders not generally obeyed until 1768 and some mixed-year books. Distinct BGB data cannot reconstruct company P&L.
+- New state-side primary target Nationaal Archief 3.02.33 oversight committee 1790–96 with original minutes/annexes, catalog marked digitalized; original scans not actually acquired.
+- Hypotheses designed H1 cash-credit shock H2 fiscal-military overhead H3 persistent sea-capacity destruction H4 government backstop H5 goods-price competition, with observable falsifiers and data blockers. Model NOT_RUN.
+- Files: m3 shipping 7 obs, BGB 4 currency rows, 5 test hypotheses, 6 archive targets, 5 source registry, full report and session. README navigation to be added.
+- Next one concrete action: get original BGB 1779-80/1781-82 profit/income expenditure table and NA 3.02.33 state-side disbursement/guarantee minutes and compare with VOC company side, preserving currency and accounting year.

@@ -1,0 +1,8 @@
+check_id,measurement,baseline_value,comparison_value,computed_difference_or_count,difference_unit,comparability_warning,source_id,source_url
+NLD-AUDIT-M3F-01,VOC goods traded in Netherlands real 1800,20.9,5.9,-71.7703,percent change 1780 to1781,ANNUAL_REAL_SALES_NOT_CASH,NLD-S50,https://www.bis.org/publ/work1065.pdf
+NLD-AUDIT-M3F-02,AWB metallic stock 1776 to1783,17.6,7.8,-55.6818,percent change book bank metal stock,DIFFERENT_YEAR_THAN_VOC_LOAN_LEVEL,NLD-S50,https://www.bis.org/publ/work1065.pdf
+NLD-AUDIT-M3F-03,homebound ships departing Asia decade groups,245,195,-20.4082,percent change 1770-80 vs1780-90,DEPARTURES_NOT_ARRIVALS,NLD-S48,https://www.dbnl.org/tekst/_bij005197601_01/_bij005197601_01_0018.php
+NLD-AUDIT-M3F-04,return goods shipped from Asia valued by Asia purchase cost,71.074,37.218,-47.6349,percent change source periods 1770-80 vs1780-90,ASIA_PURCHASE_VALUE_NOT_EUROPE_SALES_PROCEEDS,NLD-S48,https://www.dbnl.org/tekst/_bij005197601_01/_bij005197601_01_0018.php
+NLD-AUDIT-M3F-05,ships departing Netherlands 1770-80 vs1780-90,290,276,-4.8276,percent change source periods,OUTWARD_FLOWS_NOT_VOC_STOCK,NLD-S48,https://www.dbnl.org/tekst/_bij005197601_01/_bij005197601_01_0018.php
+NLD-AUDIT-M3F-06,bank metallic coin backing ratio,97,28,-69,percentage points circa1779 vs summer1783,ALL_BANK_LIABILITIES_NOT_COMPANY_COVERAGE,NLD-S50,https://www.bis.org/publ/work1065.pdf
+NLD-AUDIT-M3F-07,1667-1702 0 end balance with positive within-year AWB loans,,,12,count of fiscal years,NOT_INTERPRETABLE_AS_INHERENT_WAR_EFFECT,NLD-S52,https://fraser.stlouisfed.org/files/docs/historical/frbatl/wp/frbatl_wp_2010-17.pdf
